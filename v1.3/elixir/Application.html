@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Application – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Application.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -472,10 +473,11 @@ returns a string</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">app_dir(app)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L425" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -515,10 +517,11 @@ Elixir and also Erlang’s <code class="inline">:code</code> module.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">app_dir(app, path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L436" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -542,10 +545,11 @@ Elixir and also Erlang’s <code class="inline">:code</code> module.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">delete_env(app, key, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L295" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -570,10 +574,11 @@ Elixir and also Erlang’s <code class="inline">:code</code> module.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">ensure_all_started(app, type \\ :temporary)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -602,10 +607,11 @@ started.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">ensure_started(app, type \\ :temporary)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -635,10 +641,11 @@ applications need to be explicitly started:</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetch_env(app, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L244" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -663,10 +670,11 @@ applications need to be explicitly started:</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetch_env!(app, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L257" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -691,10 +699,11 @@ applications need to be explicitly started:</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">format_error(reason)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L465" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -720,10 +729,11 @@ returns a string.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_all_env(app)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -747,10 +757,11 @@ returns a string.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_application(module)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -777,10 +788,11 @@ the module is not listed in any application spec.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_env(app, key, default \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L234" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -806,10 +818,11 @@ the module is not listed in any application spec.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">load(app)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L385" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -837,10 +850,11 @@ it does load its environment.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">loaded_applications()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L455" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -864,10 +878,11 @@ it does load its environment.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_env(app, key, value, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L285" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -905,10 +920,11 @@ stick after the application is loaded and also on application reload.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">spec(app)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L182" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -959,10 +975,11 @@ stick after the application is loaded and also on application reload.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">spec(app, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L197" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -989,10 +1006,11 @@ will raise. Returns <code class="inline">nil</code> if the application is not lo
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(app, type \\ :temporary)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L361" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1043,10 +1061,11 @@ supervision tree terminates, the reason is set to <code class="inline">:shutdown
       <i class="icon-link"></i>
     </a>
     <span class="signature">started_applications(timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1070,10 +1089,11 @@ supervision tree terminates, the reason is set to <code class="inline">:shutdown
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(app)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L371" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1098,10 +1118,11 @@ supervision tree terminates, the reason is set to <code class="inline">:shutdown
       <i class="icon-link"></i>
     </a>
     <span class="signature">unload(app)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1141,10 +1162,11 @@ Note that the function does not purge the application modules.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(start_type, start_args)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1201,10 +1223,11 @@ callback.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(state)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/application.ex#L146" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1233,19 +1256,20 @@ nothing and just returns <code class="inline">:ok</code>.</p>
 
         </section>
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

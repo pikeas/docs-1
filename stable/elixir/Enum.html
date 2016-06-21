@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Enum – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Enum.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -895,10 +896,11 @@ of tuples</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">all?(enumerable, fun \\ fn x -&gt; x end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L234" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -938,10 +940,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">any?(enumerable, fun \\ fn x -&gt; x end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L273" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -981,10 +984,11 @@ true</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">at(enumerable, index, default \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L314" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1027,10 +1031,11 @@ iex&gt; Enum.at([2, 4, 6], 4, :none)
       <i class="icon-link"></i>
     </a>
     <span class="signature">chunk(enumerable, count)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L325" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1054,10 +1059,11 @@ iex&gt; Enum.at([2, 4, 6], 4, :none)
       <i class="icon-link"></i>
     </a>
     <span class="signature">chunk(enumerable, count, step, leftover \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1110,10 +1116,11 @@ iex&gt; Enum.chunk([1, 2, 3, 4], 10, 10, [])
       <i class="icon-link"></i>
     </a>
     <span class="signature">chunk_by(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L395" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1142,10 +1149,11 @@ value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">concat(enumerables)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L420" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1176,10 +1184,11 @@ iex&gt; Enum.concat([[1, [2], 3], [4], [5, 6]])
       <i class="icon-link"></i>
     </a>
     <span class="signature">concat(left, right)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L441" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1212,10 +1221,11 @@ iex&gt; Enum.concat([1, 2, 3], [4, 5, 6])
       <i class="icon-link"></i>
     </a>
     <span class="signature">count(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L464" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1242,10 +1252,11 @@ iex&gt; Enum.concat([1, 2, 3], [4, 5, 6])
       <i class="icon-link"></i>
     </a>
     <span class="signature">count(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L490" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1273,10 +1284,11 @@ a truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">dedup(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L515" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1310,10 +1322,11 @@ iex&gt; Enum.dedup([1, 1, 2, 2.0, :three, :&quot;three&quot;])
       <i class="icon-link"></i>
     </a>
     <span class="signature">dedup_by(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1346,10 +1359,11 @@ iex&gt; Enum.dedup_by([5, 1, 2, 3, 2, 1], fn x -&gt; x &gt; 2 end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">drop(enumerable, n)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L565" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1388,10 +1402,11 @@ iex&gt; Enum.drop([1, 2, 3], -1)
       <i class="icon-link"></i>
     </a>
     <span class="signature">drop_every(enumerable, nth)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L605" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1428,10 +1443,11 @@ iex&gt; Enum.drop_every([1, 2, 3], 1)
       <i class="icon-link"></i>
     </a>
     <span class="signature">drop_while(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L627" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1459,10 +1475,11 @@ truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">each(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L650" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1492,10 +1509,11 @@ truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">empty?(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L678" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1526,10 +1544,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetch(enumerable, index)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L719" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1569,10 +1588,11 @@ iex&gt; Enum.fetch([2, 4, 6], 4)
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetch!(enumerable, index)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L766" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1609,10 +1629,11 @@ iex&gt; Enum.fetch!([2, 4, 6], 4)
       <i class="icon-link"></i>
     </a>
     <span class="signature">filter(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L786" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1641,10 +1662,11 @@ for which <code class="inline">fun</code> returns a truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">filter_map(enumerable, filter, mapper)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L806" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1671,10 +1693,11 @@ for which <code class="inline">fun</code> returns a truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">find(enumerable, default \\ nil, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L832" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1710,10 +1733,11 @@ iex&gt; Enum.find([2, 3, 4], fn(x) -&gt; rem(x, 2) == 1 end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">find_index(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L858" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1744,10 +1768,11 @@ iex&gt; Enum.find_index([2, 3, 4], fn(x) -&gt; rem(x, 2) == 1 end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">find_value(enumerable, default \\ nil, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L891" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1781,10 +1806,11 @@ iex&gt; Enum.find_value([1, 2, 3], &quot;no bools!&quot;, &amp;is_boolean/1)
       <i class="icon-link"></i>
     </a>
     <span class="signature">flat_map(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L923" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1819,10 +1845,11 @@ iex&gt; Enum.flat_map([:a, :b, :c], fn(x) -&gt; [[x]] end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">flat_map_reduce(enumerable, acc, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L953" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1860,10 +1887,11 @@ iex&gt; Enum.flat_map_reduce(1..5, 0, fn(i, acc) -&gt; {[[i]], acc + i} end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">group_by(enumerable, key_fun, mapper_fun \\ fn x -&gt; x end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L988" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1895,10 +1923,11 @@ iex&gt; Enum.group_by(~w{ant buffalo cat dingo}, &amp;String.length/1, &amp;Stri
       <i class="icon-link"></i>
     </a>
     <span class="signature">intersperse(enumerable, element)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1024" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1932,10 +1961,11 @@ iex&gt; Enum.intersperse([], 0)
       <i class="icon-link"></i>
     </a>
     <span class="signature">into(enumerable, collectable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1055" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1971,10 +2001,11 @@ iex&gt; Enum.into([a: 1, a: 2], %{})
       <i class="icon-link"></i>
     </a>
     <span class="signature">into(enumerable, collectable, transform)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1105" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2002,10 +2033,11 @@ transformation function.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">join(enumerable, joiner \\ &quot;&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2039,10 +2071,11 @@ iex&gt; Enum.join([1, 2, 3], &quot; = &quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">map(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1180" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2074,10 +2107,11 @@ iex&gt; Enum.map([a: 1, b: 2], fn({k, v}) -&gt; {k, -v} end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">map_join(enumerable, joiner \\ &quot;&quot;, mapper)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1210" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2112,10 +2146,11 @@ iex&gt; Enum.map_join([1, 2, 3], &quot; = &quot;, &amp;(&amp;1 * 2))
       <i class="icon-link"></i>
     </a>
     <span class="signature">map_reduce(enumerable, acc, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1245" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2149,10 +2184,11 @@ a tuple with two elements in the form of <code class="inline">{result, accumulat
       <i class="icon-link"></i>
     </a>
     <span class="signature">max(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2183,10 +2219,11 @@ is returned.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">max_by(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1297" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2222,10 +2259,11 @@ iex&gt; Enum.max_by([&quot;a&quot;, &quot;aa&quot;, &quot;aaa&quot;, &quot;b&quo
       <i class="icon-link"></i>
     </a>
     <span class="signature">member?(enumerable, element)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1346" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2263,10 +2301,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">min(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1378" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2297,10 +2336,11 @@ is returned.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">min_by(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1401" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2336,10 +2376,11 @@ iex&gt; Enum.min_by([&quot;a&quot;, &quot;aa&quot;, &quot;aaa&quot;, &quot;b&quo
       <i class="icon-link"></i>
     </a>
     <span class="signature">min_max(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1444" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2370,10 +2411,11 @@ that was found is returned.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">min_max_by(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1478" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2409,10 +2451,11 @@ iex&gt; Enum.min_max_by([&quot;aaa&quot;, &quot;a&quot;, &quot;bb&quot;, &quot;c
       <i class="icon-link"></i>
     </a>
     <span class="signature">partition(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1511" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2441,10 +2484,11 @@ second one – for which <code class="inline">fun</code> returns <code class="in
       <i class="icon-link"></i>
     </a>
     <span class="signature">random(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1550" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2484,10 +2528,11 @@ iex&gt; Enum.random([1, 2, 3])
       <i class="icon-link"></i>
     </a>
     <span class="signature">reduce(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1582" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2526,10 +2571,11 @@ times where <code class="inline">n</code> is the length of the enumerable.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">reduce(enumerable, acc, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1621" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2559,10 +2605,11 @@ is stored in <code class="inline">acc</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">reduce_while(enumerable, acc, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1655" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2585,10 +2632,11 @@ is stored in <code class="inline">acc</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">reject(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1672" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2617,10 +2665,11 @@ is stored in <code class="inline">acc</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">reverse(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1690" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2647,10 +2696,11 @@ is stored in <code class="inline">acc</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">reverse(enumerable, tail)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1712" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2680,10 +2730,11 @@ it as a list.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">reverse_slice(enumerable, start, count)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1737" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2713,10 +2764,11 @@ then this function will reverse the rest of the enumerable.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">scan(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1762" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2745,10 +2797,11 @@ for the next computation.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">scan(enumerable, acc, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1779" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2777,10 +2830,11 @@ for the next computation. Uses the given <code class="inline">acc</code> as the 
       <i class="icon-link"></i>
     </a>
     <span class="signature">shuffle(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1802" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2814,10 +2868,11 @@ iex&gt; Enum.shuffle([1, 2, 3])
       <i class="icon-link"></i>
     </a>
     <span class="signature">slice(enumerable, range)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1840" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2862,10 +2917,11 @@ iex&gt; Enum.slice(1..10, 6..5)
       <i class="icon-link"></i>
     </a>
     <span class="signature">slice(enumerable, start, count)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1884" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2901,10 +2957,11 @@ iex&gt; Enum.slice(1..10, 5, 0)
       <i class="icon-link"></i>
     </a>
     <span class="signature">sort(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1929" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2932,10 +2989,11 @@ iex&gt; Enum.slice(1..10, 5, 0)
       <i class="icon-link"></i>
     </a>
     <span class="signature">sort(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L1963" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2973,10 +3031,11 @@ For example:</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">sort_by(enumerable, mapper, sorter \\ &amp;&lt;=/2)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2010" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3022,10 +3081,11 @@ the original elements remain, but now in sorted order.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">split(enumerable, count)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2046" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3070,10 +3130,11 @@ iex&gt; Enum.split([1, 2, 3], -5)
       <i class="icon-link"></i>
     </a>
     <span class="signature">split_while(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2079" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3101,10 +3162,11 @@ iex&gt; Enum.split([1, 2, 3], -5)
       <i class="icon-link"></i>
     </a>
     <span class="signature">sum(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2107" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3132,10 +3194,11 @@ iex&gt; Enum.split([1, 2, 3], -5)
       <i class="icon-link"></i>
     </a>
     <span class="signature">take(enumerable, count)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3176,10 +3239,11 @@ iex&gt; Enum.take([1, 2, 3], -1)
       <i class="icon-link"></i>
     </a>
     <span class="signature">take_every(enumerable, nth)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2219" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3216,10 +3280,11 @@ iex&gt; Enum.take_every([1, 2, 3], 1)
       <i class="icon-link"></i>
     </a>
     <span class="signature">take_random(enumerable, count)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3253,10 +3318,11 @@ iex&gt; Enum.take_random(?a..?z, 5)
       <i class="icon-link"></i>
     </a>
     <span class="signature">take_while(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2313" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3284,10 +3350,11 @@ a truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">to_list(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2340" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3314,10 +3381,11 @@ a truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">uniq(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2358" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3344,10 +3412,11 @@ a truthy value.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">uniq_by(enumerable, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2385" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3380,10 +3449,11 @@ iex&gt; Enum.uniq_by([a: {:tea, 2}, b: {:tea, 2}, c: {:coffee, 1}], fn {_, y} -&
       <i class="icon-link"></i>
     </a>
     <span class="signature">unzip(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2415" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3419,10 +3489,11 @@ iex&gt; Enum.unzip(%{a: 1, b: 2})
       <i class="icon-link"></i>
     </a>
     <span class="signature">with_index(enumerable, offset \\ 0)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2439" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3453,10 +3524,11 @@ iex&gt; Enum.with_index([:a, :b, :c], 3)
       <i class="icon-link"></i>
     </a>
     <span class="signature">zip(enumerable1, enumerable2)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/enum.ex#L2461" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -3489,19 +3561,20 @@ iex&gt; Enum.zip([1, 2, 3, 4, 5], [:a, :b, :c])
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

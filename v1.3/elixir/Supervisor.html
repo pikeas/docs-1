@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Supervisor – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Supervisor.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -526,10 +527,11 @@ Read more about these rules in the documentation for <a href="GenServer.html"><c
       <i class="icon-link"></i>
     </a>
     <span class="signature">count_children(supervisor)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -567,10 +569,11 @@ are still alive
       <i class="icon-link"></i>
     </a>
     <span class="signature">delete_child(supervisor, child_id)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -602,10 +605,11 @@ current process is running or being restarted.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">restart_child(supervisor, child_id)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L424" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -646,10 +650,11 @@ or if it fails, this function returns <code class="inline">{:error, error}</code
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_child(supervisor, child_spec_or_args)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L350" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -694,10 +699,11 @@ the error and child specification.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(children, options)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L283" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -705,9 +711,9 @@ the error and child specification.</p>
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">start_link(module, term) :: <a href="#t:on_start/0">on_start</a></code></pre>
-        
           <pre><code class="elixir">start_link([<a href="Supervisor.Spec.html#t:spec/0">Supervisor.Spec.spec</a>], <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+        
+          <pre><code class="elixir">start_link(module, term) :: <a href="#t:on_start/0">on_start</a></code></pre>
         
       </div>
     </div>
@@ -742,10 +748,11 @@ with <code class="inline">:normal</code> reason.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(module, arg, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L308" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -781,10 +788,11 @@ section in the <a href="GenServer.html"><code class="inline">GenServer</code></a
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(supervisor, reason \\ :normal, timeout \\ :infinity)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L492" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -813,10 +821,11 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
       <i class="icon-link"></i>
     </a>
     <span class="signature">terminate_child(supervisor, pid_or_child_id)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L375" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -854,10 +863,11 @@ function returns <code class="inline">{:error, :not_found}</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">which_children(supervisor)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L453" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -911,10 +921,11 @@ process</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">init(args)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/supervisor.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -937,19 +948,20 @@ process</p>
 
         </section>
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

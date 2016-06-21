@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Port – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Port.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -240,10 +241,11 @@ or <code class="inline">nil</code> if the port is closed</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">call(port, operation, data)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -270,10 +272,11 @@ or <code class="inline">nil</code> if the port is closed</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">close(port)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -299,10 +302,11 @@ or <code class="inline">nil</code> if the port is closed</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">command(port, data, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -328,10 +332,11 @@ or <code class="inline">nil</code> if the port is closed</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">connect(port, pid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -357,10 +362,11 @@ or <code class="inline">nil</code> if the port is closed</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">control(port, operation, data)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L84" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -387,10 +393,11 @@ or <code class="inline">nil</code> if the port is closed</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">info(port)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -407,10 +414,11 @@ or <code class="inline">nil</code> if the port is closed.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">info(port, spec)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -436,10 +444,11 @@ or <code class="inline">nil</code> if the port is closed.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">list()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L140" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -465,10 +474,11 @@ or <code class="inline">nil</code> if the port is closed.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">open(name, settings)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/port.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -513,19 +523,20 @@ being used for standard input, <code class="inline">fd_out</code> for standard o
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

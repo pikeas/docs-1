@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>ExUnit.Assertions – ExUnit v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.Assertions.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -59,7 +59,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -296,10 +297,11 @@ current process’ mailbox)</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert(value, message)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -316,10 +318,11 @@ current process’ mailbox)</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_in_delta(value1, value2, delta, message \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -337,10 +340,11 @@ assert_in_delta 10, 15, 4</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_raise(exception, function)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -360,10 +364,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_raise(exception, message, function)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L476" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -377,7 +382,7 @@ Returns the rescued exception, fails otherwise.</p>
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.8861082697656465!&quot;
+  raise &quot;today&#39;s lucky number is 0.9753213384140438!&quot;
 end</code></pre>
 
   </section>
@@ -388,10 +393,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">flunk(message \\ &quot;Flunked!&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L716" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -417,10 +423,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute(value, message)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L605" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -437,10 +444,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute_in_delta(value1, value2, delta, message \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L694" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -472,10 +480,11 @@ refute_in_delta 10, 11, 2</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert(assertion)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -515,10 +524,11 @@ value. In such cases, simply use <code class="inline">Kernel.==/2</code> or
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :assert_receive_timeout), failure_message \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -546,10 +556,11 @@ assert_receive {:count, ^x}</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_received(pattern, failure_message \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L348" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -580,10 +591,11 @@ assert_received {:hello, _}</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">catch_error(expression)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L579" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -601,10 +613,11 @@ Returns the error or fails otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">catch_exit(expression)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L566" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -622,10 +635,11 @@ Returns the exit status/message or fails otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">catch_throw(expression)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -643,10 +657,11 @@ Returns the thrown value or fails otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute(assertion)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -671,10 +686,11 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :refute_receive_timeout), failure_message \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L625" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -696,10 +712,11 @@ if a message matching <code class="inline">pattern</code> is received.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute_received(pattern, failure_message \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/ex_unit/lib/ex_unit/assertions.ex#L652" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -726,19 +743,20 @@ Process mailbox:
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

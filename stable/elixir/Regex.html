@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Regex – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Regex.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -361,10 +362,11 @@ parts</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">compile(source, options \\ &quot;&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -401,10 +403,11 @@ iex&gt; Regex.compile(&quot;*foo&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">compile!(source, options \\ &quot;&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -429,10 +432,11 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
       <i class="icon-link"></i>
     </a>
     <span class="signature">escape(string)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L643" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -462,10 +466,11 @@ iex&gt; Regex.escape(&quot;\\what if&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">match?(regex, string)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -495,10 +500,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">named_captures(regex, string, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -533,10 +539,11 @@ nil</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">names(regex)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L288" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -563,10 +570,11 @@ nil</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">opts(regex)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -593,10 +601,11 @@ nil</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">re_pattern(regex)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L246" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -620,10 +629,11 @@ nil</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">regex?(term)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -654,10 +664,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">replace(regex, string, replacement, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L497" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -717,10 +728,11 @@ iex&gt; Regex.replace(~r/a/, &quot;abcadc&quot;, &quot;A&quot;, global: false)
       <i class="icon-link"></i>
     </a>
     <span class="signature">run(regex, string, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L204" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -765,10 +777,11 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
       <i class="icon-link"></i>
     </a>
     <span class="signature">scan(regex, string, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L319" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -812,10 +825,11 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">source(regex)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -842,10 +856,11 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">split(regex, string, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/regex.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -912,19 +927,20 @@ iex&gt; Regex.split(~r/a(?&lt;second&gt;b)c/, &quot;abc&quot;, on: [:second], in
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

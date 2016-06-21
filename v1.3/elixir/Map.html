@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Map – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Map.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -423,10 +424,11 @@ returns them in a new map</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">delete(map, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L328" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -456,10 +458,11 @@ iex&gt; Map.delete(%{b: 2}, :a)
       <i class="icon-link"></i>
     </a>
     <span class="signature">drop(map, keys)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L451" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -486,10 +489,11 @@ iex&gt; Map.delete(%{b: 2}, :a)
       <i class="icon-link"></i>
     </a>
     <span class="signature">equal?(map1, map2)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L656" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -520,10 +524,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetch(map, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L145" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -553,10 +558,11 @@ iex&gt; Map.fetch(%{a: 1}, :b)
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetch!(map, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L161" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -586,10 +592,11 @@ iex&gt; Map.fetch!(%{a: 1}, :b)
       <i class="icon-link"></i>
     </a>
     <span class="signature">from_struct(struct)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L633" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -625,10 +632,11 @@ Map.from_struct(%User{name: &quot;john&quot;})
       <i class="icon-link"></i>
     </a>
     <span class="signature">get(map, key, default \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L262" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -663,10 +671,11 @@ iex&gt; Map.get(%{a: 1}, :b, 3)
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update(map, key, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L554" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -714,10 +723,11 @@ iex&gt; Map.get_and_update(%{a: 1}, :b, fn _ -&gt; :pop end)
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update!(map, key, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L599" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -764,10 +774,11 @@ iex&gt; Map.get_and_update!(%{a: 1}, :a, fn _ -&gt;
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_lazy(map, key, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L291" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -804,10 +815,11 @@ iex&gt; Map.get_lazy(map, :b, fun)
       <i class="icon-link"></i>
     </a>
     <span class="signature">has_key?(map, key)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L129" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -836,10 +848,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">keys(map)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -866,10 +879,11 @@ false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">merge(map1, map2)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -901,10 +915,11 @@ use <a href="Kernel.html#struct/2"><code class="inline">Kernel.struct/2</code></
       <i class="icon-link"></i>
     </a>
     <span class="signature">merge(map1, map2, callback)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L364" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -935,10 +950,11 @@ be invoked with the key, value1 and value2 to solve conflicts.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">new()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -965,10 +981,11 @@ be invoked with the key, value1 and value2 to solve conflicts.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">new(enumerable)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -998,10 +1015,11 @@ iex&gt; Map.new([a: 1, a: 2, a: 3])
       <i class="icon-link"></i>
     </a>
     <span class="signature">new(enumerable, transform)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1029,10 +1047,11 @@ iex&gt; Map.new([a: 1, a: 2, a: 3])
       <i class="icon-link"></i>
     </a>
     <span class="signature">pop(map, key, default \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L407" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1063,10 +1082,11 @@ iex&gt; Map.pop(%{a: 1}, :b, 3)
       <i class="icon-link"></i>
     </a>
     <span class="signature">pop_lazy(map, key, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L434" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1102,10 +1122,11 @@ iex&gt; Map.pop_lazy(map, :b, fun)
       <i class="icon-link"></i>
     </a>
     <span class="signature">put(map, key, val)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1134,10 +1155,11 @@ iex&gt; Map.put(%{a: 1, b: 2}, :a, 3)
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_new(map, key, value)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1167,10 +1189,11 @@ iex&gt; Map.put_new(%{a: 1, b: 2}, :a, 3)
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_new_lazy(map, key, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1207,10 +1230,11 @@ iex&gt; Map.put_new_lazy(map, :b, fun)
       <i class="icon-link"></i>
     </a>
     <span class="signature">split(map, keys)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1240,10 +1264,11 @@ separate <code class="inline">map</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">take(map, keys)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1271,10 +1296,11 @@ returns them in a new map.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">to_list(map)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L51" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1303,10 +1329,11 @@ iex&gt; Map.to_list(%{1 =&gt; 2})
       <i class="icon-link"></i>
     </a>
     <span class="signature">update(map, key, initial, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L384" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1336,10 +1363,11 @@ iex&gt; Map.update(%{a: 1}, :b, 11, &amp;(&amp;1 * 2))
       <i class="icon-link"></i>
     </a>
     <span class="signature">update!(map, key, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L510" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1372,10 +1400,11 @@ iex&gt; Map.update!(%{a: 1}, :b, &amp;(&amp;1 * 2))
       <i class="icon-link"></i>
     </a>
     <span class="signature">values(map)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/map.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1403,19 +1432,20 @@ iex&gt; Map.update!(%{a: 1}, :b, &amp;(&amp;1 * 2))
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

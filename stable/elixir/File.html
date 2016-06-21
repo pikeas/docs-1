@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>File – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/File.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -754,10 +755,11 @@ Returns <code class="inline">:ok</code> otherwise</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cd(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -782,10 +784,11 @@ Returns <code class="inline">:ok</code> otherwise</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cd!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1123" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -809,10 +812,11 @@ Returns <code class="inline">:ok</code> otherwise</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cd!(path, function)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1141" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -842,10 +846,11 @@ directory fails.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">chgrp(path, gid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1283" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -873,10 +878,11 @@ for a given <code class="inline">file</code>. Returns <code class="inline">:ok</
       <i class="icon-link"></i>
     </a>
     <span class="signature">chgrp!(path, gid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1291" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -900,10 +906,11 @@ for a given <code class="inline">file</code>. Returns <code class="inline">:ok</
       <i class="icon-link"></i>
     </a>
     <span class="signature">chmod(path, mode)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1260" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -955,10 +962,11 @@ and others.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">chmod!(path, mode)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1268" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -982,10 +990,11 @@ and others.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">chown(path, uid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1306" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1013,10 +1022,11 @@ or <code class="inline">{:error, reason}</code> on failure.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">chown!(path, uid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1314" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1040,10 +1050,11 @@ or <code class="inline">{:error, reason}</code> on failure.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">close(io_device)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1073,10 +1084,11 @@ See <a href="#open/2"><code class="inline">open/2</code></a>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">copy(source, destination, bytes_count \\ :infinity)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L434" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1116,10 +1128,11 @@ the file mode after copy.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">copy!(source, destination, bytes_count \\ :infinity)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L443" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1146,10 +1159,11 @@ Returns the <code class="inline">bytes_copied</code> otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cp(source, destination, callback \\ fn _, _ -&gt; true end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L498" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1187,10 +1201,11 @@ error will be returned.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cp!(source, destination, callback \\ fn _, _ -&gt; true end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L520" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1217,10 +1232,11 @@ Returns <code class="inline">:ok</code> otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cp_r(source, destination, callback \\ fn _, _ -&gt; true end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L573" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1277,10 +1293,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cp_r!(source, destination, callback \\ fn _, _ -&gt; true end)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L588" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1307,10 +1324,11 @@ Returns the list of copied files otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cwd()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1081" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1338,10 +1356,11 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cwd!()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1101" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1365,10 +1384,11 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">dir?(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1392,10 +1412,11 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">exists?(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1430,10 +1451,11 @@ File.exists?(&quot;/dev/null&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">ln_s(existing, new)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L407" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1451,10 +1473,11 @@ If the operating system does not support symlinks, returns
       <i class="icon-link"></i>
     </a>
     <span class="signature">ls(path \\ &quot;.&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1158" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1480,10 +1503,11 @@ If the operating system does not support symlinks, returns
       <i class="icon-link"></i>
     </a>
     <span class="signature">ls!(path \\ &quot;.&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1170" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1508,10 +1532,11 @@ in case of an error.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">lstat(path, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L315" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1555,10 +1580,11 @@ other file, returns exactly the same values as <a href="#stat/2"><code class="in
       <i class="icon-link"></i>
     </a>
     <span class="signature">lstat!(path, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1585,10 +1611,11 @@ throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if a
       <i class="icon-link"></i>
     </a>
     <span class="signature">mkdir(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1628,10 +1655,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
       <i class="icon-link"></i>
     </a>
     <span class="signature">mkdir!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1655,10 +1683,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
       <i class="icon-link"></i>
     </a>
     <span class="signature">mkdir_p(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1693,10 +1722,11 @@ directories of <code class="inline">path</code>
       <i class="icon-link"></i>
     </a>
     <span class="signature">mkdir_p!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L204" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1720,10 +1750,11 @@ directories of <code class="inline">path</code>
       <i class="icon-link"></i>
     </a>
     <span class="signature">open(path, modes \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L999" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1731,13 +1762,13 @@ directories of <code class="inline">path</code>
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">open(<a href="Path.html#t:t/0">Path.t</a>, (<a href="#t:io_device/0">io_device</a> -> res)) ::
-  {:ok, res} |
-  {:error, <a href="#t:posix/0">posix</a>} when res: var</code></pre>
-        
           <pre><code class="elixir">open(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram]) ::
   {:ok, <a href="#t:io_device/0">io_device</a>} |
   {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+        
+          <pre><code class="elixir">open(<a href="Path.html#t:t/0">Path.t</a>, (<a href="#t:io_device/0">io_device</a> -> res)) ::
+  {:ok, res} |
+  {:error, <a href="#t:posix/0">posix</a>} when res: var</code></pre>
         
       </div>
     </div>
@@ -1816,10 +1847,11 @@ File.close(file)</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">open(path, modes, function)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1032" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1858,10 +1890,11 @@ end)</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">open!(path, modes \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1050" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1886,10 +1919,11 @@ end)</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">open!(path, modes, function)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1064" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1916,10 +1950,11 @@ end)</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">read(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L230" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1960,10 +1995,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
       <i class="icon-link"></i>
     </a>
     <span class="signature">read!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L239" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1988,10 +2024,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
       <i class="icon-link"></i>
     </a>
     <span class="signature">regular?(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L94" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2017,10 +2054,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
       <i class="icon-link"></i>
     </a>
     <span class="signature">rename(source, destination)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L474" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2057,10 +2095,11 @@ File.rename &quot;samples&quot;, &quot;tmp&quot;</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">rm(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L747" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2106,10 +2145,11 @@ File.rm(&quot;tmp_dir/&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">rm!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L781" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2133,10 +2173,11 @@ File.rm(&quot;tmp_dir/&quot;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">rm_rf(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L840" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2173,10 +2214,11 @@ File.rm_rf &quot;unknown&quot;
       <i class="icon-link"></i>
     </a>
     <span class="signature">rm_rf!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L915" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2201,10 +2243,11 @@ otherwise the list of files or directories removed.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">rmdir(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L804" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2235,10 +2278,11 @@ File.rmdir(&#39;file.txt&#39;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">rmdir!(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L812" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2262,10 +2306,11 @@ File.rmdir(&#39;file.txt&#39;)
       <i class="icon-link"></i>
     </a>
     <span class="signature">stat(path, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L270" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2310,10 +2355,11 @@ machine
       <i class="icon-link"></i>
     </a>
     <span class="signature">stat!(path, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L285" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2340,10 +2386,11 @@ throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if a
       <i class="icon-link"></i>
     </a>
     <span class="signature">stream!(path, modes \\ [], line_or_bytes \\ :line)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L1230" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2383,10 +2430,11 @@ File.stream!(&quot;./test/test.data&quot;, [], 2048)
       <i class="icon-link"></i>
     </a>
     <span class="signature">touch(path, time \\ :calendar.universal_time())</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L370" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2414,10 +2462,11 @@ the given file.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">touch!(path, time \\ :calendar.universal_time())</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L391" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2442,10 +2491,11 @@ the given file.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">write(path, content, modes \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L702" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2495,10 +2545,11 @@ the parent directories
       <i class="icon-link"></i>
     </a>
     <span class="signature">write!(path, content, modes \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L711" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2522,10 +2573,11 @@ the parent directories
       <i class="icon-link"></i>
     </a>
     <span class="signature">write_stat(path, stat, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L344" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2552,10 +2604,11 @@ path. Returns <code class="inline">:ok</code> or <code class="inline">{:error, r
       <i class="icon-link"></i>
     </a>
     <span class="signature">write_stat!(path, stat, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/file.ex#L354" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -2583,19 +2636,20 @@ Returns <code class="inline">:ok</code> otherwise.</p>
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

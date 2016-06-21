@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Code – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Code.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -326,10 +327,11 @@ directories the Erlang VM uses for finding module code</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">append_path(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -352,10 +354,11 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
       <i class="icon-link"></i>
     </a>
     <span class="signature">available_compiler_options()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -374,10 +377,11 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
       <i class="icon-link"></i>
     </a>
     <span class="signature">compile_quoted(quoted, file \\ &quot;nofile&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L457" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -394,10 +398,11 @@ the second one is its byte code (as a binary).</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">compile_string(string, file \\ &quot;nofile&quot;)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -415,10 +420,11 @@ and the second one is its byte code (as a binary).</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">compiler_options()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -438,10 +444,11 @@ and the second one is its byte code (as a binary).</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">compiler_options(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -478,10 +485,11 @@ generated
       <i class="icon-link"></i>
     </a>
     <span class="signature">delete_path(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L97" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -504,10 +512,11 @@ Code.delete_path(&quot;/does_not_exist&quot;) #=&gt; false</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">ensure_compiled(module)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L542" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -529,10 +538,11 @@ and when to use <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1<
       <i class="icon-link"></i>
     </a>
     <span class="signature">ensure_compiled?(module)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L562" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -550,10 +560,11 @@ Returns <code class="inline">false</code> otherwise.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">ensure_loaded(module)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L508" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -598,10 +609,11 @@ iex&gt; Code.ensure_loaded(DoesNotExist)
       <i class="icon-link"></i>
     </a>
     <span class="signature">ensure_loaded?(module)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L525" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -622,10 +634,11 @@ true</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">eval_file(file, relative_to \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -644,10 +657,11 @@ evaluation result and its bindings.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">eval_quoted(quoted, binding \\ [], opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -672,10 +686,11 @@ iex&gt; Code.eval_quoted(contents, [a: 1, b: 2], __ENV__)
       <i class="icon-link"></i>
     </a>
     <span class="signature">eval_string(string, binding \\ [], opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -739,10 +754,11 @@ will be automatically carried over:</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_docs(module, kind)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L608" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -789,10 +805,11 @@ nil</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">load_file(file, relative_to \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L318" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -817,10 +834,11 @@ if you don’t want a file to be loaded concurrently.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">loaded_files()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -838,10 +856,11 @@ List.first(Code.loaded_files) =~ &quot;eex_test.exs&quot; #=&gt; true</code></pr
       <i class="icon-link"></i>
     </a>
     <span class="signature">prepend_path(path)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -864,10 +883,11 @@ Code.prepend_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</
       <i class="icon-link"></i>
     </a>
     <span class="signature">require_file(file, relative_to \\ nil)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L354" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -898,10 +918,11 @@ call <code class="inline">require_file</code> will get the list of loaded module
       <i class="icon-link"></i>
     </a>
     <span class="signature">string_to_quoted(string, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L263" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -933,10 +954,11 @@ representation.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">string_to_quoted!(string, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L279" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -956,10 +978,11 @@ in case a token is missing (usually because the expression is incomplete),
       <i class="icon-link"></i>
     </a>
     <span class="signature">unload_files(files)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/code.ex#L38" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -983,19 +1006,20 @@ function_exported?(EExTest.Compiled, :before_compile, 0) #=&gt; true</code></pre
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Mix.SCM – Mix v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.SCM.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -59,7 +59,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -298,10 +299,11 @@ called by <code class="inline">deps.get</code> or <code class="inline">deps.upda
       <i class="icon-link"></i>
     </a>
     <span class="signature">append(mod)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L140" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -316,10 +318,11 @@ called by <code class="inline">deps.get</code> or <code class="inline">deps.upda
       <i class="icon-link"></i>
     </a>
     <span class="signature">available()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L125" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -335,10 +338,11 @@ until a matching one is found.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">prepend(mod)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -367,10 +371,11 @@ until a matching one is found.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">accepts_options(app, opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -402,10 +407,11 @@ while other SCMs would simply return <code class="inline">nil</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">checked_out?(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L56" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -430,10 +436,11 @@ dependency is available.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">checkout(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -462,10 +469,11 @@ to the latest version.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">equal?(opts1, opts2)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -491,10 +499,11 @@ same SCM.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">fetchable?()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L17" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -522,10 +531,11 @@ recompiled every time the parent project is compiled.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">format(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -552,10 +562,11 @@ easy to spot.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">format_lock(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L35" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -583,10 +594,11 @@ easy to spot.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">lock_status(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L105" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -633,10 +645,11 @@ return <code class="inline">:outdated</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">managers(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -662,10 +675,11 @@ should return an empty list.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">update(opts)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/mix/lib/mix/scm.ex#L80" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -691,19 +705,20 @@ no lock is given and the repository can be updated freely.</p>
 
         </section>
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

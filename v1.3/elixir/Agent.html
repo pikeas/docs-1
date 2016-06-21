@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Agent – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Agent.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -412,10 +413,11 @@ function and arguments</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cast(agent, fun)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L281" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -443,10 +445,11 @@ destination node or agent exists.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cast(agent, module, fun, args)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L293" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -473,10 +476,11 @@ argument to the given list of args.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get(agent, fun, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -504,10 +508,11 @@ returned.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get(agent, module, fun, args, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L214" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -534,10 +539,11 @@ argument to the given list of args.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update(agent, fun, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -566,10 +572,11 @@ and the second one is the new state.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update(agent, module, fun, args, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L241" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -596,10 +603,11 @@ argument to the given list of args.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(fun, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -624,10 +632,11 @@ argument to the given list of args.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(module, fun, args, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -653,10 +662,11 @@ instead of an anonymous function.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(fun, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L155" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -701,10 +711,11 @@ specified name already exists, the function returns
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(module, fun, args, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -731,10 +742,11 @@ instead of an anonymous function.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(agent, reason \\ :normal, timeout \\ :infinity)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -764,10 +776,11 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
       <i class="icon-link"></i>
     </a>
     <span class="signature">update(agent, fun, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -795,10 +808,11 @@ This function always returns <code class="inline">:ok</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">update(agent, module, fun, args, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/agent.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -826,19 +840,20 @@ argument to the given list of args.</p>
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

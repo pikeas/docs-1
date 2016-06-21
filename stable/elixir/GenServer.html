@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>GenServer – Elixir v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/GenServer.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -61,7 +61,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -583,10 +584,11 @@ call.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">abcast(nodes \\ nodes(), name, request)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L663" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -613,10 +615,11 @@ server name does not exist.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">call(server, request, timeout \\ 5000)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L593" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -655,10 +658,11 @@ element.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">cast(server, request)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L628" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -693,10 +697,11 @@ messages to other nodes to arrive out of order.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">multi_call(nodes \\ nodes(), name, request, timeout \\ :infinity)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L713" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -742,10 +747,11 @@ module is registered as <code class="inline">Stack</code> in the <code class="in
       <i class="icon-link"></i>
     </a>
     <span class="signature">reply(client, reply)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L747" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -788,10 +794,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(module, args, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L539" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -816,10 +823,11 @@ end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(module, args, options \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L529" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -877,10 +885,11 @@ or <code class="inline">:ignore</code>, the process is terminated and this funct
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(server, reason \\ :normal, timeout \\ :infinity)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L566" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -910,10 +919,11 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
       <i class="icon-link"></i>
     </a>
     <span class="signature">whereis(pid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L772" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -957,10 +967,11 @@ GenServer.cast(process, :hello)</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">code_change(old_vsn, state, extra)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -998,10 +1009,13 @@ with its previous state. Therefore this callback does not usually contain side e
       <i class="icon-link"></i>
     </a>
     <span class="signature">format_status(reason, pdict_and_state)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L402" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
+    
+      <span class="note">(optional)</span>
     
   </div>
   
@@ -1039,10 +1053,11 @@ the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> a
       <i class="icon-link"></i>
     </a>
     <span class="signature">handle_call(request, from, state)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1118,10 +1133,11 @@ as the response to call and the process exits with reason <code class="inline">r
       <i class="icon-link"></i>
     </a>
     <span class="signature">handle_cast(request, state)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1162,10 +1178,11 @@ reason <code class="inline">reason</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">handle_info(msg, state)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L319" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1197,10 +1214,11 @@ a timeout occurs the message is <code class="inline">:timeout</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">init(args)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1257,10 +1275,11 @@ entering the loop or calling <code class="inline">terminate/2</code>.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">terminate(reason, state)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/gen_server.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1307,19 +1326,20 @@ logged.</p>
 
         </section>
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>

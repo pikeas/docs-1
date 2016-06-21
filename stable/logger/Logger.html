@@ -4,9 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
+    <meta name="generator" content="ExDoc v0.12.0">
     <title>Logger – Logger v1.3.0</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+      <link rel="canonical" href="http://elixir-lang.org/docs/stable/logger/Logger.html" />
+    
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
@@ -16,9 +19,6 @@
   <i class="icon-menu"></i>
 </button>
 <section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
   
   <a href="http://elixir-lang.org/docs.html" class="sidebar-projectLink">
@@ -57,7 +57,8 @@
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
@@ -634,10 +635,11 @@ and how to process the existing options.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">add_backend(backend, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -659,10 +661,11 @@ the backend is added
       <i class="icon-link"></i>
     </a>
     <span class="signature">add_translator(translator)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L448" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -677,10 +680,11 @@ the backend is added
       <i class="icon-link"></i>
     </a>
     <span class="signature">bare_log(level, chardata_or_fn, metadata \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L478" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -709,10 +713,11 @@ explicitly avoid embedding metadata.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">compare_levels(level, level)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L374" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -738,10 +743,11 @@ against <code class="inline">right</code> and returns <code class="inline">:lt</
       <i class="icon-link"></i>
     </a>
     <span class="signature">configure(options)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L392" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -758,10 +764,11 @@ documentation for the available options.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">configure_backend(backend, options)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L466" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -787,10 +794,11 @@ be configured at runtime.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">disable(pid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -806,10 +814,11 @@ be configured at runtime.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">enable(pid)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -825,10 +834,11 @@ be configured at runtime.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">flush()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L404" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -855,10 +865,11 @@ for testing and it should not be called in production code.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">level()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L362" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -883,10 +894,11 @@ for testing and it should not be called in production code.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">metadata()</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L323" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -901,10 +913,11 @@ for testing and it should not be called in production code.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">metadata(keywords)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -919,10 +932,11 @@ for testing and it should not be called in production code.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">remove_backend(backend, opts \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L439" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -944,10 +958,11 @@ the backend is removed
       <i class="icon-link"></i>
     </a>
     <span class="signature">remove_translator(translator)</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L455" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -962,10 +977,11 @@ the backend is removed
       <i class="icon-link"></i>
     </a>
     <span class="signature">reset_metadata(keywords \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -992,10 +1008,11 @@ the backend is removed
       <i class="icon-link"></i>
     </a>
     <span class="signature">debug(chardata_or_fn, metadata \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L563" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1014,10 +1031,11 @@ Logger.debug fn -&gt; &quot;expensive to calculate debug&quot; end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">error(chardata_or_fn, metadata \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L548" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1036,10 +1054,11 @@ Logger.error fn -&gt; &quot;expensive to calculate error&quot; end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">info(chardata_or_fn, metadata \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L533" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1058,10 +1077,11 @@ Logger.info fn -&gt; &quot;expensive to calculate info&quot; end</code></pre>
       <i class="icon-link"></i>
     </a>
     <span class="signature">log(level, chardata_or_fn, metadata \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L577" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1081,10 +1101,11 @@ the Logger call altogether at compile time if desired.</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">warn(chardata_or_fn, metadata \\ [])</span>
-      
+    
       <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/logger/lib/logger.ex#L518" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
+    
     
   </div>
   
@@ -1102,19 +1123,20 @@ Logger.warn fn -&gt; &quot;expensive to calculate warning&quot; end</code></pre>
       
 
       
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
   </div>
 </section>
 </div>
