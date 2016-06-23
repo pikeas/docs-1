@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
-    <title>Mix.Tasks.Deps.Check – Mix v1.4.0-dev</title>
+    <title>Mix.Tasks.Deps.Loadpaths – Mix v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
     
-      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Deps.Check.html" />
+      <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Deps.Loadpaths.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -65,10 +65,10 @@
 
       <h1>
         <small class="visible-xs">Mix v1.4.0-dev</small>
-        Mix.Tasks.Deps.Check
+        Mix.Tasks.Deps.Loadpaths
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/aeaf86695d78f7f660214cce49c860b23f46179a/lib/mix/lib/mix/tasks/deps.check.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/226438f68b0c2438345f7db72a3e8033d29173b2/lib/mix/lib/mix/tasks/deps.loadpaths.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -76,17 +76,14 @@
 
       
         <section id="moduledoc" class="docstring">
-          <p>Checks if all dependencies are valid, loading them along
-the way.</p>
+          <p>Checks and loads all dependencies along the way.</p>
 <p>If there is an invalid dependency, its status is printed
 before aborting.</p>
-<p>This task is not shown in <code class="inline">mix help</code> but it is part
-of the <code class="inline">mix</code> public API and can be depended on.</p>
+<p>Although this task does not show up in <code class="inline">mix help</code>, it is
+part of Mix public API and can be depended on.</p>
 <h2>Command line options</h2>
 <ul>
-<li><code class="inline">--no-archives-check</code> - do not check archives
-</li>
-<li><code class="inline">--no-deps-check</code> - do not check deps
+<li><code class="inline">--no-deps-check</code> - do not check or compile deps, only load available ones
 </li>
 <li><code class="inline">--no-compile</code> - do not compile dependencies
 </li>
@@ -147,7 +144,7 @@ of the <code class="inline">mix</code> public API and can be depended on.</p>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/aeaf86695d78f7f660214cce49c860b23f46179a/lib/mix/lib/mix/tasks/deps.check.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/226438f68b0c2438345f7db72a3e8033d29173b2/lib/mix/lib/mix/tasks/deps.loadpaths.ex#L23" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
