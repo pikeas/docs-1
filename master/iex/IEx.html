@@ -68,7 +68,7 @@
         IEx
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -180,6 +180,9 @@ shell after it has booted.</p>
 <pre><code class="elixir"># source another &quot;.iex.exs&quot; file
 import_file &quot;~/.iex.exs&quot;
 
+# import some module from lib that may not yet have been defined
+import_if_available MyApp.Mod
+
 # print something before the shell starts
 IO.puts &quot;hello world&quot;
 
@@ -188,7 +191,7 @@ value = 13</code></pre>
 <p>Running the shell in the directory where the above .iex.exs file is located
 results in:</p>
 <pre><code class="elixir">$ iex
-Erlang 17 [...]
+Erlang 18 [...]
 
 hello world
 Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
@@ -381,7 +384,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L317" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -400,7 +403,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L310" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L313" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -419,7 +422,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">color(color, string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L333" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -439,7 +442,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L306" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -458,7 +461,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -552,7 +555,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">inspect_opts()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L357" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -571,7 +574,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(binding, env, timeout)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L432" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -594,7 +597,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">started?()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L324" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L327" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -613,7 +616,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">width()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L350" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -645,7 +648,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2d707e25f70d66e39eff8ff0a25c9a1dc5306019/lib/iex/lib/iex.ex#L415" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex.ex#L418" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
