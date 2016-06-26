@@ -68,7 +68,7 @@
         IEx.Helpers
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -112,13 +112,13 @@ you have in the shell:</p>
 </li>
 <li><a href="#import_file/1"><code class="inline">import_file/1</code></a> - evaluates the given file in the shell’s context
 </li>
-<li><a href="#l/1"><code class="inline">l/1</code></a>           - loads the given module’s beam code
+<li><a href="#l/1"><code class="inline">l/1</code></a>           - loads the given module’s BEAM code
 </li>
 <li><code class="inline">ls/0</code>          - lists the contents of the current directory
 </li>
 <li><a href="#ls/1"><code class="inline">ls/1</code></a>          - lists the contents of the specified directory
 </li>
-<li><a href="#nl/2"><code class="inline">nl/2</code></a>          - deploys local beam code to a list of nodes
+<li><a href="#nl/2"><code class="inline">nl/2</code></a>          - deploys local BEAM code to a list of nodes
 </li>
 <li><a href="#pid/1"><code class="inline">pid/1</code></a>         - creates a PID from a string
 </li>
@@ -223,7 +223,7 @@ the command line using the <code class="inline">h</code> helper itself. Try:</p>
     <a href="#l/1">l(module)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Loads the given module’s beam code (and ensures any previous
+    <div class="summary-synopsis"><p>Loads the given module’s BEAM code (and ensures any previous
 old version was properly purged before)</p>
 </div>
   
@@ -242,7 +242,7 @@ old version was properly purged before)</p>
     <a href="#nl/2">nl(nodes \\ Node.list(), module)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Deloys a given module’s beam code to a list of nodes</p>
+    <div class="summary-synopsis"><p>Deloys a given module’s BEAM code to a list of nodes</p>
 </div>
   
 </div>
@@ -416,7 +416,7 @@ the shell</p>
     </a>
     <span class="signature">c(files, path \\ :in_memory)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -446,7 +446,7 @@ c &quot;baz.ex&quot;
     </a>
     <span class="signature">cd(directory)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L447" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -465,7 +465,7 @@ c &quot;baz.ex&quot;
     </a>
     <span class="signature">clear()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L154" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -487,7 +487,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">flush()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L413" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L413" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -506,7 +506,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">h()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L166" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -525,7 +525,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">i(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L398" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L398" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -544,7 +544,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">l(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L390" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L390" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -552,7 +552,7 @@ unavailable on Windows machines.</p>
   </div>
   
   <section class="docstring">
-    <p>Loads the given module’s beam code (and ensures any previous
+    <p>Loads the given module’s BEAM code (and ensures any previous
 old version was properly purged before).</p>
 <p>This function is useful when you know the bytecode for module
 has been updated in the filesystem and you want to tell the VM
@@ -567,7 +567,7 @@ to load it.</p>
     </a>
     <span class="signature">ls(path \\ &quot;.&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L461" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L461" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -587,7 +587,7 @@ to load it.</p>
     </a>
     <span class="signature">nl(nodes \\ Node.list(), module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L695" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L697" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -595,7 +595,7 @@ to load it.</p>
   </div>
   
   <section class="docstring">
-    <p>Deloys a given module’s beam code to a list of nodes.</p>
+    <p>Deloys a given module’s BEAM code to a list of nodes.</p>
 <p>This function is useful for development and debugging when you have code that
 has been compiled or updated locally that you want to run on other nodes.</p>
 <p>The node list defaults to a list of all connected nodes.</p>
@@ -618,7 +618,7 @@ nl(NoSuchModuleExists)
     </a>
     <span class="signature">pid(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L648" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L650" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -640,7 +640,7 @@ nl(NoSuchModuleExists)
     </a>
     <span class="signature">pid(x, y, z)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L664" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L666" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -665,7 +665,7 @@ iex&gt; pid(0, 64, 2048)
     </a>
     <span class="signature">pwd()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L439" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L439" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -684,7 +684,7 @@ iex&gt; pid(0, 64, 2048)
     </a>
     <span class="signature">r(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L357" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L357" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -716,7 +716,7 @@ the module.</p>
     </a>
     <span class="signature">recompile()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L77" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -746,7 +746,7 @@ debugging purposes. Do not depend on it in production code.</p>
     </a>
     <span class="signature">respawn()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L531" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L531" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -766,7 +766,7 @@ debugging purposes. Do not depend on it in production code.</p>
     </a>
     <span class="signature">v(n \\ -1)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L332" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L332" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -799,7 +799,7 @@ For instance, v(-1) returns the result of the last evaluated expression.</p>
     </a>
     <span class="signature">b(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L240" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L240" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -824,7 +824,7 @@ b(Dict)</code></pre>
     </a>
     <span class="signature">h(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -852,7 +852,7 @@ h Enum.all?</code></pre>
     </a>
     <span class="signature">import_file(path)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L589" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L589" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -883,7 +883,7 @@ iex(2)&gt; value
     </a>
     <span class="signature">import_file(path, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L597" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L597" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -901,7 +901,7 @@ iex(2)&gt; value
     </a>
     <span class="signature">import_file_if_available(path)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L554" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L554" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -930,7 +930,7 @@ in behalf of the user.</p>
     </a>
     <span class="signature">import_if_available(quoted_module, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L613" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L613" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -954,7 +954,7 @@ import_if_available Ecto.Query</code></pre>
     </a>
     <span class="signature">s(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -979,7 +979,7 @@ s(is_atom/1)</code></pre>
     </a>
     <span class="signature">t(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/ab648f3d5b2af36b372c358aecabd161db408aca/lib/iex/lib/iex/helpers.ex#L268" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/aa5e9ba83f3aa553e4b232255776a0cc55dc65ec/lib/iex/lib/iex/helpers.ex#L268" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
