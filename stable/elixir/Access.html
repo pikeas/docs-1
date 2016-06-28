@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
-    <title>Access – Elixir v1.3.0</title>
+    <title>Access – Elixir v1.3.1</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Access.html" />
@@ -27,7 +27,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.0
+        v1.3.1
       </h2>
     </div>
     
@@ -66,13 +66,13 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.0</small>
+        <small class="visible-xs">Elixir v1.3.1</small>
         Access
         
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -374,7 +374,7 @@ accessors.</p>
     </a>
     <span class="signature">all()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L399" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L399" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -413,7 +413,7 @@ iex&gt; get_and_update_in([1, 2, 3, 4, 5], [Access.all], fn
     </a>
     <span class="signature">at(index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L461" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L461" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -456,7 +456,7 @@ iex&gt; get_and_update_in(list, [Access.at(10), :name], fn
     </a>
     <span class="signature">elem(index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L352" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -489,7 +489,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">fetch(container, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L145" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -517,7 +517,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">get(container, key, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L178" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L178" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -545,7 +545,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">get_and_update(container, key, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L199" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -581,7 +581,7 @@ from the map and returned.</p>
     </a>
     <span class="signature">key(key, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -622,7 +622,7 @@ iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
     </a>
     <span class="signature">key!(key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L314" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L314" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -657,7 +657,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">pop(container, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L221" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -689,7 +689,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">fetch(t, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L122" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -716,7 +716,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">get(t, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L123" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -743,7 +743,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">get_and_update(t, key, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L124" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -770,7 +770,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">pop(t, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/elixir/lib/access.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/access.ex#L125" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

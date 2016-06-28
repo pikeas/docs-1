@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
-    <title>IEx.Helpers – IEx v1.3.0</title>
+    <title>IEx.Helpers – IEx v1.3.1</title>
     <link rel="stylesheet" href="dist/app-88251e7c81.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/iex/IEx.Helpers.html" />
@@ -27,7 +27,7 @@
         IEx
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.0
+        v1.3.1
       </h2>
     </div>
     
@@ -64,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">IEx v1.3.0</small>
+        <small class="visible-xs">IEx v1.3.1</small>
         IEx.Helpers
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -350,6 +350,24 @@ the shell</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#import_file_if_available/1">import_file_if_available(path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Similar to <code class="inline">import_file</code> but only imports it if it is available</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#import_if_available/2">import_if_available(quoted_module, opts \\ [])</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calls <code class="inline">import/2</code> with the given arguments, but only if the module is available</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#s/1">s(term)</a>
   </div>
   
@@ -392,7 +410,7 @@ the shell</p>
     </a>
     <span class="signature">c(files, path \\ &quot;.&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -422,7 +440,7 @@ c &quot;baz.ex&quot;
     </a>
     <span class="signature">cd(directory)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L445" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L445" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -441,7 +459,7 @@ c &quot;baz.ex&quot;
     </a>
     <span class="signature">clear()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -463,7 +481,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">flush()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L411" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L411" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -482,7 +500,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">h()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L164" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L164" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -501,7 +519,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">i(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -520,7 +538,7 @@ unavailable on Windows machines.</p>
     </a>
     <span class="signature">l(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L388" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L388" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,7 +561,7 @@ to load it.</p>
     </a>
     <span class="signature">ls(path \\ &quot;.&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L459" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L459" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -563,7 +581,7 @@ to load it.</p>
     </a>
     <span class="signature">nl(nodes \\ Node.list(), module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L659" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L687" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -594,7 +612,7 @@ nl(NoSuchModuleExists)
     </a>
     <span class="signature">pid(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L612" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L640" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -616,7 +634,7 @@ nl(NoSuchModuleExists)
     </a>
     <span class="signature">pid(x, y, z)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L628" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L656" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -641,7 +659,7 @@ iex&gt; pid(0, 64, 2048)
     </a>
     <span class="signature">pwd()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L437" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L437" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -660,7 +678,7 @@ iex&gt; pid(0, 64, 2048)
     </a>
     <span class="signature">r(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L355" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L355" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -692,7 +710,7 @@ the module.</p>
     </a>
     <span class="signature">recompile()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L77" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -722,7 +740,7 @@ debugging purposes. Do not depend on it in production code.</p>
     </a>
     <span class="signature">respawn()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L529" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L529" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -742,7 +760,7 @@ debugging purposes. Do not depend on it in production code.</p>
     </a>
     <span class="signature">v(n \\ -1)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L330" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -775,7 +793,7 @@ For instance, v(-1) returns the result of the last evaluated expression.</p>
     </a>
     <span class="signature">b(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L238" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -800,7 +818,7 @@ b(Dict)</code></pre>
     </a>
     <span class="signature">h(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L188" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -828,7 +846,7 @@ h Enum.all?</code></pre>
     </a>
     <span class="signature">import_file(path, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L573" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L582" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -866,6 +884,49 @@ nil</code></pre>
 
   </section>
 </div>
+<div class="detail" id="import_file_if_available/1">
+  <div class="detail-header">
+    <a href="#import_file_if_available/1" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">import_file_if_available(path)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L539" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Similar to <code class="inline">import_file</code> but only imports it if it is available.</p>
+
+  </section>
+</div>
+<div class="detail" id="import_if_available/2">
+  <div class="detail-header">
+    <a href="#import_if_available/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">import_if_available(quoted_module, opts \\ [])</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L608" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Calls <code class="inline">import/2</code> with the given arguments, but only if the module is available.</p>
+<p>This lets you put imports in <code class="inline">.iex.exs</code> files (including <code class="inline">~/.iex.exs</code>) without
+getting compile errors if you open a console where the module is not available.</p>
+<h2>Example</h2>
+<pre><code class="elixir"># In ~/.iex.exs
+import_if_available Ecto.Query</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="s/1">
   <div class="detail-header">
     <a href="#s/1" class="detail-link" title="Link to this macro">
@@ -873,7 +934,7 @@ nil</code></pre>
     </a>
     <span class="signature">s(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L297" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L297" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -898,7 +959,7 @@ s(is_atom/1)</code></pre>
     </a>
     <span class="signature">t(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.0/lib/iex/lib/iex/helpers.ex#L266" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex/helpers.ex#L266" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
