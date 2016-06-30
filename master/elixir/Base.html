@@ -13,6 +13,7 @@
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -70,7 +71,7 @@
         Base
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -341,7 +342,7 @@ safe alphabet</p>
     </a>
     <span class="signature">decode16(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -393,7 +394,7 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
     </a>
     <span class="signature">decode16!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L247" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L247" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -447,7 +448,7 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
     </a>
     <span class="signature">decode32(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L512" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L512" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -511,7 +512,7 @@ iex&gt; Base.decode32(&quot;MZXW6YTBOI&quot;, padding: false)
     </a>
     <span class="signature">decode32!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -577,7 +578,7 @@ iex&gt; Base.decode32!(&quot;MZXW6YTBOI&quot;, padding: false)
     </a>
     <span class="signature">decode64(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -621,7 +622,7 @@ iex&gt; Base.decode64(&quot;Zm9vYg&quot;, padding: false)
     </a>
     <span class="signature">decode64!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L344" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -667,7 +668,7 @@ iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
     </a>
     <span class="signature">encode16(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -714,7 +715,7 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
     </a>
     <span class="signature">encode32(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L468" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -773,7 +774,7 @@ iex&gt; Base.encode32(&quot;foobar&quot;, padding: false)
     </a>
     <span class="signature">encode64(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -812,7 +813,7 @@ iex&gt; Base.encode64(&quot;foob&quot;, padding: false)
     </a>
     <span class="signature">hex_decode32(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L645" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L645" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -879,7 +880,7 @@ iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8&quot;, padding: false)
     </a>
     <span class="signature">hex_decode32!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L693" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L693" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -946,7 +947,7 @@ iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8&quot;, padding: false)
     </a>
     <span class="signature">hex_encode32(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L600" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L600" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1006,7 +1007,7 @@ iex&gt; Base.hex_encode32(&quot;foobar&quot;, padding: false)
     </a>
     <span class="signature">url_decode64(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1050,7 +1051,7 @@ iex&gt; Base.url_decode64(&quot;_3_-_A&quot;, padding: false)
     </a>
     <span class="signature">url_decode64!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1094,7 +1095,7 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A&quot;, padding: false)
     </a>
     <span class="signature">url_encode64(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/base.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/base.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

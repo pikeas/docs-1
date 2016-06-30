@@ -13,6 +13,7 @@
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -72,7 +73,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -333,7 +334,7 @@ to Elixir exceptions</p>
     </a>
     <span class="signature">exception?(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L37" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -352,7 +353,7 @@ to Elixir exceptions</p>
     </a>
     <span class="signature">format(kind, payload, stacktrace \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -384,7 +385,7 @@ to generate the final format.</p>
     </a>
     <span class="signature">format_banner(kind, exception, stacktrace \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L111" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -420,7 +421,7 @@ an empty stacktrace, <code class="inline">[]</code>, must be used.</p>
     </a>
     <span class="signature">format_exit(reason)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L166" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L166" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,7 +453,7 @@ and stacktrace.</p>
     </a>
     <span class="signature">format_fa(fun, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L403" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L403" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -475,7 +476,7 @@ shown in stacktraces. The arity may also be a list of arguments.</p>
     </a>
     <span class="signature">format_file_line(file, line, suffix \\ &quot;&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L467" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L467" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -504,7 +505,7 @@ iex&gt; Exception.format_file_line(nil, nil)
     </a>
     <span class="signature">format_mfa(module, fun, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L427" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L427" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -537,7 +538,7 @@ where func is the name of the enclosing function. Convert to
     </a>
     <span class="signature">format_stacktrace(trace \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L382" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L382" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -558,7 +559,7 @@ is retrieved from <a href="Process.html#info/2"><code class="inline">Process.inf
     </a>
     <span class="signature">format_stacktrace_entry(entry)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L343" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L343" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -586,7 +587,7 @@ is retrieved from <a href="Process.html#info/2"><code class="inline">Process.inf
     </a>
     <span class="signature">message(exception)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -605,7 +606,7 @@ is retrieved from <a href="Process.html#info/2"><code class="inline">Process.inf
     </a>
     <span class="signature">normalize(kind, payload, stacktrace \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -659,7 +660,7 @@ an empty stacktrace, <code class="inline">[]</code>, must be used.</p>
     </a>
     <span class="signature">exception(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -686,7 +687,7 @@ an empty stacktrace, <code class="inline">[]</code>, must be used.</p>
     </a>
     <span class="signature">message(t)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/exception.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/exception.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

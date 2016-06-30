@@ -13,6 +13,7 @@
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -70,7 +71,7 @@
         OptionParser
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -251,7 +252,7 @@ exception if any invalid options are given</p>
     </a>
     <span class="signature">next(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L289" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L289" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -300,7 +301,7 @@ command line)</p>
     </a>
     <span class="signature">parse(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L141" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -439,7 +440,7 @@ which will set the option to <code class="inline">false</code>:</p>
     </a>
     <span class="signature">parse!(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L173" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L173" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -488,7 +489,7 @@ iex&gt; OptionParser.parse!([&quot;-l&quot;, &quot;xyz&quot;, &quot;-f&quot;, &q
     </a>
     <span class="signature">parse_head(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L196" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -524,7 +525,7 @@ iex&gt; OptionParser.parse_head([&quot;--verbose&quot;, &quot;--source&quot;, &q
     </a>
     <span class="signature">parse_head!(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L223" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -569,7 +570,7 @@ iex&gt; OptionParser.parse_head!([&quot;--verbose&quot;, &quot;--source&quot;, &
     </a>
     <span class="signature">split(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L376" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L376" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -603,7 +604,7 @@ iex&gt; OptionParser.split(&quot;foo \&quot;bar baz\&quot;&quot;)
     </a>
     <span class="signature">to_argv(enum)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/option_parser.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/option_parser.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

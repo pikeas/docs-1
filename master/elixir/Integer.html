@@ -13,6 +13,7 @@
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -70,7 +71,7 @@
         Integer
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -216,7 +217,7 @@ of <code class="inline">integer</code> in the given <code class="inline">base</c
     </a>
     <span class="signature">digits(integer, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -252,7 +253,7 @@ iex&gt; Integer.digits(170, 2)
     </a>
     <span class="signature">parse(binary, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L165" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -314,7 +315,7 @@ iex&gt; Integer.parse(&quot;a2&quot;, 38)
     </a>
     <span class="signature">to_charlist(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L305" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -355,7 +356,7 @@ iex&gt; Integer.to_charlist(0123)
     </a>
     <span class="signature">to_charlist(integer, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L329" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L329" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -394,7 +395,7 @@ iex&gt; Integer.to_charlist(882681651, 36)
     </a>
     <span class="signature">to_string(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -436,7 +437,7 @@ iex&gt; Integer.to_string(0123)
     </a>
     <span class="signature">to_string(integer, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -476,7 +477,7 @@ iex&gt; Integer.to_string(882681651, 36)
     </a>
     <span class="signature">undigits(digits, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -527,7 +528,7 @@ iex&gt; Integer.undigits([])
     </a>
     <span class="signature">is_even(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -561,7 +562,7 @@ true</code></pre>
     </a>
     <span class="signature">is_odd(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/17557aa39c17061443b88617ecffbf16917bc9ff/lib/elixir/lib/integer.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/integer.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
