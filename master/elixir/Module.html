@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>Module – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/elixir/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Module.html" />
     
@@ -71,7 +71,7 @@
         Module
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -86,7 +86,13 @@ attributes, attach documentation and so forth.</p>
 this module will raise errors, since it is out of their scope
 to inspect runtime data. Most of the runtime data can be inspected
 via the <code class="inline">__info__(attr)</code> function attached to each compiled module.</p>
-<h2>Module attributes</h2>
+<h2 id="module-module-attributes" class="section-heading">
+  <a class="hover-link" href="#module-module-attributes">
+    <i class="icon-link"></i>
+  </a>
+  Module attributes
+</h2>
+
 <p>Each module can be decorated with one or more attributes. The following ones
 are currently defined by Elixir:</p>
 <ul>
@@ -286,7 +292,13 @@ also be added. A custom attribute is any valid identifier prefixed with an
 end</code></pre>
 <p>For more advanced options available when defining custom attributes, see
 <a href="#register_attribute/3"><code class="inline">register_attribute/3</code></a>.</p>
-<h2>Compile callbacks</h2>
+<h2 id="module-compile-callbacks" class="section-heading">
+  <a class="hover-link" href="#module-compile-callbacks">
+    <i class="icon-link"></i>
+  </a>
+  Compile callbacks
+</h2>
+
 <p>There are three callbacks that are invoked when functions are defined,
 as well as before and immediately after the module bytecode is generated.</p>
 <h3><code class="inline">@after_compile</code></h3>
@@ -379,7 +391,13 @@ defmodule M do
     :ok
   end
 end</code></pre>
-<h2>Compile options</h2>
+<h2 id="module-compile-options" class="section-heading">
+  <a class="hover-link" href="#module-compile-options">
+    <i class="icon-link"></i>
+  </a>
+  Compile options
+</h2>
+
 <p>The <code class="inline">@compile</code> attribute accepts diverse options that is used by both
 Elixir and Erlang compilers. Some of the common use cases are documented
 below:</p>
@@ -637,7 +655,7 @@ already referenced</p>
     </a>
     <span class="signature">__info__(kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L0" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L0" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -681,7 +699,7 @@ by <a href="http://www.erlang.org/doc/man/erlang.html#module_info-0"><code class
     </a>
     <span class="signature">add_doc(module, line, kind, tuple, signature \\ [], doc)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L601" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L601" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -710,7 +728,7 @@ end</code></pre>
     </a>
     <span class="signature">concat(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L521" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L521" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -744,7 +762,7 @@ Foo.Bar</code></pre>
     </a>
     <span class="signature">concat(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L538" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L538" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -778,7 +796,7 @@ Foo.Bar</code></pre>
     </a>
     <span class="signature">create(module, quoted, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L491" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L491" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -819,7 +837,7 @@ shares the same environment.</p>
     </a>
     <span class="signature">defines?(module, tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L752" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L752" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -845,7 +863,7 @@ end</code></pre>
     </a>
     <span class="signature">defines?(module, tuple, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L773" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L773" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -872,7 +890,7 @@ end</code></pre>
     </a>
     <span class="signature">definitions_in(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L793" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L793" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -896,7 +914,7 @@ end</code></pre>
     </a>
     <span class="signature">definitions_in(module, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L812" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L812" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -922,7 +940,7 @@ end</code></pre>
     </a>
     <span class="signature">delete_attribute(module, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L955" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L955" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -955,7 +973,7 @@ end</code></pre>
     </a>
     <span class="signature">eval_quoted(module, quoted, binding \\ [], opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L442" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L442" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -992,7 +1010,7 @@ Foo.sum(1, 2) #=&gt; 3</code></pre>
     </a>
     <span class="signature">get_attribute(module, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L939" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L939" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1038,7 +1056,7 @@ end</code></pre>
     </a>
     <span class="signature">make_overridable(module, tuples)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L825" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L825" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1060,7 +1078,7 @@ more information and documentation.</p>
     </a>
     <span class="signature">open?(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L410" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L410" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1080,7 +1098,7 @@ and its attributes and functions can be modified.</p>
     </a>
     <span class="signature">overridable?(module, tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L866" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L866" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1099,7 +1117,7 @@ and its attributes and functions can be modified.</p>
     </a>
     <span class="signature">put_attribute(module, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L884" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L884" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1125,7 +1143,7 @@ end</code></pre>
     </a>
     <span class="signature">register_attribute(module, new, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L993" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L993" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1168,7 +1186,7 @@ end</code></pre>
     </a>
     <span class="signature">safe_concat(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1205,7 +1223,7 @@ List.Chars</code></pre>
     </a>
     <span class="signature">safe_concat(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L580" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L580" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1244,7 +1262,7 @@ List.Chars</code></pre>
     </a>
     <span class="signature">split(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/module.ex#L1017" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/module.ex#L1017" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1283,7 +1301,7 @@ List.Chars</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/elixir/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

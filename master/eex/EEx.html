@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>EEx – EEx v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/eex/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/eex/EEx.html" />
     
@@ -69,7 +69,7 @@
         EEx
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L9" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L9" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -81,7 +81,13 @@
 Elixir code inside a string in a robust way.</p>
 <pre><code class="iex elixir">iex&gt; EEx.eval_string &quot;foo &lt;%= bar %&gt;&quot;, [bar: &quot;baz&quot;]
 &quot;foo baz&quot;</code></pre>
-<h2>API</h2>
+<h2 id="module-api" class="section-heading">
+  <a class="hover-link" href="#module-api">
+    <i class="icon-link"></i>
+  </a>
+  API
+</h2>
+
 <p>This module provides 3 main APIs for you to use:</p>
 <ol>
 <li><p>Evaluate a string (<code class="inline">eval_string</code>) or a file (<code class="inline">eval_file</code>)
@@ -100,7 +106,13 @@ Elixir code inside a string in a robust way.</p>
  ways of handling the compiled template.
 </li>
 </ol>
-<h2>Options</h2>
+<h2 id="module-options" class="section-heading">
+  <a class="hover-link" href="#module-options">
+    <i class="icon-link"></i>
+  </a>
+  Options
+</h2>
+
 <p>All functions in this module accept EEx-related options.
 They are:</p>
 <ul>
@@ -114,7 +126,13 @@ file the template is read from or to “nofile” when compiling from a string.
 <li><code class="inline">:trim</code> - trims whitespace left/right of quotation tags
 </li>
 </ul>
-<h2>Engine</h2>
+<h2 id="module-engine" class="section-heading">
+  <a class="hover-link" href="#module-engine">
+    <i class="icon-link"></i>
+  </a>
+  Engine
+</h2>
+
 <p>EEx has the concept of engines which allows you to modify or
 transform the code extracted from the given string or file.</p>
 <p>By default, <a href="EEx.html#content"><code class="inline">EEx</code></a> uses the <a href="EEx.SmartEngine.html"><code class="inline">EEx.SmartEngine</code></a> that provides some
@@ -258,7 +276,7 @@ that can be evaluated by Elixir or compiled to a function</p>
     </a>
     <span class="signature">compile_file(filename, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -278,7 +296,7 @@ that can be evaluated by Elixir or compiled to a function.</p>
     </a>
     <span class="signature">compile_string(source, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -298,7 +316,7 @@ that can be evaluated by Elixir or compiled to a function.</p>
     </a>
     <span class="signature">eval_file(filename, bindings \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -323,7 +341,7 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
     </a>
     <span class="signature">eval_string(source, bindings \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -357,7 +375,7 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
     </a>
     <span class="signature">function_from_file(kind, name, file, args \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L150" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -392,7 +410,7 @@ Sample.sample(1, 2) #=&gt; &quot;3&quot;</code></pre>
     </a>
     <span class="signature">function_from_string(kind, name, source, args \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/eex/lib/eex.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/eex/lib/eex.ex#L113" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -435,7 +453,7 @@ iex&gt; Sample.sample(1, 2)
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/eex/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

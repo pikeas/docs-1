@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>Record – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/elixir/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Record.html" />
     
@@ -71,7 +71,7 @@
         Record
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -97,7 +97,13 @@ the tuples’ compact structure.</p>
 <p>The macros <a href="#defrecord/3"><code class="inline">defrecord/3</code></a> and <a href="#defrecordp/3"><code class="inline">defrecordp/3</code></a> can be used to create records
 while <a href="#extract/2"><code class="inline">extract/2</code></a> and <a href="#extract_all/1"><code class="inline">extract_all/1</code></a> can be used to extract records from
 Erlang files.</p>
-<h2>Types</h2>
+<h2 id="module-types" class="section-heading">
+  <a class="hover-link" href="#module-types">
+    <i class="icon-link"></i>
+  </a>
+  Types
+</h2>
+
 <p>Types can be defined for tuples with the <code class="inline">record/2</code> macro (only available in
 typespecs). This macro will expand to a tuple as seen in the example below:</p>
 <pre><code class="elixir">defmodule MyModule do
@@ -216,7 +222,7 @@ on a record</p>
     </a>
     <span class="signature">extract(name, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -262,7 +268,7 @@ compile time.</p>
     </a>
     <span class="signature">extract_all(opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -313,7 +319,7 @@ compile time.</p>
     </a>
     <span class="signature">defrecord(name, tag \\ nil, kv)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L252" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -376,10 +382,10 @@ end
 require User
 User.user() #=&gt; {User, nil}</code></pre>
 <h2>Defining extracted records with anonymous functions in the values</h2>
-<p>If a record defines an anonymous function in the default values,
-an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a>  will occur if you attempt to create a record with it.
-This can happen unintentionally when defining a record after extracting
-it from an Erlang library that uses anonymous functions for defaults.</p>
+<p>If a record defines an anonymous function in the default values, an
+<a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> will be raised. This can happen unintentionally when defining
+a record after extracting it from an Erlang library that uses anonymous
+functions for defaults.</p>
 <pre><code class="elixir">Record.defrecord :my_rec, Record.extract(...)
 #=&gt; ** (ArgumentError) invalid value for record field fun_field,
 cannot escape #Function&lt;12.90072148/2 in :erl_eval.expr/5&gt;.</code></pre>
@@ -400,7 +406,7 @@ end</code></pre>
     </a>
     <span class="signature">defrecordp(name, tag \\ nil, kv)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L270" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -419,7 +425,7 @@ end</code></pre>
     </a>
     <span class="signature">is_record(data)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -435,9 +441,6 @@ iex&gt; Record.is_record(record)
 true
 iex&gt; tuple = {}
 iex&gt; Record.is_record(tuple)
-false
-iex&gt; other_term = &quot;not a record&quot;
-iex&gt; Record.is_record(other_term)
 false</code></pre>
 
   </section>
@@ -449,7 +452,7 @@ false</code></pre>
     </a>
     <span class="signature">is_record(data, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/record.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/record.ex#L118" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -488,7 +491,7 @@ true</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/elixir/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

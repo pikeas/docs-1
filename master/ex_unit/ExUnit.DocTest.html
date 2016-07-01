@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>ExUnit.DocTest – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/ex_unit/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.DocTest.html" />
     
@@ -69,7 +69,7 @@
         ExUnit.DocTest
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/doc_test.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/doc_test.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -91,7 +91,13 @@ can be employed if the following lines start with either
 <p>The expected result should start at the next line after <code class="inline">iex&gt;</code>
 or <code class="inline">...&gt;</code> line(s) and is terminated either by a newline, new
 <code class="inline">iex&gt;</code> prefix or end of the string literal.</p>
-<h2>Examples</h2>
+<h2 id="module-examples" class="section-heading">
+  <a class="hover-link" href="#module-examples">
+    <i class="icon-link"></i>
+  </a>
+  Examples
+</h2>
+
 <p>Currently, the only way to run doctests is to include them into
 an ExUnit case with a <code class="inline">doctest</code> macro:</p>
 <pre><code class="elixir">defmodule MyModule.Test do
@@ -142,7 +148,13 @@ don’t want to show it all, but just parts of it or some of its properties.</p>
 </ul>
 <p>We also allow you to select or skip some functions when calling
 <code class="inline">doctest</code>. See the documentation for more info.</p>
-<h2>Opaque types</h2>
+<h2 id="module-opaque-types" class="section-heading">
+  <a class="hover-link" href="#module-opaque-types">
+    <i class="icon-link"></i>
+  </a>
+  Opaque types
+</h2>
+
 <p>Some types internal structure are kept hidden and instead show a
 user-friendly structure when inspecting the value. The idiom in
 Elixir is to print those data types as <code class="inline">#Name&lt;...&gt;</code>. Because those
@@ -166,7 +178,13 @@ the MapSet building expression as the doctest result:</p>
 %{users: Enum.into([:foo, :bar], MapSet.new)}</code></pre>
 <p>The downside of this approach is that the doctest result is not really
 what users would see in the terminal.</p>
-<h2>Exceptions</h2>
+<h2 id="module-exceptions" class="section-heading">
+  <a class="hover-link" href="#module-exceptions">
+    <i class="icon-link"></i>
+  </a>
+  Exceptions
+</h2>
+
 <p>You can also showcase expressions raising an exception, for example:</p>
 <pre><code class="elixir">iex(1)&gt; String.to_atom((fn() -&gt; 1 end).())
 ** (ArgumentError) argument error</code></pre>
@@ -176,7 +194,13 @@ At this moment, the exception parser would make the parser treat the next
 line as a start of a completely new expression (if it is prefixed with <code class="inline">iex&gt;</code>)
 or a no-op line with documentation. Thus, multiline messages are not
 supported.</p>
-<h2>When not to use doctest</h2>
+<h2 id="module-when-not-to-use-doctest" class="section-heading">
+  <a class="hover-link" href="#module-when-not-to-use-doctest">
+    <i class="icon-link"></i>
+  </a>
+  When not to use doctest
+</h2>
+
 <p>In general, doctests are not recommended when your code examples contain
 side effects. For example, if a doctest prints to standard output, doctest
 will not try to capture the output.</p>
@@ -241,7 +265,7 @@ suite run.</p>
     </a>
     <span class="signature">doctest(mod, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/doc_test.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/doc_test.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -294,7 +318,7 @@ should be set to <code class="inline">false</code> and a full <code class="inlin
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/ex_unit/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

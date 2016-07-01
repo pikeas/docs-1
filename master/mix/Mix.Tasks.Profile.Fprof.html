@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>Mix.Tasks.Profile.Fprof – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/mix/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Profile.Fprof.html" />
     
@@ -69,7 +69,7 @@
         Mix.Tasks.Profile.Fprof
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/mix/lib/mix/tasks/profile.fprof.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/mix/lib/mix/tasks/profile.fprof.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -87,7 +87,13 @@ residing in the OTP application supervision tree) are not profiled.</p>
 <p>To profile the code, you can use the syntax similar to <code class="inline">mix run</code> task:</p>
 <pre><code class="elixir">mix profile.fprof -e Hello.world
 mix profile.fprof my_script.exs arg1 arg2 arg3</code></pre>
-<h2>Command line options</h2>
+<h2 id="module-command-line-options" class="section-heading">
+  <a class="hover-link" href="#module-command-line-options">
+    <i class="icon-link"></i>
+  </a>
+  Command line options
+</h2>
+
 <ul>
 <li><code class="inline">--callers</code>       - print detailed information about immediate callers and called functions
 </li>
@@ -116,7 +122,13 @@ mix profile.fprof my_script.exs arg1 arg2 arg3</code></pre>
 <li><code class="inline">--no-warmup</code>     - do not execute code once before profiling
 </li>
 </ul>
-<h2>Profile output</h2>
+<h2 id="module-profile-output" class="section-heading">
+  <a class="hover-link" href="#module-profile-output">
+    <i class="icon-link"></i>
+  </a>
+  Profile output
+</h2>
+
 <p>The example output looks as following:</p>
 <pre><code class="elixir">#                                        CNT    ACC (ms)    OWN (ms)
 Total                                 200279    1972.188    1964.579
@@ -160,7 +172,13 @@ in the context of the marked function. For example, the last row means that
 the total time spent in the function was 50ms.</p>
 <p>For a detailed explanation it’s worth reading the analysis in
 <a href="http://www.erlang.org/doc/man/fprof.html#analysis">Erlang documentation for fprof</a>.</p>
-<h2>Caveats</h2>
+<h2 id="module-caveats" class="section-heading">
+  <a class="hover-link" href="#module-caveats">
+    <i class="icon-link"></i>
+  </a>
+  Caveats
+</h2>
+
 <p>You should be aware that the code being profiled is running in an anonymous
 function which is invoked by <code class="inline">:fprof</code> module. Thus, you’ll see some additional
 entries in your profile output, such as <code class="inline">:fprof</code> calls, an anonymous
@@ -230,7 +248,7 @@ this should give you a more correct insight into your real bottlenecks.</p>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/mix/lib/mix/tasks/profile.fprof.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/mix/lib/mix/tasks/profile.fprof.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -275,7 +293,7 @@ this should give you a more correct insight into your real bottlenecks.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/mix/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

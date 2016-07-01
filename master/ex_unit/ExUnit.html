@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>ExUnit – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/ex_unit/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.html" />
     
@@ -69,7 +69,7 @@
         ExUnit
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -78,7 +78,13 @@
       
         <section id="moduledoc" class="docstring">
           <p>Unit testing framework for Elixir.</p>
-<h2>Example</h2>
+<h2 id="module-example" class="section-heading">
+  <a class="hover-link" href="#module-example">
+    <i class="icon-link"></i>
+  </a>
+  Example
+</h2>
+
 <p>A basic setup for ExUnit is shown below:</p>
 <pre><code class="elixir"># File: assertion_test.exs
 
@@ -101,12 +107,24 @@ end</code></pre>
 command line. Assuming you named the file <code class="inline">assertion_test.exs</code>,
 you can run it as:</p>
 <pre><code class="elixir">elixir assertion_test.exs</code></pre>
-<h2>Case, Callbacks and Assertions</h2>
+<h2 id="module-case-callbacks-and-assertions" class="section-heading">
+  <a class="hover-link" href="#module-case-callbacks-and-assertions">
+    <i class="icon-link"></i>
+  </a>
+  Case, Callbacks and Assertions
+</h2>
+
 <p>See <a href="ExUnit.Case.html"><code class="inline">ExUnit.Case</code></a> and <a href="ExUnit.Callbacks.html"><code class="inline">ExUnit.Callbacks</code></a> for more information
 about defining test cases and setting up callbacks.</p>
 <p>The <a href="ExUnit.Assertions.html"><code class="inline">ExUnit.Assertions</code></a> module contains a set of macros to
 generate assertions with appropriate error messages.</p>
-<h2>Integration with Mix</h2>
+<h2 id="module-integration-with-mix" class="section-heading">
+  <a class="hover-link" href="#module-integration-with-mix">
+    <i class="icon-link"></i>
+  </a>
+  Integration with Mix
+</h2>
+
 <p>Mix is the project management and build tool for Elixir. Invoking <code class="inline">mix test</code>
 from the command line will run the tests in each file matching the pattern
 <code class="inline">*_test.exs</code> found in the <code class="inline">test</code> directory of your project.</p>
@@ -271,7 +289,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -290,7 +308,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L216" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -352,7 +370,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">plural_rule(word)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -381,7 +399,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">plural_rule(word, pluralization)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L246" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -410,7 +428,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">run()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -432,7 +450,7 @@ of failures and the number of skipped tests.</p>
     </a>
     <span class="signature">start(options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -471,7 +489,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/ex_unit/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>ExUnit.Case – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/ex_unit/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.Case.html" />
     
@@ -69,7 +69,7 @@
         ExUnit.Case
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/case.ex#L5" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/case.ex#L5" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -90,7 +90,13 @@ does not change any global state. Defaults to <code class="inline">false</code>.
 <p>This module automatically includes all callbacks defined in
 <a href="ExUnit.Callbacks.html"><code class="inline">ExUnit.Callbacks</code></a>. See that module’s documentation for more
 information.</p>
-<h2>Examples</h2>
+<h2 id="module-examples" class="section-heading">
+  <a class="hover-link" href="#module-examples">
+    <i class="icon-link"></i>
+  </a>
+  Examples
+</h2>
+
 <pre><code class="elixir"> defmodule AssertionTest do
    # Use the module
    use ExUnit.Case, async: true
@@ -100,7 +106,13 @@ information.</p>
      assert true
    end
  end</code></pre>
-<h2>Context</h2>
+<h2 id="module-context" class="section-heading">
+  <a class="hover-link" href="#module-context">
+    <i class="icon-link"></i>
+  </a>
+  Context
+</h2>
+
 <p>All tests receive a context as an argument. The context is particularly
 useful for sharing information between callbacks and tests:</p>
 <pre><code class="elixir">defmodule KVTest do
@@ -122,7 +134,13 @@ information:</p>
   assert KV.put(pid, :hello, :world) == :ok
   assert KV.get(pid, :hello) == :world
 end</code></pre>
-<h2>Tags</h2>
+<h2 id="module-tags" class="section-heading">
+  <a class="hover-link" href="#module-tags">
+    <i class="icon-link"></i>
+  </a>
+  Tags
+</h2>
+
 <p>The context is used to pass information from the callbacks to
 the test. In order to pass information from the test to the
 callback, ExUnit provides tags.</p>
@@ -202,7 +220,13 @@ see the “Reporting tags” section
 in error reports, making it easy for developers to see under which circumstances
 a test was evaluated. To do so, you use the <code class="inline">:report</code> tag:</p>
 <pre><code class="elixir">@moduletag report: [:user_id]</code></pre>
-<h2>Filters</h2>
+<h2 id="module-filters" class="section-heading">
+  <a class="hover-link" href="#module-filters">
+    <i class="icon-link"></i>
+  </a>
+  Filters
+</h2>
+
 <p>Tags can also be used to identify specific tests, which can then
 be included or excluded using filters. The most common functionality
 is to exclude some particular tests from running, which can be done
@@ -220,7 +244,13 @@ a certain subset:</p>
 <pre><code class="elixir">ExUnit.configure(exclude: :os, include: [os: :unix])</code></pre>
 <p>Keep in mind that all tests are included by default, so unless they are
 excluded first, the <code class="inline">include</code> option has no effect.</p>
-<h2>Log Capture</h2>
+<h2 id="module-log-capture" class="section-heading">
+  <a class="hover-link" href="#module-log-capture">
+    <i class="icon-link"></i>
+  </a>
+  Log Capture
+</h2>
+
 <p>ExUnit can optionally suppress printing of log messages that are generated during a test. Log
 messages generated while running a test are captured and only if the test fails are they printed
 to aid with debugging.</p>
@@ -333,7 +363,7 @@ end, contents)</a>
     </a>
     <span class="signature">register_attribute(env, name, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/case.ex#L458" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/case.ex#L458" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -367,7 +397,7 @@ end</code></pre>
     </a>
     <span class="signature">register_test(map, type, name, tags)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/case.ex#L394" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/case.ex#L394" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -405,7 +435,7 @@ pluralization.</p>
     </a>
     <span class="signature">describe(message, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/case.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/case.ex#L342" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -470,7 +500,7 @@ setup steps involved.</p>
     </a>
     <span class="signature">test(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/case.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/case.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -498,7 +528,7 @@ also tagged with :not_implemented.</p>
   _
 end, contents)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/ex_unit/lib/ex_unit/case.ex#L240" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/ex_unit/lib/ex_unit/case.ex#L240" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -542,7 +572,7 @@ end</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/ex_unit/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

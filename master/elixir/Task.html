@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>Task – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/elixir/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Task.html" />
     
@@ -71,7 +71,7 @@
         Task
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -95,7 +95,13 @@ to the caller once the given computation is performed.</p>
 <p>Besides <a href="#async/1"><code class="inline">async/1</code></a> and <a href="#await/2"><code class="inline">await/2</code></a>, tasks can also be
 started as part of a supervision tree and dynamically spawned
 on remote nodes. We will explore all three scenarios next.</p>
-<h2>async and await</h2>
+<h2 id="module-async-and-await" class="section-heading">
+  <a class="hover-link" href="#module-async-and-await">
+    <i class="icon-link"></i>
+  </a>
+  async and await
+</h2>
+
 <p>One of the common uses of tasks is to convert sequential code
 into concurrent code with <a href="Task.html#async/1"><code class="inline">Task.async/1</code></a> while keeping its semantics.
 When invoked, a new process will be created, linked and monitored
@@ -124,7 +130,13 @@ result does not arrive within the timeout, it can be called again at a
 later moment. This allows checking for the result of a task multiple
 times. If a reply does not arrive within the desired time,
 <a href="Task.html#shutdown/2"><code class="inline">Task.shutdown/2</code></a> can be used to stop the task.</p>
-<h2>Supervised tasks</h2>
+<h2 id="module-supervised-tasks" class="section-heading">
+  <a class="hover-link" href="#module-supervised-tasks">
+    <i class="icon-link"></i>
+  </a>
+  Supervised tasks
+</h2>
+
 <p>It is also possible to spawn a task under a supervisor
 with <a href="#start_link/1"><code class="inline">start_link/1</code></a> and <a href="#start_link/3"><code class="inline">start_link/3</code></a>:</p>
 <pre><code class="elixir">Task.start_link(fn -&gt; IO.puts &quot;ok&quot; end)</code></pre>
@@ -142,7 +154,13 @@ the result expected by supervision trees).</p>
 a worker after it exits regardless of the reason. If you design the
 task to terminate normally (as in the example with <a href="IO.html#puts/2"><code class="inline">IO.puts/2</code></a> above),
 consider passing <code class="inline">restart: :transient</code> in the options to <code class="inline">worker/3</code>.</p>
-<h2>Dynamically supervised tasks</h2>
+<h2 id="module-dynamically-supervised-tasks" class="section-heading">
+  <a class="hover-link" href="#module-dynamically-supervised-tasks">
+    <i class="icon-link"></i>
+  </a>
+  Dynamically supervised tasks
+</h2>
+
 <p>The <a href="Task.Supervisor.html"><code class="inline">Task.Supervisor</code></a> module allows developers to dynamically
 create multiple supervised tasks.</p>
 <p>A short example is:</p>
@@ -167,7 +185,13 @@ end)</code></pre>
   # Do something
 end) |&gt; Task.await()</code></pre>
 <p>Finally, check <a href="Task.Supervisor.html"><code class="inline">Task.Supervisor</code></a> for other supported operations.</p>
-<h2>Distributed tasks</h2>
+<h2 id="module-distributed-tasks" class="section-heading">
+  <a class="hover-link" href="#module-distributed-tasks">
+    <i class="icon-link"></i>
+  </a>
+  Distributed tasks
+</h2>
+
 <p>Since Elixir provides a Task supervisor, it is easy to use one
 to dynamically spawn tasks across nodes:</p>
 <pre><code class="elixir"># On the remote node
@@ -357,7 +381,7 @@ described there apply to the whole ecosystem.</p>
     </a>
     <span class="signature">__struct__()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -386,7 +410,7 @@ not use a task process</p>
     </a>
     <span class="signature">async(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -420,7 +444,7 @@ usage of <a href="#async/1"><code class="inline">async/1</code></a> and <a href=
     </a>
     <span class="signature">async(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L276" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -497,7 +521,7 @@ and <code class="inline">result</code> is the return value of the task function.
     </a>
     <span class="signature">await(task, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L320" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -542,7 +566,7 @@ coming from a task inside your <code class="inline">handle_info</code> callback.
     </a>
     <span class="signature">shutdown(task, shutdown \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L537" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L537" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -589,7 +613,7 @@ message already received, this function will block forever awaiting the message.
     </a>
     <span class="signature">start(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L179" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L179" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -620,7 +644,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">start(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -651,7 +675,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">start_link(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -679,7 +703,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">start_link(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -707,7 +731,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">yield(task, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L393" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -760,7 +784,7 @@ for the duration of the timeout awaiting the message.</p>
     </a>
     <span class="signature">yield_many(tasks, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/elixir/lib/task.ex#L469" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/elixir/lib/task.ex#L469" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -852,7 +876,7 @@ the <a href="Task.html#shutdown/2"><code class="inline">Task.shutdown/2</code></
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/elixir/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 

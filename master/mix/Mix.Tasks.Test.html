@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>Mix.Tasks.Test – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <link rel="stylesheet" href="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/mix/dist/app-8a748c0a88.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Tasks.Test.html" />
     
@@ -69,7 +69,7 @@
         Mix.Tasks.Test
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/mix/lib/mix/tasks/test.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/mix/lib/mix/tasks/test.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -84,7 +84,13 @@
 <p>A list of files can be given after the task name in order to select
 the files to compile:</p>
 <pre><code class="elixir">mix test test/some/particular/file_test.exs</code></pre>
-<h2>Command line options</h2>
+<h2 id="module-command-line-options" class="section-heading">
+  <a class="hover-link" href="#module-command-line-options">
+    <i class="icon-link"></i>
+  </a>
+  Command line options
+</h2>
+
 <ul>
 <li><code class="inline">--trace</code>      - run tests with detailed reporting; automatically sets <code class="inline">--max-cases</code> to 1
 </li>
@@ -125,7 +131,13 @@ the files to compile:</p>
 last <code class="inline">test --stale</code>. You can read more about this option in the “Stale” section below.
 </li>
 </ul>
-<h2>Filters</h2>
+<h2 id="module-filters" class="section-heading">
+  <a class="hover-link" href="#module-filters">
+    <i class="icon-link"></i>
+  </a>
+  Filters
+</h2>
+
 <p>ExUnit provides tags and filtering functionality that allows developers
 to select which tests to run. The most common functionality is to exclude
 some particular tests from running by default in your test helper file:</p>
@@ -155,7 +167,13 @@ line number:</p>
 In the case a single file contains more than one test module (test case),
 line filter applies to every test case before the given line number, thus more
 than one test might be taken for the run.</p>
-<h2>Configuration</h2>
+<h2 id="module-configuration" class="section-heading">
+  <a class="hover-link" href="#module-configuration">
+    <i class="icon-link"></i>
+  </a>
+  Configuration
+</h2>
+
 <ul>
 <li><p><code class="inline">:test_paths</code> - list of paths containing test files, defaults to
 <code class="inline">[&quot;test&quot;]</code>. It is expected all test paths to contain a <code class="inline">test_helper.exs</code>
@@ -170,7 +188,13 @@ and display a warning, defaults to <code class="inline">*_test.ex</code>.</p>
 mechanism.
 </li>
 </ul>
-<h2>Coverage</h2>
+<h2 id="module-coverage" class="section-heading">
+  <a class="hover-link" href="#module-coverage">
+    <i class="icon-link"></i>
+  </a>
+  Coverage
+</h2>
+
 <p>The <code class="inline">:test_coverage</code> configuration accepts the following options:</p>
 <ul>
 <li><code class="inline">:output</code> - the output for cover results, defaults to <code class="inline">&quot;cover&quot;</code>
@@ -185,7 +209,13 @@ but it can be overridden as follows:</p>
 compilation path and the <code class="inline">test_coverage</code> options as arguments. It must
 return an anonymous function of zero arity that will be run after the
 test suite is done or <code class="inline">nil</code>.</p>
-<h2>“Stale”</h2>
+<h2 id="module-stale" class="section-heading">
+  <a class="hover-link" href="#module-stale">
+    <i class="icon-link"></i>
+  </a>
+  “Stale”
+</h2>
+
 <p>The <code class="inline">--stale</code> command line option attempts to run only those test files which
 reference modules that have changed since the last time you ran this task with
 <code class="inline">--stale</code>.</p>
@@ -250,7 +280,7 @@ been changed since the last run with <code class="inline">--stale</code>.</p>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/bc2480d53749ffbd102898f5ead7e0948aa860ae/lib/mix/lib/mix/tasks/test.ex#L172" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/b10c4c1d36a003b53b82d1b3267585831307bbb5/lib/mix/lib/mix/tasks/test.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -295,7 +325,7 @@ been changed since the last run with <code class="inline">--stale</code>.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="/home/ubuntu/bob/tmp/10fbebe2462c3eedf3c056168f5ac427/elixir/doc/mix/dist/app-21f1a20b9e.js"></script>
   </body>
 </html>
 
