@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.12.0">
     <title>OptionParser – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-8a748c0a88.css" />
+    <link rel="stylesheet" href="dist/app-f14a8bdfe8.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/OptionParser.html" />
     
@@ -71,7 +71,7 @@
         OptionParser
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -252,7 +252,7 @@ exception if any invalid options are given</p>
     </a>
     <span class="signature">next(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L289" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -275,20 +275,19 @@ exception if any invalid options are given</p>
   <section class="docstring">
     <p>Low-level function that parses one option.</p>
 <p>It accepts the same options as <a href="#parse/2"><code class="inline">parse/2</code></a> and <a href="#parse_head/2"><code class="inline">parse_head/2</code></a>
-as both functions are built on top of next. This function
+as both functions are built on top of this function. This function
 may return:</p>
 <ul>
 <li><p><code class="inline">{:ok, key, value, rest}</code> - the option <code class="inline">key</code> with <code class="inline">value</code> was
 successfully parsed</p>
 </li>
 <li><p><code class="inline">{:invalid, key, value, rest}</code> - the option <code class="inline">key</code> is invalid with <code class="inline">value</code>
-(returned when the switch type does not match the one given via the
-command line)</p>
+(returned when the value cannot be parsed according to the switch type)</p>
 </li>
 <li><p><code class="inline">{:undefined, key, value, rest}</code> - the option <code class="inline">key</code> is undefined
 (returned in strict mode when the switch is unknown)</p>
 </li>
-<li><code class="inline">{:error, rest}</code> - there are no switches at the top of the given argv
+<li><code class="inline">{:error, rest}</code> - there are no switches at the head of the given <code class="inline">argv</code>
 </li>
 </ul>
 
@@ -301,7 +300,7 @@ command line)</p>
     </a>
     <span class="signature">parse(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L157" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -319,16 +318,26 @@ command line)</p>
   
   <section class="docstring">
     <p>Parses <code class="inline">argv</code> into a keywords list.</p>
-<p>It returns a three-element tuple as follows:</p>
-<ol>
-<li>parsed switches,
+<p>It returns a three-element tuple with the form <code class="inline">{parsed, args, invalid}</code>, where:</p>
+<ul>
+<li><code class="inline">parsed</code> is a keyword list of parsed switches with <code class="inline">{switch_name, value}</code>
+tuples in it; <code class="inline">switch_name</code> is the atom representing the switch name while
+<code class="inline">value</code> is the value for that switch parsed according to <code class="inline">opts</code> (see the
+“Examples” section for more information)
 </li>
-<li>remaining arguments,
+<li><code class="inline">args</code> is a list of the remaining arguments in <code class="inline">argv</code> as strings
 </li>
-<li>invalid options.
+<li><code class="inline">invalid</code> is a list of invalid options as <code class="inline">{option_name, value}</code> where
+<code class="inline">option_name</code> is the raw option and <code class="inline">value</code> is <code class="inline">nil</code> if the option wasn’t
+expected or the string value if the value didn’t have the expected type for
+the corresponding option
 </li>
-</ol>
-<h2>Examples</h2>
+</ul>
+<p>Elixir converts switches to underscored atoms, so <code class="inline">--source-path</code> becomes
+<code class="inline">:source_path</code>. This is done to better suit Elixir conventions. However, this
+means that switches can’t contain underscores and switches that do contain
+underscores are always returned in the list of invalid options.</p>
+<p>Without any options, this function will try to parse all switches in the <code class="inline">argv</code>.</p>
 <pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;--debug&quot;])
 {[debug: true], [], []}
 
@@ -337,62 +346,78 @@ iex&gt; OptionParser.parse([&quot;--source&quot;, &quot;lib&quot;])
 
 iex&gt; OptionParser.parse([&quot;--source-path&quot;, &quot;lib&quot;, &quot;test/enum_test.exs&quot;, &quot;--verbose&quot;])
 {[source_path: &quot;lib&quot;, verbose: true], [&quot;test/enum_test.exs&quot;], []}</code></pre>
-<p>By default, Elixir will try to automatically parse all switches.
-Switches followed by a value will be assigned the value, as a string.
-Switches without an argument, like <code class="inline">--debug</code> will automatically
-be set to <code class="inline">true</code>.</p>
-<p>Note: Elixir also converts the switches to underscore atoms, so
-<code class="inline">--source-path</code> becomes <code class="inline">:source_path</code>, to better suit Elixir
-conventions. This means that option names on the command line cannot
-contain underscores; such options will be put in the invalid options
-list.</p>
-<h2>Switch Definitions</h2>
+<p>Switches followed by a value will be assigned the value, as a string.
+Switches without an argument, like <code class="inline">--debug</code> in the examples above, will
+automatically be set to <code class="inline">true</code>.</p>
+<h2>Options</h2>
+<p>The following options are supported:</p>
+<ul>
+<li><code class="inline">:switches</code> or <code class="inline">:strict</code> - see the “Switch definitions” section below
+</li>
+<li><code class="inline">:aliases</code> - see the “Aliases” section below
+</li>
+</ul>
+<h2>Switch definitions</h2>
 <p>Often it is better to explicitly list the known
-switches and their formats. The switches can be specified via two
-alternative options:</p>
+switches and their formats. The switches can be specified via one of two
+options:</p>
 <ul>
-<li><p><code class="inline">:switches</code> - defines some switches. An attempt is still made to parse
-switches that do not appear in the list.</p>
+<li><code class="inline">:switches</code> - defines some switches and their types. This function
+still attempts to parse switches that are not in this list.
 </li>
-<li><code class="inline">:strict</code> - the switches are strict. Any switch that is not specified
-in the list is returned in the invalid options list.
+<li><code class="inline">:strict</code> - defines strict switches. Any switch in <code class="inline">argv</code> that is not
+specified in the list is returned in the invalid options list.
 </li>
 </ul>
+<p>Both these options accept a keyword list of <code class="inline">{name, type}</code> tuples where <code class="inline">name</code>
+is an atom defining the name of the switch and <code class="inline">type</code> is an atom that
+specifies the type for the value of this switch (see the “Types” section below
+for the possible types and more information about type casting).</p>
 <p>Note that you should only supply the <code class="inline">:switches</code> or <code class="inline">:strict</code> option.
-If you supply both, an error will be raised.</p>
+If you supply both, an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception will be raised.</p>
 <h3>Types</h3>
-<p>Option parser switches may take 0 or 1 argument.</p>
-<p>The following switches take no argument:</p>
+<p>Switches parsed by <a href="OptionParser.html#content"><code class="inline">OptionParser</code></a> may take zero or one arguments.</p>
+<p>The following switches types take no arguments:</p>
 <ul>
-<li><code class="inline">:boolean</code> - sets the value to true when given
+<li><code class="inline">:boolean</code> - sets the value to <code class="inline">true</code> when given (see also the
+“Negation switches” section below)
 </li>
-<li><code class="inline">:count</code>   - counts the number of times the switch is given
+<li><code class="inline">:count</code> - counts the number of times the switch is given
 </li>
 </ul>
-<p>The following switches take 1 argument:</p>
+<p>The following switches take one argument:</p>
 <ul>
-<li><code class="inline">:integer</code> - parses the upcoming value as an integer.
+<li><code class="inline">:integer</code> - parses the value as an integer
 </li>
-<li><code class="inline">:float</code>   - parses the upcoming value as a float.
+<li><code class="inline">:float</code> - parses the value as a float
 </li>
-<li><code class="inline">:string</code>  - parses the upcoming value as a string.
+<li><code class="inline">:string</code> - parses the value as a string
 </li>
 </ul>
-<p>If a switch can’t be parsed, it is returned in the invalid
-options list.</p>
+<p>If a switch can’t be parsed according to the given type, it is returned
+in the invalid options list.</p>
 <h3>Modifiers</h3>
 <p>Switches can be specified with modifiers, which change how
 they behave. The following modifiers are supported:</p>
 <ul>
-<li><code class="inline">:keep</code> - keeps duplicated items instead of overriding them.
-Works with all types except <code class="inline">:count</code>.
+<li><code class="inline">:keep</code> - keeps duplicated items instead of overriding them; works with
+all types except <code class="inline">:count</code>. Specifying <code class="inline">switch_name: :keep</code> assumes the
+type of <code class="inline">:switch_name</code> will be <code class="inline">:string</code>.
 </li>
 </ul>
-<p>Note: if you want to use <code class="inline">:keep</code> with a non-string type, use a list, e.g.
-<code class="inline">[foo: [:integer, :keep]]</code>.</p>
-<h3>Examples</h3>
-<p>Here are some examples of option parser working with different types
-and modifiers:</p>
+<p>Note that if you want to use <code class="inline">:keep</code> with a type other than <code class="inline">:string</code>, use a list
+as the type for the switch. For example: <code class="inline">[foo: [:integer, :keep]]</code>.</p>
+<h3>Negation switches</h3>
+<p>In case a switch <code class="inline">SWITCH</code> is specified to have type <code class="inline">:boolean</code>, it may be
+passed as <code class="inline">--no-SWITCH</code> as well which will set the option to <code class="inline">false</code>:</p>
+<pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;--no-op&quot;, &quot;path/to/file&quot;], switches: [op: :boolean])
+{[op: false], [&quot;path/to/file&quot;], []}</code></pre>
+<h2>Aliases</h2>
+<p>A set of aliases can be specified in the <code class="inline">:aliases</code> option:</p>
+<pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;-d&quot;], aliases: [d: :debug])
+{[debug: true], [], []}</code></pre>
+<h2>Examples</h2>
+<p>Here are some examples of working with different types and modifiers:</p>
 <pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;--unlock&quot;, &quot;path/to/file&quot;], strict: [unlock: :boolean])
 {[unlock: true], [&quot;path/to/file&quot;], []}
 
@@ -421,15 +446,6 @@ iex&gt; OptionParser.parse([&quot;--limit&quot;, &quot;3&quot;, &quot;--unknown&
 
 iex&gt; OptionParser.parse([&quot;--unlock&quot;, &quot;path/to/file&quot;, &quot;--unlock&quot;, &quot;path/to/another/file&quot;], strict: [unlock: :keep])
 {[unlock: &quot;path/to/file&quot;, unlock: &quot;path/to/another/file&quot;], [], []}</code></pre>
-<h3>Negation switches</h3>
-<p>In case a switch is declared as boolean, it may be passed as <code class="inline">--no-SWITCH</code>
-which will set the option to <code class="inline">false</code>:</p>
-<pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;--no-op&quot;, &quot;path/to/file&quot;], switches: [op: :boolean])
-{[op: false], [&quot;path/to/file&quot;], []}</code></pre>
-<h2>Aliases</h2>
-<p>A set of aliases can be given as options too:</p>
-<pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;-d&quot;], aliases: [d: :debug])
-{[debug: true], [], []}</code></pre>
 
   </section>
 </div>
@@ -440,7 +456,7 @@ which will set the option to <code class="inline">false</code>:</p>
     </a>
     <span class="signature">parse!(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L173" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -461,12 +477,18 @@ which will set the option to <code class="inline">false</code>:</p>
   <section class="docstring">
     <p>The same as <a href="#parse/2"><code class="inline">parse/2</code></a> but raises an <a href="OptionParser.ParseError.html"><code class="inline">OptionParser.ParseError</code></a>
 exception if any invalid options are given.</p>
-<p>If there weren’t any errors, returns a three-element tuple as follows:</p>
-<pre><code class="elixir">1. parsed options,
-2. remaining arguments,
-3. empty list.</code></pre>
+<p>If there are no errors, returns a <code class="inline">{parsed, rest}</code> tuple where:</p>
+<ul>
+<li><code class="inline">parsed</code> is the list of parsed switches (same as in <a href="#parse/2"><code class="inline">parse/2</code></a>)
+</li>
+<li><code class="inline">rest</code> is the list of arguments (same as in <a href="#parse/2"><code class="inline">parse/2</code></a>)
+</li>
+</ul>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; OptionParser.parse!([&quot;--limit&quot;, &quot;xyz&quot;], strict: [limit: :integer])
+<pre><code class="iex elixir">iex&gt; OptionParser.parse!([&quot;--debug&quot;, &quot;path/to/file&quot;], strict: [debug: :boolean])
+{[debug: true], [&quot;path/to/file&quot;]}
+
+iex&gt; OptionParser.parse!([&quot;--limit&quot;, &quot;xyz&quot;], strict: [limit: :integer])
 ** (OptionParser.ParseError) 1 error found!
 --limit : Expected type integer, got &quot;xyz&quot;
 
@@ -489,7 +511,7 @@ iex&gt; OptionParser.parse!([&quot;-l&quot;, &quot;xyz&quot;, &quot;-f&quot;, &q
     </a>
     <span class="signature">parse_head(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L214" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -525,7 +547,7 @@ iex&gt; OptionParser.parse_head([&quot;--verbose&quot;, &quot;--source&quot;, &q
     </a>
     <span class="signature">parse_head!(argv, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L223" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L243" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -546,12 +568,18 @@ iex&gt; OptionParser.parse_head([&quot;--verbose&quot;, &quot;--source&quot;, &q
   <section class="docstring">
     <p>The same as <a href="#parse_head/2"><code class="inline">parse_head/2</code></a> but raises an <a href="OptionParser.ParseError.html"><code class="inline">OptionParser.ParseError</code></a>
 exception if any invalid options are given.</p>
-<p>If there weren’t any errors, returns a three-element tuple as follows:</p>
-<pre><code class="elixir">1. parsed options,
-2. remaining arguments,
-3. empty list.</code></pre>
+<p>If there are no errors, returns a <code class="inline">{parsed, rest}</code> tuple where:</p>
+<ul>
+<li><code class="inline">parsed</code> is the list of parsed switches (same as in <a href="#parse_head/2"><code class="inline">parse_head/2</code></a>)
+</li>
+<li><code class="inline">rest</code> is the list of arguments (same as in <a href="#parse_head/2"><code class="inline">parse_head/2</code></a>)
+</li>
+</ul>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; OptionParser.parse_head!([&quot;--number&quot;, &quot;lib&quot;, &quot;test/enum_test.exs&quot;, &quot;--verbose&quot;], strict: [number: :integer])
+<pre><code class="iex elixir">iex&gt; OptionParser.parse_head!([&quot;--source&quot;, &quot;lib&quot;, &quot;path/to/file&quot;, &quot;--verbose&quot;])
+{[source: &quot;lib&quot;], [&quot;path/to/file&quot;, &quot;--verbose&quot;]}
+
+iex&gt; OptionParser.parse_head!([&quot;--number&quot;, &quot;lib&quot;, &quot;test/enum_test.exs&quot;, &quot;--verbose&quot;], strict: [number: :integer])
 ** (OptionParser.ParseError) 1 error found!
 --number : Expected type integer, got &quot;lib&quot;
 
@@ -570,7 +598,7 @@ iex&gt; OptionParser.parse_head!([&quot;--verbose&quot;, &quot;--source&quot;, &
     </a>
     <span class="signature">split(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L376" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L401" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -588,6 +616,8 @@ iex&gt; OptionParser.parse_head!([&quot;--verbose&quot;, &quot;--source&quot;, &
   
   <section class="docstring">
     <p>Splits a string into argv chunks.</p>
+<p>This function splits the given <code class="inline">string</code> into a list of strings in a similar
+way to many shells.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; OptionParser.split(&quot;foo bar&quot;)
 [&quot;foo&quot;, &quot;bar&quot;]
@@ -604,7 +634,7 @@ iex&gt; OptionParser.split(&quot;foo \&quot;bar baz\&quot;&quot;)
     </a>
     <span class="signature">to_argv(enum)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/dffebbe85b3fb03a02a476990898169ef4dd55eb/lib/elixir/lib/option_parser.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/46c2bc1c6c1cd05f8b3d288bc3c823c53bf935dd/lib/elixir/lib/option_parser.ex#L372" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -622,8 +652,9 @@ iex&gt; OptionParser.split(&quot;foo \&quot;bar baz\&quot;&quot;)
   
   <section class="docstring">
     <p>Receives a key-value enumerable and converts it to argv.</p>
-<p>Keys must be atoms. Keys with nil value are discarded,
+<p>Keys must be atoms. Keys with <code class="inline">nil</code> value are discarded,
 boolean values are converted to <code class="inline">--key</code> or <code class="inline">--no-key</code>
+(if the value is <code class="inline">true</code> or <code class="inline">false</code>, respectively),
 and all other values are converted using <code class="inline">to_string/1</code>.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt;  OptionParser.to_argv([foo_bar: &quot;baz&quot;])
