@@ -73,7 +73,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -100,7 +100,7 @@ by the nested update functions in <a href="Kernel.html"><code class="inline">Ker
   Dynamic lookups
 </h2>
 
-<p>Out of the box, Access works with <a href="Keyword.html"><code class="inline">Keyword</code></a> and <a href="Map.html"><code class="inline">Map</code></a>:</p>
+<p>Out of the box, <a href="Access.html#content"><code class="inline">Access</code></a> works with <a href="Keyword.html"><code class="inline">Keyword</code></a> and <a href="Map.html"><code class="inline">Map</code></a>:</p>
 <pre><code class="iex elixir">iex&gt; keywords = [a: 1, b: 2]
 iex&gt; keywords[:a]
 1
@@ -112,7 +112,9 @@ iex&gt; map[:a]
 iex&gt; star_ratings = %{1.0 =&gt; &quot;★&quot;, 1.5 =&gt; &quot;★☆&quot;, 2.0 =&gt; &quot;★★&quot;}
 iex&gt; star_ratings[1.5]
 &quot;★☆&quot;</code></pre>
-<p>Access can be combined with <a href="Kernel.html#put_in/3"><code class="inline">Kernel.put_in/3</code></a> to put a value
+<p>Note that the dynamic lookup syntax (<code class="inline">term[key]</code>) roughly translates to
+<code class="inline">Access.get(term, key, nil)</code>.</p>
+<p><a href="Access.html#content"><code class="inline">Access</code></a> can be combined with <a href="Kernel.html#put_in/3"><code class="inline">Kernel.put_in/3</code></a> to put a value
 in a given key:</p>
 <pre><code class="iex elixir">iex&gt; map = %{a: 1, b: 2}
 iex&gt; put_in map[:a], 3
@@ -121,13 +123,13 @@ iex&gt; put_in map[:a], 3
 <pre><code class="iex elixir">iex&gt; users = %{&quot;john&quot; =&gt; %{age: 27}, &quot;meg&quot; =&gt; %{age: 23}}
 iex&gt; put_in users[&quot;john&quot;][:age], 28
 %{&quot;john&quot; =&gt; %{age: 28}, &quot;meg&quot; =&gt; %{age: 23}}</code></pre>
-<p>Furthermore, Access transparently ignores <code class="inline">nil</code> values:</p>
+<p>Furthermore, <a href="Access.html#content"><code class="inline">Access</code></a> transparently ignores <code class="inline">nil</code> values:</p>
 <pre><code class="iex elixir">iex&gt; keywords = [a: 1, b: 2]
 iex&gt; keywords[:c][:unknown]
 nil</code></pre>
-<p>Since Access is a behaviour, it can be implemented to key-value
+<p>Since <a href="Access.html#content"><code class="inline">Access</code></a> is a behaviour, it can be implemented for key-value
 data structures. The implementation should be added to the
-module that defines the struct being access. Access requires the
+module that defines the struct being accessed. <a href="Access.html#content"><code class="inline">Access</code></a> requires the
 key comparison to be implemented using the <code class="inline">===</code> operator.</p>
 <h2 id="module-static-lookups" class="section-heading">
   <a class="hover-link" href="#module-static-lookups">
@@ -136,27 +138,30 @@ key comparison to be implemented using the <code class="inline">===</code> opera
   Static lookups
 </h2>
 
-<p>The Access syntax (<code class="inline">foo[bar]</code>) cannot be used to access fields in
-structs, since structs do not implement the Access behaviour by
-default. It is also design decision: the dynamic access lookup
+<p>The <a href="Access.html#content"><code class="inline">Access</code></a> syntax (<code class="inline">foo[bar]</code>) cannot be used to access fields in
+structs, since structs do not implement the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour by
+default. It is also a design decision: the dynamic access lookup
 is meant to be used for dynamic key-value structures, like maps
-and keywords, and not by static ones like structs.</p>
-<p>Therefore Elixir provides a static lookup for map and structs
-fields. Imagine a struct named <code class="inline">User</code> with name and age fields.
+and keywords, and not by static ones like structs (where fields are
+known and not dynamic).</p>
+<p>Therefore Elixir provides a static lookup for struct fields and for atom
+fields in maps. Imagine a struct named <code class="inline">User</code> with a <code class="inline">:name</code> field.
 The following would raise:</p>
-<pre><code class="elixir">user = %User{name: &quot;john&quot;}
+<pre><code class="elixir">user = %User{name: &quot;John&quot;}
 user[:name]
-** (UndefinedFunctionError) undefined function User.fetch/2
-   (User does not implement the Access behaviour)</code></pre>
-<p>Structs instead use the <code class="inline">user.name</code> syntax:</p>
+# ** (UndefinedFunctionError) undefined function User.fetch/2
+#    (User does not implement the Access behaviour)</code></pre>
+<p>Structs instead use the <code class="inline">user.name</code> syntax to access fields:</p>
 <pre><code class="elixir">user.name
-#=&gt; &quot;john&quot;</code></pre>
+#=&gt; &quot;John&quot;</code></pre>
 <p>The same <code class="inline">user.name</code> syntax can also be used by <a href="Kernel.html#put_in/2"><code class="inline">Kernel.put_in/2</code></a>
 to for updating structs fields:</p>
-<pre><code class="elixir">put_in user.name, &quot;mary&quot;
-%User{name: &quot;mary&quot;}</code></pre>
+<pre><code class="elixir">put_in user.name, &quot;Mary&quot;
+#=&gt; %User{name: &quot;Mary&quot;}</code></pre>
 <p>Differently from <code class="inline">user[:name]</code>, <code class="inline">user.name</code> is not extensible via
-a behaviour and is restricted to only maps and structs.</p>
+a behaviour and is restricted only to structs and atom keys in maps.</p>
+<p>As mentioned above, this works for atom keys in maps as well. Refer to the
+<a href="Map.html"><code class="inline">Map</code></a> module for more information on this.</p>
 <p>Summing up:</p>
 <ul>
 <li><code class="inline">user[:name]</code> is used by dynamic structures, is extensible and
@@ -186,8 +191,24 @@ iex&gt; update_in user, [:languages, Access.all(), :name], &amp;String.upcase/1
 %{name: &quot;john&quot;,
   languages: [%{name: &quot;ELIXIR&quot;, type: :functional},
               %{name: &quot;C&quot;, type: :procedural}]}</code></pre>
-<p>See the functions <code class="inline">key/1</code>, <a href="#key!/1"><code class="inline">key!/1</code></a>, <a href="#elem/1"><code class="inline">elem/1</code></a> and <a href="#all/0"><code class="inline">all/0</code></a> for the current
-accessors.</p>
+<p>See the functions <code class="inline">key/1</code>, <a href="#key!/1"><code class="inline">key!/1</code></a>, <a href="#elem/1"><code class="inline">elem/1</code></a>, and <a href="#all/0"><code class="inline">all/0</code></a> for some of the
+available accessors.</p>
+<h2 id="module-implementing-the-access-behaviour-for-custom-data-structures" class="section-heading">
+  <a class="hover-link" href="#module-implementing-the-access-behaviour-for-custom-data-structures">
+    <i class="icon-link"></i>
+  </a>
+  Implementing the Access behaviour for custom data structures
+</h2>
+
+<p>In order to be able to use the <a href="Access.html#content"><code class="inline">Access</code></a> protocol with custom data structures
+(which have to be structs), such structures have to implement the <a href="Access.html#content"><code class="inline">Access</code></a>
+behaviour. For example, for a <code class="inline">User</code> struct, this would have to be done:</p>
+<pre><code class="elixir">defmodule User do
+  defstruct [:name, :email]
+
+  @behaviour Access
+  # Implementation of the Access callbacks...
+end</code></pre>
 
         </section>
       
@@ -264,7 +285,8 @@ accessors.</p>
     <a href="#fetch/2">fetch(container, key)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Fetches the container’s value for the given key</p>
+    <div class="summary-synopsis"><p>Fetches the value for the given key in a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour</p>
 </div>
   
 </div>
@@ -273,7 +295,8 @@ accessors.</p>
     <a href="#get/3">get(container, key, default \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Gets the container’s value for the given key</p>
+    <div class="summary-synopsis"><p>Gets the value for the given key in a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour</p>
 </div>
   
 </div>
@@ -282,7 +305,8 @@ accessors.</p>
     <a href="#get_and_update/3">get_and_update(container, key, fun)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Gets and updates the container’s value for the given key, in a single pass</p>
+    <div class="summary-synopsis"><p>Gets and updates the given key in a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour</p>
 </div>
   
 </div>
@@ -309,6 +333,10 @@ accessors.</p>
     <a href="#pop/2">pop(container, key)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Removes the entry with a given key from a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour</p>
+</div>
+  
 </div>
 
   </div>
@@ -323,26 +351,39 @@ accessors.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#c:fetch/2">fetch(t, key)</a>
+    <a href="#c:fetch/2">fetch(term, key)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Invoked in order to access the value stored under <code class="inline">key</code> in the given term <code class="inline">term</code></p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#c:get/3">get(t, key, value)</a>
+    <a href="#c:get/3">get(term, key, default)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Invoked in order to access the value stored under <code class="inline">key</code> in the given term <code class="inline">term</code>,
+defaulting to <code class="inline">default</code> if not present</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#c:get_and_update/3">get_and_update(t, key, list)</a>
+    <a href="#c:get_and_update/3">get_and_update(term, key, list)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Invoked in order to access the value under <code class="inline">key</code> and updated it at the same time</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#c:pop/2">pop(t, key)</a>
+    <a href="#c:pop/2">pop(term, key)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Invoked to “pop” the value under <code class="inline">key</code> out of the given term</p>
+</div>
   
 </div>
 
@@ -393,7 +434,7 @@ accessors.</p>
     </a>
     <span class="signature">all()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L399" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L517" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -432,7 +473,7 @@ iex&gt; get_and_update_in([1, 2, 3, 4, 5], [Access.all], fn
     </a>
     <span class="signature">at(index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L586" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -480,7 +521,7 @@ iex&gt; get_and_update_in(list, [Access.at(10), :name], fn
     </a>
     <span class="signature">elem(index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L470" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -513,7 +554,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">fetch(container, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L233" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -530,7 +571,8 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </div>
   
   <section class="docstring">
-    <p>Fetches the container’s value for the given key.</p>
+    <p>Fetches the value for the given key in a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour.</p>
 
   </section>
 </div>
@@ -541,7 +583,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">get(container, key, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L178" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -558,7 +600,8 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </div>
   
   <section class="docstring">
-    <p>Gets the container’s value for the given key.</p>
+    <p>Gets the value for the given key in a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour.</p>
 
   </section>
 </div>
@@ -569,7 +612,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">get_and_update(container, key, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L199" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L289" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -586,7 +629,8 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </div>
   
   <section class="docstring">
-    <p>Gets and updates the container’s value for the given key, in a single pass.</p>
+    <p>Gets and updates the given key in a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour.</p>
 <p>This <code class="inline">fun</code> argument receives the value of <code class="inline">key</code> (or <code class="inline">nil</code> if <code class="inline">key</code>
 is not present) and must return a two-element tuple: the “get” value
 (the retrieved value, which can be operated on before being returned)
@@ -605,7 +649,7 @@ from the map and returned.</p>
     </a>
     <span class="signature">key(key, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L390" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -646,7 +690,7 @@ iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
     </a>
     <span class="signature">key!(key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L314" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L432" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -681,7 +725,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">pop(container, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L339" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -689,7 +733,23 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
   </div>
   
   <section class="docstring">
-    
+    <p>Removes the entry with a given key from a container: a map, keyword
+list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour.</p>
+<p>Returns a tuple containing the value associated with the key and the
+updated container. <code class="inline">nil</code> is returned for the value if the key isn’t
+in the container.</p>
+<p>The name has nothing to do with the <code class="inline">pop</code> stack operation.</p>
+<h2>Examples</h2>
+<p>With a map:</p>
+<pre><code class="iex elixir">iex&gt; Access.pop(%{name: &quot;Elixir&quot;, creator: &quot;Valim&quot;}, :name)
+{&quot;Elixir&quot;, %{creator: &quot;Valim&quot;}}</code></pre>
+<p>A keyword list:</p>
+<pre><code class="iex elixir">iex&gt; Access.pop([name: &quot;Elixir&quot;, creator: &quot;Valim&quot;], :name)
+{&quot;Elixir&quot;, [creator: &quot;Valim&quot;]}</code></pre>
+<p>An unknown key:</p>
+<pre><code class="iex elixir">iex&gt; Access.pop(%{name: &quot;Elixir&quot;, creator: &quot;Valim&quot;}, :year)
+{nil, %{creator: &quot;Valim&quot;, name: &quot;Elixir&quot;}}</code></pre>
+
   </section>
 </div>
 
@@ -711,9 +771,9 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     <a href="#c:fetch/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">fetch(t, key)</span>
+    <span class="signature">fetch(term, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L122" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L160" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -724,13 +784,24 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">fetch(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</code></pre>
+          <pre><code class="elixir">fetch(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</code></pre>
         
       </div>
     </div>
   
   <section class="docstring">
-    
+    <p>Invoked in order to access the value stored under <code class="inline">key</code> in the given term <code class="inline">term</code>.</p>
+<p>This function should return <code class="inline">{:ok, value}</code> where <code class="inline">value</code> is the value under
+<code class="inline">key</code> if it succeeded, or <code class="inline">:error</code> if the key does not exist in the structure.</p>
+<p>Many of the functions defined in the <a href="Access.html#content"><code class="inline">Access</code></a> module internally call this
+function. This function is also used when the square-brackets access syntax
+(<code class="inline">structure[key]</code>) is used: the <a href="#fetch/2"><code class="inline">fetch/2</code></a> callback implemented by the module
+that defines the <code class="inline">structure</code> struct is invoked and if it returns <code class="inline">{:ok,
+value}</code> then <code class="inline">value</code> is returned, or if it returns <code class="inline">:error</code> then <code class="inline">nil</code> is
+returned.</p>
+<p>See the <a href="Map.html#fetch/2"><code class="inline">Map.fetch/2</code></a> and <a href="Keyword.html#fetch/2"><code class="inline">Keyword.fetch/2</code></a> implementations for examples of
+how to implement this callback.</p>
+
   </section>
 </div>
 <div class="detail" id="c:get/3">
@@ -738,9 +809,9 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     <a href="#c:get/3" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">get(t, key, value)</span>
+    <span class="signature">get(term, key, default)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L181" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -751,13 +822,26 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">get(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
+          <pre><code class="elixir">get(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, default :: <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
         
       </div>
     </div>
   
   <section class="docstring">
-    
+    <p>Invoked in order to access the value stored under <code class="inline">key</code> in the given term <code class="inline">term</code>,
+defaulting to <code class="inline">default</code> if not present.</p>
+<p>This function should return the value under the key <code class="inline">key</code> in <code class="inline">term</code> if there’s
+such key, otherwise <code class="inline">default</code>.</p>
+<p>For most data structures, this can be implemented using <a href="#fetch/2"><code class="inline">fetch/2</code></a> internally;
+for example:</p>
+<pre><code class="elixir">def get(structure, key, default) do
+  case fetch(structure, key) do
+    {:ok, value} -&gt; value
+    :error       -&gt; default
+  end
+end</code></pre>
+<p>See the <a href="Map.html#get/3"><code class="inline">Map.get/3</code></a> and <a href="Keyword.html#get/3"><code class="inline">Keyword.get/3</code></a> implementations for more examples.</p>
+
   </section>
 </div>
 <div class="detail" id="c:get_and_update/3">
@@ -765,9 +849,9 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     <a href="#c:get_and_update/3" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">get_and_update(t, key, list)</span>
+    <span class="signature">get_and_update(term, key, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -778,13 +862,25 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">get_and_update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {<a href="#t:value/0">value</a>, <a href="#t:value/0">value</a>} | :pop)) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre><code class="elixir">get_and_update(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {<a href="#t:value/0">value</a>, <a href="#t:value/0">value</a>} | :pop)) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
         
       </div>
     </div>
   
   <section class="docstring">
-    
+    <p>Invoked in order to access the value under <code class="inline">key</code> and updated it at the same time.</p>
+<p>The implementation of this callback should invoke the passed function on the
+value under key <code class="inline">key</code> in the passed structure; this function should return
+either <code class="inline">{value_to_return, new_value}</code> or <code class="inline">:pop</code>.</p>
+<p>If it returns <code class="inline">{value_to_return, new_value}</code>, the return value of this
+callback should be <code class="inline">{value_to_return, new_term}</code> where <code class="inline">new_term</code> is <code class="inline">term</code>
+after updating the value of <code class="inline">key</code> with <code class="inline">new_value</code>.</p>
+<p>If it returns <code class="inline">:pop</code>, the return value of this callback should be <code class="inline">{value,
+new_term}</code> where <code class="inline">value</code> is the value under <code class="inline">key</code> and <code class="inline">new_term</code> is <code class="inline">term</code>
+after removing the key <code class="inline">key</code>.</p>
+<p>See the implementations of <a href="Map.html#get_and_update/3"><code class="inline">Map.get_and_update/3</code></a> or <a href="Keyword.html#get_and_update/3"><code class="inline">Keyword.get_and_update/3</code></a>
+for more examples.</p>
+
   </section>
 </div>
 <div class="detail" id="c:pop/2">
@@ -792,9 +888,9 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     <a href="#c:pop/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">pop(t, key)</span>
+    <span class="signature">pop(term, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/access.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/access.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -805,13 +901,18 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">pop(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre><code class="elixir">pop(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
         
       </div>
     </div>
   
   <section class="docstring">
-    
+    <p>Invoked to “pop” the value under <code class="inline">key</code> out of the given term.</p>
+<p>The implementation should remove <code class="inline">key</code> from the given <code class="inline">term</code> and return a
+<code class="inline">{value, new_term}</code> tuple where <code class="inline">value</code> is the value that was under <code class="inline">key</code> and
+<code class="inline">new_term</code> is <code class="inline">term</code> without <code class="inline">key</code>.</p>
+<p>See the implementations for <code class="inline">Map.pop/2</code> or <code class="inline">Keyword.pop/2</code> for more examples.</p>
+
   </section>
 </div>
 

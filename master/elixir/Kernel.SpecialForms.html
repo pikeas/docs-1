@@ -71,7 +71,7 @@
         Kernel.SpecialForms
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -409,7 +409,7 @@ to <a href="#unquote/1"><code class="inline">unquote/1</code></a></p>
     </a>
     <span class="signature">%</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -455,7 +455,7 @@ how to create and update structs dynamically.</p>
     </a>
     <span class="signature">%{}</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -464,40 +464,12 @@ how to create and update structs dynamically.</p>
   
   <section class="docstring">
     <p>Creates a map.</p>
-<p>Maps are key-value stores where keys are compared
-using the match operator (<code class="inline">===</code>). Maps can be created with
-the <code class="inline">%{}</code> special form where keys are associated via <code class="inline">=&gt;</code>:</p>
-<pre><code class="elixir">%{1 =&gt; 2}</code></pre>
-<p>Maps also support the keyword notation, as other special forms,
-as long as they are at the end of the argument list:</p>
-<pre><code class="elixir">%{hello: :world, with: :keywords}
-%{:hello =&gt; :world, with: :keywords}</code></pre>
-<p>If a map has duplicated keys, the last key will always have
-higher precedence:</p>
-<pre><code class="iex elixir">iex&gt; %{a: :b, a: :c}
-%{a: :c}</code></pre>
-<p>Conveniences for manipulating maps can be found in the
-<a href="Map.html"><code class="inline">Map</code></a> module.</p>
-<h2>Access syntax</h2>
-<p>Besides the access functions available in the <a href="Map.html"><code class="inline">Map</code></a> module,
-like <a href="Map.html#get/3"><code class="inline">Map.get/3</code></a> and <a href="Map.html#fetch/2"><code class="inline">Map.fetch/2</code></a>, a map can be accessed using the
-<code class="inline">.</code> operator:</p>
-<pre><code class="iex elixir">iex&gt; map = %{a: :b}
-iex&gt; map.a
-:b</code></pre>
-<p>Note that the <code class="inline">.</code> operator expects the key <code class="inline">:a</code> to exist in the map.
-If not, an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> is raised.</p>
-<h2>Update syntax</h2>
-<p>Maps also support an update syntax:</p>
-<pre><code class="iex elixir">iex&gt; map = %{:a =&gt; :b}
-iex&gt; %{map | :a =&gt; :c}
-%{:a =&gt; :c}</code></pre>
-<p>Notice the update syntax requires the given keys to exist.
-Trying to update a key that does not exist will raise an <a href="KeyError.html"><code class="inline">KeyError</code></a>.</p>
+<p>See the <a href="Map.html"><code class="inline">Map</code></a> module for more information about maps, their syntax, and ways to
+access and manipulate them.</p>
 <h2>AST representation</h2>
-<p>Regardless if <code class="inline">=&gt;</code> or the keywords syntax is used, Maps are
-always represented internally as a list of two-element tuples
-for simplicity:</p>
+<p>Regardless of whether <code class="inline">=&gt;</code> or the keyword syntax is used, key-value pairs in
+maps are always represented internally as a list of two-element tuples for
+simplicity:</p>
 <pre><code class="iex elixir">iex&gt; quote do
 ...&gt;   %{&quot;a&quot; =&gt; :b, c: :d}
 ...&gt; end
@@ -512,7 +484,7 @@ for simplicity:</p>
     </a>
     <span class="signature">&amp;(expr)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1482" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1442" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -577,7 +549,7 @@ least one placeholder must be present, i.e. it must contain at least
     </a>
     <span class="signature">left . right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L467" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L427" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -674,7 +646,7 @@ iex&gt; quote do
     </a>
     <span class="signature">left :: right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L734" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L694" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -704,7 +676,7 @@ bitstrings respectively.</p>
     </a>
     <span class="signature">&lt;&lt;args&gt;&gt;</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L358" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L318" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -909,7 +881,7 @@ check out
     </a>
     <span class="signature">left = right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L713" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L673" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -928,7 +900,7 @@ check out
     </a>
     <span class="signature">^var</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L708" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L668" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -966,7 +938,7 @@ iex&gt; x
     </a>
     <span class="signature">__CALLER__</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L676" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L636" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -987,7 +959,7 @@ set up aliases, the function and others.</p>
     </a>
     <span class="signature">__DIR__</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L668" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L628" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1008,7 +980,7 @@ this macro is a convenient shortcut.</p>
     </a>
     <span class="signature">__ENV__</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L652" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L612" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1029,7 +1001,7 @@ line numbers, set up aliases, the current function and others.</p>
     </a>
     <span class="signature">__MODULE__</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L660" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L620" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1050,7 +1022,7 @@ is a convenient shortcut.</p>
     </a>
     <span class="signature">__aliases__(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1516" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1476" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1093,7 +1065,7 @@ in the list is an atom.</p>
     </a>
     <span class="signature">__block__(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1413" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1373" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1121,7 +1093,7 @@ and should not be invoked directly:</p>
     </a>
     <span class="signature">alias(module, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L517" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L477" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1169,7 +1141,7 @@ setting the <code class="inline">:warn</code> option to <code class="inline">tru
     </a>
     <span class="signature">case(condition, clauses)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1596" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1556" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1242,7 +1214,7 @@ end
     </a>
     <span class="signature">cond(clauses)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1625" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1585" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1282,7 +1254,7 @@ end
   [clauses]
 end</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1356" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1305,7 +1277,7 @@ iex&gt; add.(1, 2)
     </a>
     <span class="signature">for(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1326" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1286" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1370,7 +1342,7 @@ end</code></pre>
     </a>
     <span class="signature">import(module, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L644" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L604" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1456,7 +1428,7 @@ errors are emitted lazily, not eagerly.</p>
     </a>
     <span class="signature">quote(opts, block)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1213" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1173" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1873,7 +1845,7 @@ one desires to inject a value into the quote.</p>
     </a>
     <span class="signature">receive(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1913" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1873" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1931,7 +1903,7 @@ special macro. For more information, check the docs for <a href="#case/2"><code 
     </a>
     <span class="signature">require(module, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L545" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1965,7 +1937,7 @@ up an alias. Please check <a href="#alias/2"><code class="inline">alias/2</code>
     </a>
     <span class="signature">super(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1523" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1483" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1985,7 +1957,7 @@ up an alias. Please check <a href="#alias/2"><code class="inline">alias/2</code>
     </a>
     <span class="signature">try(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1863" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1823" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2200,7 +2172,7 @@ is to return the variables defined inside <code class="inline">try</code>:</p>
     </a>
     <span class="signature">unquote(expr)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1242" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1202" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2235,7 +2207,7 @@ iex&gt; quote do
     </a>
     <span class="signature">unquote_splicing(expr)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1217" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2261,7 +2233,7 @@ iex&gt; quote do
     </a>
     <span class="signature">with(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L1384" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L1344" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2321,7 +2293,7 @@ iex&gt; with {:ok, width} &lt;- Map.fetch(opts, :width),
     </a>
     <span class="signature">{args}</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/f30e3c78138fde3eb5f9baacefb340eb6d1a05ef/lib/elixir/lib/kernel/special_forms.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/d3ae3d5cb1ecca34197e68781849b59ee872735f/lib/elixir/lib/kernel/special_forms.ex#L54" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2330,16 +2302,18 @@ iex&gt; with {:ok, width} &lt;- Map.fetch(opts, :width),
   
   <section class="docstring">
     <p>Creates a tuple.</p>
-<p>Only two item tuples are considered literals in Elixir.
-Therefore all other tuples are represented in the AST
-as a call to the special form <code class="inline">:{}</code>.</p>
-<p>Conveniences for manipulating tuples can be found in the
-<a href="Tuple.html"><code class="inline">Tuple</code></a> module. Some functions for working with tuples are
-also available in <a href="Kernel.html"><code class="inline">Kernel</code></a>, namely <a href="Kernel.html#elem/2"><code class="inline">Kernel.elem/2</code></a>,
-<a href="Kernel.html#put_elem/3"><code class="inline">Kernel.put_elem/3</code></a> and <a href="Kernel.html#tuple_size/1"><code class="inline">Kernel.tuple_size/1</code></a>.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; {1, 2, 3}
-{1, 2, 3}
+<p>More information about the tuple data type and about functions to manipulate
+tuples can be found in the <a href="Tuple.html"><code class="inline">Tuple</code></a> module; some functions for working with
+tuples are also available in <a href="Kernel.html"><code class="inline">Kernel</code></a> (such as <a href="Kernel.html#elem/2"><code class="inline">Kernel.elem/2</code></a> or
+<a href="Kernel.html#tuple_size/1"><code class="inline">Kernel.tuple_size/1</code></a>).</p>
+<h2>AST representation</h2>
+<p>Only two-item tuples are considered literals in Elixir and return themselves
+when quoted. Therefore all other tuples are represented in the AST as calls to
+the <code class="inline">:{}</code> special form.</p>
+<pre><code class="iex elixir">iex&gt; quote do
+...&gt;   {1, 2}
+...&gt; end
+{1, 2}
 
 iex&gt; quote do
 ...&gt;   {1, 2, 3}
