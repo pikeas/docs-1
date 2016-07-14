@@ -90,7 +90,9 @@ end</code></pre>
 </ul>
 <p>For more information on typespecs, consult the <a href="typespecs.html">“Typespecs”</a> page in the Elixir documentation. As mentioned in this page, type specification are only annotations used by documentation and tools, so defining such specifications for behaviours serves mostly for such purposes.</p>
 <h3>Optional callbacks</h3>
-<p>Optional callbacks are callbacks that callback modules may implement if they want to, but are not required to. Usually, behaviour modules provide a default implementation for such callbacks in case the callback module does not implement them. Optional callbacks can be defined through the <code class="inline">@optional_callbacks</code> module attribute, which has to be a list of <code class="inline">{function_or_macro_name, arity}</code> tuples. For example:</p>
+<p>Optional callbacks are callbacks that callback modules may implement if they want to, but are not required to.
+Usually, behaviour modules know if they should call those callbacks based on configuration, or they check if the callbacks are defined with <code class="inline">function_exported?/3</code> or <code class="inline">macro_exported?/3</code>.
+Optional callbacks can be defined through the <code class="inline">@optional_callbacks</code> module attribute, which has to be a keyword list with function or macro name as key and arity as value. For example:</p>
 <pre><code class="elixir">defmodule MyBehaviour do
   @callback vital_fun() :: any
   @callback non_vital_fun() :: any
