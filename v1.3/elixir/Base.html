@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>Base – Elixir v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>Base – Elixir v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Base.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -66,11 +67,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.1</small>
+        <small class="visible-xs">Elixir v1.3.2</small>
         Base
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -82,14 +83,22 @@
 according to <a href="http://tools.ietf.org/html/rfc4648">RFC 4648</a>.</p>
 <p>This document defines the commonly used base 16, base 32, and base
 64 encoding schemes.</p>
-<h2>Base 16 alphabet</h2>
+<h2 id="module-base-16-alphabet" class="section-heading">
+  <a href="#module-base-16-alphabet" class="hover-link"><i class="icon-link"></i></a>
+  Base 16 alphabet
+</h2>
+
 <pre><code class="elixir">| Value | Encoding | Value | Encoding | Value | Encoding | Value | Encoding |
 |------:|---------:|------:|---------:|------:|---------:|------:|---------:|
 |      0|         0|      4|         4|      8|         8|     12|         C|
 |      1|         1|      5|         5|      9|         9|     13|         D|
 |      2|         2|      6|         6|     10|         A|     14|         E|
 |      3|         3|      7|         7|     11|         B|     15|         F|</code></pre>
-<h2>Base 32 alphabet</h2>
+<h2 id="module-base-32-alphabet" class="section-heading">
+  <a href="#module-base-32-alphabet" class="hover-link"><i class="icon-link"></i></a>
+  Base 32 alphabet
+</h2>
+
 <pre><code class="elixir">| Value | Encoding | Value | Encoding | Value | Encoding | Value | Encoding |
 |------:|---------:|------:|---------:|------:|---------:|------:|---------:|
 |      0|         A|      9|         J|     18|         S|     27|         3|
@@ -101,7 +110,11 @@ according to <a href="http://tools.ietf.org/html/rfc4648">RFC 4648</a>.</p>
 |      6|         G|     15|         P|     24|         Y|  (pad)|         =|
 |      7|         H|     16|         Q|     25|         Z|       |          |
 |      8|         I|     17|         R|     26|         2|       |          |</code></pre>
-<h2>Base 32 (extended hex) alphabet</h2>
+<h2 id="module-base-32-extended-hex-alphabet" class="section-heading">
+  <a href="#module-base-32-extended-hex-alphabet" class="hover-link"><i class="icon-link"></i></a>
+  Base 32 (extended hex) alphabet
+</h2>
+
 <pre><code class="elixir">| Value | Encoding | Value | Encoding | Value | Encoding | Value | Encoding |
 |------:|---------:|------:|---------:|------:|---------:|------:|---------:|
 |      0|         0|      9|         9|     18|         I|     27|         R|
@@ -113,7 +126,11 @@ according to <a href="http://tools.ietf.org/html/rfc4648">RFC 4648</a>.</p>
 |      6|         6|     15|         F|     24|         O|  (pad)|         =|
 |      7|         7|     16|         G|     25|         P|       |          |
 |      8|         8|     17|         H|     26|         Q|       |          |</code></pre>
-<h2>Base 64 alphabet</h2>
+<h2 id="module-base-64-alphabet" class="section-heading">
+  <a href="#module-base-64-alphabet" class="hover-link"><i class="icon-link"></i></a>
+  Base 64 alphabet
+</h2>
+
 <pre><code class="elixir">| Value | Encoding | Value | Encoding | Value | Encoding | Value | Encoding |
 |------:|---------:|------:|---------:|------:|---------:|------:|---------:|
 |      0|         A|     17|         R|     34|         i|     51|         z|
@@ -133,7 +150,11 @@ according to <a href="http://tools.ietf.org/html/rfc4648">RFC 4648</a>.</p>
 |     14|         O|     31|         f|     48|         w|  (pad)|         =|
 |     15|         P|     32|         g|     49|         x|       |          |
 |     16|         Q|     33|         h|     50|         y|       |          |</code></pre>
-<h2>Base 64 (URL and filename safe) alphabet</h2>
+<h2 id="module-base-64-url-and-filename-safe-alphabet" class="section-heading">
+  <a href="#module-base-64-url-and-filename-safe-alphabet" class="hover-link"><i class="icon-link"></i></a>
+  Base 64 (URL and filename safe) alphabet
+</h2>
+
 <pre><code class="elixir">| Value | Encoding | Value | Encoding | Value | Encoding | Value | Encoding |
 |------:|---------:|------:|---------:|------:|---------:|------:|---------:|
 |      0|         A|     17|         R|     34|         i|     51|         z|
@@ -341,7 +362,7 @@ safe alphabet</p>
     </a>
     <span class="signature">decode16(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -393,7 +414,7 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
     </a>
     <span class="signature">decode16!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L247" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L247" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -447,7 +468,7 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
     </a>
     <span class="signature">decode32(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L512" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L512" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -511,7 +532,7 @@ iex&gt; Base.decode32(&quot;MZXW6YTBOI&quot;, padding: false)
     </a>
     <span class="signature">decode32!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -577,7 +598,7 @@ iex&gt; Base.decode32!(&quot;MZXW6YTBOI&quot;, padding: false)
     </a>
     <span class="signature">decode64(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -621,7 +642,7 @@ iex&gt; Base.decode64(&quot;Zm9vYg&quot;, padding: false)
     </a>
     <span class="signature">decode64!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L344" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -667,7 +688,7 @@ iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
     </a>
     <span class="signature">encode16(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -714,7 +735,7 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
     </a>
     <span class="signature">encode32(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L468" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -773,7 +794,7 @@ iex&gt; Base.encode32(&quot;foobar&quot;, padding: false)
     </a>
     <span class="signature">encode64(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -812,7 +833,7 @@ iex&gt; Base.encode64(&quot;foob&quot;, padding: false)
     </a>
     <span class="signature">hex_decode32(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L645" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L645" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -879,7 +900,7 @@ iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8&quot;, padding: false)
     </a>
     <span class="signature">hex_decode32!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L693" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L693" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -946,7 +967,7 @@ iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8&quot;, padding: false)
     </a>
     <span class="signature">hex_encode32(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L600" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L600" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1006,7 +1027,7 @@ iex&gt; Base.hex_encode32(&quot;foobar&quot;, padding: false)
     </a>
     <span class="signature">url_decode64(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1050,7 +1071,7 @@ iex&gt; Base.url_decode64(&quot;_3_-_A&quot;, padding: false)
     </a>
     <span class="signature">url_decode64!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1094,7 +1115,7 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A&quot;, padding: false)
     </a>
     <span class="signature">url_encode64(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/base.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/base.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1135,7 +1156,7 @@ iex&gt; Base.url_encode64(&lt;&lt;255, 127, 254, 252&gt;&gt;, padding: false)
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

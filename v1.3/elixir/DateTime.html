@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>DateTime – Elixir v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>DateTime – Elixir v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/DateTime.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -66,11 +67,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.1</small>
+        <small class="visible-xs">Elixir v1.3.2</small>
         DateTime
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L924" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L924" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -87,7 +88,11 @@ for formatting purposes.</p>
 <p>Developers should avoid creating the DateTime struct directly
 and instead rely on the functions provided by this module as
 well as the ones in 3rd party calendar libraries.</p>
-<h2>Where are my functions?</h2>
+<h2 id="module-where-are-my-functions" class="section-heading">
+  <a href="#module-where-are-my-functions" class="hover-link"><i class="icon-link"></i></a>
+  Where are my functions?
+</h2>
+
 <p>You will notice this module only contains conversion
 functions as well as functions that work on UTC. This
 is because a proper DateTime implementation requires a
@@ -259,7 +264,7 @@ similar functionality with time zone backing.</p>
     </a>
     <span class="signature">from_unix(integer, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1010" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1010" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -307,7 +312,7 @@ iex&gt; DateTime.from_unix(1432560368868569, :microseconds)
     </a>
     <span class="signature">from_unix!(integer, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1051" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1051" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -345,7 +350,7 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
     </a>
     <span class="signature">precision_for_unit(unit)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1022" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1022" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -363,7 +368,7 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
     </a>
     <span class="signature">to_date(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1124" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -390,7 +395,7 @@ iex&gt; DateTime.to_date(dt)
     </a>
     <span class="signature">to_iso8601(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1180" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -443,7 +448,7 @@ iex&gt; DateTime.to_iso8601(dt)
     </a>
     <span class="signature">to_naive(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1103" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1103" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -470,7 +475,7 @@ iex&gt; DateTime.to_naive(dt)
     </a>
     <span class="signature">to_string(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -516,7 +521,7 @@ iex&gt; DateTime.to_string(dt)
     </a>
     <span class="signature">to_time(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1143" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,7 +548,7 @@ iex&gt; DateTime.to_time(dt)
     </a>
     <span class="signature">to_unix(date_time, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L1078" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1078" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -584,7 +589,7 @@ iex&gt; DateTime.to_unix(dt)
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/calendar.ex#L975" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L975" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -620,7 +625,7 @@ iex&gt; datetime.time_zone
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

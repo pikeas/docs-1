@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>Mix.Task – Mix v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>Mix.Task – Mix v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Task.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Mix
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -64,13 +65,13 @@
 
 
       <h1>
-        <small class="visible-xs">Mix v1.3.1</small>
+        <small class="visible-xs">Mix v1.3.2</small>
         Mix.Task
         
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -92,7 +93,11 @@ the <code class="inline">run/1</code> function:</p>
 end</code></pre>
 <p>The <code class="inline">run/1</code> function will receive all arguments passed
 to the command line.</p>
-<h2>Attributes</h2>
+<h2 id="module-attributes" class="section-heading">
+  <a href="#module-attributes" class="hover-link"><i class="icon-link"></i></a>
+  Attributes
+</h2>
+
 <p>There are a few attributes available in Mix tasks to
 configure them in Mix:</p>
 <ul>
@@ -105,7 +110,11 @@ on <code class="inline">mix help</code>
 mix project recommendation, or explicit MIX_ENV.
 </li>
 </ul>
-<h2>Documentation</h2>
+<h2 id="module-documentation" class="section-heading">
+  <a href="#module-documentation" class="hover-link"><i class="icon-link"></i></a>
+  Documentation
+</h2>
+
 <p>Users can read the documentation for public Mix tasks by doing <code class="inline">mix help my_task</code>.
 The documentation that will be shown is the <code class="inline">@moduledoc</code> of the task’s module.</p>
 
@@ -356,7 +365,7 @@ a list of command line args</p>
     </a>
     <span class="signature">alias?(task)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L180" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -386,7 +395,7 @@ section in the docs for <a href="Mix.html"><code class="inline">Mix</code></a>.<
     </a>
     <span class="signature">all_modules()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -416,7 +425,7 @@ Check <a href="#load_all/0"><code class="inline">load_all/0</code></a> if you wa
     </a>
     <span class="signature">clear()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L350" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L350" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -445,7 +454,7 @@ Check <a href="#load_all/0"><code class="inline">load_all/0</code></a> if you wa
     </a>
     <span class="signature">get(task)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L195" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -475,7 +484,7 @@ exists but it isn’t a task or cannot be found.</p>
     </a>
     <span class="signature">get!(task)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -510,7 +519,7 @@ exists but it isn’t a task or cannot be found.</p>
     </a>
     <span class="signature">load_all()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -538,7 +547,7 @@ exists but it isn’t a task or cannot be found.</p>
     </a>
     <span class="signature">load_tasks(dirs)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L67" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -566,7 +575,7 @@ exists but it isn’t a task or cannot be found.</p>
     </a>
     <span class="signature">moduledoc(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -595,7 +604,7 @@ exists but it isn’t a task or cannot be found.</p>
     </a>
     <span class="signature">preferred_cli_env(task)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L154" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -624,7 +633,7 @@ exists but it isn’t a task or cannot be found.</p>
     </a>
     <span class="signature">recursive(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L141" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -654,7 +663,7 @@ umbrella projects.</p>
     </a>
     <span class="signature">reenable(task)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L364" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L364" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -686,7 +695,7 @@ children projects.</p>
     </a>
     <span class="signature">rerun(task, args \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L398" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L398" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -716,7 +725,7 @@ and then regularly runs it.</p>
     </a>
     <span class="signature">run(task, args \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -753,7 +762,7 @@ information.</p>
     </a>
     <span class="signature">shortdoc(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L127" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L127" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -782,7 +791,7 @@ information.</p>
     </a>
     <span class="signature">task?(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L407" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L407" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -810,7 +819,7 @@ information.</p>
     </a>
     <span class="signature">task_name(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -852,7 +861,7 @@ information.</p>
     </a>
     <span class="signature">run(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/mix/lib/mix/task.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/task.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -881,7 +890,7 @@ a list of command line args.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

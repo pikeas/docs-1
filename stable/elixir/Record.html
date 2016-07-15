@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>Record – Elixir v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>Record – Elixir v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Record.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -66,11 +67,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.1</small>
+        <small class="visible-xs">Elixir v1.3.2</small>
         Record
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -96,7 +97,11 @@ the tuples’ compact structure.</p>
 <p>The macros <a href="#defrecord/3"><code class="inline">defrecord/3</code></a> and <a href="#defrecordp/3"><code class="inline">defrecordp/3</code></a> can be used to create
 records while <a href="#extract/2"><code class="inline">extract/2</code></a> can be used to extract records from Erlang
 files.</p>
-<h2>Types</h2>
+<h2 id="module-types" class="section-heading">
+  <a href="#module-types" class="hover-link"><i class="icon-link"></i></a>
+  Types
+</h2>
+
 <p>Types can be defined for tuples with the <code class="inline">record/2</code> macro (only available
 in typespecs). Like with the generated record macros it will expand to
 a tuple.</p>
@@ -215,7 +220,7 @@ end</code></pre>
     </a>
     <span class="signature">extract(name, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -243,7 +248,7 @@ library path to be a string at expansion time.</p>
     </a>
     <span class="signature">extract_all(opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -278,7 +283,7 @@ argument :from or :from_lib, which correspond to <em>include</em> or
     </a>
     <span class="signature">defrecord(name, tag \\ nil, kv)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L199" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -349,7 +354,7 @@ end</code></pre>
     </a>
     <span class="signature">defrecordp(name, tag \\ nil, kv)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -368,7 +373,7 @@ end</code></pre>
     </a>
     <span class="signature">is_record(data)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -395,7 +400,7 @@ false</code></pre>
     </a>
     <span class="signature">is_record(data, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/record.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L84" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -421,7 +426,7 @@ true</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

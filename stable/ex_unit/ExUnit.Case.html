@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>ExUnit.Case – ExUnit v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>ExUnit.Case – ExUnit v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.Case.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         ExUnit
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -64,11 +65,11 @@
 
 
       <h1>
-        <small class="visible-xs">ExUnit v1.3.1</small>
+        <small class="visible-xs">ExUnit v1.3.2</small>
         ExUnit.Case
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/ex_unit/lib/ex_unit/case.ex#L5" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/case.ex#L5" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -89,7 +90,11 @@ does not change any global state. Defaults to <code class="inline">false</code>.
 <p>This module automatically includes all callbacks defined in
 <a href="ExUnit.Callbacks.html"><code class="inline">ExUnit.Callbacks</code></a>. See that module’s documentation for more
 information.</p>
-<h2>Examples</h2>
+<h2 id="module-examples" class="section-heading">
+  <a href="#module-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"> defmodule AssertionTest do
    # Use the module
    use ExUnit.Case, async: true
@@ -99,7 +104,11 @@ information.</p>
      assert true
    end
  end</code></pre>
-<h2>Context</h2>
+<h2 id="module-context" class="section-heading">
+  <a href="#module-context" class="hover-link"><i class="icon-link"></i></a>
+  Context
+</h2>
+
 <p>All tests receive a context as an argument. The context is particularly
 useful for sharing information between callbacks and tests:</p>
 <pre><code class="elixir">defmodule KVTest do
@@ -121,7 +130,11 @@ information:</p>
   assert KV.put(pid, :hello, :world) == :ok
   assert KV.get(pid, :hello) == :world
 end</code></pre>
-<h2>Tags</h2>
+<h2 id="module-tags" class="section-heading">
+  <a href="#module-tags" class="hover-link"><i class="icon-link"></i></a>
+  Tags
+</h2>
+
 <p>The context is used to pass information from the callbacks to
 the test. In order to pass information from the test to the
 callback, ExUnit provides tags.</p>
@@ -152,7 +165,7 @@ end</code></pre>
 read in the setup callback to configure the working directory the
 test is going to run on.</p>
 <p>Tags are also very effective when used with case templates
-(<a href="ExUnit.CaseTemplate.html"><code class="inline">ExUnit.CaseTemplate</code></a>) allowing callbacks in the case template
+(<a href="ExUnit.CaseTemplate.html)"><code class="inline">ExUnit.CaseTemplate</code></a> allowing callbacks in the case template
 to customize the test behaviour.</p>
 <p>Note a tag can be set in two different ways:</p>
 <pre><code class="elixir">@tag key: value
@@ -201,7 +214,11 @@ see the “Reporting tags” section
 in error reports, making it easy for developers to see under which circumstances
 a test was evaluated. To do so, you use the <code class="inline">:report</code> tag:</p>
 <pre><code class="elixir">@moduletag report: [:user_id]</code></pre>
-<h2>Filters</h2>
+<h2 id="module-filters" class="section-heading">
+  <a href="#module-filters" class="hover-link"><i class="icon-link"></i></a>
+  Filters
+</h2>
+
 <p>Tags can also be used to identify specific tests, which can then
 be included or excluded using filters. The most common functionality
 is to exclude some particular tests from running, which can be done
@@ -219,7 +236,11 @@ a certain subset:</p>
 <pre><code class="elixir">ExUnit.configure(exclude: :os, include: [os: :unix])</code></pre>
 <p>Keep in mind that all tests are included by default, so unless they are
 excluded first, the <code class="inline">include</code> option has no effect.</p>
-<h2>Log Capture</h2>
+<h2 id="module-log-capture" class="section-heading">
+  <a href="#module-log-capture" class="hover-link"><i class="icon-link"></i></a>
+  Log Capture
+</h2>
+
 <p>ExUnit can optionally suppress printing of log messages that are generated during a test. Log
 messages generated while running a test are captured and only if the test fails are they printed
 to aid with debugging.</p>
@@ -332,7 +353,7 @@ end, contents)</a>
     </a>
     <span class="signature">register_attribute(env, name, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/ex_unit/lib/ex_unit/case.ex#L458" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/case.ex#L458" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -366,7 +387,7 @@ end</code></pre>
     </a>
     <span class="signature">register_test(map, type, name, tags)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/ex_unit/lib/ex_unit/case.ex#L394" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/case.ex#L394" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -404,7 +425,7 @@ pluralization.</p>
     </a>
     <span class="signature">describe(message, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/ex_unit/lib/ex_unit/case.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/case.ex#L342" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -469,7 +490,7 @@ setup steps involved.</p>
     </a>
     <span class="signature">test(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/ex_unit/lib/ex_unit/case.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/case.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -497,7 +518,7 @@ also tagged with :not_implemented.</p>
   _
 end, contents)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/ex_unit/lib/ex_unit/case.ex#L240" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/case.ex#L240" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -528,7 +549,7 @@ end</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

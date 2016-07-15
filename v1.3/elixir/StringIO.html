@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>StringIO – Elixir v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>StringIO – Elixir v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/StringIO.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -66,11 +67,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.1</small>
+        <small class="visible-xs">Elixir v1.3.2</small>
         StringIO
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/string_io.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -81,7 +82,11 @@
           <p>Controls an IO device process that wraps a string.</p>
 <p>A <a href="StringIO.html#content"><code class="inline">StringIO</code></a> IO device can be passed as a “device” to
 most of the functions in the <a href="IO.html"><code class="inline">IO</code></a> module.</p>
-<h2>Examples</h2>
+<h2 id="module-examples" class="section-heading">
+  <a href="#module-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, pid} = StringIO.open(&quot;foo&quot;)
 iex&gt; IO.read(pid, 2)
 &quot;fo&quot;</code></pre>
@@ -170,7 +175,7 @@ device</p>
     </a>
     <span class="signature">close(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/string_io.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -204,7 +209,7 @@ iex&gt; StringIO.close(pid)
     </a>
     <span class="signature">contents(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/string_io.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -238,7 +243,7 @@ iex&gt; StringIO.contents(pid)
     </a>
     <span class="signature">flush(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/string_io.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -273,7 +278,7 @@ iex&gt; StringIO.contents(pid)
     </a>
     <span class="signature">open(string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/string_io.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L44" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -322,7 +327,7 @@ iex&gt; StringIO.contents(pid)
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

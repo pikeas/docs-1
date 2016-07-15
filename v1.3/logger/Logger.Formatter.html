@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>Logger.Formatter – Logger v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>Logger.Formatter – Logger v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/logger/Logger.Formatter.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Logger
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -62,11 +63,11 @@
 
 
       <h1>
-        <small class="visible-xs">Logger v1.3.1</small>
+        <small class="visible-xs">Logger v1.3.2</small>
         Logger.Formatter
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/logger/lib/logger/formatter.ex#L3" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger/formatter.ex#L3" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -103,7 +104,11 @@ strings via configuration files. This module provides <a href="#compile/1"><code
 which compiles the string into a format for fast operations at
 runtime and <a href="#format/5"><code class="inline">format/5</code></a> to format the compiled pattern into an
 actual IO data.</p>
-<h2>Metadata</h2>
+<h2 id="module-metadata" class="section-heading">
+  <a href="#module-metadata" class="hover-link"><i class="icon-link"></i></a>
+  Metadata
+</h2>
+
 <p>Metadata to be sent to the Logger can be read and written with
 the <a href="Logger.html#metadata/0"><code class="inline">Logger.metadata/0</code></a> and <a href="Logger.html#metadata/1"><code class="inline">Logger.metadata/1</code></a> functions. For example,
 you can set <code class="inline">Logger.metadata([user_id: 13])</code> to add user_id metadata
@@ -231,7 +236,7 @@ metadata listdict and returns a properly formatted string</p>
     </a>
     <span class="signature">compile(str)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/logger/lib/logger/formatter.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger/formatter.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -267,7 +272,7 @@ pass <code class="inline">nil</code>, it defaults to: <code class="inline">$time
     </a>
     <span class="signature">format(config, level, msg, ts, md)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/logger/lib/logger/formatter.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger/formatter.ex#L107" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -296,7 +301,7 @@ metadata listdict and returns a properly formatted string.</p>
     </a>
     <span class="signature">prune(binary)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/logger/lib/logger/formatter.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger/formatter.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -329,7 +334,7 @@ metadata listdict and returns a properly formatted string.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

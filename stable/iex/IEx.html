@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>IEx – IEx v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>IEx – IEx v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/iex/IEx.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         IEx
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -64,11 +65,11 @@
 
 
       <h1>
-        <small class="visible-xs">IEx v1.3.1</small>
+        <small class="visible-xs">IEx v1.3.2</small>
         IEx
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -83,10 +84,18 @@ in this documentation we will talk a bit about how IEx works.</p>
 depending on your terminal. In particular, if you get a message
 saying that the smart terminal could not be run, some of the
 features described here won’t work.</p>
-<h2>Helpers</h2>
+<h2 id="module-helpers" class="section-heading">
+  <a href="#module-helpers" class="hover-link"><i class="icon-link"></i></a>
+  Helpers
+</h2>
+
 <p>IEx provides a bunch of helpers. They can be accessed by typing
 <code class="inline">h()</code> into the shell or as a documentation for the <a href="IEx.Helpers.html"><code class="inline">IEx.Helpers</code></a> module.</p>
-<h2>Autocomplete</h2>
+<h2 id="module-autocomplete" class="section-heading">
+  <a href="#module-autocomplete" class="hover-link"><i class="icon-link"></i></a>
+  Autocomplete
+</h2>
+
 <p>To discover all available functions for a module, type the module name
 followed by a dot, then press tab to trigger autocomplete. For example:</p>
 <pre><code class="elixir">Enum.</code></pre>
@@ -94,11 +103,19 @@ followed by a dot, then press tab to trigger autocomplete. For example:</p>
 to pass the <code class="inline">--werl</code> flag when starting iex, as in <code class="inline">iex --werl</code> for it
 to work. <code class="inline">--werl</code> may be permanently enabled by setting the <code class="inline">IEX_WITH_WERL</code>
 environment variable.</p>
-<h2>The Break command</h2>
+<h2 id="module-the-break-command" class="section-heading">
+  <a href="#module-the-break-command" class="hover-link"><i class="icon-link"></i></a>
+  The Break command
+</h2>
+
 <p>Inside IEx, hitting <code class="inline">Ctrl+C</code> will open up the <code class="inline">BREAK</code> menu. In this
 menu you can quit the shell, see process and ets tables information
 and much more.</p>
-<h2>The User Switch command</h2>
+<h2 id="module-the-user-switch-command" class="section-heading">
+  <a href="#module-the-user-switch-command" class="hover-link"><i class="icon-link"></i></a>
+  The User Switch command
+</h2>
+
 <p>Besides the break command, one can type <code class="inline">Ctrl+G</code> to get to the
 user switch command menu. When reached, you can type <code class="inline">h</code> to
 get more information.</p>
@@ -121,7 +138,11 @@ Since shells are isolated from each other, you can’t access the
 variables defined in one shell from the other one.</p>
 <p>The user switch command menu also allows developers to connect to remote
 shells using the <code class="inline">r</code> command. A topic which we will discuss next.</p>
-<h2>Remote shells</h2>
+<h2 id="module-remote-shells" class="section-heading">
+  <a href="#module-remote-shells" class="hover-link"><i class="icon-link"></i></a>
+  Remote shells
+</h2>
+
 <p>IEx allows you to connect to another node in two fashions.
 First of all, we can only connect to a shell if we give names
 both to the current shell and the shell we want to connect to.</p>
@@ -169,7 +190,11 @@ a shortcut via the command line as well:</p>
 </ul>
 <p>Connecting an Elixir shell to a remote node without Elixir is
 <strong>not</strong> supported.</p>
-<h2>The .iex.exs file</h2>
+<h2 id="module-the-iex-exs-file" class="section-heading">
+  <a href="#module-the-iex-exs-file" class="hover-link"><i class="icon-link"></i></a>
+  The .iex.exs file
+</h2>
+
 <p>When starting IEx, it will look for a local <code class="inline">.iex.exs</code> file (located in the current
 working directory), then a global one (located at <code class="inline">~/.iex.exs</code>) and will load the
 first one it finds (if any). The code in the chosen .iex.exs file will be
@@ -196,7 +221,11 @@ iex(1)&gt; value
 13</code></pre>
 <p>It is possible to load another file by supplying the <code class="inline">--dot-iex</code>
 option to iex. See <code class="inline">iex --help</code>.</p>
-<h2>Configuring the shell</h2>
+<h2 id="module-configuring-the-shell" class="section-heading">
+  <a href="#module-configuring-the-shell" class="hover-link"><i class="icon-link"></i></a>
+  Configuring the shell
+</h2>
+
 <p>There are a number of customization options provided by the shell. Take a look
 at the docs for the <a href="IEx.html#configure/1"><code class="inline">IEx.configure/1</code></a> function by typing <code class="inline">h IEx.configure/1</code>.</p>
 <p>Those options can be configured in your project configuration file or globally
@@ -212,7 +241,11 @@ Erlang 17 (erts-5.10.1) [...]
 Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)&gt; [1, 2, 3, 4, 5]
 [1, 2, 3, ...]</code></pre>
-<h2>Expressions in IEx</h2>
+<h2 id="module-expressions-in-iex" class="section-heading">
+  <a href="#module-expressions-in-iex" class="hover-link"><i class="icon-link"></i></a>
+  Expressions in IEx
+</h2>
+
 <p>As an interactive shell, IEx evaluates expressions. This has some
 interesting consequences that are worth discussing.</p>
 <p>The first one is that the code is truly evaluated and not compiled.
@@ -381,7 +414,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L317" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L317" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -400,7 +433,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L310" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -419,7 +452,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">color(color, string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L333" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L333" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -439,7 +472,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -458,7 +491,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L296" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -552,7 +585,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">inspect_opts()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L354" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -571,7 +604,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(binding, env, timeout)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -594,7 +627,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">started?()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L324" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -613,7 +646,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">width()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -645,7 +678,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/iex/lib/iex.ex#L415" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L415" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -710,7 +743,7 @@ affect the caller the environment (hence it is called <code class="inline">pry</
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by

@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.12.0">
-    <title>Inspect.Algebra – Elixir v1.3.1</title>
-    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    <meta name="generator" content="ExDoc v0.13.0-dev">
+    <title>Inspect.Algebra – Elixir v1.3.2</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Inspect.Algebra.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
   <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
     <div class="main">
 <button class="sidebar-toggle">
@@ -27,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.1
+        v1.3.2
       </h2>
     </div>
     
@@ -66,11 +67,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.1</small>
+        <small class="visible-xs">Elixir v1.3.2</small>
         Inspect.Algebra
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L78" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L78" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -81,7 +82,7 @@
           <p>A set of functions for creating and manipulating algebra
 documents.</p>
 <p>This module implements the functionality described in
-<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.34.2200" title="">”Strictly Pretty” (2000) by Christian Lindig</a> with small
+<a href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.34.2200" title="">“Strictly Pretty” (2000) by Christian Lindig</a> with small
 additions, like support for String nodes, and a custom
 rendering function that maximises horizontal space use.</p>
 <pre><code class="iex elixir">iex&gt; Inspect.Algebra.empty
@@ -110,7 +111,11 @@ iex&gt; Inspect.Algebra.format(doc, 10)
 [&quot;aaaaaaaaaaaaaaaaaaaa&quot;, &quot;\n&quot;, &quot;b&quot;]</code></pre>
 <p>Finally, this module also contains Elixir related functions, a bit
 tied to Elixir formatting, namely <a href="#surround/3"><code class="inline">surround/3</code></a> and <code class="inline">surround_many/5</code>.</p>
-<h2>Implementation details</h2>
+<h2 id="module-implementation-details" class="section-heading">
+  <a href="#module-implementation-details" class="hover-link"><i class="icon-link"></i></a>
+  Implementation details
+</h2>
+
 <p>The original Haskell implementation of the algorithm by <a href="http://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf" title="">Wadler</a>
 relies on lazy evaluation to unfold document groups on two alternatives:
 <code class="inline">:flat</code> (breaks as spaces) and <code class="inline">:break</code> (breaks as newlines).
@@ -354,7 +359,7 @@ according to the inspect protocol</p>
     </a>
     <span class="signature">break()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L334" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L334" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -381,7 +386,7 @@ according to the inspect protocol</p>
     </a>
     <span class="signature">break(s)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L331" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L331" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -422,7 +427,7 @@ iex&gt; Inspect.Algebra.format(doc, 10)
     </a>
     <span class="signature">concat(docs)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -450,7 +455,7 @@ iex&gt; Inspect.Algebra.format(doc, 10)
     </a>
     <span class="signature">concat(x, y)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -482,7 +487,7 @@ iex&gt; Inspect.Algebra.format(doc, 80)
     </a>
     <span class="signature">empty()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L261" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L261" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -513,7 +518,7 @@ iex&gt; Inspect.Algebra.format(doc, 80)
     </a>
     <span class="signature">fold_doc(list, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L422" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L422" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -549,7 +554,7 @@ iex&gt; Inspect.Algebra.format(doc, 80)
     </a>
     <span class="signature">format(d, w)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L527" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L527" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -580,7 +585,7 @@ document to fit in the given width.</p>
     </a>
     <span class="signature">glue(x, y)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L340" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L340" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -608,7 +613,7 @@ document to fit in the given width.</p>
     </a>
     <span class="signature">glue(x, g, y)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -637,7 +642,7 @@ the first and the third arguments.</p>
     </a>
     <span class="signature">group(d)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L377" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L377" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -686,7 +691,7 @@ iex&gt; Inspect.Algebra.format(doc, 6)
     </a>
     <span class="signature">line(x, y)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L405" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L405" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -718,7 +723,7 @@ iex&gt; Inspect.Algebra.format(doc, 80)
     </a>
     <span class="signature">nest(x, i)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L299" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -751,7 +756,7 @@ iex&gt; Inspect.Algebra.format(doc, 5)
     </a>
     <span class="signature">space(x, y)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L392" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L392" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -783,7 +788,7 @@ iex&gt; Inspect.Algebra.format(doc, 80)
     </a>
     <span class="signature">surround(left, doc, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L444" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L444" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -818,7 +823,7 @@ iex&gt; Inspect.Algebra.format(doc, 3)
     </a>
     <span class="signature">surround_many(left, docs, right, opts, fun, separator \\ &quot;,&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L473" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L473" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -864,7 +869,7 @@ iex&gt; Inspect.Algebra.format(doc, 20) |&gt; IO.iodata_to_binary
     </a>
     <span class="signature">to_doc(map, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.1/lib/elixir/lib/inspect/algebra.ex#L204" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/inspect/algebra.ex#L204" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -897,7 +902,7 @@ according to the inspect protocol.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0-dev),
           </span>
           <span class="line">
             designed by
