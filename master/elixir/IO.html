@@ -71,7 +71,7 @@
         IO
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -365,7 +365,7 @@ but adds a newline at the end</p>
     </a>
     <span class="signature">binread(device \\ group_leader(), line_or_chars)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L116" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -385,12 +385,12 @@ but adds a newline at the end</p>
   
   <section class="docstring">
     <p>Reads from the IO <code class="inline">device</code>. The operation is Unicode unsafe.</p>
-<p>The <code class="inline">device</code> is iterated by the given number of data or line by line if
+<p>The <code class="inline">device</code> is iterated by the given number of bytes or line by line if
 <code class="inline">:line</code> is given.
 Alternatively, if <code class="inline">:all</code> is given, then whole <code class="inline">device</code> is returned.</p>
 <p>It returns:</p>
 <ul>
-<li><p><code class="inline">data</code> - the output data</p>
+<li><p><code class="inline">data</code> - the output bytes</p>
 </li>
 <li><p><code class="inline">:eof</code> - end of file was encountered</p>
 </li>
@@ -413,7 +413,7 @@ as it will return the wrong result.</p>
     </a>
     <span class="signature">binstream(device, line_or_bytes)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L386" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L421" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -451,7 +451,7 @@ mode as it will return the wrong result.</p>
     </a>
     <span class="signature">binwrite(device \\ group_leader(), item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L176" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -484,7 +484,7 @@ as it will return the wrong result.</p>
     </a>
     <span class="signature">chardata_to_string(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L412" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -524,7 +524,7 @@ iex&gt; IO.chardata_to_string(&quot;string&quot;)
     </a>
     <span class="signature">getn(prompt, count \\ 1)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L277" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L312" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -562,7 +562,7 @@ Otherwise, <code class="inline">count</code> is the number of raw bytes to be re
     </a>
     <span class="signature">getn(device, prompt, count)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L306" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -606,7 +606,7 @@ NFS volume
     </a>
     <span class="signature">gets(device \\ group_leader(), prompt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L332" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -651,7 +651,7 @@ NFS volume
     </a>
     <span class="signature">inspect(item, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L248" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -669,12 +669,34 @@ NFS volume
   
   <section class="docstring">
     <p>Inspects and writes the given <code class="inline">item</code> to the device.</p>
+<p>It’s important to note that it returns the given <code class="inline">item</code> unchanged.
+This makes it possible to “spy” on values by inserting an
+<a href="IO.html#inspect/2"><code class="inline">IO.inspect/2</code></a> call almost anywhere in your code, for example,
+in the middle of a pipeline.</p>
 <p>It enables pretty printing by default with width of
 80 characters. The width can be changed by explicitly
 passing the <code class="inline">:width</code> option.</p>
-<p>See <a href="Inspect.Opts.html"><code class="inline">Inspect.Opts</code></a> for a full list of options.</p>
+<p>The output can be decorated with a label, by providing the <code class="inline">:label</code>
+option to easily distinguish it from other <a href="IO.html#inspect/2"><code class="inline">IO.inspect/2</code></a> calls.
+The label will be printed before the inspected <code class="inline">item</code>.</p>
+<p>See <a href="Inspect.Opts.html"><code class="inline">Inspect.Opts</code></a> for a full list of remaining formatting options.</p>
 <h2>Examples</h2>
-<pre><code class="elixir">IO.inspect Process.list, width: 40</code></pre>
+<pre><code class="elixir">IO.inspect &lt;&lt;0, 1, 2&gt;&gt;, width: 40</code></pre>
+<p>Prints:</p>
+<pre><code class="elixir">&lt;&lt;0, 1, 2&gt;&gt;</code></pre>
+<p>We can use the <code class="inline">:label</code> option to decorate the output:</p>
+<pre><code class="elixir">IO.inspect 1..100, label: &quot;a wonderful range&quot;</code></pre>
+<p>Prints:</p>
+<pre><code class="elixir">a wonderful range: 1..100</code></pre>
+<p>The <code class="inline">:label</code> option is especially useful with pipelines:</p>
+<pre><code class="elixir">[1, 2, 3]
+|&gt; IO.inspect(label: &quot;before&quot;)
+|&gt; Enum.map(&amp;(&amp;1 * 2))
+|&gt; IO.inspect(label: &quot;after&quot;)
+|&gt; Enum.sum</code></pre>
+<p>Prints:</p>
+<pre><code class="elixir">before: [1, 2, 3]
+after: [2, 4, 6]</code></pre>
 
   </section>
 </div>
@@ -685,7 +707,7 @@ passing the <code class="inline">:width</code> option.</p>
     </a>
     <span class="signature">inspect(device, item, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L292" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -703,7 +725,7 @@ passing the <code class="inline">:width</code> option.</p>
   
   <section class="docstring">
     <p>Inspects <code class="inline">item</code> according to the given options using the IO <code class="inline">device</code>.</p>
-<p>See <a href="Inspect.Opts.html"><code class="inline">Inspect.Opts</code></a> for a full list of options.</p>
+<p>See <a href="#inspect/2"><code class="inline">inspect/2</code></a> for a full list of options.</p>
 
   </section>
 </div>
@@ -714,7 +736,7 @@ passing the <code class="inline">:width</code> option.</p>
     </a>
     <span class="signature">iodata_length(item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L464" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L499" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -746,7 +768,7 @@ passing the <code class="inline">:width</code> option.</p>
     </a>
     <span class="signature">iodata_to_binary(item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L448" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L483" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -792,7 +814,7 @@ iex&gt; IO.iodata_to_binary(bin)
     </a>
     <span class="signature">puts(device \\ group_leader(), item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L185" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L185" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -821,7 +843,7 @@ but adds a newline at the end.</p>
     </a>
     <span class="signature">read(device \\ group_leader(), line_or_chars)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -846,7 +868,7 @@ but adds a newline at the end.</p>
 Alternatively, if <code class="inline">:all</code> is given, then whole <code class="inline">device</code> is returned.</p>
 <p>It returns:</p>
 <ul>
-<li><p><code class="inline">data</code> - the input characters</p>
+<li><p><code class="inline">data</code> - the output characters</p>
 </li>
 <li><p><code class="inline">:eof</code> - end of file was encountered</p>
 </li>
@@ -867,7 +889,7 @@ empty string in case the device has reached EOF.</p>
     </a>
     <span class="signature">stream(device, line_or_codepoints)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L361" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -908,7 +930,7 @@ from the command line:</p>
     </a>
     <span class="signature">warn(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L228" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -941,7 +963,7 @@ from the command line:</p>
     </a>
     <span class="signature">warn(message, stacktrace)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L207" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L207" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -978,7 +1000,7 @@ IO.warn &quot;variable bar is unused&quot;, stacktrace
     </a>
     <span class="signature">write(device \\ group_leader(), item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/0de4b3b4fe299b9ea820b0cf4c1c450445b1ef81/lib/elixir/lib/io.ex#L161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/e38180c36db93720efd6100c4d6ab704efa4e867/lib/elixir/lib/io.ex#L161" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
