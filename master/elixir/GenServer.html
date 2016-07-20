@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>GenServer – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-c5cdb8bada.css" />
+    <link rel="stylesheet" href="dist/app-da94447278.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/GenServer.html" />
     
@@ -73,7 +73,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -246,6 +246,76 @@ automatically handling system messages, support code change, synchronous
 calls and more. Therefore, you should never call your own “receive” inside
 the GenServer callbacks as doing so will cause the GenServer to misbehave.
 If you want to receive custom messages, always receive them in <code class="inline">handle_info/2</code>.</p>
+<h2 id="module-debugging-with-the-sys-module" class="section-heading">
+  <a href="#module-debugging-with-the-sys-module" class="hover-link"><i class="icon-link"></i></a>
+  Debugging with the :sys module
+</h2>
+
+<p>GenServers, as <a href="http://erlang.org/doc/design_principles/spec_proc.html">special processes</a>,
+can be debugged using the <code class="inline">:sys</code> module. Through various hooks, this module
+allows developers to introspect the state of the process and trace
+system events that happen during its execution, such as received messages,
+sent replies and state changes.</p>
+<p>Let’s explore the basic functions from the <code class="inline">:sys</code> module used for debugging:</p>
+<ul>
+<li><a href="http://erlang.org/doc/man/sys.html#get_state-2"><code class="inline">:sys.get_state/2</code></a> -
+allows retrieval of the state of the process. In the case of
+a GenServer process, it will be the callback module state, as
+passed into the callback functions as last argument.
+</li>
+<li><a href="http://erlang.org/doc/man/sys.html#get_status-2"><code class="inline">:sys.get_status/2</code></a> -
+allows retrieval of the status of the process. This status includes
+the process dictionary, if the process is running or is suspended,
+the parent PID, the debugger state, and the state of the behaviour module,
+which includes the callback module state (as returned by <a href="http://www.erlang.org/doc/man/sys.html#get_state-2)"><code class="inline">:sys.get_state/2</code></a>.
+It’s possible to change how this status is represented by defining
+the optional <a href="GenServer.html#c:format_status/2"><code class="inline">GenServer.format_status/2</code></a> callback.
+</li>
+<li><a href="http://erlang.org/doc/man/sys.html#trace-3"><code class="inline">:sys.trace/3</code></a> -
+prints all the system events to <code class="inline">:stdio</code>.
+</li>
+<li><a href="http://erlang.org/doc/man/sys.html#statistics-3"><code class="inline">:sys.statistics/3</code></a> -
+manages collection of process statistics.
+</li>
+<li><a href="http://erlang.org/doc/man/sys.html#no_debug-2"><code class="inline">:sys.no_debug/2</code></a> -
+turns off all debug handlers for the given process. It is very important
+to switch off debugging once we’re done. Excessive debug handlers or
+those that should be turned off, but weren’t, can seriously damage
+the performance of the system.
+</li>
+</ul>
+<p>Let’s see how we could use those functions for debugging the stack server
+we defined earlier.</p>
+<pre><code class="iex elixir">iex&gt; {:ok, pid} = Stack.start_link([])
+iex&gt; :sys.statistics(pid, true) # turn on collecting process statistics
+iex&gt; :sys.trace(pid, true) # turn on event printing
+iex&gt; Stack.push(pid, 1)
+*DBG* &lt;0.122.0&gt; got cast {push,1}
+*DBG* &lt;0.122.0&gt; new state [1]
+:ok
+iex&gt; :sys.get_state(pid)
+[1]
+iex&gt; Stack.pop(pid)
+*DBG* &lt;0.122.0&gt; got call pop from &lt;0.80.0&gt;
+*DBG* &lt;0.122.0&gt; sent 1 to &lt;0.80.0&gt;, new state []
+1
+iex&gt; :sys.statistics(pid, :get)
+{:ok,
+ [start_time: {{2016, 7, 16}, {12, 29, 41}},
+  current_time: {{2016, 7, 16}, {12, 29, 50}},
+  reductions: 117, messages_in: 2, messages_out: 0]}
+iex&gt; :sys.no_debug(pid) # turn off all debug handlers
+:ok
+iex&gt; :sys.get_status(pid)
+{:status, #PID&lt;0.122.0&gt;, {:module, :gen_server},
+ [[&quot;$initial_call&quot;: {Stack, :init, 1},            # pdict
+   &quot;$ancestors&quot;: [#PID&lt;0.80.0&gt;, #PID&lt;0.51.0&gt;]],
+  :running,                                       # :running | :suspended
+  #PID&lt;0.80.0&gt;,                                   # parent
+  [],                                             # debugger state
+  [header: &#39;Status for generic server &lt;0.122.0&gt;&#39;, # module status
+   data: [{&#39;Status&#39;, :running}, {&#39;Parent&#39;, #PID&lt;0.80.0&gt;},
+     {&#39;Logged events&#39;, []}], data: [{&#39;State&#39;, [1]}]]]}</code></pre>
 <h2 id="module-learn-more" class="section-heading">
   <a href="#module-learn-more" class="hover-link"><i class="icon-link"></i></a>
   Learn more
@@ -610,7 +680,7 @@ call.</p>
     </a>
     <span class="signature">abcast(nodes \\ nodes(), name, request)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L676" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L741" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -641,7 +711,7 @@ server name does not exist.</p>
     </a>
     <span class="signature">call(server, request, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L606" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L671" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -684,7 +754,7 @@ element.</p>
     </a>
     <span class="signature">cast(server, request)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L641" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L706" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -723,7 +793,7 @@ messages to other nodes to arrive out of order.</p>
     </a>
     <span class="signature">multi_call(nodes \\ nodes(), name, request, timeout \\ :infinity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L726" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L791" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -773,7 +843,7 @@ module is registered as <code class="inline">Stack</code> in the <code class="in
     </a>
     <span class="signature">reply(client, reply)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L760" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L825" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -820,7 +890,7 @@ end</code></pre>
     </a>
     <span class="signature">start(module, args, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L539" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L604" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -849,7 +919,7 @@ end</code></pre>
     </a>
     <span class="signature">start_link(module, args, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L529" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L594" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -911,7 +981,7 @@ or <code class="inline">:ignore</code>, the process is terminated and this funct
     </a>
     <span class="signature">stop(server, reason \\ :normal, timeout \\ :infinity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L579" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L644" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -945,7 +1015,7 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
     </a>
     <span class="signature">whereis(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L785" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L850" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -993,7 +1063,7 @@ GenServer.cast(process, :hello)</code></pre>
     </a>
     <span class="signature">code_change(old_vsn, state, extra)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L446" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1035,7 +1105,7 @@ with its previous state. Therefore this callback does not usually contain side e
     </a>
     <span class="signature">format_status(reason, pdict_and_state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L402" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L467" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1079,7 +1149,7 @@ the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> a
     </a>
     <span class="signature">handle_call(request, from, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L337" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1159,7 +1229,7 @@ as the response to call and the process exits with reason <code class="inline">r
     </a>
     <span class="signature">handle_cast(request, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L368" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1204,7 +1274,7 @@ reason <code class="inline">reason</code>.</p>
     </a>
     <span class="signature">handle_info(msg, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L319" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L384" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1240,7 +1310,7 @@ a timeout occurs the message is <code class="inline">:timeout</code>.</p>
     </a>
     <span class="signature">init(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1301,7 +1371,7 @@ entering the loop or calling <code class="inline">terminate/2</code>.</p>
     </a>
     <span class="signature">terminate(reason, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/42520550ffc4fcd6085e81d05732feccb07deddc/lib/elixir/lib/gen_server.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/gen_server.ex#L424" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1368,7 +1438,7 @@ logged.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-15eb88aa0b.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 
