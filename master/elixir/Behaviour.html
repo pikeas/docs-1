@@ -71,7 +71,7 @@
         Behaviour
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/behaviour.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/c6a25729e08ee6eee3bbfcc44d6bf99d00a17653/lib/elixir/lib/behaviour.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -80,9 +80,11 @@
       
         <section id="moduledoc" class="docstring">
           <p>This module has been deprecated.</p>
-<p>Instead of <code class="inline">defcallback</code>, one can simply use <code class="inline">@callback</code>.
-Instead of <code class="inline">defmacrocallback</code>, one can simply use <code class="inline">@macrocallback</code>.
-Instead of <code class="inline">__behaviour__(:callbacks)</code>, one can simply use <code class="inline">behaviour_info(:callbacks)</code>.</p>
+<p>Instead of <a href="#defcallback/1"><code class="inline">defcallback/1</code></a> and <a href="#defmacrocallback/1"><code class="inline">defmacrocallback/1</code></a>, the <code class="inline">@callback</code> and
+<code class="inline">@macrocallback</code> module attributes can be used (respectively). See the
+documentation for <a href="Module.html"><code class="inline">Module</code></a> for more information on these attributes.</p>
+<p>Instead of <code class="inline">MyModule.__behaviour__(:callbacks)</code>,
+<code class="inline">MyModule.behaviour_info(:callbacks)</code> can be used.</p>
 
         </section>
       
@@ -150,7 +152,7 @@ Instead of <code class="inline">__behaviour__(:callbacks)</code>, one can simply
     </a>
     <span class="signature">defcallback(spec)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/behaviour.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c6a25729e08ee6eee3bbfcc44d6bf99d00a17653/lib/elixir/lib/behaviour.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -169,7 +171,7 @@ Instead of <code class="inline">__behaviour__(:callbacks)</code>, one can simply
     </a>
     <span class="signature">defmacrocallback(spec)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/1f256671d69b69230980e471065d98648ea3541f/lib/elixir/lib/behaviour.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c6a25729e08ee6eee3bbfcc44d6bf99d00a17653/lib/elixir/lib/behaviour.ex#L23" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
