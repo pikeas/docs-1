@@ -117,7 +117,7 @@ iex&gt; File.read!(&quot;no_such_file.txt&quot;)
   {:error, reason} -&gt; # handle the error caused by `reason`
 end</code></pre>
 <p>However, if you expect the outcome to always to be successful (e.g. if you expect the file always to exist), the bang variation can be more convenient and will raise a more helpful error message (than a failed pattern match) on failure.</p>
-<p>More examples of paired functions: <code class="inline">Base.decode16/2</code> and <code class="inline">Base.decode16!/2</code>, <a href="File.html#cwd/0"><code class="inline">File.cwd/0</code></a> and <a href="File.html#cwd!/0"><code class="inline">File.cwd!/0</code></a></p>
+<p>More examples of paired functions: <a href="Base.html#decode16/2"><code class="inline">Base.decode16/2</code></a> and <a href="Base.html#decode16!/2"><code class="inline">Base.decode16!/2</code></a>, <a href="File.html#cwd/0"><code class="inline">File.cwd/0</code></a> and <a href="File.html#cwd!/0"><code class="inline">File.cwd!/0</code></a></p>
 <p>There are also some non-paired functions, with no non-bang variant. The bang still signifies that it will raise an exception on failure. Examples: <code class="inline">Mix.Config.validate!/1</code>, <a href="Protocol.html#assert_protocol!/1"><code class="inline">Protocol.assert_protocol!/1</code></a></p>
 <p>In macro code, the bang on <a href="Kernel.html#alias!/1"><code class="inline">Kernel.alias!/1</code></a> and <a href="Kernel.html#var!/2"><code class="inline">Kernel.var!/2</code></a> signifies that <a href="http://elixir-lang.org/getting-started/meta/macros.html#macros-hygiene">macro hygiene</a> is set aside.</p>
 <h2 id="trailing-question-mark-foo" class="section-heading">
