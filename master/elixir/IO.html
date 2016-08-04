@@ -71,7 +71,7 @@
         IO
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -156,7 +156,7 @@ was last accessed. Position of files can be changed using the
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#binread/2">binread(device \\ group_leader(), line_or_chars)</a>
+    <a href="#binread/2">binread(device \\ :stdio, line_or_chars)</a>
   </div>
   
     <div class="summary-synopsis"><p>Reads from the IO <code class="inline">device</code>. The operation is Unicode unsafe</p>
@@ -174,7 +174,7 @@ was last accessed. Position of files can be changed using the
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#binwrite/2">binwrite(device \\ group_leader(), item)</a>
+    <a href="#binwrite/2">binwrite(device \\ :stdio, item)</a>
   </div>
   
     <div class="summary-synopsis"><p>Writes <code class="inline">item</code> as a binary to the given <code class="inline">device</code>.
@@ -213,7 +213,7 @@ lists and strings) into a string</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#gets/2">gets(device \\ group_leader(), prompt)</a>
+    <a href="#gets/2">gets(device \\ :stdio, prompt)</a>
   </div>
   
     <div class="summary-synopsis"><p>Reads a line from the IO <code class="inline">device</code></p>
@@ -260,7 +260,7 @@ The operation is Unicode unsafe</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#puts/2">puts(device \\ group_leader(), item)</a>
+    <a href="#puts/2">puts(device \\ :stdio, item)</a>
   </div>
   
     <div class="summary-synopsis"><p>Writes <code class="inline">item</code> to the given <code class="inline">device</code>, similar to <a href="#write/2"><code class="inline">write/2</code></a>,
@@ -270,7 +270,7 @@ but adds a newline at the end</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#read/2">read(device \\ group_leader(), line_or_chars)</a>
+    <a href="#read/2">read(device \\ :stdio, line_or_chars)</a>
   </div>
   
     <div class="summary-synopsis"><p>Reads from the IO <code class="inline">device</code></p>
@@ -306,7 +306,7 @@ but adds a newline at the end</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#write/2">write(device \\ group_leader(), item)</a>
+    <a href="#write/2">write(device \\ :stdio, item)</a>
   </div>
   
     <div class="summary-synopsis"><p>Writes <code class="inline">item</code> to the given <code class="inline">device</code></p>
@@ -363,9 +363,9 @@ but adds a newline at the end</p>
     <a href="#binread/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">binread(device \\ group_leader(), line_or_chars)</span>
+    <span class="signature">binread(device \\ :stdio, line_or_chars)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L116" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -413,7 +413,7 @@ as it will return the wrong result.</p>
     </a>
     <span class="signature">binstream(device, line_or_bytes)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L421" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -449,9 +449,9 @@ mode as it will return the wrong result.</p>
     <a href="#binwrite/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">binwrite(device \\ group_leader(), item)</span>
+    <span class="signature">binwrite(device \\ :stdio, item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L174" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -484,7 +484,7 @@ as it will return the wrong result.</p>
     </a>
     <span class="signature">chardata_to_string(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L447" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L445" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -524,7 +524,7 @@ iex&gt; IO.chardata_to_string(&quot;string&quot;)
     </a>
     <span class="signature">getn(prompt, count \\ 1)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L312" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -562,7 +562,7 @@ Otherwise, <code class="inline">count</code> is the number of raw bytes to be re
     </a>
     <span class="signature">getn(device, prompt, count)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L339" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -604,9 +604,9 @@ NFS volume
     <a href="#gets/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">gets(device \\ group_leader(), prompt)</span>
+    <span class="signature">gets(device \\ :stdio, prompt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L365" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -651,7 +651,7 @@ NFS volume
     </a>
     <span class="signature">inspect(item, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -707,7 +707,7 @@ after: [2, 4, 6]</code></pre>
     </a>
     <span class="signature">inspect(device, item, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L292" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L290" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -736,7 +736,7 @@ after: [2, 4, 6]</code></pre>
     </a>
     <span class="signature">iodata_length(item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L499" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L497" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -768,7 +768,7 @@ after: [2, 4, 6]</code></pre>
     </a>
     <span class="signature">iodata_to_binary(item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L483" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L481" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -812,9 +812,9 @@ iex&gt; IO.iodata_to_binary(bin)
     <a href="#puts/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">puts(device \\ group_leader(), item)</span>
+    <span class="signature">puts(device \\ :stdio, item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L185" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L183" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -841,9 +841,9 @@ but adds a newline at the end.</p>
     <a href="#read/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">read(device \\ group_leader(), line_or_chars)</span>
+    <span class="signature">read(device \\ :stdio, line_or_chars)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -889,7 +889,7 @@ empty string in case the device has reached EOF.</p>
     </a>
     <span class="signature">stream(device, line_or_codepoints)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L394" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -930,7 +930,7 @@ from the command line:</p>
     </a>
     <span class="signature">warn(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L226" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -963,7 +963,7 @@ from the command line:</p>
     </a>
     <span class="signature">warn(message, stacktrace)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L207" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L205" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -998,9 +998,9 @@ IO.warn &quot;variable bar is unused&quot;, stacktrace
     <a href="#write/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">write(device \\ group_leader(), item)</span>
+    <span class="signature">write(device \\ :stdio, item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/2dfdb36b1cf3d0fbe64bd7dc52e01be5092cdb1a/lib/elixir/lib/io.ex#L161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/2bb0276deb1878a5c45cc2d7e502f902074bfcf9/lib/elixir/lib/io.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
