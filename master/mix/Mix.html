@@ -69,7 +69,7 @@
         Mix
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -95,9 +95,9 @@ and testing Elixir projects, managing its dependencies, and more.</p>
   end
 end</code></pre>
 <p>The <code class="inline">project/0</code> function is where the project information is defined
-and it allows developers to configure many tasks.</p>
-<p>After the project above is defined, there are many tasks one can
-run directly from the command line:</p>
+and tasks are configured.</p>
+<p>Once the project is defined, a number of default Mix tasks can be run
+directly from the command line:</p>
 <ul>
 <li><code class="inline">mix compile</code> - compiles the current project
 </li>
@@ -118,9 +118,9 @@ a particular task.</p>
 </h2>
 
 <p>Tasks are what make Mix extensible.</p>
-<p>Any project can extend Mix behaviour by adding their own tasks. For
-example, you can add the task below inside your project and it will
-be available to everyone that uses your project:</p>
+<p>Projects can extend Mix behaviour by adding their own tasks. For
+example, adding the task below inside your project will
+make it available to everyone that uses your project:</p>
 <pre><code class="elixir">defmodule Mix.Tasks.Hello do
   use Mix.Task
 
@@ -128,17 +128,17 @@ be available to everyone that uses your project:</p>
     Mix.shell.info &quot;hello&quot;
   end
 end</code></pre>
-<p>Now they can invoke it with <code class="inline">mix hello</code>.</p>
+<p>The task can now be invoked with <code class="inline">mix hello</code>.</p>
 <h2 id="module-dependencies" class="section-heading">
   <a href="#module-dependencies" class="hover-link"><i class="icon-link"></i></a>
   Dependencies
 </h2>
 
 <p>Another important feature in Mix is that it is able to manage your
-dependencies and integrates nicely with <a href="https://hex.pm">the Hex package manager</a>.</p>
+dependencies and integrates nicely with the <a href="https://hex.pm">Hex package manager</a>.</p>
 <p>In order to use dependencies, you need to add a <code class="inline">:deps</code> key
-to your project configuration. We often extract the dependencies
-listing to its own functions:</p>
+to your project configuration. We often extract the list of dependencies
+into its own function:</p>
 <pre><code class="elixir">defmodule MyApp.Mixfile do
   use Mix.Project
 
@@ -206,8 +206,8 @@ end</code></pre>
 which is a shortcut for <code class="inline">mix compile</code>. The other is named
 <code class="inline">mix hello</code>, which is the equivalent to the <code class="inline">Mix.Tasks.Hello</code>
 we have defined in the <a href="Mix.Task.html"><code class="inline">Mix.Task</code></a> section.</p>
-<p>Aliases may also be lists, specifying multiple tasks to run
-at once:</p>
+<p>Aliases may also be lists, specifying multiple tasks to be run
+consecutively:</p>
 <pre><code class="elixir">[all: [&amp;hello/1, &quot;deps.get --only #{Mix.env}&quot;, &quot;compile&quot;]]</code></pre>
 <p>In the example above, we have defined an alias named <code class="inline">mix all</code>,
 that prints hello, then fetches dependencies specific to the
@@ -215,7 +215,7 @@ current environment and compiles it.</p>
 <p>Arguments given to the alias will be appended to the arguments
 of the last task in the list, if the last task is a function
 they will be given as a list of strings to the function.</p>
-<p>Finally, aliases can also be use to augment existing tasks.
+<p>Finally, aliases can also be used to augment existing tasks.
 Let’s suppose you want to augment <code class="inline">mix clean</code> to clean another
 directory Mix does not know about:</p>
 <pre><code class="elixir">[clean: [&quot;clean&quot;, &amp;clean_extra/1]]</code></pre>
@@ -234,7 +234,7 @@ with extra clean up logic.</p>
 </li>
 <li><code class="inline">MIX_DEBUG</code> - outputs debug information about each task before running it
 </li>
-<li><code class="inline">MIX_ENV</code> - specifies which environment should be used. see Environments
+<li><code class="inline">MIX_ENV</code> - specifies which environment should be used. See <a href="#environments">Environments</a>
 </li>
 <li><code class="inline">MIX_EXS</code> - changes the full path to the <code class="inline">mix.exs</code> file
 </li>
@@ -370,7 +370,7 @@ with extra clean up logic.</p>
     </a>
     <span class="signature">compilers()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L228" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -394,7 +394,7 @@ end</code></pre>
     </a>
     <span class="signature">debug(debug)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -413,7 +413,7 @@ end</code></pre>
     </a>
     <span class="signature">debug?()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -432,7 +432,7 @@ end</code></pre>
     </a>
     <span class="signature">env()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L202" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -451,7 +451,7 @@ end</code></pre>
     </a>
     <span class="signature">env(env)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L213" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -472,7 +472,7 @@ configuration won’t be reloaded.</p>
     </a>
     <span class="signature">raise(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L275" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -500,7 +500,7 @@ configuration won’t be reloaded.</p>
     </a>
     <span class="signature">shell()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L243" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L243" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -510,10 +510,10 @@ configuration won’t be reloaded.</p>
   <section class="docstring">
     <p>Returns the current shell.</p>
 <p><a href="#shell/0"><code class="inline">shell/0</code></a> can be used as a wrapper for the current shell. It contains
-conveniences for asking information to the user, printing things and so
+conveniences for requesting information from the user, printing to the shell and so
 forth. The Mix shell is swappable (see <a href="#shell/1)"><code class="inline">shell/1</code></a>, allowing developers to use
 a test shell that simply sends messages to the current process instead of
-doing IO (see <a href="Mix.Shell.Process.html)"><code class="inline">Mix.Shell.Process</code></a>.</p>
+performing IO (see <a href="Mix.Shell.Process.html)"><code class="inline">Mix.Shell.Process</code></a>.</p>
 <p>By default, this returns <a href="Mix.Shell.IO.html"><code class="inline">Mix.Shell.IO</code></a>.</p>
 
   </section>
@@ -525,7 +525,7 @@ doing IO (see <a href="Mix.Shell.Process.html)"><code class="inline">Mix.Shell.P
     </a>
     <span class="signature">shell(shell)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/8460f35fc93ffd9ce7d7babad6e6afcb165316da/lib/mix/lib/mix.ex#L253" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix.ex#L253" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
