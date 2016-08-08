@@ -69,7 +69,7 @@
         Mix.Tasks.Deps
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/tasks/deps.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/tasks/deps.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -123,8 +123,12 @@ dependency</p>
 <li><p><code class="inline">:compile</code> - a command to compile the dependency, defaults to a <code class="inline">mix</code>,
 <code class="inline">rebar</code> or <code class="inline">make</code> command</p>
 </li>
-<li><p><code class="inline">:optional</code> - the dependency is optional and used only to specify
-requirements</p>
+<li><p><code class="inline">:optional</code> - marks the dependency as optional. In such cases, the
+current project will always include the optional dependency but any
+other project that depends on the current project won’t be forced to
+use the optional dependency. However, if the other project includes
+the optional dependency on its own, the requirements and options
+specified here will also be applied.</p>
 </li>
 <li><p><code class="inline">:only</code> - the dependency will belong only to the given environments,
 useful when declaring dev- or test-only dependencies</p>
@@ -239,7 +243,7 @@ STATUS</code></pre>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/tasks/deps.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/tasks/deps.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

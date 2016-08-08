@@ -69,7 +69,7 @@
         Mix.Project
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -77,10 +77,10 @@
 
       
         <section id="moduledoc">
-          <p>Defines and manipulate Mix projects.</p>
-<p>In order to configure Mix, a developer needs to use
-<a href="Mix.Project.html#content"><code class="inline">Mix.Project</code></a> in a module and define a function named
-<code class="inline">project</code> that returns a keyword list with configuration.</p>
+          <p>Defines and manipulates Mix projects.</p>
+<p>To configure Mix, the project should include a module that <code class="inline">use</code>s
+<a href="Mix.Project.html#content"><code class="inline">Mix.Project</code></a> and defines a function named <code class="inline">project</code> that returns
+a keyword list of configurations.</p>
 <pre><code class="elixir">defmodule MyApp do
   use Mix.Project
 
@@ -89,13 +89,13 @@
      version: &quot;0.6.0&quot;]
   end
 end</code></pre>
-<p>After being defined, the configuration for this project can be read
-as <a href="Mix.Project.html#config/0"><code class="inline">Mix.Project.config/0</code></a>. Notice that <a href="#config/0"><code class="inline">config/0</code></a> won’t fail if a
+<p>Once defined, the configuration for the project can be read
+using <a href="Mix.Project.html#config/0"><code class="inline">Mix.Project.config/0</code></a>. Note that <a href="#config/0"><code class="inline">config/0</code></a> won’t fail if a
 project is not defined; this allows many Mix tasks to work
 without a project.</p>
-<p>In case the developer needs a project or wants to access a special
-function in the project, the developer can call <a href="Mix.Project.html#get!/0"><code class="inline">Mix.Project.get!/0</code></a>
-which fails with <a href="Mix.NoProjectError.html"><code class="inline">Mix.NoProjectError</code></a> in case a project is not
+<p>If a task requires a project to be defined or needs to access a
+special function within the project, the task can call <a href="Mix.Project.html#get!/0"><code class="inline">Mix.Project.get!/0</code></a>
+which fails with <a href="Mix.NoProjectError.html"><code class="inline">Mix.NoProjectError</code></a> in the case a project is not
 defined.</p>
 <h2 id="module-erlang-projects" class="section-heading">
   <a href="#module-erlang-projects" class="hover-link"><i class="icon-link"></i></a>
@@ -195,7 +195,7 @@ etc.</p>
     <a href="#consolidation_path/1">consolidation_path(config \\ config())</a>
   </div>
   
-    <div class="summary-synopsis"><p>The path where protocol consolidations are stored</p>
+    <div class="summary-synopsis"><p>Returns the path where protocol consolidations are stored</p>
 </div>
   
 </div>
@@ -204,7 +204,7 @@ etc.</p>
     <a href="#deps_path/1">deps_path(config \\ config())</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the path to store dependencies for this project</p>
+    <div class="summary-synopsis"><p>Returns the path where dependencies are stored for this project</p>
 </div>
   
 </div>
@@ -267,7 +267,7 @@ etc.</p>
     <a href="#manifest_path/1">manifest_path(config \\ config())</a>
   </div>
   
-    <div class="summary-synopsis"><p>The path to store manifests</p>
+    <div class="summary-synopsis"><p>Returns the path where manifests are stored</p>
 </div>
   
 </div>
@@ -308,7 +308,7 @@ etc.</p>
     </a>
     <span class="signature">app_path(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L327" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L327" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -340,7 +340,7 @@ etc.</p>
     </a>
     <span class="signature">build_path(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L275" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L275" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -378,7 +378,7 @@ Mix.Project.build_path
     </a>
     <span class="signature">build_structure(config \\ config(), opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -411,7 +411,7 @@ Mix.Project.build_path
     </a>
     <span class="signature">compile(args, config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L371" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L371" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -442,7 +442,7 @@ explicit command to <code class="inline">mix compile</code> is required.</p>
     </a>
     <span class="signature">compile_path(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L352" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -474,7 +474,7 @@ explicit command to <code class="inline">mix compile</code> is required.</p>
     </a>
     <span class="signature">config()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L135" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L135" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -496,9 +496,9 @@ explicit command to <code class="inline">mix compile</code> is required.</p>
 list with default values. This allows many Mix tasks to work
 without the need for an underlying project.</p>
 <p>Note this configuration is cached once the project is
-pushed into the stack. Calling it multiple times won’t
+pushed onto the stack. Calling it multiple times won’t
 cause it to be recomputed.</p>
-<p>Do not use <a href="Mix.Project.html#config/0"><code class="inline">Mix.Project.config/0</code></a> to rely on runtime configuration.
+<p>Do not use <a href="Mix.Project.html#config/0"><code class="inline">Mix.Project.config/0</code></a> to find the runtime configuration.
 Use it only to configure aspects of your project (like
 compilation directories) and not your application runtime.</p>
 
@@ -511,7 +511,7 @@ compilation directories) and not your application runtime.</p>
     </a>
     <span class="signature">config_files()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,7 +543,7 @@ all config files in the <code class="inline">config</code> directory.</p>
     </a>
     <span class="signature">consolidation_path(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -551,7 +551,7 @@ all config files in the <code class="inline">config</code> directory.</p>
   </div>
   
   <section class="docstring">
-    <p>The path where protocol consolidations are stored.</p>
+    <p>Returns the path where protocol consolidations are stored.</p>
 
   </section>
 </div>
@@ -562,7 +562,7 @@ all config files in the <code class="inline">config</code> directory.</p>
     </a>
     <span class="signature">deps_path(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -579,7 +579,7 @@ all config files in the <code class="inline">config</code> directory.</p>
     </div>
   
   <section class="docstring">
-    <p>Returns the path to store dependencies for this project.</p>
+    <p>Returns the path where dependencies are stored for this project.</p>
 <p>The returned path will be expanded.</p>
 <h2>Examples</h2>
 <pre><code class="elixir">Mix.Project.deps_path
@@ -594,7 +594,7 @@ all config files in the <code class="inline">config</code> directory.</p>
     </a>
     <span class="signature">deps_paths()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -625,7 +625,7 @@ all config files in the <code class="inline">config</code> directory.</p>
     </a>
     <span class="signature">ensure_structure(config \\ config(), opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L435" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L435" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -654,7 +654,7 @@ all config files in the <code class="inline">config</code> directory.</p>
     </a>
     <span class="signature">get()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -687,7 +687,7 @@ requirement of the current task, you should call
     </a>
     <span class="signature">get!()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -720,7 +720,7 @@ is available.</p>
     </a>
     <span class="signature">in_project(app, path, post_config \\ [], fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L199" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -761,7 +761,7 @@ end
     </a>
     <span class="signature">load_paths(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L447" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -789,7 +789,7 @@ end
     </a>
     <span class="signature">manifest_path(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L306" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L306" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -806,7 +806,7 @@ end
     </div>
   
   <section class="docstring">
-    <p>The path to store manifests.</p>
+    <p>Returns the path where manifests are stored.</p>
 <p>By default they are stored in the app path inside
 the build directory. Umbrella applications have
 the manifest path set to the root of the build directory.
@@ -825,7 +825,7 @@ Directories may be changed in future releases.</p>
     </a>
     <span class="signature">umbrella?(config \\ config())</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/28d056d2d1bb05539909ff821858a75db8b40353/lib/mix/lib/mix/project.ex#L172" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/c15ca054c57dd87a4aa81ca834365cb057f25fa0/lib/mix/lib/mix/project.ex#L172" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
