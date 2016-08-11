@@ -69,7 +69,7 @@
         Mix.Shell.IO
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -113,7 +113,7 @@ to stdout as it comes</p>
     <a href="#error/1">error(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Writes an error message to the shell followed by new line</p>
+    <div class="summary-synopsis"><p>Prints the given error to the shell followed by a newline</p>
 </div>
   
 </div>
@@ -122,7 +122,7 @@ to stdout as it comes</p>
     <a href="#info/1">info(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Writes a message to the shell followed by new line</p>
+    <div class="summary-synopsis"><p>Prints the given message to the shell followed by a newline</p>
 </div>
   
 </div>
@@ -131,7 +131,7 @@ to stdout as it comes</p>
     <a href="#print_app/0">print_app()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Prints the currently running application if it
+    <div class="summary-synopsis"><p>Prints the current application to the shell if it
 was not printed yet</p>
 </div>
   
@@ -141,8 +141,8 @@ was not printed yet</p>
     <a href="#prompt/1">prompt(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Writes a message shell followed by prompting the user for
-input. Input will be consumed until enter is pressed</p>
+    <div class="summary-synopsis"><p>Prints a message and prompts the user for
+input. Input will be consumed until Enter is pressed</p>
 </div>
   
 </div>
@@ -151,8 +151,8 @@ input. Input will be consumed until enter is pressed</p>
     <a href="#yes?/1">yes?(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Receives a message and asks the user if they want to proceed.
-The user must press enter or type anything that matches the “yes”
+    <div class="summary-synopsis"><p>Prints a message and asks the user if they want to proceed.
+The user must press Enter or type anything that matches the “yes”
 regex <code class="inline">~r/^Y(es)?$/i</code></p>
 </div>
   
@@ -185,7 +185,7 @@ regex <code class="inline">~r/^Y(es)?$/i</code></p>
     </a>
     <span class="signature">cmd(command, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -205,7 +205,7 @@ to stdout as it comes.</p>
     </a>
     <span class="signature">error(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L43" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -213,7 +213,7 @@ to stdout as it comes.</p>
   </div>
   
   <section class="docstring">
-    <p>Writes an error message to the shell followed by new line.</p>
+    <p>Prints the given error to the shell followed by a newline.</p>
 
   </section>
 </div>
@@ -224,7 +224,7 @@ to stdout as it comes.</p>
     </a>
     <span class="signature">info(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L35" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -232,7 +232,7 @@ to stdout as it comes.</p>
   </div>
   
   <section class="docstring">
-    <p>Writes a message to the shell followed by new line.</p>
+    <p>Prints the given message to the shell followed by a newline.</p>
 
   </section>
 </div>
@@ -243,7 +243,7 @@ to stdout as it comes.</p>
     </a>
     <span class="signature">print_app()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L14" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -251,7 +251,7 @@ to stdout as it comes.</p>
   </div>
   
   <section class="docstring">
-    <p>Prints the currently running application if it
+    <p>Prints the current application to the shell if it
 was not printed yet.</p>
 
   </section>
@@ -263,7 +263,7 @@ was not printed yet.</p>
     </a>
     <span class="signature">prompt(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L52" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -271,8 +271,8 @@ was not printed yet.</p>
   </div>
   
   <section class="docstring">
-    <p>Writes a message shell followed by prompting the user for
-input. Input will be consumed until enter is pressed.</p>
+    <p>Prints a message and prompts the user for
+input. Input will be consumed until Enter is pressed.</p>
 
   </section>
 </div>
@@ -283,7 +283,7 @@ input. Input will be consumed until enter is pressed.</p>
     </a>
     <span class="signature">yes?(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell/io.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell/io.ex#L62" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -291,8 +291,8 @@ input. Input will be consumed until enter is pressed.</p>
   </div>
   
   <section class="docstring">
-    <p>Receives a message and asks the user if they want to proceed.
-The user must press enter or type anything that matches the “yes”
+    <p>Prints a message and asks the user if they want to proceed.
+The user must press Enter or type anything that matches the “yes”
 regex <code class="inline">~r/^Y(es)?$/i</code>.</p>
 
   </section>

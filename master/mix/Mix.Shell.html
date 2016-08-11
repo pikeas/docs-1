@@ -71,7 +71,7 @@
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -152,7 +152,7 @@ is shared across different shells</p>
     <a href="#c:error/1">error(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Warns about the given error message</p>
+    <div class="summary-synopsis"><p>Prints the given error to the shell</p>
 </div>
   
 </div>
@@ -161,7 +161,7 @@ is shared across different shells</p>
     <a href="#c:info/1">info(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Informs the given message</p>
+    <div class="summary-synopsis"><p>Prints the given message to the shell</p>
 </div>
   
 </div>
@@ -170,7 +170,7 @@ is shared across different shells</p>
     <a href="#c:print_app/0">print_app()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Prints the current application to shell if
+    <div class="summary-synopsis"><p>Prints the current application to the shell if
 it was not printed yet</p>
 </div>
   
@@ -189,7 +189,7 @@ it was not printed yet</p>
     <a href="#c:yes?/1">yes?(message)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Asks the user for confirmation</p>
+    <div class="summary-synopsis"><p>Prompts the user for confirmation</p>
 </div>
   
 </div>
@@ -217,7 +217,7 @@ it was not printed yet</p>
     </a>
     <span class="signature">cmd(command, options \\ [], callback)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -237,7 +237,7 @@ is shared across different shells.</p>
     </a>
     <span class="signature">printable_app_name()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -246,11 +246,11 @@ is shared across different shells.</p>
   
   <section class="docstring">
     <p>Returns the printable app name.</p>
-<p>This function returns the current application name
+<p>This function returns the current application name,
 but only if the application name should be printed.</p>
 <p>Calling this function automatically toggles its value
 to <code class="inline">false</code> until the current project is re-entered. The
-goal is to exactly avoid printing the application name
+goal is to avoid printing the application name
 multiple times.</p>
 
   </section>
@@ -276,7 +276,7 @@ multiple times.</p>
     </a>
     <span class="signature">cmd(command)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -304,7 +304,7 @@ multiple times.</p>
     </a>
     <span class="signature">cmd(command, options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -345,7 +345,7 @@ stderr to stdout</p>
     </a>
     <span class="signature">error(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L14" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -362,7 +362,7 @@ stderr to stdout</p>
     </div>
   
   <section class="docstring">
-    <p>Warns about the given error message.</p>
+    <p>Prints the given error to the shell.</p>
 
   </section>
 </div>
@@ -373,7 +373,7 @@ stderr to stdout</p>
     </a>
     <span class="signature">info(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L9" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -390,7 +390,7 @@ stderr to stdout</p>
     </div>
   
   <section class="docstring">
-    <p>Informs the given message.</p>
+    <p>Prints the given message to the shell.</p>
 
   </section>
 </div>
@@ -401,7 +401,7 @@ stderr to stdout</p>
     </a>
     <span class="signature">print_app()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -418,7 +418,7 @@ stderr to stdout</p>
     </div>
   
   <section class="docstring">
-    <p>Prints the current application to shell if
+    <p>Prints the current application to the shell if
 it was not printed yet.</p>
 
   </section>
@@ -430,7 +430,7 @@ it was not printed yet.</p>
     </a>
     <span class="signature">prompt(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -458,7 +458,7 @@ it was not printed yet.</p>
     </a>
     <span class="signature">yes?(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/683a847f64c0ca4cf8c2317642cb409496d8c53a/lib/mix/lib/mix/shell.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/64ee036509c34e097017e89fc0af3818110043d3/lib/mix/lib/mix/shell.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -475,7 +475,7 @@ it was not printed yet.</p>
     </div>
   
   <section class="docstring">
-    <p>Asks the user for confirmation.</p>
+    <p>Prompts the user for confirmation.</p>
 
   </section>
 </div>
