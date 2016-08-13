@@ -71,7 +71,7 @@
         Integer
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -105,6 +105,24 @@
   </div>
   
     <div class="summary-synopsis"><p>Returns the ordered digits for the given <code class="inline">integer</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#floor_div/2">floor_div(dividend, divisor)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs a floored integer division</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#mod/2">mod(dividend, divisor)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Computes the modulo remainder of an integer division</p>
 </div>
   
 </div>
@@ -217,7 +235,7 @@ of <code class="inline">integer</code> in the given <code class="inline">base</c
     </a>
     <span class="signature">digits(integer, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -249,6 +267,84 @@ iex&gt; Integer.digits(-170, 2)
 
   </section>
 </div>
+<div class="detail" id="floor_div/2">
+  <div class="detail-header">
+    <a href="#floor_div/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">floor_div(dividend, divisor)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L112" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">floor_div(integer, neg_integer | pos_integer) :: integer</code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Performs a floored integer division.</p>
+<p>Raises an <a href="ArithmeticError.html"><code class="inline">ArithmeticError</code></a> exception if one of the arguments is not an
+integer, or when the <code class="inline">divisor</code> is <code class="inline">0</code>.</p>
+<p><a href="Integer.html#floor_div/2"><code class="inline">Integer.floor_div/2</code></a> performs <em>floored</em> integer division. This means that
+the result is always rounded towards negative infinity.</p>
+<p>If you want to perform truncated integer division (rounding towards zero),
+use <a href="Kernel.html#div/2"><code class="inline">Kernel.div/2</code></a> instead.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Integer.floor_div(5, 2)
+2
+iex&gt; Integer.floor_div(6, -4)
+-2
+iex&gt; Integer.floor_div(-99, 2)
+-50</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="mod/2">
+  <div class="detail-header">
+    <a href="#mod/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">mod(dividend, divisor)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L80" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">mod(integer, neg_integer | pos_integer) :: integer</code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Computes the modulo remainder of an integer division.</p>
+<p><a href="Integer.html#mod/2"><code class="inline">Integer.mod/2</code></a> uses floored division, which means that 
+the result will always have the sign of the <code class="inline">divisor</code>.</p>
+<p>Raises an <a href="ArithmeticError.html"><code class="inline">ArithmeticError</code></a> exception if one of the arguments is not an
+integer, or when the <code class="inline">divisor</code> is <code class="inline">0</code>.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Integer.mod(5, 2)
+1
+iex&gt; Integer.mod(6, -4)
+-2</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="parse/2">
   <div class="detail-header">
     <a href="#parse/2" class="detail-link" title="Link to this function">
@@ -256,7 +352,7 @@ iex&gt; Integer.digits(-170, 2)
     </a>
     <span class="signature">parse(binary, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L178" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L236" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -318,7 +414,7 @@ iex&gt; Integer.parse(&quot;a2&quot;, 38)
     </a>
     <span class="signature">to_charlist(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L318" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L376" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -359,7 +455,7 @@ iex&gt; Integer.to_charlist(0123)
     </a>
     <span class="signature">to_charlist(integer, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L400" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -398,7 +494,7 @@ iex&gt; Integer.to_charlist(882681651, 36)
     </a>
     <span class="signature">to_string(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L268" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L326" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -440,7 +536,7 @@ iex&gt; Integer.to_string(0123)
     </a>
     <span class="signature">to_string(integer, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L293" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -480,7 +576,7 @@ iex&gt; Integer.to_string(882681651, 36)
     </a>
     <span class="signature">undigits(digits, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L116" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L174" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -531,7 +627,7 @@ iex&gt; Integer.undigits([])
     </a>
     <span class="signature">is_even(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -565,7 +661,7 @@ true</code></pre>
     </a>
     <span class="signature">is_odd(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/425f471b2ab8f156740f2b58a160c33ae04d1c44/lib/elixir/lib/integer.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/34bf464bc1a035b6015366463e04f1bf9d2065f3/lib/elixir/lib/integer.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
