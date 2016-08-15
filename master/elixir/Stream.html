@@ -393,6 +393,16 @@ enumeration</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#map_every/3">map_every(enum, nth, fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates a stream that will apply the given function on
+every <code class="inline">nth</code> item from the enumerable</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#reject/2">reject(enum, fun)</a>
   </div>
   
@@ -720,7 +730,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">concat(enumerables)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L916" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L951" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -752,7 +762,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">concat(first, second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L937" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L972" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -790,7 +800,7 @@ iex&gt; Enum.take(stream, 6)
     </a>
     <span class="signature">cycle(enumerable)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1028" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1063" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1210,7 +1220,7 @@ is delayed until the stream is executed. See <a href="#run/1"><code class="inlin
     </a>
     <span class="signature">iterate(start_value, next_fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1085" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1268,6 +1278,49 @@ iex&gt; Enum.to_list(stream)
 
   </section>
 </div>
+<div class="detail" id="map_every/3">
+  <div class="detail-header">
+    <a href="#map_every/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">map_every(enum, nth, fun)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L518" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">map_every(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, non_neg_integer, (<a href="#t:element/0">element</a> -> any)) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Creates a stream that will apply the given function on
+every <code class="inline">nth</code> item from the enumerable.</p>
+<p>The first item is always included, unless <code class="inline">nth</code> is 0.</p>
+<p><code class="inline">nth</code> must be a non-negative integer, or <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be thrown.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; stream = Stream.map_every(1..10, 2, fn(x) -&gt; x * 2 end)
+iex&gt; Enum.to_list(stream)
+[2, 2, 6, 4, 10, 6, 14, 8, 18, 10]
+
+iex&gt; stream = Stream.map_every([1, 2, 3, 4, 5], 1, fn(x) -&gt; x * 2 end)
+iex&gt; Enum.to_list(stream)
+[2, 4, 6, 8, 10]
+
+iex&gt; stream = Stream.map_every(1..1000, 0, fn(x) -&gt; x * 2 end)
+iex&gt; Enum.to_list(stream)
+[]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="reject/2">
   <div class="detail-header">
     <a href="#reject/2" class="detail-link" title="Link to this function">
@@ -1275,7 +1328,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">reject(enum, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L506" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L541" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1308,7 +1361,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">repeatedly(generator_fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1142" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1341,7 +1394,7 @@ iex&gt; Stream.repeatedly(&amp;:rand.uniform/0) |&gt; Enum.take(3)
     </a>
     <span class="signature">resource(start_fun, next_fun, after_fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1187" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1388,7 +1441,7 @@ resources.</p>
     </a>
     <span class="signature">run(stream)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L530" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L565" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1427,7 +1480,7 @@ or <a href="Stream.html#run/1"><code class="inline">Stream.run/1</code></a>.</p>
     </a>
     <span class="signature">scan(enum, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L548" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L583" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1461,7 +1514,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">scan(enum, acc, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L565" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L600" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1495,7 +1548,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">take(enum, count)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L595" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L630" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1541,7 +1594,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">take_every(enum, nth)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L629" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L664" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1583,7 +1636,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">take_while(enum, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L649" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L684" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1616,7 +1669,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">timer(n)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L666" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L701" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1649,7 +1702,7 @@ the given time until the item is streamed.</p>
     </a>
     <span class="signature">transform(enum, acc, reducer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L700" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L735" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1695,7 +1748,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">transform(enum, start_fun, reducer, after_fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L717" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L752" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1728,7 +1781,7 @@ halts or completes.</p>
     </a>
     <span class="signature">unfold(next_acc, next_fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1252" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L1287" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1762,7 +1815,7 @@ accumulator. The enumeration finishes if it returns <code class="inline">nil</co
     </a>
     <span class="signature">uniq(enum)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L844" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L879" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1797,7 +1850,7 @@ of items stored will grow infinitely, never being garbage collected.</p>
     </a>
     <span class="signature">uniq_by(enum, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L876" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L911" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1838,7 +1891,7 @@ iex&gt; Stream.uniq_by([a: {:tea, 2}, b: {:tea, 2}, c: {:coffee, 1}], fn {_, y} 
     </a>
     <span class="signature">with_index(enum, offset \\ 0)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L899" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L934" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1876,7 +1929,7 @@ iex&gt; Enum.to_list(stream)
     </a>
     <span class="signature">zip(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L955" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/stream.ex#L990" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
