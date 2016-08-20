@@ -1428,7 +1428,7 @@ iex&gt; Enum.drop([1, 2, 3], -1)
 starting with the first element.</p>
 <p>The first item is always dropped, unless <code class="inline">nth</code> is 0.</p>
 <p>The second argument specifying every <code class="inline">nth</code> item must be a non-negative
-integer, otherwise <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be raised.</p>
+integer.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Enum.drop_every(1..10, 2)
 [2, 4, 6, 8, 10]
@@ -2136,15 +2136,15 @@ iex&gt; Enum.map([a: 1, b: 2], fn({k, v}) -&gt; {k, -v} end)
   <section class="docstring">
     <p>Returns a list of results of invoking <code class="inline">fun</code> on every <code class="inline">nth</code>
 item of <code class="inline">enumerable</code>, starting with the first element.</p>
-<p>The first result is always included, unless <code class="inline">nth</code> is 0.</p>
-<p>The second argument specifies every <code class="inline">nth</code> item must be a non-negative
-integer, otherwise <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be raised.</p>
+<p>The first item is always passed to the given function.</p>
+<p>The second argument specifying every <code class="inline">nth</code> item must be a non-negative
+integer.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Enum.map_every(1..10, 2, fn(x) -&gt; x * 2 end)
 [2, 2, 6, 4, 10, 6, 14, 8, 18, 10]
 
-iex&gt; Enum.map_every(1..10, 0, fn(x) -&gt; x * 2 end)
-[]
+iex&gt; Enum.map_every(1..5, 0, fn(x) -&gt; x * 2 end)
+[1, 2, 3, 4, 5]
 
 iex&gt; Enum.map_every([1, 2, 3], 1, fn(x) -&gt; x * 2 end)
 [2, 4, 6]</code></pre>
@@ -3396,7 +3396,7 @@ iex&gt; Enum.take([1, 2, 3], -1)
 starting with the first element.</p>
 <p>The first item is always included, unless <code class="inline">nth</code> is 0.</p>
 <p>The second argument specifying every <code class="inline">nth</code> item must be a non-negative
-integer, otherwise <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be raised.</p>
+integer.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; Enum.take_every(1..10, 2)
 [1, 3, 5, 7, 9]

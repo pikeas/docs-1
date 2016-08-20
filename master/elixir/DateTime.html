@@ -296,11 +296,11 @@ iex&gt; DateTime.from_unix(1432560368868569, :microseconds)
 {:ok, %DateTime{calendar: Calendar.ISO, day: 23, hour: 22, microsecond: {211914, 3}, minute: 53,
                 month: 1, second: 43, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
                 year: 46302, zone_abbr: &quot;UTC&quot;}}</code></pre>
-<p>Negative Unix times are supported, up to -62167219200 seconds, 
+<p>Negative Unix times are supported, up to -62167219200 seconds,
 which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
 <pre><code class="iex elixir">iex&gt; DateTime.from_unix(-12345678910)
-{:ok, %DateTime{calendar: Calendar.ISO, day: 13, hour: 4, microsecond: {0, 0}, minute: 44, 
-                month: 10, second: 50, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0, 
+{:ok, %DateTime{calendar: Calendar.ISO, day: 13, hour: 4, microsecond: {0, 0}, minute: 44,
+                month: 10, second: 50, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
                 year: 1578, zone_abbr: &quot;UTC&quot;}}</code></pre>
 <p>When a Unix time before that moment is passed to <a href="#from_unix/2"><code class="inline">from_unix/2</code></a>, <code class="inline">:error</code> will be returned.</p>
 
@@ -346,11 +346,11 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
 %DateTime{calendar: Calendar.ISO, day: 25, hour: 13, microsecond: {868569, 6}, minute: 26,
           month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
           year: 2015, zone_abbr: &quot;UTC&quot;}</code></pre>
-<p>Negative Unix times are supported, up to -62167219200 seconds, 
+<p>Negative Unix times are supported, up to -62167219200 seconds,
 which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
 <pre><code class="iex elixir">iex&gt; DateTime.from_unix(-12345678910)
-{:ok, %DateTime{calendar: Calendar.ISO, day: 13, hour: 4, microsecond: {0, 0}, minute: 44, 
-                month: 10, second: 50, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0, 
+{:ok, %DateTime{calendar: Calendar.ISO, day: 13, hour: 4, microsecond: {0, 0}, minute: 44,
+                month: 10, second: 50, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
                 year: 1578, zone_abbr: &quot;UTC&quot;}}</code></pre>
 <p>When a Unix time before that moment is passed to <a href="#from_unix!/2"><code class="inline">from_unix!/2</code></a>, an ArgumentError will be raised.</p>
 
@@ -363,7 +363,7 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     </a>
     <span class="signature">to_date(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1161" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1165" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -390,7 +390,7 @@ iex&gt; DateTime.to_date(dt)
     </a>
     <span class="signature">to_iso8601(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1221" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -443,7 +443,7 @@ iex&gt; DateTime.to_iso8601(dt)
     </a>
     <span class="signature">to_naive(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1140" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1144" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -470,7 +470,7 @@ iex&gt; DateTime.to_naive(dt)
     </a>
     <span class="signature">to_string(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -516,7 +516,7 @@ iex&gt; DateTime.to_string(dt)
     </a>
     <span class="signature">to_time(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1184" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,7 +543,7 @@ iex&gt; DateTime.to_time(dt)
     </a>
     <span class="signature">to_unix(datetime, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1117" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

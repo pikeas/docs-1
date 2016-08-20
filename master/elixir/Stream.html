@@ -957,7 +957,7 @@ iex&gt; Enum.to_list(stream)
   <section class="docstring">
     <p>Creates a stream that drops every <code class="inline">nth</code> item from the enumerable.</p>
 <p>The first item is always dropped, unless <code class="inline">nth</code> is 0.</p>
-<p><code class="inline">nth</code> must be a non-negative integer, or <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be thrown.</p>
+<p><code class="inline">nth</code> must be a non-negative integer.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; stream = Stream.drop_every(1..10, 2)
 iex&gt; Enum.to_list(stream)
@@ -1304,8 +1304,8 @@ iex&gt; Enum.to_list(stream)
   <section class="docstring">
     <p>Creates a stream that will apply the given function on
 every <code class="inline">nth</code> item from the enumerable.</p>
-<p>The first item is always included, unless <code class="inline">nth</code> is 0.</p>
-<p><code class="inline">nth</code> must be a non-negative integer, or <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be thrown.</p>
+<p>The first item is always passed to the given function.</p>
+<p><code class="inline">nth</code> must be a non-negative integer.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; stream = Stream.map_every(1..10, 2, fn(x) -&gt; x * 2 end)
 iex&gt; Enum.to_list(stream)
@@ -1315,9 +1315,9 @@ iex&gt; stream = Stream.map_every([1, 2, 3, 4, 5], 1, fn(x) -&gt; x * 2 end)
 iex&gt; Enum.to_list(stream)
 [2, 4, 6, 8, 10]
 
-iex&gt; stream = Stream.map_every(1..1000, 0, fn(x) -&gt; x * 2 end)
+iex&gt; stream = Stream.map_every(1..5, 0, fn(x) -&gt; x * 2 end)
 iex&gt; Enum.to_list(stream)
-[]</code></pre>
+[1, 2, 3, 4, 5]</code></pre>
 
   </section>
 </div>
@@ -1613,7 +1613,7 @@ iex&gt; Enum.to_list(stream)
   <section class="docstring">
     <p>Creates a stream that takes every <code class="inline">nth</code> item from the enumerable.</p>
 <p>The first item is always included, unless <code class="inline">nth</code> is 0.</p>
-<p><code class="inline">nth</code> must be a non-negative integer, or <a href="FunctionClauseError.html"><code class="inline">FunctionClauseError</code></a> will be thrown.</p>
+<p><code class="inline">nth</code> must be a non-negative integer.</p>
 <h2>Examples</h2>
 <pre><code class="iex elixir">iex&gt; stream = Stream.take_every(1..10, 2)
 iex&gt; Enum.to_list(stream)
