@@ -79,11 +79,11 @@
         <section id="moduledoc">
           <p>Fetches a copy of <code class="inline">rebar</code> or <code class="inline">rebar3</code> from the given path or URL.</p>
 <p>It defaults to safely download a Rebar copy from  Hex’s CDN.
-However, a URL can be given as argument, usually from an existing
+However, a URL can be given as argument, usually for an existing
 local copy of Rebar:</p>
 <pre><code class="elixir">mix local.rebar rebar path/to/rebar
 mix local.rebar rebar3 path/to/rebar</code></pre>
-<p>If not specified both <code class="inline">rebar</code> and <code class="inline">rebar3</code> will be fetched.</p>
+<p>If neither <code class="inline">rebar</code> or <code class="inline">rebar3</code> are specified, both versions will be fetched.</p>
 <p>The local copy is stored in your <code class="inline">MIX_HOME</code> (defaults to <code class="inline">~/.mix</code>).
 This version of Rebar will be used as required by <code class="inline">mix deps.compile</code>.</p>
 <h2 id="module-command-line-options" class="section-heading">

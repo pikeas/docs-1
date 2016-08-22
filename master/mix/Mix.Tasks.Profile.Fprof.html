@@ -84,7 +84,7 @@ sequential code.</p>
 and loads your project. Then the target expression is profiled, together
 with all processes which are spawned by it. Other processes (e.g. those
 residing in the OTP application supervision tree) are not profiled.</p>
-<p>To profile the code, you can use the syntax similar to <code class="inline">mix run</code> task:</p>
+<p>To profile the code, you can use syntax similar to the <code class="inline">mix run</code> task:</p>
 <pre><code class="elixir">mix profile.fprof -e Hello.world
 mix profile.fprof my_script.exs arg1 arg2 arg3</code></pre>
 <h2 id="module-command-line-options" class="section-heading">
@@ -97,7 +97,7 @@ mix profile.fprof my_script.exs arg1 arg2 arg3</code></pre>
 </li>
 <li><code class="inline">--details</code>       - include profile data for each profiled process
 </li>
-<li><code class="inline">--sort key</code>      - sort the output by given key: acc (default) or own
+<li><code class="inline">--sort key</code>      - sort the output by given key: <code class="inline">acc</code> (default) or <code class="inline">own</code>
 </li>
 <li><code class="inline">--config</code>, <code class="inline">-c</code>  - loads the given configuration file
 </li>
@@ -125,7 +125,7 @@ mix profile.fprof my_script.exs arg1 arg2 arg3</code></pre>
   Profile output
 </h2>
 
-<p>The example output looks as following:</p>
+<p>Example output:</p>
 <pre><code class="elixir">#                                        CNT    ACC (ms)    OWN (ms)
 Total                                 200279    1972.188    1964.579
 :fprof.apply_start_stop/4                  0    1972.188       0.012
@@ -137,7 +137,7 @@ Test.bottleneck/0                          1    1599.490       0.007
 <p>The default output contains data gathered from all profiled processes.
 All times are wall clock milliseconds. The columns have the following meaning:</p>
 <ul>
-<li>CNT - total number of invocation of the given function
+<li>CNT - total number of invocations of the given function
 </li>
 <li>ACC - total time spent in the function
 </li>
@@ -145,9 +145,9 @@ All times are wall clock milliseconds. The columns have the following meaning:</
 </li>
 </ul>
 <p>The first row (Total) is the sum of all functions executed in all profiled
-processes. For the given output, we had in total 200279 function calls and spent
-about 2 seconds running the entire code.</p>
-<p>You can obtain further information if you provide <code class="inline">--callers</code> and
+processes. For the given output, we had a total of 200279 function calls and spent
+about 2 seconds running the code.</p>
+<p>More detailed information is returned if you provide the <code class="inline">--callers</code> and
 <code class="inline">--details</code> options.</p>
 <p>When <code class="inline">--callers</code> option is specified, you’ll see expanded function entries:</p>
 <pre><code class="elixir">Mod.caller_1/0                            3     200.000       0.017
@@ -160,8 +160,8 @@ described by this paragraph. You also see its immediate callers (above) and
 called functions (below).</p>
 <p>All the values of caller functions describe the marked function. For example,
 the first row means that <code class="inline">Mod.caller_1/0</code> invoked <code class="inline">Mod.some_function/0</code> 3 times.
-200ms of the total time spent in <code class="inline">Mod.some_function/0</code> happened due to this
-particular caller.</p>
+200ms of the total time spent in <code class="inline">Mod.some_function/0</code> was spent processing
+calls from this particular caller.</p>
 <p>In contrast, the values for the called functions describe those functions, but
 in the context of the marked function. For example, the last row means that
 <code class="inline">Mod.called_2/0</code> was called once by <code class="inline">Mod.some_function/0</code>, and in that case
@@ -179,13 +179,13 @@ entries in your profile output, such as <code class="inline">:fprof</code> calls
 function with high ACC time, or an <code class="inline">:undefined</code> function which represents
 the outer caller (non-profiled code which started the profiler).</p>
 <p>Also, keep in mind that profiling might significantly increase the running time
-of the profiled processes. This might skew your results for example if those
+of the profiled processes. This might skew your results if, for example, those
 processes perform some I/O operations, since running time of those operations
 will remain unchanged, while CPU bound operations of the profiled processes
 might take significantly longer. Thus, when profiling some intensive program,
 try to reduce such dependencies, or be aware of the resulting bias.</p>
 <p>Finally, it’s advised to profile your program with the <code class="inline">prod</code> environment, since
-this should give you a more correct insight into your real bottlenecks.</p>
+this should provide more realistic insights into bottlenecks.</p>
 
         </section>
       

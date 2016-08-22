@@ -79,13 +79,13 @@
         <section id="moduledoc">
           <p>Extension point for precompiling dependencies.</p>
 <p>This is a task that can be aliased by projects
-that need to execute certain tasks to before
+that need to execute certain tasks before
 compiling dependencies:</p>
 <pre><code class="elixir">aliases: [&quot;deps.precompile&quot;: [&quot;nerves.precompile&quot;, &quot;deps.precompile&quot;]]</code></pre>
-<p>By default, this task has a single responsibility
-of loading all dependencies paths. The dependency
-loading is ad-hoc on purpose, to load as much as
-it can without validating it.</p>
+<p>By default, this task’s single responsibility
+is to load all dependency paths. Dependency
+loading is deliberately ad-hoc, loading as much as
+possbile without validating the files.</p>
 
         </section>
       

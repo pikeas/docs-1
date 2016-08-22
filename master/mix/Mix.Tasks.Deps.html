@@ -95,8 +95,8 @@ the following formats:</p>
 <p>By default, dependencies are fetched using the <a href="https://hex.pm/">Hex package manager</a>:</p>
 <pre><code class="elixir">{:plug, &quot;&gt;= 0.4.0&quot;}</code></pre>
 <p>By specifying such dependencies, Mix will automatically install
-Hex (if it wasn’t previously installed and download a package
-suitable to your project).</p>
+Hex (if it wasn’t previously installed) and download a package
+suitable to your project.</p>
 <p>Mix also supports Git and path dependencies:</p>
 <pre><code class="elixir">{:foobar, git: &quot;https://github.com/elixir-lang/foobar.git&quot;, tag: &quot;0.1&quot;}
 {:foobar, path: &quot;path/to/foobar&quot;}</code></pre>
@@ -105,10 +105,9 @@ suitable to your project).</p>
 <p>Path and in umbrella dependencies are automatically recompiled by
 the parent project whenever they change. While fetchable dependencies
 like the ones using <code class="inline">:git</code> are recompiled only when fetched/updated.</p>
-<p>The dependencies versions are expected to follow Semantic Versioning
+<p>The dependencies’ versions are expected to follow Semantic Versioning
 and the requirements must be specified as defined in the <code class="inline">Version</code>
 module.</p>
-<p>Below we provide a more detailed look into the available options.</p>
 <h2 id="module-dependency-definition-options" class="section-heading">
   <a href="#module-dependency-definition-options" class="hover-link"><i class="icon-link"></i></a>
   Dependency definition options
@@ -246,7 +245,7 @@ STATUS</code></pre>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/tasks/deps.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/tasks/deps.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

@@ -78,12 +78,12 @@
       
         <section id="moduledoc">
           <p>Compiles Elixir source files.</p>
-<p>Elixir is smart enough to recompile only files that changed
+<p>Elixir is smart enough to recompile only files that have changed
 and their dependencies. This means if <code class="inline">lib/a.ex</code> is invoking
 a function defined over <code class="inline">lib/b.ex</code>, whenever <code class="inline">lib/b.ex</code> changes,
 <code class="inline">lib/a.ex</code> is also recompiled.</p>
-<p>Note it is important to recompile a file dependencies because
-often there are compilation time dependencies between them.</p>
+<p>Note it is important to recompile a file’s dependencies as
+there are often compile time dependencies between them.</p>
 <h2 id="module-command-line-options" class="section-heading">
   <a href="#module-command-line-options" class="hover-link"><i class="icon-link"></i></a>
   Command line options

@@ -99,12 +99,12 @@ before starting the application itself.</p>
 <li><p><code class="inline">:registered</code> - the name of all registered processes in the
 application. If your application defines a local GenServer
 with name <code class="inline">MyServer</code>, it is recommended to add <code class="inline">MyServer</code>
-to this list. It is mostly useful to detect conflicts
+to this list. It is most useful in detecting conflicts
 between applications that register the same names.</p>
 </li>
 <li><p><code class="inline">:mod</code> - specify a module to invoke when the application
-is started, it must be in the format <code class="inline">{Mod, args}</code> where
-args is often an empty list. The module specified here must
+is started. It must be in the format <code class="inline">{Mod, args}</code> where
+args is often an empty list. The module specified must
 implement the callbacks defined by the <code class="inline">Application</code>
 module.</p>
 </li>
@@ -119,9 +119,9 @@ to configure applications.
    env: [default: :value],
    applications: [:crypto]]
 end</code></pre>
-<p>Besides the options above, <code class="inline">.app</code> files also expects other
-options like <code class="inline">:modules</code> and <code class="inline">:vsn</code>, but those are automatically
-filled by Mix.</p>
+<p>Besides the options above, <code class="inline">.app</code> files also expect other
+options like <code class="inline">:modules</code> and <code class="inline">:vsn</code>, but these are automatically
+added by Mix.</p>
 <h2 id="module-command-line-options" class="section-heading">
   <a href="#module-command-line-options" class="hover-link"><i class="icon-link"></i></a>
   Command line options

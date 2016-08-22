@@ -1156,7 +1156,7 @@ iex&gt; String.ends_with? &quot;language&quot;, [&quot;youth&quot;, &quot;age&qu
 true
 iex&gt; String.ends_with? &quot;language&quot;, [&quot;youth&quot;, &quot;elixir&quot;]
 false</code></pre>
-<p>An empty string will always match:</p>
+<p>An empty suffix will always match:</p>
 <pre><code class="iex elixir">iex&gt; String.ends_with? &quot;language&quot;, &quot;&quot;
 true
 iex&gt; String.ends_with? &quot;language&quot;, [&quot;&quot;, &quot;other&quot;]

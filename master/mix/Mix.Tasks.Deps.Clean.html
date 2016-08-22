@@ -80,9 +80,9 @@
           <p>Deletes the given dependencies’ files, including build artifacts and fetched
 sources.</p>
 <p>Since this is a destructive action, cleaning of dependencies
-can only happen by passing arguments/options:</p>
+only occurs when passing arguments/options:</p>
 <ul>
-<li><code class="inline">dep1 dep2</code> - the name of dependencies to be deleted separated by a space
+<li><code class="inline">dep1 dep2</code> - the names of dependencies to be deleted separated by a space
 </li>
 <li><code class="inline">--unlock</code> - also unlocks the deleted dependencies
 </li>
@@ -91,7 +91,7 @@ can only happen by passing arguments/options:</p>
 <li><code class="inline">--all</code> - deletes all dependencies
 </li>
 <li><code class="inline">--unused</code> - deletes only unused dependencies
-(i.e. dependencies no longer mentioned in <code class="inline">mix.exs</code> are removed)
+(i.e. dependencies no longer mentioned in <code class="inline">mix.exs</code>)
 </li>
 </ul>
 <p>By default this task works across all environments,
