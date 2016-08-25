@@ -283,7 +283,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L228" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -302,7 +302,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L216" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L219" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -320,6 +320,9 @@ calls. Defaults to 100ms.</p>
 <li><p><code class="inline">:capture_log</code> - if ExUnit should default to keeping track of log messages
 and print them on test failure. Can be overridden for individual tests via
 <code class="inline">@tag capture_log: false</code>. Defaults to <code class="inline">false</code>.</p>
+</li>
+<li><p><code class="inline">:case_load_timeout</code> - the timeout to be used when loading a test case.
+Defaults to <code class="inline">60_000</code> milliseconds.</p>
 </li>
 <li><p><code class="inline">:colors</code> - a keyword list of colors to be used by some formatters.
 The only option so far is <code class="inline">[enabled: boolean]</code> which defaults to <code class="inline">IO.ANSI.enabled?/0</code></p>
@@ -364,7 +367,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">plural_rule(word)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L238" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -393,7 +396,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">plural_rule(word, pluralization)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -422,7 +425,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">run()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L263" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
