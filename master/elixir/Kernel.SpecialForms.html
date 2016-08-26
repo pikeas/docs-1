@@ -2096,7 +2096,7 @@ the result of the expression will be returned:</p>
     ArithmeticError -&gt;
       :infinity
   end</code></pre>
-<p>However when an else clause is present but the result of the expression
+<p>However, when an else clause is present but the result of the expression
 does not match any of the patterns an exception will be raised. This
 exception will not be caught by a catch or rescue in the same try:</p>
 <pre><code class="elixir">x = 1
@@ -2116,7 +2116,7 @@ rescue
   TryClauseError -&gt;
     :error_b
 end</code></pre>
-<p>Similarly an exception inside an else clause is not caught or rescued
+<p>Similarly, an exception inside an else clause is not caught or rescued
 inside the same try:</p>
 <pre><code class="elixir">try do
   try do
@@ -2308,7 +2308,7 @@ tuples are also available in <a href="Kernel.html"><code class="inline">Kernel</
 <a href="Kernel.html#tuple_size/1)"><code class="inline">Kernel.tuple_size/1</code></a>.</p>
 <h2>AST representation</h2>
 <p>Only two-item tuples are considered literals in Elixir and return themselves
-when quoted. Therefore all other tuples are represented in the AST as calls to
+when quoted. Therefore, all other tuples are represented in the AST as calls to
 the <code class="inline">:{}</code> special form.</p>
 <pre><code class="iex elixir">iex&gt; quote do
 ...&gt;   {1, 2}

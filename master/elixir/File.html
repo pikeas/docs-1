@@ -2411,7 +2411,7 @@ throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if a
     <p>Returns a <a href="File.Stream.html"><code class="inline">File.Stream</code></a> for the given <code class="inline">path</code> with the given <code class="inline">modes</code>.</p>
 <p>The stream implements both <a href="Enumerable.html"><code class="inline">Enumerable</code></a> and <a href="Collectable.html"><code class="inline">Collectable</code></a> protocols,
 which means it can be used both for read and write.</p>
-<p>The <code class="inline">line_or_byte</code> argument configures how the file is read when
+<p>The <code class="inline">line_or_bytes</code> argument configures how the file is read when
 streaming, by <code class="inline">:line</code> (default) or by a given number of bytes.</p>
 <p>Operating the stream can fail on open for the same reasons as
 <a href="File.html#open!/2"><code class="inline">File.open!/2</code></a>. Note that the file is automatically opened each time streaming
