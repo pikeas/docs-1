@@ -92,8 +92,10 @@
 <p>See the “Defining a type” and “Defining a specification” sub-sections below for more information on defining types and typespecs.</p>
 <h2 id="types-and-their-syntax" class="section-heading">
   <a href="#types-and-their-syntax" class="hover-link"><i class="icon-link"></i></a>
-   Types and their syntax
-</h2><p>The syntax Elixir provides for type specifications is similar to <a href="http://www.erlang.org/doc/reference_manual/typespec.html">the one in Erlang</a>. Most of the built-in types provided in Erlang (for example, <code class="inline">pid()</code>) are expressed in the same way: <code class="inline">pid()</code> (or simply <code class="inline">pid</code>). Parametrized types (such as <code class="inline">list(integer)</code>) are supported as well and so are remote types (such as <code class="inline">Enum.t</code>). Integers and atom literals are allowed as types (e.g., <code class="inline">1</code>, <code class="inline">:atom</code>, or <code class="inline">false</code>). All other types are built out of unions of predefined types. Some shorthands are allowed, such as <code class="inline">[...]</code>, <code class="inline">&lt;&lt;&gt;&gt;</code>, and <code class="inline">{...}</code>.</p>
+  Types and their syntax
+</h2>
+
+<p>The syntax Elixir provides for type specifications is similar to <a href="http://www.erlang.org/doc/reference_manual/typespec.html">the one in Erlang</a>. Most of the built-in types provided in Erlang (for example, <code class="inline">pid()</code>) are expressed in the same way: <code class="inline">pid()</code> (or simply <code class="inline">pid</code>). Parametrized types (such as <code class="inline">list(integer)</code>) are supported as well and so are remote types (such as <code class="inline">Enum.t</code>). Integers and atom literals are allowed as types (e.g., <code class="inline">1</code>, <code class="inline">:atom</code>, or <code class="inline">false</code>). All other types are built out of unions of predefined types. Some shorthands are allowed, such as <code class="inline">[...]</code>, <code class="inline">&lt;&lt;&gt;&gt;</code>, and <code class="inline">{...}</code>.</p>
 <h3>Basic types</h3>
 <pre><code class="elixir">type :: any()                   # the top type, the set of all terms
       | none()                  # the bottom type, contains no terms
@@ -249,8 +251,10 @@
 <p>Notice that the syntactic representation of <code class="inline">map()</code> is <code class="inline">%{...}</code> (or <code class="inline">%{optional(any) =&gt; any}</code>), not <code class="inline">%{}</code>. The notation <code class="inline">%{}</code> specifies the singleton type for the empty map.</p>
 <h2 id="defining-a-type" class="section-heading">
   <a href="#defining-a-type" class="hover-link"><i class="icon-link"></i></a>
-   Defining a type
-</h2><p>The <code class="inline">@type</code>, <code class="inline">@typep</code>, and <code class="inline">@opaque</code> module attributes can be used to define new types:</p>
+  Defining a type
+</h2>
+
+<p>The <code class="inline">@type</code>, <code class="inline">@typep</code>, and <code class="inline">@opaque</code> module attributes can be used to define new types:</p>
 <pre><code class="elixir">@type type_name :: type
 @typep type_name :: type
 @opaque type_name :: type</code></pre>
@@ -259,8 +263,10 @@
 <pre><code class="elixir">@type dict(key, value) :: [{key, value}]</code></pre>
 <h2 id="defining-a-specification" class="section-heading">
   <a href="#defining-a-specification" class="hover-link"><i class="icon-link"></i></a>
-   Defining a specification
-</h2><pre><code class="elixir">@spec function_name(type1, type2) :: return_type
+  Defining a specification
+</h2>
+
+<pre><code class="elixir">@spec function_name(type1, type2) :: return_type
 @callback function_name(type1, type2) :: return_type
 @macrocallback macro_name(type1, type2) :: Macro.t</code></pre>
 <p>Callbacks are used to define the callbacks functions of behaviours (see the <a href="behaviours.html">“Behaviours”</a> page in the documentation for more information on behaviours).</p>
@@ -276,8 +282,10 @@
 @spec function(atom) :: integer</code></pre>
 <h2 id="notes" class="section-heading">
   <a href="#notes" class="hover-link"><i class="icon-link"></i></a>
-   Notes
-</h2><p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with binaries which are referred to as “strings” in Elixir (as opposed to character lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to use the <code class="inline">charlist</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>, you’ll get a warning from the compiler.</p>
+  Notes
+</h2>
+
+<p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with binaries which are referred to as “strings” in Elixir (as opposed to character lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to use the <code class="inline">charlist</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>, you’ll get a warning from the compiler.</p>
 <p>If you want to refer to the “string” type (the one operated on by functions in the <a href="String.html"><code class="inline">String</code></a> module), use <code class="inline">String.t</code> type instead.</p>
 
       <footer class="footer">

@@ -73,8 +73,10 @@
 <p>Elixir’s standard library contains a few frequently used behaviours such as <a href="GenServer.html"><code class="inline">GenServer</code></a>, <a href="Supervisor.html"><code class="inline">Supervisor</code></a>, and <a href="Application.html"><code class="inline">Application</code></a>.</p>
 <h2 id="defining-a-behaviour" class="section-heading">
   <a href="#defining-a-behaviour" class="hover-link"><i class="icon-link"></i></a>
-   Defining a behaviour
-</h2><p>A behaviour is always backed by a module (which is how the behaviour will be identified): the module where callbacks are defined. To define a behaviour module, it’s enough to define one or more callbacks in that module. To define callbacks, the <code class="inline">@callback</code> and <code class="inline">@macrocallback</code> module attributes can be used (for function callbacks and macro callbacks respectively).</p>
+  Defining a behaviour
+</h2>
+
+<p>A behaviour is always backed by a module (which is how the behaviour will be identified): the module where callbacks are defined. To define a behaviour module, it’s enough to define one or more callbacks in that module. To define callbacks, the <code class="inline">@callback</code> and <code class="inline">@macrocallback</code> module attributes can be used (for function callbacks and macro callbacks respectively).</p>
 <pre><code class="elixir">defmodule MyBehaviour do
   @callback my_fun(arg :: any) :: any
   @macrocallback my_macro(arg :: any) :: Macro.t
@@ -102,8 +104,10 @@ end</code></pre>
 <p>One example of optional callback in Elixir’s standard library is <a href="GenServer.html#c:format_status/2"><code class="inline">GenServer.format_status/2</code></a>.</p>
 <h2 id="implementing-behaviours" class="section-heading">
   <a href="#implementing-behaviours" class="hover-link"><i class="icon-link"></i></a>
-   Implementing behaviours
-</h2><p>To specify that a module implements a given behaviour, the <code class="inline">@behaviour</code> attribute must be used:</p>
+  Implementing behaviours
+</h2>
+
+<p>To specify that a module implements a given behaviour, the <code class="inline">@behaviour</code> attribute must be used:</p>
 <pre><code class="elixir">defmodule MyBehaviour do
   @callback my_fun(arg :: any) :: any
 end
