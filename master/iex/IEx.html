@@ -195,51 +195,49 @@ a shortcut via the command line as well:</p>
   The .iex.exs file
 </h2>
 
-<p>When starting IEx, it will look for a local <code class="inline">.iex.exs</code> file (located in the current
-working directory), then a global one (located at <code class="inline">~/.iex.exs</code>) and will load the
-first one it finds (if any). The code in the chosen .iex.exs file will be
+<p>When starting, IEx looks for a local <code class="inline">.iex.exs</code> file (located in the current
+working directory), then a global one (located at <code class="inline">~/.iex.exs</code>) and loads the
+first one it finds (if any). The code in the loaded <code class="inline">.iex.exs</code> file is
 evaluated in the shell’s context. So, for instance, any modules that are
-loaded or variables that are bound in the .iex.exs file will be available in the
+loaded or variables that are bound in the <code class="inline">.iex.exs</code> file will be available in the
 shell after it has booted.</p>
-<p>Sample contents of a local .iex.exs file:</p>
-<pre><code class="elixir"># source another &quot;.iex.exs&quot; file
+<p>For example, take the following <code class="inline">.iex.exs</code> file:</p>
+<pre><code class="elixir"># Load another &quot;.iex.exs&quot; file
 import_file &quot;~/.iex.exs&quot;
 
-# import some module from lib that may not yet have been defined
+# Import some module from lib that may not yet have been defined
 import_if_available MyApp.Mod
 
-# print something before the shell starts
+# Print something before the shell starts
 IO.puts &quot;hello world&quot;
 
-# bind a variable that&#39;ll be accessible in the shell
+# Bind a variable that&#39;ll be accessible in the shell
 value = 13</code></pre>
-<p>Running the shell in the directory where the above .iex.exs file is located
+<p>Running IEx in the directory where the above <code class="inline">.iex.exs</code> file is located
 results in:</p>
 <pre><code class="elixir">$ iex
-Erlang 18 [...]
+Erlang 19 [...]
 
 hello world
 Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)&gt; value
 13</code></pre>
 <p>It is possible to load another file by supplying the <code class="inline">--dot-iex</code>
-option to iex. See <code class="inline">iex --help</code>.</p>
+option to IEx. See <code class="inline">iex --help</code>.</p>
 <h2 id="module-configuring-the-shell" class="section-heading">
   <a href="#module-configuring-the-shell" class="hover-link"><i class="icon-link"></i></a>
   Configuring the shell
 </h2>
 
-<p>There are a number of customization options provided by the shell. Take a look
+<p>There are a number of customization options provided by IEx. Take a look
 at the docs for the <a href="IEx.html#configure/1"><code class="inline">IEx.configure/1</code></a> function by typing <code class="inline">h IEx.configure/1</code>.</p>
 <p>Those options can be configured in your project configuration file or globally
-by calling <a href="IEx.html#configure/1"><code class="inline">IEx.configure/1</code></a> from your <code class="inline">~/.iex.exs</code> file like this:</p>
+by calling <a href="IEx.html#configure/1"><code class="inline">IEx.configure/1</code></a> from your <code class="inline">~/.iex.exs</code> file. For example:</p>
 <pre><code class="elixir"># .iex.exs
-IEx.configure(inspect: [limit: 3])
-
-### now run the shell ###
-
-$ iex
-Erlang 17 (erts-5.10.1) [...]
+IEx.configure(inspect: [limit: 3])</code></pre>
+<p>Now run the shell:</p>
+<pre><code class="elixir">$ iex
+Erlang 19 [...]
 
 Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)&gt; [1, 2, 3, 4, 5]
@@ -417,7 +415,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L320" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L329" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -436,7 +434,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -455,7 +453,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">color(color, string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L336" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L345" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -475,7 +473,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L306" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L315" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -494,7 +492,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L299" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L308" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -503,13 +501,27 @@ pending expression and return to its normal state:</p>
   
   <section class="docstring">
     <p>Configures IEx.</p>
-<p>The supported options are: <code class="inline">:colors</code>, <code class="inline">:inspect</code>, <code class="inline">:width</code>,
-<code class="inline">:history_size</code>, <code class="inline">:default_prompt</code> and <code class="inline">:alive_prompt</code>.</p>
+<p>The supported options are:</p>
+<ul>
+<li><code class="inline">:colors</code>
+</li>
+<li><code class="inline">:inspect</code>
+</li>
+<li><code class="inline">:width</code>
+</li>
+<li><code class="inline">:history_size</code>
+</li>
+<li><code class="inline">:default_prompt</code>
+</li>
+<li><code class="inline">:alive_prompt</code>
+</li>
+</ul>
+<p>They are discussed individually in the sections below.</p>
 <h2>Colors</h2>
 <p>A keyword list that encapsulates all color settings used by the
 shell. See documentation for the <code class="inline">IO.ANSI</code> module for the list of
 supported colors and attributes.</p>
-<p>The value is a keyword list. List of supported keys:</p>
+<p>List of supported keys in the keyword list:</p>
 <ul>
 <li><code class="inline">:enabled</code>      - boolean value that allows for switching the coloring on and off
 </li>
@@ -529,7 +541,8 @@ supported colors and attributes.</p>
 </li>
 </ul>
 <p>When printing documentation, IEx will convert the Markdown
-documentation to ANSI as well. Those can be configured via:</p>
+documentation to ANSI as well. Colors for this can be configured
+via:</p>
 <ul>
 <li><code class="inline">:doc_code</code>        - the attributes for code blocks (cyan, bright)
 </li>
@@ -562,11 +575,11 @@ The value is an integer. When it is negative, the history is unlimited.</p>
 <h2>Prompt</h2>
 <p>This is an option determining the prompt displayed to the user
 when awaiting input.</p>
-<p>The value is a keyword list. Two prompt types:</p>
+<p>The value is a keyword list with two possible keys representing prompt types:</p>
 <ul>
-<li><code class="inline">:default_prompt</code> - used when <code class="inline">Node.alive?</code> returns <code class="inline">false</code>
+<li><code class="inline">:default_prompt</code> - used when <code class="inline">Node.alive?/0</code> returns <code class="inline">false</code>
 </li>
-<li><code class="inline">:alive_prompt</code>   - used when <code class="inline">Node.alive?</code> returns <code class="inline">true</code>
+<li><code class="inline">:alive_prompt</code>   - used when <code class="inline">Node.alive?/0</code> returns <code class="inline">true</code>
 </li>
 </ul>
 <p>The following values in the prompt string will be replaced appropriately:</p>
@@ -588,7 +601,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">inspect_opts()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L357" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L366" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -607,7 +620,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(binding, env, timeout)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L432" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L441" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -630,7 +643,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">started?()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L327" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -649,7 +662,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">width()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L350" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -681,7 +694,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L418" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/iex/lib/iex.ex#L427" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
