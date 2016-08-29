@@ -506,11 +506,11 @@ the item.</p>
 <p>If the <code class="inline">item</code> occurs more than once in the <code class="inline">list</code>, just
 the first occurrence is removed.</p>
 <h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; List.delete([1, 2, 3], 1)
-[2, 3]
+<pre><code class="iex elixir">iex&gt; List.delete([:a, :b, :c], :a)
+[:b, :c]
 
-iex&gt; List.delete([1, 2, 2, 3], 2)
-[1, 2, 3]</code></pre>
+iex&gt; List.delete([:a, :b, :b, :c], :b)
+[:a, :b, :c]</code></pre>
 
   </section>
 </div>
