@@ -79,30 +79,33 @@
         <section id="moduledoc">
           <p>ExUnit.DocTest implements functionality similar to <a href="https://docs.python.org/2/library/doctest.html">Python’s
 doctest</a>.</p>
-<p>In a nutshell, it allows us to generate tests from the code
-examples existing in a module/function/macro’s documentation.
-In order to do that, one needs to invoke the <code class="inline">doctest/1</code> macro
-from their test case and write their examples according
-to some guidelines.</p>
-<p>The syntax for examples is as follows. Every new test starts
-on a new line, with an <code class="inline">iex&gt;</code> prefix. Multiline expressions
-can be employed if the following lines start with either
-<code class="inline">...&gt;</code> (recommended) or <code class="inline">iex&gt;</code> prefix.</p>
-<p>The expected result should start at the next line after <code class="inline">iex&gt;</code>
+<p>It allows us to generate tests from the code
+examples in a module/function/macro’s documentation.
+To do this, invoke the <code class="inline">doctest/1</code> macro from within
+your test case and ensure your code examples are written
+according to the syntax and guidelines below.</p>
+<h2 id="module-syntax" class="section-heading">
+  <a href="#module-syntax" class="hover-link"><i class="icon-link"></i></a>
+  Syntax
+</h2>
+
+<p>Every new test starts on a new line, with an <code class="inline">iex&gt;</code> prefix.
+Multiline expressions can be used by prefixing subsequent lines with either
+<code class="inline">...&gt;</code> (recommended) or <code class="inline">iex&gt;</code>.</p>
+<p>The expected result should start at the next line after the <code class="inline">iex&gt;</code>
 or <code class="inline">...&gt;</code> line(s) and is terminated either by a newline, new
-<code class="inline">iex&gt;</code> prefix or end of the string literal.</p>
+<code class="inline">iex&gt;</code> prefix or the end of the string literal.</p>
 <h2 id="module-examples" class="section-heading">
   <a href="#module-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<p>Currently, the only way to run doctests is to include them into
-an ExUnit case with a <code class="inline">doctest</code> macro:</p>
+<p>To run doctests include them in an ExUnit case with a <code class="inline">doctest</code> macro:</p>
 <pre><code class="elixir">defmodule MyModule.Test do
   use ExUnit.Case, async: true
   doctest MyModule
 end</code></pre>
-<p>The <code class="inline">doctest</code> macro is going to loop through all functions and
+<p>The <code class="inline">doctest</code> macro loops through all functions and
 macros defined in <code class="inline">MyModule</code>, parsing their documentation in
 search of code examples.</p>
 <p>A very basic example is:</p>
@@ -137,30 +140,31 @@ don’t want to show it all, but just parts of it or some of its properties.</p>
 <pre><code class="elixir">iex(1)&gt; [1 + 2,
 ...(1)&gt;  3]
 [3, 3]</code></pre>
-<p>This is useful in two use cases:</p>
+<p>This is useful in two cases:</p>
 <ul>
 <li>being able to refer to specific numbered scenarios
 </li>
 <li>copy-pasting examples from an actual IEx session
 </li>
 </ul>
-<p>We also allow you to select or skip some functions when calling
-<code class="inline">doctest</code>. See the documentation for more info.</p>
+<p>You can also select or skip functions when calling
+<code class="inline">doctest</code>. See the documentation on the <code class="inline">:except</code> and <code class="inline">:only</code> options below
+for more info.</p>
 <h2 id="module-opaque-types" class="section-heading">
   <a href="#module-opaque-types" class="hover-link"><i class="icon-link"></i></a>
   Opaque types
 </h2>
 
-<p>Some types internal structure are kept hidden and instead show a
-user-friendly structure when inspecting the value. The idiom in
-Elixir is to print those data types as <code class="inline">#Name&lt;...&gt;</code>. Because those
+<p>Some types’ internal structures are kept hidden and instead show a
+user-friendly structure when inspected. The idiom in
+Elixir is to print those data types in the format <code class="inline">#Name&lt;...&gt;</code>. Because those
 values are treated as comments in Elixir code due to the leading
-<code class="inline">#</code> sign, they require special care when used in doctests.</p>
-<p>Imagine you have a map with a MapSet inside which is printed as:</p>
+<code class="inline">#</code> sign, they require special care when being used in doctests.</p>
+<p>Imagine you have a map that contains a MapSet and is printed as:</p>
 <pre><code class="elixir">%{users: #MapSet&lt;[:foo, :bar]&gt;}</code></pre>
-<p>If you try to match on such expression, <code class="inline">doctest</code> will fail to compile.
-You have two options to solve this.</p>
-<p>The first one is to rely on the fact that doctest can compare internal
+<p>If you try to match on such an expression, <code class="inline">doctest</code> will fail to compile.
+There are two ways to resolve this.</p>
+<p>The first is to rely on the fact that doctest can compare internal
 structures as long as they are at the root. So one could write:</p>
 <pre><code class="iex elixir">iex&gt; map = %{users: Enum.into([:foo, :bar], MapSet.new)}
 iex&gt; map.users
@@ -257,7 +261,7 @@ suite run.</p>
     </a>
     <span class="signature">doctest(mod, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/doc_test.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/doc_test.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
