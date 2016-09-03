@@ -126,15 +126,22 @@ end</code></pre>
   Recommendations
 </h2>
 
-<p>There are a couple tips we recommend developers to follow when writing documentation:</p>
+<p>When writing documentation:</p>
 <ul>
 <li><p>Keep the first paragraph of the documentation concise and simple, typically one-line. Tools like <a href="https://github.com/elixir-lang/ex_doc/">ExDoc</a> use the first line to generate a summary.</p>
 </li>
-<li><p>Markdown uses backticks (<code class="inline">`</code>) to quote code. Elixir builds on top of that to automatically generate links when module or function names are referenced. For this reason, always use full module names. If you have a module called <code class="inline">MyApp.Hello</code>, always reference it as <code class="inline">`MyApp.Hello`</code> and never as <code class="inline">`Hello`</code>. Function names must be referenced by name and arity if they are local, as in <code class="inline">`world/1`</code>, or by module, name and arity if pointing to an external module: <code class="inline">`MyApp.Hello.world/1`</code>. Referencing a <code class="inline">@callback</code> can be done by prepending <code class="inline">c:</code>, as in <code class="inline">`c:world/1`</code>; and a <code class="inline">@type</code> by using <code class="inline">t:</code>, as in <code class="inline">t:values/0</code>.</p>
+<li><p>Reference modules by their full name.</p>
+<p>  Markdown uses backticks (<code class="inline">`</code>) to quote code. Elixir builds on top of that to automatically generate links when module or function names are referenced. For this reason, always use full module names. If you have a module called <code class="inline">MyApp.Hello</code>, always reference it as <code class="inline">`MyApp.Hello`</code> and never as <code class="inline">`Hello`</code>.</p>
 </li>
-<li><p>When the documentation has multiple sections, always start the section heading by using <code class="inline">##</code>. The first heading is reserved for modules and function names.</p>
+<li><p>Reference functions by name and arity if they are local, as in <code class="inline">`world/1`</code>, or by module, name and arity if pointing to an external module: <code class="inline">`MyApp.Hello.world/1`</code>.</p>
 </li>
-<li>When documenting a function with multiple clauses, the documentation must be placed before the first clause. Documentation is always per function and arity and not per clause.
+<li><p>Reference a <code class="inline">@callback</code> by prepending <code class="inline">c:</code>, as in <code class="inline">`c:world/1`</code>.</p>
+</li>
+<li><p>Reference a <code class="inline">@type</code> by prepending <code class="inline">t:</code>, as in <code class="inline">`t:values/0`</code>.</p>
+</li>
+<li><p>Start new sections with second level Markdown headers <code class="inline">##</code>. First level headers are reserved for module and function names.</p>
+</li>
+<li>Place documentation before the first clause of multi-clause functions. Documentation is always per function and arity and not per clause.
 </li>
 </ul>
 <h2 id="doctests" class="section-heading">
@@ -142,14 +149,14 @@ end</code></pre>
   Doctests
 </h2>
 
-<p>We recommend developers to include examples in their documentation, often under its own <code class="inline">## Examples</code> heading. To ensure examples do not get out of date, Elixir’s test framework (ExUnit) provides a feature called doctests that allows developers to test the examples in their documentation. Doctests work by parsing out code samples starting with <code class="inline">iex&gt;</code> from the documentation. You can read more about it at <code class="inline">ExUnit.DocTest</code>.</p>
-<p>Notice doctests have limitations. When you cannot doctest a function, because it relies on state or side-effects, we recommend developers to include examples directly without the <code class="inline">iex&gt;</code> prompt.</p>
+<p>We recommend that developers include examples in their documentation, often under their own <code class="inline">## Examples</code> heading. To ensure examples do not get out of date, Elixir’s test framework (ExUnit) provides a feature called doctests that allows developers to test the examples in their documentation. Doctests work by parsing out code samples starting with <code class="inline">iex&gt;</code> from the documentation. You can read more about it at <code class="inline">ExUnit.DocTest</code>.</p>
+<p>Notice doctests have limitations. When you cannot doctest a function, because it relies on state or side-effects, we recommend developers include examples directly without the <code class="inline">iex&gt;</code> prompt.</p>
 <h2 id="documentation-comments" class="section-heading">
   <a href="#documentation-comments" class="hover-link"><i class="icon-link"></i></a>
   Documentation != Comments
 </h2>
 
-<p>Elixir treats documentation and code comments as different concepts. Documentation are for users of your Application Programming Interface (API), be it your co-worker or your future self. Modules and functions must always be documented if they are part of your API.</p>
+<p>Elixir treats documentation and code comments as different concepts. Documentation is for users of your Application Programming Interface (API), be it your co-worker or your future self. Modules and functions must always be documented if they are part of your API.</p>
 <p>Code comments are for developers reading the code. They are useful to mark improvements, leave notes for developers reading the code (for example, you decided not to call a function due to a bug in a library) and so forth.</p>
 <p>In other words: documentation is required, code comments are optional.</p>
 <h2 id="hiding-internal-modules-and-functions" class="section-heading">
@@ -157,7 +164,7 @@ end</code></pre>
   Hiding Internal Modules and Functions
 </h2>
 
-<p>Besides the modules and functions libraries provided as part of their public interface, libraries may also implement important functionality that are not part of their API. While these modules and functions can be accessed, they are meant to be internal to the library and thus should not have documentation for end users.</p>
+<p>Besides the modules and functions libraries provide as part of their public interface, libraries may also implement important functionality that is not part of their API. While these modules and functions can be accessed, they are meant to be internal to the library and thus should not have documentation for end users.</p>
 <p>Luckily, Elixir allows developers to hide modules and functions from the documentation. For example, one common practice for documenting internal behaviour is to set the <code class="inline">@moduledoc</code> attribute to <code class="inline">false</code> while documenting each function:</p>
 <pre><code class="elixir">defmodule MyApp.Hidden do
   @moduledoc false
@@ -174,7 +181,7 @@ end</code></pre>
   @doc false
   def add(a, b), do: a + b
 end</code></pre>
-<p>However keep in mind adding <code class="inline">@doc false</code> does not make the function private. The function above can still be invoked as <code class="inline">MyApp.Sample.add(1, 2)</code>. Not only that, if <code class="inline">MyApp.Sample</code> is imported, the <code class="inline">add/2</code> function will also be imported into the caller. For those reasons, be cautious when adding <code class="inline">@doc false</code> to functions, instead prefer one of:</p>
+<p>However, keep in mind that adding <code class="inline">@doc false</code> does not make the function private. The function above can still be invoked as <code class="inline">MyApp.Sample.add(1, 2)</code>. Not only that, if <code class="inline">MyApp.Sample</code> is imported, the <code class="inline">add/2</code> function will also be imported into the caller. For those reasons, be cautious when adding <code class="inline">@doc false</code> to functions, instead use one of these two options:</p>
 <ul>
 <li><p>Move the undocumented function to a module with <code class="inline">@moduledoc false</code>, like <code class="inline">MyApp.Hidden</code>, ensuring the function won’t be accidentally exposed or imported. Remember you can use <code class="inline">@moduledoc false</code> to hide a whole module and still document each function with <code class="inline">@doc</code>. Tools will still ignore the module.</p>
 </li>
