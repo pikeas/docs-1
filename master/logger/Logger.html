@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Logger – Logger v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/logger/Logger.html" />
     
@@ -658,7 +658,11 @@ and how to process the existing options.</p>
   
   <section class="docstring">
     <p>Adds a new backend.</p>
-<h2>Options</h2>
+<h2 id="add_backend/2-options" class="section-heading">
+  <a href="#add_backend/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:flush</code> - when <code class="inline">true</code>, guarantees all messages currently sent
 to both Logger and Erlang’s <code class="inline">error_logger</code> are processed before
@@ -955,7 +959,11 @@ for testing and it should not be called in production code.</p>
   
   <section class="docstring">
     <p>Removes a backend.</p>
-<h2>Options</h2>
+<h2 id="remove_backend/2-options" class="section-heading">
+  <a href="#remove_backend/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:flush</code> - when <code class="inline">true</code>, guarantees all messages currently sent
 to both Logger and Erlang’s <code class="inline">error_logger</code> are processed before
@@ -1032,7 +1040,11 @@ the backend is removed
   <section class="docstring">
     <p>Logs a debug message.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="debug/2-examples" class="section-heading">
+  <a href="#debug/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.debug &quot;hello?&quot;
 Logger.debug fn -&gt; &quot;expensive to calculate debug&quot; end</code></pre>
 
@@ -1055,7 +1067,11 @@ Logger.debug fn -&gt; &quot;expensive to calculate debug&quot; end</code></pre>
   <section class="docstring">
     <p>Logs an error.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="error/2-examples" class="section-heading">
+  <a href="#error/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.error &quot;oops&quot;
 Logger.error fn -&gt; &quot;expensive to calculate error&quot; end</code></pre>
 
@@ -1078,7 +1094,11 @@ Logger.error fn -&gt; &quot;expensive to calculate error&quot; end</code></pre>
   <section class="docstring">
     <p>Logs some info.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="info/2-examples" class="section-heading">
+  <a href="#info/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.info &quot;mission accomplished&quot;
 Logger.info fn -&gt; &quot;expensive to calculate info&quot; end</code></pre>
 
@@ -1125,7 +1145,11 @@ the Logger call altogether at compile time if desired.</p>
   <section class="docstring">
     <p>Logs a warning.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="warn/2-examples" class="section-heading">
+  <a href="#warn/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.warn &quot;knob turned too far to the right&quot;
 Logger.warn fn -&gt; &quot;expensive to calculate warning&quot; end</code></pre>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>IO.ANSI – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/IO.ANSI.html" />
     
@@ -1376,7 +1376,11 @@ performed. If you don’t want this behaviour, use <a href="#format_fragment/2">
 <p>An optional boolean parameter can be passed to enable or disable
 emitting actual ANSI codes. When <code class="inline">false</code>, no ANSI codes will emitted.
 By default checks if ANSI is enabled using the <a href="#enabled?/0"><code class="inline">enabled?/0</code></a> function.</p>
-<h2>Examples</h2>
+<h2 id="format/2-examples" class="section-heading">
+  <a href="#format/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; IO.ANSI.format([&quot;Hello, &quot;, :red, :bright, &quot;world!&quot;], true)
 [[[[[[], &quot;Hello, &quot;] | &quot;\e[31m&quot;] | &quot;\e[1m&quot;], &quot;world!&quot;] | &quot;\e[0m&quot;]</code></pre>
 
@@ -1403,7 +1407,11 @@ ANSI codes.</p>
 <p>An optional boolean parameter can be passed to enable or disable
 emitting actual ANSI codes. When <code class="inline">false</code>, no ANSI codes will emitted.
 By default checks if ANSI is enabled using the <a href="#enabled?/0"><code class="inline">enabled?/0</code></a> function.</p>
-<h2>Examples</h2>
+<h2 id="format_fragment/2-examples" class="section-heading">
+  <a href="#format_fragment/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; IO.ANSI.format_fragment([:bright, &#39;Word&#39;], true)
 [[[[[[] | &quot;\e[1m&quot;], 87], 111], 114], 100]</code></pre>
 

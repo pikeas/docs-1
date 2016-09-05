@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>URI – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/URI.html" />
     
@@ -321,7 +321,11 @@ given <code class="inline">query</code></p>
     <p>Checks if the character is a “reserved” character in a URI.</p>
 <p>Reserved characters are specified in
 <a href="http://tools.ietf.org/html/rfc3986#section-2.2">RFC 3986, section 2.2</a>.</p>
-<h2>Examples</h2>
+<h2 id="char_reserved?/1-examples" class="section-heading">
+  <a href="#char_reserved?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.char_reserved?(?+)
 true</code></pre>
 
@@ -354,7 +358,11 @@ true</code></pre>
     <p>Checks if the character is allowed unescaped in a URI.</p>
 <p>This is the default used by <a href="URI.html#encode/2"><code class="inline">URI.encode/2</code></a> where both
 reserved and unreserved characters are kept unescaped.</p>
-<h2>Examples</h2>
+<h2 id="char_unescaped?/1-examples" class="section-heading">
+  <a href="#char_unescaped?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.char_unescaped?(?{)
 false</code></pre>
 
@@ -387,7 +395,11 @@ false</code></pre>
     <p>Checks if the character is a “unreserved” character in a URI.</p>
 <p>Unreserved characters are specified in
 <a href="http://tools.ietf.org/html/rfc3986#section-2.3">RFC 3986, section 2.3</a>.</p>
-<h2>Examples</h2>
+<h2 id="char_unreserved?/1-examples" class="section-heading">
+  <a href="#char_unreserved?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.char_unreserved?(?_)
 true</code></pre>
 
@@ -418,7 +430,11 @@ true</code></pre>
   
   <section class="docstring">
     <p>Percent-unescapes a URI.</p>
-<h2>Examples</h2>
+<h2 id="decode/1-examples" class="section-heading">
+  <a href="#decode/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.decode(&quot;http%3A%2F%2Felixir-lang.org&quot;)
 &quot;http://elixir-lang.org&quot;</code></pre>
 
@@ -454,7 +470,11 @@ function inserts each key-value pair in the query string as one entry in the
 given <code class="inline">map</code>. Keys and values in the resulting map will be binaries. Keys and
 values will be percent-unescaped.</p>
 <p>Use <a href="#query_decoder/1"><code class="inline">query_decoder/1</code></a> if you want to iterate over each value manually.</p>
-<h2>Examples</h2>
+<h2 id="decode_query/2-examples" class="section-heading">
+  <a href="#decode_query/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.decode_query(&quot;foo=1&amp;bar=2&quot;)
 %{&quot;bar&quot; =&gt; &quot;2&quot;, &quot;foo&quot; =&gt; &quot;1&quot;}
 
@@ -488,7 +508,11 @@ iex&gt; URI.decode_query(&quot;percent=oh+yes%21&quot;, %{&quot;starting&quot; =
   
   <section class="docstring">
     <p>Decodes a string as “x-www-form-urlencoded”.</p>
-<h2>Examples</h2>
+<h2 id="decode_www_form/1-examples" class="section-heading">
+  <a href="#decode_www_form/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.decode_www_form(&quot;%3Call+in%2F&quot;)
 &quot;&lt;all in/&quot;</code></pre>
 
@@ -522,7 +546,11 @@ iex&gt; URI.decode_query(&quot;percent=oh+yes%21&quot;, %{&quot;starting&quot; =
 <p>If the scheme is unknown to the <a href="URI.html#content"><code class="inline">URI</code></a> module, this function returns
 <code class="inline">nil</code>. The default port for any scheme can be configured globally
 via <a href="#default_port/2"><code class="inline">default_port/2</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="default_port/1-examples" class="section-heading">
+  <a href="#default_port/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.default_port(&quot;ftp&quot;)
 21
 
@@ -595,7 +623,11 @@ new URIs.</p>
 passed, this function will be called with each character (byte) in <code class="inline">str</code> as
 its argument and should return <code class="inline">true</code> if that character should not be escaped
 and left as is.</p>
-<h2>Example</h2>
+<h2 id="encode/2-example" class="section-heading">
+  <a href="#encode/2-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.encode(&quot;ftp://s-ite.tld/?value=put it+й&quot;)
 &quot;ftp://s-ite.tld/?value=put%20it+%D0%B9&quot;
 
@@ -635,7 +667,11 @@ in the form of <code class="inline">key1=value1&amp;key2=value2...</code> where 
 values are URL encoded as per <a href="#encode_www_form/1"><code class="inline">encode_www_form/1</code></a>.</p>
 <p>Keys and values can be any term that implements the <a href="String.Chars.html"><code class="inline">String.Chars</code></a>
 protocol, except lists which are explicitly forbidden.</p>
-<h2>Examples</h2>
+<h2 id="encode_query/1-examples" class="section-heading">
+  <a href="#encode_query/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; hd = %{&quot;foo&quot; =&gt; 1, &quot;bar&quot; =&gt; 2}
 iex&gt; URI.encode_query(hd)
 &quot;bar=2&amp;foo=1&quot;
@@ -674,7 +710,11 @@ iex&gt; URI.encode_query %{key: [:a, :list]}
   
   <section class="docstring">
     <p>Encodes a string as “x-www-form-urlencoded”.</p>
-<h2>Example</h2>
+<h2 id="encode_www_form/1-example" class="section-heading">
+  <a href="#encode_www_form/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.encode_www_form(&quot;put: it+й&quot;)
 &quot;put%3A+it%2B%D0%B9&quot;</code></pre>
 
@@ -707,7 +747,11 @@ iex&gt; URI.encode_query %{key: [:a, :list]}
     <p>Merges two URIs.</p>
 <p>This function merges two URIs as per
 <a href="http://tools.ietf.org/html/rfc3986#section-5.2">RFC 3986, section 5.2</a>.</p>
-<h2>Examples</h2>
+<h2 id="merge/2-examples" class="section-heading">
+  <a href="#merge/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.merge(URI.parse(&quot;http://google.com&quot;), &quot;/query&quot;) |&gt; to_string
 &quot;http://google.com/query&quot;
 
@@ -750,7 +794,11 @@ in <a href="http://tools.ietf.org/html/rfc3986#appendix-B">RFC 3986, Appendix B<
 <a href="URI.html#default_port/1"><code class="inline">URI.default_port/1</code></a> for the URI’s scheme is used for the <code class="inline">:port</code> field.</p>
 <p>If a <code class="inline">%URI{}</code> struct is given to this function, this function returns it
 unmodified.</p>
-<h2>Examples</h2>
+<h2 id="parse/1-examples" class="section-heading">
+  <a href="#parse/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.parse(&quot;http://elixir-lang.org/&quot;)
 %URI{scheme: &quot;http&quot;, path: &quot;/&quot;, query: nil, fragment: nil,
      authority: &quot;elixir-lang.org&quot;, userinfo: nil,
@@ -815,7 +863,11 @@ iex&gt; URI.parse(&quot;foo/bar&quot;)
     <p>Returns a stream of two-element tuples representing key-value pairs in the
 given <code class="inline">query</code>.</p>
 <p>Key and value in each tuple will be binaries and will be percent-unescaped.</p>
-<h2>Examples</h2>
+<h2 id="query_decoder/1-examples" class="section-heading">
+  <a href="#query_decoder/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; URI.query_decoder(&quot;foo=1&amp;bar=2&quot;) |&gt; Enum.to_list()
 [{&quot;foo&quot;, &quot;1&quot;}, {&quot;bar&quot;, &quot;2&quot;}]</code></pre>
 

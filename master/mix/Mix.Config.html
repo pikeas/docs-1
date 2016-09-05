@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Mix.Config – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Config.html" />
     
@@ -236,7 +236,11 @@ the configured applications environment</p>
 <p>The configuration of each application is merged together
 with the values in the second one having higher preference
 than the first in case of conflicts.</p>
-<h2>Examples</h2>
+<h2 id="merge/2-examples" class="section-heading">
+  <a href="#merge/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Mix.Config.merge([app: [k: :v1]], [app: [k: :v2]])
 [app: [k: :v2]]
 
@@ -267,7 +271,11 @@ the configured applications environment.</p>
 be configured and <code class="inline">app_config</code> are the configuration (as key-value
 pairs) for each of those applications.</p>
 <p>Returns the configured applications.</p>
-<h2>Examples</h2>
+<h2 id="persist/1-examples" class="section-heading">
+  <a href="#persist/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Config.persist(logger: [level: :error], my_app: [my_config: 1])
 #=&gt; [:logger, :my_app]</code></pre>
 
@@ -370,7 +378,11 @@ read.</p>
   <section class="docstring">
     <p>Configures the given application.</p>
 <p>Keyword lists are always deep merged.</p>
-<h2>Examples</h2>
+<h2 id="config/2-examples" class="section-heading">
+  <a href="#config/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>The given <code class="inline">opts</code> are merged into the existing configuration
 for the given <code class="inline">app</code>. Conflicting keys are overridden by the
 ones specified in <code class="inline">opts</code>. For example, the declaration below:</p>
@@ -405,7 +417,11 @@ config :lager,
   <section class="docstring">
     <p>Configures the given key for the given application.</p>
 <p>Keyword lists are always deep merged.</p>
-<h2>Examples</h2>
+<h2 id="config/3-examples" class="section-heading">
+  <a href="#config/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>The given <code class="inline">opts</code> are merged into the existing values for <code class="inline">key</code>
 in the given <code class="inline">app</code>. Conflicting keys are overridden by the
 ones specified in <code class="inline">opts</code>. For example, the declaration below:</p>
@@ -446,7 +462,11 @@ imported; in case the file doesn’t exist, an error is raised.
 This behaviour is analogous to the one for <code class="inline">read_wildcard!/1</code>.</p>
 <p>If path/wildcard is a relative path/wildcard, it will be expanded relatively
 to the directory the current configuration file is in.</p>
-<h2>Examples</h2>
+<h2 id="import_config/1-examples" class="section-heading">
+  <a href="#import_config/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>This is often used to emulate configuration across environments:</p>
 <pre><code class="elixir">import_config &quot;#{Mix.env}.exs&quot;</code></pre>
 <p>Or to import files from children in umbrella projects:</p>

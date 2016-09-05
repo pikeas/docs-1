@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Record – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Record.html" />
     
@@ -233,7 +233,11 @@ on a record</p>
 of tuples.</p>
 <p><code class="inline">name</code>, which is the name of the extracted record, is expected to be an atom
 <em>at compile time</em>.</p>
-<h2>Options</h2>
+<h2 id="extract/2-options" class="section-heading">
+  <a href="#extract/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>This function accepts the following options, which are exclusive to each other
 (i.e., only one of them can be used in the same call):</p>
 <ul>
@@ -250,7 +254,11 @@ attribute used in Erlang modules.
 </ul>
 <p>These options are expected to be literals (including the binary values) at
 compile time.</p>
-<h2>Examples</h2>
+<h2 id="extract/2-examples" class="section-heading">
+  <a href="#extract/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Record.extract(:file_info, from_lib: &quot;kernel/include/file.hrl&quot;)
 [size: :undefined, type: :undefined, access: :undefined, atime: :undefined,
  mtime: :undefined, ctime: :undefined, mode: :undefined, links: :undefined,
@@ -278,7 +286,11 @@ compile time.</p>
 <p>Returns a keyword list of <code class="inline">{record_name, fields}</code> tuples where <code class="inline">record_name</code>
 is the name of an extracted record and <code class="inline">fields</code> is a list of <code class="inline">{field, value}</code>
 tuples representing the fields for that record.</p>
-<h2>Options</h2>
+<h2 id="extract_all/1-options" class="section-heading">
+  <a href="#extract_all/1-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>This function accepts the following options, which are exclusive to each other
 (i.e., only one of them can be used in the same call):</p>
 <ul>
@@ -345,7 +357,11 @@ or to access a given field in a given record
 </ul>
 <p>All these macros are public macros (as defined by <code class="inline">defmacro</code>).</p>
 <p>See the “Examples” section for examples on how to use these macros.</p>
-<h2>Examples</h2>
+<h2 id="defrecord/3-examples" class="section-heading">
+  <a href="#defrecord/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule User do
   require Record
   Record.defrecord :user, [name: &quot;meg&quot;, age: &quot;25&quot;]
@@ -379,7 +395,11 @@ end
 
 require User
 User.user() #=&gt; {User, nil}</code></pre>
-<h2>Defining extracted records with anonymous functions in the values</h2>
+<h2 id="defrecord/3-defining-extracted-records-with-anonymous-functions-in-the-values" class="section-heading">
+  <a href="#defrecord/3-defining-extracted-records-with-anonymous-functions-in-the-values" class="hover-link"><i class="icon-link"></i></a>
+  Defining extracted records with anonymous functions in the values
+</h2>
+
 <p>If a record defines an anonymous function in the default values, an
 <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> will be raised. This can happen unintentionally when defining
 a record after extracting it from an Erlang library that uses anonymous
@@ -433,7 +453,11 @@ end</code></pre>
   <section class="docstring">
     <p>Checks if the given <code class="inline">data</code> is a record.</p>
 <p>This is implemented as a macro so it can be used in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_record/1-examples" class="section-heading">
+  <a href="#is_record/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; record = {User, &quot;john&quot;, 27}
 iex&gt; Record.is_record(record)
 true
@@ -460,7 +484,11 @@ false</code></pre>
   <section class="docstring">
     <p>Checks if the given <code class="inline">data</code> is a record of kind <code class="inline">kind</code>.</p>
 <p>This is implemented as a macro so it can be used in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_record/2-examples" class="section-heading">
+  <a href="#is_record/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; record = {User, &quot;john&quot;, 27}
 iex&gt; Record.is_record(record, User)
 true</code></pre>

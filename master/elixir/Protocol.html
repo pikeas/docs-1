@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Protocol – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Protocol.html" />
     
@@ -366,7 +366,11 @@ the given paths.</p>
 they are worked on as charlists, so passing them as lists
 avoid extra conversion.</p>
 <p>Does not load any of the implementations.</p>
-<h2>Examples</h2>
+<h2 id="extract_impls/2-examples" class="section-heading">
+  <a href="#extract_impls/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Get Elixir&#39;s ebin and retrieve all protocols
 iex&gt; path = :code.lib_dir(:elixir, :ebin)
 iex&gt; mods = Protocol.extract_impls(Enumerable, [path])
@@ -404,7 +408,11 @@ true</code></pre>
 they are worked on as charlists, so passing them as lists
 avoid extra conversion.</p>
 <p>Does not load any of the protocols.</p>
-<h2>Examples</h2>
+<h2 id="extract_protocols/1-examples" class="section-heading">
+  <a href="#extract_protocols/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Get Elixir&#39;s ebin and retrieve all protocols
 iex&gt; path = :code.lib_dir(:elixir, :ebin)
 iex&gt; mods = Protocol.extract_protocols([path])

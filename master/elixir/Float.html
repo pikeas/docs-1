@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Float – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Float.html" />
     
@@ -206,7 +206,11 @@ of the given float</p>
 to an arbitrary number of fractional digits (between 0 and 15).</p>
 <p>This function always returns floats. <a href="Kernel.html#trunc/1"><code class="inline">Kernel.trunc/1</code></a> may be used instead to
 truncate the result to an integer afterwards.</p>
-<h2>Examples</h2>
+<h2 id="ceil/2-examples" class="section-heading">
+  <a href="#ceil/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Float.ceil(34.25)
 35.0
 
@@ -247,7 +251,11 @@ iex&gt; Float.ceil(34.251, 2)
 to an arbitrary number of fractional digits (between 0 and 15).</p>
 <p>This function always returns a float. <a href="Kernel.html#trunc/1"><code class="inline">Kernel.trunc/1</code></a> may be used instead to
 truncate the result to an integer afterwards.</p>
-<h2>Examples</h2>
+<h2 id="floor/2-examples" class="section-heading">
+  <a href="#floor/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Float.floor(34.25)
 34.0
 
@@ -291,7 +299,11 @@ returned.</p>
 the <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised.</p>
 <p>If you want to convert a string-formatted float directly to a float,
 <a href="String.html#to_float/1"><code class="inline">String.to_float/1</code></a> can be used instead.</p>
-<h2>Examples</h2>
+<h2 id="parse/1-examples" class="section-heading">
+  <a href="#parse/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Float.parse(&quot;34&quot;)
 {34.0, &quot;&quot;}
 
@@ -335,7 +347,11 @@ iex&gt; Float.parse(&quot;pi&quot;)
 <p>This function only accepts floats and always returns a float. Use
 <a href="Kernel.html#round/1"><code class="inline">Kernel.round/1</code></a> if you want a function that accepts both floats and integers
 and always returns an integer.</p>
-<h2>Examples</h2>
+<h2 id="round/2-examples" class="section-heading">
+  <a href="#round/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Float.round(5.5674, 3)
 5.567
 
@@ -383,7 +399,11 @@ of the given float.</p>
 in “Printing Floating-Point Numbers Quickly and Accurately” in
 Proceedings of the SIGPLAN ‘96 Conference on Programming Language
 Design and Implementation.</p>
-<h2>Examples</h2>
+<h2 id="to_charlist/1-examples" class="section-heading">
+  <a href="#to_charlist/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Float.to_charlist(7.0)
 &#39;7.0&#39;</code></pre>
 
@@ -419,7 +439,11 @@ of the given float.</p>
 in “Printing Floating-Point Numbers Quickly and Accurately” in
 Proceedings of the SIGPLAN ‘96 Conference on Programming Language
 Design and Implementation.</p>
-<h2>Examples</h2>
+<h2 id="to_string/1-examples" class="section-heading">
+  <a href="#to_string/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Float.to_string(7.0)
 &quot;7.0&quot;</code></pre>
 

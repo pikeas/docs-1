@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Process – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Process.html" />
     
@@ -650,7 +650,11 @@ If it is trapping exits, the exit signal is transformed into a message
 an untrappable exit signal is sent to <code class="inline">pid</code> which will unconditionally exit
 with reason <code class="inline">:killed</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="exit/2-examples" class="section-heading">
+  <a href="#exit/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Process.exit(pid, :kill)</code></pre>
 
   </section>
@@ -1242,7 +1246,11 @@ returned.</p>
 <p>If the option <code class="inline">:nosuspend</code> is used and sending the message would cause the
 sender to be suspended the message is not sent and <code class="inline">:nosuspend</code> is returned.</p>
 <p>Otherwise the message is sent and <code class="inline">:ok</code> is returned.</p>
-<h2>Examples</h2>
+<h2 id="send/3-examples" class="section-heading">
+  <a href="#send/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Process.send({:name, :node_does_not_exist}, :hi, [:noconnect])
 :noconnect</code></pre>
 

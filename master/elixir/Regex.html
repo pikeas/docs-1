@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Regex – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Regex.html" />
     
@@ -397,7 +397,11 @@ representing the same regex options given to the <code class="inline">~r</code> 
 or a list of options, as expected by the Erlang’s <a href="http://www.erlang.org/doc/man/re.html"><code class="inline">:re</code> module</a>.</p>
 <p>It returns <code class="inline">{:ok, regex}</code> in case of success,
 <code class="inline">{:error, reason}</code> otherwise.</p>
-<h2>Examples</h2>
+<h2 id="compile/2-examples" class="section-heading">
+  <a href="#compile/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.compile(&quot;foo&quot;)
 {:ok, ~r&quot;foo&quot;}
 
@@ -460,7 +464,11 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
   
   <section class="docstring">
     <p>Escapes a string to be literally matched in a regex.</p>
-<h2>Examples</h2>
+<h2 id="escape/1-examples" class="section-heading">
+  <a href="#escape/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.escape(&quot;.&quot;)
 &quot;\\.&quot;
 
@@ -494,7 +502,11 @@ iex&gt; Regex.escape(&quot;\\what if&quot;)
   
   <section class="docstring">
     <p>Returns a boolean indicating whether there was a match or not.</p>
-<h2>Examples</h2>
+<h2 id="match?/2-examples" class="section-heading">
+  <a href="#match?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.match?(~r/foo/, &quot;foo&quot;)
 true
 
@@ -530,7 +542,11 @@ false</code></pre>
     <p>Returns the given captures as a map or <code class="inline">nil</code> if no captures are
 found. The option <code class="inline">:return</code> can be set to <code class="inline">:index</code> to get indexes
 back.</p>
-<h2>Examples</h2>
+<h2 id="named_captures/3-examples" class="section-heading">
+  <a href="#named_captures/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.named_captures(~r/c(?&lt;foo&gt;d)/, &quot;abcd&quot;)
 %{&quot;foo&quot; =&gt; &quot;d&quot;}
 
@@ -567,7 +583,11 @@ nil</code></pre>
   
   <section class="docstring">
     <p>Returns a list of names in the regex.</p>
-<h2>Examples</h2>
+<h2 id="names/1-examples" class="section-heading">
+  <a href="#names/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.names(~r/(?&lt;foo&gt;bar)/)
 [&quot;foo&quot;]</code></pre>
 
@@ -598,7 +618,11 @@ nil</code></pre>
   
   <section class="docstring">
     <p>Returns the regex options as a string.</p>
-<h2>Examples</h2>
+<h2 id="opts/1-examples" class="section-heading">
+  <a href="#opts/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.opts(~r(foo)m)
 &quot;m&quot;</code></pre>
 
@@ -658,7 +682,11 @@ nil</code></pre>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the given <code class="inline">term</code> is a regex.
 Otherwise returns <code class="inline">false</code>.</p>
-<h2>Examples</h2>
+<h2 id="regex?/1-examples" class="section-heading">
+  <a href="#regex?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.regex?(~r/foo/)
 true
 
@@ -703,13 +731,21 @@ you’ll need to use <code class="inline">\\N</code> and <code class="inline">\\
 N where each argument maps to a capture, with the first argument
 being the whole match. If the function expects more arguments
 than captures found, the remaining arguments will receive <code class="inline">&quot;&quot;</code>.</p>
-<h2>Options</h2>
+<h2 id="replace/4-options" class="section-heading">
+  <a href="#replace/4-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:global</code> - when <code class="inline">false</code>, replaces only the first occurrence
 (defaults to <code class="inline">true</code>)
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="replace/4-examples" class="section-heading">
+  <a href="#replace/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.replace(~r/d/, &quot;abc&quot;, &quot;d&quot;)
 &quot;abc&quot;
 
@@ -762,7 +798,11 @@ iex&gt; Regex.replace(~r/a/, &quot;abcadc&quot;, &quot;A&quot;, global: false)
   <section class="docstring">
     <p>Runs the regular expression against the given string until the first match.
 It returns a list with all captures or <code class="inline">nil</code> if no match occurred.</p>
-<h2>Options</h2>
+<h2 id="run/3-options" class="section-heading">
+  <a href="#run/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:return</code>  - set to <code class="inline">:index</code> to return indexes. Defaults to <code class="inline">:binary</code>.
 </li>
@@ -770,7 +810,11 @@ It returns a list with all captures or <code class="inline">nil</code> if no mat
 to see the possible capture values.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="run/3-examples" class="section-heading">
+  <a href="#run/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;)
 [&quot;cd&quot;, &quot;d&quot;]
 
@@ -810,7 +854,11 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
 matches of the regular expression.</p>
 <p>A list of lists is returned, where each entry in the primary list represents a
 match and each entry in the secondary list represents the captured contents.</p>
-<h2>Options</h2>
+<h2 id="scan/3-options" class="section-heading">
+  <a href="#scan/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:return</code>  - set to <code class="inline">:index</code> to return indexes. Defaults to <code class="inline">:binary</code>.
 </li>
@@ -818,7 +866,11 @@ match and each entry in the secondary list represents the captured contents.</p>
 to see the possible capture values.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="scan/3-examples" class="section-heading">
+  <a href="#scan/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.scan(~r/c(d|e)/, &quot;abcd abce&quot;)
 [[&quot;cd&quot;, &quot;d&quot;], [&quot;ce&quot;, &quot;e&quot;]]
 
@@ -855,7 +907,11 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
   
   <section class="docstring">
     <p>Returns the regex source as a binary.</p>
-<h2>Examples</h2>
+<h2 id="source/1-examples" class="section-heading">
+  <a href="#source/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.source(~r(foo))
 &quot;foo&quot;</code></pre>
 
@@ -887,7 +943,11 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
   <section class="docstring">
     <p>Splits the given target based on the given pattern and in the given number of
 parts.</p>
-<h2>Options</h2>
+<h2 id="split/3-options" class="section-heading">
+  <a href="#split/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><p><code class="inline">:parts</code> - when specified, splits the string into the given number of
 parts. If not specified, <code class="inline">:parts</code> defaults to <code class="inline">:infinity</code>, which will
@@ -904,7 +964,11 @@ affect the splitting process.</p>
 the regular expression. Defaults to <code class="inline">false</code>.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="split/3-examples" class="section-heading">
+  <a href="#split/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.split(~r{-}, &quot;a-b-c&quot;)
 [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
 

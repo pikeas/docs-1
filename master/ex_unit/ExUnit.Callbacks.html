@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>ExUnit.Callbacks – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.Callbacks.html" />
     
@@ -316,7 +316,11 @@ guarantee the callback will be invoked only once.</p>
   
   <section class="docstring">
     <p>Defines a callback to be run before each test in a case.</p>
-<h2>Examples</h2>
+<h2 id="setup/1-examples" class="section-heading">
+  <a href="#setup/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">setup :clean_up_tmp_directory</code></pre>
 
   </section>
@@ -337,7 +341,11 @@ guarantee the callback will be invoked only once.</p>
   
   <section class="docstring">
     <p>Defines a callback to be run before each test in a case.</p>
-<h2>Examples</h2>
+<h2 id="setup/2-examples" class="section-heading">
+  <a href="#setup/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">setup context do
   [conn: Plug.Conn.build_conn()]
 end</code></pre>
@@ -360,7 +368,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Defines a callback to be run before all tests in a case.</p>
-<h2>Examples</h2>
+<h2 id="setup_all/1-examples" class="section-heading">
+  <a href="#setup_all/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">setup_all :clean_up_tmp_directory</code></pre>
 
   </section>
@@ -381,7 +393,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Defines a callback to be run before all tests in a case.</p>
-<h2>Examples</h2>
+<h2 id="setup_all/2-examples" class="section-heading">
+  <a href="#setup_all/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">setup_all context do
   [conn: Plug.Conn.build_conn()]
 end</code></pre>

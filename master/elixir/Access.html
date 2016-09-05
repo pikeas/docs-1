@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Access – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Access.html" />
     
@@ -435,7 +435,11 @@ defaulting to <code class="inline">default</code> if not present</p>
   
   <section class="docstring">
     <p>Accesses all the elements in a list.</p>
-<h2>Examples</h2>
+<h2 id="all/0-examples" class="section-heading">
+  <a href="#all/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; list = [%{name: &quot;john&quot;}, %{name: &quot;mary&quot;}]
 iex&gt; get_in(list, [Access.all(), :name])
 [&quot;john&quot;, &quot;mary&quot;]
@@ -474,7 +478,11 @@ iex&gt; get_and_update_in([1, 2, 3, 4, 5], [Access.all], fn
   
   <section class="docstring">
     <p>Accesses the element at <code class="inline">index</code> (zero based) of a list.</p>
-<h2>Examples</h2>
+<h2 id="at/1-examples" class="section-heading">
+  <a href="#at/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; list = [%{name: &quot;john&quot;}, %{name: &quot;mary&quot;}]
 iex&gt; get_in(list, [Access.at(1), :name])
 &quot;mary&quot;
@@ -523,7 +531,11 @@ iex&gt; get_and_update_in(list, [Access.at(10), :name], fn
   <section class="docstring">
     <p>Accesses the element at the given index in a tuple.</p>
 <p>Raises if the index is out of bounds.</p>
-<h2>Examples</h2>
+<h2 id="elem/1-examples" class="section-heading">
+  <a href="#elem/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; map = %{user: {&quot;john&quot;, 27}}
 iex&gt; get_in(map, [:user, Access.elem(0)])
 &quot;john&quot;
@@ -652,7 +664,11 @@ from the map and returned.</p>
     <p>Accesses the given key in a map/struct.</p>
 <p>Uses the default value if the key does not exist
 or if the value being accessed is <code class="inline">nil</code>.</p>
-<h2>Examples</h2>
+<h2 id="key/2-examples" class="section-heading">
+  <a href="#key/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; get_in(%{}, [Access.key(:unknown), Access.key(:name)])
 nil
 iex&gt; get_in(%{}, [Access.key(:unknown, %{name: &quot;john&quot;}), Access.key(:name)])
@@ -692,7 +708,11 @@ iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
   <section class="docstring">
     <p>Accesses the given key in a map/struct.</p>
 <p>Raises if the key does not exist.</p>
-<h2>Examples</h2>
+<h2 id="key!/1-examples" class="section-heading">
+  <a href="#key!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; map = %{user: %{name: &quot;john&quot;}}
 iex&gt; get_in(map, [Access.key!(:user), Access.key!(:name)])
 &quot;john&quot;
@@ -730,7 +750,11 @@ list, or anything that implements the <a href="Access.html#content"><code class=
 <p>Returns a tuple containing the value associated with the key and the
 updated container. <code class="inline">nil</code> is returned for the value if the key isn’t
 in the container.</p>
-<h2>Examples</h2>
+<h2 id="pop/2-examples" class="section-heading">
+  <a href="#pop/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>With a map:</p>
 <pre><code class="iex elixir">iex&gt; Access.pop(%{name: &quot;Elixir&quot;, creator: &quot;Valim&quot;}, :name)
 {&quot;Elixir&quot;, %{creator: &quot;Valim&quot;}}</code></pre>

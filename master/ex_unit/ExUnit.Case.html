@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>ExUnit.Case – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.Case.html" />
     
@@ -367,7 +367,11 @@ end, contents)</a>
 after each <code class="inline">ExUnit.Case.test</code> similar to <code class="inline">@tag</code>.</p>
 <p><code class="inline">Module.register_attribute/3</code> is used to register the attribute,
 this function takes the same options.</p>
-<h2>Examples</h2>
+<h2 id="register_attribute/3-examples" class="section-heading">
+  <a href="#register_attribute/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule MyTest do
   use ExUnit.Case
   ExUnit.Case.register_attribute __ENV__, :foobar
@@ -439,7 +443,11 @@ upcoming tests. Inside a block, <a href="ExUnit.Callbacks.html#setup/1"><code cl
 invoked and it will define a setup callback to run only for the
 current block. The describe name is also added as a tag, allowing
 developers to run tests for specific blocks.</p>
-<h2>Examples</h2>
+<h2 id="describe/2-examples" class="section-heading">
+  <a href="#describe/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule StringTest do
   use ExUnit.Case, async: true
 
@@ -504,7 +512,11 @@ defined with a string, but not yet implemented. The
 resulting test will always fail and print “Not yet
 implemented” error message. The resulting test case is
 also tagged with :not_implemented.</p>
-<h2>Examples</h2>
+<h2 id="test/1-examples" class="section-heading">
+  <a href="#test/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">test &quot;this will be a test in future&quot;</code></pre>
 
   </section>
@@ -533,7 +545,11 @@ the atom <code class="inline">:ok</code> as the last line of the test. That said
 a passing test always returns <code class="inline">:ok</code>, but, more importantly,
 it forces Elixir to not tail call optimize the test and
 therefore avoids hiding lines from the backtrace.</p>
-<h2>Examples</h2>
+<h2 id="test/3-examples" class="section-heading">
+  <a href="#test/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">test &quot;true is equal to true&quot; do
   assert true == true
 end</code></pre>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>ExUnit.Formatter – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.Formatter.html" />
     
@@ -273,7 +273,11 @@ a test has finished. See <a href="ExUnit.Test.html"><code class="inline">ExUnit.
   
   <section class="docstring">
     <p>Formats filters used to constrain cases to be run.</p>
-<h2>Examples</h2>
+<h2 id="format_filters/2-examples" class="section-heading">
+  <a href="#format_filters/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; format_filters([run: true, slow: false], :include)
 &quot;Including tags: [run: true, slow: false]&quot;</code></pre>
 
@@ -344,7 +348,11 @@ a test has finished. See <a href="ExUnit.Test.html"><code class="inline">ExUnit.
     <p>Formats time taken running the test suite.</p>
 <p>It receives the time spent running the tests and
 optionally the time spent loading the test suite.</p>
-<h2>Examples</h2>
+<h2 id="format_time/2-examples" class="section-heading">
+  <a href="#format_time/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; format_time(10000, nil)
 &quot;Finished in 0.01 seconds&quot;
 

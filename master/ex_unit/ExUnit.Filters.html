@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>ExUnit.Filters – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.Filters.html" />
     
@@ -216,7 +216,11 @@ find the closest line, that’s why it must also be passed as argument.</p>
 <p>Filters can either be a regular expression or any data structure
 that implements to <code class="inline">String.Chars</code>, which is invoked before comparing
 the filter with the tag value.</p>
-<h2>Examples</h2>
+<h2 id="eval/4-examples" class="section-heading">
+  <a href="#eval/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; ExUnit.Filters.eval([foo: &quot;bar&quot;], [:foo], %{foo: &quot;bar&quot;}, [])
 :ok
 
@@ -251,7 +255,11 @@ iex&gt; ExUnit.Filters.eval([foo: &quot;bar&quot;], [:foo], %{foo: &quot;baz&quo
   <section class="docstring">
     <p>Normalizes include and excludes to remove duplicates
 and keep precedence.</p>
-<h2>Examples</h2>
+<h2 id="normalize/2-examples" class="section-heading">
+  <a href="#normalize/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; ExUnit.Filters.normalize(nil, nil)
 {[], []}
 
@@ -285,7 +293,11 @@ iex&gt; ExUnit.Filters.normalize([:foo, :bar, :bar], [:foo, :baz])
   
   <section class="docstring">
     <p>Parses the given filters, as one would receive from the command line.</p>
-<h2>Examples</h2>
+<h2 id="parse/1-examples" class="section-heading">
+  <a href="#parse/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; ExUnit.Filters.parse([&quot;foo:bar&quot;, &quot;baz&quot;, &quot;line:9&quot;, &quot;bool:true&quot;])
 [{:foo, &quot;bar&quot;}, :baz, {:line, &quot;9&quot;}, {:bool, &quot;true&quot;}]</code></pre>
 

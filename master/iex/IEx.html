@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>IEx – IEx v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/iex/IEx.html" />
     
@@ -517,7 +517,11 @@ pending expression and return to its normal state:</p>
 </li>
 </ul>
 <p>They are discussed individually in the sections below.</p>
-<h2>Colors</h2>
+<h2 id="configure/1-colors" class="section-heading">
+  <a href="#configure/1-colors" class="hover-link"><i class="icon-link"></i></a>
+  Colors
+</h2>
+
 <p>A keyword list that encapsulates all color settings used by the
 shell. See documentation for the <code class="inline">IO.ANSI</code> module for the list of
 supported colors and attributes.</p>
@@ -557,22 +561,38 @@ via:</p>
 <li><code class="inline">:doc_underline</code>   - (underline)
 </li>
 </ul>
-<h2>Inspect</h2>
+<h2 id="configure/1-inspect" class="section-heading">
+  <a href="#configure/1-inspect" class="hover-link"><i class="icon-link"></i></a>
+  Inspect
+</h2>
+
 <p>A keyword list containing inspect options used by the shell
 when printing results of expression evaluation. Default to
 pretty formatting with a limit of 50 entries.</p>
 <p>See <code class="inline">Inspect.Opts</code> for the full list of options.</p>
-<h2>Width</h2>
+<h2 id="configure/1-width" class="section-heading">
+  <a href="#configure/1-width" class="hover-link"><i class="icon-link"></i></a>
+  Width
+</h2>
+
 <p>An integer indicating the number of columns to use in documentation
 output. Default is 80 columns or result of <code class="inline">:io.columns</code>, whichever
 is smaller. The configured value will be used unless it is too large,
 which in that case <code class="inline">:io.columns</code> is used. This way you can configure
 IEx to be your largest screen size and it should always take up the
 full width of your terminal screen.</p>
-<h2>History size</h2>
+<h2 id="configure/1-history-size" class="section-heading">
+  <a href="#configure/1-history-size" class="hover-link"><i class="icon-link"></i></a>
+  History size
+</h2>
+
 <p>Number of expressions and their results to keep in the history.
 The value is an integer. When it is negative, the history is unlimited.</p>
-<h2>Prompt</h2>
+<h2 id="configure/1-prompt" class="section-heading">
+  <a href="#configure/1-prompt" class="hover-link"><i class="icon-link"></i></a>
+  Prompt
+</h2>
+
 <p>This is an option determining the prompt displayed to the user
 when awaiting input.</p>
 <p>The value is a keyword list with two possible keys representing prompt types:</p>
@@ -714,7 +734,11 @@ the pried one.</p>
 such, it is evaluated and cannot access private functions
 of the module being pried. Module functions still need to be
 accessed via <code class="inline">Mod.fun(args)</code>.</p>
-<h2>Examples</h2>
+<h2 id="pry/1-examples" class="section-heading">
+  <a href="#pry/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Let’s suppose you want to investigate what is happening
 with some particular function. By invoking <a href="IEx.html#pry/1"><code class="inline">IEx.pry/1</code></a> from
 the function, IEx will allow you to access its binding

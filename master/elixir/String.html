@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>String – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/String.html" />
     
@@ -851,7 +851,11 @@ has been removed</p>
   <section class="docstring">
     <p>Returns the grapheme at the <code class="inline">position</code> of the given utf8 <code class="inline">string</code>.
 If <code class="inline">position</code> is greater than <code class="inline">string</code> length, then it returns <code class="inline">nil</code>.</p>
-<h2>Examples</h2>
+<h2 id="at/2-examples" class="section-heading">
+  <a href="#at/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.at(&quot;elixir&quot;, 0)
 &quot;e&quot;
 
@@ -899,7 +903,11 @@ uppercase and the remainder to lowercase.</p>
 by the Unicode Standard. Note this function makes
 no attempt to capitalize all words in the string
 (usually known as titlecase).</p>
-<h2>Examples</h2>
+<h2 id="capitalize/1-examples" class="section-heading">
+  <a href="#capitalize/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.capitalize(&quot;abcd&quot;)
 &quot;Abcd&quot;
 
@@ -948,7 +956,11 @@ non-printable character sequences
 <p>Returns a list of binaries each of which contains only one kind of
 characters.</p>
 <p>If the given string is empty, an empty list is returned.</p>
-<h2>Examples</h2>
+<h2 id="chunk/2-examples" class="section-heading">
+  <a href="#chunk/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.chunk(&lt;&lt;?a, ?b, ?c, 0&gt;&gt;, :valid)
 [&quot;abc\0&quot;]
 
@@ -986,7 +998,11 @@ iex&gt; String.chunk(&lt;&lt;?a, ?b, ?c, 0, 0x0FFFF::utf8&gt;&gt;, :printable)
   <section class="docstring">
     <p>Returns all codepoints in the string.</p>
 <p>For details about codepoints and graphemes, see the <a href="String.html#content"><code class="inline">String</code></a> module documentation.</p>
-<h2>Examples</h2>
+<h2 id="codepoints/1-examples" class="section-heading">
+  <a href="#codepoints/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.codepoints(&quot;olá&quot;)
 [&quot;o&quot;, &quot;l&quot;, &quot;á&quot;]
 
@@ -1030,7 +1046,11 @@ iex&gt; String.codepoints(&quot;é&quot;)
   <section class="docstring">
     <p>Checks if <code class="inline">string</code> contains any of the given <code class="inline">contents</code>.</p>
 <p><code class="inline">contents</code> can be either a single string or a list of strings.</p>
-<h2>Examples</h2>
+<h2 id="contains?/2-examples" class="section-heading">
+  <a href="#contains?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.contains? &quot;elixir of life&quot;, &quot;of&quot;
 true
 iex&gt; String.contains? &quot;elixir of life&quot;, [&quot;life&quot;, &quot;death&quot;]
@@ -1074,7 +1094,11 @@ true</code></pre>
   
   <section class="docstring">
     <p>Converts all characters in the given string to lowercase.</p>
-<h2>Examples</h2>
+<h2 id="downcase/1-examples" class="section-heading">
+  <a href="#downcase/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.downcase(&quot;ABCD&quot;)
 &quot;abcd&quot;
 
@@ -1111,7 +1135,11 @@ iex&gt; String.downcase(&quot;OLÁ&quot;)
   
   <section class="docstring">
     <p>Returns a string <code class="inline">subject</code> duplicated <code class="inline">n</code> times.</p>
-<h2>Examples</h2>
+<h2 id="duplicate/2-examples" class="section-heading">
+  <a href="#duplicate/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.duplicate(&quot;abc&quot;, 0)
 &quot;&quot;
 
@@ -1149,7 +1177,11 @@ iex&gt; String.duplicate(&quot;abc&quot;, 2)
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">string</code> ends with any of the suffixes given.</p>
 <p><code class="inline">suffixes</code> can be either a single suffix or a list of suffixes.</p>
-<h2>Examples</h2>
+<h2 id="ends_with?/2-examples" class="section-heading">
+  <a href="#ends_with?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.ends_with? &quot;language&quot;, &quot;age&quot;
 true
 iex&gt; String.ends_with? &quot;language&quot;, [&quot;youth&quot;, &quot;age&quot;]
@@ -1195,7 +1227,11 @@ strings before comparing them. This function is equivalent to:</p>
 <p>Therefore, if you plan to compare multiple strings, multiple times
 in a row, you may normalize them upfront and compare them directly
 to avoid multiple normalization passes.</p>
-<h2>Examples</h2>
+<h2 id="equivalent?/2-examples" class="section-heading">
+  <a href="#equivalent?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.equivalent?(&quot;abc&quot;, &quot;abc&quot;)
 true
 
@@ -1236,7 +1272,11 @@ false</code></pre>
   <section class="docstring">
     <p>Returns the first grapheme from a utf8 string,
 <code class="inline">nil</code> if the string is empty.</p>
-<h2>Examples</h2>
+<h2 id="first/1-examples" class="section-heading">
+  <a href="#first/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.first(&quot;elixir&quot;)
 &quot;e&quot;
 
@@ -1274,7 +1314,11 @@ Cluster algorithm.</p>
 <p>The algorithm is outlined in the <a href="http://www.unicode.org/reports/tr29/">Unicode Standard Annex #29,
 Unicode Text Segmentation</a>.</p>
 <p>For details about codepoints and graphemes, see the <a href="String.html#content"><code class="inline">String</code></a> module documentation.</p>
-<h2>Examples</h2>
+<h2 id="graphemes/1-examples" class="section-heading">
+  <a href="#graphemes/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.graphemes(&quot;Ńaïve&quot;)
 [&quot;Ń&quot;, &quot;a&quot;, &quot;ï&quot;, &quot;v&quot;, &quot;e&quot;]
 
@@ -1314,7 +1358,11 @@ iex&gt; String.graphemes(&quot;é&quot;)
 representing <a href="https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance">Jaro</a>
 distance between <code class="inline">string1</code> and <code class="inline">string2</code>.</p>
 <p>The Jaro distance metric is designed and best suited for short strings such as person names.</p>
-<h2>Examples</h2>
+<h2 id="jaro_distance/2-examples" class="section-heading">
+  <a href="#jaro_distance/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.jaro_distance(&quot;dwayne&quot;, &quot;duane&quot;)
 0.8222222222222223
 iex&gt; String.jaro_distance(&quot;even&quot;, &quot;odd&quot;)
@@ -1348,7 +1396,11 @@ iex&gt; String.jaro_distance(&quot;even&quot;, &quot;odd&quot;)
   <section class="docstring">
     <p>Returns the last grapheme from a utf8 string,
 <code class="inline">nil</code> if the string is empty.</p>
-<h2>Examples</h2>
+<h2 id="last/1-examples" class="section-heading">
+  <a href="#last/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.last(&quot;elixir&quot;)
 &quot;r&quot;
 
@@ -1382,7 +1434,11 @@ iex&gt; String.last(&quot;եոգլի&quot;)
   
   <section class="docstring">
     <p>Returns the number of Unicode graphemes in a utf8 string.</p>
-<h2>Examples</h2>
+<h2 id="length/1-examples" class="section-heading">
+  <a href="#length/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.length(&quot;elixir&quot;)
 6
 
@@ -1416,7 +1472,11 @@ iex&gt; String.length(&quot;եոգլի&quot;)
   
   <section class="docstring">
     <p>Checks if <code class="inline">string</code> matches the given regular expression.</p>
-<h2>Examples</h2>
+<h2 id="match?/2-examples" class="section-heading">
+  <a href="#match?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.match?(&quot;foo&quot;, ~r/foo/)
 true
 
@@ -1454,7 +1514,11 @@ false</code></pre>
     <p>Returns a keyword list that represents an edit script.</p>
 <p>The algorithm is outlined in the
 “An O(ND) Difference Algorithm and Its Variations” paper by E. Myers.</p>
-<h2>Examples</h2>
+<h2 id="myers_difference/2-examples" class="section-heading">
+  <a href="#myers_difference/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; string1 = &quot;fox hops over the dog&quot;
 iex&gt; string2 = &quot;fox jumps over the lazy cat&quot;
 iex&gt; String.myers_difference(string1, string2)
@@ -1494,7 +1558,11 @@ the string reached its end.</p>
 function does not check for the validity of the codepoint.
 That said, if an invalid codepoint is found, it will
 be returned by this function.</p>
-<h2>Examples</h2>
+<h2 id="next_codepoint/1-examples" class="section-heading">
+  <a href="#next_codepoint/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.next_codepoint(&quot;olá&quot;)
 {&quot;o&quot;, &quot;lá&quot;}</code></pre>
 
@@ -1528,7 +1596,11 @@ be returned by this function.</p>
 <p>The result is a tuple with the grapheme and the
 remainder of the string or <code class="inline">nil</code> in case
 the String reached its end.</p>
-<h2>Examples</h2>
+<h2 id="next_grapheme/1-examples" class="section-heading">
+  <a href="#next_grapheme/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.next_grapheme(&quot;olá&quot;)
 {&quot;o&quot;, &quot;lá&quot;}</code></pre>
 
@@ -1562,7 +1634,11 @@ the String reached its end.</p>
 <p>The result is a tuple with the next grapheme size and
 the remainder of the string or <code class="inline">nil</code> in case the string
 reached its end.</p>
-<h2>Examples</h2>
+<h2 id="next_grapheme_size/1-examples" class="section-heading">
+  <a href="#next_grapheme_size/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.next_grapheme_size(&quot;olá&quot;)
 {1, &quot;lá&quot;}</code></pre>
 
@@ -1594,7 +1670,11 @@ reached its end.</p>
   <section class="docstring">
     <p>Converts all characters in <code class="inline">string</code> to Unicode normalization
 form identified by <code class="inline">form</code>.</p>
-<h2>Forms</h2>
+<h2 id="normalize/2-forms" class="section-heading">
+  <a href="#normalize/2-forms" class="hover-link"><i class="icon-link"></i></a>
+  Forms
+</h2>
+
 <p>The supported forms are:</p>
 <ul>
 <li><p><code class="inline">:nfd</code> - Normalization Form Canonical Decomposition.
@@ -1606,7 +1686,11 @@ order.</p>
 Characters are decomposed and then recomposed by canonical equivalence.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="normalize/2-examples" class="section-heading">
+  <a href="#normalize/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.normalize(&quot;yêṩ&quot;, :nfd)
 &quot;yêṩ&quot;
 
@@ -1649,7 +1733,11 @@ If no <code class="inline">padding</code> is given, it defaults to whitespace.</
 <p>When <code class="inline">count</code> is less than or equal to the length of <code class="inline">string</code>,
 given <code class="inline">string</code> is returned.</p>
 <p>Raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the given <code class="inline">padding</code> contains non-string element.</p>
-<h2>Examples</h2>
+<h2 id="pad_leading/3-examples" class="section-heading">
+  <a href="#pad_leading/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.pad_leading(&quot;abc&quot;, 5)
 &quot;  abc&quot;
 
@@ -1698,7 +1786,11 @@ If no <code class="inline">padding</code> is given, it defaults to whitespace.</
 <p>When <code class="inline">count</code> is less than or equal to the length of <code class="inline">string</code>,
 given <code class="inline">string</code> is returned.</p>
 <p>Raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the given <code class="inline">padding</code> contains non-string element.</p>
-<h2>Examples</h2>
+<h2 id="pad_trailing/3-examples" class="section-heading">
+  <a href="#pad_trailing/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.pad_trailing(&quot;abc&quot;, 5)
 &quot;abc  &quot;
 
@@ -1738,7 +1830,11 @@ iex&gt; String.pad_trailing(&quot;abc&quot;, 5, [&quot;1&quot;, &quot;23&quot;])
   
   <section class="docstring">
     <p>Checks if a string contains only printable characters.</p>
-<h2>Examples</h2>
+<h2 id="printable?/1-examples" class="section-heading">
+  <a href="#printable?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.printable?(&quot;abc&quot;)
 true</code></pre>
 
@@ -1773,7 +1869,11 @@ true</code></pre>
 <p>By default, it replaces all occurrences, unless the <code class="inline">global</code> option is
 set to <code class="inline">false</code>, where it will only replace the first one</p>
 <p>The <code class="inline">pattern</code> may be a string or a regular expression.</p>
-<h2>Examples</h2>
+<h2 id="replace/4-examples" class="section-heading">
+  <a href="#replace/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.replace(&quot;a,b,c&quot;, &quot;,&quot;, &quot;-&quot;)
 &quot;a-b-c&quot;
 
@@ -1835,7 +1935,11 @@ replacement string, or is negative, an <a href="ArgumentError.html"><code class=
 happens because this function replaces <strong>all</strong> the occurrences of <code class="inline">match</code> at
 the beginning of <code class="inline">string</code>, and it’s impossible to replace “multiple”
 occurrences of <code class="inline">&quot;&quot;</code>.</p>
-<h2>Examples</h2>
+<h2 id="replace_leading/3-examples" class="section-heading">
+  <a href="#replace_leading/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.replace_leading(&quot;hello world&quot;, &quot;hello &quot;, &quot;&quot;)
 &quot;world&quot;
 iex&gt; String.replace_leading(&quot;hello hello world&quot;, &quot;hello &quot;, &quot;&quot;)
@@ -1875,7 +1979,11 @@ iex&gt; String.replace_leading(&quot;hello hello world&quot;, &quot;hello &quot;
     <p>Replaces prefix in <code class="inline">string</code> by <code class="inline">replacement</code> if it matches <code class="inline">match</code>.</p>
 <p>Returns the string untouched if there is no match. If <code class="inline">match</code> is an empty
 string (<code class="inline">&quot;&quot;</code>), <code class="inline">replacement</code> is just prepended to <code class="inline">string</code>.</p>
-<h2>Examples</h2>
+<h2 id="replace_prefix/3-examples" class="section-heading">
+  <a href="#replace_prefix/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.replace_prefix(&quot;world&quot;, &quot;hello &quot;, &quot;&quot;)
 &quot;world&quot;
 iex&gt; String.replace_prefix(&quot;hello world&quot;, &quot;hello &quot;, &quot;&quot;)
@@ -1922,7 +2030,11 @@ iex&gt; String.replace_prefix(&quot;world&quot;, &quot;&quot;, &quot;hello &quot
     <p>Replaces suffix in <code class="inline">string</code> by <code class="inline">replacement</code> if it matches <code class="inline">match</code>.</p>
 <p>Returns the string untouched if there is no match. If <code class="inline">match</code> is an empty
 string (<code class="inline">&quot;&quot;</code>), <code class="inline">replacement</code> is just appended to <code class="inline">string</code>.</p>
-<h2>Examples</h2>
+<h2 id="replace_suffix/3-examples" class="section-heading">
+  <a href="#replace_suffix/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.replace_suffix(&quot;hello&quot;, &quot; world&quot;, &quot;&quot;)
 &quot;hello&quot;
 iex&gt; String.replace_suffix(&quot;hello world&quot;, &quot; world&quot;, &quot;&quot;)
@@ -1972,7 +2084,11 @@ iex&gt; String.replace_suffix(&quot;hello&quot;, &quot;&quot;, &quot; world&quot
 happens because this function replaces <strong>all</strong> the occurrences of <code class="inline">match</code> at
 the end of <code class="inline">string</code>, and it’s impossible to replace “multiple” occurrences of
 <code class="inline">&quot;&quot;</code>.</p>
-<h2>Examples</h2>
+<h2 id="replace_trailing/3-examples" class="section-heading">
+  <a href="#replace_trailing/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.replace_trailing(&quot;hello world&quot;, &quot; world&quot;, &quot;&quot;)
 &quot;hello&quot;
 iex&gt; String.replace_trailing(&quot;hello world world&quot;, &quot; world&quot;, &quot;&quot;)
@@ -2010,7 +2126,11 @@ iex&gt; String.replace_trailing(&quot;hello world world&quot;, &quot; world&quot
   
   <section class="docstring">
     <p>Reverses the graphemes in given string.</p>
-<h2>Examples</h2>
+<h2 id="reverse/1-examples" class="section-heading">
+  <a href="#reverse/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.reverse(&quot;abcd&quot;)
 &quot;dcba&quot;
 
@@ -2069,7 +2189,11 @@ positive ones.</p>
 <p>Remember this function works with Unicode graphemes and considers
 the slices to represent grapheme offsets. If you want to split
 on raw bytes, check <a href="Kernel.html#binary_part/3"><code class="inline">Kernel.binary_part/3</code></a> instead.</p>
-<h2>Examples</h2>
+<h2 id="slice/2-examples" class="section-heading">
+  <a href="#slice/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.slice(&quot;elixir&quot;, 1..3)
 &quot;lix&quot;
 
@@ -2132,7 +2256,11 @@ length <code class="inline">len</code>.</p>
 <p>Remember this function works with Unicode graphemes and considers
 the slices to represent grapheme offsets. If you want to split
 on raw bytes, check <a href="Kernel.html#binary_part/3"><code class="inline">Kernel.binary_part/3</code></a> instead.</p>
-<h2>Examples</h2>
+<h2 id="slice/3-examples" class="section-heading">
+  <a href="#slice/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.slice(&quot;elixir&quot;, 1, 3)
 &quot;lix&quot;
 
@@ -2187,7 +2315,11 @@ iex&gt; String.slice(&quot;a&quot;, 2, 1500)
 occurrence with leading and trailing whitespace ignored. Groups
 of whitespace are treated as a single occurrence. Divisions do
 not occur on non-breaking whitespace.</p>
-<h2>Examples</h2>
+<h2 id="split/1-examples" class="section-heading">
+  <a href="#split/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.split(&quot;foo bar&quot;)
 [&quot;foo&quot;, &quot;bar&quot;]
 
@@ -2235,7 +2367,11 @@ If you pass <code class="inline">parts: :infinity</code>, it will return all pos
 (<code class="inline">:infinity</code> is the default).</p>
 <p>Empty strings are only removed from the result if the
 <code class="inline">trim</code> option is set to <code class="inline">true</code> (default is <code class="inline">false</code>).</p>
-<h2>Examples</h2>
+<h2 id="split/3-examples" class="section-heading">
+  <a href="#split/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Splitting with a string pattern:</p>
 <pre><code class="iex elixir">iex&gt; String.split(&quot;a,b,c&quot;, &quot;,&quot;)
 [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
@@ -2308,7 +2444,11 @@ two elements.</p>
 has to linearly traverse the string. If you want to split a string or
 a binary based on the number of bytes, use <a href="Kernel.html#binary_part/3"><code class="inline">Kernel.binary_part/3</code></a>
 instead.</p>
-<h2>Examples</h2>
+<h2 id="split_at/2-examples" class="section-heading">
+  <a href="#split_at/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.split_at &quot;sweetelixir&quot;, 5
 {&quot;sweet&quot;, &quot;elixir&quot;}
 
@@ -2357,12 +2497,20 @@ the string upfront.</p>
 (as it is often more efficient to have the regular
 expressions traverse the string at once than in
 multiple passes).</p>
-<h2>Options</h2>
+<h2 id="splitter/3-options" class="section-heading">
+  <a href="#splitter/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li>:trim - when <code class="inline">true</code>, does not emit empty patterns
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="splitter/3-examples" class="section-heading">
+  <a href="#splitter/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>  iex&gt; String.splitter(“1,2 3,4 5,6 7,8,…,99999”, [" ", ","]) |&gt; Enum.take(4)
   ["1", "2", "3", "4"]</p>
 <p>  iex&gt; String.splitter(“abcd”, “”) |&gt; Enum.take(10)
@@ -2398,7 +2546,11 @@ multiple passes).</p>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">string</code> starts with any of the prefixes given.</p>
 <p><code class="inline">prefix</code> can be either a single prefix or a list of prefixes.</p>
-<h2>Examples</h2>
+<h2 id="starts_with?/2-examples" class="section-heading">
+  <a href="#starts_with?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.starts_with? &quot;elixir&quot;, &quot;eli&quot;
 true
 iex&gt; String.starts_with? &quot;elixir&quot;, [&quot;erlang&quot;, &quot;elixir&quot;]
@@ -2441,7 +2593,11 @@ true</code></pre>
 <p>Currently Elixir does not support the conversion of strings
 that contain Unicode codepoints greater than 0xFF.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_atom/1-examples" class="section-heading">
+  <a href="#to_atom/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.to_atom(&quot;my_atom&quot;)
 :my_atom</code></pre>
 
@@ -2477,7 +2633,11 @@ codepoints. It is similar to <a href="#codepoints/1"><code class="inline">codepo
 strings.</p>
 <p>In case you need to work with bytes, take a look at the
 <a href="http://www.erlang.org/doc/man/binary.html"><code class="inline">:binary</code> module</a>.</p>
-<h2>Examples</h2>
+<h2 id="to_charlist/1-examples" class="section-heading">
+  <a href="#to_charlist/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.to_charlist(&quot;æß&quot;)
 &#39;æß&#39;</code></pre>
 
@@ -2511,7 +2671,11 @@ strings.</p>
 <p>Currently Elixir does not support the conversion of strings
 that contain Unicode codepoints greater than 0xFF.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_existing_atom/1-examples" class="section-heading">
+  <a href="#to_existing_atom/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; _ = :my_atom
 iex&gt; String.to_existing_atom(&quot;my_atom&quot;)
 :my_atom
@@ -2551,7 +2715,11 @@ If a string representation of an integer wants to be used,
 then <a href="Float.html#parse/1"><code class="inline">Float.parse/1</code></a> should be used instead,
 otherwise an argument error will be raised.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_float/1-examples" class="section-heading">
+  <a href="#to_float/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.to_float(&quot;2.2017764e+0&quot;)
 2.2017764
 
@@ -2586,7 +2754,11 @@ iex&gt; String.to_float(&quot;3.0&quot;)
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">string</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_integer/1-examples" class="section-heading">
+  <a href="#to_integer/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.to_integer(&quot;123&quot;)
 123</code></pre>
 
@@ -2618,7 +2790,11 @@ iex&gt; String.to_float(&quot;3.0&quot;)
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">string</code> in base <code class="inline">base</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_integer/2-examples" class="section-heading">
+  <a href="#to_integer/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.to_integer(&quot;3FF&quot;, 16)
 1023</code></pre>
 
@@ -2650,7 +2826,11 @@ iex&gt; String.to_float(&quot;3.0&quot;)
   <section class="docstring">
     <p>Returns a string where all leading and trailing Unicode whitespaces
 have been removed.</p>
-<h2>Examples</h2>
+<h2 id="trim/1-examples" class="section-heading">
+  <a href="#trim/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.trim(&quot;\n  abc\n  &quot;)
 &quot;abc&quot;</code></pre>
 
@@ -2682,7 +2862,11 @@ have been removed.</p>
   <section class="docstring">
     <p>Returns a string where all leading and trailing <code class="inline">to_trim</code>s have been
 removed.</p>
-<h2>Examples</h2>
+<h2 id="trim/2-examples" class="section-heading">
+  <a href="#trim/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.trim(&quot;a  abc  a&quot;, &quot;a&quot;)
 &quot;  abc  &quot;</code></pre>
 
@@ -2714,7 +2898,11 @@ removed.</p>
   <section class="docstring">
     <p>Returns a string where all leading Unicode whitespaces
 have been removed.</p>
-<h2>Examples</h2>
+<h2 id="trim_leading/1-examples" class="section-heading">
+  <a href="#trim_leading/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.trim_leading(&quot;\n  abc   &quot;)
 &quot;abc   &quot;</code></pre>
 
@@ -2745,7 +2933,11 @@ have been removed.</p>
   
   <section class="docstring">
     <p>Returns a string where all leading <code class="inline">to_trim</code>s have been removed.</p>
-<h2>Examples</h2>
+<h2 id="trim_leading/2-examples" class="section-heading">
+  <a href="#trim_leading/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.trim_leading(&quot;__ abc _&quot;, &quot;_&quot;)
 &quot; abc _&quot;
 
@@ -2780,7 +2972,11 @@ iex&gt; String.trim_leading(&quot;1 abc&quot;, &quot;11&quot;)
   <section class="docstring">
     <p>Returns a string where all trailing Unicode whitespaces
 has been removed.</p>
-<h2>Examples</h2>
+<h2 id="trim_trailing/1-examples" class="section-heading">
+  <a href="#trim_trailing/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.trim_trailing(&quot;   abc\n  &quot;)
 &quot;   abc&quot;</code></pre>
 
@@ -2811,7 +3007,11 @@ has been removed.</p>
   
   <section class="docstring">
     <p>Returns a string where all trailing <code class="inline">to_trim</code>s have been removed.</p>
-<h2>Examples</h2>
+<h2 id="trim_trailing/2-examples" class="section-heading">
+  <a href="#trim_trailing/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.trim_trailing(&quot;_ abc __&quot;, &quot;_&quot;)
 &quot;_ abc &quot;
 
@@ -2845,7 +3045,11 @@ iex&gt; String.trim_trailing(&quot;abc 1&quot;, &quot;11&quot;)
   
   <section class="docstring">
     <p>Converts all characters in the given string to uppercase.</p>
-<h2>Examples</h2>
+<h2 id="upcase/1-examples" class="section-heading">
+  <a href="#upcase/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.upcase(&quot;abcd&quot;)
 &quot;ABCD&quot;
 
@@ -2882,7 +3086,11 @@ iex&gt; String.upcase(&quot;olá&quot;)
   
   <section class="docstring">
     <p>Checks whether <code class="inline">string</code> contains only valid characters.</p>
-<h2>Examples</h2>
+<h2 id="valid?/1-examples" class="section-heading">
+  <a href="#valid?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; String.valid?(&quot;a&quot;)
 true
 

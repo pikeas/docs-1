@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Integer – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Integer.html" />
     
@@ -255,7 +255,11 @@ of <code class="inline">integer</code> in the given <code class="inline">base</c
     <p>Returns the ordered digits for the given <code class="inline">integer</code>.</p>
 <p>An optional <code class="inline">base</code> value may be provided representing the radix for the returned
 digits. This one must be an integer &gt;= 2.</p>
-<h2>Examples</h2>
+<h2 id="digits/2-examples" class="section-heading">
+  <a href="#digits/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.digits(123)
 [1, 2, 3]
 
@@ -298,7 +302,11 @@ integer, or when the <code class="inline">divisor</code> is <code class="inline"
 the result is always rounded towards negative infinity.</p>
 <p>If you want to perform truncated integer division (rounding towards zero),
 use <a href="Kernel.html#div/2"><code class="inline">Kernel.div/2</code></a> instead.</p>
-<h2>Examples</h2>
+<h2 id="floor_div/2-examples" class="section-heading">
+  <a href="#floor_div/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.floor_div(5, 2)
 2
 iex&gt; Integer.floor_div(6, -4)
@@ -337,7 +345,11 @@ iex&gt; Integer.floor_div(-99, 2)
 the result will always have the sign of the <code class="inline">divisor</code>.</p>
 <p>Raises an <a href="ArithmeticError.html"><code class="inline">ArithmeticError</code></a> exception if one of the arguments is not an
 integer, or when the <code class="inline">divisor</code> is <code class="inline">0</code>.</p>
-<h2>Examples</h2>
+<h2 id="mod/2-examples" class="section-heading">
+  <a href="#mod/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.mod(5, 2)
 1
 iex&gt; Integer.mod(6, -4)
@@ -380,7 +392,11 @@ Otherwise <code class="inline">:error</code>.</p>
 <p>Raises an error if <code class="inline">base</code> is less than 2 or more than 36.</p>
 <p>If you want to convert a string-formatted integer directly to a integer,
 <a href="String.html#to_integer/1"><code class="inline">String.to_integer/1</code></a> or <a href="String.html#to_integer/2"><code class="inline">String.to_integer/2</code></a> can be used instead.</p>
-<h2>Examples</h2>
+<h2 id="parse/2-examples" class="section-heading">
+  <a href="#parse/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.parse(&quot;34&quot;)
 {34, &quot;&quot;}
 
@@ -433,7 +449,11 @@ iex&gt; Integer.parse(&quot;a2&quot;, 38)
   <section class="docstring">
     <p>Returns a charlist which corresponds to the text representation of the given <code class="inline">integer</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_charlist/1-examples" class="section-heading">
+  <a href="#to_charlist/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_charlist(123)
 &#39;123&#39;
 
@@ -475,7 +495,11 @@ iex&gt; Integer.to_charlist(0123)
     <p>Returns a charlist which corresponds to the text representation of <code class="inline">integer</code> in the given <code class="inline">base</code>.</p>
 <p><code class="inline">base</code> can be an integer between 2 and 36.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_charlist/2-examples" class="section-heading">
+  <a href="#to_charlist/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_charlist(100, 16)
 &#39;64&#39;
 
@@ -514,7 +538,11 @@ iex&gt; Integer.to_charlist(882681651, 36)
     <p>Returns a binary which corresponds to the text representation
 of <code class="inline">integer</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_string/1-examples" class="section-heading">
+  <a href="#to_string/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_string(123)
 &quot;123&quot;
 
@@ -557,7 +585,11 @@ iex&gt; Integer.to_string(0123)
 of <code class="inline">integer</code> in the given <code class="inline">base</code>.</p>
 <p><code class="inline">base</code> can be an integer between 2 and 36.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_string/2-examples" class="section-heading">
+  <a href="#to_string/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_string(100, 16)
 &quot;64&quot;
 
@@ -596,7 +628,11 @@ iex&gt; Integer.to_string(882681651, 36)
     <p>Returns the integer represented by the ordered <code class="inline">digits</code>.</p>
 <p>An optional <code class="inline">base</code> value may be provided representing the radix for the <code class="inline">digits</code>.
 This one can be an integer &gt;= 2.</p>
-<h2>Examples</h2>
+<h2 id="undigits/2-examples" class="section-heading">
+  <a href="#undigits/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.undigits([1, 2, 3])
 123
 
@@ -639,7 +675,11 @@ iex&gt; Integer.undigits([])
 <p>Returns <code class="inline">true</code> if the given <code class="inline">integer</code> is an even number,
 otherwise it returns <code class="inline">false</code>.</p>
 <p>Allowed in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_even/1-examples" class="section-heading">
+  <a href="#is_even/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.is_even(10)
 true
 
@@ -673,7 +713,11 @@ true</code></pre>
 <p>Returns <code class="inline">true</code> if the given <code class="inline">integer</code> is an odd number,
 otherwise it returns <code class="inline">false</code>.</p>
 <p>Allowed in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_odd/1-examples" class="section-heading">
+  <a href="#is_odd/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.is_odd(5)
 true
 

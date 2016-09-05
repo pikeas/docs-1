@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Macro – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Macro.html" />
     
@@ -446,7 +446,11 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
 that’s why it belongs to the <a href="Macro.html#content"><code class="inline">Macro</code></a> module. Do not use it as a general
 mechanism for camelizing strings as it does not support Unicode or
 characters that are not valid in Elixir identifiers.</p>
-<h2>Examples</h2>
+<h2 id="camelize/1-examples" class="section-heading">
+  <a href="#camelize/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.camelize &quot;foo_bar&quot;
 &quot;FooBar&quot;</code></pre>
 
@@ -482,7 +486,11 @@ characters that are not valid in Elixir identifiers.</p>
     <p>Decomposes a local or remote call into its remote part (when provided),
 function name and argument list.</p>
 <p>Returns <code class="inline">:error</code> when an invalid call syntax is provided.</p>
-<h2>Examples</h2>
+<h2 id="decompose_call/1-examples" class="section-heading">
+  <a href="#decompose_call/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.decompose_call(quote(do: foo))
 {:foo, []}
 
@@ -529,7 +537,11 @@ into a syntax tree.</p>
 <p>One may pass <code class="inline">unquote: true</code> to <a href="#escape/2"><code class="inline">escape/2</code></a>
 which leaves <code class="inline">unquote/1</code> statements unescaped, effectively
 unquoting the contents on escape.</p>
-<h2>Examples</h2>
+<h2 id="escape/2-examples" class="section-heading">
+  <a href="#escape/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.escape(:foo)
 :foo
 
@@ -594,7 +606,11 @@ it out for more information and examples.</p>
 itself. Notice that <a href="#expand_once/2"><code class="inline">expand_once/2</code></a> performs the expansion just
 once and it is not recursive. Check <a href="#expand/2"><code class="inline">expand/2</code></a> for expansion
 until the node can no longer be expanded.</p>
-<h2>Examples</h2>
+<h2 id="expand_once/2-examples" class="section-heading">
+  <a href="#expand_once/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>In the example below, we have a macro that generates a module
 with a function named <code class="inline">name_length</code> that returns the length
 of the module name. The value of this function will be calculated
@@ -818,7 +834,11 @@ using an accumulator.</p>
 AST of the node being printed and the string representation of that same
 node. The return value of this function is used as the final string
 representation for that AST node.</p>
-<h2>Examples</h2>
+<h2 id="to_string/2-examples" class="section-heading">
+  <a href="#to_string/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.to_string(quote(do: foo.bar(1, 2, 3)))
 &quot;foo.bar(1, 2, 3)&quot;
 
@@ -882,7 +902,11 @@ so it is converted to a binary and then processed.</p>
 that’s why it belongs to the <a href="Macro.html#content"><code class="inline">Macro</code></a> module. Do not use it as a general
 mechanism for underscoring strings as it does not support Unicode or
 characters that are not valid in Elixir identifiers.</p>
-<h2>Examples</h2>
+<h2 id="underscore/1-examples" class="section-heading">
+  <a href="#underscore/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.underscore &quot;FooBar&quot;
 &quot;foo_bar&quot;
 
@@ -939,7 +963,11 @@ given as hexadecimals via <code class="inline">\xNN</code> and Unicode Codepoint
 <p>This function is commonly used on sigil implementations
 (like <code class="inline">~r</code>, <code class="inline">~s</code> and others) which receive a raw, unescaped
 string.</p>
-<h2>Examples</h2>
+<h2 id="unescape_string/1-examples" class="section-heading">
+  <a href="#unescape_string/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.unescape_string(&quot;example\\n&quot;)
 &quot;example\n&quot;</code></pre>
 <p>In the example above, we pass a string with <code class="inline">\n</code> escaped
@@ -974,7 +1002,11 @@ and return a version with it unescaped.</p>
     <p>Unescapes the given chars according to the map given.</p>
 <p>Check <a href="#unescape_string/1"><code class="inline">unescape_string/1</code></a> if you want to use the same map
 as Elixir single- and double-quoted strings.</p>
-<h2>Map</h2>
+<h2 id="unescape_string/2-map" class="section-heading">
+  <a href="#unescape_string/2-map" class="hover-link"><i class="icon-link"></i></a>
+  Map
+</h2>
+
 <p>The map must be a function. The function receives an integer
 representing the codepoint of the character it wants to unescape.
 Here is the default mapping function implemented by Elixir:</p>
@@ -1145,7 +1177,11 @@ previous element (<code class="inline">100</code>) will be inserted as the 0th (
 <p>This is often useful when used with <a href="Macro.html#prewalk/2"><code class="inline">Macro.prewalk/2</code></a> to remove
 information like lines and hygienic counters from the expression
 for either storage or comparison.</p>
-<h2>Examples</h2>
+<h2 id="update_meta/2-examples" class="section-heading">
+  <a href="#update_meta/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; quoted = quote line: 10, do: sample()
 {:sample, [line: 10], []}
 iex&gt; Macro.update_meta(quoted, &amp;Keyword.delete(&amp;1, :line))
@@ -1182,7 +1218,11 @@ iex&gt; Macro.update_meta(quoted, &amp;Keyword.delete(&amp;1, :line))
 quoted expression.</p>
 <p>It returns <code class="inline">:ok</code> if the expression is valid. Otherwise it returns a tuple in the form of
 <code class="inline">{:error, remainder}</code> where <code class="inline">remainder</code> is the invalid part of the quoted expression.</p>
-<h2>Examples</h2>
+<h2 id="validate/1-examples" class="section-heading">
+  <a href="#validate/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Macro.validate({:two_element, :tuple})
 :ok
 iex&gt; Macro.validate({:three, :element, :tuple})
@@ -1221,7 +1261,11 @@ iex&gt; Macro.validate([1, 2, 3, {4}])
   <section class="docstring">
     <p>Generates an AST node representing the variable given
 by the atoms <code class="inline">var</code> and <code class="inline">context</code>.</p>
-<h2>Examples</h2>
+<h2 id="var/2-examples" class="section-heading">
+  <a href="#var/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>In order to build a variable, a context is expected.
 Most of the times, in order to preserve hygiene, the
 context must be <code class="inline">__MODULE__</code>:</p>

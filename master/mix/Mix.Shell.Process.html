@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Mix.Shell.Process – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Shell.Process.html" />
     
@@ -262,7 +262,11 @@ the current process.</p>
   <section class="docstring">
     <p>Flushes all <code class="inline">:mix_shell</code> and <code class="inline">:mix_shell_input</code> messages from the current process.</p>
 <p>If a callback is given, it is invoked for each received message.</p>
-<h2>Examples</h2>
+<h2 id="flush/1-examples" class="section-heading">
+  <a href="#flush/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">flush &amp;IO.inspect(&amp;1)</code></pre>
 
   </section>
@@ -326,7 +330,11 @@ was not printed yet.</p>
 <pre><code class="elixir">{:mix_shell_input, :prompt, value}</code></pre>
 <p>If one does not exist, it will abort since there was no shell
 process inputs given. <code class="inline">value</code> must be a string.</p>
-<h2>Examples</h2>
+<h2 id="prompt/1-examples" class="section-heading">
+  <a href="#prompt/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>The following will answer with <code class="inline">&quot;Meg&quot;</code> to the prompt
 <code class="inline">&quot;What&#39;s your name?&quot;</code>:</p>
 <pre><code class="elixir"># The response is sent before calling prompt/1 so that prompt/1 can read it
@@ -355,7 +363,11 @@ Mix.shell.prompt(&quot;What&#39;s your name?&quot;)</code></pre>
 <pre><code class="elixir">{:mix_shell_input, :yes?, value}</code></pre>
 <p>If one does not exist, it will abort since there was no shell
 process inputs given. <code class="inline">value</code> must be <code class="inline">true</code> or <code class="inline">false</code>.</p>
-<h2>Example</h2>
+<h2 id="yes?/1-example" class="section-heading">
+  <a href="#yes?/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="elixir"># Send the response to self() first so that yes?/1 will be able to read it
 send self(), {:mix_shell_input, :yes?, true}
 Mix.shell.yes?(&quot;Are you sure you want to continue?&quot;)</code></pre>

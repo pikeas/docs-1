@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Map – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Map.html" />
     
@@ -516,7 +516,11 @@ is in <code class="inline">keys</code></p>
   <section class="docstring">
     <p>Deletes the entry in <code class="inline">map</code> for a specific <code class="inline">key</code>.</p>
 <p>If the <code class="inline">key</code> does not exist, returns <code class="inline">map</code> unchanged.</p>
-<h2>Examples</h2>
+<h2 id="delete/2-examples" class="section-heading">
+  <a href="#delete/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.delete(%{a: 1, b: 2}, :a)
 %{b: 2}
 iex&gt; Map.delete(%{b: 2}, :a)
@@ -550,7 +554,11 @@ iex&gt; Map.delete(%{b: 2}, :a)
   <section class="docstring">
     <p>Drops the given <code class="inline">keys</code> from <code class="inline">map</code>.</p>
 <p>If <code class="inline">keys</code> contains keys that are not in <code class="inline">map</code>, they’re simply ignored.</p>
-<h2>Examples</h2>
+<h2 id="drop/2-examples" class="section-heading">
+  <a href="#drop/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.drop(%{a: 1, b: 2, c: 3}, [:b, :d])
 %{a: 1, c: 3}</code></pre>
 
@@ -583,7 +591,11 @@ iex&gt; Map.delete(%{b: 2}, :a)
     <p>Checks if two maps are equal.</p>
 <p>Two maps are considered to be equal if they contain
 the same keys and those keys contain the same values.</p>
-<h2>Examples</h2>
+<h2 id="equal?/2-examples" class="section-heading">
+  <a href="#equal?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.equal?(%{a: 1, b: 2}, %{b: 2, a: 1})
 true
 iex&gt; Map.equal?(%{a: 1, b: 2}, %{b: 1, a: 2})
@@ -618,7 +630,11 @@ false</code></pre>
     <p>Fetches the value for a specific <code class="inline">key</code> in the given <code class="inline">map</code>.</p>
 <p>If <code class="inline">map</code> contains the given <code class="inline">key</code> with value <code class="inline">value</code>, then <code class="inline">{:ok, value}</code> is
 returned. If <code class="inline">map</code> doesn’t contain <code class="inline">key</code>, <code class="inline">:error</code> is returned.</p>
-<h2>Examples</h2>
+<h2 id="fetch/2-examples" class="section-heading">
+  <a href="#fetch/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.fetch(%{a: 1}, :a)
 {:ok, 1}
 iex&gt; Map.fetch(%{a: 1}, :b)
@@ -654,7 +670,11 @@ iex&gt; Map.fetch(%{a: 1}, :b)
 <code class="inline">map</code> doesn’t contain <code class="inline">key</code>.</p>
 <p>If <code class="inline">map</code> contains the given <code class="inline">key</code>, the corresponding value is returned. If
 <code class="inline">map</code> doesn’t contain <code class="inline">key</code>, a <a href="KeyError.html"><code class="inline">KeyError</code></a> exception is raised.</p>
-<h2>Examples</h2>
+<h2 id="fetch!/2-examples" class="section-heading">
+  <a href="#fetch!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.fetch!(%{a: 1}, :a)
 1
 iex&gt; Map.fetch!(%{a: 1}, :b)
@@ -690,7 +710,11 @@ iex&gt; Map.fetch!(%{a: 1}, :b)
 <p>It accepts the struct module or a struct itself and
 simply removes the <code class="inline">__struct__</code> field from the given struct
 or from a new struct generated from the given module.</p>
-<h2>Example</h2>
+<h2 id="from_struct/1-example" class="section-heading">
+  <a href="#from_struct/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="elixir">defmodule User do
   defstruct [:name]
 end
@@ -731,7 +755,11 @@ Map.from_struct(%User{name: &quot;john&quot;})
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, then <code class="inline">value</code> is
 returned. Otherwise, <code class="inline">default</code> is returned (which is <code class="inline">nil</code> unless
 specified otherwise).</p>
-<h2>Examples</h2>
+<h2 id="get/3-examples" class="section-heading">
+  <a href="#get/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.get(%{}, :a)
 nil
 iex&gt; Map.get(%{a: 1}, :a)
@@ -776,7 +804,11 @@ return <code class="inline">:pop</code>, which means the current value shall be 
 returned (making this function behave like <code class="inline">Map.pop(map, key)</code>.</p>
 <p>The returned value is a tuple with the “get” value returned by
 <code class="inline">fun</code> and a new map with the updated value under <code class="inline">key</code>.</p>
-<h2>Examples</h2>
+<h2 id="get_and_update/3-examples" class="section-heading">
+  <a href="#get_and_update/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.get_and_update(%{a: 1}, :a, fn current_value -&gt;
 ...&gt;   {current_value, &quot;new value!&quot;}
 ...&gt; end)
@@ -824,7 +856,11 @@ iex&gt; Map.get_and_update(%{a: 1}, :b, fn _ -&gt; :pop end)
     <p>Gets the value from <code class="inline">key</code> and updates it. Raises if there is no <code class="inline">key</code>.</p>
 <p>Behaves exactly like <a href="#get_and_update/3"><code class="inline">get_and_update/3</code></a>, but raises a <a href="KeyError.html"><code class="inline">KeyError</code></a> exception if
 <code class="inline">key</code> is not present in <code class="inline">map</code>.</p>
-<h2>Examples</h2>
+<h2 id="get_and_update!/3-examples" class="section-heading">
+  <a href="#get_and_update!/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.get_and_update!(%{a: 1}, :a, fn current_value -&gt;
 ...&gt;   {current_value, &quot;new value!&quot;}
 ...&gt; end)
@@ -871,7 +907,11 @@ iex&gt; Map.get_and_update!(%{a: 1}, :a, fn _ -&gt;
 returned. Otherwise, <code class="inline">fun</code> is evaluated and its result is returned.</p>
 <p>This is useful if the default value is very expensive to calculate or
 generally difficult to setup and teardown again.</p>
-<h2>Examples</h2>
+<h2 id="get_lazy/3-examples" class="section-heading">
+  <a href="#get_lazy/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; map = %{a: 1}
 iex&gt; fun = fn -&gt;
 ...&gt;   # some expensive operation here
@@ -909,7 +949,11 @@ iex&gt; Map.get_lazy(map, :b, fun)
   
   <section class="docstring">
     <p>Returns whether the given <code class="inline">key</code> exists in the given <code class="inline">map</code>.</p>
-<h2>Examples</h2>
+<h2 id="has_key?/2-examples" class="section-heading">
+  <a href="#has_key?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.has_key?(%{a: 1}, :a)
 true
 iex&gt; Map.has_key?(%{a: 1}, :b)
@@ -942,7 +986,11 @@ false</code></pre>
   
   <section class="docstring">
     <p>Returns all keys from <code class="inline">map</code>.</p>
-<h2>Examples</h2>
+<h2 id="keys/1-examples" class="section-heading">
+  <a href="#keys/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.keys(%{a: 1, b: 2})
 [:a, :b]</code></pre>
 
@@ -979,7 +1027,11 @@ false</code></pre>
 struct, do not use this function, as it would merge all keys on the right
 side into the struct, even if the key is not part of the struct. Instead,
 use <a href="Kernel.html#struct/2"><code class="inline">Kernel.struct/2</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="merge/2-examples" class="section-heading">
+  <a href="#merge/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.merge(%{a: 1, b: 2}, %{a: 3, d: 4})
 %{a: 3, b: 2, d: 4}</code></pre>
 
@@ -1015,7 +1067,11 @@ when there are duplicate keys; its arguments are <code class="inline">key</code>
 <code class="inline">value1</code> (the value of <code class="inline">key</code> in <code class="inline">map1</code>), and <code class="inline">value2</code> (the value of <code class="inline">key</code> in
 <code class="inline">map2</code>). The value returned by <code class="inline">callback</code> is used as the value under <code class="inline">key</code> in
 the resulting map.</p>
-<h2>Examples</h2>
+<h2 id="merge/3-examples" class="section-heading">
+  <a href="#merge/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.merge(%{a: 1, b: 2}, %{a: 3, d: 4}, fn _k, v1, v2 -&gt;
 ...&gt;   v1 + v2
 ...&gt; end)
@@ -1048,7 +1104,11 @@ the resulting map.</p>
   
   <section class="docstring">
     <p>Returns a new empty map.</p>
-<h2>Examples</h2>
+<h2 id="new/0-examples" class="section-heading">
+  <a href="#new/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.new
 %{}</code></pre>
 
@@ -1080,7 +1140,11 @@ the resulting map.</p>
   <section class="docstring">
     <p>Creates a map from an <code class="inline">enumerable</code>.</p>
 <p>Duplicated keys are removed; the latest one prevails.</p>
-<h2>Examples</h2>
+<h2 id="new/1-examples" class="section-heading">
+  <a href="#new/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.new([{:b, 1}, {:a, 2}])
 %{a: 2, b: 1}
 iex&gt; Map.new([a: 1, a: 2, a: 3])
@@ -1114,7 +1178,11 @@ iex&gt; Map.new([a: 1, a: 2, a: 3])
   <section class="docstring">
     <p>Creates a map from an <code class="inline">enumerable</code> via the given transformation function.</p>
 <p>Duplicated keys are removed; the latest one prevails.</p>
-<h2>Examples</h2>
+<h2 id="new/2-examples" class="section-heading">
+  <a href="#new/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.new([:a, :b], fn x -&gt; {x, x} end)
 %{a: :a, b: :b}</code></pre>
 
@@ -1148,7 +1216,11 @@ iex&gt; Map.new([a: 1, a: 2, a: 3])
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">{value, new_map}</code> is
 returned where <code class="inline">new_map</code> is the result of removing <code class="inline">key</code> from <code class="inline">map</code>. If <code class="inline">key</code>
 is not present in <code class="inline">map</code>, <code class="inline">{default, map}</code> is returned.</p>
-<h2>Examples</h2>
+<h2 id="pop/3-examples" class="section-heading">
+  <a href="#pop/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.pop(%{a: 1}, :a)
 {1, %{}}
 iex&gt; Map.pop(%{a: 1}, :b)
@@ -1189,7 +1261,11 @@ is not present in <code class="inline">map</code>, <code class="inline">{fun_res
 is the result of applying <code class="inline">fun</code>.</p>
 <p>This is useful if the default value is very expensive to calculate or
 generally difficult to setup and teardown again.</p>
-<h2>Examples</h2>
+<h2 id="pop_lazy/3-examples" class="section-heading">
+  <a href="#pop_lazy/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; map = %{a: 1}
 iex&gt; fun = fn -&gt;
 ...&gt;   # some expensive operation here
@@ -1227,7 +1303,11 @@ iex&gt; Map.pop_lazy(map, :b, fun)
   
   <section class="docstring">
     <p>Puts the given <code class="inline">value</code> under <code class="inline">key</code> in <code class="inline">map</code>.</p>
-<h2>Examples</h2>
+<h2 id="put/3-examples" class="section-heading">
+  <a href="#put/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.put(%{a: 1}, :b, 2)
 %{a: 1, b: 2}
 iex&gt; Map.put(%{a: 1, b: 2}, :a, 3)
@@ -1261,7 +1341,11 @@ iex&gt; Map.put(%{a: 1, b: 2}, :a, 3)
   <section class="docstring">
     <p>Puts the given <code class="inline">value</code> under <code class="inline">key</code> unless the entry <code class="inline">key</code>
 already exists in <code class="inline">map</code>.</p>
-<h2>Examples</h2>
+<h2 id="put_new/3-examples" class="section-heading">
+  <a href="#put_new/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.put_new(%{a: 1}, :b, 2)
 %{b: 2, a: 1}
 iex&gt; Map.put_new(%{a: 1, b: 2}, :a, 3)
@@ -1298,7 +1382,11 @@ in <code class="inline">map</code> unless <code class="inline">key</code> is alr
 <p>This function is useful in case you want to compute the value to put under
 <code class="inline">key</code> only if <code class="inline">key</code> is not already present (e.g., the value is expensive to
 calculate or generally difficult to setup and teardown again).</p>
-<h2>Examples</h2>
+<h2 id="put_new_lazy/3-examples" class="section-heading">
+  <a href="#put_new_lazy/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; map = %{a: 1}
 iex&gt; fun = fn -&gt;
 ...&gt;   # some expensive operation here
@@ -1339,7 +1427,11 @@ iex&gt; Map.put_new_lazy(map, :b, fun)
 them into a separate map.</p>
 <p>Returns a tuple with the new map and the old map with removed keys.</p>
 <p>Keys for which there are no entries in <code class="inline">map</code> are ignored.</p>
-<h2>Examples</h2>
+<h2 id="split/2-examples" class="section-heading">
+  <a href="#split/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.split(%{a: 1, b: 2, c: 3}, [:a, :c, :e])
 {%{a: 1, c: 3}, %{b: 2}}</code></pre>
 
@@ -1372,7 +1464,11 @@ them into a separate map.</p>
     <p>Returns a new map with all the key-value pairs in <code class="inline">map</code> where the key
 is in <code class="inline">keys</code>.</p>
 <p>If <code class="inline">keys</code> contains keys that are not in <code class="inline">map</code>, they’re simply ignored.</p>
-<h2>Examples</h2>
+<h2 id="take/2-examples" class="section-heading">
+  <a href="#take/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.take(%{a: 1, b: 2, c: 3}, [:a, :c, :e])
 %{a: 1, c: 3}</code></pre>
 
@@ -1405,7 +1501,11 @@ is in <code class="inline">keys</code>.</p>
     <p>Converts <code class="inline">map</code> to a list.</p>
 <p>Each key-value pair in the map is converted to a two-element tuple <code class="inline">{key,
 value}</code> in the resulting list.</p>
-<h2>Examples</h2>
+<h2 id="to_list/1-examples" class="section-heading">
+  <a href="#to_list/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.to_list(%{a: 1})
 [a: 1]
 iex&gt; Map.to_list(%{1 =&gt; 2})
@@ -1441,7 +1541,11 @@ iex&gt; Map.to_list(%{1 =&gt; 2})
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">fun</code> is invoked with
 argument <code class="inline">value</code> and its result is used as the new value of <code class="inline">key</code>. If <code class="inline">key</code> is
 not present in <code class="inline">map</code>, <code class="inline">initial</code> is inserted as the value of <code class="inline">key</code>.</p>
-<h2>Examples</h2>
+<h2 id="update/4-examples" class="section-heading">
+  <a href="#update/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.update(%{a: 1}, :a, 13, &amp;(&amp;1 * 2))
 %{a: 2}
 iex&gt; Map.update(%{a: 1}, :b, 11, &amp;(&amp;1 * 2))
@@ -1479,7 +1583,11 @@ iex&gt; Map.update(%{a: 1}, :b, 11, &amp;(&amp;1 * 2))
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">fun</code> is invoked with
 argument <code class="inline">value</code> and its result is used as the new value of <code class="inline">key</code>. If <code class="inline">key</code> is
 not present in <code class="inline">map</code>, a <a href="KeyError.html"><code class="inline">KeyError</code></a> exception is raised.</p>
-<h2>Examples</h2>
+<h2 id="update!/3-examples" class="section-heading">
+  <a href="#update!/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.update!(%{a: 1}, :a, &amp;(&amp;1 * 2))
 %{a: 2}
 
@@ -1513,7 +1621,11 @@ iex&gt; Map.update!(%{a: 1}, :b, &amp;(&amp;1 * 2))
   
   <section class="docstring">
     <p>Returns all values from <code class="inline">map</code>.</p>
-<h2>Examples</h2>
+<h2 id="values/1-examples" class="section-heading">
+  <a href="#values/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Map.values(%{a: 1, b: 2})
 [1, 2]</code></pre>
 

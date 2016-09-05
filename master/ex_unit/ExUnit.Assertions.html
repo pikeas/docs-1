@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>ExUnit.Assertions – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.Assertions.html" />
     
@@ -308,7 +308,11 @@ current process’ mailbox)</p>
   
   <section class="docstring">
     <p>Asserts <code class="inline">value</code> is <code class="inline">true</code>, displaying the given <code class="inline">message</code> otherwise.</p>
-<h2>Examples</h2>
+<h2 id="assert/2-examples" class="section-heading">
+  <a href="#assert/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert false, &quot;it will never be true&quot;</code></pre>
 
   </section>
@@ -329,7 +333,11 @@ current process’ mailbox)</p>
   
   <section class="docstring">
     <p>Asserts that <code class="inline">value1</code> and <code class="inline">value2</code> differ by no more than <code class="inline">delta</code>.</p>
-<h2>Examples</h2>
+<h2 id="assert_in_delta/4-examples" class="section-heading">
+  <a href="#assert_in_delta/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert_in_delta 1.1, 1.5, 0.2
 assert_in_delta 10, 15, 4</code></pre>
 
@@ -352,7 +360,11 @@ assert_in_delta 10, 15, 4</code></pre>
   <section class="docstring">
     <p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution.
 Returns the rescued exception, fails otherwise.</p>
-<h2>Examples</h2>
+<h2 id="assert_raise/2-examples" class="section-heading">
+  <a href="#assert_raise/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert_raise ArithmeticError, fn -&gt;
   1 + &quot;test&quot;
 end</code></pre>
@@ -377,13 +389,17 @@ end</code></pre>
     <p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution with
 the expected <code class="inline">message</code>, which can be a <code class="inline">Regex</code> or an exact <code class="inline">String</code>.
 Returns the rescued exception, fails otherwise.</p>
-<h2>Examples</h2>
+<h2 id="assert_raise/3-examples" class="section-heading">
+  <a href="#assert_raise/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert_raise ArithmeticError, &quot;bad argument in arithmetic expression&quot;, fn -&gt;
   1 + &quot;test&quot;
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.7765191188049192!&quot;
+  raise &quot;today&#39;s lucky number is 0.3816507920822066!&quot;
 end</code></pre>
 
   </section>
@@ -413,7 +429,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Fails with a message.</p>
-<h2>Examples</h2>
+<h2 id="flunk/1-examples" class="section-heading">
+  <a href="#flunk/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">flunk &quot;This should raise an error&quot;</code></pre>
 
   </section>
@@ -434,7 +454,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Asserts <code class="inline">value</code> is <code class="inline">nil</code> or <code class="inline">false</code> (that is, <code class="inline">value</code> is not truthy).</p>
-<h2>Examples</h2>
+<h2 id="refute/2-examples" class="section-heading">
+  <a href="#refute/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">refute true, &quot;This will obviously fail&quot;</code></pre>
 
   </section>
@@ -457,7 +481,11 @@ end</code></pre>
     <p>Asserts <code class="inline">value1</code> and <code class="inline">value2</code> are not within <code class="inline">delta</code>.</p>
 <p>If you supply <code class="inline">message</code>, information about the values will
 automatically be appended to it.</p>
-<h2>Examples</h2>
+<h2 id="refute_in_delta/4-examples" class="section-heading">
+  <a href="#refute_in_delta/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">refute_in_delta 1.1, 1.2, 0.2
 refute_in_delta 10, 11, 2</code></pre>
 
@@ -539,7 +567,11 @@ value. In such cases, simply use <code class="inline">Kernel.==/2</code> or
 of 100 milliseconds.</p>
 <p>The <code class="inline">pattern</code> argument must be a match pattern. Flunks with <code class="inline">failure_message</code>
 if a message matching <code class="inline">pattern</code> is not received.</p>
-<h2>Examples</h2>
+<h2 id="assert_receive/3-examples" class="section-heading">
+  <a href="#assert_receive/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert_receive :hello</code></pre>
 <p>Asserts against a larger timeout:</p>
 <pre><code class="elixir">assert_receive :hello, 20_000</code></pre>
@@ -571,7 +603,11 @@ current process’ mailbox.</p>
 <p>The <code class="inline">pattern</code> argument must be a match pattern. Flunks with <code class="inline">failure_message</code>
 if a message matching <code class="inline">pattern</code> was not received.</p>
 <p>Timeout is set to 0, so there is no waiting time.</p>
-<h2>Examples</h2>
+<h2 id="assert_received/2-examples" class="section-heading">
+  <a href="#assert_received/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">send self(), :hello
 assert_received :hello
 
@@ -603,7 +639,11 @@ assert_received {:hello, _}</code></pre>
   <section class="docstring">
     <p>Asserts <code class="inline">expression</code> will cause an error.
 Returns the error or fails otherwise.</p>
-<h2>Examples</h2>
+<h2 id="catch_error/1-examples" class="section-heading">
+  <a href="#catch_error/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert catch_error(error 1) == 1</code></pre>
 
   </section>
@@ -625,7 +665,11 @@ Returns the error or fails otherwise.</p>
   <section class="docstring">
     <p>Asserts <code class="inline">expression</code> will exit.
 Returns the exit status/message or fails otherwise.</p>
-<h2>Examples</h2>
+<h2 id="catch_exit/1-examples" class="section-heading">
+  <a href="#catch_exit/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert catch_exit(exit 1) == 1</code></pre>
 
   </section>
@@ -647,7 +691,11 @@ Returns the exit status/message or fails otherwise.</p>
   <section class="docstring">
     <p>Asserts <code class="inline">expression</code> will throw a value.
 Returns the thrown value or fails otherwise.</p>
-<h2>Examples</h2>
+<h2 id="catch_throw/1-examples" class="section-heading">
+  <a href="#catch_throw/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">assert catch_throw(throw 1) == 1</code></pre>
 
   </section>
@@ -676,7 +724,11 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
 <p>The correct way to write the refutation above is to use
 <code class="inline">Kernel.match?/2</code>:</p>
 <pre><code class="elixir">refute match? {:ok, _}, some_function_that_returns_error_tuple()</code></pre>
-<h2>Examples</h2>
+<h2 id="refute/1-examples" class="section-heading">
+  <a href="#refute/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">refute age &lt; 0</code></pre>
 
   </section>
@@ -700,7 +752,11 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
 within the <code class="inline">timeout</code> period.</p>
 <p>The <code class="inline">pattern</code> argument must be a match pattern. Flunks with <code class="inline">failure_message</code>
 if a message matching <code class="inline">pattern</code> is received.</p>
-<h2>Examples</h2>
+<h2 id="refute_receive/3-examples" class="section-heading">
+  <a href="#refute_receive/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">refute_receive :bye</code></pre>
 <p>Refute received with an explicit timeout:</p>
 <pre><code class="elixir">refute_receive :bye, 1000</code></pre>
@@ -727,7 +783,11 @@ current process’ mailbox).</p>
 <p>The <code class="inline">pattern</code> argument must be a match pattern. Flunks with <code class="inline">failure_message</code>
 if a message matching <code class="inline">pattern</code> was received.</p>
 <p>Timeout is set to 0, so there is no waiting time.</p>
-<h2>Examples</h2>
+<h2 id="refute_received/2-examples" class="section-heading">
+  <a href="#refute_received/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">send self(), :hello
 refute_received :bye
 

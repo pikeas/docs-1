@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>EEx – EEx v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/eex/EEx.html" />
     
@@ -319,7 +319,11 @@ that can be evaluated by Elixir or compiled to a function.</p>
   
   <section class="docstring">
     <p>Gets a <code class="inline">filename</code> and evaluate the values using the <code class="inline">bindings</code>.</p>
-<h2>Examples</h2>
+<h2 id="eval_file/3-examples" class="section-heading">
+  <a href="#eval_file/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># sample.eex
 foo &lt;%= bar %&gt;
 
@@ -344,7 +348,11 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
   
   <section class="docstring">
     <p>Gets a string <code class="inline">source</code> and evaluate the values using the <code class="inline">bindings</code>.</p>
-<h2>Examples</h2>
+<h2 id="eval_string/3-examples" class="section-heading">
+  <a href="#eval_string/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; EEx.eval_string &quot;foo &lt;%= bar %&gt;&quot;, [bar: &quot;baz&quot;]
 &quot;foo baz&quot;</code></pre>
 
@@ -382,7 +390,11 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
 function name, its arguments and the compilation options.</p>
 <p>This function is useful in case you have templates but
 you want to precompile inside a module for speed.</p>
-<h2>Examples</h2>
+<h2 id="function_from_file/5-examples" class="section-heading">
+  <a href="#function_from_file/5-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># sample.eex
 &lt;%= a + b %&gt;
 
@@ -415,7 +427,11 @@ Sample.sample(1, 2) #=&gt; &quot;3&quot;</code></pre>
     <p>Generates a function definition from the string.</p>
 <p>The kind (<code class="inline">:def</code> or <code class="inline">:defp</code>) must be given, the
 function name, its arguments and the compilation options.</p>
-<h2>Examples</h2>
+<h2 id="function_from_string/5-examples" class="section-heading">
+  <a href="#function_from_string/5-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; defmodule Sample do
 ...&gt;   require EEx
 ...&gt;   EEx.function_from_string :def, :sample, &quot;&lt;%= a + b %&gt;&quot;, [:a, :b]

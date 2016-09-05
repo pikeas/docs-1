@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Date – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Date.html" />
     
@@ -264,7 +264,11 @@ the ones in 3rd party calendar libraries.</p>
   <section class="docstring">
     <p>Converts an Erlang date tuple to a <a href="Date.html#content"><code class="inline">Date</code></a> struct.</p>
 <p>Attempting to convert an invalid ISO calendar date will produce an error tuple.</p>
-<h2>Examples</h2>
+<h2 id="from_erl/1-examples" class="section-heading">
+  <a href="#from_erl/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_erl({2000, 1, 1})
 {:ok, ~D[2000-01-01]}
 iex&gt; Date.from_erl({2000, 13, 1})
@@ -297,7 +301,11 @@ iex&gt; Date.from_erl({2000, 13, 1})
   
   <section class="docstring">
     <p>Converts an Erlang date tuple but raises for invalid dates.</p>
-<h2>Examples</h2>
+<h2 id="from_erl!/1-examples" class="section-heading">
+  <a href="#from_erl!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_erl!({2000, 1, 1})
 ~D[2000-01-01]
 iex&gt; Date.from_erl!({2000, 13, 1})
@@ -336,7 +344,11 @@ iex&gt; Date.from_erl!({2000, 13, 1})
 simply discarded as such information is not included in naive date
 times.</p>
 <p>Time representations with reduced accuracy are not supported.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601/1-examples" class="section-heading">
+  <a href="#from_iso8601/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_iso8601(&quot;2015-01-23&quot;)
 {:ok, ~D[2015-01-23]}
 
@@ -373,7 +385,11 @@ iex&gt; Date.from_iso8601(&quot;2015-01-32&quot;)
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601!/1-examples" class="section-heading">
+  <a href="#from_iso8601!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_iso8601!(&quot;2015-01-23&quot;)
 ~D[2015-01-23]
 iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
@@ -410,7 +426,11 @@ iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
     <p>Builds a new ISO date.</p>
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, date}</code> if each
 entry fits its appropriate range, returns <code class="inline">{:error, reason}</code> otherwise.</p>
-<h2>Examples</h2>
+<h2 id="new/3-examples" class="section-heading">
+  <a href="#new/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.new(2000, 1, 1)
 {:ok, ~D[2000-01-01]}
 iex&gt; Date.new(2000, 13, 1)
@@ -452,7 +472,11 @@ iex&gt; Date.new(2001, 2, 29)
     <p>Converts a <a href="Date.html#content"><code class="inline">Date</code></a> struct to an Erlang date tuple.</p>
 <p>Only supports converting dates which are in the ISO calendar,
 attempting to convert dates from other calendars will raise.</p>
-<h2>Examples</h2>
+<h2 id="to_erl/1-examples" class="section-heading">
+  <a href="#to_erl/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.to_erl(~D[2000-01-01])
 {2000, 1, 1}</code></pre>
 

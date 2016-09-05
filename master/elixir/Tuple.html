@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Tuple – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Tuple.html" />
     
@@ -228,7 +228,11 @@ work with tuples can be found in <a href="Kernel.html"><code class="inline">Kern
 <p>Returns a new tuple with the element appended at the end, and contains
 the elements in <code class="inline">tuple</code> followed by <code class="inline">value</code> as the last element.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="append/2-examples" class="section-heading">
+  <a href="#append/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; tuple = {:foo, :bar}
 iex&gt; Tuple.append(tuple, :baz)
 {:foo, :bar, :baz}</code></pre>
@@ -264,7 +268,11 @@ iex&gt; Tuple.append(tuple, :baz)
 Raises an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if <code class="inline">index</code> is negative or greater than
 or equal to the length of <code class="inline">tuple</code>. Index is zero-based.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="delete_at/2-examples" class="section-heading">
+  <a href="#delete_at/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; tuple = {:foo, :bar, :baz}
 iex&gt; Tuple.delete_at(tuple, 0)
 {:bar, :baz}</code></pre>
@@ -299,7 +307,11 @@ iex&gt; Tuple.delete_at(tuple, 0)
 <p>Creates a tuple of <code class="inline">size</code> containing the
 given <code class="inline">data</code> at every position.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="duplicate/2-examples" class="section-heading">
+  <a href="#duplicate/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Tuple.duplicate(:hello, 3)
 {:hello, :hello, :hello}</code></pre>
 
@@ -334,7 +346,11 @@ given <code class="inline">data</code> at every position.</p>
 Raises an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if <code class="inline">index</code> is negative or greater than the
 length of <code class="inline">tuple</code>. Index is zero-based.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="insert_at/3-examples" class="section-heading">
+  <a href="#insert_at/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; tuple = {:bar, :baz}
 iex&gt; Tuple.insert_at(tuple, 0, :foo)
 {:foo, :bar, :baz}
@@ -370,7 +386,11 @@ iex&gt; Tuple.insert_at(tuple, 2, :bong)
     <p>Converts a tuple to a list.</p>
 <p>Returns a new list with all the tuple elements.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_list/1-examples" class="section-heading">
+  <a href="#to_list/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; tuple = {:foo, :bar, :baz}
 iex&gt; Tuple.to_list(tuple)
 [:foo, :bar, :baz]</code></pre>

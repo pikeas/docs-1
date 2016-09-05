@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>DateTime – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/DateTime.html" />
     
@@ -281,7 +281,11 @@ according to <a href="System.html#convert_time_unit/3"><code class="inline">Syst
 be converted to microseconds internally.</p>
 <p>Unix times are always in UTC and therefore the DateTime
 will be returned in UTC.</p>
-<h2>Examples</h2>
+<h2 id="from_unix/2-examples" class="section-heading">
+  <a href="#from_unix/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; DateTime.from_unix(1464096368)
 {:ok, %DateTime{calendar: Calendar.ISO, day: 24, hour: 13, microsecond: {0, 0}, minute: 26,
                 month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
@@ -336,7 +340,11 @@ according to <a href="System.html#convert_time_unit/3"><code class="inline">Syst
 be converted to microseconds internally.</p>
 <p>Unix times are always in UTC and therefore the DateTime
 will be returned in UTC.</p>
-<h2>Examples</h2>
+<h2 id="from_unix!/2-examples" class="section-heading">
+  <a href="#from_unix!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; DateTime.from_unix!(1464096368)
 %DateTime{calendar: Calendar.ISO, day: 24, hour: 13, microsecond: {0, 0}, minute: 26,
           month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
@@ -374,7 +382,11 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into a <a href="Date.html"><code class="inline">Date</code></a>.</p>
 <p>Because <a href="Date.html"><code class="inline">Date</code></a> does not hold time nor timezone information,
 data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_date/1-examples" class="section-heading">
+  <a href="#to_date/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; dt = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
 ...&gt;                hour: 23, minute: 0, second: 7, microsecond: {0, 0},
 ...&gt;                utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
@@ -454,7 +466,11 @@ iex&gt; DateTime.to_iso8601(dt)
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into a <a href="NaiveDateTime.html"><code class="inline">NaiveDateTime</code></a>.</p>
 <p>Because <a href="NaiveDateTime.html"><code class="inline">NaiveDateTime</code></a> does not hold timezone information,
 any timezone related data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_naive/1-examples" class="section-heading">
+  <a href="#to_naive/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; dt = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
 ...&gt;                hour: 23, minute: 0, second: 7, microsecond: {0, 1},
 ...&gt;                utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
@@ -527,7 +543,11 @@ iex&gt; DateTime.to_string(dt)
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into <a href="Time.html"><code class="inline">Time</code></a>.</p>
 <p>Because <a href="Time.html"><code class="inline">Time</code></a> does not hold date nor timezone information,
 data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_time/1-examples" class="section-heading">
+  <a href="#to_time/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; dt = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
 ...&gt;                hour: 23, minute: 0, second: 7, microsecond: {0, 1},
 ...&gt;                utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
@@ -565,7 +585,11 @@ iex&gt; DateTime.to_time(dt)
 with a year greater than or equal to 0.</p>
 <p>It will return the integer with the given unit,
 according to <a href="System.html#convert_time_unit/3"><code class="inline">System.convert_time_unit/3</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="to_unix/2-examples" class="section-heading">
+  <a href="#to_unix/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; 1464096368 |&gt; DateTime.from_unix!() |&gt; DateTime.to_unix()
 1464096368
 
@@ -608,7 +632,11 @@ iex&gt; DateTime.to_unix(flamel)
   
   <section class="docstring">
     <p>Returns the current datetime in UTC.</p>
-<h2>Examples</h2>
+<h2 id="utc_now/0-examples" class="section-heading">
+  <a href="#utc_now/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; datetime = DateTime.utc_now()
 iex&gt; datetime.time_zone
 &quot;Etc/UTC&quot;</code></pre>

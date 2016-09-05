@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Time – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Time.html" />
     
@@ -263,7 +263,11 @@ the ones in 3rd party calendar libraries.</p>
   
   <section class="docstring">
     <p>Converts an Erlang time tuple to a <a href="Time.html#content"><code class="inline">Time</code></a> struct.</p>
-<h2>Examples</h2>
+<h2 id="from_erl/2-examples" class="section-heading">
+  <a href="#from_erl/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Time.from_erl({23, 30, 15}, {5000, 3})
 {:ok, ~T[23:30:15.005]}
 iex&gt; Time.from_erl({24, 30, 15})
@@ -298,7 +302,11 @@ iex&gt; Time.from_erl({24, 30, 15})
   
   <section class="docstring">
     <p>Converts an Erlang time tuple to a <a href="Time.html#content"><code class="inline">Time</code></a> struct.</p>
-<h2>Examples</h2>
+<h2 id="from_erl!/2-examples" class="section-heading">
+  <a href="#from_erl!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Time.from_erl!({23, 30, 15})
 ~T[23:30:15]
 iex&gt; Time.from_erl!({23, 30, 15}, {5000, 3})
@@ -340,7 +348,11 @@ simply discarded as such information is not included in times.</p>
 <p>As specified in the standard, the separator “T” may be omitted if
 desired as there is no ambiguity within this function.</p>
 <p>Time representations with reduced accuracy are not supported.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601/1-examples" class="section-heading">
+  <a href="#from_iso8601/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Time.from_iso8601(&quot;23:50:07&quot;)
 {:ok, ~T[23:50:07]}
 iex&gt; Time.from_iso8601(&quot;23:50:07Z&quot;)
@@ -390,7 +402,11 @@ iex&gt; Time.from_iso8601(&quot;23:50:61&quot;)
   <section class="docstring">
     <p>Parses the extended “Local time” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601!/1-examples" class="section-heading">
+  <a href="#from_iso8601!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Time.from_iso8601!(&quot;23:50:07.123Z&quot;)
 ~T[23:50:07.123]
 iex&gt; Time.from_iso8601!(&quot;2015:01:23 23-50-07&quot;)
@@ -428,7 +444,11 @@ iex&gt; Time.from_iso8601!(&quot;2015:01:23 23-50-07&quot;)
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, time}</code> if each
 entry fits its appropriate range, returns <code class="inline">{:error, reason}</code> otherwise.</p>
 <p>Note a time may have 60 seconds in case of leap seconds.</p>
-<h2>Examples</h2>
+<h2 id="new/4-examples" class="section-heading">
+  <a href="#new/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Time.new(0, 0, 0, 0)
 {:ok, ~T[00:00:00.000000]}
 iex&gt; Time.new(23, 59, 59, 999_999)
@@ -478,7 +498,11 @@ iex&gt; Time.new(23, 59, 59, 1_000_000)
     <p>Converts a <a href="Time.html#content"><code class="inline">Time</code></a> struct to an Erlang time tuple.</p>
 <p>WARNING: Loss of precision may occur, as Erlang time tuples
 only contain hours/minutes/seconds.</p>
-<h2>Examples</h2>
+<h2 id="to_erl/1-examples" class="section-heading">
+  <a href="#to_erl/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Time.to_erl(~T[23:30:15.999])
 {23, 30, 15}</code></pre>
 

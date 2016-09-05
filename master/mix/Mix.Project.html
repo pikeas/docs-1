@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Mix.Project – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Project.html" />
     
@@ -327,7 +327,11 @@ etc.</p>
   <section class="docstring">
     <p>Returns the application path inside the build.</p>
 <p>The returned path will be expanded.</p>
-<h2>Examples</h2>
+<h2 id="app_path/1-examples" class="section-heading">
+  <a href="#app_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.app_path
 #=&gt; &quot;/path/to/project/_build/shared/lib/app&quot;</code></pre>
 
@@ -359,7 +363,11 @@ etc.</p>
   <section class="docstring">
     <p>Returns the build path for this project.</p>
 <p>The returned path will be expanded.</p>
-<h2>Examples</h2>
+<h2 id="build_path/1-examples" class="section-heading">
+  <a href="#build_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.build_path
 #=&gt; &quot;/path/to/project/_build/shared&quot;</code></pre>
 <p>If :build_per_environment is set to <code class="inline">true</code> (the default), it
@@ -396,7 +404,11 @@ Mix.Project.build_path
   
   <section class="docstring">
     <p>Builds the project structure for the current application.</p>
-<h2>Options</h2>
+<h2 id="build_structure/2-options" class="section-heading">
+  <a href="#build_structure/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:symlink_ebin</code> - symlink ebin instead of copying it
 </li>
@@ -461,7 +473,11 @@ explicit command to <code class="inline">mix compile</code> is required.</p>
   <section class="docstring">
     <p>Returns the paths this project compiles to.</p>
 <p>The returned path will be expanded.</p>
-<h2>Examples</h2>
+<h2 id="compile_path/1-examples" class="section-heading">
+  <a href="#compile_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.compile_path
 #=&gt; &quot;/path/to/project/_build/shared/lib/app/ebin&quot;</code></pre>
 
@@ -581,7 +597,11 @@ all config files in the <code class="inline">config</code> directory.</p>
   <section class="docstring">
     <p>Returns the path where dependencies are stored for this project.</p>
 <p>The returned path will be expanded.</p>
-<h2>Examples</h2>
+<h2 id="deps_path/1-examples" class="section-heading">
+  <a href="#deps_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.deps_path
 #=&gt; &quot;/path/to/project/deps&quot;</code></pre>
 
@@ -612,7 +632,11 @@ all config files in the <code class="inline">config</code> directory.</p>
   
   <section class="docstring">
     <p>Returns the full path of all dependencies as a map.</p>
-<h2>Examples</h2>
+<h2 id="deps_paths/0-examples" class="section-heading">
+  <a href="#deps_paths/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.deps_paths
 #=&gt; %{foo: &quot;deps/foo&quot;, bar: &quot;custom/path/dep&quot;}</code></pre>
 
@@ -746,7 +770,11 @@ the project configuration.</p>
 <p><code class="inline">fun</code> is called with the <code class="inline">Mixfile</code> of the given project as
 its argument. The return value of this function is the return
 value of <code class="inline">fun</code>.</p>
-<h2>Examples</h2>
+<h2 id="in_project/4-examples" class="section-heading">
+  <a href="#in_project/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.in_project :my_app, &quot;/path/to/my_app&quot;, fn mixfile -&gt;
   &quot;Mixfile is: #{inspect mixfile}&quot;
 end
@@ -812,7 +840,11 @@ the build directory. Umbrella applications have
 the manifest path set to the root of the build directory.
 Directories may be changed in future releases.</p>
 <p>The returned path will be expanded.</p>
-<h2>Examples</h2>
+<h2 id="manifest_path/1-examples" class="section-heading">
+  <a href="#manifest_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Project.manifest_path
 #=&gt; &quot;/path/to/project/_build/shared/lib/app&quot;</code></pre>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>OptionParser – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/OptionParser.html" />
     
@@ -373,7 +373,11 @@ iex&gt; OptionParser.parse([&quot;--source-path&quot;, &quot;lib&quot;, &quot;te
 <p>Switches followed by a value will be assigned the value, as a string.
 Switches without an argument, like <code class="inline">--debug</code> in the examples above, will
 automatically be set to <code class="inline">true</code>.</p>
-<h2>Options</h2>
+<h2 id="parse/2-options" class="section-heading">
+  <a href="#parse/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The following options are supported:</p>
 <ul>
 <li><code class="inline">:switches</code> or <code class="inline">:strict</code> - see the “Switch definitions” section below
@@ -381,7 +385,11 @@ automatically be set to <code class="inline">true</code>.</p>
 <li><code class="inline">:aliases</code> - see the “Aliases” section below
 </li>
 </ul>
-<h2>Switch definitions</h2>
+<h2 id="parse/2-switch-definitions" class="section-heading">
+  <a href="#parse/2-switch-definitions" class="hover-link"><i class="icon-link"></i></a>
+  Switch definitions
+</h2>
+
 <p>Often it is better to explicitly list the known
 switches and their formats. The switches can be specified via one of two
 options:</p>
@@ -436,11 +444,19 @@ as the type for the switch. For example: <code class="inline">[foo: [:integer, :
 passed as <code class="inline">--no-SWITCH</code> as well which will set the option to <code class="inline">false</code>:</p>
 <pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;--no-op&quot;, &quot;path/to/file&quot;], switches: [op: :boolean])
 {[op: false], [&quot;path/to/file&quot;], []}</code></pre>
-<h2>Aliases</h2>
+<h2 id="parse/2-aliases" class="section-heading">
+  <a href="#parse/2-aliases" class="hover-link"><i class="icon-link"></i></a>
+  Aliases
+</h2>
+
 <p>A set of aliases can be specified in the <code class="inline">:aliases</code> option:</p>
 <pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;-d&quot;], aliases: [d: :debug])
 {[debug: true], [], []}</code></pre>
-<h2>Examples</h2>
+<h2 id="parse/2-examples" class="section-heading">
+  <a href="#parse/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Here are some examples of working with different types and modifiers:</p>
 <pre><code class="iex elixir">iex&gt; OptionParser.parse([&quot;--unlock&quot;, &quot;path/to/file&quot;], strict: [unlock: :boolean])
 {[unlock: true], [&quot;path/to/file&quot;], []}
@@ -508,7 +524,11 @@ exception if any invalid options are given.</p>
 <li><code class="inline">rest</code> is the list of arguments (same as in <a href="#parse/2)"><code class="inline">parse/2</code></a>
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="parse!/2-examples" class="section-heading">
+  <a href="#parse!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; OptionParser.parse!([&quot;--debug&quot;, &quot;path/to/file&quot;], strict: [debug: :boolean])
 {[debug: true], [&quot;path/to/file&quot;]}
 
@@ -555,7 +575,11 @@ iex&gt; OptionParser.parse!([&quot;-l&quot;, &quot;xyz&quot;, &quot;-f&quot;, &q
     <p>Similar to <a href="#parse/2"><code class="inline">parse/2</code></a> but only parses the head of <code class="inline">argv</code>;
 as soon as it finds a non-switch, it stops parsing.</p>
 <p>See <a href="#parse/2"><code class="inline">parse/2</code></a> for more information.</p>
-<h2>Example</h2>
+<h2 id="parse_head/2-example" class="section-heading">
+  <a href="#parse_head/2-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="iex elixir">iex&gt; OptionParser.parse_head([&quot;--source&quot;, &quot;lib&quot;, &quot;test/enum_test.exs&quot;, &quot;--verbose&quot;])
 {[source: &quot;lib&quot;], [&quot;test/enum_test.exs&quot;, &quot;--verbose&quot;], []}
 
@@ -599,7 +623,11 @@ exception if any invalid options are given.</p>
 <li><code class="inline">rest</code> is the list of arguments (same as in <a href="#parse_head/2)"><code class="inline">parse_head/2</code></a>
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="parse_head!/2-examples" class="section-heading">
+  <a href="#parse_head!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; OptionParser.parse_head!([&quot;--source&quot;, &quot;lib&quot;, &quot;path/to/file&quot;, &quot;--verbose&quot;])
 {[source: &quot;lib&quot;], [&quot;path/to/file&quot;, &quot;--verbose&quot;]}
 
@@ -642,7 +670,11 @@ iex&gt; OptionParser.parse_head!([&quot;--verbose&quot;, &quot;--source&quot;, &
     <p>Splits a string into argv chunks.</p>
 <p>This function splits the given <code class="inline">string</code> into a list of strings in a similar
 way to many shells.</p>
-<h2>Examples</h2>
+<h2 id="split/1-examples" class="section-heading">
+  <a href="#split/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; OptionParser.split(&quot;foo bar&quot;)
 [&quot;foo&quot;, &quot;bar&quot;]
 
@@ -680,7 +712,11 @@ iex&gt; OptionParser.split(&quot;foo \&quot;bar baz\&quot;&quot;)
 boolean values are converted to <code class="inline">--key</code> or <code class="inline">--no-key</code>
 (if the value is <code class="inline">true</code> or <code class="inline">false</code>, respectively),
 and all other values are converted using <code class="inline">to_string/1</code>.</p>
-<h2>Examples</h2>
+<h2 id="to_argv/1-examples" class="section-heading">
+  <a href="#to_argv/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt;  OptionParser.to_argv([foo_bar: &quot;baz&quot;])
 [&quot;--foo-bar&quot;, &quot;baz&quot;]
 

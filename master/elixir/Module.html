@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Module – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Module.html" />
     
@@ -705,7 +705,11 @@ negative integer), the kind (<code class="inline">def</code> or <code class="inl
 the function and its arity, the function signature (the signature
 should be omitted for types) and the documentation, which should
 be either a binary or a boolean.</p>
-<h2>Examples</h2>
+<h2 id="add_doc/6-examples" class="section-heading">
+  <a href="#add_doc/6-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule MyModule do
   Module.add_doc(__MODULE__, __ENV__.line + 1, :def, {:version, 0}, [], &quot;Manually added docs&quot;)
   def version, do: 1
@@ -738,7 +742,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Concatenates a list of aliases and returns a new alias.</p>
-<h2>Examples</h2>
+<h2 id="concat/1-examples" class="section-heading">
+  <a href="#concat/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Module.concat([Foo, Bar])
 Foo.Bar
 
@@ -772,7 +780,11 @@ Foo.Bar</code></pre>
   
   <section class="docstring">
     <p>Concatenates two aliases and returns a new alias.</p>
-<h2>Examples</h2>
+<h2 id="concat/2-examples" class="section-heading">
+  <a href="#concat/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Module.concat(Foo, Bar)
 Foo.Bar
 
@@ -800,7 +812,11 @@ Foo.Bar</code></pre>
 the given quoted expressions.</p>
 <p>The line where the module is defined and its file <strong>must</strong>
 be passed as options.</p>
-<h2>Examples</h2>
+<h2 id="create/3-examples" class="section-heading">
+  <a href="#create/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">contents =
   quote do
     def world, do: true
@@ -809,7 +825,11 @@ be passed as options.</p>
 Module.create(Hello, contents, Macro.Env.location(__ENV__))
 
 Hello.world #=&gt; true</code></pre>
-<h2>Differences from <code class="inline">defmodule</code></h2>
+<h2 id="create/3-differences-from" class="section-heading">
+  <a href="#create/3-differences-from" class="hover-link"><i class="icon-link"></i></a>
+  Differences from <code class="inline">defmodule</code>
+</h2>
+
 <p><a href="Module.html#create/3"><code class="inline">Module.create/3</code></a> works similarly to <code class="inline">defmodule</code> and
 return the same results. While one could also use
 <code class="inline">defmodule</code> to define modules dynamically, this
@@ -839,7 +859,11 @@ shares the same environment.</p>
   <section class="docstring">
     <p>Checks if the module defines the given function or macro.</p>
 <p>Use <a href="#defines?/3"><code class="inline">defines?/3</code></a> to assert for a specific type.</p>
-<h2>Examples</h2>
+<h2 id="defines?/2-examples" class="section-heading">
+  <a href="#defines?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule Example do
   Module.defines? __MODULE__, {:version, 0} #=&gt; false
   def version, do: 1
@@ -866,7 +890,11 @@ end</code></pre>
     <p>Checks if the module defines a function or macro of the
 given <code class="inline">kind</code>.</p>
 <p><code class="inline">kind</code> can be any of <code class="inline">:def</code>, <code class="inline">:defp</code>, <code class="inline">:defmacro</code> or <code class="inline">:defmacrop</code>.</p>
-<h2>Examples</h2>
+<h2 id="defines?/3-examples" class="section-heading">
+  <a href="#defines?/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule Example do
   Module.defines? __MODULE__, {:version, 0}, :defp #=&gt; false
   def version, do: 1
@@ -891,7 +919,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Returns all functions defined in <code class="inline">module</code>.</p>
-<h2>Examples</h2>
+<h2 id="definitions_in/1-examples" class="section-heading">
+  <a href="#definitions_in/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule Example do
   def version, do: 1
   Module.definitions_in __MODULE__ #=&gt; [{:version, 0}]
@@ -916,7 +948,11 @@ end</code></pre>
   <section class="docstring">
     <p>Returns all functions defined in <code class="inline">module</code>, according
 to its kind.</p>
-<h2>Examples</h2>
+<h2 id="definitions_in/2-examples" class="section-heading">
+  <a href="#definitions_in/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule Example do
   def version, do: 1
   Module.definitions_in __MODULE__, :def  #=&gt; [{:version, 0}]
@@ -950,7 +986,11 @@ end</code></pre>
   
   <section class="docstring">
     <p>Deletes all attributes that match the given key.</p>
-<h2>Examples</h2>
+<h2 id="delete_attribute/2-examples" class="section-heading">
+  <a href="#delete_attribute/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule MyModule do
   Module.put_attribute __MODULE__, :custom_threshold_for_lib, 10
   Module.delete_attribute __MODULE__, :custom_threshold_for_lib
@@ -977,7 +1017,11 @@ end</code></pre>
 <p>A list of environment options can also be given as argument.
 See <a href="Code.html#eval_string/3"><code class="inline">Code.eval_string/3</code></a> for more information.</p>
 <p>Raises an error if the module was already compiled.</p>
-<h2>Examples</h2>
+<h2 id="eval_quoted/4-examples" class="section-heading">
+  <a href="#eval_quoted/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule Foo do
   contents = quote do: (def sum(a, b), do: a + b)
   Module.eval_quoted __MODULE__, contents
@@ -1029,7 +1073,11 @@ the following code:</p>
 <pre><code class="elixir">@foo</code></pre>
 <p>Expands close to:</p>
 <pre><code class="elixir">Module.get_attribute(__MODULE__, :foo)</code></pre>
-<h2>Examples</h2>
+<h2 id="get_attribute/2-examples" class="section-heading">
+  <a href="#get_attribute/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule Foo do
   Module.put_attribute __MODULE__, :value, 1
   Module.get_attribute __MODULE__, :value #=&gt; 1
@@ -1121,7 +1169,11 @@ and its attributes and functions can be modified.</p>
 key and value.</p>
 <p>The semantics of putting the attribute depends
 if the attribute was registered or not via <a href="#register_attribute/3"><code class="inline">register_attribute/3</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="put_attribute/3-examples" class="section-heading">
+  <a href="#put_attribute/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule MyModule do
   Module.put_attribute __MODULE__, :custom_threshold_for_lib, 10
 end</code></pre>
@@ -1146,7 +1198,11 @@ end</code></pre>
     <p>Registers an attribute. By registering an attribute, a developer
 is able to customize how Elixir will store and accumulate the
 attribute values.</p>
-<h2>Options</h2>
+<h2 id="register_attribute/3-options" class="section-heading">
+  <a href="#register_attribute/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>When registering an attribute, two options can be given:</p>
 <ul>
 <li><p><code class="inline">:accumulate</code> - several calls to the same attribute will
@@ -1158,7 +1214,11 @@ Abstract Format. Useful when interfacing with Erlang libraries.
 </li>
 </ul>
 <p>By default, both options are <code class="inline">false</code>.</p>
-<h2>Examples</h2>
+<h2 id="register_attribute/3-examples" class="section-heading">
+  <a href="#register_attribute/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule MyModule do
   Module.register_attribute __MODULE__,
     :custom_threshold_for_lib,
@@ -1199,7 +1259,11 @@ end</code></pre>
 was already referenced.</p>
 <p>If the alias was not referenced yet, fails with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a>.
 It handles charlists, binaries and atoms.</p>
-<h2>Examples</h2>
+<h2 id="safe_concat/1-examples" class="section-heading">
+  <a href="#safe_concat/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Module.safe_concat([Module, Unknown])
 ** (ArgumentError) argument error
 
@@ -1238,7 +1302,11 @@ List.Chars</code></pre>
 already referenced.</p>
 <p>If the alias was not referenced yet, fails with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a>.
 It handles charlists, binaries and atoms.</p>
-<h2>Examples</h2>
+<h2 id="safe_concat/2-examples" class="section-heading">
+  <a href="#safe_concat/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Module.safe_concat(Module, Unknown)
 ** (ArgumentError) argument error
 
@@ -1263,7 +1331,11 @@ List.Chars</code></pre>
   
   <section class="docstring">
     <p>Splits the given module name into binary parts.</p>
-<h2>Examples</h2>
+<h2 id="split/1-examples" class="section-heading">
+  <a href="#split/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Module.split Very.Long.Module.Name.And.Even.Longer
 [&quot;Very&quot;, &quot;Long&quot;, &quot;Module&quot;, &quot;Name&quot;, &quot;And&quot;, &quot;Even&quot;, &quot;Longer&quot;]</code></pre>
 

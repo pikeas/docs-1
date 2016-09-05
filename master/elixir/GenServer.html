@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>GenServer – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/GenServer.html" />
     
@@ -762,7 +762,11 @@ arrives or a timeout occurs. <code class="inline">handle_call/3</code> will be c
 to handle the request.</p>
 <p><code class="inline">server</code> can be any of the values described in the “Name registration”
 section of the documentation for this module.</p>
-<h2>Timeouts</h2>
+<h2 id="call/3-timeouts" class="section-heading">
+  <a href="#call/3-timeouts" class="hover-link"><i class="icon-link"></i></a>
+  Timeouts
+</h2>
+
 <p><code class="inline">timeout</code> is an integer greater than zero which specifies how many
 milliseconds to wait for a reply, or the atom <code class="inline">:infinity</code> to wait
 indefinitely. The default value is <code class="inline">5000</code>. If no reply is received within
@@ -855,7 +859,11 @@ value is the list of all known nodes (including this node).</p>
 <p>To avoid that late answers (after the timeout) pollute the caller’s message
 queue, a middleman process is used to do the actual calls. Late answers will
 then be discarded when they arrive to a terminated process.</p>
-<h2>Examples</h2>
+<h2 id="multi_call/4-examples" class="section-heading">
+  <a href="#multi_call/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Assuming the <code class="inline">Stack</code> GenServer mentioned in the docs for the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>
 module is registered as <code class="inline">Stack</code> in the <code class="inline">:&quot;foo@my-machine&quot;</code> and
 <code class="inline">:&quot;bar@my-machine&quot;</code> nodes:</p>
@@ -899,7 +907,11 @@ back to the client as the return value of the call.</p>
 that originally received the call (as long as that GenServer communicated the
 <code class="inline">from</code> argument somehow).</p>
 <p>This function always returns <code class="inline">:ok</code>.</p>
-<h2>Examples</h2>
+<h2 id="reply/2-examples" class="section-heading">
+  <a href="#reply/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">def handle_call(:reply_in_one_second, from, state) do
   Process.send_after(self(), {:reply, from}, 1_000)
   {:noreply, state}
@@ -974,7 +986,11 @@ has returned.</p>
 parent process and will exit in case of crashes from the parent. The GenServer
 will also exit due to the <code class="inline">:normal</code> reasons in case it is configured to trap
 exits in the <code class="inline">init/1</code> callback.</p>
-<h2>Options</h2>
+<h2 id="start_link/3-options" class="section-heading">
+  <a href="#start_link/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><p><code class="inline">:name</code> - used for name registration as described in the “Name
 registration” section of the module documentation</p>
@@ -990,7 +1006,11 @@ module</a> is invoked</p>
 underlying process as in <a href="Process.html#spawn/4"><code class="inline">Process.spawn/4</code></a>
 </li>
 </ul>
-<h2>Return values</h2>
+<h2 id="start_link/3-return-values" class="section-heading">
+  <a href="#start_link/3-return-values" class="hover-link"><i class="icon-link"></i></a>
+  Return values
+</h2>
+
 <p>If the server is successfully created and initialized, this function returns
 <code class="inline">{:ok, pid}</code>, where <code class="inline">pid</code> is the PID of the server. If a process with the
 specified server name already exists, this function returns
@@ -1062,7 +1082,11 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
   <section class="docstring">
     <p>Returns the <code class="inline">pid</code> or <code class="inline">{name, node}</code> of a GenServer process, or <code class="inline">nil</code> if
 no process is associated with the given name.</p>
-<h2>Examples</h2>
+<h2 id="whereis/1-examples" class="section-heading">
+  <a href="#whereis/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>For example, to lookup a server process, monitor it and send a cast to it:</p>
 <pre><code class="elixir">process = GenServer.whereis(server)
 monitor = Process.monitor(process)

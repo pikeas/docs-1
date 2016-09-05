@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Path – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Path.html" />
     
@@ -357,13 +357,21 @@ list of matches</p>
   <section class="docstring">
     <p>Converts the given path to an absolute one. Unlike
 <a href="#expand/1"><code class="inline">expand/1</code></a>, no attempt is made to resolve <code class="inline">..</code>, <code class="inline">.</code> or <code class="inline">~</code>.</p>
-<h2>Unix examples</h2>
+<h2 id="absname/1-unix-examples" class="section-heading">
+  <a href="#absname/1-unix-examples" class="hover-link"><i class="icon-link"></i></a>
+  Unix examples
+</h2>
+
 <pre><code class="elixir">Path.absname(&quot;foo&quot;)
 #=&gt; &quot;/usr/local/foo&quot;
 
 Path.absname(&quot;../x&quot;)
 #=&gt; &quot;/usr/local/../x&quot;</code></pre>
-<h2>Windows</h2>
+<h2 id="absname/1-windows" class="section-heading">
+  <a href="#absname/1-windows" class="hover-link"><i class="icon-link"></i></a>
+  Windows
+</h2>
+
 <pre><code class="elixir">Path.absname(&quot;foo&quot;).
 &quot;D:/usr/local/foo&quot;
 Path.absname(&quot;../x&quot;).
@@ -399,7 +407,11 @@ Path.absname(&quot;../x&quot;).
 an absolute path, <code class="inline">relative_to</code> is ignored. See also <a href="#relative_to/2"><code class="inline">relative_to/2</code></a>.</p>
 <p>Unlike <a href="#expand/2"><code class="inline">expand/2</code></a>, no attempt is made to
 resolve <code class="inline">..</code>, <code class="inline">.</code> or <code class="inline">~</code>.</p>
-<h2>Examples</h2>
+<h2 id="absname/2-examples" class="section-heading">
+  <a href="#absname/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.absname(&quot;foo&quot;, &quot;bar&quot;)
 &quot;bar/foo&quot;
 
@@ -434,7 +446,11 @@ iex&gt; Path.absname(&quot;../x&quot;, &quot;bar&quot;)
   <section class="docstring">
     <p>Returns the last component of the path or the path
 itself if it does not contain any directory separators.</p>
-<h2>Examples</h2>
+<h2 id="basename/1-examples" class="section-heading">
+  <a href="#basename/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.basename(&quot;foo&quot;)
 &quot;foo&quot;
 
@@ -473,7 +489,11 @@ iex&gt; Path.basename(&quot;/&quot;)
     <p>Returns the last component of <code class="inline">path</code> with the <code class="inline">extension</code>
 stripped. This function should be used to remove a specific
 extension which may, or may not, be there.</p>
-<h2>Examples</h2>
+<h2 id="basename/2-examples" class="section-heading">
+  <a href="#basename/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.basename(&quot;~/foo/bar.ex&quot;, &quot;.ex&quot;)
 &quot;bar&quot;
 
@@ -510,7 +530,11 @@ iex&gt; Path.basename(&quot;~/foo/bar.old.ex&quot;, &quot;.ex&quot;)
   
   <section class="docstring">
     <p>Returns the directory component of <code class="inline">path</code>.</p>
-<h2>Examples</h2>
+<h2 id="dirname/1-examples" class="section-heading">
+  <a href="#dirname/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.dirname(&quot;/foo/bar.ex&quot;)
 &quot;/foo&quot;
 
@@ -545,7 +569,11 @@ iex&gt; Path.dirname(&quot;/foo/bar/baz.ex&quot;)
   <section class="docstring">
     <p>Converts the path to an absolute one and expands
 any <code class="inline">.</code> and <code class="inline">..</code> characters and a leading <code class="inline">~</code>.</p>
-<h2>Examples</h2>
+<h2 id="expand/1-examples" class="section-heading">
+  <a href="#expand/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Path.expand(&quot;/foo/bar/../bar&quot;)
 #=&gt; &quot;/foo/bar&quot;</code></pre>
 
@@ -581,7 +609,11 @@ absolute path, <code class="inline">relative_to</code> is ignored.</p>
 <p>Note, that this function treats <code class="inline">path</code> with a leading <code class="inline">~</code> as
 an absolute one.</p>
 <p>The second argument is first expanded to an absolute path.</p>
-<h2>Examples</h2>
+<h2 id="expand/2-examples" class="section-heading">
+  <a href="#expand/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Assuming that the absolute path to baz is /quux/baz
 Path.expand(&quot;foo/bar/../bar&quot;, &quot;baz&quot;)
 #=&gt; &quot;/quux/baz/foo/bar&quot;
@@ -618,7 +650,11 @@ Path.expand(&quot;/foo/bar/../bar&quot;, &quot;/baz&quot;)
   
   <section class="docstring">
     <p>Returns the extension of the last component of <code class="inline">path</code>.</p>
-<h2>Examples</h2>
+<h2 id="extname/1-examples" class="section-heading">
+  <a href="#extname/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.extname(&quot;foo.erl&quot;)
 &quot;.erl&quot;
 
@@ -654,7 +690,11 @@ iex&gt; Path.extname(&quot;~/foo/bar&quot;)
     <p>Joins a list of strings.</p>
 <p>This function should be used to convert a list of strings to a path.
 Note that any trailing slash is removed on join.</p>
-<h2>Examples</h2>
+<h2 id="join/1-examples" class="section-heading">
+  <a href="#join/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.join([&quot;~&quot;, &quot;foo&quot;])
 &quot;~/foo&quot;
 
@@ -693,7 +733,11 @@ iex&gt; Path.join([&quot;/&quot;, &quot;foo&quot;, &quot;bar/&quot;])
     <p>Joins two paths.</p>
 <p>The right path will always be expanded to its relative format
 and any trailing slash is removed on join.</p>
-<h2>Examples</h2>
+<h2 id="join/2-examples" class="section-heading">
+  <a href="#join/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.join(&quot;foo&quot;, &quot;bar&quot;)
 &quot;foo/bar&quot;</code></pre>
 
@@ -724,11 +768,19 @@ and any trailing slash is removed on join.</p>
   
   <section class="docstring">
     <p>Forces the path to be a relative path.</p>
-<h2>Unix examples</h2>
+<h2 id="relative/1-unix-examples" class="section-heading">
+  <a href="#relative/1-unix-examples" class="hover-link"><i class="icon-link"></i></a>
+  Unix examples
+</h2>
+
 <pre><code class="elixir">Path.relative(&quot;/usr/local/bin&quot;)   #=&gt; &quot;usr/local/bin&quot;
 Path.relative(&quot;usr/local/bin&quot;)    #=&gt; &quot;usr/local/bin&quot;
 Path.relative(&quot;../usr/local/bin&quot;) #=&gt; &quot;../usr/local/bin&quot;</code></pre>
-<h2>Windows examples</h2>
+<h2 id="relative/1-windows-examples" class="section-heading">
+  <a href="#relative/1-windows-examples" class="hover-link"><i class="icon-link"></i></a>
+  Windows examples
+</h2>
+
 <pre><code class="elixir">Path.relative(&quot;D:/usr/local/bin&quot;) #=&gt; &quot;usr/local/bin&quot;
 Path.relative(&quot;usr/local/bin&quot;)    #=&gt; &quot;usr/local/bin&quot;
 Path.relative(&quot;D:bar.ex&quot;)         #=&gt; &quot;bar.ex&quot;
@@ -766,7 +818,11 @@ In other words, it tries to strip the <code class="inline">from</code> prefix fr
 no symlinks between the paths.</p>
 <p>In case a direct relative path cannot be found, it returns
 the original path.</p>
-<h2>Examples</h2>
+<h2 id="relative_to/2-examples" class="section-heading">
+  <a href="#relative_to/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.relative_to(&quot;/usr/local/foo&quot;, &quot;/usr/local&quot;)
 &quot;foo&quot;
 
@@ -833,7 +889,11 @@ cannot be retrieved, returns the full path.</p>
   
   <section class="docstring">
     <p>Returns the <code class="inline">path</code> with the <code class="inline">extension</code> stripped.</p>
-<h2>Examples</h2>
+<h2 id="rootname/1-examples" class="section-heading">
+  <a href="#rootname/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.rootname(&quot;/foo/bar&quot;)
 &quot;/foo/bar&quot;
 
@@ -868,7 +928,11 @@ iex&gt; Path.rootname(&quot;/foo/bar.ex&quot;)
   <section class="docstring">
     <p>Returns the <code class="inline">path</code> with the <code class="inline">extension</code> stripped. This function should be used to
 remove a specific extension which might, or might not, be there.</p>
-<h2>Examples</h2>
+<h2 id="rootname/2-examples" class="section-heading">
+  <a href="#rootname/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.rootname(&quot;/foo/bar.erl&quot;, &quot;.erl&quot;)
 &quot;/foo/bar&quot;
 
@@ -906,7 +970,11 @@ iex&gt; Path.rootname(&quot;/foo/bar.erl&quot;, &quot;.ex&quot;)
 <p>On Windows, path is split on both “\” and “/“ separators
 and the driver letter, if there is one, is always returned
 in lowercase.</p>
-<h2>Examples</h2>
+<h2 id="split/1-examples" class="section-heading">
+  <a href="#split/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Path.split(&quot;&quot;)
 []
 
@@ -943,13 +1011,21 @@ iex&gt; Path.split(&quot;/foo/bar&quot;)
   
   <section class="docstring">
     <p>Returns the path type.</p>
-<h2>Unix examples</h2>
+<h2 id="type/1-unix-examples" class="section-heading">
+  <a href="#type/1-unix-examples" class="hover-link"><i class="icon-link"></i></a>
+  Unix examples
+</h2>
+
 <pre><code class="elixir">Path.type(&quot;/&quot;)                #=&gt; :absolute
 Path.type(&quot;/usr/local/bin&quot;)   #=&gt; :absolute
 Path.type(&quot;usr/local/bin&quot;)    #=&gt; :relative
 Path.type(&quot;../usr/local/bin&quot;) #=&gt; :relative
 Path.type(&quot;~/file&quot;)           #=&gt; :relative</code></pre>
-<h2>Windows examples</h2>
+<h2 id="type/1-windows-examples" class="section-heading">
+  <a href="#type/1-windows-examples" class="hover-link"><i class="icon-link"></i></a>
+  Windows examples
+</h2>
+
 <pre><code class="elixir">Path.type(&quot;D:/usr/local/bin&quot;) #=&gt; :absolute
 Path.type(&quot;usr/local/bin&quot;)    #=&gt; :relative
 Path.type(&quot;D:bar.ex&quot;)         #=&gt; :volumerelative
@@ -1010,7 +1086,11 @@ exactly the same character in the same position will match. Note
 that matching is case-sensitive; i.e. “a” will not match “A”.</p>
 <p>By default, the patterns <code class="inline">*</code> and <code class="inline">?</code> do not match files starting
 with a dot <code class="inline">.</code> unless <code class="inline">match_dot: true</code> is given in <code class="inline">opts</code>.</p>
-<h2>Examples</h2>
+<h2 id="wildcard/2-examples" class="section-heading">
+  <a href="#wildcard/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Imagine you have a directory called <code class="inline">projects</code> with three Elixir projects
 inside of it: <code class="inline">elixir</code>, <code class="inline">ex_doc</code> and <code class="inline">dynamo</code>. You can find all <code class="inline">.beam</code> files
 inside the <code class="inline">ebin</code> directory of each project as follows:</p>

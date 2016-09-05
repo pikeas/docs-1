@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Base – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Base.html" />
     
@@ -380,7 +380,11 @@ safe alphabet</p>
   
   <section class="docstring">
     <p>Decodes a base 16 encoded string into a binary string.</p>
-<h2>Options</h2>
+<h2 id="decode16/2-options" class="section-heading">
+  <a href="#decode16/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to accept when decoding
@@ -395,7 +399,11 @@ safe alphabet</p>
 <li><code class="inline">:mixed</code> - allow mixed case characters
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="decode16/2-examples" class="section-heading">
+  <a href="#decode16/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.decode16(&quot;666F6F626172&quot;)
 {:ok, &quot;foobar&quot;}
 
@@ -432,7 +440,11 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
   
   <section class="docstring">
     <p>Decodes a base 16 encoded string into a binary string.</p>
-<h2>Options</h2>
+<h2 id="decode16!/2-options" class="section-heading">
+  <a href="#decode16!/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to accept when decoding
@@ -449,7 +461,11 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
 </ul>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
-<h2>Examples</h2>
+<h2 id="decode16!/2-examples" class="section-heading">
+  <a href="#decode16!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.decode16!(&quot;666F6F626172&quot;)
 &quot;foobar&quot;
 
@@ -486,7 +502,11 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
   
   <section class="docstring">
     <p>Decodes a base 32 encoded string into a binary string.</p>
-<h2>Options</h2>
+<h2 id="decode32/2-options" class="section-heading">
+  <a href="#decode32/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to accept when decoding
@@ -510,7 +530,11 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
 <li><code class="inline">false</code> - ignore padding from the input string
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="decode32/2-examples" class="section-heading">
+  <a href="#decode32/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.decode32(&quot;MZXW6YTBOI======&quot;)
 {:ok, &quot;foobar&quot;}
 
@@ -552,7 +576,11 @@ iex&gt; Base.decode32(&quot;MZXW6YTBOI&quot;, padding: false)
     <p>Decodes a base 32 encoded string into a binary string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
-<h2>Options</h2>
+<h2 id="decode32!/2-options" class="section-heading">
+  <a href="#decode32!/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to accept when decoding
@@ -576,7 +604,11 @@ a non-alphabet character is present in the string.</p>
 <li><code class="inline">false</code> - ignore padding from the input string
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="decode32!/2-examples" class="section-heading">
+  <a href="#decode32!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.decode32!(&quot;MZXW6YTBOI======&quot;)
 &quot;foobar&quot;
 
@@ -620,7 +652,11 @@ iex&gt; Base.decode32!(&quot;MZXW6YTBOI&quot;, padding: false)
 whitespace characters in the input string.</p>
 <p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
 the input string.</p>
-<h2>Examples</h2>
+<h2 id="decode64/2-examples" class="section-heading">
+  <a href="#decode64/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.decode64(&quot;Zm9vYmFy&quot;)
 {:ok, &quot;foobar&quot;}
 
@@ -666,7 +702,11 @@ whitespace characters in the input string.</p>
 the input string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
-<h2>Examples</h2>
+<h2 id="decode64!/2-examples" class="section-heading">
+  <a href="#decode64!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.decode64!(&quot;Zm9vYmFy&quot;)
 &quot;foobar&quot;
 
@@ -706,7 +746,11 @@ iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
   
   <section class="docstring">
     <p>Encodes a binary string into a base 16 encoded string.</p>
-<h2>Options</h2>
+<h2 id="encode16/2-options" class="section-heading">
+  <a href="#encode16/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to use when encoding
@@ -719,7 +763,11 @@ iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
 <li><code class="inline">:lower</code> - use lower case characters
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="encode16/2-examples" class="section-heading">
+  <a href="#encode16/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.encode16(&quot;foobar&quot;)
 &quot;666F6F626172&quot;
 
@@ -753,7 +801,11 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
   
   <section class="docstring">
     <p>Encodes a binary string into a base 32 encoded string.</p>
-<h2>Options</h2>
+<h2 id="encode32/2-options" class="section-heading">
+  <a href="#encode32/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to use when encoding
@@ -775,7 +827,11 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
 <li><code class="inline">false</code> - omit padding from the output string
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="encode32/2-examples" class="section-heading">
+  <a href="#encode32/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.encode32(&quot;foobar&quot;)
 &quot;MZXW6YTBOI======&quot;
 
@@ -814,7 +870,11 @@ iex&gt; Base.encode32(&quot;foobar&quot;, padding: false)
     <p>Encodes a binary string into a base 64 encoded string.</p>
 <p>Accepts <code class="inline">padding: false</code> option which will omit padding from
 the output string.</p>
-<h2>Examples</h2>
+<h2 id="encode64/2-examples" class="section-heading">
+  <a href="#encode64/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.encode64(&quot;foobar&quot;)
 &quot;Zm9vYmFy&quot;
 
@@ -854,7 +914,11 @@ iex&gt; Base.encode64(&quot;foob&quot;, padding: false)
   <section class="docstring">
     <p>Decodes a base 32 encoded string with extended hexadecimal alphabet
 into a binary string.</p>
-<h2>Options</h2>
+<h2 id="hex_decode32/2-options" class="section-heading">
+  <a href="#hex_decode32/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to accept when decoding
@@ -878,7 +942,11 @@ into a binary string.</p>
 <li><code class="inline">false</code> - ignore padding from the input string
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="hex_decode32/2-examples" class="section-heading">
+  <a href="#hex_decode32/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8======&quot;)
 {:ok, &quot;foobar&quot;}
 
@@ -921,7 +989,11 @@ iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8&quot;, padding: false)
 into a binary string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
-<h2>Options</h2>
+<h2 id="hex_decode32!/2-options" class="section-heading">
+  <a href="#hex_decode32!/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to accept when decoding
@@ -945,7 +1017,11 @@ a non-alphabet character is present in the string.</p>
 <li><code class="inline">false</code> - ignore padding from the input string
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="hex_decode32!/2-examples" class="section-heading">
+  <a href="#hex_decode32!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8======&quot;)
 &quot;foobar&quot;
 
@@ -986,7 +1062,11 @@ iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8&quot;, padding: false)
   <section class="docstring">
     <p>Encodes a binary string into a base 32 encoded string with an
 extended hexadecimal alphabet.</p>
-<h2>Options</h2>
+<h2 id="hex_encode32/2-options" class="section-heading">
+  <a href="#hex_encode32/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:case</code> - specifies the character case to use when encoding
@@ -1008,7 +1088,11 @@ extended hexadecimal alphabet.</p>
 <li><code class="inline">false</code> - omit padding from the output string
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="hex_encode32/2-examples" class="section-heading">
+  <a href="#hex_encode32/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.hex_encode32(&quot;foobar&quot;)
 &quot;CPNMUOJ1E8======&quot;
 
@@ -1052,7 +1136,11 @@ into a binary string.</p>
 whitespace characters in the input string.</p>
 <p>Accepts <code class="inline">padding: false</code> option which will ignore padding from
 the input string.</p>
-<h2>Examples</h2>
+<h2 id="url_decode64/2-examples" class="section-heading">
+  <a href="#url_decode64/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.url_decode64(&quot;_3_-_A==&quot;)
 {:ok, &lt;&lt;255, 127, 254, 252&gt;&gt;}
 
@@ -1096,7 +1184,11 @@ whitespace characters in the input string.</p>
 the input string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
 a non-alphabet character is present in the string.</p>
-<h2>Examples</h2>
+<h2 id="url_decode64!/2-examples" class="section-heading">
+  <a href="#url_decode64!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.url_decode64!(&quot;_3_-_A==&quot;)
 &lt;&lt;255, 127, 254, 252&gt;&gt;
 
@@ -1136,7 +1228,11 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A&quot;, padding: false)
 safe alphabet.</p>
 <p>Accepts <code class="inline">padding: false</code> option which will omit padding from
 the output string.</p>
-<h2>Examples</h2>
+<h2 id="url_encode64/2-examples" class="section-heading">
+  <a href="#url_encode64/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Base.url_encode64(&lt;&lt;255, 127, 254, 252&gt;&gt;)
 &quot;_3_-_A==&quot;
 

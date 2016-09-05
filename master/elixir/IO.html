@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>IO – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/IO.html" />
     
@@ -505,7 +505,11 @@ as it will return the wrong result.</p>
 lists and strings) into a string.</p>
 <p>In case the conversion fails, it raises an <a href="UnicodeConversionError.html"><code class="inline">UnicodeConversionError</code></a>.
 If a string is given, it returns the string itself.</p>
-<h2>Examples</h2>
+<h2 id="chardata_to_string/1-examples" class="section-heading">
+  <a href="#chardata_to_string/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; IO.chardata_to_string([0x00E6, 0x00DF])
 &quot;æß&quot;
 
@@ -638,7 +642,11 @@ for instance, <code class="inline">{:error, :estale}</code> if reading from an
 NFS volume
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="gets/2-examples" class="section-heading">
+  <a href="#gets/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>To display “What is your name?” as a prompt and await user input:</p>
 <pre><code class="elixir">IO.gets &quot;What is your name?\n&quot;</code></pre>
 
@@ -680,7 +688,11 @@ passing the <code class="inline">:width</code> option.</p>
 option to easily distinguish it from other <a href="IO.html#inspect/2"><code class="inline">IO.inspect/2</code></a> calls.
 The label will be printed before the inspected <code class="inline">item</code>.</p>
 <p>See <a href="Inspect.Opts.html"><code class="inline">Inspect.Opts</code></a> for a full list of remaining formatting options.</p>
-<h2>Examples</h2>
+<h2 id="inspect/2-examples" class="section-heading">
+  <a href="#inspect/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">IO.inspect &lt;&lt;0, 1, 2&gt;&gt;, width: 40</code></pre>
 <p>Prints:</p>
 <pre><code class="elixir">&lt;&lt;0, 1, 2&gt;&gt;</code></pre>
@@ -755,7 +767,11 @@ after: [2, 4, 6]</code></pre>
   <section class="docstring">
     <p>Returns the size of an iodata.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="iodata_length/1-examples" class="section-heading">
+  <a href="#iodata_length/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; IO.iodata_length([1, 2 | &lt;&lt;3, 4&gt;&gt;])
 4</code></pre>
 
@@ -794,7 +810,11 @@ to convert from a charlist to a string (UTF-8 encoded), please
 use <a href="#chardata_to_string/1"><code class="inline">chardata_to_string/1</code></a> instead.</p>
 <p>If this function receives a binary, the same binary is returned.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="iodata_to_binary/1-examples" class="section-heading">
+  <a href="#iodata_to_binary/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; bin1 = &lt;&lt;1, 2, 3&gt;&gt;
 iex&gt; bin2 = &lt;&lt;4, 5&gt;&gt;
 iex&gt; bin3 = &lt;&lt;6&gt;&gt;
@@ -916,7 +936,11 @@ and write.</p>
 <a href="IO.html#binstream/2"><code class="inline">IO.binstream/2</code></a> to handle the IO as a raw binary.</p>
 <p>Note that an IO stream has side effects and every time
 you go over the stream you may get different results.</p>
-<h2>Examples</h2>
+<h2 id="stream/2-examples" class="section-heading">
+  <a href="#stream/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Here is an example on how we mimic an echo server
 from the command line:</p>
 <pre><code class="elixir">Enum.each IO.stream(:stdio, :line), &amp;IO.write(&amp;1)</code></pre>
@@ -949,7 +973,11 @@ from the command line:</p>
   <section class="docstring">
     <p>Writes a <code class="inline">message</code> to stderr, along with the current stacktrace.</p>
 <p>It returns <code class="inline">:ok</code> if it succeeds.</p>
-<h2>Examples</h2>
+<h2 id="warn/1-examples" class="section-heading">
+  <a href="#warn/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">IO.warn &quot;variable bar is unused&quot;
 #=&gt; warning: variable bar is unused
 #=&gt;   (iex) evaluator.ex:108: IEx.Evaluator.eval/4</code></pre>
@@ -985,7 +1013,11 @@ from the command line:</p>
 (in case —warnings-as-errors was enabled). It returns <code class="inline">:ok</code>
 if it succeeds.</p>
 <p>An empty list can be passed to avoid stacktrace printing.</p>
-<h2>Examples</h2>
+<h2 id="warn/2-examples" class="section-heading">
+  <a href="#warn/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">stacktrace = [{MyApp, :main, 1, [file: &#39;my_app.ex&#39;, line: 4]}]
 IO.warn &quot;variable bar is unused&quot;, stacktrace
 #=&gt; warning: variable bar is unused
@@ -1020,7 +1052,11 @@ IO.warn &quot;variable bar is unused&quot;, stacktrace
     <p>Writes <code class="inline">item</code> to the given <code class="inline">device</code>.</p>
 <p>By default the <code class="inline">device</code> is the standard output.
 It returns <code class="inline">:ok</code> if it succeeds.</p>
-<h2>Examples</h2>
+<h2 id="write/2-examples" class="section-heading">
+  <a href="#write/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">IO.write &quot;sample&quot;
 #=&gt; sample
 

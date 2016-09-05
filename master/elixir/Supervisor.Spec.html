@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Supervisor.Spec – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Supervisor.Spec.html" />
     
@@ -408,9 +408,17 @@ supervise and a set of options.</p>
 <p>Returns a tuple containing the supervisor specification. This tuple can be
 used as the return value of the <code class="inline">init/1</code> callback when implementing a
 module-based supervisor.</p>
-<h2>Examples</h2>
+<h2 id="supervise/2-examples" class="section-heading">
+  <a href="#supervise/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">supervise(children, strategy: :one_for_one)</code></pre>
-<h2>Options</h2>
+<h2 id="supervise/2-options" class="section-heading">
+  <a href="#supervise/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><p><code class="inline">:strategy</code> - the restart strategy option. It can be either
 <code class="inline">:one_for_one</code>, <code class="inline">:rest_for_one</code>, <code class="inline">:one_for_all</code>, or

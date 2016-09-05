@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>File – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/File.html" />
     
@@ -941,7 +941,11 @@ for a given <code class="inline">file</code>. Returns <code class="inline">:ok</
   <section class="docstring">
     <p>Changes the <code class="inline">mode</code> for a given <code class="inline">file</code>.</p>
 <p>Returns <code class="inline">:ok</code> on success, or <code class="inline">{:error, reason}</code> on failure.</p>
-<h2>Permissions</h2>
+<h2 id="chmod/2-permissions" class="section-heading">
+  <a href="#chmod/2-permissions" class="hover-link"><i class="icon-link"></i></a>
+  Permissions
+</h2>
+
 <ul>
 <li>0o400 - read permission: owner
 </li>
@@ -1286,7 +1290,11 @@ specific order. It returns <code class="inline">{:error, reason, file}</code> ot
 <p>Note: The command <code class="inline">cp</code> in Unix systems behaves differently
 depending if <code class="inline">destination</code> is an existing directory or not.
 We have chosen to explicitly disallow this behaviour.</p>
-<h2>Examples</h2>
+<h2 id="cp_r/3-examples" class="section-heading">
+  <a href="#cp_r/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Copies file &quot;a.txt&quot; to &quot;b.txt&quot;
 File.cp_r &quot;a.txt&quot;, &quot;b.txt&quot;
 
@@ -1446,7 +1454,11 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
     <p>Returns <code class="inline">true</code> if the given path exists.
 It can be regular file, directory, socket,
 symbolic link, named pipe or device file.</p>
-<h2>Examples</h2>
+<h2 id="exists?/1-examples" class="section-heading">
+  <a href="#exists?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">File.exists?(&quot;test/&quot;)
 #=&gt; true
 
@@ -1569,7 +1581,11 @@ in case of an error.</p>
 the <code class="inline">type</code> to <code class="inline">:symlink</code> and returns a <a href="File.Stat.html"><code class="inline">File.Stat</code></a> struct for the link. For any
 other file, returns exactly the same values as <a href="#stat/2"><code class="inline">stat/2</code></a>.</p>
 <p>For more details, see <a href="http://www.erlang.org/doc/man/file.html#read_link_info-2"><code class="inline">:file.read_link_info/2</code></a>.</p>
-<h2>Options</h2>
+<h2 id="lstat/2-options" class="section-heading">
+  <a href="#lstat/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:time</code> - configures how the file timestamps are returned
@@ -1847,7 +1863,11 @@ will be closed and the process itself will be terminated.</p>
 <li><code class="inline">{:error, reason}</code> - the file could not be opened.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="open/2-examples" class="section-heading">
+  <a href="#open/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">{:ok, file} = File.open(&quot;foo.tar.gz&quot;, [:read, :compressed])
 IO.read(file, :line)
 File.close(file)</code></pre>
@@ -1890,7 +1910,11 @@ if there was an error when executing the function.</p>
 which is usually the case unless the <code class="inline">:delayed_write</code> option
 is given. For this reason, we do not recommend passing
 <code class="inline">:delayed_write</code> to this function.</p>
-<h2>Examples</h2>
+<h2 id="open/3-examples" class="section-heading">
+  <a href="#open/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">File.open(&quot;file.txt&quot;, [:read, :write], fn(file) -&gt;
   IO.read(file, :line)
 end)</code></pre>
@@ -2056,7 +2080,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
   
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the path is a regular file.</p>
-<h2>Examples</h2>
+<h2 id="regular?/1-examples" class="section-heading">
+  <a href="#regular?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">File.regular? __ENV__.file #=&gt; true</code></pre>
 
   </section>
@@ -2093,7 +2121,11 @@ its directory.</p>
 <p>Note: The command <code class="inline">mv</code> in Unix systems behaves differently depending
 if <code class="inline">source</code> is a file and the <code class="inline">destination</code> is an existing directory.
 We have chosen to explicitly disallow this behaviour.</p>
-<h2>Examples</h2>
+<h2 id="rename/2-examples" class="section-heading">
+  <a href="#rename/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Rename file &quot;a.txt&quot; to &quot;b.txt&quot;
 File.rename &quot;a.txt&quot;, &quot;b.txt&quot;
 
@@ -2143,7 +2175,11 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
 <li><code class="inline">:einval</code>  - filename had an improper type, such as tuple
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="rm/1-examples" class="section-heading">
+  <a href="#rm/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">File.rm(&quot;file.txt&quot;)
 #=&gt; :ok
 
@@ -2212,7 +2248,11 @@ files are simply ignored (i.e. doesn’t make this function fail).</p>
 <p>Returns <code class="inline">{:ok, files_and_directories}</code> with all files and
 directories removed in no specific order, <code class="inline">{:error, reason, file}</code>
 otherwise.</p>
-<h2>Examples</h2>
+<h2 id="rm_rf/1-examples" class="section-heading">
+  <a href="#rm_rf/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">File.rm_rf &quot;samples&quot;
 #=&gt; {:ok, [&quot;samples&quot;, &quot;samples/1.txt&quot;]}
 
@@ -2276,7 +2316,11 @@ otherwise the list of files or directories removed.</p>
   <section class="docstring">
     <p>Tries to delete the dir at <code class="inline">path</code>.
 Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs.</p>
-<h2>Examples</h2>
+<h2 id="rmdir/1-examples" class="section-heading">
+  <a href="#rmdir/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">File.rmdir(&#39;tmp_dir&#39;)
 #=&gt; :ok
 
@@ -2343,7 +2387,11 @@ File.rmdir(&#39;file.txt&#39;)
 returns a <code class="inline">{:ok, info}</code> tuple, where info is a
 <a href="File.Stat.html"><code class="inline">File.Stat</code></a> struct. Returns <code class="inline">{:error, reason}</code> with
 the same reasons as <a href="#read/1"><code class="inline">read/1</code></a> if a failure occurs.</p>
-<h2>Options</h2>
+<h2 id="stat/2-options" class="section-heading">
+  <a href="#stat/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>The accepted options are:</p>
 <ul>
 <li><code class="inline">:time</code> - configures how the file timestamps are returned
@@ -2417,7 +2465,11 @@ streaming, by <code class="inline">:line</code> (default) or by a given number o
 <a href="File.html#open!/2"><code class="inline">File.open!/2</code></a>. Note that the file is automatically opened each time streaming
 begins. There is no need to pass <code class="inline">:read</code> and <code class="inline">:write</code> modes, as those are
 automatically set by Elixir.</p>
-<h2>Raw files</h2>
+<h2 id="stream!/3-raw-files" class="section-heading">
+  <a href="#stream!/3-raw-files" class="hover-link"><i class="icon-link"></i></a>
+  Raw files
+</h2>
+
 <p>Since Elixir controls when the streamed file is opened, the underlying
 device cannot be shared and as such it is convenient to open the file
 in raw mode for performance reasons. Therefore, Elixir <strong>will</strong> open
@@ -2428,7 +2480,11 @@ the underlying stream will use <a href="IO.html#write/2"><code class="inline">IO
 to convert the data. See <a href="IO.html#binwrite/2"><code class="inline">IO.binwrite/2</code></a> and <a href="IO.html#write/2"><code class="inline">IO.write/2</code></a> .</p>
 <p>One may also consider passing the <code class="inline">:delayed_write</code> option if the stream
 is meant to be written to under a tight loop.</p>
-<h2>Examples</h2>
+<h2 id="stream!/3-examples" class="section-heading">
+  <a href="#stream!/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Read in 2048 byte chunks rather than lines
 File.stream!(&quot;./test/test.data&quot;, [], 2048)
 #=&gt;  %File.Stream{line_or_bytes: 2048, modes: [:raw, :read_ahead, :binary],

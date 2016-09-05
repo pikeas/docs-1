@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Exception – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Exception.html" />
     
@@ -463,7 +463,11 @@ and stacktrace.</p>
   <section class="docstring">
     <p>Receives an anonymous function and arity and formats it as
 shown in stacktraces. The arity may also be a list of arguments.</p>
-<h2>Examples</h2>
+<h2 id="format_fa/2-examples" class="section-heading">
+  <a href="#format_fa/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Exception.format_fa(fn -&gt; nil end, 1)
 #=&gt; &quot;#Function&lt;...&gt;/1&quot;</code></pre>
 
@@ -486,7 +490,11 @@ shown in stacktraces. The arity may also be a list of arguments.</p>
   <section class="docstring">
     <p>Formats the given <code class="inline">file</code> and <code class="inline">line</code> as shown in stacktraces.
 If any of the values are <code class="inline">nil</code>, they are omitted.</p>
-<h2>Examples</h2>
+<h2 id="format_file_line/3-examples" class="section-heading">
+  <a href="#format_file_line/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Exception.format_file_line(&quot;foo&quot;, 1)
 &quot;foo:1:&quot;
 
@@ -516,7 +524,11 @@ iex&gt; Exception.format_file_line(nil, nil)
     <p>Receives a module, fun and arity and formats it
 as shown in stacktraces. The arity may also be a list
 of arguments.</p>
-<h2>Examples</h2>
+<h2 id="format_mfa/3-examples" class="section-heading">
+  <a href="#format_mfa/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Exception.format_mfa Foo, :bar, 1
 &quot;Foo.bar/1&quot;
 

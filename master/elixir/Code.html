@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Code – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Code.html" />
     
@@ -342,7 +342,11 @@ directories the Erlang VM uses for finding module code</p>
 finding module code.</p>
 <p>The path is expanded with <a href="Path.html#expand/1"><code class="inline">Path.expand/1</code></a> before being appended.
 If this path does not exist, an error is returned.</p>
-<h2>Examples</h2>
+<h2 id="append_path/1-examples" class="section-heading">
+  <a href="#append_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.append_path(&quot;.&quot;) #=&gt; true
 
 Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</code></pre>
@@ -366,7 +370,11 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
   <section class="docstring">
     <p>Returns a list with the available compiler options.</p>
 <p>See <a href="Code.html#compiler_options/1"><code class="inline">Code.compiler_options/1</code></a> for more info.</p>
-<h2>Examples</h2>
+<h2 id="available_compiler_options/0-examples" class="section-heading">
+  <a href="#available_compiler_options/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Code.available_compiler_options
 [:docs, :debug_info, :ignore_module_conflict, :relative_paths, :warnings_as_errors]</code></pre>
 
@@ -432,7 +440,11 @@ and the second one is its byte code (as a binary).</p>
   <section class="docstring">
     <p>Gets the compilation options from the code server.</p>
 <p>Check <a href="#compiler_options/1"><code class="inline">compiler_options/1</code></a> for more information.</p>
-<h2>Examples</h2>
+<h2 id="compiler_options/0-examples" class="section-heading">
+  <a href="#compiler_options/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.compiler_options
 #=&gt; %{debug_info: true, docs: true,
       warnings_as_errors: false, ignore_module_conflict: false}</code></pre>
@@ -477,7 +489,11 @@ generated
 </li>
 </ul>
 <p>It returns the new list of compiler options.</p>
-<h2>Examples</h2>
+<h2 id="compiler_options/1-examples" class="section-heading">
+  <a href="#compiler_options/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.compiler_options(debug_info: true)
 #=&gt; %{debug_info: true, docs: true,
       warnings_as_errors: false, ignore_module_conflict: false}</code></pre>
@@ -503,7 +519,11 @@ generated
 directories the Erlang VM uses for finding module code.</p>
 <p>The path is expanded with <a href="Path.html#expand/1"><code class="inline">Path.expand/1</code></a> before being deleted. If the
 path does not exist it returns <code class="inline">false</code>.</p>
-<h2>Examples</h2>
+<h2 id="delete_path/1-examples" class="section-heading">
+  <a href="#delete_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.prepend_path(&quot;.&quot;)
 Code.delete_path(&quot;.&quot;) #=&gt; true
 
@@ -579,7 +599,11 @@ Returns <code class="inline">false</code> otherwise.</p>
 was not yet loaded, it tries to load it.</p>
 <p>If it succeeds loading the module, it returns <code class="inline">{:module, module}</code>.
 If not, returns <code class="inline">{:error, reason}</code> with the error reason.</p>
-<h2>Code loading on the Erlang VM</h2>
+<h2 id="ensure_loaded/1-code-loading-on-the-erlang-vm" class="section-heading">
+  <a href="#ensure_loaded/1-code-loading-on-the-erlang-vm" class="hover-link"><i class="icon-link"></i></a>
+  Code loading on the Erlang VM
+</h2>
+
 <p>Erlang has two modes to load code: interactive and embedded.</p>
 <p>By default, the Erlang VM runs in interactive mode, where modules
 are loaded as needed. In embedded mode the opposite happens, as all
@@ -588,7 +612,11 @@ modules need to be loaded upfront or explicitly.</p>
 before using it and allows one to react accordingly. For example, the <a href="URI.html"><code class="inline">URI</code></a>
 module uses this function to check if a specific parser exists for a given
 URI scheme.</p>
-<h2>Code.ensure_compiled/1</h2>
+<h2 id="ensure_loaded/1-code-ensure_compiled-1" class="section-heading">
+  <a href="#ensure_loaded/1-code-ensure_compiled-1" class="hover-link"><i class="icon-link"></i></a>
+  Code.ensure_compiled/1
+</h2>
+
 <p>Elixir also contains an <a href="#ensure_compiled/1"><code class="inline">ensure_compiled/1</code></a> function that is a
 superset of <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1</code></a>.</p>
 <p>Since Elixir’s compilation happens in parallel, in some situations
@@ -599,7 +627,11 @@ module we are depending on is available.</p>
 <p>In most cases, <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1</code></a> is enough. <a href="#ensure_compiled/1"><code class="inline">ensure_compiled/1</code></a>
 must be used in rare cases, usually involving macros that need to
 invoke a module for callback information.</p>
-<h2>Examples</h2>
+<h2 id="ensure_loaded/1-examples" class="section-heading">
+  <a href="#ensure_loaded/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Code.ensure_loaded(Atom)
 {:module, Atom}
 
@@ -627,7 +659,11 @@ iex&gt; Code.ensure_loaded(DoesNotExist)
 <p>Similar to <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1</code></a>, but returns <code class="inline">true</code> if the module
 is already loaded or was successfully loaded. Returns <code class="inline">false</code>
 otherwise.</p>
-<h2>Examples</h2>
+<h2 id="ensure_loaded?/1-examples" class="section-heading">
+  <a href="#ensure_loaded?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Code.ensure_loaded?(Atom)
 true</code></pre>
 
@@ -673,7 +709,11 @@ evaluation result and its bindings.</p>
   <section class="docstring">
     <p>Evaluates the quoted contents.</p>
 <p>See <a href="#eval_string/3"><code class="inline">eval_string/3</code></a> for a description of arguments and return values.</p>
-<h2>Examples</h2>
+<h2 id="eval_quoted/3-examples" class="section-heading">
+  <a href="#eval_quoted/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; contents = quote(do: var!(a) + var!(b))
 iex&gt; Code.eval_quoted(contents, [a: 1, b: 2], file: __ENV__.file, line: __ENV__.line)
 {3, [a: 1, b: 2]}</code></pre>
@@ -736,7 +776,11 @@ If an error occurs while evaluating <code class="inline">string</code> an except
 <p><code class="inline">binding</code> is a keyword list with the value of all variable bindings
 after evaluating <code class="inline">string</code>. The binding key is usually an atom, but it
 may be a tuple for variables defined in a different context.</p>
-<h2>Examples</h2>
+<h2 id="eval_string/3-examples" class="section-heading">
+  <a href="#eval_string/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Code.eval_string(&quot;a + b&quot;, [a: 1, b: 2], file: __ENV__.file, line: __ENV__.line)
 {3, [a: 1, b: 2]}
 
@@ -792,7 +836,11 @@ and <code class="inline">:type_docs</code>.
 </li>
 </ul>
 <p>If the module cannot be found, it returns <code class="inline">nil</code>.</p>
-<h2>Examples</h2>
+<h2 id="get_docs/2-examples" class="section-heading">
+  <a href="#get_docs/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Get the module documentation
 iex&gt; {_line, text} = Code.get_docs(Atom, :moduledoc)
 iex&gt; String.split(text, &quot;\n&quot;) |&gt; Enum.at(0)
@@ -827,7 +875,11 @@ each module defined in the file.</p>
 <p>Notice that if <code class="inline">load_file</code> is invoked by different processes concurrently,
 the target file will be loaded concurrently many times. Check <a href="#require_file/2"><code class="inline">require_file/2</code></a>
 if you don’t want a file to be loaded concurrently.</p>
-<h2>Examples</h2>
+<h2 id="load_file/2-examples" class="section-heading">
+  <a href="#load_file/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.load_file(&quot;eex_test.exs&quot;, &quot;../eex/test&quot;) |&gt; List.first
 #=&gt; {EExTest.Compiled, &lt;&lt;70, 79, 82, 49, ...&gt;&gt;}</code></pre>
 
@@ -849,7 +901,11 @@ if you don’t want a file to be loaded concurrently.</p>
   
   <section class="docstring">
     <p>Lists all loaded files.</p>
-<h2>Examples</h2>
+<h2 id="loaded_files/0-examples" class="section-heading">
+  <a href="#loaded_files/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.require_file(&quot;../eex/test/eex_test.exs&quot;)
 List.first(Code.loaded_files) =~ &quot;eex_test.exs&quot; #=&gt; true</code></pre>
 
@@ -875,7 +931,11 @@ List.first(Code.loaded_files) =~ &quot;eex_test.exs&quot; #=&gt; true</code></pr
 module code.</p>
 <p>The path is expanded with <a href="Path.html#expand/1"><code class="inline">Path.expand/1</code></a> before being prepended.
 If this path does not exist, an error is returned.</p>
-<h2>Examples</h2>
+<h2 id="prepend_path/1-examples" class="section-heading">
+  <a href="#prepend_path/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Code.prepend_path(&quot;.&quot;) #=&gt; true
 
 Code.prepend_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</code></pre>
@@ -908,7 +968,11 @@ N times with a given file, it will be loaded only once. The first process to
 call <code class="inline">require_file</code> will get the list of loaded modules, others will get <code class="inline">nil</code>.</p>
 <p>Check <a href="#load_file/2"><code class="inline">load_file/2</code></a> if you want a file to be loaded multiple times. See also
 <a href="#unload_files/1"><code class="inline">unload_files/1</code></a></p>
-<h2>Examples</h2>
+<h2 id="require_file/2-examples" class="section-heading">
+  <a href="#require_file/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>If the code is already loaded, it returns <code class="inline">nil</code>:</p>
 <pre><code class="elixir">Code.require_file(&quot;eex_test.exs&quot;, &quot;../eex/test&quot;) #=&gt; nil</code></pre>
 <p>If the code is not loaded yet, it returns the same as <a href="#load_file/2"><code class="inline">load_file/2</code></a>:</p>
@@ -935,7 +999,11 @@ call <code class="inline">require_file</code> will get the list of loaded module
     <p>Converts the given string to its quoted form.</p>
 <p>Returns <code class="inline">{:ok, quoted_form}</code>
 if it succeeds, <code class="inline">{:error, {line, error, token}}</code> otherwise.</p>
-<h2>Options</h2>
+<h2 id="string_to_quoted/2-options" class="section-heading">
+  <a href="#string_to_quoted/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><p><code class="inline">:file</code> - the filename to be used in stacktraces
 and the file reported in the <code class="inline">__ENV__</code> variable</p>
@@ -946,7 +1014,11 @@ and the file reported in the <code class="inline">__ENV__</code> variable</p>
 when non-existing atoms are found by the tokenizer
 </li>
 </ul>
-<h2>Macro.to_string/2</h2>
+<h2 id="string_to_quoted/2-macro-to_string-2" class="section-heading">
+  <a href="#string_to_quoted/2-macro-to_string-2" class="hover-link"><i class="icon-link"></i></a>
+  Macro.to_string/2
+</h2>
+
 <p>The opposite of converting a string to its quoted form is
 <a href="Macro.html#to_string/2"><code class="inline">Macro.to_string/2</code></a>, which converts a quoted form to a string/binary
 representation.</p>
@@ -996,7 +1068,11 @@ in case a token is missing (usually because the expression is incomplete),
 <p>The modules defined in the file are not removed;
 calling this function only removes them from the list,
 allowing them to be required again.</p>
-<h2>Examples</h2>
+<h2 id="unload_files/1-examples" class="section-heading">
+  <a href="#unload_files/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Load EEx test code, unload file, check for functions still available
 Code.load_file(&quot;../eex/test/eex_test.exs&quot;)
 Code.unload_files(Code.loaded_files)

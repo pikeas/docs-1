@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>Task.Supervisor – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Task.Supervisor.html" />
     
@@ -303,7 +303,11 @@ more information and <a href="#async_nolink/2"><code class="inline">async_nolink
 <p>The <code class="inline">supervisor</code> must be a reference as defined in <a href="Task.Supervisor.html#content"><code class="inline">Task.Supervisor</code></a>.
 The task won’t be linked to the caller, see <a href="Task.html#async/3"><code class="inline">Task.async/3</code></a> for
 more information.</p>
-<h2>Compatibility with OTP behaviours</h2>
+<h2 id="async_nolink/2-compatibility-with-otp-behaviours" class="section-heading">
+  <a href="#async_nolink/2-compatibility-with-otp-behaviours" class="hover-link"><i class="icon-link"></i></a>
+  Compatibility with OTP behaviours
+</h2>
+
 <p>If you create a task using <code class="inline">async_nolink</code> inside an OTP behaviour
 like <a href="GenServer.html"><code class="inline">GenServer</code></a>, you should match on the message coming from the
 task inside your <code class="inline">handle_info</code> callback.</p>

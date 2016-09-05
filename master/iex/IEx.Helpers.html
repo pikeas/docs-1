@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>IEx.Helpers – IEx v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/iex/IEx.Helpers.html" />
     
@@ -431,7 +431,11 @@ the compiled code to (defaults to the current directory). When compiling
 one file, there is no need to wrap it in a list.</p>
 <p>It returns the names of the compiled modules.</p>
 <p>If you want to recompile an existing module, check <a href="#r/1"><code class="inline">r/1</code></a> instead.</p>
-<h2>Examples</h2>
+<h2 id="c/2-examples" class="section-heading">
+  <a href="#c/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">c [&quot;foo.ex&quot;, &quot;bar.ex&quot;], &quot;ebin&quot;
 #=&gt; [Foo, Bar]
 
@@ -535,7 +539,11 @@ unavailable on Windows machines.</p>
   
   <section class="docstring">
     <p>Prints information about the data type of any given term.</p>
-<h2>Examples</h2>
+<h2 id="i/1-examples" class="section-heading">
+  <a href="#i/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; i(1..5)</code></pre>
 <p>Will print:</p>
 <pre><code class="elixir">Term
@@ -613,7 +621,11 @@ has been compiled or updated locally that you want to run on other nodes.</p>
 <p>The node list defaults to a list of all connected nodes.</p>
 <p>Returns <code class="inline">{:error, :nofile}</code> if the object code (i.e. “.beam” file) for the module
 could not be found locally.</p>
-<h2>Examples</h2>
+<h2 id="nl/2-examples" class="section-heading">
+  <a href="#nl/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">nl(HelloWorld)
 #=&gt; {:ok, [{:node1@easthost, :loaded, HelloWorld},
            {:node1@westhost, :loaded, HelloWorld}]}
@@ -639,7 +651,11 @@ nl(NoSuchModuleExists)
   
   <section class="docstring">
     <p>Creates a PID from <code class="inline">string</code>.</p>
-<h2>Examples</h2>
+<h2 id="pid/1-examples" class="section-heading">
+  <a href="#pid/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; pid(&quot;0.21.32&quot;)
 #PID&lt;0.21.32&gt;</code></pre>
 
@@ -662,7 +678,11 @@ nl(NoSuchModuleExists)
   <section class="docstring">
     <p>Creates a PID with 3 non negative integers passed as arguments
 to the function.</p>
-<h2>Examples</h2>
+<h2 id="pid/3-examples" class="section-heading">
+  <a href="#pid/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; pid(0, 21, 32)
 #PID&lt;0.21.32&gt;
 iex&gt; pid(0, 64, 2048)
@@ -709,7 +729,11 @@ iex&gt; pid(0, 64, 2048)
 file as <code class="inline">module</code> are recompiled and reloaded.</p>
 <p>This function is meant to be used for development and
 debugging purposes. Do not depend on it in production code.</p>
-<h2>In-memory reloading</h2>
+<h2 id="r/1-in-memory-reloading" class="section-heading">
+  <a href="#r/1-in-memory-reloading" class="hover-link"><i class="icon-link"></i></a>
+  In-memory reloading
+</h2>
+
 <p>When we reload the module in IEx, we recompile the module source
 code, updating its contents in memory. The original <code class="inline">.beam</code> file
 in disk, probably the one where the first definition of the module
@@ -792,7 +816,11 @@ relative to the current one is returned. For example, <code class="inline">v(-2)
 value of the expression evaluated before the last evaluated expression. In
 particular, <code class="inline">v(-1)</code> returns the result of the last evaluated expression and
 <code class="inline">v()</code> does the same.</p>
-<h2>Examples</h2>
+<h2 id="v/1-examples" class="section-heading">
+  <a href="#v/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">iex(1)&gt; &quot;hello&quot; &lt;&gt; &quot; world&quot;
 &quot;hello world&quot;
 iex(2)&gt; 40 + 2
@@ -836,7 +864,11 @@ iex(5)&gt; v()
     <p>Prints the documentation for the given callback function.</p>
 <p>It also accepts single module argument to list
 all available behaviour callbacks.</p>
-<h2>Examples</h2>
+<h2 id="b/1-examples" class="section-heading">
+  <a href="#b/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">b(Mix.Task.run/1)
 b(Mix.Task.run)
 b(Dict)</code></pre>
@@ -860,7 +892,11 @@ b(Dict)</code></pre>
   <section class="docstring">
     <p>Prints the documentation for the given module
 or for the given function/arity pair.</p>
-<h2>Examples</h2>
+<h2 id="h/1-examples" class="section-heading">
+  <a href="#h/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">h(Enum)
 #=&gt; Prints documentation for Enum</code></pre>
 <p>It also accepts functions in the format <code class="inline">fun/arity</code>
@@ -890,7 +926,11 @@ h Enum.all?</code></pre>
 the shell.</p>
 <p><code class="inline">path</code> has to be a literal string. <code class="inline">path</code> is automatically expanded via
 <code class="inline">Path.expand/1</code>.</p>
-<h2>Examples</h2>
+<h2 id="import_file/1-examples" class="section-heading">
+  <a href="#import_file/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># ~/file.exs
 value = 13
 
@@ -967,7 +1007,11 @@ in behalf of the user.</p>
     <p>Calls <code class="inline">import/2</code> with the given arguments, but only if the module is available.</p>
 <p>This lets you put imports in <code class="inline">.iex.exs</code> files (including <code class="inline">~/.iex.exs</code>) without
 getting compile errors if you open a console where the module is not available.</p>
-<h2>Example</h2>
+<h2 id="import_if_available/2-example" class="section-heading">
+  <a href="#import_if_available/2-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="elixir"># In ~/.iex.exs
 import_if_available Ecto.Query</code></pre>
 
@@ -989,7 +1033,11 @@ import_if_available Ecto.Query</code></pre>
   
   <section class="docstring">
     <p>Prints the specs for the given module or for the given function/arity pair.</p>
-<h2>Examples</h2>
+<h2 id="s/1-examples" class="section-heading">
+  <a href="#s/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">s(Enum)
 s(Enum.all?)
 s(Enum.all?/2)
@@ -1014,7 +1062,11 @@ s(is_atom/1)</code></pre>
   
   <section class="docstring">
     <p>Prints the types for the given module or for the given function/arity pair.</p>
-<h2>Examples</h2>
+<h2 id="t/1-examples" class="section-heading">
+  <a href="#t/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">t(Enum)
 t(Enum.t/0)
 t(Enum.t)</code></pre>

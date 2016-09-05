@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>ExUnit.CaptureIO – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.CaptureIO.html" />
     
@@ -190,7 +190,11 @@ the test should run with async false.</p>
 prompts (specified as arguments to <code class="inline">IO.get*</code> functions) are not
 captured.</p>
 <p>A developer can set a string as an input. The default input is <code class="inline">:eof</code>.</p>
-<h2>Examples</h2>
+<h2 id="capture_io/1-examples" class="section-heading">
+  <a href="#capture_io/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; capture_io(fn -&gt; IO.write &quot;john&quot; end) == &quot;john&quot;
 true
 
@@ -208,7 +212,11 @@ iex&gt; capture_io([input: &quot;this is input&quot;, capture_prompt: false], fn
 ...&gt;   IO.write input
 ...&gt; end) == &quot;this is input&quot;
 true</code></pre>
-<h2>Returning values</h2>
+<h2 id="capture_io/1-returning-values" class="section-heading">
+  <a href="#capture_io/1-returning-values" class="hover-link"><i class="icon-link"></i></a>
+  Returning values
+</h2>
+
 <p>As seen in the examples above, <code class="inline">capture_io</code> returns the captured output.
 If you want to also capture the result of the function executed inside
 the <code class="inline">capture_io</code>, you can use <code class="inline">Kernel.send/2</code> to send yourself a message

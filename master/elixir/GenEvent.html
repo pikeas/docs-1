@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
     <title>GenEvent – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-da94447278.css" />
+    <link rel="stylesheet" href="dist/app-6ef8dfe15b.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/GenEvent.html" />
     
@@ -651,7 +651,11 @@ of <a href="Module.html"><code class="inline">Module</code></a> must be used. Th
   <section class="docstring">
     <p>Adds a monitored event handler to the event <code class="inline">manager</code>.</p>
 <p>Expects the same input and returns the same values as <a href="#add_handler/3"><code class="inline">add_handler/3</code></a>.</p>
-<h2>Monitored handlers</h2>
+<h2 id="add_mon_handler/3-monitored-handlers" class="section-heading">
+  <a href="#add_mon_handler/3-monitored-handlers" class="hover-link"><i class="icon-link"></i></a>
+  Monitored handlers
+</h2>
+
 <p>A monitored handler implies the calling process will now be monitored
 by the GenEvent manager.</p>
 <p>If the calling process later terminates with <code class="inline">reason</code>, the event manager
@@ -923,7 +927,11 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
 protocol. Consumption of events only begins when enumeration starts.</p>
 <p>Note streaming is specific to Elixir’s GenEvent and does not work
 with Erlang ones.</p>
-<h2>Options</h2>
+<h2 id="stream/2-options" class="section-heading">
+  <a href="#stream/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:timeout</code> - raises if no event arrives in X milliseconds
 (defaults to <code class="inline">:infinity</code>)
