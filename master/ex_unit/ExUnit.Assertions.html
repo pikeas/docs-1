@@ -200,7 +200,8 @@ Returns the rescued exception, fails otherwise</p>
     <a href="#assert_receive/3">assert_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :assert_receive_timeout), failure_message \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Asserts that a message matching <code class="inline">pattern</code> was or is going to be received</p>
+    <div class="summary-synopsis"><p>Asserts that a message matching <code class="inline">pattern</code> was or is going to be received
+within the <code class="inline">timeout</code> period, specified in milliseconds</p>
 </div>
   
 </div>
@@ -259,7 +260,7 @@ Returns the thrown value or fails otherwise</p>
   </div>
   
     <div class="summary-synopsis"><p>Asserts that a message matching <code class="inline">pattern</code> was not received (and won’t be received)
-within the <code class="inline">timeout</code> period</p>
+within the <code class="inline">timeout</code> period, specified in milliseconds</p>
 </div>
   
 </div>
@@ -324,7 +325,7 @@ current process’ mailbox)</p>
     </a>
     <span class="signature">assert_in_delta(value1, value2, delta, message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L566" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L567" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -350,7 +351,7 @@ assert_in_delta 10, 15, 4</code></pre>
     </a>
     <span class="signature">assert_raise(exception, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L535" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -378,7 +379,7 @@ end</code></pre>
     </a>
     <span class="signature">assert_raise(exception, message, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L504" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -399,7 +400,7 @@ Returns the rescued exception, fails otherwise.</p>
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.9404057926034721!&quot;
+  raise &quot;today&#39;s lucky number is 0.6373526399429796!&quot;
 end</code></pre>
 
   </section>
@@ -411,7 +412,7 @@ end</code></pre>
     </a>
     <span class="signature">flunk(message \\ &quot;Flunked!&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L746" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L747" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -445,7 +446,7 @@ end</code></pre>
     </a>
     <span class="signature">refute(value, message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L635" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L636" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -470,7 +471,7 @@ end</code></pre>
     </a>
     <span class="signature">refute_in_delta(value1, value2, delta, message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L724" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L725" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -554,7 +555,7 @@ value. In such cases, simply use <code class="inline">Kernel.==/2</code> or
     </a>
     <span class="signature">assert_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :assert_receive_timeout), failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L345" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -562,8 +563,9 @@ value. In such cases, simply use <code class="inline">Kernel.==/2</code> or
   </div>
   
   <section class="docstring">
-    <p>Asserts that a message matching <code class="inline">pattern</code> was or is going to be received.</p>
-<p>Unlike <code class="inline">assert_received</code>, it has a default timeout
+    <p>Asserts that a message matching <code class="inline">pattern</code> was or is going to be received
+within the <code class="inline">timeout</code> period, specified in milliseconds.</p>
+<p>Unlike <code class="inline">assert_received</code>, it has a default <code class="inline">timeout</code>
 of 100 milliseconds.</p>
 <p>The <code class="inline">pattern</code> argument must be a match pattern. Flunks with <code class="inline">failure_message</code>
 if a message matching <code class="inline">pattern</code> is not received.</p>
@@ -590,7 +592,7 @@ assert_receive {:count, ^x}</code></pre>
     </a>
     <span class="signature">assert_received(pattern, failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L376" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L377" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -629,7 +631,7 @@ assert_received {:hello, _}</code></pre>
     </a>
     <span class="signature">catch_error(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L609" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L610" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -655,7 +657,7 @@ Returns the error or fails otherwise.</p>
     </a>
     <span class="signature">catch_exit(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L596" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L597" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -681,7 +683,7 @@ Returns the exit status/message or fails otherwise.</p>
     </a>
     <span class="signature">catch_throw(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L583" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L584" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -740,7 +742,7 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
     </a>
     <span class="signature">refute_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :refute_receive_timeout), failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L655" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L656" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -749,7 +751,7 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
   
   <section class="docstring">
     <p>Asserts that a message matching <code class="inline">pattern</code> was not received (and won’t be received)
-within the <code class="inline">timeout</code> period.</p>
+within the <code class="inline">timeout</code> period, specified in milliseconds.</p>
 <p>The <code class="inline">pattern</code> argument must be a match pattern. Flunks with <code class="inline">failure_message</code>
 if a message matching <code class="inline">pattern</code> is received.</p>
 <h2 id="refute_receive/3-examples" class="section-heading">
@@ -770,7 +772,7 @@ if a message matching <code class="inline">pattern</code> is received.</p>
     </a>
     <span class="signature">refute_received(pattern, failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L682" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L683" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

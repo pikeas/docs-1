@@ -2011,7 +2011,7 @@ until a message arrives or waits until a given timeout value.</p>
     IO.puts :stderr, &quot;Unexpected message received&quot;
 end</code></pre>
 <p>An optional <code class="inline">after</code> clause can be given in case the message was not
-received after the specified timeout period:</p>
+received after the given timeout period, specified in milliseconds:</p>
 <pre><code class="elixir">receive do
   {:selector, i, value} when is_integer(i) -&gt;
     value

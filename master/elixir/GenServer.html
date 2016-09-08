@@ -247,11 +247,11 @@ calls and more. Therefore, you should never call your own “receive” inside
 the GenServer callbacks as doing so will cause the GenServer to misbehave.</p>
 <p>Besides the synchronous and asynchronous communication provided by <a href="#call/3"><code class="inline">call/3</code></a>
 and <a href="#cast/2"><code class="inline">cast/2</code></a>, “regular” messages sent by functions such <a href="Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a>,
-<a href="Process.html#send_after/3"><code class="inline">Process.send_after/3</code></a> and similar, can be handled inside the <code class="inline">handle_info/2</code>
+<code class="inline">Process.send_after/3</code> and similar, can be handled inside the <code class="inline">handle_info/2</code>
 callback.</p>
 <p><code class="inline">handle_info/2</code> can be used in many situations, such as handling monitor
 DOWN messages sent by <code class="inline">Process.monitor/2</code>. Another use case for <code class="inline">handle_info/2</code>
-is to perform periodic work, with the help of <a href="Process.html#send_after/3"><code class="inline">Process.send_after/3</code></a>:</p>
+is to perform periodic work, with the help of <code class="inline">Process.send_after/3</code>:</p>
 <pre><code class="elixir">defmodule MyApp.Periodically do
   use GenServer
 

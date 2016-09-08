@@ -148,7 +148,7 @@ and has not exited yet). Otherwise, returns <code class="inline">false</code></p
     <a href="#cancel_timer/1">cancel_timer(timer_ref)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Cancels a timer created by <a href="#send_after/3"><code class="inline">send_after/3</code></a></p>
+    <div class="summary-synopsis"><p>Cancels a timer created by <code class="inline">send_after/3</code></p>
 </div>
   
 </div>
@@ -334,7 +334,7 @@ It returns the monitor reference</p>
     <a href="#read_timer/1">read_timer(timer_ref)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Reads a timer created by <a href="#send_after/3"><code class="inline">send_after/3</code></a></p>
+    <div class="summary-synopsis"><p>Reads a timer created by <code class="inline">send_after/3</code></p>
 </div>
   
 </div>
@@ -367,7 +367,7 @@ It returns the monitor reference</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#send_after/3">send_after(dest, msg, time)</a>
+    <a href="#send_after/4">send_after(dest, msg, time, opts \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Sends <code class="inline">msg</code> to <code class="inline">dest</code> after <code class="inline">time</code> milliseconds</p>
@@ -517,7 +517,7 @@ and has not exited yet). Otherwise, returns <code class="inline">false</code>.</
     </a>
     <span class="signature">cancel_timer(timer_ref)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L264" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -534,7 +534,7 @@ and has not exited yet). Otherwise, returns <code class="inline">false</code>.</
     </div>
   
   <section class="docstring">
-    <p>Cancels a timer created by <a href="#send_after/3"><code class="inline">send_after/3</code></a>.</p>
+    <p>Cancels a timer created by <code class="inline">send_after/3</code>.</p>
 <p>When the result is an integer, it represents the time in milliseconds
 left until the timer would have expired.</p>
 <p>When the result is <code class="inline">false</code>, a timer corresponding to <code class="inline">timer_ref</code> could
@@ -581,7 +581,7 @@ not tell you whether or not it has arrived at its destination yet.</p>
     </a>
     <span class="signature">demonitor(monitor_ref, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L357" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -666,7 +666,7 @@ with reason <code class="inline">:killed</code>.</p>
     </a>
     <span class="signature">flag(flag, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L474" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L484" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -696,7 +696,7 @@ Returns the old value of the <code class="inline">flag</code>.</p>
     </a>
     <span class="signature">flag(pid, flag, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L486" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L496" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -842,7 +842,7 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
     </a>
     <span class="signature">group_leader()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L443" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L453" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -870,7 +870,7 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
     </a>
     <span class="signature">group_leader(pid, leader)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L452" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L462" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -899,7 +899,7 @@ started from a certain shell should have a group leader other than <code class="
     </a>
     <span class="signature">hibernate(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L534" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L544" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -932,7 +932,7 @@ in the near future.</p>
     </a>
     <span class="signature">info(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L498" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L508" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -963,7 +963,7 @@ Use this only for debugging information.</p>
     </a>
     <span class="signature">info(pid, spec)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L509" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L519" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -996,7 +996,7 @@ or returns <code class="inline">nil</code> if the process is not alive.</p>
     </a>
     <span class="signature">link(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L385" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L395" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1027,7 +1027,7 @@ or returns <code class="inline">nil</code> if the process is not alive.</p>
     </a>
     <span class="signature">list()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L372" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L382" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1060,7 +1060,7 @@ but its process identifier will be part of the result returned.</p>
     </a>
     <span class="signature">monitor(item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L342" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L352" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1123,7 +1123,7 @@ See <a href="http://www.erlang.org/doc/man/erlang.html#monitor-2"><code class="i
     </a>
     <span class="signature">read_timer(timer_ref)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L284" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L294" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1140,7 +1140,7 @@ See <a href="http://www.erlang.org/doc/man/erlang.html#monitor-2"><code class="i
     </div>
   
   <section class="docstring">
-    <p>Reads a timer created by <a href="#send_after/3"><code class="inline">send_after/3</code></a>.</p>
+    <p>Reads a timer created by <code class="inline">send_after/3</code>.</p>
 <p>When the result is an integer, it represents the time in milliseconds
 left until the timer will expire.</p>
 <p>When the result is <code class="inline">false</code>, a timer corresponding to <code class="inline">timer_ref</code> could
@@ -1159,7 +1159,7 @@ not tell you whether or not it has arrived at its destination yet.</p>
     </a>
     <span class="signature">register(pid, name)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L412" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L422" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1191,7 +1191,7 @@ is no longer alive, (check with <a href="#alive?/1)"><code class="inline">alive?
     </a>
     <span class="signature">registered()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L460" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L470" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1256,14 +1256,14 @@ sender to be suspended the message is not sent and <code class="inline">:nosuspe
 
   </section>
 </div>
-<div class="detail" id="send_after/3">
+<div class="detail" id="send_after/4">
   <div class="detail-header">
-    <a href="#send_after/3" class="detail-link" title="Link to this function">
+    <a href="#send_after/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">send_after(dest, msg, time)</span>
+    <span class="signature">send_after(dest, msg, time, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L244" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L254" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1274,7 +1274,7 @@ sender to be suspended the message is not sent and <code class="inline">:nosuspe
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">send_after(pid | atom, term, non_neg_integer) :: reference</code></pre>
+          <pre><code class="elixir">send_after(pid | atom, term, non_neg_integer, [option]) :: reference when option: {:abs, boolean}</code></pre>
         
       </div>
     </div>
@@ -1291,6 +1291,19 @@ not refer to a process.</p>
 which is not alive or when the given PID exits. Note that timers will not be
 automatically canceled when <code class="inline">dest</code> is an atom (as the atom resolution is done
 on delivery).</p>
+<h2 id="send_after/4-options" class="section-heading">
+  <a href="#send_after/4-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
+<ul>
+<li><code class="inline">:abs</code> - (boolean) when <code class="inline">false</code>, <code class="inline">time</code> is treated as relative to the
+  current monotonic time. When <code class="inline">true</code>, <code class="inline">time</code> is the absolute value of the
+  Erlang monotonic time at which <code class="inline">msg</code> should be delivered to <code class="inline">dest</code>.
+  To read more about Erlang monotonic time and other time-related concepts,
+  look at the documentation for the <a href="System.html"><code class="inline">System</code></a> module. Defaults to <code class="inline">false</code>.
+</li>
+</ul>
 
   </section>
 </div>
@@ -1372,7 +1385,7 @@ end</code></pre>
     </a>
     <span class="signature">spawn(fun, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L308" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L318" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1409,7 +1422,7 @@ check <a href="http://www.erlang.org/doc/man/erlang.html#spawn_opt-4"><code clas
     </a>
     <span class="signature">spawn(mod, fun, args, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L327" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L337" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1447,7 +1460,7 @@ check <a href="http://www.erlang.org/doc/man/erlang.html#spawn_opt-4"><code clas
     </a>
     <span class="signature">unlink(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L399" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L409" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1479,7 +1492,7 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
     </a>
     <span class="signature">unregister(name)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L424" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L434" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1509,7 +1522,7 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
     </a>
     <span class="signature">whereis(name)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L435" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L445" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
