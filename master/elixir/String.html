@@ -2511,12 +2511,14 @@ multiple passes).</p>
   Examples
 </h2>
 
-<p>  iex&gt; String.splitter(“1,2 3,4 5,6 7,8,…,99999”, [" ", ","]) |&gt; Enum.take(4)
-  ["1", "2", "3", "4"]</p>
-<p>  iex&gt; String.splitter(“abcd”, “”) |&gt; Enum.take(10)
-  ["a", "b", "c", "d", ""]</p>
-<p>  iex&gt; String.splitter(“abcd”, “”, trim: true) |&gt; Enum.take(10)
-  ["a", "b", "c", "d"]</p>
+<pre><code class="iex elixir">iex&gt; String.splitter(&quot;1,2 3,4 5,6 7,8,...,99999&quot;, [&quot; &quot;, &quot;,&quot;]) |&gt; Enum.take(4)
+[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;]
+
+iex&gt; String.splitter(&quot;abcd&quot;, &quot;&quot;) |&gt; Enum.take(10)
+[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;&quot;]
+
+iex&gt; String.splitter(&quot;abcd&quot;, &quot;&quot;, trim: true) |&gt; Enum.take(10)
+[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</code></pre>
 
   </section>
 </div>
