@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
+    <meta name="generator" content="ExDoc v0.13.1">
     <title>IEx – IEx v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
@@ -523,7 +523,7 @@ pending expression and return to its normal state:</p>
 </h2>
 
 <p>A keyword list that encapsulates all color settings used by the
-shell. See documentation for the <code class="inline">IO.ANSI</code> module for the list of
+shell. See documentation for the <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html"><code class="inline">IO.ANSI</code></a> module for the list of
 supported colors and attributes.</p>
 <p>List of supported keys in the keyword list:</p>
 <ul>
@@ -569,7 +569,7 @@ via:</p>
 <p>A keyword list containing inspect options used by the shell
 when printing results of expression evaluation. Default to
 pretty formatting with a limit of 50 entries.</p>
-<p>See <code class="inline">Inspect.Opts</code> for the full list of options.</p>
+<p>See <a href="http://elixir-lang.org/docs/stable/elixir/Inspect.Opts.html"><code class="inline">Inspect.Opts</code></a> for the full list of options.</p>
 <h2 id="configure/1-width" class="section-heading">
   <a href="#configure/1-width" class="hover-link"><i class="icon-link"></i></a>
   Width
@@ -597,9 +597,9 @@ The value is an integer. When it is negative, the history is unlimited.</p>
 when awaiting input.</p>
 <p>The value is a keyword list with two possible keys representing prompt types:</p>
 <ul>
-<li><code class="inline">:default_prompt</code> - used when <code class="inline">Node.alive?/0</code> returns <code class="inline">false</code>
+<li><code class="inline">:default_prompt</code> - used when <a href="http://elixir-lang.org/docs/stable/elixir/Node.html#alive?/0"><code class="inline">Node.alive?/0</code></a> returns <code class="inline">false</code>
 </li>
-<li><code class="inline">:alive_prompt</code>   - used when <code class="inline">Node.alive?/0</code> returns <code class="inline">true</code>
+<li><code class="inline">:alive_prompt</code>   - used when <a href="http://elixir-lang.org/docs/stable/elixir/Node.html#alive?/0"><code class="inline">Node.alive?/0</code></a> returns <code class="inline">true</code>
 </li>
 </ul>
 <p>The following values in the prompt string will be replaced appropriately:</p>
@@ -651,7 +651,7 @@ when awaiting input.</p>
     <p>Callback for <a href="IEx.html#pry/1"><code class="inline">IEx.pry/1</code></a>.</p>
 <p>You can invoke this function directly when you are not able to invoke
 <a href="IEx.html#pry/1"><code class="inline">IEx.pry/1</code></a> as a macro. This function expects the binding (from
-<code class="inline">Kernel.binding/0</code>), the environment (from <code class="inline">__ENV__</code>) and the timeout
+<a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#binding/0)"><code class="inline">Kernel.binding/0</code></a>, the environment (from <code class="inline">__ENV__</code>) and the timeout
 (a sensible default is 5000).</p>
 
   </section>
@@ -783,7 +783,7 @@ affect the caller the environment (hence it is called <code class="inline">pry</
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.1),
           </span>
           <span class="line">
             designed by

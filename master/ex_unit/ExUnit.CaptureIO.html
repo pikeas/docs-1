@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
+    <meta name="generator" content="ExDoc v0.13.1">
     <title>ExUnit.CaptureIO – ExUnit v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
@@ -219,7 +219,7 @@ true</code></pre>
 
 <p>As seen in the examples above, <code class="inline">capture_io</code> returns the captured output.
 If you want to also capture the result of the function executed inside
-the <code class="inline">capture_io</code>, you can use <code class="inline">Kernel.send/2</code> to send yourself a message
+the <code class="inline">capture_io</code>, you can use <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a> to send yourself a message
 and use <code class="inline">ExUnit.Assertions.assert_received/1</code> to match on the results:</p>
 <pre><code class="elixir">capture_io([input: &quot;this is input&quot;, capture_prompt: false], fn -&gt;
   send self(), {:block_result, 42}
@@ -277,7 +277,7 @@ assert_received {:block_result, 42}</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.1),
           </span>
           <span class="line">
             designed by

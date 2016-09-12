@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
+    <meta name="generator" content="ExDoc v0.13.1">
     <title>Mix – Mix v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
@@ -94,8 +94,7 @@ and testing Elixir projects, managing its dependencies, and more.</p>
      version: &quot;1.0.0&quot;]
   end
 end</code></pre>
-<p>The <code class="inline">project/0</code> function is where the project information is defined
-and tasks are configured.</p>
+<p>See the <a href="Mix.Project.html"><code class="inline">Mix.Project</code></a> module for detailed documentation on Mix projects.</p>
 <p>Once the project is defined, a number of default Mix tasks can be run
 directly from the command line:</p>
 <ul>
@@ -134,8 +133,8 @@ end</code></pre>
   Dependencies
 </h2>
 
-<p>Another important feature in Mix is that it is able to manage your
-dependencies and integrates nicely with the <a href="https://hex.pm">Hex package manager</a>.</p>
+<p>Mix also manages your dependencies and integrates nicely with the <a href="https://hex.pm">Hex package
+manager</a>.</p>
 <p>In order to use dependencies, you need to add a <code class="inline">:deps</code> key
 to your project configuration. We often extract the list of dependencies
 into its own function:</p>
@@ -159,16 +158,15 @@ end</code></pre>
   Environments
 </h2>
 
-<p>Mix provides environments.</p>
-<p>Environments allow developers to prepare and organize their project
-specifically for different scenarios. By default, Mix provides three
-environments:</p>
+<p>Mix supports different environments. Environments allow developers to prepare
+and organize their project specifically for different scenarios. By default,
+Mix provides three environments:</p>
 <ul>
 <li><code class="inline">:dev</code> - the default environment
 </li>
 <li><code class="inline">:test</code> - the environment <code class="inline">mix test</code> runs on
 </li>
-<li><code class="inline">:prod</code> - the environment your dependencies runs on
+<li><code class="inline">:prod</code> - the environment your dependencies run on
 </li>
 </ul>
 <p>The environment can be changed via the command line by setting
@@ -227,7 +225,7 @@ with extra clean up logic.</p>
   Environment variables
 </h2>
 
-<p>Environment variables can be used to modify Mix’s behaviour.</p>
+<p>Several environment variables can be used to modify Mix’s behaviour.</p>
 <p>Mix responds to the following variables:</p>
 <ul>
 <li><code class="inline">MIX_ARCHIVES</code> - specifies the directory into which the archives should be installed
@@ -249,7 +247,8 @@ with extra clean up logic.</p>
 <li><code class="inline">MIX_REBAR3</code> - path to rebar3 command that overrides the one mix installs
 </li>
 </ul>
-<p>Variables which do not take a value should be set to either <code class="inline">1</code> or <code class="inline">true</code>, for example:</p>
+<p>Environment variables that are not meant to hold a value (and act basically as
+flags) should be set to either <code class="inline">1</code> or <code class="inline">true</code>, for example:</p>
 <pre><code class="elixir">$ MIX_DEBUG=1 mix compile</code></pre>
 
         </section>
@@ -370,7 +369,7 @@ with extra clean up logic.</p>
     </a>
     <span class="signature">compilers()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L228" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -394,7 +393,7 @@ end</code></pre>
     </a>
     <span class="signature">debug(debug)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L266" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -413,7 +412,7 @@ end</code></pre>
     </a>
     <span class="signature">debug?()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L259" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -432,7 +431,7 @@ end</code></pre>
     </a>
     <span class="signature">env()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L202" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -451,7 +450,7 @@ end</code></pre>
     </a>
     <span class="signature">env(env)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L213" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -472,7 +471,7 @@ configuration won’t be reloaded.</p>
     </a>
     <span class="signature">raise(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L275" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -500,7 +499,7 @@ configuration won’t be reloaded.</p>
     </a>
     <span class="signature">shell()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L243" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L242" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -525,7 +524,7 @@ performing IO (see <a href="Mix.Shell.Process.html)"><code class="inline">Mix.Sh
     </a>
     <span class="signature">shell(shell)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L253" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix.ex#L252" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -550,7 +549,7 @@ performing IO (see <a href="Mix.Shell.Process.html)"><code class="inline">Mix.Sh
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.1),
           </span>
           <span class="line">
             designed by

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
+    <meta name="generator" content="ExDoc v0.13.1">
     <title>ExUnit.Assertions – ExUnit v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
@@ -145,7 +145,7 @@ Returns the rescued exception, fails otherwise</p>
   </div>
   
     <div class="summary-synopsis"><p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution with
-the expected <code class="inline">message</code>, which can be a <code class="inline">Regex</code> or an exact <code class="inline">String</code>.
+the expected <code class="inline">message</code>, which can be a <a href="http://elixir-lang.org/docs/stable/elixir/Regex.html"><code class="inline">Regex</code></a> or an exact <a href="http://elixir-lang.org/docs/stable/elixir/String.html"><code class="inline">String</code></a>.
 Returns the rescued exception, fails otherwise</p>
 </div>
   
@@ -325,7 +325,7 @@ current process’ mailbox)</p>
     </a>
     <span class="signature">assert_in_delta(value1, value2, delta, message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L567" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L590" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -351,7 +351,7 @@ assert_in_delta 10, 15, 4</code></pre>
     </a>
     <span class="signature">assert_raise(exception, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L536" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -379,7 +379,7 @@ end</code></pre>
     </a>
     <span class="signature">assert_raise(exception, message, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L505" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L528" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -388,7 +388,7 @@ end</code></pre>
   
   <section class="docstring">
     <p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution with
-the expected <code class="inline">message</code>, which can be a <code class="inline">Regex</code> or an exact <code class="inline">String</code>.
+the expected <code class="inline">message</code>, which can be a <a href="http://elixir-lang.org/docs/stable/elixir/Regex.html"><code class="inline">Regex</code></a> or an exact <a href="http://elixir-lang.org/docs/stable/elixir/String.html"><code class="inline">String</code></a>.
 Returns the rescued exception, fails otherwise.</p>
 <h2 id="assert_raise/3-examples" class="section-heading">
   <a href="#assert_raise/3-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -400,7 +400,7 @@ Returns the rescued exception, fails otherwise.</p>
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.7033346792519498!&quot;
+  raise &quot;today&#39;s lucky number is 0.33332485462785044!&quot;
 end</code></pre>
 
   </section>
@@ -412,7 +412,7 @@ end</code></pre>
     </a>
     <span class="signature">flunk(message \\ &quot;Flunked!&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L747" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L770" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -446,7 +446,7 @@ end</code></pre>
     </a>
     <span class="signature">refute(value, message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L636" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L659" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -471,7 +471,7 @@ end</code></pre>
     </a>
     <span class="signature">refute_in_delta(value1, value2, delta, message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L725" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L748" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,8 +543,8 @@ is still required to return a truthy value. For example,
 the following will fail:</p>
 <pre><code class="elixir">assert nil = some_function_that_returns_nil()</code></pre>
 <p>Even though the match works, <code class="inline">assert</code> still expects a truth
-value. In such cases, simply use <code class="inline">Kernel.==/2</code> or
-<code class="inline">Kernel.match?/2</code>.</p>
+value. In such cases, simply use <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#==/2"><code class="inline">Kernel.==/2</code></a> or
+<a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#match?/2"><code class="inline">Kernel.match?/2</code></a>.</p>
 
   </section>
 </div>
@@ -631,7 +631,7 @@ assert_received {:hello, _}</code></pre>
     </a>
     <span class="signature">catch_error(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L610" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L633" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -657,7 +657,7 @@ Returns the error or fails otherwise.</p>
     </a>
     <span class="signature">catch_exit(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L597" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L620" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -683,7 +683,7 @@ Returns the exit status/message or fails otherwise.</p>
     </a>
     <span class="signature">catch_throw(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L584" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L607" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -724,7 +724,7 @@ the given expression. In other words, the following will fail:</p>
 <p>The code above will fail because the <code class="inline">=</code> operator always fails
 when the sides do not match and <a href="#refute/2"><code class="inline">refute/2</code></a> does not change it.</p>
 <p>The correct way to write the refutation above is to use
-<code class="inline">Kernel.match?/2</code>:</p>
+<a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#match?/2"><code class="inline">Kernel.match?/2</code></a>:</p>
 <pre><code class="elixir">refute match? {:ok, _}, some_function_that_returns_error_tuple()</code></pre>
 <h2 id="refute/1-examples" class="section-heading">
   <a href="#refute/1-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -742,7 +742,7 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
     </a>
     <span class="signature">refute_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :refute_receive_timeout), failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L656" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L679" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -772,7 +772,7 @@ if a message matching <code class="inline">pattern</code> is received.</p>
     </a>
     <span class="signature">refute_received(pattern, failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L683" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/assertions.ex#L706" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -810,7 +810,7 @@ Process mailbox:
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.1),
           </span>
           <span class="line">
             designed by
