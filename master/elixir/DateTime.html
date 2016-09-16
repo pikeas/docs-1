@@ -71,7 +71,7 @@
         DateTime
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L924" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1047" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -134,6 +134,24 @@ similar functionality with time zone backing.</p>
       <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_naive/2">from_naive(naive_datetime, time_zone)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts the given NaiveDateTime to DateTime</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_naive!/2">from_naive!(naive_datetime, time_zone)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts the given NaiveDateTime to DateTime</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#from_unix/2">from_unix(integer, unit \\ :seconds)</a>
   </div>
@@ -201,7 +219,7 @@ similar functionality with time zone backing.</p>
     <a href="#to_unix/2">to_unix(datetime, unit \\ :seconds)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts the given DateTime to Unix time</p>
+    <div class="summary-synopsis"><p>Converts the given DateTime to Unix seconds</p>
 </div>
   
 </div>
@@ -251,14 +269,14 @@ similar functionality with time zone backing.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_unix/2">
+          <div class="detail" id="from_naive/2">
   <div class="detail-header">
-    <a href="#from_unix/2" class="detail-link" title="Link to this function">
+    <a href="#from_naive/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">from_unix(integer, unit \\ :seconds)</span>
+    <span class="signature">from_naive(naive_datetime, time_zone)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1019" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1210" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -269,7 +287,87 @@ similar functionality with time zone backing.</p>
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>}</code></pre>
+          <pre><code class="elixir">from_naive(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>, <a href="Calendar.html#t:time_zone/0">Calendar.time_zone</a>) :: {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>}</code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Converts the given NaiveDateTime to DateTime.</p>
+<p>It expects a timezone to put the NaiveDateTime in.
+Currently it only supports “Etc/UTC” as timezone.</p>
+<h2 id="from_naive/2-examples" class="section-heading">
+  <a href="#from_naive/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; DateTime.from_naive(~N[2016-05-24 13:26:08.003], &quot;Etc/UTC&quot;)
+{:ok, %DateTime{calendar: Calendar.ISO, day: 24, hour: 13, microsecond: {3000, 3}, minute: 26,
+                month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
+                year: 2016, zone_abbr: &quot;UTC&quot;}}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="from_naive!/2">
+  <div class="detail-header">
+    <a href="#from_naive!/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">from_naive!(naive_datetime, time_zone)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1234" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">from_naive!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="DateTime.html#t:t/0">DateTime.t</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Converts the given NaiveDateTime to DateTime.</p>
+<p>It expects a timezone to put the NaiveDateTime in.
+Currently it only supports “Etc/UTC” as timezone.</p>
+<h2 id="from_naive!/2-examples" class="section-heading">
+  <a href="#from_naive!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; DateTime.from_naive!(~N[2016-05-24 13:26:08.003], &quot;Etc/UTC&quot;)
+%DateTime{calendar: Calendar.ISO, day: 24, hour: 13, microsecond: {3000, 3}, minute: 26,
+          month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
+          year: 2016, zone_abbr: &quot;UTC&quot;}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="from_unix/2">
+  <div class="detail-header">
+    <a href="#from_unix/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">from_unix(integer, unit \\ :seconds)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1142" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) ::
+  {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>} |
+  {:error, atom}</code></pre>
         
       </div>
     </div>
@@ -317,7 +415,7 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     </a>
     <span class="signature">from_unix!(integer, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1080" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1186" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -371,7 +469,7 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     </a>
     <span class="signature">to_date(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1319" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -402,7 +500,7 @@ iex&gt; DateTime.to_date(dt)
     </a>
     <span class="signature">to_iso8601(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1221" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1375" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -455,7 +553,7 @@ iex&gt; DateTime.to_iso8601(dt)
     </a>
     <span class="signature">to_naive(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1144" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1298" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -486,7 +584,7 @@ iex&gt; DateTime.to_naive(dt)
     </a>
     <span class="signature">to_string(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1249" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1403" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -532,7 +630,7 @@ iex&gt; DateTime.to_string(dt)
     </a>
     <span class="signature">to_time(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1184" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1338" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -563,7 +661,7 @@ iex&gt; DateTime.to_time(dt)
     </a>
     <span class="signature">to_unix(datetime, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1117" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1271" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -580,7 +678,7 @@ iex&gt; DateTime.to_time(dt)
     </div>
   
   <section class="docstring">
-    <p>Converts the given DateTime to Unix time.</p>
+    <p>Converts the given DateTime to Unix seconds.</p>
 <p>The DateTime is expected to be using the ISO calendar
 with a year greater than or equal to 0.</p>
 <p>It will return the integer with the given unit,
@@ -614,7 +712,7 @@ iex&gt; DateTime.to_unix(flamel)
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L975" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1098" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

@@ -81,7 +81,7 @@
 imported by default into your test cases.</p>
 <p>In general, a developer will want to use the general
 <code class="inline">assert</code> macro in tests. This macro introspects your code
-and provide good reporting whenever there is a failure.
+and provides good reporting whenever there is a failure.
 For example, <code class="inline">assert some_fun() == 10</code> will fail (assuming
 <code class="inline">some_fun()</code> returns 13):</p>
 <pre><code class="elixir">Comparison (using ==) failed in:
@@ -400,7 +400,7 @@ Returns the rescued exception, fails otherwise.</p>
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.8782850604335332!&quot;
+  raise &quot;today&#39;s lucky number is 0.4819358034499577!&quot;
 end</code></pre>
 
   </section>
@@ -520,8 +520,8 @@ refute_in_delta 10, 11, 2</code></pre>
   
   <section class="docstring">
     <p>Asserts its argument is a truthy value.</p>
-<p><code class="inline">assert</code> instrospects the underlying expression and provide
-good  reporting whenever there is a failure. For example,
+<p><code class="inline">assert</code> introspects the underlying expression and provides
+good reporting whenever there is a failure. For example,
 if the expression uses the comparison operator, the message
 will show the values of the two sides. The assertion</p>
 <pre><code class="elixir">assert 1+2+3+4 &gt; 15</code></pre>

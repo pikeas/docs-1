@@ -115,6 +115,15 @@ before the year 1583 from when the Gregorian calendar was adopted.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#last_day_of_month/2">last_day_of_month(year, month)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the last day of the month for the given year</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#leap_year?/1">leap_year?(year)</a>
   </div>
   
@@ -159,7 +168,7 @@ before the year 1583 from when the Gregorian calendar was adopted.</p>
     </a>
     <span class="signature">date(year, month, day)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -187,6 +196,42 @@ iex&gt; Calendar.ISO.date(2001, 2, 29)
 
   </section>
 </div>
+<div class="detail" id="last_day_of_month/2">
+  <div class="detail-header">
+    <a href="#last_day_of_month/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">last_day_of_month(year, month)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L60" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns the last day of the month for the given year.</p>
+<h2 id="last_day_of_month/2-examples" class="section-heading">
+  <a href="#last_day_of_month/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Calendar.ISO.last_day_of_month(1900, 1)
+31
+iex&gt; Calendar.ISO.last_day_of_month(1900, 2)
+28
+iex&gt; Calendar.ISO.last_day_of_month(2000, 2)
+29
+iex&gt; Calendar.ISO.last_day_of_month(2001, 2)
+28
+iex&gt; Calendar.ISO.last_day_of_month(2004, 2)
+29
+iex&gt; Calendar.ISO.last_day_of_month(2004, 4)
+30</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="leap_year?/1">
   <div class="detail-header">
     <a href="#leap_year?/1" class="detail-link" title="Link to this function">
@@ -194,7 +239,7 @@ iex&gt; Calendar.ISO.date(2001, 2, 29)
     </a>
     <span class="signature">leap_year?(year)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -226,7 +271,7 @@ false</code></pre>
     </a>
     <span class="signature">to_string(arg1)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar/iso.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

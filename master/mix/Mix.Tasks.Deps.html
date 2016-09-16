@@ -108,18 +108,20 @@ like the ones using <code class="inline">:git</code> are recompiled only when fe
 <p>The dependencies’ versions are expected to follow Semantic Versioning
 and the requirements must be specified as defined in the <a href="http://elixir-lang.org/docs/stable/elixir/Version.html"><code class="inline">Version</code></a>
 module.</p>
-<h2 id="module-dependency-definition-options" class="section-heading">
-  <a href="#module-dependency-definition-options" class="hover-link"><i class="icon-link"></i></a>
-  Dependency definition options
+<h2 id="module-options" class="section-heading">
+  <a href="#module-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
 </h2>
 
+<p>Below we provide a more detailed look into the available options.</p>
+<h3>Dependency definition options</h3>
 <ul>
 <li><p><code class="inline">:app</code> - when set to <code class="inline">false</code>, does not read the app file for this
-dependency</p>
+dependency. By default, the app file is read</p>
 </li>
-<li><p><code class="inline">:env</code> - the environment to run the dependency on, defaults to :prod</p>
+<li><p><code class="inline">:env</code> - the environment (as an atom) to run the dependency on; defaults to <code class="inline">:prod</code></p>
 </li>
-<li><p><code class="inline">:compile</code> - a command to compile the dependency, defaults to a <code class="inline">mix</code>,
+<li><p><code class="inline">:compile</code> - a command (string) to compile the dependency; defaults to a <code class="inline">mix</code>,
 <code class="inline">rebar</code> or <code class="inline">make</code> command</p>
 </li>
 <li><p><code class="inline">:optional</code> - marks the dependency as optional. In such cases, the
@@ -129,8 +131,11 @@ use the optional dependency. However, if the other project includes
 the optional dependency on its own, the requirements and options
 specified here will also be applied.</p>
 </li>
-<li><p><code class="inline">:only</code> - the dependency will belong only to the given environments,
-useful when declaring dev- or test-only dependencies</p>
+<li><p><code class="inline">:only</code> - the dependency is made available only in the given environments,
+useful when declaring dev- or test-only dependencies; by default the
+dependency will be available in all environments. The value of this option
+can either be a single environment (like <code class="inline">:dev</code>) or a list of environments
+(like <code class="inline">[:dev, :test]</code>)</p>
 </li>
 <li><p><code class="inline">:override</code> - if set to <code class="inline">true</code> the dependency will override any other
 definitions of itself by other dependencies</p>
@@ -141,11 +146,7 @@ try to infer the type of project but it can be overridden with this
 option by setting it to <code class="inline">:mix</code>, <code class="inline">:rebar</code>, <code class="inline">:rebar3</code> or <code class="inline">:make</code>
 </li>
 </ul>
-<h2 id="module-git-options" class="section-heading">
-  <a href="#module-git-options" class="hover-link"><i class="icon-link"></i></a>
-  Git options (<code class="inline">:git</code>)
-</h2>
-
+<h3>Git options (<code class="inline">:git</code>)</h3>
 <ul>
 <li><code class="inline">:git</code>        - the Git repository URI
 </li>
@@ -163,11 +164,7 @@ option by setting it to <code class="inline">:mix</code>, <code class="inline">:
 as your Mix dependency. Search “sparse git checkouts” for more information.
 </li>
 </ul>
-<h2 id="module-path-options" class="section-heading">
-  <a href="#module-path-options" class="hover-link"><i class="icon-link"></i></a>
-  Path options (<code class="inline">:path</code>)
-</h2>
-
+<h3>Path options (<code class="inline">:path</code>)</h3>
 <ul>
 <li><code class="inline">:path</code>        - the path for the dependency
 </li>
@@ -245,7 +242,7 @@ STATUS</code></pre>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/tasks/deps.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/tasks/deps.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

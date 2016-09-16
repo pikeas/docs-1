@@ -71,7 +71,7 @@
         Date
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L93" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L78" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -199,6 +199,15 @@ the ones in 3rd party calendar libraries.</p>
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#utc_today/0">utc_today()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the current date in UTC</p>
+</div>
+  
+</div>
 
   </div>
 
@@ -243,7 +252,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">from_erl(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L268" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L269" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -283,7 +292,7 @@ iex&gt; Date.from_erl({2000, 13, 1})
     </a>
     <span class="signature">from_erl!(tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L283" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L284" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -320,7 +329,7 @@ iex&gt; Date.from_erl!({2000, 13, 1})
     </a>
     <span class="signature">from_iso8601(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L185" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L186" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -366,7 +375,7 @@ iex&gt; Date.from_iso8601(&quot;2015-01-32&quot;)
     </a>
     <span class="signature">from_iso8601!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L213" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -404,7 +413,7 @@ iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
     </a>
     <span class="signature">new(year, month, day)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,7 +461,7 @@ iex&gt; Date.new(2001, 2, 29)
     </a>
     <span class="signature">to_erl(date)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L252" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -489,7 +498,7 @@ attempting to convert dates from other calendars will raise.</p>
     </a>
     <span class="signature">to_iso8601(date)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -522,7 +531,7 @@ attempting to convert date times from other calendars will raise.</p>
     </a>
     <span class="signature">to_string(date)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L161" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -543,6 +552,42 @@ attempting to convert date times from other calendars will raise.</p>
 <h3>Examples</h3>
 <pre><code class="iex elixir">iex&gt; Date.to_string(~D[2000-02-28])
 &quot;2000-02-28&quot;</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="utc_today/0">
+  <div class="detail-header">
+    <a href="#utc_today/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">utc_today()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L120" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">utc_today :: <a href="Date.html#t:t/0">Date.t</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Returns the current date in UTC.</p>
+<h2 id="utc_today/0-examples" class="section-heading">
+  <a href="#utc_today/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; date = Date.utc_today()
+iex&gt; date.year &gt;= 2016
+true</code></pre>
 
   </section>
 </div>

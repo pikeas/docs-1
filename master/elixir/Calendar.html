@@ -226,6 +226,15 @@ calendars may have a different number of days per month, months per year and so 
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#c:last_day_of_month/2">last_day_of_month(year, month)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns the last day of the month for the given year-month pair</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#c:leap_year?/1">leap_year?(year)</a>
   </div>
   
@@ -378,6 +387,34 @@ microseconds must be skipped.</p>
 
   </section>
 </div>
+<div class="detail" id="c:last_day_of_month/2">
+  <div class="detail-header">
+    <a href="#c:last_day_of_month/2" class="detail-link" title="Link to this callback">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">last_day_of_month(year, month)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L61" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">last_day_of_month(<a href="#t:year/0">year</a>, <a href="#t:month/0">month</a>) :: <a href="#t:day/0">day</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Returns the last day of the month for the given year-month pair.</p>
+
+  </section>
+</div>
 <div class="detail" id="c:leap_year?/1">
   <div class="detail-header">
     <a href="#c:leap_year?/1" class="detail-link" title="Link to this callback">
@@ -385,7 +422,7 @@ microseconds must be skipped.</p>
     </a>
     <span class="signature">leap_year?(year)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L65" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -416,7 +453,7 @@ the concept of leap years.</p>
     </a>
     <span class="signature">to_string(structure)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L75" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

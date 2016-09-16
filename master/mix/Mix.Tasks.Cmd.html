@@ -81,6 +81,9 @@
 <p>Useful in umbrella applications to execute a command
 on each child app:</p>
 <pre><code class="elixir">mix cmd echo pwd</code></pre>
+<p>You can limit which apps the cmd runs in by passing the app names
+before the cmd using —app:</p>
+<pre><code class="elixir">mix cmd --app app1 --app app2 echo pwd</code></pre>
 <p>Aborts when a command exits with a non-zero status.</p>
 
         </section>
@@ -138,7 +141,7 @@ on each child app:</p>
     </a>
     <span class="signature">run(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/tasks/cmd.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/tasks/cmd.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
