@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>ExUnit.Formatter – ExUnit v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>ExUnit.Formatter – ExUnit v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.Formatter.html" />
     
@@ -28,7 +28,7 @@
         ExUnit
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">ExUnit v1.3.2</small>
+        <small class="visible-xs">ExUnit v1.3.3</small>
         ExUnit.Formatter
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/formatter.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/formatter.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>This module holds helper functions related to formatting and contains
 documentation about the formatting protocol.</p>
 <p>Formatters are registered at the <code class="inline">ExUnit.EventManager</code> event manager and
@@ -255,7 +255,7 @@ a test case has finished. See <a href="ExUnit.Test.html"><code class="inline">Ex
     </a>
     <span class="signature">format_filters(filters, type)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/formatter.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/formatter.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -273,7 +273,11 @@ a test case has finished. See <a href="ExUnit.Test.html"><code class="inline">Ex
   
   <section class="docstring">
     <p>Formats filters used to constrain cases to be run.</p>
-<h2>Examples</h2>
+<h2 id="format_filters/2-examples" class="section-heading">
+  <a href="#format_filters/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; format_filters([run: true, slow: false], :include)
 &quot;Including tags: [run: true, slow: false]&quot;</code></pre>
 
@@ -286,7 +290,7 @@ a test case has finished. See <a href="ExUnit.Test.html"><code class="inline">Ex
     </a>
     <span class="signature">format_test_case_failure(test_case, failures, counter, width, formatter)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/formatter.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/formatter.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -305,7 +309,7 @@ a test case has finished. See <a href="ExUnit.Test.html"><code class="inline">Ex
     </a>
     <span class="signature">format_test_failure(test, failures, counter, width, formatter)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/formatter.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/formatter.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -324,7 +328,7 @@ a test case has finished. See <a href="ExUnit.Test.html"><code class="inline">Ex
     </a>
     <span class="signature">format_time(run_us, load_us)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/formatter.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/formatter.ex#L63" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -344,7 +348,11 @@ a test case has finished. See <a href="ExUnit.Test.html"><code class="inline">Ex
     <p>Formats time taken running the test suite.</p>
 <p>It receives the time spent running the tests and
 optionally the time spent loading the test suite.</p>
-<h2>Examples</h2>
+<h2 id="format_time/2-examples" class="section-heading">
+  <a href="#format_time/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; format_time(10000, nil)
 &quot;Finished in 0.01 seconds&quot;
 
@@ -380,7 +388,7 @@ iex&gt; format_time(10000, 200000)
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

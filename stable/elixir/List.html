@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>List – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>List – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/List.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         List
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Specialized functions that only work on lists.</p>
 <p>In general, favor using the <a href="Enum.html"><code class="inline">Enum</code></a> API instead of <a href="List.html#content"><code class="inline">List</code></a>.</p>
 <p>Index access for list is linear. Negative indexes are also
@@ -442,7 +442,7 @@ If the argument is <code class="inline">nil</code>, returns an empty list</p>
     </a>
     <span class="signature">delete(list, item)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L62" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -462,7 +462,11 @@ If the argument is <code class="inline">nil</code>, returns an empty list</p>
     <p>Deletes the given item from the list. Returns a list without
 the item. If the item occurs more than once in the list, just
 the first occurrence is removed.</p>
-<h2>Examples</h2>
+<h2 id="delete/2-examples" class="section-heading">
+  <a href="#delete/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.delete([1, 2, 3], 1)
 [2, 3]
 
@@ -478,7 +482,7 @@ iex&gt; List.delete([1, 2, 2, 3], 2)
     </a>
     <span class="signature">delete_at(list, index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L486" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L486" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -498,7 +502,11 @@ iex&gt; List.delete([1, 2, 2, 3], 2)
     <p>Produces a new list by removing the value at the specified <code class="inline">index</code>.
 Negative indices indicate an offset from the end of the list.
 If <code class="inline">index</code> is out of bounds, the original <code class="inline">list</code> is returned.</p>
-<h2>Examples</h2>
+<h2 id="delete_at/2-examples" class="section-heading">
+  <a href="#delete_at/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.delete_at([1, 2, 3], 0)
 [2, 3]
 
@@ -517,7 +525,7 @@ iex&gt; List.delete_at([1, 2, 3], -1)
     </a>
     <span class="signature">duplicate(elem, n)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L80" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -535,7 +543,11 @@ iex&gt; List.delete_at([1, 2, 3], -1)
   
   <section class="docstring">
     <p>Duplicates the given element <code class="inline">n</code> times in a list.</p>
-<h2>Examples</h2>
+<h2 id="duplicate/2-examples" class="section-heading">
+  <a href="#duplicate/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.duplicate(&quot;hello&quot;, 3)
 [&quot;hello&quot;, &quot;hello&quot;, &quot;hello&quot;]
 
@@ -551,7 +563,7 @@ iex&gt; List.duplicate([1, 2], 2)
     </a>
     <span class="signature">first(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L163" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L163" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -569,7 +581,11 @@ iex&gt; List.duplicate([1, 2], 2)
   
   <section class="docstring">
     <p>Returns the first element in <code class="inline">list</code> or <code class="inline">nil</code> if <code class="inline">list</code> is empty.</p>
-<h2>Examples</h2>
+<h2 id="first/1-examples" class="section-heading">
+  <a href="#first/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.first([])
 nil
 
@@ -588,7 +604,7 @@ iex&gt; List.first([1, 2, 3])
     </a>
     <span class="signature">flatten(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L94" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -606,7 +622,11 @@ iex&gt; List.first([1, 2, 3])
   
   <section class="docstring">
     <p>Flattens the given <code class="inline">list</code> of nested lists.</p>
-<h2>Examples</h2>
+<h2 id="flatten/1-examples" class="section-heading">
+  <a href="#flatten/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.flatten([1, [[2], 3]])
 [1, 2, 3]</code></pre>
 
@@ -619,7 +639,7 @@ iex&gt; List.first([1, 2, 3])
     </a>
     <span class="signature">flatten(list, tail)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -639,7 +659,11 @@ iex&gt; List.first([1, 2, 3])
     <p>Flattens the given <code class="inline">list</code> of nested lists.
 The list <code class="inline">tail</code> will be added at the end of
 the flattened list.</p>
-<h2>Examples</h2>
+<h2 id="flatten/2-examples" class="section-heading">
+  <a href="#flatten/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.flatten([1, [[2], 3]], [4, 5])
 [1, 2, 3, 4, 5]</code></pre>
 
@@ -652,7 +676,7 @@ the flattened list.</p>
     </a>
     <span class="signature">foldl(list, acc, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L128" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -671,7 +695,11 @@ the flattened list.</p>
   <section class="docstring">
     <p>Folds (reduces) the given list from the left with
 a function. Requires an accumulator.</p>
-<h2>Examples</h2>
+<h2 id="foldl/3-examples" class="section-heading">
+  <a href="#foldl/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.foldl([5, 5], 10, fn(x, acc) -&gt; x + acc end)
 20
 
@@ -687,7 +715,7 @@ iex&gt; List.foldl([1, 2, 3, 4], 0, fn(x, acc) -&gt; x - acc end)
     </a>
     <span class="signature">foldr(list, acc, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -706,7 +734,11 @@ iex&gt; List.foldl([1, 2, 3, 4], 0, fn(x, acc) -&gt; x - acc end)
   <section class="docstring">
     <p>Folds (reduces) the given list from the right with
 a function. Requires an accumulator.</p>
-<h2>Examples</h2>
+<h2 id="foldr/3-examples" class="section-heading">
+  <a href="#foldr/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.foldr([1, 2, 3, 4], 0, fn(x, acc) -&gt; x - acc end)
 -2</code></pre>
 
@@ -719,7 +751,7 @@ a function. Requires an accumulator.</p>
     </a>
     <span class="signature">insert_at(list, index, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L402" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L402" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -739,7 +771,11 @@ a function. Requires an accumulator.</p>
     <p>Returns a list with <code class="inline">value</code> inserted at the specified <code class="inline">index</code>.
 Note that <code class="inline">index</code> is capped at the list length. Negative indices
 indicate an offset from the end of the list.</p>
-<h2>Examples</h2>
+<h2 id="insert_at/3-examples" class="section-heading">
+  <a href="#insert_at/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.insert_at([1, 2, 3, 4], 2, 0)
 [1, 2, 0, 3, 4]
 
@@ -761,7 +797,7 @@ iex&gt; List.insert_at([1, 2, 3], -10, 0)
     </a>
     <span class="signature">keydelete(list, key, position)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L300" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L300" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -781,7 +817,11 @@ iex&gt; List.insert_at([1, 2, 3], -10, 0)
     <p>Receives a list of tuples and deletes the first tuple
 where the item at <code class="inline">position</code> matches the
 given <code class="inline">key</code>. Returns the new list.</p>
-<h2>Examples</h2>
+<h2 id="keydelete/3-examples" class="section-heading">
+  <a href="#keydelete/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keydelete([a: 1, b: 2], :a, 0)
 [b: 2]
 
@@ -800,7 +840,7 @@ iex&gt; List.keydelete([a: 1, b: 2], :c, 0)
     </a>
     <span class="signature">keyfind(list, key, position, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L204" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L204" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -820,7 +860,11 @@ iex&gt; List.keydelete([a: 1, b: 2], :c, 0)
     <p>Receives a list of tuples and returns the first tuple
 where the item at <code class="inline">position</code> in the tuple matches the
 given <code class="inline">key</code>.</p>
-<h2>Examples</h2>
+<h2 id="keyfind/4-examples" class="section-heading">
+  <a href="#keyfind/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keyfind([a: 1, b: 2], :a, 0)
 {:a, 1}
 
@@ -839,7 +883,7 @@ nil</code></pre>
     </a>
     <span class="signature">keymember?(list, key, position)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L226" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L226" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -859,7 +903,11 @@ nil</code></pre>
     <p>Receives a list of tuples and returns <code class="inline">true</code> if there is
 a tuple where the item at <code class="inline">position</code> in the tuple matches
 the given <code class="inline">key</code>.</p>
-<h2>Examples</h2>
+<h2 id="keymember?/3-examples" class="section-heading">
+  <a href="#keymember?/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keymember?([a: 1, b: 2], :a, 0)
 true
 
@@ -878,7 +926,7 @@ false</code></pre>
     </a>
     <span class="signature">keyreplace(list, key, position, new_tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L241" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -897,7 +945,11 @@ false</code></pre>
   <section class="docstring">
     <p>Receives a list of tuples and replaces the item
 identified by <code class="inline">key</code> at <code class="inline">position</code> if it exists.</p>
-<h2>Examples</h2>
+<h2 id="keyreplace/4-examples" class="section-heading">
+  <a href="#keyreplace/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keyreplace([a: 1, b: 2], :a, 0, {:a, 3})
 [a: 3, b: 2]</code></pre>
 
@@ -910,7 +962,7 @@ identified by <code class="inline">key</code> at <code class="inline">position</
     </a>
     <span class="signature">keysort(list, position)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L259" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L259" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -929,7 +981,11 @@ identified by <code class="inline">key</code> at <code class="inline">position</
   <section class="docstring">
     <p>Receives a list of tuples and sorts the items
 at <code class="inline">position</code> of the tuples. The sort is stable.</p>
-<h2>Examples</h2>
+<h2 id="keysort/2-examples" class="section-heading">
+  <a href="#keysort/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keysort([a: 5, b: 1, c: 3], 1)
 [b: 1, c: 3, a: 5]
 
@@ -945,7 +1001,7 @@ iex&gt; List.keysort([a: 5, c: 1, b: 3], 0)
     </a>
     <span class="signature">keystore(list, key, position, new_tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -965,7 +1021,11 @@ iex&gt; List.keysort([a: 5, c: 1, b: 3], 0)
     <p>Receives a list of tuples and replaces the item
 identified by <code class="inline">key</code> at <code class="inline">position</code>. If the item
 does not exist, it is added to the end of the list.</p>
-<h2>Examples</h2>
+<h2 id="keystore/4-examples" class="section-heading">
+  <a href="#keystore/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keystore([a: 1, b: 2], :a, 0, {:a, 3})
 [a: 3, b: 2]
 
@@ -981,7 +1041,7 @@ iex&gt; List.keystore([a: 1, b: 2], :c, 0, {:c, 3})
     </a>
     <span class="signature">keytake(list, key, position)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L324" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1004,7 +1064,11 @@ iex&gt; List.keystore([a: 1, b: 2], :c, 0, {:c, 3})
 where the element at <code class="inline">position</code> in the tuple matches the
 given <code class="inline">key</code>, as well as the <code class="inline">list</code> without found tuple.</p>
 <p>If such a tuple is not found, <code class="inline">nil</code> will be returned.</p>
-<h2>Examples</h2>
+<h2 id="keytake/3-examples" class="section-heading">
+  <a href="#keytake/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.keytake([a: 1, b: 2], :a, 0)
 {{:a, 1}, [b: 2]}
 
@@ -1023,7 +1087,7 @@ nil</code></pre>
     </a>
     <span class="signature">last(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L182" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L182" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1041,7 +1105,11 @@ nil</code></pre>
   
   <section class="docstring">
     <p>Returns the last element in <code class="inline">list</code> or <code class="inline">nil</code> if <code class="inline">list</code> is empty.</p>
-<h2>Examples</h2>
+<h2 id="last/1-examples" class="section-heading">
+  <a href="#last/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.last([])
 nil
 
@@ -1060,7 +1128,7 @@ iex&gt; List.last([1, 2, 3])
     </a>
     <span class="signature">replace_at(list, index, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L431" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L431" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1080,7 +1148,11 @@ iex&gt; List.last([1, 2, 3])
     <p>Returns a list with a replaced value at the specified <code class="inline">index</code>.
 Negative indices indicate an offset from the end of the list.
 If <code class="inline">index</code> is out of bounds, the original <code class="inline">list</code> is returned.</p>
-<h2>Examples</h2>
+<h2 id="replace_at/3-examples" class="section-heading">
+  <a href="#replace_at/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.replace_at([1, 2, 3], 0, 0)
 [0, 2, 3]
 
@@ -1102,7 +1174,7 @@ iex&gt; List.replace_at([1, 2, 3], -10, 0)
     </a>
     <span class="signature">to_atom(charlist)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L509" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L509" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1123,7 +1195,11 @@ iex&gt; List.replace_at([1, 2, 3], -10, 0)
 <p>Currently Elixir does not support conversions from charlists
 which contains Unicode codepoints greater than 0xFF.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_atom/1-examples" class="section-heading">
+  <a href="#to_atom/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.to_atom(&#39;elixir&#39;)
 :elixir</code></pre>
 
@@ -1136,7 +1212,7 @@ which contains Unicode codepoints greater than 0xFF.</p>
     </a>
     <span class="signature">to_existing_atom(charlist)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L533" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L533" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1158,7 +1234,11 @@ if the atom does not exist.</p>
 <p>Currently Elixir does not support conversions from charlists
 which contains Unicode codepoints greater than 0xFF.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_existing_atom/1-examples" class="section-heading">
+  <a href="#to_existing_atom/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; _ = :my_atom
 iex&gt; List.to_existing_atom(&#39;my_atom&#39;)
 :my_atom
@@ -1175,7 +1255,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
     </a>
     <span class="signature">to_float(charlist)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L549" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L549" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1194,7 +1274,11 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   <section class="docstring">
     <p>Returns the float whose text representation is <code class="inline">charlist</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_float/1-examples" class="section-heading">
+  <a href="#to_float/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.to_float(&#39;2.2017764e+0&#39;)
 2.2017764</code></pre>
 
@@ -1207,7 +1291,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
     </a>
     <span class="signature">to_integer(charlist)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L565" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L565" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1226,7 +1310,11 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">charlist</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_integer/1-examples" class="section-heading">
+  <a href="#to_integer/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.to_integer(&#39;123&#39;)
 123</code></pre>
 
@@ -1239,7 +1327,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
     </a>
     <span class="signature">to_integer(charlist, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L581" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L581" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1258,7 +1346,11 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">charlist</code> in base <code class="inline">base</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_integer/2-examples" class="section-heading">
+  <a href="#to_integer/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.to_integer(&#39;3FF&#39;, 16)
 1023</code></pre>
 
@@ -1271,7 +1363,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
     </a>
     <span class="signature">to_string(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L619" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L619" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1293,7 +1385,11 @@ strings into a string.</p>
 <p>Notice that this function expects a list of integers representing
 UTF-8 codepoints. If you have a list of bytes, you must instead use
 the <a href="http://www.erlang.org/doc/man/binary.html"><code class="inline">:binary</code> module</a>.</p>
-<h2>Examples</h2>
+<h2 id="to_string/1-examples" class="section-heading">
+  <a href="#to_string/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.to_string([0x00E6, 0x00DF])
 &quot;æß&quot;
 
@@ -1309,7 +1405,7 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
     </a>
     <span class="signature">to_tuple(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L597" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L597" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1328,7 +1424,11 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
   <section class="docstring">
     <p>Converts a list to a tuple.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_tuple/1-examples" class="section-heading">
+  <a href="#to_tuple/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.to_tuple([:share, [:elixir, 163]])
 {:share, [:elixir, 163]}</code></pre>
 
@@ -1341,7 +1441,7 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
     </a>
     <span class="signature">update_at(list, index, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L460" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L460" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1361,7 +1461,11 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
     <p>Returns a list with an updated value at the specified <code class="inline">index</code>.
 Negative indices indicate an offset from the end of the list.
 If <code class="inline">index</code> is out of bounds, the original <code class="inline">list</code> is returned.</p>
-<h2>Examples</h2>
+<h2 id="update_at/3-examples" class="section-heading">
+  <a href="#update_at/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.update_at([1, 2, 3], 0, &amp;(&amp;1 + 10))
 [11, 2, 3]
 
@@ -1383,7 +1487,7 @@ iex&gt; List.update_at([1, 2, 3], -10, &amp;(&amp;1 + 10))
     </a>
     <span class="signature">wrap(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L349" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L349" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1403,7 +1507,11 @@ iex&gt; List.update_at([1, 2, 3], -10, &amp;(&amp;1 + 10))
     <p>Wraps the argument in a list.
 If the argument is already a list, returns the list.
 If the argument is <code class="inline">nil</code>, returns an empty list.</p>
-<h2>Examples</h2>
+<h2 id="wrap/1-examples" class="section-heading">
+  <a href="#wrap/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.wrap(&quot;hello&quot;)
 [&quot;hello&quot;]
 
@@ -1422,7 +1530,7 @@ iex&gt; List.wrap(nil)
     </a>
     <span class="signature">zip(list_of_lists)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/list.ex#L376" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/list.ex#L376" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1441,7 +1549,11 @@ iex&gt; List.wrap(nil)
   <section class="docstring">
     <p>Zips corresponding elements from each list in <code class="inline">list_of_lists</code>.</p>
 <p>The zipping finishes as soon as any list terminates.</p>
-<h2>Examples</h2>
+<h2 id="zip/1-examples" class="section-heading">
+  <a href="#zip/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; List.zip([[1, 2], [3, 4], [5, 6]])
 [{1, 3, 5}, {2, 4, 6}]
 
@@ -1474,7 +1586,7 @@ iex&gt; List.zip([[1, 2], [3], [5, 6]])
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

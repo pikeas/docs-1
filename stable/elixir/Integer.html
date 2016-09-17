@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Integer – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Integer – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Integer.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Integer
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Functions for working with integers.</p>
 
         </section>
@@ -217,7 +217,7 @@ of <code class="inline">integer</code> in the given <code class="inline">base</c
     </a>
     <span class="signature">digits(integer, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L78" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L78" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -237,7 +237,11 @@ of <code class="inline">integer</code> in the given <code class="inline">base</c
     <p>Returns the ordered digits for the given non-negative <code class="inline">integer</code>.</p>
 <p>An optional <code class="inline">base</code> value may be provided representing the radix for the returned
 digits. This one can be an integer &gt;= 2.</p>
-<h2>Examples</h2>
+<h2 id="digits/2-examples" class="section-heading">
+  <a href="#digits/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.digits(101)
 [1, 0, 1]
 
@@ -253,7 +257,7 @@ iex&gt; Integer.digits(170, 2)
     </a>
     <span class="signature">parse(binary, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L165" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -281,7 +285,11 @@ Otherwise <code class="inline">:error</code>.</p>
 <p>Raises an error if <code class="inline">base</code> is less than 2 or more than 36.</p>
 <p>If you want to convert a string-formatted integer directly to a integer,
 <a href="String.html#to_integer/1"><code class="inline">String.to_integer/1</code></a> or <a href="String.html#to_integer/2"><code class="inline">String.to_integer/2</code></a> can be used instead.</p>
-<h2>Examples</h2>
+<h2 id="parse/2-examples" class="section-heading">
+  <a href="#parse/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.parse(&quot;34&quot;)
 {34, &quot;&quot;}
 
@@ -315,7 +323,7 @@ iex&gt; Integer.parse(&quot;a2&quot;, 38)
     </a>
     <span class="signature">to_charlist(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L305" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -334,7 +342,11 @@ iex&gt; Integer.parse(&quot;a2&quot;, 38)
   <section class="docstring">
     <p>Returns a charlist which corresponds to the text representation of the given <code class="inline">integer</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_charlist/1-examples" class="section-heading">
+  <a href="#to_charlist/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_charlist(123)
 &#39;123&#39;
 
@@ -356,7 +368,7 @@ iex&gt; Integer.to_charlist(0123)
     </a>
     <span class="signature">to_charlist(integer, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L329" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L329" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -376,7 +388,11 @@ iex&gt; Integer.to_charlist(0123)
     <p>Returns a charlist which corresponds to the text representation of <code class="inline">integer</code> in the given <code class="inline">base</code>.</p>
 <p><code class="inline">base</code> can be an integer between 2 and 36.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_charlist/2-examples" class="section-heading">
+  <a href="#to_charlist/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_charlist(100, 16)
 &#39;64&#39;
 
@@ -395,7 +411,7 @@ iex&gt; Integer.to_charlist(882681651, 36)
     </a>
     <span class="signature">to_string(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -415,7 +431,11 @@ iex&gt; Integer.to_charlist(882681651, 36)
     <p>Returns a binary which corresponds to the text representation
 of <code class="inline">integer</code>.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_string/1-examples" class="section-heading">
+  <a href="#to_string/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_string(123)
 &quot;123&quot;
 
@@ -437,7 +457,7 @@ iex&gt; Integer.to_string(0123)
     </a>
     <span class="signature">to_string(integer, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L280" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L280" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -458,7 +478,11 @@ iex&gt; Integer.to_string(0123)
 of <code class="inline">integer</code> in the given <code class="inline">base</code>.</p>
 <p><code class="inline">base</code> can be an integer between 2 and 36.</p>
 <p>Inlined by the compiler.</p>
-<h2>Examples</h2>
+<h2 id="to_string/2-examples" class="section-heading">
+  <a href="#to_string/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.to_string(100, 16)
 &quot;64&quot;
 
@@ -477,7 +501,7 @@ iex&gt; Integer.to_string(882681651, 36)
     </a>
     <span class="signature">undigits(digits, base \\ 10)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L110" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -497,7 +521,11 @@ iex&gt; Integer.to_string(882681651, 36)
     <p>Returns the integer represented by the ordered <code class="inline">digits</code>.</p>
 <p>An optional <code class="inline">base</code> value may be provided representing the radix for the <code class="inline">digits</code>.
 This one can be an integer &gt;= 2.</p>
-<h2>Examples</h2>
+<h2 id="undigits/2-examples" class="section-heading">
+  <a href="#undigits/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.undigits([1, 2, 3])
 123
 
@@ -528,7 +556,7 @@ iex&gt; Integer.undigits([])
     </a>
     <span class="signature">is_even(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -540,7 +568,11 @@ iex&gt; Integer.undigits([])
 <p>Returns <code class="inline">true</code> if the given <code class="inline">integer</code> is an even number,
 otherwise it returns <code class="inline">false</code>.</p>
 <p>Allowed in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_even/1-examples" class="section-heading">
+  <a href="#is_even/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.is_even(10)
 true
 
@@ -562,7 +594,7 @@ true</code></pre>
     </a>
     <span class="signature">is_odd(integer)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/integer.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/integer.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -574,7 +606,11 @@ true</code></pre>
 <p>Returns <code class="inline">true</code> if the given <code class="inline">integer</code> is an odd number,
 otherwise it returns <code class="inline">false</code>.</p>
 <p>Allowed in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_odd/1-examples" class="section-heading">
+  <a href="#is_odd/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Integer.is_odd(5)
 true
 
@@ -611,7 +647,7 @@ false</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

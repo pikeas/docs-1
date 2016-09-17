@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>ExUnit – ExUnit v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>ExUnit – ExUnit v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html" />
     
@@ -28,7 +28,7 @@
         ExUnit
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">ExUnit v1.3.2</small>
+        <small class="visible-xs">ExUnit v1.3.3</small>
         ExUnit
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Unit testing framework for Elixir.</p>
 <h2 id="module-example" class="section-heading">
   <a href="#module-example" class="hover-link"><i class="icon-link"></i></a>
@@ -129,7 +129,7 @@ from the command line will run the tests in each file matching the pattern
 ExUnit.start</code></pre>
 <p>Mix will load the <code class="inline">test_helper.exs</code> file before executing the tests.
 It is not necessary to <code class="inline">require</code> the <code class="inline">test_helper.exs</code> file in your test
-files. See <code class="inline">Mix.Tasks.Test</code> for more information.</p>
+files. See <a href="http://elixir-lang.org/docs/stable/mix/Mix.Tasks.Test.html"><code class="inline">Mix.Tasks.Test</code></a> for more information.</p>
 
         </section>
       
@@ -283,7 +283,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L226" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -302,7 +302,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L220" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -311,7 +311,11 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
   
   <section class="docstring">
     <p>Configures ExUnit.</p>
-<h2>Options</h2>
+<h2 id="configure/1-options" class="section-heading">
+  <a href="#configure/1-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <p>ExUnit supports the following options:</p>
 <ul>
 <li><p><code class="inline">:assert_receive_timeout</code> - the timeout to be used on <code class="inline">assert_receive</code>
@@ -321,8 +325,11 @@ calls. Defaults to 100ms.</p>
 and print them on test failure. Can be overridden for individual tests via
 <code class="inline">@tag capture_log: false</code>. Defaults to <code class="inline">false</code>.</p>
 </li>
+<li><p><code class="inline">:case_load_timeout</code> - the timeout to be used when loading a test case.
+Defaults to <code class="inline">60_000</code> milliseconds.</p>
+</li>
 <li><p><code class="inline">:colors</code> - a keyword list of colors to be used by some formatters.
-The only option so far is <code class="inline">[enabled: boolean]</code> which defaults to <code class="inline">IO.ANSI.enabled?/0</code></p>
+The only option so far is <code class="inline">[enabled: boolean]</code> which defaults to <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html#enabled?/0"><code class="inline">IO.ANSI.enabled?/0</code></a></p>
 </li>
 <li><p><code class="inline">:formatters</code> - the formatters that will print results;
 defaults to <code class="inline">[ExUnit.CLIFormatter]</code></p>
@@ -364,7 +371,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">plural_rule(word)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L236" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L239" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -393,7 +400,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">plural_rule(word, pluralization)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L247" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L250" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -422,7 +429,7 @@ on formatting and reporters (defaults to 20)</p>
     </a>
     <span class="signature">run()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L261" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L264" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -444,7 +451,7 @@ of failures and the number of skipped tests.</p>
     </a>
     <span class="signature">start(options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit.ex#L149" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit.ex#L149" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -483,7 +490,7 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

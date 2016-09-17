@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>IEx – IEx v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>IEx – IEx v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/iex/IEx.html" />
     
@@ -28,7 +28,7 @@
         IEx
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">IEx v1.3.2</small>
+        <small class="visible-xs">IEx v1.3.3</small>
         IEx
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Elixir’s interactive shell.</p>
 <p>This module is the main entry point for Interactive Elixir and
 in this documentation we will talk a bit about how IEx works.</p>
@@ -414,7 +414,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L317" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L317" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -433,7 +433,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">after_spawn(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L310" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L310" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,7 +452,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">color(color, string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L333" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L333" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -472,7 +472,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configuration()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -491,7 +491,7 @@ pending expression and return to its normal state:</p>
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L296" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -502,9 +502,13 @@ pending expression and return to its normal state:</p>
     <p>Configures IEx.</p>
 <p>The supported options are: <code class="inline">:colors</code>, <code class="inline">:inspect</code>, <code class="inline">:width</code>,
 <code class="inline">:history_size</code>, <code class="inline">:default_prompt</code> and <code class="inline">:alive_prompt</code>.</p>
-<h2>Colors</h2>
+<h2 id="configure/1-colors" class="section-heading">
+  <a href="#configure/1-colors" class="hover-link"><i class="icon-link"></i></a>
+  Colors
+</h2>
+
 <p>A keyword list that encapsulates all color settings used by the
-shell. See documentation for the <code class="inline">IO.ANSI</code> module for the list of
+shell. See documentation for the <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html"><code class="inline">IO.ANSI</code></a> module for the list of
 supported colors and attributes.</p>
 <p>The value is a keyword list. List of supported keys:</p>
 <ul>
@@ -541,22 +545,38 @@ documentation to ANSI as well. Those can be configured via:</p>
 <li><code class="inline">:doc_underline</code>   - (underline)
 </li>
 </ul>
-<h2>Inspect</h2>
+<h2 id="configure/1-inspect" class="section-heading">
+  <a href="#configure/1-inspect" class="hover-link"><i class="icon-link"></i></a>
+  Inspect
+</h2>
+
 <p>A keyword list containing inspect options used by the shell
 when printing results of expression evaluation. Default to
 pretty formatting with a limit of 50 entries.</p>
-<p>See <code class="inline">Inspect.Opts</code> for the full list of options.</p>
-<h2>Width</h2>
+<p>See <a href="http://elixir-lang.org/docs/stable/elixir/Inspect.Opts.html"><code class="inline">Inspect.Opts</code></a> for the full list of options.</p>
+<h2 id="configure/1-width" class="section-heading">
+  <a href="#configure/1-width" class="hover-link"><i class="icon-link"></i></a>
+  Width
+</h2>
+
 <p>An integer indicating the number of columns to use in documentation
 output. Default is 80 columns or result of <code class="inline">:io.columns</code>, whichever
 is smaller. The configured value will be used unless it is too large,
 which in that case <code class="inline">:io.columns</code> is used. This way you can configure
 IEx to be your largest screen size and it should always take up the
 full width of your terminal screen.</p>
-<h2>History size</h2>
+<h2 id="configure/1-history-size" class="section-heading">
+  <a href="#configure/1-history-size" class="hover-link"><i class="icon-link"></i></a>
+  History size
+</h2>
+
 <p>Number of expressions and their results to keep in the history.
 The value is an integer. When it is negative, the history is unlimited.</p>
-<h2>Prompt</h2>
+<h2 id="configure/1-prompt" class="section-heading">
+  <a href="#configure/1-prompt" class="hover-link"><i class="icon-link"></i></a>
+  Prompt
+</h2>
+
 <p>This is an option determining the prompt displayed to the user
 when awaiting input.</p>
 <p>The value is a keyword list. Two prompt types:</p>
@@ -585,7 +605,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">inspect_opts()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L354" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L354" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -604,7 +624,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(binding, env, timeout)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -615,7 +635,7 @@ when awaiting input.</p>
     <p>Callback for <a href="IEx.html#pry/1"><code class="inline">IEx.pry/1</code></a>.</p>
 <p>You can invoke this function directly when you are not able to invoke
 <a href="IEx.html#pry/1"><code class="inline">IEx.pry/1</code></a> as a macro. This function expects the binding (from
-<code class="inline">Kernel.binding/0</code>), the environment (from <code class="inline">__ENV__</code>) and the timeout
+<a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#binding/0)"><code class="inline">Kernel.binding/0</code></a>, the environment (from <code class="inline">__ENV__</code>) and the timeout
 (a sensible default is 5000).</p>
 
   </section>
@@ -627,7 +647,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">started?()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L324" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L324" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -646,7 +666,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">width()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L347" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L347" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -678,7 +698,7 @@ when awaiting input.</p>
     </a>
     <span class="signature">pry(timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/iex/lib/iex.ex#L415" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/iex/lib/iex.ex#L415" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -698,7 +718,11 @@ the pried one.</p>
 such, it is evaluated and cannot access private functions
 of the module being pried. Module functions still need to be
 accessed via <code class="inline">Mod.fun(args)</code>.</p>
-<h2>Examples</h2>
+<h2 id="pry/1-examples" class="section-heading">
+  <a href="#pry/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>Let’s suppose you want to investigate what is happening
 with some particular function. By invoking <a href="IEx.html#pry/1"><code class="inline">IEx.pry/1</code></a> from
 the function, IEx will allow you to access its binding
@@ -756,7 +780,7 @@ affect the caller the environment (hence it is called <code class="inline">pry</
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

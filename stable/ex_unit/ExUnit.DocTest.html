@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>ExUnit.DocTest – ExUnit v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>ExUnit.DocTest – ExUnit v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.DocTest.html" />
     
@@ -28,7 +28,7 @@
         ExUnit
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">ExUnit v1.3.2</small>
+        <small class="visible-xs">ExUnit v1.3.3</small>
         ExUnit.DocTest
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/doc_test.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/doc_test.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>ExUnit.DocTest implements functionality similar to <a href="https://docs.python.org/2/library/doctest.html">Python’s
 doctest</a>.</p>
 <p>In a nutshell, it allows us to generate tests from the code
@@ -257,7 +257,7 @@ suite run.</p>
     </a>
     <span class="signature">doctest(mod, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/doc_test.ex#L187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/doc_test.ex#L187" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -267,7 +267,7 @@ suite run.</p>
   <section class="docstring">
     <p>This macro is used to generate ExUnit test cases for doctests.</p>
 <p>Calling <code class="inline">doctest(Module)</code> will generate tests for all doctests found
-in the module <code class="inline">Module</code></p>
+in the module <a href="http://elixir-lang.org/docs/stable/elixir/Module.html"><code class="inline">Module</code></a></p>
 <p>Options can also be given:</p>
 <ul>
 <li><p><code class="inline">:except</code> - generate tests for all functions except those listed
@@ -282,7 +282,11 @@ there is a clash with a module like Kernel. In these cases, <code class="inline"
 should be set to <code class="inline">false</code> and a full <code class="inline">M.f</code> construct should be used.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="doctest/2-examples" class="section-heading">
+  <a href="#doctest/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">doctest MyModule, except: [:moduledoc, trick_fun: 1]</code></pre>
 <p>This macro is auto-imported with every <a href="ExUnit.Case.html"><code class="inline">ExUnit.Case</code></a>.</p>
 
@@ -310,7 +314,7 @@ should be set to <code class="inline">false</code> and a full <code class="inlin
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

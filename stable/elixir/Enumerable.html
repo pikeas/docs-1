@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Enumerable – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Enumerable – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Enumerable.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,20 +67,20 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Enumerable
         
           <small>protocol</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/enum.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/enum.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Enumerable protocol used by <a href="Enum.html"><code class="inline">Enum</code></a> and <a href="Stream.html"><code class="inline">Stream</code></a> modules.</p>
 <p>When you invoke a function in the <a href="Enum.html"><code class="inline">Enum</code></a> module, the first argument
 is usually a collection that must implement this protocol.
@@ -95,16 +95,16 @@ element with an accumulated list.</p>
   reducer = fn x, acc -&gt; {:cont, [fun.(x) | acc]} end
   Enumerable.reduce(enum, {:cont, []}, reducer) |&gt; elem(1) |&gt; :lists.reverse()
 end</code></pre>
-<p>Notice the user-supplied function is wrapped into a <code class="inline">t:reducer/0</code> function.
-The <code class="inline">t:reducer/0</code> function must return a tagged tuple after each step,
-as described in the <code class="inline">t:acc/0</code> type.</p>
+<p>Notice the user-supplied function is wrapped into a <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function.
+The <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function must return a tagged tuple after each step,
+as described in the <a href="#t:acc/0"><code class="inline">acc/0</code></a> type.</p>
 <p>The reason the accumulator requires a tagged tuple is to allow the
-<code class="inline">t:reducer/0</code> function to communicate the end of enumeration to the underlying
+<a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function to communicate the end of enumeration to the underlying
 enumerable, allowing any open resources to be properly closed.
 It also allows suspension of the enumeration, which is useful when
 interleaving between many enumerables is required (as in zip).</p>
 <p>Finally, <a href="Enumerable.html#reduce/3"><code class="inline">Enumerable.reduce/3</code></a> will return another tagged tuple,
-as represented by the <code class="inline">t:result/0</code> type.</p>
+as represented by the <a href="#t:result/0"><code class="inline">result/0</code></a> type.</p>
 
         </section>
       
@@ -237,9 +237,9 @@ as represented by the <code class="inline">t:result/0</code> type.</p>
 </li>
 </ul>
 <p>Depending on the accumulator value, the result returned by
-<a href="Enumerable.html#reduce/3"><code class="inline">Enumerable.reduce/3</code></a> will change. Please check the <code class="inline">t:result/0</code>
+<a href="Enumerable.html#reduce/3"><code class="inline">Enumerable.reduce/3</code></a> will change. Please check the <a href="#t:result/0"><code class="inline">result/0</code></a>
 type documentation for more information.</p>
-<p>In case a <code class="inline">t:reducer/0</code> function returns a <code class="inline">:suspend</code> accumulator,
+<p>In case a <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function returns a <code class="inline">:suspend</code> accumulator,
 it must be explicitly handled by the caller and never leak.</p>
 </div>
   
@@ -278,8 +278,8 @@ accumulator contents.</p>
     <div class="typespec-doc"><p>The result of the reduce operation.</p>
 <p>It may be <em>done</em> when the enumeration is finished by reaching
 its end, or <em>halted</em>/<em>suspended</em> when the enumeration was halted
-or suspended by the <code class="inline">t:reducer/0</code> function.</p>
-<p>In case a <code class="inline">t:reducer/0</code> function returns the <code class="inline">:suspend</code> accumulator, the
+or suspended by the <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function.</p>
+<p>In case a <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function returns the <code class="inline">:suspend</code> accumulator, the
 <code class="inline">:suspended</code> tuple must be explicitly handled by the caller and
 never leak. In practice, this means regular enumeration functions
 just need to be concerned about <code class="inline">:done</code> and <code class="inline">:halted</code> results.</p>
@@ -312,7 +312,7 @@ eventually halting or continuing until the end.</p>
     </a>
     <span class="signature">count(enumerable)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/enum.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/enum.ex#L146" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -346,7 +346,7 @@ algorithm that is significantly faster.</em></p>
     </a>
     <span class="signature">member?(enumerable, element)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/enum.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/enum.ex#L131" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -382,7 +382,7 @@ algorithm that is significantly faster.</em></p>
     </a>
     <span class="signature">reduce(enumerable, acc, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/enum.ex#L116" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/enum.ex#L116" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -401,7 +401,7 @@ algorithm that is significantly faster.</em></p>
   <section class="docstring">
     <p>Reduces the enumerable into an element.</p>
 <p>Most of the operations in <a href="Enum.html"><code class="inline">Enum</code></a> are implemented in terms of reduce.
-This function should apply the given <code class="inline">t:reducer/0</code> function to each
+This function should apply the given <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function to each
 item in the enumerable and proceed as expected by the returned
 accumulator.</p>
 <p>As an example, here is the implementation of <code class="inline">reduce</code> for lists:</p>
@@ -436,7 +436,7 @@ def reduce([h | t], {:cont, acc}, fun),    do: reduce(t, fun.(h, acc), fun)</cod
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

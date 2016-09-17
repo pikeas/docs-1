@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Record – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Record – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Record.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Record
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Module to work with, define and import records.</p>
 <p>Records are simply tuples where the first element is an atom:</p>
 <pre><code class="iex elixir">iex&gt; Record.is_record {User, &quot;john&quot;, 27}
@@ -220,7 +220,7 @@ end</code></pre>
     </a>
     <span class="signature">extract(name, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L55" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -232,7 +232,11 @@ end</code></pre>
 <p>Returns a quoted expression containing the fields as a list
 of tuples. It expects the record name to be an atom and the
 library path to be a string at expansion time.</p>
-<h2>Examples</h2>
+<h2 id="extract/2-examples" class="section-heading">
+  <a href="#extract/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Record.extract(:file_info, from_lib: &quot;kernel/include/file.hrl&quot;)
 [size: :undefined, type: :undefined, access: :undefined, atime: :undefined,
  mtime: :undefined, ctime: :undefined, mode: :undefined, links: :undefined,
@@ -248,7 +252,7 @@ library path to be a string at expansion time.</p>
     </a>
     <span class="signature">extract_all(opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L68" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -283,7 +287,7 @@ argument :from or :from_lib, which correspond to <em>include</em> or
     </a>
     <span class="signature">defrecord(name, tag \\ nil, kv)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L199" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -295,7 +299,11 @@ argument :from or :from_lib, which correspond to <em>include</em> or
 <p>The macros are going to have <code class="inline">name</code>, a tag (which defaults)
 to the name if none is given, and a set of fields given by
 <code class="inline">kv</code>.</p>
-<h2>Examples</h2>
+<h2 id="defrecord/3-examples" class="section-heading">
+  <a href="#defrecord/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">defmodule User do
   require Record
   Record.defrecord :user, [name: &quot;meg&quot;, age: &quot;25&quot;]
@@ -329,7 +337,11 @@ end
 
 require User
 User.user() #=&gt; {User, nil}</code></pre>
-<h2>Defining extracted records with anonymous functions</h2>
+<h2 id="defrecord/3-defining-extracted-records-with-anonymous-functions" class="section-heading">
+  <a href="#defrecord/3-defining-extracted-records-with-anonymous-functions" class="hover-link"><i class="icon-link"></i></a>
+  Defining extracted records with anonymous functions
+</h2>
+
 <p>If a record defines an anonymous function, an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a>
 will occur if you attempt to create a record with it.
 This can occur unintentionally when defining a record after extracting
@@ -354,7 +366,7 @@ end</code></pre>
     </a>
     <span class="signature">defrecordp(name, tag \\ nil, kv)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L217" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L217" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -373,7 +385,7 @@ end</code></pre>
     </a>
     <span class="signature">is_record(data)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -383,7 +395,11 @@ end</code></pre>
   <section class="docstring">
     <p>Checks if the given <code class="inline">data</code> is a record.</p>
 <p>This is implemented as a macro so it can be used in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_record/1-examples" class="section-heading">
+  <a href="#is_record/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; record = {User, &quot;john&quot;, 27}
 iex&gt; Record.is_record(record)
 true
@@ -400,7 +416,7 @@ false</code></pre>
     </a>
     <span class="signature">is_record(data, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/record.ex#L84" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/record.ex#L84" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -410,7 +426,11 @@ false</code></pre>
   <section class="docstring">
     <p>Checks if the given <code class="inline">data</code> is a record of <code class="inline">kind</code>.</p>
 <p>This is implemented as a macro so it can be used in guard clauses.</p>
-<h2>Examples</h2>
+<h2 id="is_record/2-examples" class="section-heading">
+  <a href="#is_record/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; record = {User, &quot;john&quot;, 27}
 iex&gt; Record.is_record(record, User)
 true</code></pre>
@@ -439,7 +459,7 @@ true</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

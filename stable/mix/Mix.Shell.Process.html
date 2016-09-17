@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Mix.Shell.Process – Mix v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Mix.Shell.Process – Mix v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Shell.Process.html" />
     
@@ -28,7 +28,7 @@
         Mix
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">Mix v1.3.2</small>
+        <small class="visible-xs">Mix v1.3.3</small>
         Mix.Shell.Process
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Mix shell that uses the current process mailbox for communication.</p>
 <p>This module provides a Mix shell implementation that uses
 the current process mailbox for communication instead of IO.</p>
@@ -213,7 +213,7 @@ was not printed yet</p>
     </a>
     <span class="signature">cmd(command, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -233,7 +233,7 @@ the current process.</p>
     </a>
     <span class="signature">error(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -252,7 +252,7 @@ the current process.</p>
     </a>
     <span class="signature">flush(callback \\ fn x -&gt; x end)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -262,7 +262,11 @@ the current process.</p>
   <section class="docstring">
     <p>Flushes all <code class="inline">:mix_shell</code> and <code class="inline">:mix_shell_input</code> messages from the current process.</p>
 <p>If a callback is given, it is invoked for each received message.</p>
-<h2>Examples</h2>
+<h2 id="flush/1-examples" class="section-heading">
+  <a href="#flush/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">flush &amp;IO.inspect(&amp;1)</code></pre>
 
   </section>
@@ -274,7 +278,7 @@ the current process.</p>
     </a>
     <span class="signature">info(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -293,7 +297,7 @@ the current process.</p>
     </a>
     <span class="signature">print_app()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L62" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -313,7 +317,7 @@ was not printed yet.</p>
     </a>
     <span class="signature">prompt(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -326,7 +330,11 @@ was not printed yet.</p>
 <pre><code class="elixir">{:mix_shell_input, :prompt, value}</code></pre>
 <p>If one does not exist, it will abort since there was no shell
 process inputs given. <code class="inline">value</code> must be a string.</p>
-<h2>Examples</h2>
+<h2 id="prompt/1-examples" class="section-heading">
+  <a href="#prompt/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>The following will answer with <code class="inline">&quot;Meg&quot;</code> to the prompt
 <code class="inline">&quot;What&#39;s your name?&quot;</code>:</p>
 <pre><code class="elixir"># The response is sent before calling prompt/1 so that prompt/1 can read it
@@ -342,7 +350,7 @@ Mix.shell.prompt(&quot;What&#39;s your name?&quot;)</code></pre>
     </a>
     <span class="signature">yes?(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/shell/process.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell/process.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -355,7 +363,11 @@ Mix.shell.prompt(&quot;What&#39;s your name?&quot;)</code></pre>
 <pre><code class="elixir">{:mix_shell_input, :yes?, value}</code></pre>
 <p>If one does not exist, it will abort since there was no shell
 process inputs given. <code class="inline">value</code> must be <code class="inline">true</code> or <code class="inline">false</code>.</p>
-<h2>Example</h2>
+<h2 id="yes?/1-example" class="section-heading">
+  <a href="#yes?/1-example" class="hover-link"><i class="icon-link"></i></a>
+  Example
+</h2>
+
 <pre><code class="elixir"># Send the response to self() first so that yes?/1 will be able to read it
 send self(), {:mix_shell_input, :yes?, true}
 Mix.shell.yes?(&quot;Are you sure you want to continue?&quot;)</code></pre>
@@ -386,7 +398,7 @@ Mix.shell.yes?(&quot;Are you sure you want to continue?&quot;)</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

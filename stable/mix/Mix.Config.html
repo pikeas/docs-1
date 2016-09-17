@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Mix.Config – Mix v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Mix.Config – Mix v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Config.html" />
     
@@ -28,7 +28,7 @@
         Mix
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">Mix v1.3.2</small>
+        <small class="visible-xs">Mix v1.3.3</small>
         Mix.Config
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Module for defining, reading and merging app configurations.</p>
 <p>Most commonly, this module is used to define your own configuration:</p>
 <pre><code class="elixir">use Mix.Config
@@ -92,7 +92,7 @@ to help define such configuration files.</p>
 <a href="#merge/2"><code class="inline">merge/2</code></a> and friends which help manipulate configurations
 in general.</p>
 <p>Configuration set using <a href="Mix.Config.html#content"><code class="inline">Mix.Config</code></a> will set the application env, so
-that <code class="inline">Application.get_env/3</code> and other <code class="inline">Application</code> functions can be used
+that <a href="http://elixir-lang.org/docs/stable/elixir/Application.html#get_env/3"><code class="inline">Application.get_env/3</code></a> and other <a href="http://elixir-lang.org/docs/stable/elixir/Application.html"><code class="inline">Application</code></a> functions can be used
 at run or compile time to retrieve or change the configuration.</p>
 <p>For example, the <code class="inline">:key1</code> value from application <code class="inline">:plug</code> (see above) can be
 retrieved with:</p>
@@ -224,7 +224,7 @@ the configured applications environment</p>
     </a>
     <span class="signature">merge(config1, config2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L262" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L262" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -236,7 +236,11 @@ the configured applications environment</p>
 <p>The configuration of each application is merged together
 with the values in the second one having higher preference
 than the first in case of conflicts.</p>
-<h2>Examples</h2>
+<h2 id="merge/2-examples" class="section-heading">
+  <a href="#merge/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Mix.Config.merge([app: [k: :v1]], [app: [k: :v2]])
 [app: [k: :v2]]
 
@@ -252,7 +256,7 @@ iex&gt; Mix.Config.merge([app1: []], [app2: []])
     </a>
     <span class="signature">persist(config)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L215" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -267,7 +271,11 @@ the configured applications environment.</p>
 be configured and <code class="inline">app_config</code> are the configuration (as key-value
 pairs) for each of those applications.</p>
 <p>Returns the configured applications.</p>
-<h2>Examples</h2>
+<h2 id="persist/1-examples" class="section-heading">
+  <a href="#persist/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Mix.Config.persist(logger: [level: :error], my_app: [my_config: 1])
 #=&gt; [:logger, :my_app]</code></pre>
 
@@ -280,7 +288,7 @@ pairs) for each of those applications.</p>
     </a>
     <span class="signature">read!(file)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -302,7 +310,7 @@ will be raised.</p>
     </a>
     <span class="signature">read_wildcard!(path)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L189" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -324,7 +332,7 @@ no errors are raised.</p>
     </a>
     <span class="signature">validate!(config)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L227" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -355,7 +363,7 @@ no errors are raised.</p>
     </a>
     <span class="signature">config(app, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -365,7 +373,11 @@ no errors are raised.</p>
   <section class="docstring">
     <p>Configures the given application.</p>
 <p>Keyword lists are always deep merged.</p>
-<h2>Examples</h2>
+<h2 id="config/2-examples" class="section-heading">
+  <a href="#config/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>The given <code class="inline">opts</code> are merged into the existing configuration
 for the given <code class="inline">app</code>. Conflicting keys are overridden by the
 ones specified in <code class="inline">opts</code>. For example, the declaration below:</p>
@@ -390,7 +402,7 @@ config :lager,
     </a>
     <span class="signature">config(app, key, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L112" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -400,7 +412,11 @@ config :lager,
   <section class="docstring">
     <p>Configures the given key for the given application.</p>
 <p>Keyword lists are always deep merged.</p>
-<h2>Examples</h2>
+<h2 id="config/3-examples" class="section-heading">
+  <a href="#config/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>The given <code class="inline">opts</code> are merged into the existing values for <code class="inline">key</code>
 in the given <code class="inline">app</code>. Conflicting keys are overridden by the
 ones specified in <code class="inline">opts</code>. For example, the declaration below:</p>
@@ -424,7 +440,7 @@ config :ecto, Repo,
     </a>
     <span class="signature">import_config(path_or_wildcard)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/mix/lib/mix/config.ex#L143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/config.ex#L143" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -441,7 +457,11 @@ imported; in case the file doesn’t exist, an error is raised.
 This behaviour is analogous to the one for <a href="#read_wildcard!/1"><code class="inline">read_wildcard!/1</code></a>.</p>
 <p>If path/wildcard is a relative path/wildcard, it will be expanded relatively
 to the directory the current configuration file is in.</p>
-<h2>Examples</h2>
+<h2 id="import_config/1-examples" class="section-heading">
+  <a href="#import_config/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <p>This is often used to emulate configuration across environments:</p>
 <pre><code class="elixir">import_config &quot;#{Mix.env}.exs&quot;</code></pre>
 <p>Or to import files from children in umbrella projects:</p>
@@ -471,7 +491,7 @@ to the directory the current configuration file is in.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

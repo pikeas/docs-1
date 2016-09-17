@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Regex – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Regex – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Regex.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Regex
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Provides regular expressions for Elixir. Built on top of Erlang’s <code class="inline">:re</code>
 module.</p>
 <p>As the <code class="inline">:re</code> module, Regex is based on PCRE
@@ -372,7 +372,7 @@ parts</p>
     </a>
     <span class="signature">compile(source, options \\ &quot;&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L109" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -397,7 +397,11 @@ representing the same regex options given to the <code class="inline">~r</code> 
 or a list of options, as expected by the Erlang’s <a href="http://www.erlang.org/doc/man/re.html"><code class="inline">:re</code> module</a>.</p>
 <p>It returns <code class="inline">{:ok, regex}</code> in case of success,
 <code class="inline">{:error, reason}</code> otherwise.</p>
-<h2>Examples</h2>
+<h2 id="compile/2-examples" class="section-heading">
+  <a href="#compile/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.compile(&quot;foo&quot;)
 {:ok, ~r&quot;foo&quot;}
 
@@ -413,7 +417,7 @@ iex&gt; Regex.compile(&quot;*foo&quot;)
     </a>
     <span class="signature">compile!(source, options \\ &quot;&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L139" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L139" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -442,7 +446,7 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
     </a>
     <span class="signature">escape(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L643" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L643" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -460,7 +464,11 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
   
   <section class="docstring">
     <p>Escapes a string to be literally matched in a regex.</p>
-<h2>Examples</h2>
+<h2 id="escape/1-examples" class="section-heading">
+  <a href="#escape/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.escape(&quot;.&quot;)
 &quot;\\.&quot;
 
@@ -476,7 +484,7 @@ iex&gt; Regex.escape(&quot;\\what if&quot;)
     </a>
     <span class="signature">match?(regex, string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -494,7 +502,11 @@ iex&gt; Regex.escape(&quot;\\what if&quot;)
   
   <section class="docstring">
     <p>Returns a boolean indicating whether there was a match or not.</p>
-<h2>Examples</h2>
+<h2 id="match?/2-examples" class="section-heading">
+  <a href="#match?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.match?(~r/foo/, &quot;foo&quot;)
 true
 
@@ -510,7 +522,7 @@ false</code></pre>
     </a>
     <span class="signature">named_captures(regex, string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -530,7 +542,11 @@ false</code></pre>
     <p>Returns the given captures as a map or <code class="inline">nil</code> if no captures are
 found. The option <code class="inline">:return</code> can be set to <code class="inline">:index</code> to get indexes
 back.</p>
-<h2>Examples</h2>
+<h2 id="named_captures/3-examples" class="section-heading">
+  <a href="#named_captures/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.named_captures(~r/c(?&lt;foo&gt;d)/, &quot;abcd&quot;)
 %{&quot;foo&quot; =&gt; &quot;d&quot;}
 
@@ -549,7 +565,7 @@ nil</code></pre>
     </a>
     <span class="signature">names(regex)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L288" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L288" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -567,7 +583,11 @@ nil</code></pre>
   
   <section class="docstring">
     <p>Returns a list of names in the regex.</p>
-<h2>Examples</h2>
+<h2 id="names/1-examples" class="section-heading">
+  <a href="#names/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.names(~r/(?&lt;foo&gt;bar)/)
 [&quot;foo&quot;]</code></pre>
 
@@ -580,7 +600,7 @@ nil</code></pre>
     </a>
     <span class="signature">opts(regex)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L274" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -598,7 +618,11 @@ nil</code></pre>
   
   <section class="docstring">
     <p>Returns the regex options as a string.</p>
-<h2>Examples</h2>
+<h2 id="opts/1-examples" class="section-heading">
+  <a href="#opts/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.opts(~r(foo)m)
 &quot;m&quot;</code></pre>
 
@@ -611,7 +635,7 @@ nil</code></pre>
     </a>
     <span class="signature">re_pattern(regex)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L246" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -639,7 +663,7 @@ nil</code></pre>
     </a>
     <span class="signature">regex?(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -658,7 +682,11 @@ nil</code></pre>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the given <code class="inline">term</code> is a regex.
 Otherwise returns <code class="inline">false</code>.</p>
-<h2>Examples</h2>
+<h2 id="regex?/1-examples" class="section-heading">
+  <a href="#regex?/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.regex?(~r/foo/)
 true
 
@@ -674,7 +702,7 @@ false</code></pre>
     </a>
     <span class="signature">replace(regex, string, replacement, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L497" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L497" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -701,13 +729,21 @@ capture. In case <code class="inline">\\0</code> is used, the whole match is ins
 N where each argument maps to a capture, with the first argument
 being the whole match. If the function expects more arguments
 than captures found, the remaining arguments will receive <code class="inline">&quot;&quot;</code>.</p>
-<h2>Options</h2>
+<h2 id="replace/4-options" class="section-heading">
+  <a href="#replace/4-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:global</code> - when <code class="inline">false</code>, replaces only the first occurrence
 (defaults to <code class="inline">true</code>)
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="replace/4-examples" class="section-heading">
+  <a href="#replace/4-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.replace(~r/d/, &quot;abc&quot;, &quot;d&quot;)
 &quot;abc&quot;
 
@@ -738,7 +774,7 @@ iex&gt; Regex.replace(~r/a/, &quot;abcadc&quot;, &quot;A&quot;, global: false)
     </a>
     <span class="signature">run(regex, string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L204" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L204" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -760,7 +796,11 @@ iex&gt; Regex.replace(~r/a/, &quot;abcadc&quot;, &quot;A&quot;, global: false)
   <section class="docstring">
     <p>Runs the regular expression against the given string until the first match.
 It returns a list with all captures or <code class="inline">nil</code> if no match occurred.</p>
-<h2>Options</h2>
+<h2 id="run/3-options" class="section-heading">
+  <a href="#run/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:return</code>  - set to <code class="inline">:index</code> to return indexes. Defaults to <code class="inline">:binary</code>.
 </li>
@@ -768,7 +808,11 @@ It returns a list with all captures or <code class="inline">nil</code> if no mat
 to see the possible capture values.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="run/3-examples" class="section-heading">
+  <a href="#run/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;)
 [&quot;cd&quot;, &quot;d&quot;]
 
@@ -787,7 +831,7 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
     </a>
     <span class="signature">scan(regex, string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L319" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L319" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -808,7 +852,11 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
 matches of the regular expression.</p>
 <p>A list of lists is returned, where each entry in the primary list represents a
 match and each entry in the secondary list represents the captured contents.</p>
-<h2>Options</h2>
+<h2 id="scan/3-options" class="section-heading">
+  <a href="#scan/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:return</code>  - set to <code class="inline">:index</code> to return indexes. Defaults to <code class="inline">:binary</code>.
 </li>
@@ -816,7 +864,11 @@ match and each entry in the secondary list represents the captured contents.</p>
 to see the possible capture values.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="scan/3-examples" class="section-heading">
+  <a href="#scan/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.scan(~r/c(d|e)/, &quot;abcd abce&quot;)
 [[&quot;cd&quot;, &quot;d&quot;], [&quot;ce&quot;, &quot;e&quot;]]
 
@@ -835,7 +887,7 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
     </a>
     <span class="signature">source(regex)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L260" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L260" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -853,7 +905,11 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
   
   <section class="docstring">
     <p>Returns the regex source as a binary.</p>
-<h2>Examples</h2>
+<h2 id="source/1-examples" class="section-heading">
+  <a href="#source/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.source(~r(foo))
 &quot;foo&quot;</code></pre>
 
@@ -866,7 +922,7 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
     </a>
     <span class="signature">split(regex, string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/regex.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/regex.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -885,7 +941,11 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
   <section class="docstring">
     <p>Splits the given target based on the given pattern and in the given number of
 parts.</p>
-<h2>Options</h2>
+<h2 id="split/3-options" class="section-heading">
+  <a href="#split/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><p><code class="inline">:parts</code> - when specified, splits the string into the given number of
 parts. If not specified, <code class="inline">:parts</code> defaults to <code class="inline">:infinity</code>, which will
@@ -902,7 +962,11 @@ affect the splitting process.</p>
 the regular expression. Defaults to <code class="inline">false</code>.
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="split/3-examples" class="section-heading">
+  <a href="#split/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Regex.split(~r/-/, &quot;a-b-c&quot;)
 [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
 
@@ -953,7 +1017,7 @@ iex&gt; Regex.split(~r/a(?&lt;second&gt;b)c/, &quot;abc&quot;, on: [:second], in
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

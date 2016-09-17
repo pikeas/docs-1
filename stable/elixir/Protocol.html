@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Protocol – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Protocol – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Protocol.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Protocol
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Functions for working with protocols.</p>
 
         </section>
@@ -209,7 +209,7 @@ the given paths</p>
     </a>
     <span class="signature">assert_impl!(protocol, base)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L89" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -239,7 +239,7 @@ of the given protocol.</p>
     </a>
     <span class="signature">assert_protocol!(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L62" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -268,7 +268,7 @@ of the given protocol.</p>
     </a>
     <span class="signature">consolidate(protocol, types)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L256" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L256" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -315,7 +315,7 @@ it will be loaded.</p>
     </a>
     <span class="signature">consolidated?(protocol)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L224" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -343,7 +343,7 @@ it will be loaded.</p>
     </a>
     <span class="signature">extract_impls(protocol, paths)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L178" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L178" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -366,7 +366,11 @@ the given paths.</p>
 they are worked on as charlists, so passing them as lists
 avoid extra conversion.</p>
 <p>Does not load any of the implementations.</p>
-<h2>Examples</h2>
+<h2 id="extract_impls/2-examples" class="section-heading">
+  <a href="#extract_impls/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Get Elixir&#39;s ebin and retrieve all protocols
 iex&gt; path = :code.lib_dir(:elixir, :ebin)
 iex&gt; mods = Protocol.extract_impls(Enumerable, [path])
@@ -382,7 +386,7 @@ true</code></pre>
     </a>
     <span class="signature">extract_protocols(paths)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -404,7 +408,11 @@ true</code></pre>
 they are worked on as charlists, so passing them as lists
 avoid extra conversion.</p>
 <p>Does not load any of the protocols.</p>
-<h2>Examples</h2>
+<h2 id="extract_protocols/1-examples" class="section-heading">
+  <a href="#extract_protocols/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># Get Elixir&#39;s ebin and retrieve all protocols
 iex&gt; path = :code.lib_dir(:elixir, :ebin)
 iex&gt; mods = Protocol.extract_protocols([path])
@@ -432,7 +440,7 @@ true</code></pre>
     </a>
     <span class="signature">def(signature)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L13" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -454,7 +462,7 @@ defines the protocol functions with the appropriate callbacks.</p>
     </a>
     <span class="signature">derive(protocol, module, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/protocol.ex#L120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/protocol.ex#L120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -488,7 +496,7 @@ defines the protocol functions with the appropriate callbacks.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

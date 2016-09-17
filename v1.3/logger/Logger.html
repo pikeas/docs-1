@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Logger – Logger v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Logger – Logger v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/logger/Logger.html" />
     
@@ -28,7 +28,7 @@
         Logger
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -63,18 +63,18 @@
 
 
       <h1>
-        <small class="visible-xs">Logger v1.3.2</small>
+        <small class="visible-xs">Logger v1.3.3</small>
         Logger
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>A logger for Elixir applications.</p>
 <p>It includes many features:</p>
 <ul>
@@ -295,7 +295,7 @@ coloring on and off. Defaults to: <code class="inline">IO.ANSI.enabled?</code></
 <li><code class="inline">:error</code> - color for error messages. Defaults to: <code class="inline">:red</code>
 </li>
 </ul>
-<p>See the <code class="inline">IO.ANSI</code> module for a list of colors and attributes.</p>
+<p>See the <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html"><code class="inline">IO.ANSI</code></a> module for a list of colors and attributes.</p>
 <p>Here is an example of how to configure the <code class="inline">:console</code> backend in a
 <code class="inline">config/config.exs</code> file:</p>
 <pre><code class="elixir">config :logger, :console,
@@ -304,9 +304,9 @@ coloring on and off. Defaults to: <code class="inline">IO.ANSI.enabled?</code></
 <p>You can read more about formatting in <a href="Logger.Formatter.html"><code class="inline">Logger.Formatter</code></a>.</p>
 <h3>Custom backends</h3>
 <p>Any developer can create their own <a href="Logger.html#content"><code class="inline">Logger</code></a> backend.
-Since <a href="Logger.html#content"><code class="inline">Logger</code></a> is an event manager powered by <code class="inline">GenEvent</code>,
+Since <a href="Logger.html#content"><code class="inline">Logger</code></a> is an event manager powered by <a href="http://elixir-lang.org/docs/stable/elixir/GenEvent.html"><code class="inline">GenEvent</code></a>,
 writing a new backend is a matter of creating an event
-handler, as described in the <code class="inline">GenEvent</code> module.</p>
+handler, as described in the <a href="http://elixir-lang.org/docs/stable/elixir/GenEvent.html"><code class="inline">GenEvent</code></a> module.</p>
 <p>From now on, we will be using the term “event handler” to refer
 to your custom backend, as we head into implementation details.</p>
 <p>Once the <code class="inline">:logger</code> application starts, it installs all event handlers listed under
@@ -649,7 +649,7 @@ and how to process the existing options.</p>
     </a>
     <span class="signature">add_backend(backend, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L419" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L419" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -658,7 +658,11 @@ and how to process the existing options.</p>
   
   <section class="docstring">
     <p>Adds a new backend.</p>
-<h2>Options</h2>
+<h2 id="add_backend/2-options" class="section-heading">
+  <a href="#add_backend/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:flush</code> - when <code class="inline">true</code>, guarantees all messages currently sent
 to both Logger and Erlang’s <code class="inline">error_logger</code> are processed before
@@ -675,7 +679,7 @@ the backend is added
     </a>
     <span class="signature">add_translator(translator)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L448" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L448" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -694,7 +698,7 @@ the backend is added
     </a>
     <span class="signature">bare_log(level, chardata_or_fn, metadata \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L478" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L478" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -727,7 +731,7 @@ explicitly avoid embedding metadata.</p>
     </a>
     <span class="signature">compare_levels(level, level)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L374" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L374" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -757,7 +761,7 @@ against <code class="inline">right</code> and returns <code class="inline">:lt</
     </a>
     <span class="signature">configure(options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L392" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L392" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -778,7 +782,7 @@ documentation for the available options.</p>
     </a>
     <span class="signature">configure_backend(backend, options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L466" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L466" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -808,7 +812,7 @@ be configured at runtime.</p>
     </a>
     <span class="signature">disable(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -828,7 +832,7 @@ be configured at runtime.</p>
     </a>
     <span class="signature">enable(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -848,7 +852,7 @@ be configured at runtime.</p>
     </a>
     <span class="signature">flush()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L404" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L404" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -879,7 +883,7 @@ for testing and it should not be called in production code.</p>
     </a>
     <span class="signature">level()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L362" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L362" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -908,7 +912,7 @@ for testing and it should not be called in production code.</p>
     </a>
     <span class="signature">metadata()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L323" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L323" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -927,7 +931,7 @@ for testing and it should not be called in production code.</p>
     </a>
     <span class="signature">metadata(keywords)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -946,7 +950,7 @@ for testing and it should not be called in production code.</p>
     </a>
     <span class="signature">remove_backend(backend, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L439" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L439" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -955,7 +959,11 @@ for testing and it should not be called in production code.</p>
   
   <section class="docstring">
     <p>Removes a backend.</p>
-<h2>Options</h2>
+<h2 id="remove_backend/2-options" class="section-heading">
+  <a href="#remove_backend/2-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:flush</code> - when <code class="inline">true</code>, guarantees all messages currently sent
 to both Logger and Erlang’s <code class="inline">error_logger</code> are processed before
@@ -972,7 +980,7 @@ the backend is removed
     </a>
     <span class="signature">remove_translator(translator)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L455" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L455" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -991,7 +999,7 @@ the backend is removed
     </a>
     <span class="signature">reset_metadata(keywords \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L330" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1022,7 +1030,7 @@ the backend is removed
     </a>
     <span class="signature">debug(chardata_or_fn, metadata \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L563" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L563" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1032,7 +1040,11 @@ the backend is removed
   <section class="docstring">
     <p>Logs a debug message.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="debug/2-examples" class="section-heading">
+  <a href="#debug/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.debug &quot;hello?&quot;
 Logger.debug fn -&gt; &quot;expensive to calculate debug&quot; end</code></pre>
 
@@ -1045,7 +1057,7 @@ Logger.debug fn -&gt; &quot;expensive to calculate debug&quot; end</code></pre>
     </a>
     <span class="signature">error(chardata_or_fn, metadata \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L548" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L548" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1055,7 +1067,11 @@ Logger.debug fn -&gt; &quot;expensive to calculate debug&quot; end</code></pre>
   <section class="docstring">
     <p>Logs an error.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="error/2-examples" class="section-heading">
+  <a href="#error/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.error &quot;oops&quot;
 Logger.error fn -&gt; &quot;expensive to calculate error&quot; end</code></pre>
 
@@ -1068,7 +1084,7 @@ Logger.error fn -&gt; &quot;expensive to calculate error&quot; end</code></pre>
     </a>
     <span class="signature">info(chardata_or_fn, metadata \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L533" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L533" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1078,7 +1094,11 @@ Logger.error fn -&gt; &quot;expensive to calculate error&quot; end</code></pre>
   <section class="docstring">
     <p>Logs some info.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="info/2-examples" class="section-heading">
+  <a href="#info/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.info &quot;mission accomplished&quot;
 Logger.info fn -&gt; &quot;expensive to calculate info&quot; end</code></pre>
 
@@ -1091,7 +1111,7 @@ Logger.info fn -&gt; &quot;expensive to calculate info&quot; end</code></pre>
     </a>
     <span class="signature">log(level, chardata_or_fn, metadata \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L577" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L577" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1115,7 +1135,7 @@ the Logger call altogether at compile time if desired.</p>
     </a>
     <span class="signature">warn(chardata_or_fn, metadata \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/logger/lib/logger.ex#L518" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/logger/lib/logger.ex#L518" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1125,7 +1145,11 @@ the Logger call altogether at compile time if desired.</p>
   <section class="docstring">
     <p>Logs a warning.</p>
 <p>Returns the atom <code class="inline">:ok</code> or an <code class="inline">{:error, reason}</code> tuple.</p>
-<h2>Examples</h2>
+<h2 id="warn/2-examples" class="section-heading">
+  <a href="#warn/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir">Logger.warn &quot;knob turned too far to the right&quot;
 Logger.warn fn -&gt; &quot;expensive to calculate warning&quot; end</code></pre>
 
@@ -1153,7 +1177,7 @@ Logger.warn fn -&gt; &quot;expensive to calculate warning&quot; end</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

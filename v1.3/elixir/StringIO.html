@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>StringIO – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>StringIO – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/StringIO.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         StringIO
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/string_io.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Controls an IO device process that wraps a string.</p>
 <p>A <a href="StringIO.html#content"><code class="inline">StringIO</code></a> IO device can be passed as a “device” to
 most of the functions in the <a href="IO.html"><code class="inline">IO</code></a> module.</p>
@@ -175,7 +175,7 @@ device</p>
     </a>
     <span class="signature">close(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/string_io.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -194,7 +194,11 @@ device</p>
   <section class="docstring">
     <p>Stops the IO device and returns the remaining input/output
 buffers.</p>
-<h2>Examples</h2>
+<h2 id="close/1-examples" class="section-heading">
+  <a href="#close/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, pid} = StringIO.open(&quot;in&quot;)
 iex&gt; IO.write(pid, &quot;out&quot;)
 iex&gt; StringIO.close(pid)
@@ -209,7 +213,7 @@ iex&gt; StringIO.close(pid)
     </a>
     <span class="signature">contents(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/string_io.ex#L61" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -228,7 +232,11 @@ iex&gt; StringIO.close(pid)
   <section class="docstring">
     <p>Returns the current input/output buffers for the given IO
 device.</p>
-<h2>Examples</h2>
+<h2 id="contents/1-examples" class="section-heading">
+  <a href="#contents/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, pid} = StringIO.open(&quot;in&quot;)
 iex&gt; IO.write(pid, &quot;out&quot;)
 iex&gt; StringIO.contents(pid)
@@ -243,7 +251,7 @@ iex&gt; StringIO.contents(pid)
     </a>
     <span class="signature">flush(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/string_io.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -261,7 +269,11 @@ iex&gt; StringIO.contents(pid)
   
   <section class="docstring">
     <p>Flushes the output buffer and returns its current contents.</p>
-<h2>Examples</h2>
+<h2 id="flush/1-examples" class="section-heading">
+  <a href="#flush/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, pid} = StringIO.open(&quot;in&quot;)
 iex&gt; IO.write(pid, &quot;out&quot;)
 iex&gt; StringIO.flush(pid)
@@ -278,7 +290,7 @@ iex&gt; StringIO.contents(pid)
     </a>
     <span class="signature">open(string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/string_io.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/string_io.ex#L44" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -301,7 +313,11 @@ device.</p>
 <p>If the <code class="inline">:capture_prompt</code> option is set to <code class="inline">true</code>,
 prompts (specified as arguments to <code class="inline">IO.get*</code> functions)
 are captured.</p>
-<h2>Examples</h2>
+<h2 id="open/2-examples" class="section-heading">
+  <a href="#open/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, pid} = StringIO.open(&quot;foo&quot;)
 iex&gt; IO.gets(pid, &quot;&gt;&quot;)
 &quot;foo&quot;
@@ -340,7 +356,7 @@ iex&gt; StringIO.contents(pid)
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

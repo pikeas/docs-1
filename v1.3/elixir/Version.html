@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Version – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Version – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Version.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Version
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Functions for parsing and matching versions against requirements.</p>
 <p>A version is a string in a specific format or a <a href="Version.html#content"><code class="inline">Version</code></a>
 generated after parsing via <a href="Version.html#parse/1"><code class="inline">Version.parse/1</code></a>.</p>
@@ -413,7 +413,7 @@ is returned</p>
     </a>
     <span class="signature">compare(version1, version2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L195" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L195" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -435,7 +435,11 @@ the second and <code class="inline">:lt</code> for vice versa. If the two versio
 is returned</p>
 <p>Raises a <a href="Version.InvalidVersionError.html"><code class="inline">Version.InvalidVersionError</code></a> exception if <code class="inline">version</code> is not parsable.
 If given an already parsed version this function won’t raise.</p>
-<h2>Examples</h2>
+<h2 id="compare/2-examples" class="section-heading">
+  <a href="#compare/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Version.compare(&quot;2.0.1-alpha1&quot;, &quot;2.0.0&quot;)
 :gt
 
@@ -454,7 +458,7 @@ iex&gt; Version.compare(&quot;invalid&quot;, &quot;2.0.1&quot;)
     </a>
     <span class="signature">compile_requirement(req)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L291" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L291" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -487,7 +491,7 @@ compiled match_spec, nor can it be stored on disk).</p>
     </a>
     <span class="signature">match?(version, requirement, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L152" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -510,14 +514,22 @@ Raises a <a href="Version.InvalidRequirementError.html"><code class="inline">Ver
 parsable, or <a href="Version.InvalidVersionError.html"><code class="inline">Version.InvalidVersionError</code></a> if <code class="inline">version</code> is not parsable.
 If given an already parsed version and requirement this function won’t
 raise.</p>
-<h2>Options</h2>
+<h2 id="match?/3-options" class="section-heading">
+  <a href="#match?/3-options" class="hover-link"><i class="icon-link"></i></a>
+  Options
+</h2>
+
 <ul>
 <li><code class="inline">:allow_pre</code> - when <code class="inline">false</code> pre-release versions will not match
 unless the operand is a pre-release version, see the table above
 for examples  (default: <code class="inline">true</code>);
 </li>
 </ul>
-<h2>Examples</h2>
+<h2 id="match?/3-examples" class="section-heading">
+  <a href="#match?/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Version.match?(&quot;2.0.0&quot;, &quot;&gt;1.0.0&quot;)
 true
 
@@ -539,7 +551,7 @@ iex&gt; Version.match?(&quot;2.0.0&quot;, &quot;== ==1.0.0&quot;)
     </a>
     <span class="signature">parse(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -557,7 +569,11 @@ iex&gt; Version.match?(&quot;2.0.0&quot;, &quot;== ==1.0.0&quot;)
   
   <section class="docstring">
     <p>Parses a version string into a <a href="Version.html#content"><code class="inline">Version</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="parse/1-examples" class="section-heading">
+  <a href="#parse/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, version} = Version.parse(&quot;2.0.1-alpha1&quot;)
 iex&gt; version
 #Version&lt;2.0.1-alpha1&gt;
@@ -574,7 +590,7 @@ iex&gt; Version.parse(&quot;2.0-alpha1&quot;)
     </a>
     <span class="signature">parse!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L251" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -593,7 +609,11 @@ iex&gt; Version.parse(&quot;2.0-alpha1&quot;)
   <section class="docstring">
     <p>Parses a version string into a <a href="Version.html#content"><code class="inline">Version</code></a>.</p>
 <p>If <code class="inline">string</code> is an invalid version, an <code class="inline">InvalidVersionError</code> is raised.</p>
-<h2>Examples</h2>
+<h2 id="parse!/1-examples" class="section-heading">
+  <a href="#parse!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Version.parse!(&quot;2.0.1-alpha1&quot;)
 #Version&lt;2.0.1-alpha1&gt;
 
@@ -609,7 +629,7 @@ iex&gt; Version.parse!(&quot;2.0-alpha1&quot;)
     </a>
     <span class="signature">parse_requirement(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/version.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/version.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -629,7 +649,11 @@ iex&gt; Version.parse!(&quot;2.0-alpha1&quot;)
   
   <section class="docstring">
     <p>Parses a version requirement string into a <a href="Version.Requirement.html"><code class="inline">Version.Requirement</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="parse_requirement/1-examples" class="section-heading">
+  <a href="#parse_requirement/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; {:ok, req} = Version.parse_requirement(&quot;== 2.0.1&quot;)
 iex&gt; req
 #Version.Requirement&lt;== 2.0.1&gt;
@@ -663,7 +687,7 @@ iex&gt; Version.parse_requirement(&quot;== == 2.0.1&quot;)
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

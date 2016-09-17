@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>ExUnit.CaptureIO – ExUnit v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>ExUnit.CaptureIO – ExUnit v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.CaptureIO.html" />
     
@@ -28,7 +28,7 @@
         ExUnit
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">ExUnit v1.3.2</small>
+        <small class="visible-xs">ExUnit v1.3.3</small>
         ExUnit.CaptureIO
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/capture_io.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/capture_io.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Functionality to capture IO for testing.</p>
 <h2 id="module-examples" class="section-heading">
   <a href="#module-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -170,7 +170,7 @@ end</code></pre>
     </a>
     <span class="signature">capture_io(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/capture_io.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/capture_io.ex#L83" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -190,7 +190,11 @@ the test should run with async false.</p>
 prompts (specified as arguments to <code class="inline">IO.get*</code> functions) are not
 captured.</p>
 <p>A developer can set a string as an input. The default input is <code class="inline">:eof</code>.</p>
-<h2>Examples</h2>
+<h2 id="capture_io/1-examples" class="section-heading">
+  <a href="#capture_io/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; capture_io(fn -&gt; IO.write &quot;john&quot; end) == &quot;john&quot;
 true
 
@@ -208,10 +212,14 @@ iex&gt; capture_io([input: &quot;this is input&quot;, capture_prompt: false], fn
 ...&gt;   IO.write input
 ...&gt; end) == &quot;this is input&quot;
 true</code></pre>
-<h2>Returning values</h2>
+<h2 id="capture_io/1-returning-values" class="section-heading">
+  <a href="#capture_io/1-returning-values" class="hover-link"><i class="icon-link"></i></a>
+  Returning values
+</h2>
+
 <p>As seen in the examples above, <code class="inline">capture_io</code> returns the captured output.
 If you want to also capture the result of the function executed inside
-the <code class="inline">capture_io</code>, you can use <code class="inline">Kernel.send/2</code> to send yourself a message
+the <code class="inline">capture_io</code>, you can use <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a> to send yourself a message
 and use <code class="inline">ExUnit.Assertions.assert_received/1</code> to match on the results:</p>
 <pre><code class="elixir">capture_io([input: &quot;this is input&quot;, capture_prompt: false], fn -&gt;
   send self(), {:block_result, 42}
@@ -229,7 +237,7 @@ assert_received {:block_result, 42}</code></pre>
     </a>
     <span class="signature">capture_io(device, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/capture_io.ex#L87" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/capture_io.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -247,7 +255,7 @@ assert_received {:block_result, 42}</code></pre>
     </a>
     <span class="signature">capture_io(device, input, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/ex_unit/lib/ex_unit/capture_io.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/capture_io.ex#L99" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -282,7 +290,7 @@ assert_received {:block_result, 42}</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>MapSet – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>MapSet – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/MapSet.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         MapSet
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>A set of functions for working with sets.</p>
 <p>The <a href="MapSet.html#content"><code class="inline">MapSet</code></a> is represented internally as a struct,
 therefore <code class="inline">%MapSet{}</code> can be used whenever there is a
@@ -297,7 +297,7 @@ Instead, use the functions in this module.</p>
     </a>
     <span class="signature">delete(set, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L102" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L102" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -316,7 +316,11 @@ Instead, use the functions in this module.</p>
   <section class="docstring">
     <p>Deletes <code class="inline">value</code> from <code class="inline">set</code>.</p>
 <p>Returns a new set which is a copy of <code class="inline">set</code> but without <code class="inline">value</code>.</p>
-<h2>Examples</h2>
+<h2 id="delete/2-examples" class="section-heading">
+  <a href="#delete/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; set = MapSet.new([1, 2, 3])
 iex&gt; MapSet.delete(set, 4)
 #MapSet&lt;[1, 2, 3]&gt;
@@ -332,7 +336,7 @@ iex&gt; MapSet.delete(set, 2)
     </a>
     <span class="signature">difference(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L119" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L119" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -350,7 +354,11 @@ iex&gt; MapSet.delete(set, 2)
   
   <section class="docstring">
     <p>Returns a set that is <code class="inline">set1</code> without the members of <code class="inline">set2</code>.</p>
-<h2>Examples</h2>
+<h2 id="difference/2-examples" class="section-heading">
+  <a href="#difference/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.difference(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))
 #MapSet&lt;[1]&gt;</code></pre>
 
@@ -363,7 +371,7 @@ iex&gt; MapSet.delete(set, 2)
     </a>
     <span class="signature">disjoint?(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L158" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -381,7 +389,11 @@ iex&gt; MapSet.delete(set, 2)
   
   <section class="docstring">
     <p>Checks if <code class="inline">set1</code> and <code class="inline">set2</code> have no members in common.</p>
-<h2>Examples</h2>
+<h2 id="disjoint?/2-examples" class="section-heading">
+  <a href="#disjoint?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([3, 4]))
 true
 iex&gt; MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))
@@ -396,7 +408,7 @@ false</code></pre>
     </a>
     <span class="signature">equal?(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -415,7 +427,11 @@ false</code></pre>
   <section class="docstring">
     <p>Checks if two sets are equal.</p>
 <p>The comparison between elements must be done using <code class="inline">===</code>.</p>
-<h2>Examples</h2>
+<h2 id="equal?/2-examples" class="section-heading">
+  <a href="#equal?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.equal?(MapSet.new([1, 2]), MapSet.new([2, 1, 1]))
 true
 iex&gt; MapSet.equal?(MapSet.new([1, 2]), MapSet.new([3, 4]))
@@ -430,7 +446,7 @@ false</code></pre>
     </a>
     <span class="signature">intersection(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L207" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L207" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -448,7 +464,11 @@ false</code></pre>
   
   <section class="docstring">
     <p>Returns a set containing only members that <code class="inline">set1</code> and <code class="inline">set2</code> have in common.</p>
-<h2>Examples</h2>
+<h2 id="intersection/2-examples" class="section-heading">
+  <a href="#intersection/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.intersection(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))
 #MapSet&lt;[2]&gt;
 
@@ -464,7 +484,7 @@ iex&gt; MapSet.intersection(MapSet.new([1, 2]), MapSet.new([3, 4]))
     </a>
     <span class="signature">member?(map_set, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L225" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -482,7 +502,11 @@ iex&gt; MapSet.intersection(MapSet.new([1, 2]), MapSet.new([3, 4]))
   
   <section class="docstring">
     <p>Checks if <code class="inline">set</code> contains <code class="inline">value</code>.</p>
-<h2>Examples</h2>
+<h2 id="member?/2-examples" class="section-heading">
+  <a href="#member?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.member?(MapSet.new([1, 2, 3]), 2)
 true
 iex&gt; MapSet.member?(MapSet.new([1, 2, 3]), 4)
@@ -497,7 +521,7 @@ false</code></pre>
     </a>
     <span class="signature">new()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -515,7 +539,11 @@ false</code></pre>
   
   <section class="docstring">
     <p>Returns a new set.</p>
-<h2>Examples</h2>
+<h2 id="new/0-examples" class="section-heading">
+  <a href="#new/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.new
 #MapSet&lt;[]&gt;</code></pre>
 
@@ -528,7 +556,7 @@ false</code></pre>
     </a>
     <span class="signature">new(mapset)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -546,7 +574,11 @@ false</code></pre>
   
   <section class="docstring">
     <p>Creates a set from an enumerable.</p>
-<h2>Examples</h2>
+<h2 id="new/1-examples" class="section-heading">
+  <a href="#new/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.new([:b, :a, 3])
 #MapSet&lt;[3, :a, :b]&gt;
 iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
@@ -561,7 +593,7 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
     </a>
     <span class="signature">new(enumerable, transform)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -579,7 +611,11 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
   
   <section class="docstring">
     <p>Creates a mapset from an enumerable via the transformation function.</p>
-<h2>Examples</h2>
+<h2 id="new/2-examples" class="section-heading">
+  <a href="#new/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.new([1, 2, 1], fn x -&gt; 2 * x end)
 #MapSet&lt;[2, 4]&gt;</code></pre>
 
@@ -592,7 +628,7 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
     </a>
     <span class="signature">put(set, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L241" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -610,7 +646,11 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
   
   <section class="docstring">
     <p>Inserts <code class="inline">value</code> into <code class="inline">set</code> if <code class="inline">set</code> doesn’t already contain it.</p>
-<h2>Examples</h2>
+<h2 id="put/2-examples" class="section-heading">
+  <a href="#put/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 3)
 #MapSet&lt;[1, 2, 3]&gt;
 iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
@@ -625,7 +665,7 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
     </a>
     <span class="signature">size(map_set)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -643,7 +683,11 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
   
   <section class="docstring">
     <p>Returns the number of elements in <code class="inline">set</code>.</p>
-<h2>Examples</h2>
+<h2 id="size/1-examples" class="section-heading">
+  <a href="#size/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.size(MapSet.new([1, 2, 3]))
 3</code></pre>
 
@@ -656,7 +700,7 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
     </a>
     <span class="signature">subset?(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L273" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L273" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -675,7 +719,11 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
   <section class="docstring">
     <p>Checks if <code class="inline">set1</code>’s members are all contained in <code class="inline">set2</code>.</p>
 <p>This function checks if <code class="inline">set1</code> is a subset of <code class="inline">set2</code>.</p>
-<h2>Examples</h2>
+<h2 id="subset?/2-examples" class="section-heading">
+  <a href="#subset?/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.subset?(MapSet.new([1, 2]), MapSet.new([1, 2, 3]))
 true
 iex&gt; MapSet.subset?(MapSet.new([1, 2, 3]), MapSet.new([1, 2]))
@@ -690,7 +738,7 @@ false</code></pre>
     </a>
     <span class="signature">to_list(map_set)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L302" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L302" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -708,7 +756,11 @@ false</code></pre>
   
   <section class="docstring">
     <p>Converts <code class="inline">set</code> to a list.</p>
-<h2>Examples</h2>
+<h2 id="to_list/1-examples" class="section-heading">
+  <a href="#to_list/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.to_list(MapSet.new([1, 2, 3]))
 [1, 2, 3]</code></pre>
 
@@ -721,7 +773,7 @@ false</code></pre>
     </a>
     <span class="signature">union(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/map_set.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/map_set.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -739,7 +791,11 @@ false</code></pre>
   
   <section class="docstring">
     <p>Returns a set containing all members of <code class="inline">set1</code> and <code class="inline">set2</code>.</p>
-<h2>Examples</h2>
+<h2 id="union/2-examples" class="section-heading">
+  <a href="#union/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; MapSet.union(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))
 #MapSet&lt;[1, 2, 3, 4]&gt;</code></pre>
 
@@ -769,7 +825,7 @@ false</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

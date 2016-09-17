@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>NaiveDateTime – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>NaiveDateTime – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/NaiveDateTime.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         NaiveDateTime
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L569" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L569" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>A NaiveDateTime struct (without a time zone) and functions.</p>
 <p>The NaiveDateTime struct contains the fields year, month, day, hour,
 minute, second, microsecond and calendar. New naive date times can be
@@ -279,7 +279,7 @@ as the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">from_erl(arg, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L878" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L878" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -300,7 +300,11 @@ as the ones in 3rd party calendar libraries.</p>
   <section class="docstring">
     <p>Converts an Erlang datetime tuple to a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> struct.</p>
 <p>Attempting to convert an invalid ISO calendar date will produce an error tuple.</p>
-<h2>Examples</h2>
+<h2 id="from_erl/2-examples" class="section-heading">
+  <a href="#from_erl/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.from_erl({{2000, 1, 1}, {13, 30, 15}})
 {:ok, ~N[2000-01-01 13:30:15]}
 iex&gt; NaiveDateTime.from_erl({{2000, 1, 1}, {13, 30, 15}}, {5000, 3})
@@ -319,7 +323,7 @@ iex&gt; NaiveDateTime.from_erl({{2000, 13, 1},{13, 30, 15}})
     </a>
     <span class="signature">from_erl!(tuple, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L898" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L898" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -341,7 +345,11 @@ iex&gt; NaiveDateTime.from_erl({{2000, 13, 1},{13, 30, 15}})
     <p>Converts an Erlang datetime tuple to a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> struct.</p>
 <p>Raises if the datetime is invalid.
 Attempting to convert an invalid ISO calendar date will produce an error tuple.</p>
-<h2>Examples</h2>
+<h2 id="from_erl!/2-examples" class="section-heading">
+  <a href="#from_erl!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.from_erl!({{2000, 1, 1}, {13, 30, 15}})
 ~N[2000-01-01 13:30:15]
 iex&gt; NaiveDateTime.from_erl!({{2000, 1, 1}, {13, 30, 15}}, {5000, 3})
@@ -358,7 +366,7 @@ iex&gt; NaiveDateTime.from_erl!({{2000, 13, 1}, {13, 30, 15}})
     </a>
     <span class="signature">from_iso8601(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L778" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L778" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -384,7 +392,11 @@ times.</p>
 <p>As specified in the standard, the separator “T” may be omitted if
 desired as there is no ambiguity within this function.</p>
 <p>Time representations with reduced accuracy are not supported.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601/1-examples" class="section-heading">
+  <a href="#from_iso8601/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.from_iso8601(&quot;2015-01-23 23:50:07&quot;)
 {:ok, ~N[2015-01-23 23:50:07]}
 iex&gt; NaiveDateTime.from_iso8601(&quot;2015-01-23T23:50:07&quot;)
@@ -432,7 +444,7 @@ iex&gt; NaiveDateTime.from_iso8601(&quot;2015-01-23T23:50:07.123-24:00&quot;)
     </a>
     <span class="signature">from_iso8601!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L812" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L812" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -453,7 +465,11 @@ iex&gt; NaiveDateTime.from_iso8601(&quot;2015-01-23T23:50:07.123-24:00&quot;)
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601!/1-examples" class="section-heading">
+  <a href="#from_iso8601!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23T23:50:07.123Z&quot;)
 ~N[2015-01-23 23:50:07.123]
 iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
@@ -468,7 +484,7 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
     </a>
     <span class="signature">new(date, time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L667" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L667" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -486,7 +502,11 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
   
   <section class="docstring">
     <p>Builds a naive date time from date and time structs.</p>
-<h2>Examples</h2>
+<h2 id="new/2-examples" class="section-heading">
+  <a href="#new/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.new(~D[2010-01-13], ~T[23:00:07.005])
 {:ok, ~N[2010-01-13 23:00:07.005]}</code></pre>
 
@@ -499,7 +519,7 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
     </a>
     <span class="signature">new(year, month, day, hour, minute, second, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L651" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L651" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -522,7 +542,11 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, naive_date_time}</code>
 if each entry fits its appropriate range, returns <code class="inline">{:error, reason}</code>
 otherwise.</p>
-<h2>Examples</h2>
+<h2 id="new/7-examples" class="section-heading">
+  <a href="#new/7-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.new(2000, 1, 1, 0, 0, 0)
 {:ok, ~N[2000-01-01 00:00:00]}
 iex&gt; NaiveDateTime.new(2000, 13, 1, 0, 0, 0)
@@ -558,7 +582,7 @@ iex&gt; NaiveDateTime.new(2000, 1, 1, 23, 59, 59, 1_000_000)
     </a>
     <span class="signature">to_date(naive_date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L687" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L687" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -569,7 +593,11 @@ iex&gt; NaiveDateTime.new(2000, 1, 1, 23, 59, 59, 1_000_000)
     <p>Converts a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> into a <a href="Date.html"><code class="inline">Date</code></a>.</p>
 <p>Because <a href="Date.html"><code class="inline">Date</code></a> does not hold time information,
 data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_date/1-examples" class="section-heading">
+  <a href="#to_date/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.to_date(~N[2002-01-13 23:00:07])
 ~D[2002-01-13]</code></pre>
 
@@ -582,7 +610,7 @@ data will be lost during the conversion.</p>
     </a>
     <span class="signature">to_erl(naive_date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L856" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L856" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -604,7 +632,11 @@ data will be lost during the conversion.</p>
 attempting to convert naive date times from other calendars will raise.</p>
 <p>WARNING: Loss of precision may occur, as Erlang time tuples only store
 hour/minute/second.</p>
-<h2>Examples</h2>
+<h2 id="to_erl/1-examples" class="section-heading">
+  <a href="#to_erl/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.to_erl(~N[2000-01-01 13:30:15])
 {{2000, 1, 1}, {13, 30, 15}}</code></pre>
 
@@ -617,7 +649,7 @@ hour/minute/second.</p>
     </a>
     <span class="signature">to_iso8601(naive)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L837" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L837" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -653,7 +685,7 @@ iex&gt; NaiveDateTime.to_iso8601(~N[2000-02-28 23:00:13.001])
     </a>
     <span class="signature">to_string(naive)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L720" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L720" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -687,7 +719,7 @@ iex&gt; NaiveDateTime.to_string(~N[2000-02-28 23:00:13.001])
     </a>
     <span class="signature">to_time(naive_date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L703" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L703" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -698,7 +730,11 @@ iex&gt; NaiveDateTime.to_string(~N[2000-02-28 23:00:13.001])
     <p>Converts a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> into <a href="Time.html"><code class="inline">Time</code></a>.</p>
 <p>Because <a href="Time.html"><code class="inline">Time</code></a> does not hold date information,
 data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_time/1-examples" class="section-heading">
+  <a href="#to_time/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.to_time(~N[2002-01-13 23:00:07])
 ~T[23:00:07]</code></pre>
 
@@ -728,7 +764,7 @@ data will be lost during the conversion.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

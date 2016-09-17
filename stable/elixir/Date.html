@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Date – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Date – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Date.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         Date
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L93" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L93" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>A Date struct and functions.</p>
 <p>The Date struct contains the fields year, month, day and calendar.
 New dates can be built with the <a href="#new/3"><code class="inline">new/3</code></a> function or using the <code class="inline">~D</code>
@@ -243,7 +243,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">from_erl(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L268" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L268" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -264,7 +264,11 @@ the ones in 3rd party calendar libraries.</p>
   <section class="docstring">
     <p>Converts an Erlang date tuple to a <a href="Date.html#content"><code class="inline">Date</code></a> struct.</p>
 <p>Attempting to convert an invalid ISO calendar date will produce an error tuple.</p>
-<h2>Examples</h2>
+<h2 id="from_erl/1-examples" class="section-heading">
+  <a href="#from_erl/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_erl({2000, 1, 1})
 {:ok, ~D[2000-01-01]}
 iex&gt; Date.from_erl({2000, 13, 1})
@@ -279,7 +283,7 @@ iex&gt; Date.from_erl({2000, 13, 1})
     </a>
     <span class="signature">from_erl!(tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L283" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L283" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -297,7 +301,11 @@ iex&gt; Date.from_erl({2000, 13, 1})
   
   <section class="docstring">
     <p>Converts an Erlang date tuple but raises for invalid dates.</p>
-<h2>Examples</h2>
+<h2 id="from_erl!/1-examples" class="section-heading">
+  <a href="#from_erl!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_erl!({2000, 1, 1})
 ~D[2000-01-01]
 iex&gt; Date.from_erl!({2000, 13, 1})
@@ -312,7 +320,7 @@ iex&gt; Date.from_erl!({2000, 13, 1})
     </a>
     <span class="signature">from_iso8601(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L185" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L185" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -336,7 +344,11 @@ iex&gt; Date.from_erl!({2000, 13, 1})
 simply discarded as such information is not included in naive date
 times.</p>
 <p>Time representations with reduced accuracy are not supported.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601/1-examples" class="section-heading">
+  <a href="#from_iso8601/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_iso8601(&quot;2015-01-23&quot;)
 {:ok, ~D[2015-01-23]}
 
@@ -354,7 +366,7 @@ iex&gt; Date.from_iso8601(&quot;2015-01-32&quot;)
     </a>
     <span class="signature">from_iso8601!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L212" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -373,7 +385,11 @@ iex&gt; Date.from_iso8601(&quot;2015-01-32&quot;)
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
-<h2>Examples</h2>
+<h2 id="from_iso8601!/1-examples" class="section-heading">
+  <a href="#from_iso8601!/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.from_iso8601!(&quot;2015-01-23&quot;)
 ~D[2015-01-23]
 iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
@@ -388,7 +404,7 @@ iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
     </a>
     <span class="signature">new(year, month, day)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L146" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -410,7 +426,11 @@ iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
     <p>Builds a new ISO date.</p>
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, time}</code> if each
 entry fits its appropriate range, returns <code class="inline">:error</code> otherwise.</p>
-<h2>Examples</h2>
+<h2 id="new/3-examples" class="section-heading">
+  <a href="#new/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.new(2000, 1, 1)
 {:ok, ~D[2000-01-01]}
 iex&gt; Date.new(2000, 13, 1)
@@ -432,7 +452,7 @@ iex&gt; Date.new(2001, 2, 29)
     </a>
     <span class="signature">to_erl(date)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L251" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,7 +472,11 @@ iex&gt; Date.new(2001, 2, 29)
     <p>Converts a <a href="Date.html#content"><code class="inline">Date</code></a> struct to an Erlang date tuple.</p>
 <p>Only supports converting dates which are in the ISO calendar,
 attempting to convert dates from other calendars will raise.</p>
-<h2>Examples</h2>
+<h2 id="to_erl/1-examples" class="section-heading">
+  <a href="#to_erl/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; Date.to_erl(~D[2000-01-01])
 {2000, 1, 1}</code></pre>
 
@@ -465,7 +489,7 @@ attempting to convert dates from other calendars will raise.</p>
     </a>
     <span class="signature">to_iso8601(date)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L234" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -498,7 +522,7 @@ attempting to convert date times from other calendars will raise.</p>
     </a>
     <span class="signature">to_string(date)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L160" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L160" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -546,7 +570,7 @@ attempting to convert date times from other calendars will raise.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

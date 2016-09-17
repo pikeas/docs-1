@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>EEx – EEx v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>EEx – EEx v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/eex/EEx.html" />
     
@@ -28,7 +28,7 @@
         EEx
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,18 +65,18 @@
 
 
       <h1>
-        <small class="visible-xs">EEx v1.3.2</small>
+        <small class="visible-xs">EEx v1.3.3</small>
         EEx
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L9" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L9" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>EEx stands for Embedded Elixir. It allows you to embed
 Elixir code inside a string in a robust way.</p>
 <pre><code class="iex elixir">iex&gt; EEx.eval_string &quot;foo &lt;%= bar %&gt;&quot;, [bar: &quot;baz&quot;]
@@ -270,7 +270,7 @@ that can be evaluated by Elixir or compiled to a function</p>
     </a>
     <span class="signature">compile_file(filename, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -290,7 +290,7 @@ that can be evaluated by Elixir or compiled to a function.</p>
     </a>
     <span class="signature">compile_string(source, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L169" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L169" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -310,7 +310,7 @@ that can be evaluated by Elixir or compiled to a function.</p>
     </a>
     <span class="signature">eval_file(filename, bindings \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -319,7 +319,11 @@ that can be evaluated by Elixir or compiled to a function.</p>
   
   <section class="docstring">
     <p>Gets a <code class="inline">filename</code> and evaluate the values using the <code class="inline">bindings</code>.</p>
-<h2>Examples</h2>
+<h2 id="eval_file/3-examples" class="section-heading">
+  <a href="#eval_file/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># sample.eex
 foo &lt;%= bar %&gt;
 
@@ -335,7 +339,7 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
     </a>
     <span class="signature">eval_string(source, bindings \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -344,7 +348,11 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
   
   <section class="docstring">
     <p>Gets a string <code class="inline">source</code> and evaluate the values using the <code class="inline">bindings</code>.</p>
-<h2>Examples</h2>
+<h2 id="eval_string/3-examples" class="section-heading">
+  <a href="#eval_string/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; EEx.eval_string &quot;foo &lt;%= bar %&gt;&quot;, [bar: &quot;baz&quot;]
 &quot;foo baz&quot;</code></pre>
 
@@ -369,7 +377,7 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
     </a>
     <span class="signature">function_from_file(kind, name, file, args \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L150" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -382,7 +390,11 @@ EEx.eval_file &quot;sample.eex&quot;, [bar: &quot;baz&quot;] #=&gt; &quot;foo ba
 function name, its arguments and the compilation options.</p>
 <p>This function is useful in case you have templates but
 you want to precompile inside a module for speed.</p>
-<h2>Examples</h2>
+<h2 id="function_from_file/5-examples" class="section-heading">
+  <a href="#function_from_file/5-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="elixir"># sample.eex
 &lt;%= a + b %&gt;
 
@@ -404,7 +416,7 @@ Sample.sample(1, 2) #=&gt; &quot;3&quot;</code></pre>
     </a>
     <span class="signature">function_from_string(kind, name, source, args \\ [], options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex.ex#L113" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -415,7 +427,11 @@ Sample.sample(1, 2) #=&gt; &quot;3&quot;</code></pre>
     <p>Generates a function definition from the string.</p>
 <p>The kind (<code class="inline">:def</code> or <code class="inline">:defp</code>) must be given, the
 function name, its arguments and the compilation options.</p>
-<h2>Examples</h2>
+<h2 id="function_from_string/5-examples" class="section-heading">
+  <a href="#function_from_string/5-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; defmodule Sample do
 ...&gt;   require EEx
 ...&gt;   EEx.function_from_string :def, :sample, &quot;&lt;%= a + b %&gt;&quot;, [:a, :b]
@@ -447,7 +463,7 @@ iex&gt; Sample.sample(1, 2)
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

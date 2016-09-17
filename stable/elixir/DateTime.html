@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>DateTime – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>DateTime – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/DateTime.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -67,18 +67,18 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.2</small>
+        <small class="visible-xs">Elixir v1.3.3</small>
         DateTime
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L924" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L924" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>A datetime implementation with a time zone.</p>
 <p>This datetime can be seen as an ephemeral snapshot
 of a datetime at a given timezone. For such purposes,
@@ -204,7 +204,7 @@ similar functionality with time zone backing.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_unix/2">to_unix(date_time, unit \\ :seconds)</a>
+    <a href="#to_unix/2">to_unix(datetime, unit \\ :seconds)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts the given DateTime to Unix time</p>
@@ -264,7 +264,7 @@ similar functionality with time zone backing.</p>
     </a>
     <span class="signature">from_unix(integer, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1010" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1019" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -275,7 +275,7 @@ similar functionality with time zone backing.</p>
       <h4 class="specs-title">Specs</h4>
       <div class="specs-list">
         
-          <pre><code class="elixir">from_unix(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>}</code></pre>
+          <pre><code class="elixir">from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>}</code></pre>
         
       </div>
     </div>
@@ -287,7 +287,11 @@ according to <a href="System.html#convert_time_unit/3"><code class="inline">Syst
 be converted to microseconds internally.</p>
 <p>Unix times are always in UTC and therefore the DateTime
 will be returned in UTC.</p>
-<h2>Examples</h2>
+<h2 id="from_unix/2-examples" class="section-heading">
+  <a href="#from_unix/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; DateTime.from_unix(1464096368)
 {:ok, %DateTime{calendar: Calendar.ISO, day: 24, hour: 13, microsecond: {0, 0}, minute: 26,
                 month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
@@ -302,6 +306,13 @@ iex&gt; DateTime.from_unix(1432560368868569, :microseconds)
 {:ok, %DateTime{calendar: Calendar.ISO, day: 23, hour: 22, microsecond: {211914, 3}, minute: 53,
                 month: 1, second: 43, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
                 year: 46302, zone_abbr: &quot;UTC&quot;}}</code></pre>
+<p>Negative Unix times are supported, up to -62167219200 seconds, 
+which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
+<pre><code class="iex elixir">iex&gt; DateTime.from_unix(-12345678910)
+{:ok, %DateTime{calendar: Calendar.ISO, day: 13, hour: 4, microsecond: {0, 0}, minute: 44, 
+                month: 10, second: 50, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0, 
+                year: 1578, zone_abbr: &quot;UTC&quot;}}</code></pre>
+<p>When a Unix time before that moment is passed to <a href="#from_unix/2"><code class="inline">from_unix/2</code></a>, <code class="inline">:error</code> will be returned.</p>
 
   </section>
 </div>
@@ -312,7 +323,7 @@ iex&gt; DateTime.from_unix(1432560368868569, :microseconds)
     </a>
     <span class="signature">from_unix!(integer, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1051" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1080" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -330,7 +341,16 @@ iex&gt; DateTime.from_unix(1432560368868569, :microseconds)
   
   <section class="docstring">
     <p>Converts the given Unix time to DateTime.</p>
-<h2>Examples</h2>
+<p>The integer can be given in different unit
+according to <a href="System.html#convert_time_unit/3"><code class="inline">System.convert_time_unit/3</code></a> and it will
+be converted to microseconds internally.</p>
+<p>Unix times are always in UTC and therefore the DateTime
+will be returned in UTC.</p>
+<h2 id="from_unix!/2-examples" class="section-heading">
+  <a href="#from_unix!/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; DateTime.from_unix!(1464096368)
 %DateTime{calendar: Calendar.ISO, day: 24, hour: 13, microsecond: {0, 0}, minute: 26,
           month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
@@ -340,6 +360,13 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
 %DateTime{calendar: Calendar.ISO, day: 25, hour: 13, microsecond: {868569, 6}, minute: 26,
           month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
           year: 2015, zone_abbr: &quot;UTC&quot;}</code></pre>
+<p>Negative Unix times are supported, up to -62167219200 seconds, 
+which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
+<pre><code class="iex elixir">iex&gt; DateTime.from_unix(-12345678910)
+{:ok, %DateTime{calendar: Calendar.ISO, day: 13, hour: 4, microsecond: {0, 0}, minute: 44, 
+                month: 10, second: 50, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0, 
+                year: 1578, zone_abbr: &quot;UTC&quot;}}</code></pre>
+<p>When a Unix time before that moment is passed to <a href="#from_unix!/2"><code class="inline">from_unix!/2</code></a>, an ArgumentError will be raised.</p>
 
   </section>
 </div>
@@ -350,7 +377,7 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
     </a>
     <span class="signature">precision_for_unit(unit)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1022" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1035" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -368,7 +395,7 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
     </a>
     <span class="signature">to_date(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1161" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -379,7 +406,11 @@ iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into a <a href="Date.html"><code class="inline">Date</code></a>.</p>
 <p>Because <a href="Date.html"><code class="inline">Date</code></a> does not hold time nor timezone information,
 data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_date/1-examples" class="section-heading">
+  <a href="#to_date/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; dt = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
 ...&gt;                hour: 23, minute: 0, second: 7, microsecond: {0, 0},
 ...&gt;                utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
@@ -395,7 +426,7 @@ iex&gt; DateTime.to_date(dt)
     </a>
     <span class="signature">to_iso8601(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1180" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1217" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -448,7 +479,7 @@ iex&gt; DateTime.to_iso8601(dt)
     </a>
     <span class="signature">to_naive(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1103" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1140" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -459,7 +490,11 @@ iex&gt; DateTime.to_iso8601(dt)
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into a <a href="NaiveDateTime.html"><code class="inline">NaiveDateTime</code></a>.</p>
 <p>Because <a href="NaiveDateTime.html"><code class="inline">NaiveDateTime</code></a> does not hold timezone information,
 any timezone related data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_naive/1-examples" class="section-heading">
+  <a href="#to_naive/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; dt = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
 ...&gt;                hour: 23, minute: 0, second: 7, microsecond: {0, 1},
 ...&gt;                utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
@@ -475,7 +510,7 @@ iex&gt; DateTime.to_naive(dt)
     </a>
     <span class="signature">to_string(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1245" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -521,7 +556,7 @@ iex&gt; DateTime.to_string(dt)
     </a>
     <span class="signature">to_time(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1180" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -532,7 +567,11 @@ iex&gt; DateTime.to_string(dt)
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into <a href="Time.html"><code class="inline">Time</code></a>.</p>
 <p>Because <a href="Time.html"><code class="inline">Time</code></a> does not hold date nor timezone information,
 data will be lost during the conversion.</p>
-<h2>Examples</h2>
+<h2 id="to_time/1-examples" class="section-heading">
+  <a href="#to_time/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; dt = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
 ...&gt;                hour: 23, minute: 0, second: 7, microsecond: {0, 1},
 ...&gt;                utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
@@ -546,9 +585,9 @@ iex&gt; DateTime.to_time(dt)
     <a href="#to_unix/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">to_unix(date_time, unit \\ :seconds)</span>
+    <span class="signature">to_unix(datetime, unit \\ :seconds)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L1078" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L1113" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -567,10 +606,14 @@ iex&gt; DateTime.to_time(dt)
   <section class="docstring">
     <p>Converts the given DateTime to Unix time.</p>
 <p>The DateTime is expected to be using the ISO calendar
-with a year greater than or equal to 1970.</p>
+with a year greater than or equal to 0.</p>
 <p>It will return the integer with the given unit,
 according to <a href="System.html#convert_time_unit/3"><code class="inline">System.convert_time_unit/3</code></a>.</p>
-<h2>Examples</h2>
+<h2 id="to_unix/2-examples" class="section-heading">
+  <a href="#to_unix/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; 1464096368 |&gt; DateTime.from_unix!() |&gt; DateTime.to_unix()
 1464096368
 
@@ -578,7 +621,13 @@ iex&gt; dt = %DateTime{calendar: Calendar.ISO, day: 20, hour: 18, microsecond: {
 ...&gt;                minute: 58, month: 11, second: 19, time_zone: &quot;America/Montevideo&quot;,
 ...&gt;                utc_offset: -10800, std_offset: 3600, year: 2014, zone_abbr: &quot;UYST&quot;}
 iex&gt; DateTime.to_unix(dt)
-1416517099</code></pre>
+1416517099
+
+iex&gt; flamel = %DateTime{calendar: Calendar.ISO, day: 22, hour: 8, microsecond: {527771, 6},
+...&gt;                minute: 2, month: 3, second: 25, std_offset: 0, time_zone: &quot;Etc/UTC&quot;,
+...&gt;                utc_offset: 0, year: 1418, zone_abbr: &quot;UTC&quot;}
+iex&gt; DateTime.to_unix(flamel)
+-17412508655</code></pre>
 
   </section>
 </div>
@@ -589,7 +638,7 @@ iex&gt; DateTime.to_unix(dt)
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/elixir/lib/calendar.ex#L975" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/calendar.ex#L975" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -607,7 +656,11 @@ iex&gt; DateTime.to_unix(dt)
   
   <section class="docstring">
     <p>Returns the current datetime in UTC.</p>
-<h2>Examples</h2>
+<h2 id="utc_now/0-examples" class="section-heading">
+  <a href="#utc_now/0-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
 <pre><code class="iex elixir">iex&gt; datetime = DateTime.utc_now()
 iex&gt; datetime.time_zone
 &quot;Etc/UTC&quot;</code></pre>
@@ -638,7 +691,7 @@ iex&gt; datetime.time_zone
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

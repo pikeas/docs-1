@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>Naming Conventions – Elixir v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>Naming Conventions – Elixir v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/naming-conventions.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -70,8 +70,10 @@
 <p>This document covers some naming conventions in Elixir code, from casing to punctuation characters.</p>
 <h2 id="casing" class="section-heading">
   <a href="#casing" class="hover-link"><i class="icon-link"></i></a>
-   Casing
-</h2><p>Elixir developers must use <code class="inline">snake_case</code> when defining variables, function names, module attributes, etc:</p>
+  Casing
+</h2>
+
+<p>Elixir developers must use <code class="inline">snake_case</code> when defining variables, function names, module attributes, etc:</p>
 <pre><code class="elixir">some_map = %{this_is_a_key: &quot;and a value&quot;}
 is_map(some_map)</code></pre>
 <p>Aliases, commonly used as module names, are an exception as they must be capitalized and written in <code class="inline">CamelCase</code>, like <a href="OptionParser.html"><code class="inline">OptionParser</code></a>. For aliases, capital letters are kept in acronyms, like <code class="inline">ExUnit.CaptureIO</code> or <code class="inline">Mix.SCM</code>.</p>
@@ -79,8 +81,10 @@ is_map(some_map)</code></pre>
 <p>Generally speaking, filenames follow the <code class="inline">snake_case</code> convention of the module they define. For example, <code class="inline">MyApp</code> should be defined inside the <code class="inline">my_app.ex</code> file. However, this is only a convention. At the end of the day, any filename can be used as they do not affect the compiled code in any way.</p>
 <h2 id="underscore-_foo" class="section-heading">
   <a href="#underscore-_foo" class="hover-link"><i class="icon-link"></i></a>
-   Underscore (_foo)
-</h2><p>Elixir relies on underscores in different situations.</p>
+  Underscore (_foo)
+</h2>
+
+<p>Elixir relies on underscores in different situations.</p>
 <p>For example, a value that is not meant to be used must be assigned to <code class="inline">_</code> or to a variable starting with underscore:</p>
 <pre><code class="iex elixir">iex&gt; {:ok, _contents} = File.read(&quot;README.md&quot;)</code></pre>
 <p>Function names may also start with an underscore. Such functions are never imported by default:</p>
@@ -99,8 +103,10 @@ iex&gt; _wont_be_imported()
 <p>Elixir also includes 4 special variables that follow the double underscore format. These forms retrieve compile-time information about the current environment: <code class="inline">__MODULE__</code>, <code class="inline">__DIR__</code>, <code class="inline">__ENV__</code> and <code class="inline">__CALLER__</code>.</p>
 <h2 id="trailing-bang-foo" class="section-heading">
   <a href="#trailing-bang-foo" class="hover-link"><i class="icon-link"></i></a>
-   Trailing bang (foo!)
-</h2><p>A trailing bang (exclamation mark) signifies a function or macro where failure cases raise an exception.</p>
+  Trailing bang (foo!)
+</h2>
+
+<p>A trailing bang (exclamation mark) signifies a function or macro where failure cases raise an exception.</p>
 <p>Many functions come in pairs, such as <a href="File.html#read/1"><code class="inline">File.read/1</code></a> and <a href="File.html#read!/1"><code class="inline">File.read!/1</code></a>. <a href="File.html#read/1"><code class="inline">File.read/1</code></a> will return a success or failure tuple, whereas <a href="File.html#read!/1"><code class="inline">File.read!/1</code></a> will return a plain value or else raise an exception:</p>
 <pre><code class="iex elixir">iex&gt; File.read(&quot;file.txt&quot;)
 {:ok, &quot;file contents&quot;}
@@ -117,26 +123,32 @@ iex&gt; File.read!(&quot;no_such_file.txt&quot;)
   {:error, reason} -&gt; # handle the error caused by `reason`
 end</code></pre>
 <p>However, if you expect the outcome to always to be successful (e.g. if you expect the file always to exist), the bang variation can be more convenient and will raise a more helpful error message (than a failed pattern match) on failure.</p>
-<p>More examples of paired functions: <code class="inline">Base.decode16/2</code> and <code class="inline">Base.decode16!/2</code>, <a href="File.html#cwd/0"><code class="inline">File.cwd/0</code></a> and <a href="File.html#cwd!/0"><code class="inline">File.cwd!/0</code></a></p>
+<p>More examples of paired functions: <a href="Base.html#decode16/2"><code class="inline">Base.decode16/2</code></a> and <a href="Base.html#decode16!/2"><code class="inline">Base.decode16!/2</code></a>, <a href="File.html#cwd/0"><code class="inline">File.cwd/0</code></a> and <a href="File.html#cwd!/0"><code class="inline">File.cwd!/0</code></a></p>
 <p>There are also some non-paired functions, with no non-bang variant. The bang still signifies that it will raise an exception on failure. Examples: <code class="inline">Mix.Config.validate!/1</code>, <a href="Protocol.html#assert_protocol!/1"><code class="inline">Protocol.assert_protocol!/1</code></a></p>
 <p>In macro code, the bang on <a href="Kernel.html#alias!/1"><code class="inline">Kernel.alias!/1</code></a> and <a href="Kernel.html#var!/2"><code class="inline">Kernel.var!/2</code></a> signifies that <a href="http://elixir-lang.org/getting-started/meta/macros.html#macros-hygiene">macro hygiene</a> is set aside.</p>
 <h2 id="trailing-question-mark-foo" class="section-heading">
   <a href="#trailing-question-mark-foo" class="hover-link"><i class="icon-link"></i></a>
-   Trailing question mark (foo?)
-</h2><p>Functions that return a boolean are named with a trailing question mark.</p>
+  Trailing question mark (foo?)
+</h2>
+
+<p>Functions that return a boolean are named with a trailing question mark.</p>
 <p>Examples: <a href="Keyword.html#keyword?/1"><code class="inline">Keyword.keyword?/1</code></a>, <code class="inline">Mix.debug?/0</code>, <a href="String.html#contains?/2"><code class="inline">String.contains?/2</code></a></p>
 <p>However, functions that return booleans and are valid in guards follow another convention, described next.</p>
 <h2 id="is_-prefix-is_foo" class="section-heading">
   <a href="#is_-prefix-is_foo" class="hover-link"><i class="icon-link"></i></a>
-   is_ prefix (is_foo)
-</h2><p>Type checks and other boolean checks that are allowed in guard clauses are named with an <code class="inline">is_</code> prefix.</p>
+  is_ prefix (is_foo)
+</h2>
+
+<p>Type checks and other boolean checks that are allowed in guard clauses are named with an <code class="inline">is_</code> prefix.</p>
 <p>Examples: <a href="Integer.html#is_even/1"><code class="inline">Integer.is_even/1</code></a>, <a href="Kernel.html#is_list/1"><code class="inline">Kernel.is_list/1</code></a></p>
 <p>These functions and macros follow the Erlang convention of an <code class="inline">is_</code> prefix, instead of a trailing question mark, precisely to indicate that they are allowed in guard clauses.</p>
 <p>Note that type checks that are not valid in guard clauses do not follow this convention. Examples: <a href="Keyword.html#keyword?/1"><code class="inline">Keyword.keyword?/1</code></a>, <a href="Regex.html#regex?/1"><code class="inline">Regex.regex?/1</code></a></p>
 <h2 id="special-names" class="section-heading">
   <a href="#special-names" class="hover-link"><i class="icon-link"></i></a>
-   Special names
-</h2><p>Some names have specific meaning in Elixir. We detail those cases below.</p>
+  Special names
+</h2>
+
+<p>Some names have specific meaning in Elixir. We detail those cases below.</p>
 <h3>length and size</h3>
 <p>When you see <code class="inline">size</code> in a function name, it means the operation runs in constant time (also written as “O(1) time”) because the size is stored alongside the data structure.</p>
 <p>Examples: <a href="Kernel.html#map_size/1"><code class="inline">Kernel.map_size/1</code></a>, <a href="Kernel.html#tuple_size/1"><code class="inline">Kernel.tuple_size/1</code></a></p>
@@ -161,7 +173,7 @@ end</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 

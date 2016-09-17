@@ -5,8 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.0">
-    <title>EEx.Engine – EEx v1.3.2</title>
-    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    <title>EEx.Engine – EEx v1.3.3</title>
+    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/eex/EEx.Engine.html" />
     
@@ -28,7 +28,7 @@
         EEx
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.2
+        v1.3.3
       </h2>
     </div>
     
@@ -65,20 +65,20 @@
 
 
       <h1>
-        <small class="visible-xs">EEx v1.3.2</small>
+        <small class="visible-xs">EEx v1.3.3</small>
         EEx.Engine
         
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
       
-        <section id="moduledoc" class="docstring">
+        <section id="moduledoc">
           <p>Basic EEx engine that ships with Elixir.</p>
 <p>An engine needs to implement three functions:</p>
 <ul>
@@ -225,7 +225,7 @@ default implementations for the functions above.</p>
     </a>
     <span class="signature">handle_assign(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L75" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L75" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -237,7 +237,7 @@ default implementations for the functions above.</p>
 <p>A warning will be printed on missing assigns.
 Future versions will raise.</p>
 <p>This can be added to any custom engine by invoking
-<a href="#handle_assign/1"><code class="inline">handle_assign/1</code></a> with <code class="inline">Macro.prewalk/2</code>:</p>
+<a href="#handle_assign/1"><code class="inline">handle_assign/1</code></a> with <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#prewalk/2"><code class="inline">Macro.prewalk/2</code></a>:</p>
 <pre><code class="elixir">def handle_expr(buffer, token, expr) do
   expr = Macro.prewalk(expr, &amp;EEx.Engine.handle_assign/1)
   EEx.Engine.handle_expr(buffer, token, expr)
@@ -252,7 +252,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_body(quoted)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L108" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -271,7 +271,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_expr(buffer, binary, expr)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L128" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -302,7 +302,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_text(buffer, text)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -321,7 +321,7 @@ end</code></pre>
     </a>
     <span class="signature">init(opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L101" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -354,7 +354,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_body(arg0)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -381,7 +381,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_expr(arg0, arg1, arg2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -408,7 +408,7 @@ end</code></pre>
     </a>
     <span class="signature">handle_text(arg0, arg1)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -435,7 +435,7 @@ end</code></pre>
     </a>
     <span class="signature">init(arg0)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.2/lib/eex/lib/eex/engine.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/eex/lib/eex/engine.ex#L30" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -475,7 +475,7 @@ end</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-21f1a20b9e.js"></script>
+  <script src="dist/app-95540a96e6.js"></script>
   </body>
 </html>
 
