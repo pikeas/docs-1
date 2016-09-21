@@ -142,11 +142,48 @@
 <td style="text-align: left"><code class="inline">&amp;</code></td><td style="text-align: left">Unary</td>
 </tr>
 </table>
-<h2 id="defining-custom-operators" class="section-heading">
-  <a href="#defining-custom-operators" class="hover-link"><i class="icon-link"></i></a>
-  Defining custom operators
+<h2 id="comparison-operators" class="section-heading">
+  <a href="#comparison-operators" class="hover-link"><i class="icon-link"></i></a>
+  Comparison operators
 </h2>
 
+<p>Elixir provides the following built-in comparison operators:</p>
+<ul>
+<li><code class="inline">==</code> - equality
+</li>
+<li><code class="inline">===</code> - strict equality
+</li>
+<li><code class="inline">!=</code> - inequality
+</li>
+<li><code class="inline">!==</code> - strict inequality
+</li>
+<li><code class="inline">&gt;</code> - greater than
+</li>
+<li><code class="inline">&lt;</code> - less than
+</li>
+<li><code class="inline">&gt;=</code> - greater than or equal
+</li>
+<li><code class="inline">&lt;=</code> - less than or equal
+</li>
+</ul>
+<p>The only difference between <code class="inline">==</code> and <code class="inline">===</code> is that <code class="inline">===</code> is stricter when it comes to comparing integers and floats:</p>
+<pre><code class="elixir">iex&gt; 1 == 1.0
+true
+iex&gt; 1 === 1.0
+false</code></pre>
+<p><code class="inline">!=</code> and <code class="inline">!==</code> act as the negation of <code class="inline">==</code> and <code class="inline">===</code>, respectively.</p>
+<h3>Term ordering</h3>
+<p>In Elixir, different data types can be compared using comparison operators:</p>
+<pre><code class="elixir">iex&gt; 1 &lt; :an_atom
+true</code></pre>
+<p>The reason we can compare different data types is pragmatism. Sorting algorithms don’t need to worry about different data types in order to sort. For reference, the overall sorting order is defined below:</p>
+<pre><code class="elixir">number &lt; atom &lt; reference &lt; functions &lt; port &lt; pid &lt; tuple &lt; maps &lt; list &lt; bitstring</code></pre>
+<h2 id="custom-and-overridden-operators" class="section-heading">
+  <a href="#custom-and-overridden-operators" class="hover-link"><i class="icon-link"></i></a>
+  Custom and overridden operators
+</h2>
+
+<h3>Defining custom operators</h3>
 <p>Elixir is capable of parsing a predefined set of operators; this means that it’s not possible to define new operators (like one could do in Haskell, for example). However, not all operators that Elixir can parse are <em>used</em> by Elixir: for example, <code class="inline">+</code> and <code class="inline">||</code> are used by Elixir for addition and boolean <em>or</em>, but <code class="inline">&lt;~&gt;</code> is not used (but valid).</p>
 <p>To define an operator, you can use the usual <code class="inline">def*</code> constructs (<code class="inline">def</code>, <code class="inline">defp</code>, <code class="inline">defmacro</code>, and so on) but with a syntax similar to how the operator is used:</p>
 <pre><code class="elixir">defmodule MyOperators do
@@ -192,11 +229,7 @@ iex&gt; 1 &lt;~ 2
 </li>
 </ul>
 <p>The following operators are used by the <a href="Bitwise.html"><code class="inline">Bitwise</code></a> module when imported: <code class="inline">&amp;&amp;&amp;</code>, <code class="inline">^^^</code>, <code class="inline">&lt;&lt;&lt;</code>, <code class="inline">&gt;&gt;&gt;</code>, <code class="inline">|||</code>, <code class="inline">~~~</code>. See the documentation for <a href="Bitwise.html"><code class="inline">Bitwise</code></a> for more information.</p>
-<h2 id="redefining-existing-operators" class="section-heading">
-  <a href="#redefining-existing-operators" class="hover-link"><i class="icon-link"></i></a>
-  Redefining existing operators
-</h2>
-
+<h3>Redefining existing operators</h3>
 <p>The operators that Elixir uses (for example, <code class="inline">+</code>) can be defined by any module and used in place of the ones defined by Elixir, provided they’re specifically not imported from <a href="Kernel.html"><code class="inline">Kernel</code></a> (which is imported everywhere by default). For example:</p>
 <pre><code class="elixir">defmodule WrongMath do
   # Let&#39;s make math wrong by changing the meaning of +:
@@ -211,11 +244,7 @@ iex&gt; 1 + 2
 iex&gt; import Kernel, except: [+: 2]
 iex&gt; 1 + 2
 -1</code></pre>
-<h2 id="final-note" class="section-heading">
-  <a href="#final-note" class="hover-link"><i class="icon-link"></i></a>
-  Final note
-</h2>
-
+<h3>Final note</h3>
 <p>While it’s possible to defined unused operators (such as <code class="inline">&lt;~&gt;</code>) and to “override” predefined operators (such as <code class="inline">+</code>), the Elixir community generally discourages this. Custom-defined operators can be really hard to read and even more to understand, as they don’t have a descriptive name like functions do. That said, some specific cases or custom domain specific languages (DSLs) may justify these practices.</p>
 
       <footer class="footer">

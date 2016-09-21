@@ -224,7 +224,7 @@ the configured applications environment</p>
     </a>
     <span class="signature">merge(config1, config2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L281" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L284" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -256,7 +256,7 @@ iex&gt; Mix.Config.merge([app1: []], [app2: []])
     </a>
     <span class="signature">persist(config)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -288,7 +288,7 @@ pairs) for each of those applications.</p>
     </a>
     <span class="signature">read!(file, loaded_paths \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L171" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L174" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -313,7 +313,7 @@ will be raised.</p>
     </a>
     <span class="signature">read_wildcard!(path, loaded_paths \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L211" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -337,7 +337,7 @@ read.</p>
     </a>
     <span class="signature">validate!(config)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -407,7 +407,7 @@ config :lager,
     </a>
     <span class="signature">config(app, key, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -424,16 +424,19 @@ config :lager,
 
 <p>The given <code class="inline">opts</code> are merged into the existing values for <code class="inline">key</code>
 in the given <code class="inline">app</code>. Conflicting keys are overridden by the
-ones specified in <code class="inline">opts</code>. For example, the declaration below:</p>
+ones specified in <code class="inline">opts</code>. For example, given the two configurations
+below:</p>
 <pre><code class="elixir">config :ecto, Repo,
-  log_level: :warn
+  log_level: :warn,
+  adapter: Ecto.Adapters.Postgres
 
 config :ecto, Repo,
   log_level: :info,
   pool_size: 10</code></pre>
-<p>Will have a final value for <code class="inline">Repo</code> of:</p>
-<pre><code class="elixir">[log_level: :info, pool_size: 10]</code></pre>
-<p>This final value can be retrieved at run or compile time:</p>
+<p>the final value of the configuration for the <code class="inline">Ecto</code> key in the <code class="inline">:ecto</code>
+application will be:</p>
+<pre><code class="elixir">[log_level: :info, pool_size: 10, adapter: Ecto.Adapters.Postgres]</code></pre>
+<p>This final value can be retrieved at runtime or compile time with:</p>
 <pre><code class="elixir">Application.get_env(:ecto, Repo)</code></pre>
 
   </section>
@@ -445,7 +448,7 @@ config :ecto, Repo,
     </a>
     <span class="signature">import_config(path_or_wildcard)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L143" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/config.ex#L146" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
