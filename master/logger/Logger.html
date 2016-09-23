@@ -330,7 +330,7 @@ about the logged message:</p>
 <li><code class="inline">message</code> is the actual message (as chardata)
 </li>
 <li><code class="inline">timestamp</code> is the timestamp for when the message was logged, as a
-  <code class="inline">{{year, month, day}, {hour, minute, second, milliseconds}}</code> tuple
+  <code class="inline">{{year, month, day}, {hour, minute, second, millisecond}}</code> tuple
 </li>
 <li><code class="inline">metadata</code> is a keyword list of metadata used when logging the message
 </li>
@@ -940,8 +940,8 @@ for testing and it should not be called in production code.</p>
   
   <section class="docstring">
     <p>Alters the current process metadata according the given keyword list.</p>
-<p>This will merge the given keyword list into the existing metadata. With 
-the exception of setting a key to nil will remove a key from the metadata. </p>
+<p>This will merge the given keyword list into the existing metadata. With
+the exception of setting a key to nil will remove a key from the metadata.</p>
 
   </section>
 </div>

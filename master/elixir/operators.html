@@ -177,8 +177,8 @@ false</code></pre>
 <pre><code class="elixir">iex&gt; 1 &lt; :an_atom
 true</code></pre>
 <p>The reason we can compare different data types is pragmatism. Sorting algorithms don’t need to worry about different data types in order to sort. For reference, the overall sorting order is defined below:</p>
-<pre><code class="elixir">number &lt; atom &lt; reference &lt; functions &lt; port &lt; pid &lt; tuple &lt; map &lt; list &lt; bitstring</code></pre>
-<p>When comparing two numbers of different types (a number is either an integer or a float), a conversion to the type with lesser precision will always occur, unless the comparison operator used is either <code class="inline">===</code> or <code class="inline">!==</code>. A float will be considered more precise than an integer, unless the float is greater/less than +/-9007199254740992.0, at which point all the significant figures of the float are to the left of the decimal point. This behavior exists so that the comparison of large numbers remains transitive.</p>
+<pre><code class="elixir">number &lt; atom &lt; reference &lt; function &lt; port &lt; pid &lt; tuple &lt; map &lt; list &lt; bitstring</code></pre>
+<p>When comparing two numbers of different types (a number is either an integer or a float), a conversion to the type with greater precision will always occur, unless the comparison operator used is either <code class="inline">===</code> or <code class="inline">!==</code>. A float will be considered more precise than an integer, unless the float is greater/less than +/-9007199254740992.0, at which point all the significant figures of the float are to the left of the decimal point. This behavior exists so that the comparison of large numbers remains transitive.</p>
 <p>The collection types are compared using the following rules:</p>
 <ul>
 <li>Tuples are compared by size then element by element.
