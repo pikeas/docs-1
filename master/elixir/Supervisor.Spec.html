@@ -160,7 +160,7 @@ terminates abnormally, i.e., with an exit reason other than
 <p>The following shutdown values are supported in the <code class="inline">:shutdown</code> option:</p>
 <ul>
 <li><p><code class="inline">:brutal_kill</code> - the child process is unconditionally terminated
-using <code class="inline">exit(child, :kill)</code></p>
+using <code class="inline">Process.exit(child, :kill)</code></p>
 </li>
 <li><p><code class="inline">:infinity</code> - if the child process is a supervisor, this is a mechanism
 to give the subtree enough time to shutdown; it can also be used with
