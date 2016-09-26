@@ -612,9 +612,9 @@ exiting with a reason other than <code class="inline">:normal</code> and the tas
 caller’s exit signal will stop the task. The caller can exit with reason
 <code class="inline">:shutdown</code> to shutdown all of its linked processes, including tasks, that
 are not trapping exits without generating any log messages.</p>
-<p>This function assumes the task’s monitor is still active or the monitor’s
-<code class="inline">:DOWN</code> message is in the message queue. If it has been demonitored, or the
-message already received, this function will block forever awaiting the message.</p>
+<p>If a task’s monitor has already been demonitored or received  and there is not
+a response waiting in the message queue this function will return
+<code class="inline">{:exit, :noproc}</code> as the result or exit reason can not be determined.</p>
 
   </section>
 </div>
