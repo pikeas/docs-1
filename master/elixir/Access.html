@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Access – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Access.html" />
     
@@ -394,17 +394,77 @@ defaulting to <code class="inline">default</code> if not present</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:key/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:key/0">key</a> :: any</code></pre>
-  
+            <div class="detail" id="t:key/0">
+  <div class="detail-header">
+    <a href="#t:key/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">key()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L140" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:key/0">key</a> :: any</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: list | map | nil</code></pre>
-  
+<div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L139" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: list | map | nil</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:value/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:value/0">value</a> :: any</code></pre>
-  
+<div class="detail" id="t:value/0">
+  <div class="detail-header">
+    <a href="#t:value/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">value()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L141" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:value/0">value</a> :: any</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -431,8 +491,8 @@ defaulting to <code class="inline">default</code> if not present</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Accesses all the elements in a list.</p>
 <h2 id="all/0-examples" class="section-heading">
@@ -474,8 +534,8 @@ iex&gt; get_and_update_in([1, 2, 3, 4, 5], [Access.all], fn
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Accesses the element at <code class="inline">index</code> (zero based) of a list.</p>
 <h2 id="at/1-examples" class="section-heading">
@@ -526,8 +586,8 @@ iex&gt; get_and_update_in(list, [Access.at(10), :name], fn
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Accesses the element at the given index in a tuple.</p>
 <p>Raises if the index is out of bounds.</p>
@@ -563,17 +623,14 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetch(<a href="#t:t/0">t</a>, term) :: {:ok, term} | :error</code></pre>
+          <pre>fetch(<a href="#t:t/0">t</a>, term) :: {:ok, term} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Fetches the value for the given key in a container (a map, keyword
 list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
@@ -592,17 +649,14 @@ list, or anything that implements the <a href="Access.html#content"><code class=
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(<a href="#t:t/0">t</a>, term, term) :: term</code></pre>
+          <pre>get(<a href="#t:t/0">t</a>, term, term) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value for the given key in a container (a map, keyword
 list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
@@ -621,17 +675,14 @@ list, or anything that implements the <a href="Access.html#content"><code class=
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) :: {get, <a href="#t:t/0">t</a>} when get: var</code></pre>
+          <pre>get_and_update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) :: {get, <a href="#t:t/0">t</a>} when get: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets and updates the given key in a container (a map, keyword
 list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
@@ -658,8 +709,8 @@ from the map and returned.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Accesses the given key in a map/struct.</p>
 <p>Uses the default value if the key does not exist
@@ -703,8 +754,8 @@ iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Accesses the given key in a map/struct.</p>
 <p>Raises if the key does not exist.</p>
@@ -742,8 +793,8 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Removes the entry with a given key from a container (a map, keyword
 list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
@@ -793,17 +844,14 @@ in the container.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetch(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</code></pre>
+          <pre>fetch(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked in order to access the value stored under <code class="inline">key</code> in the given term <code class="inline">term</code>.</p>
 <p>This function should return <code class="inline">{:ok, value}</code> where <code class="inline">value</code> is the value under
@@ -831,17 +879,14 @@ how to implement this callback.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, default :: <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
+          <pre>get(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, default :: <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked in order to access the value stored under <code class="inline">key</code> in the given term <code class="inline">term</code>,
 defaulting to <code class="inline">default</code> if not present.</p>
@@ -871,17 +916,14 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {<a href="#t:value/0">value</a>, <a href="#t:value/0">value</a>} | :pop)) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>get_and_update(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {<a href="#t:value/0">value</a>, <a href="#t:value/0">value</a>} | :pop)) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked in order to access the value under <code class="inline">key</code> and updated it at the same time.</p>
 <p>The implementation of this callback should invoke the passed function on the
@@ -910,17 +952,14 @@ for more examples.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>pop(term :: <a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked to “pop” the value under <code class="inline">key</code> out of the given term.</p>
 <p>The implementation should remove <code class="inline">key</code> from the given <code class="inline">term</code> and return a

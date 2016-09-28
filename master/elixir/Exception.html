@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Exception – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Exception.html" />
     
@@ -290,29 +290,105 @@ to Elixir exceptions</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:kind/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:kind/0">kind</a> :: :error | :exit | :throw | {:EXIT, pid}</code></pre>
-  
-    <div class="typespec-doc"><p>The kind handled by formatting functions</p>
+            <div class="detail" id="t:kind/0">
+  <div class="detail-header">
+    <a href="#t:kind/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">kind()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/exception.ex#L24" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:kind/0">kind</a> :: :error | :exit | :throw | {:EXIT, pid}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The kind handled by formatting functions</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:stacktrace/0">
+  <div class="detail-header">
+    <a href="#t:stacktrace/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stacktrace()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/exception.ex#L27" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:stacktrace/0">stacktrace</a> :: [<a href="#t:stacktrace_entry/0">stacktrace_entry</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:stacktrace/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:stacktrace/0">stacktrace</a> :: [<a href="#t:stacktrace_entry/0">stacktrace_entry</a>]</code></pre>
-  
-</div>
-<div id="t:stacktrace_entry/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:stacktrace_entry/0">stacktrace_entry</a> ::
+<div class="detail" id="t:stacktrace_entry/0">
+  <div class="detail-header">
+    <a href="#t:stacktrace_entry/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stacktrace_entry()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/exception.ex#L28" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:stacktrace_entry/0">stacktrace_entry</a> ::
   {module, atom, arity_or_args, location} |
-  {(... -> any), arity_or_args, location}</code></pre>
-  
+  {(... -> any), arity_or_args, location}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %module{:__exception__ => true, optional(atom) => any}</code></pre>
-  
-    <div class="typespec-doc"><p>The exception type</p>
-</div>
-  
+<div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/exception.ex#L17" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %module{:__exception__ => true, optional(atom) => any}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The exception type</p>
+
+  </section>
 </div>
 
           </div>
@@ -339,8 +415,8 @@ to Elixir exceptions</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the given <code class="inline">term</code> is an exception.</p>
 
@@ -358,17 +434,14 @@ to Elixir exceptions</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format(<a href="#t:kind/0">kind</a>, any, <a href="#t:stacktrace/0">stacktrace</a> | nil) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>format(<a href="#t:kind/0">kind</a>, any, <a href="#t:stacktrace/0">stacktrace</a> | nil) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Normalizes and formats throw/errors/exits and stacktraces.</p>
 <p>It relies on <a href="#format_banner/3"><code class="inline">format_banner/3</code></a> and <a href="#format_stacktrace/1"><code class="inline">format_stacktrace/1</code></a>
@@ -390,17 +463,14 @@ to generate the final format.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format_banner(<a href="#t:kind/0">kind</a>, any, <a href="#t:stacktrace/0">stacktrace</a> | nil) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>format_banner(<a href="#t:kind/0">kind</a>, any, <a href="#t:stacktrace/0">stacktrace</a> | nil) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Normalizes and formats any throw/error/exit.</p>
 <p>The message is formatted and displayed in the same
@@ -426,17 +496,14 @@ an empty stacktrace, <code class="inline">[]</code>, must be used.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format_exit(any) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>format_exit(any) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Formats an exit. It returns a string.</p>
 <p>Often there are errors/exceptions inside exits. Exits are often
@@ -458,8 +525,8 @@ and stacktrace.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Receives an anonymous function and arity and formats it as
 shown in stacktraces. The arity may also be a list of arguments.</p>
@@ -485,8 +552,8 @@ shown in stacktraces. The arity may also be a list of arguments.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Formats the given <code class="inline">file</code> and <code class="inline">line</code> as shown in stacktraces.
 If any of the values are <code class="inline">nil</code>, they are omitted.</p>
@@ -518,8 +585,8 @@ iex&gt; Exception.format_file_line(nil, nil)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Receives a module, fun and arity and formats it
 as shown in stacktraces. The arity may also be a list
@@ -555,8 +622,8 @@ where func is the name of the enclosing function. Convert to
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Formats the stacktrace.</p>
 <p>A stacktrace must be given as an argument. If not, the stacktrace
@@ -576,17 +643,14 @@ is retrieved from <a href="Process.html#info/2"><code class="inline">Process.inf
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format_stacktrace_entry(<a href="#t:stacktrace_entry/0">stacktrace_entry</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>format_stacktrace_entry(<a href="#t:stacktrace_entry/0">stacktrace_entry</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a stacktrace entry and formats it into a string.</p>
 
@@ -604,8 +668,8 @@ is retrieved from <a href="Process.html#info/2"><code class="inline">Process.inf
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Gets the message for an <code class="inline">exception</code>.</p>
 
@@ -623,19 +687,16 @@ is retrieved from <a href="Process.html#info/2"><code class="inline">Process.inf
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">normalize(:error, any, <a href="#t:stacktrace/0">stacktrace</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>normalize(:error, any, <a href="#t:stacktrace/0">stacktrace</a>) :: <a href="#t:t/0">t</a></pre>
         
-          <pre><code class="elixir">normalize(<a href="#t:kind/0">kind</a>, payload, <a href="#t:stacktrace/0">stacktrace</a>) :: payload when payload: var</code></pre>
+          <pre>normalize(<a href="#t:kind/0">kind</a>, payload, <a href="#t:stacktrace/0">stacktrace</a>) :: payload when payload: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Normalizes an exception, converting Erlang exceptions
 to Elixir exceptions.</p>
@@ -677,17 +738,14 @@ an empty stacktrace, <code class="inline">[]</code>, must be used.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">exception(term) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>exception(term) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>
@@ -704,17 +762,14 @@ an empty stacktrace, <code class="inline">[]</code>, must be used.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">message(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>message(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>

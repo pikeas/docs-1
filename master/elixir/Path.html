@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Path – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Path.html" />
     
@@ -314,9 +314,29 @@ list of matches</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: :unicode.chardata</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/path.ex#L16" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: :unicode.chardata</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -343,17 +363,14 @@ list of matches</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">absname(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>absname(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given path to an absolute one. Unlike
 <a href="#expand/1"><code class="inline">expand/1</code></a>, no attempt is made to resolve <code class="inline">..</code>, <code class="inline">.</code> or <code class="inline">~</code>.</p>
@@ -391,17 +408,14 @@ Path.absname(&quot;../x&quot;).
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">absname(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>absname(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Builds a path from <code class="inline">relative_to</code> to <code class="inline">path</code>. If <code class="inline">path</code> is already
 an absolute path, <code class="inline">relative_to</code> is ignored. See also <a href="#relative_to/2"><code class="inline">relative_to/2</code></a>.</p>
@@ -432,17 +446,14 @@ iex&gt; Path.absname(&quot;../x&quot;, &quot;bar&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">basename(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>basename(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the last component of the path or the path
 itself if it does not contain any directory separators.</p>
@@ -474,17 +485,14 @@ iex&gt; Path.basename(&quot;/&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">basename(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>basename(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the last component of <code class="inline">path</code> with the <code class="inline">extension</code>
 stripped. This function should be used to remove a specific
@@ -517,17 +525,14 @@ iex&gt; Path.basename(&quot;~/foo/bar.old.ex&quot;, &quot;.ex&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">dirname(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>dirname(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the directory component of <code class="inline">path</code>.</p>
 <h2 id="dirname/1-examples" class="section-heading">
@@ -555,17 +560,14 @@ iex&gt; Path.dirname(&quot;/foo/bar/baz.ex&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">expand(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>expand(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the path to an absolute one and expands
 any <code class="inline">.</code> and <code class="inline">..</code> characters and a leading <code class="inline">~</code>.</p>
@@ -591,17 +593,14 @@ any <code class="inline">.</code> and <code class="inline">..</code> characters 
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">expand(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>expand(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Expands the path relative to the path given as the second argument
 expanding any <code class="inline">.</code> and <code class="inline">..</code> characters. If the path is already an
@@ -637,17 +636,14 @@ Path.expand(&quot;/foo/bar/../bar&quot;, &quot;/baz&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">extname(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>extname(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the extension of the last component of <code class="inline">path</code>.</p>
 <h2 id="extname/1-examples" class="section-heading">
@@ -675,17 +671,14 @@ iex&gt; Path.extname(&quot;~/foo/bar&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">join([<a href="#t:t/0">t</a>]) :: binary</code></pre>
+          <pre>join([<a href="#t:t/0">t</a>]) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Joins a list of strings.</p>
 <p>This function should be used to convert a list of strings to a path.
@@ -718,17 +711,14 @@ iex&gt; Path.join([&quot;/&quot;, &quot;foo&quot;, &quot;bar/&quot;])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">join(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>join(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Joins two paths.</p>
 <p>The right path will always be expanded to its relative format
@@ -755,17 +745,14 @@ and any trailing slash is removed on join.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">relative(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>relative(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Forces the path to be a relative path.</p>
 <h2 id="relative/1-unix-examples" class="section-heading">
@@ -800,17 +787,14 @@ Path.relative(&quot;/bar/foo.ex&quot;)      #=&gt; &quot;bar/foo.ex&quot;</code>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">relative_to(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>relative_to(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the given <code class="inline">path</code> relative to the given <code class="inline">from</code> path.
 In other words, it tries to strip the <code class="inline">from</code> prefix from <code class="inline">path</code>.</p>
@@ -846,17 +830,14 @@ iex&gt; Path.relative_to(&quot;/usr/local/foo&quot;, &quot;/etc&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">relative_to_cwd(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>relative_to_cwd(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Convenience to get the path relative to the current working
 directory. If, for some reason, the current working directory
@@ -876,17 +857,14 @@ cannot be retrieved, returns the full path.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rootname(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>rootname(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the <code class="inline">path</code> with the <code class="inline">extension</code> stripped.</p>
 <h2 id="rootname/1-examples" class="section-heading">
@@ -914,17 +892,14 @@ iex&gt; Path.rootname(&quot;/foo/bar.ex&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rootname(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>rootname(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the <code class="inline">path</code> with the <code class="inline">extension</code> stripped. This function should be used to
 remove a specific extension which might, or might not, be there.</p>
@@ -953,17 +928,14 @@ iex&gt; Path.rootname(&quot;/foo/bar.erl&quot;, &quot;.ex&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(<a href="#t:t/0">t</a>) :: [binary]</code></pre>
+          <pre>split(<a href="#t:t/0">t</a>) :: [binary]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Splits the path into a list at the path separator.</p>
 <p>If an empty string is given, returns an empty list.</p>
@@ -998,17 +970,14 @@ iex&gt; Path.split(&quot;/foo/bar&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">type(<a href="#t:t/0">t</a>) :: :absolute | :relative | :volumerelative</code></pre>
+          <pre>type(<a href="#t:t/0">t</a>) :: :absolute | :relative | :volumerelative</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the path type.</p>
 <h2 id="type/1-unix-examples" class="section-heading">
@@ -1045,17 +1014,14 @@ Path.type(&quot;/bar/foo.ex&quot;)      #=&gt; :volumerelative</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">wildcard(<a href="#t:t/0">t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: [binary]</code></pre>
+          <pre>wildcard(<a href="#t:t/0">t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: [binary]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Traverses paths according to the given <code class="inline">glob</code> expression, and returns a
 list of matches.</p>

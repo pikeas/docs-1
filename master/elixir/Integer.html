@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Integer – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Integer.html" />
     
@@ -240,17 +240,14 @@ of <code class="inline">integer</code> in the given <code class="inline">base</c
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">digits(integer, pos_integer) :: [integer, ...]</code></pre>
+          <pre>digits(integer, pos_integer) :: [integer, ...]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the ordered digits for the given <code class="inline">integer</code>.</p>
 <p>An optional <code class="inline">base</code> value may be provided representing the radix for the returned
@@ -283,17 +280,14 @@ iex&gt; Integer.digits(-170, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">floor_div(integer, neg_integer | pos_integer) :: integer</code></pre>
+          <pre>floor_div(integer, neg_integer | pos_integer) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Performs a floored integer division.</p>
 <p>Raises an <a href="ArithmeticError.html"><code class="inline">ArithmeticError</code></a> exception if one of the arguments is not an
@@ -328,17 +322,14 @@ iex&gt; Integer.floor_div(-99, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">mod(integer, neg_integer | pos_integer) :: integer</code></pre>
+          <pre>mod(integer, neg_integer | pos_integer) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Computes the modulo remainder of an integer division.</p>
 <p><a href="Integer.html#mod/2"><code class="inline">Integer.mod/2</code></a> uses floored division, which means that
@@ -369,20 +360,17 @@ iex&gt; Integer.mod(6, -4)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse(binary, 2..36) ::
+          <pre>parse(binary, 2..36) ::
   {integer, binary} |
   :error |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses a text representation of an integer.</p>
 <p>An optional <code class="inline">base</code> to the corresponding integer can be provided.
@@ -435,17 +423,14 @@ iex&gt; Integer.parse(&quot;a2&quot;, 38)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_charlist(integer) :: charlist</code></pre>
+          <pre>to_charlist(integer) :: charlist</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a charlist which corresponds to the text representation of the given <code class="inline">integer</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -480,17 +465,14 @@ iex&gt; Integer.to_charlist(0123)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_charlist(integer, 2..36) :: charlist</code></pre>
+          <pre>to_charlist(integer, 2..36) :: charlist</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a charlist which corresponds to the text representation of <code class="inline">integer</code> in the given <code class="inline">base</code>.</p>
 <p><code class="inline">base</code> can be an integer between 2 and 36.</p>
@@ -523,17 +505,14 @@ iex&gt; Integer.to_charlist(882681651, 36)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(integer) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(integer) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a binary which corresponds to the text representation
 of <code class="inline">integer</code>.</p>
@@ -569,17 +548,14 @@ iex&gt; Integer.to_string(0123)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(integer, 2..36) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(integer, 2..36) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a binary which corresponds to the text representation
 of <code class="inline">integer</code> in the given <code class="inline">base</code>.</p>
@@ -613,17 +589,14 @@ iex&gt; Integer.to_string(882681651, 36)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">undigits([integer], integer) :: integer</code></pre>
+          <pre>undigits([integer], integer) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the integer represented by the ordered <code class="inline">digits</code>.</p>
 <p>An optional <code class="inline">base</code> value may be provided representing the radix for the <code class="inline">digits</code>.
@@ -668,8 +641,8 @@ iex&gt; Integer.undigits([])
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Determines if an <code class="inline">integer</code> is even.</p>
 <p>Returns <code class="inline">true</code> if the given <code class="inline">integer</code> is an even number,
@@ -706,8 +679,8 @@ true</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Determines if <code class="inline">integer</code> is odd.</p>
 <p>Returns <code class="inline">true</code> if the given <code class="inline">integer</code> is an odd number,

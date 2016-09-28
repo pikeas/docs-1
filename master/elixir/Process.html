@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Process – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Process.html" />
     
@@ -452,19 +452,59 @@ Returns <code class="inline">nil</code> if the name is not registered</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:spawn_opt/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:spawn_opt/0">spawn_opt</a> ::
+            <div class="detail" id="t:spawn_opt/0">
+  <div class="detail-header">
+    <a href="#t:spawn_opt/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">spawn_opt()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L298" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:spawn_opt/0">spawn_opt</a> ::
   :link |
   :monitor |
   {:priority, :low | :normal | :high} |
   {:fullsweep_after, non_neg_integer} |
   {:min_heap_size, non_neg_integer} |
-  {:min_bin_vheap_size, non_neg_integer}</code></pre>
-  
+  {:min_bin_vheap_size, non_neg_integer}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:spawn_opts/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:spawn_opts/0">spawn_opts</a> :: [<a href="#t:spawn_opt/0">spawn_opt</a>]</code></pre>
-  
+<div class="detail" id="t:spawn_opts/0">
+  <div class="detail-header">
+    <a href="#t:spawn_opts/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">spawn_opts()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L302" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:spawn_opts/0">spawn_opts</a> :: [<a href="#t:spawn_opt/0">spawn_opt</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -491,17 +531,14 @@ Returns <code class="inline">nil</code> if the name is not registered</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">alive?(pid) :: boolean</code></pre>
+          <pre>alive?(pid) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the process exists and is alive (i.e. it is not exiting
 and has not exited yet). Otherwise, returns <code class="inline">false</code>.</p>
@@ -522,17 +559,14 @@ and has not exited yet). Otherwise, returns <code class="inline">false</code>.</
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cancel_timer(reference) :: non_neg_integer | false</code></pre>
+          <pre>cancel_timer(reference) :: non_neg_integer | false</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Cancels a timer created by <code class="inline">send_after/3</code>.</p>
 <p>When the result is an integer, it represents the time in milliseconds
@@ -558,17 +592,14 @@ not tell you whether or not it has arrived at its destination yet.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete(term) :: term | nil</code></pre>
+          <pre>delete(term) :: term | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes the given <code class="inline">key</code> from the process dictionary.</p>
 
@@ -586,17 +617,14 @@ not tell you whether or not it has arrived at its destination yet.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">demonitor(reference, options :: [:flush | :info]) :: boolean</code></pre>
+          <pre>demonitor(reference, options :: [:flush | :info]) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>If <code class="inline">monitor_ref</code> is a reference which the calling process
 obtained by calling <a href="#monitor/1"><code class="inline">monitor/1</code></a>, this monitoring is turned off.
@@ -618,17 +646,14 @@ If the monitoring is already turned off, nothing happens.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">exit(pid, term) :: true</code></pre>
+          <pre>exit(pid, term) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends an exit signal with the given <code class="inline">reason</code> to the <code class="inline">pid</code>.</p>
 <p>The following behaviour applies if <code class="inline">reason</code> is any term except <code class="inline">:normal</code>
@@ -671,17 +696,14 @@ with reason <code class="inline">:killed</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">flag(process_flag, term) :: term</code></pre>
+          <pre>flag(process_flag, term) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sets certain flags for the process which calls this function.
 Returns the old value of the <code class="inline">flag</code>.</p>
@@ -701,17 +723,14 @@ Returns the old value of the <code class="inline">flag</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">flag(pid, :save_calls, non_neg_integer) :: non_neg_integer</code></pre>
+          <pre>flag(pid, :save_calls, non_neg_integer) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sets certain flags for the process <code class="inline">pid</code>, in the same manner as <a href="#flag/2"><code class="inline">flag/2</code></a>.
 Returns the old value of the <code class="inline">flag</code>. The allowed values for <code class="inline">flag</code> are
@@ -732,17 +751,14 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get :: [{term, term}]</code></pre>
+          <pre>get :: [{term, term}]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all key-value pairs in the process dictionary.</p>
 <p>Inlined by the compiler.</p>
@@ -761,17 +777,14 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(term, default :: term) :: term</code></pre>
+          <pre>get(term, default :: term) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the value for the given <code class="inline">key</code> or <code class="inline">default</code> if <code class="inline">key</code> is not set.</p>
 
@@ -789,17 +802,14 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_keys :: [term]</code></pre>
+          <pre>get_keys :: [term]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all keys in the process dictionary.</p>
 <p>Inlined by the compiler.</p>
@@ -818,17 +828,14 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_keys(term) :: [term]</code></pre>
+          <pre>get_keys(term) :: [term]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all keys that have the given <code class="inline">value</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -847,17 +854,14 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">group_leader :: pid</code></pre>
+          <pre>group_leader :: pid</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the PID of the group leader for the process which evaluates the function.</p>
 
@@ -875,17 +879,14 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">group_leader(pid, leader :: pid) :: true</code></pre>
+          <pre>group_leader(pid, leader :: pid) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sets the group leader of <code class="inline">pid</code> to <code class="inline">leader</code>. Typically, this is used when a processes
 started from a certain shell should have a group leader other than <code class="inline">:init</code>.</p>
@@ -904,17 +905,14 @@ started from a certain shell should have a group leader other than <code class="
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hibernate(module, atom, list) :: no_return</code></pre>
+          <pre>hibernate(module, atom, list) :: no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Puts the calling process into a wait state
 where its memory allocation has been reduced as much as possible,
@@ -937,17 +935,14 @@ in the near future.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">info(pid) :: <a href="Keyword.html#t:t/0">Keyword.t</a></code></pre>
+          <pre>info(pid) :: <a href="Keyword.html#t:t/0">Keyword.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns information about the process identified by <code class="inline">pid</code>, or returns <code class="inline">nil</code> if the process
 is not alive.
@@ -968,20 +963,17 @@ Use this only for debugging information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">info(pid, atom | [atom]) ::
+          <pre>info(pid, atom | [atom]) ::
   {atom, term} |
   [{atom, term}] |
-  nil</code></pre>
+  nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns information about the process identified by <code class="inline">pid</code>,
 or returns <code class="inline">nil</code> if the process is not alive.</p>
@@ -1001,17 +993,14 @@ or returns <code class="inline">nil</code> if the process is not alive.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">link(pid | port) :: true</code></pre>
+          <pre>link(pid | port) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a link between the calling process and another process
 (or port) <code class="inline">pid</code>, if there is not such a link already.</p>
@@ -1032,17 +1021,14 @@ or returns <code class="inline">nil</code> if the process is not alive.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">list :: [pid]</code></pre>
+          <pre>list :: [pid]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list of process identifiers corresponding to all the
 processes currently existing on the local node.</p>
@@ -1065,17 +1051,14 @@ but its process identifier will be part of the result returned.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">monitor(pid | {reg_name :: atom, node :: atom} | reg_name :: atom) :: reference</code></pre>
+          <pre>monitor(pid | {reg_name :: atom, node :: atom} | reg_name :: atom) :: reference</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The calling process starts monitoring the given <code class="inline">item</code>.
 It returns the monitor reference.</p>
@@ -1098,17 +1081,14 @@ See <a href="http://www.erlang.org/doc/man/erlang.html#monitor-2"><code class="i
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put(term, term) :: term | nil</code></pre>
+          <pre>put(term, term) :: term | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Stores the given <code class="inline">key</code>-<code class="inline">value</code> pair in the process dictionary.</p>
 <p>The return value is the value that was previously stored under the key <code class="inline">key</code>
@@ -1128,17 +1108,14 @@ See <a href="http://www.erlang.org/doc/man/erlang.html#monitor-2"><code class="i
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">read_timer(reference) :: non_neg_integer | false</code></pre>
+          <pre>read_timer(reference) :: non_neg_integer | false</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reads a timer created by <code class="inline">send_after/3</code>.</p>
 <p>When the result is an integer, it represents the time in milliseconds
@@ -1164,17 +1141,14 @@ not tell you whether or not it has arrived at its destination yet.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">register(pid | port, atom) :: true</code></pre>
+          <pre>register(pid | port, atom) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Associates the atom <code class="inline">name</code> with a <code class="inline">pid</code> or a port identifier.</p>
 <p><code class="inline">name</code>, can then be used instead of the <code class="inline">pid</code> / port identifier with the <a href="Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a>
@@ -1196,17 +1170,14 @@ is no longer alive, (check with <a href="#alive?/1)"><code class="inline">alive?
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">registered :: [atom]</code></pre>
+          <pre>registered :: [atom]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list of names which have been registered using <a href="#register/2"><code class="inline">register/2</code></a>.</p>
 
@@ -1224,20 +1195,17 @@ is no longer alive, (check with <a href="#alive?/1)"><code class="inline">alive?
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">send(dest, msg, [option]) ::
+          <pre>send(dest, msg, [option]) ::
   :ok |
   :noconnect |
-  :nosuspend when dest: pid | port | atom | {atom, node}, msg: any, option: :noconnect | :nosuspend</code></pre>
+  :nosuspend when dest: pid | port | atom | {atom, node}, msg: any, option: :noconnect | :nosuspend</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends a message to the given process.</p>
 <p>If the option <code class="inline">:noconnect</code> is used and sending the message would require an
@@ -1268,17 +1236,14 @@ sender to be suspended the message is not sent and <code class="inline">:nosuspe
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">send_after(pid | atom, term, non_neg_integer, [option]) :: reference when option: {:abs, boolean}</code></pre>
+          <pre>send_after(pid | atom, term, non_neg_integer, [option]) :: reference when option: {:abs, boolean}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends <code class="inline">msg</code> to <code class="inline">dest</code> after <code class="inline">time</code> milliseconds.</p>
 <p>If <code class="inline">dest</code> is a PID, it must be the PID of a local process, dead or alive.
@@ -1319,8 +1284,8 @@ on delivery).</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Sleeps the current process by <code class="inline">timeout</code>.</p>
 <p><code class="inline">timeout</code> is either the number of milliseconds to sleep as an
@@ -1390,19 +1355,16 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn((() -> any), <a href="#t:spawn_opts/0">spawn_opts</a>) ::
+          <pre>spawn((() -> any), <a href="#t:spawn_opts/0">spawn_opts</a>) ::
   pid |
-  {pid, reference}</code></pre>
+  {pid, reference}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given function according to the given options.</p>
 <p>The result depends on the given options. In particular,
@@ -1427,19 +1389,16 @@ check <a href="http://www.erlang.org/doc/man/erlang.html#spawn_opt-4"><code clas
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn(module, atom, list, <a href="#t:spawn_opts/0">spawn_opts</a>) ::
+          <pre>spawn(module, atom, list, <a href="#t:spawn_opts/0">spawn_opts</a>) ::
   pid |
-  {pid, reference}</code></pre>
+  {pid, reference}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given function from module <code class="inline">mod</code>, passing the given <code class="inline">args</code>
 according to the given options.</p>
@@ -1465,17 +1424,14 @@ check <a href="http://www.erlang.org/doc/man/erlang.html#spawn_opt-4"><code clas
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">unlink(pid | port) :: true</code></pre>
+          <pre>unlink(pid | port) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Removes the link, if there is one, between the calling process and
 the process or port referred to by <code class="inline">pid</code>. Returns <code class="inline">true</code> and does not
@@ -1497,17 +1453,14 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">unregister(atom) :: true</code></pre>
+          <pre>unregister(atom) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Removes the registered <code class="inline">name</code>, associated with a PID or a port identifier.</p>
 <p>Fails with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the name is not registered to any PID or port.</p>
@@ -1527,17 +1480,14 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">whereis(atom) :: pid | port | nil</code></pre>
+          <pre>whereis(atom) :: pid | port | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the PID or port identifier with the registered <code class="inline">name</code>.
 Returns <code class="inline">nil</code> if the name is not registered.</p>

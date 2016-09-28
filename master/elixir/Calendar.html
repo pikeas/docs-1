@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Calendar – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Calendar.html" />
     
@@ -267,78 +267,304 @@ calendars may have a different number of days per month, months per year and so 
             Types
           </h1>
           <div class="types-list">
-            <div id="t:calendar/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:calendar/0">calendar</a> :: module</code></pre>
-  
-    <div class="typespec-doc"><p>A calendar implementation</p>
+            <div class="detail" id="t:calendar/0">
+  <div class="detail-header">
+    <a href="#t:calendar/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">calendar()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:calendar/0">calendar</a> :: module</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>A calendar implementation</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:day/0">
+  <div class="detail-header">
+    <a href="#t:day/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">day()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L21" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:day/0">day</a> :: integer</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:day/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:day/0">day</a> :: integer</code></pre>
-  
+<div class="detail" id="t:hour/0">
+  <div class="detail-header">
+    <a href="#t:hour/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">hour()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:hour/0">hour</a> :: 0..23</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:hour/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:hour/0">hour</a> :: 0..23</code></pre>
-  
-</div>
-<div id="t:microsecond/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:microsecond/0">microsecond</a> :: {0..999999, 0..6}</code></pre>
-  
-    <div class="typespec-doc"><p>Microseconds with stored precision.</p>
+<div class="detail" id="t:microsecond/0">
+  <div class="detail-header">
+    <a href="#t:microsecond/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">microsecond()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L28" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:microsecond/0">microsecond</a> :: {0..999999, 0..6}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Microseconds with stored precision.</p>
 <p>The precision represents the number of digits
 that must be used when representing the microseconds
 to external format. If the precision is 0, it means
 microseconds must be skipped.</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:minute/0">
+  <div class="detail-header">
+    <a href="#t:minute/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">minute()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L23" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:minute/0">minute</a> :: 0..59</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:minute/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:minute/0">minute</a> :: 0..59</code></pre>
-  
+<div class="detail" id="t:month/0">
+  <div class="detail-header">
+    <a href="#t:month/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">month()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L20" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:month/0">month</a> :: integer</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:month/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:month/0">month</a> :: integer</code></pre>
-  
+<div class="detail" id="t:second/0">
+  <div class="detail-header">
+    <a href="#t:second/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">second()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L25" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:second/0">second</a> :: 0..60</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>From 0 to 60 to account for leap seconds</p>
+
+  </section>
 </div>
-<div id="t:second/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:second/0">second</a> :: 0..60</code></pre>
-  
-    <div class="typespec-doc"><p>From 0 to 60 to account for leap seconds</p>
+<div class="detail" id="t:std_offset/0">
+  <div class="detail-header">
+    <a href="#t:std_offset/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">std_offset()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L50" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:std_offset/0">std_offset</a> :: integer</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The time zone standard offset in seconds (not zero in summer times)</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:time_zone/0">
+  <div class="detail-header">
+    <a href="#t:time_zone/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">time_zone()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L41" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:time_zone/0">time_zone</a> :: <a href="String.html#t:t/0">String.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The time zone ID according to the IANA tz database (e.g. Europe/Zurich)</p>
+
+  </section>
 </div>
-<div id="t:std_offset/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:std_offset/0">std_offset</a> :: integer</code></pre>
-  
-    <div class="typespec-doc"><p>The time zone standard offset in seconds (not zero in summer times)</p>
+<div class="detail" id="t:utc_offset/0">
+  <div class="detail-header">
+    <a href="#t:utc_offset/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">utc_offset()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L47" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:utc_offset/0">utc_offset</a> :: integer</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The time zone UTC offset in seconds</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:year/0">
+  <div class="detail-header">
+    <a href="#t:year/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">year()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L19" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:year/0">year</a> :: integer</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:time_zone/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:time_zone/0">time_zone</a> :: <a href="String.html#t:t/0">String.t</a></code></pre>
-  
-    <div class="typespec-doc"><p>The time zone ID according to the IANA tz database (e.g. Europe/Zurich)</p>
-</div>
-  
-</div>
-<div id="t:utc_offset/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:utc_offset/0">utc_offset</a> :: integer</code></pre>
-  
-    <div class="typespec-doc"><p>The time zone UTC offset in seconds</p>
-</div>
-  
-</div>
-<div id="t:year/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:year/0">year</a> :: integer</code></pre>
-  
-</div>
-<div id="t:zone_abbr/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:zone_abbr/0">zone_abbr</a> :: <a href="String.html#t:t/0">String.t</a></code></pre>
-  
-    <div class="typespec-doc"><p>The time zone abbreviation (e.g. CET or CEST or BST etc.)</p>
-</div>
-  
+<div class="detail" id="t:zone_abbr/0">
+  <div class="detail-header">
+    <a href="#t:zone_abbr/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">zone_abbr()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L44" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:zone_abbr/0">zone_abbr</a> :: <a href="String.html#t:t/0">String.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The time zone abbreviation (e.g. CET or CEST or BST etc.)</p>
+
+  </section>
 </div>
 
           </div>
@@ -369,19 +595,16 @@ microseconds must be skipped.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">date(<a href="#t:year/0">year</a>, <a href="#t:month/0">month</a>, <a href="#t:day/0">day</a>) ::
+          <pre>date(<a href="#t:year/0">year</a>, <a href="#t:month/0">month</a>, <a href="#t:day/0">day</a>) ::
   {:ok, <a href="Date.html#t:t/0">Date.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Builds a new date from proleptic year, month and day of month.</p>
 
@@ -399,17 +622,14 @@ microseconds must be skipped.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">last_day_of_month(<a href="#t:year/0">year</a>, <a href="#t:month/0">month</a>) :: <a href="#t:day/0">day</a></code></pre>
+          <pre>last_day_of_month(<a href="#t:year/0">year</a>, <a href="#t:month/0">month</a>) :: <a href="#t:day/0">day</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the last day of the month for the given year-month pair.</p>
 
@@ -427,17 +647,14 @@ microseconds must be skipped.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">leap_year?(<a href="#t:year/0">year</a>) :: boolean</code></pre>
+          <pre>leap_year?(<a href="#t:year/0">year</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns true if the given year is a leap year.</p>
 <p>A leap year is a year of a longer length than normal. The exact meaning
@@ -458,17 +675,14 @@ the concept of leap years.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(structure :: <a href="Date.html#t:t/0">Date.t</a> | <a href="DateTime.html#t:t/0">DateTime.t</a> | <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(structure :: <a href="Date.html#t:t/0">Date.t</a> | <a href="DateTime.html#t:t/0">DateTime.t</a> | <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given structure into a string according to the calendar.</p>
 

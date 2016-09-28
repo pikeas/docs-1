@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>NaiveDateTime – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/NaiveDateTime.html" />
     
@@ -282,9 +282,29 @@ as the ones in 3rd party calendar libraries.</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %NaiveDateTime{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, hour: <a href="Calendar.html#t:hour/0">Calendar.hour</a>, microsecond: <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>, minute: <a href="Calendar.html#t:minute/0">Calendar.minute</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, second: <a href="Calendar.html#t:second/0">Calendar.second</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L625" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %NaiveDateTime{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, hour: <a href="Calendar.html#t:hour/0">Calendar.hour</a>, microsecond: <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>, minute: <a href="Calendar.html#t:minute/0">Calendar.minute</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, second: <a href="Calendar.html#t:second/0">Calendar.second</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -311,19 +331,16 @@ as the ones in 3rd party calendar libraries.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_erl(:calendar.datetime, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
+          <pre>from_erl(:calendar.datetime, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
   {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Erlang datetime tuple to a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> struct.</p>
 <p>Attempting to convert an invalid ISO calendar date will produce an error tuple.</p>
@@ -355,19 +372,16 @@ iex&gt; NaiveDateTime.from_erl({{2000, 13, 1},{13, 30, 15}})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_erl!(:calendar.datetime, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
+          <pre>from_erl!(:calendar.datetime, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
   <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a> |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Erlang datetime tuple to a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> struct.</p>
 <p>Raises if the datetime is invalid.
@@ -398,19 +412,16 @@ iex&gt; NaiveDateTime.from_erl!({{2000, 13, 1}, {13, 30, 15}})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_iso8601(<a href="String.html#t:t/0">String.t</a>) ::
+          <pre>from_iso8601(<a href="String.html#t:t/0">String.t</a>) ::
   {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Timezone offset may be included in the string but they will be
@@ -476,19 +487,16 @@ iex&gt; NaiveDateTime.from_iso8601(&quot;2015-01-23T23:50:07.123-24:00&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_iso8601!(<a href="String.html#t:t/0">String.t</a>) ::
+          <pre>from_iso8601!(<a href="String.html#t:t/0">String.t</a>) ::
   <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a> |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
@@ -516,17 +524,14 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>}</code></pre>
+          <pre>from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given Unix time to NaiveDateTime.</p>
 <p>The integer can be given in different unit
@@ -573,17 +578,14 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_unix!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a></code></pre>
+          <pre>from_unix!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given Unix time to NaiveDateTime.</p>
 <p>The integer can be given in different unit
@@ -623,17 +625,14 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Date.html#t:t/0">Date.t</a>, <a href="Time.html#t:t/0">Time.t</a>) :: {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>}</code></pre>
+          <pre>new(<a href="Date.html#t:t/0">Date.t</a>, <a href="Time.html#t:t/0">Time.t</a>) :: {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Builds a naive date time from date and time structs.</p>
 <h2 id="new/2-examples" class="section-heading">
@@ -658,19 +657,16 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Calendar.html#t:year/0">Calendar.year</a>, <a href="Calendar.html#t:month/0">Calendar.month</a>, <a href="Calendar.html#t:day/0">Calendar.day</a>, <a href="Calendar.html#t:hour/0">Calendar.hour</a>, <a href="Calendar.html#t:minute/0">Calendar.minute</a>, <a href="Calendar.html#t:second/0">Calendar.second</a>, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
+          <pre>new(<a href="Calendar.html#t:year/0">Calendar.year</a>, <a href="Calendar.html#t:month/0">Calendar.month</a>, <a href="Calendar.html#t:day/0">Calendar.day</a>, <a href="Calendar.html#t:hour/0">Calendar.hour</a>, <a href="Calendar.html#t:minute/0">Calendar.minute</a>, <a href="Calendar.html#t:second/0">Calendar.second</a>, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
   {:ok, <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Builds a new ISO naive date time.</p>
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, naive_date_time}</code>
@@ -721,8 +717,8 @@ iex&gt; NaiveDateTime.new(2000, 1, 1, 23, 59, 59, 1_000_000)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> into a <a href="Date.html"><code class="inline">Date</code></a>.</p>
 <p>Because <a href="Date.html"><code class="inline">Date</code></a> does not hold time information,
@@ -749,17 +745,14 @@ data will be lost during the conversion.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_erl(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: :calendar.datetime</code></pre>
+          <pre>to_erl(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: :calendar.datetime</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> struct to an Erlang datetime tuple.</p>
 <p>Only supports converting naive date times which are in the ISO calendar,
@@ -788,17 +781,14 @@ hour/minute/second.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_iso8601(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_iso8601(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given naive date time to ISO8601.</p>
 <p>Only supports converting naive date times which are in the ISO calendar,
@@ -824,17 +814,14 @@ iex&gt; NaiveDateTime.to_iso8601(~N[2000-02-28 23:00:13.001])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given naive date time to a string according to its calendar.</p>
 <h3>Examples</h3>
@@ -858,8 +845,8 @@ iex&gt; NaiveDateTime.to_string(~N[2000-02-28 23:00:13.001])
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts a <a href="NaiveDateTime.html#content"><code class="inline">NaiveDateTime</code></a> into <a href="Time.html"><code class="inline">Time</code></a>.</p>
 <p>Because <a href="Time.html"><code class="inline">Time</code></a> does not hold date information,
@@ -886,17 +873,14 @@ data will be lost during the conversion.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">utc_now :: <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a></code></pre>
+          <pre>utc_now :: <a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current naive date time in UTC.</p>
 <p>Prefer using <a href="DateTime.html#utc_now/0"><code class="inline">DateTime.utc_now/0</code></a> when possible as, opposite

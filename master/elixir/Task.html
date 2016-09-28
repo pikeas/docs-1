@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Task – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Task.html" />
     
@@ -349,9 +349,29 @@ described there apply to the whole ecosystem.</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Task{owner: term, pid: term, ref: term}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L153" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %Task{owner: term, pid: term, ref: term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -378,8 +398,8 @@ described there apply to the whole ecosystem.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>The Task struct.</p>
 <p>It contains these fields:</p>
@@ -407,17 +427,14 @@ not use a task process</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async((... -> any)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>async((... -> any)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that must be awaited on.</p>
 <p>This function spawns a process that is linked to and monitored
@@ -441,17 +458,14 @@ usage of <a href="#async/1"><code class="inline">async/1</code></a> and <a href=
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async(module, atom, [term]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>async(module, atom, [term]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that must be awaited on.</p>
 <p>A <a href="Task.html#content"><code class="inline">Task</code></a> struct is returned containing the relevant information.
@@ -526,17 +540,14 @@ and <code class="inline">result</code> is the return value of the task function.
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">await(<a href="#t:t/0">t</a>, timeout) :: term | no_return</code></pre>
+          <pre>await(<a href="#t:t/0">t</a>, timeout) :: term | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Awaits a task reply and returns it.</p>
 <p>A timeout, in milliseconds, can be given with default value
@@ -583,20 +594,17 @@ iex&gt; Task.await(task)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">shutdown(<a href="#t:t/0">t</a>, timeout | :brutal_kill) ::
+          <pre>shutdown(<a href="#t:t/0">t</a>, timeout | :brutal_kill) ::
   {:ok, term} |
   {:exit, term} |
-  nil</code></pre>
+  nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Unlinks and shuts down the task, and then checks for a reply.</p>
 <p>Returns <code class="inline">{:ok, reply}</code> if the reply is received while shutting down the task,
@@ -630,17 +638,14 @@ a response waiting in the message queue this function will return
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start((... -> any)) :: {:ok, pid}</code></pre>
+          <pre>start((... -> any)) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task.</p>
 <p>This is only used when the task is used for side-effects
@@ -661,17 +666,14 @@ be linked to the current process.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start(module, atom, [term]) :: {:ok, pid}</code></pre>
+          <pre>start(module, atom, [term]) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task.</p>
 <p>This is only used when the task is used for side-effects
@@ -692,17 +694,14 @@ be linked to the current process.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link((... -> any)) :: {:ok, pid}</code></pre>
+          <pre>start_link((... -> any)) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task as part of a supervision tree.</p>
 
@@ -720,17 +719,14 @@ be linked to the current process.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link(module, atom, [term]) :: {:ok, pid}</code></pre>
+          <pre>start_link(module, atom, [term]) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task as part of a supervision tree.</p>
 
@@ -748,20 +744,17 @@ be linked to the current process.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">yield(<a href="#t:t/0">t</a>, timeout) ::
+          <pre>yield(<a href="#t:t/0">t</a>, timeout) ::
   {:ok, term} |
   {:exit, term} |
-  nil</code></pre>
+  nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Temporarily blocks the current process waiting for a task reply.</p>
 <p>Returns <code class="inline">{:ok, reply}</code> if the reply is received, <code class="inline">nil</code> if
@@ -801,17 +794,14 @@ for the duration of the timeout awaiting the message.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">yield_many([<a href="#t:t/0">t</a>], timeout) :: [{<a href="#t:t/0">t</a>, {:ok, term} | {:exit, term} | nil}]</code></pre>
+          <pre>yield_many([<a href="#t:t/0">t</a>], timeout) :: [{<a href="#t:t/0">t</a>, {:ok, term} | {:exit, term} | nil}]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Yields to multiple tasks in the given time interval.</p>
 <p>This function receives a list of tasks and waits for their

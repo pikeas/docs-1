@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Logger.Formatter – Logger v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/logger/Logger.Formatter.html" />
     
@@ -201,20 +201,60 @@ metadata listdict and returns a properly formatted string</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:pattern/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:pattern/0">pattern</a> ::
+            <div class="detail" id="t:pattern/0">
+  <div class="detail-header">
+    <a href="#t:pattern/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pattern()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/logger/lib/logger/formatter.ex#L44" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:pattern/0">pattern</a> ::
   :date |
   :level |
   :levelpad |
   :message |
   :metadata |
   :node |
-  :time</code></pre>
-  
+  :time</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:time/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:time/0">time</a> :: {{1970..10000, 1..12, 1..31}, {0..23, 0..59, 0..59, 0..999}}</code></pre>
-  
+<div class="detail" id="t:time/0">
+  <div class="detail-header">
+    <a href="#t:time/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">time()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/logger/lib/logger/formatter.ex#L43" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:time/0">time</a> :: {{1970..10000, 1..12, 1..31}, {0..23, 0..59, 0..59, 0..999}}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -241,19 +281,16 @@ metadata listdict and returns a properly formatted string</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">compile(binary | nil) :: [<a href="#t:pattern/0">pattern</a> | binary]</code></pre>
+          <pre>compile(binary | nil) :: [<a href="#t:pattern/0">pattern</a> | binary]</pre>
         
-          <pre><code class="elixir">compile({atom, atom}) :: {atom, atom}</code></pre>
+          <pre>compile({atom, atom}) :: {atom, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Compiles a format string into a data structure that the <a href="#format/5"><code class="inline">format/5</code></a> can handle.</p>
 <p>Check the module doc for documentation on the valid parameters. If you
@@ -277,17 +314,14 @@ pass <code class="inline">nil</code>, it defaults to: <code class="inline">$time
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format({atom, atom} | [<a href="#t:pattern/0">pattern</a> | binary], <a href="Logger.html#t:level/0">Logger.level</a>, <a href="Logger.html#t:message/0">Logger.message</a>, <a href="#t:time/0">time</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.html#t:chardata/0">IO.chardata</a></code></pre>
+          <pre>format({atom, atom} | [<a href="#t:pattern/0">pattern</a> | binary], <a href="Logger.html#t:level/0">Logger.level</a>, <a href="Logger.html#t:message/0">Logger.message</a>, <a href="#t:time/0">time</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.html#t:chardata/0">IO.chardata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Takes a compiled format and injects the, level, timestamp, message and
 metadata listdict and returns a properly formatted string.</p>
@@ -306,17 +340,14 @@ metadata listdict and returns a properly formatted string.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">prune(<a href="http://elixir-lang.org/docs/stable/elixir/IO.html#t:chardata/0">IO.chardata</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.html#t:chardata/0">IO.chardata</a></code></pre>
+          <pre>prune(<a href="http://elixir-lang.org/docs/stable/elixir/IO.html#t:chardata/0">IO.chardata</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.html#t:chardata/0">IO.chardata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Prune non-valid UTF-8 codepoints.</p>
 <p>Typically called after formatting when the data cannot be printed.</p>

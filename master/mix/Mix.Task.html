@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Mix.Task – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.Task.html" />
     
@@ -337,13 +337,53 @@ a list of command line args</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:task_module/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:task_module/0">task_module</a> :: atom</code></pre>
-  
+            <div class="detail" id="t:task_module/0">
+  <div class="detail-header">
+    <a href="#t:task_module/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">task_module()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/task.ex#L39" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:task_module/0">task_module</a> :: atom</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:task_name/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:task_name/0">task_name</a> :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | atom</code></pre>
-  
+<div class="detail" id="t:task_name/0">
+  <div class="detail-header">
+    <a href="#t:task_name/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">task_name()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/task.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:task_name/0">task_name</a> :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | atom</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -370,17 +410,14 @@ a list of command line args</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">alias?(<a href="#t:task_name/0">task_name</a>) :: boolean</code></pre>
+          <pre>alias?(<a href="#t:task_name/0">task_name</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if an alias called <code class="inline">task</code> exists.</p>
 <p>For more information about task aliasing, take a look at the “Aliasing”
@@ -400,17 +437,14 @@ section in the docs for <a href="Mix.html"><code class="inline">Mix</code></a>.<
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">all_modules :: [<a href="#t:task_module/0">task_module</a>]</code></pre>
+          <pre>all_modules :: [<a href="#t:task_module/0">task_module</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all loaded task modules.</p>
 <p>Modules that are not yet loaded won’t show up.
@@ -430,17 +464,14 @@ Check <a href="#load_all/0"><code class="inline">load_all/0</code></a> if you wa
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">clear :: :ok</code></pre>
+          <pre>clear :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Clears all invoked tasks, allowing them to be reinvoked.</p>
 <p>This operation is not recursive.</p>
@@ -459,17 +490,14 @@ Check <a href="#load_all/0"><code class="inline">load_all/0</code></a> if you wa
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(<a href="#t:task_name/0">task_name</a>) :: <a href="#t:task_module/0">task_module</a> | nil</code></pre>
+          <pre>get(<a href="#t:task_name/0">task_name</a>) :: <a href="#t:task_module/0">task_module</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a task name and returns the task module if found.</p>
 <p>Otherwise returns <code class="inline">nil</code> in case the module
@@ -489,17 +517,14 @@ exists, but it isn’t a task or cannot be found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get!(<a href="#t:task_name/0">task_name</a>) :: <a href="#t:task_module/0">task_module</a> | no_return</code></pre>
+          <pre>get!(<a href="#t:task_name/0">task_name</a>) :: <a href="#t:task_module/0">task_module</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a task name and retrieves the task module.</p>
 <h2 id="get!/1-exceptions" class="section-heading">
@@ -528,17 +553,14 @@ exists, but it isn’t a task or cannot be found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">load_all :: [<a href="#t:task_module/0">task_module</a>]</code></pre>
+          <pre>load_all :: [<a href="#t:task_module/0">task_module</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Loads all tasks in all code paths.</p>
 
@@ -556,17 +578,14 @@ exists, but it isn’t a task or cannot be found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">load_tasks([<a href="http://elixir-lang.org/docs/stable/elixir/List.Chars.html#t:t/0">List.Chars.t</a>]) :: [<a href="#t:task_module/0">task_module</a>]</code></pre>
+          <pre>load_tasks([<a href="http://elixir-lang.org/docs/stable/elixir/List.Chars.html#t:t/0">List.Chars.t</a>]) :: [<a href="#t:task_module/0">task_module</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Loads all tasks in the given <code class="inline">paths</code>.</p>
 
@@ -584,17 +603,14 @@ exists, but it isn’t a task or cannot be found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">moduledoc(<a href="#t:task_module/0">task_module</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | nil</code></pre>
+          <pre>moduledoc(<a href="#t:task_module/0">task_module</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the moduledoc for the given task <code class="inline">module</code>.</p>
 <p>Returns the moduledoc or <code class="inline">nil</code>.</p>
@@ -613,17 +629,14 @@ exists, but it isn’t a task or cannot be found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">preferred_cli_env(<a href="#t:task_name/0">task_name</a>) :: atom | nil</code></pre>
+          <pre>preferred_cli_env(<a href="#t:task_name/0">task_name</a>) :: atom | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets preferred CLI environment for the task.</p>
 <p>Returns environment (for example, <code class="inline">:test</code>, or <code class="inline">:prod</code>), or <code class="inline">nil</code>.</p>
@@ -642,17 +655,14 @@ exists, but it isn’t a task or cannot be found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">recursive(<a href="#t:task_module/0">task_module</a>) :: boolean</code></pre>
+          <pre>recursive(<a href="#t:task_module/0">task_module</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if the task should be run recursively for all sub-apps in
 umbrella projects.</p>
@@ -672,17 +682,14 @@ umbrella projects.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">reenable(<a href="#t:task_name/0">task_name</a>) :: :ok</code></pre>
+          <pre>reenable(<a href="#t:task_name/0">task_name</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reenables a given task so it can be executed again down the stack.</p>
 <p>Both alias and the regular stack are reenabled when this function
@@ -704,17 +711,14 @@ child projects.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rerun(<a href="#t:task_name/0">task_name</a>, [any]) :: any</code></pre>
+          <pre>rerun(<a href="#t:task_name/0">task_name</a>, [any]) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reruns <code class="inline">task</code> with the given arguments.</p>
 <p>This function reruns the given task; to do that, it first re-enables the task
@@ -734,17 +738,14 @@ and then runs it as normal.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">run(<a href="#t:task_name/0">task_name</a>, [any]) :: any</code></pre>
+          <pre>run(<a href="#t:task_name/0">task_name</a>, [any]) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Runs a <code class="inline">task</code> with the given <code class="inline">args</code>.</p>
 <p>If the task was not yet invoked, it runs the task and
@@ -771,17 +772,14 @@ information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">shortdoc(<a href="#t:task_module/0">task_module</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | nil</code></pre>
+          <pre>shortdoc(<a href="#t:task_module/0">task_module</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the shortdoc for the given task <code class="inline">module</code>.</p>
 <p>Returns the shortdoc or <code class="inline">nil</code>.</p>
@@ -800,17 +798,14 @@ information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">task?(<a href="#t:task_module/0">task_module</a>) :: boolean</code></pre>
+          <pre>task?(<a href="#t:task_module/0">task_module</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if given module is a task.</p>
 
@@ -828,17 +823,14 @@ information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">task_name(<a href="#t:task_module/0">task_module</a>) :: <a href="#t:task_name/0">task_name</a></code></pre>
+          <pre>task_name(<a href="#t:task_module/0">task_module</a>) :: <a href="#t:task_name/0">task_name</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the task name for the given <code class="inline">module</code>.</p>
 
@@ -870,17 +862,14 @@ information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">run([binary]) :: any</code></pre>
+          <pre>run([binary]) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>A task needs to implement <code class="inline">run</code> which receives
 a list of command line args.</p>

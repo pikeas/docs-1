@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Regex – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Regex.html" />
     
@@ -348,9 +348,29 @@ parts</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Regex{opts: binary, re_pattern: term, source: binary}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L83" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %Regex{opts: binary, re_pattern: term, source: binary}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -377,19 +397,16 @@ parts</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">compile(binary, binary | [term]) ::
+          <pre>compile(binary, binary | [term]) ::
   {:ok, <a href="#t:t/0">t</a>} |
-  {:error, any}</code></pre>
+  {:error, any}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Compiles the regular expression.</p>
 <p>The given options can either be a binary with the characters
@@ -422,17 +439,14 @@ iex&gt; Regex.compile(&quot;*foo&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">compile!(binary, binary | [term]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>compile!(binary, binary | [term]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Compiles the regular expression according to the given options.
 Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileError</code></a> if the regex cannot be compiled.</p>
@@ -451,17 +465,14 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">escape(<a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>escape(<a href="String.html#t:t/0">String.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Escapes a string to be literally matched in a regex.</p>
 <h2 id="escape/1-examples" class="section-heading">
@@ -489,17 +500,14 @@ iex&gt; Regex.escape(&quot;\\what if&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">match?(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>) :: boolean</code></pre>
+          <pre>match?(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a boolean indicating whether there was a match or not.</p>
 <h2 id="match?/2-examples" class="section-heading">
@@ -527,17 +535,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">named_captures(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: map | nil</code></pre>
+          <pre>named_captures(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: map | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the given captures as a map or <code class="inline">nil</code> if no captures are
 found. The option <code class="inline">:return</code> can be set to <code class="inline">:index</code> to get indexes
@@ -570,17 +575,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">names(<a href="#t:t/0">t</a>) :: [<a href="String.html#t:t/0">String.t</a>]</code></pre>
+          <pre>names(<a href="#t:t/0">t</a>) :: [<a href="String.html#t:t/0">String.t</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list of names in the regex.</p>
 <h2 id="names/1-examples" class="section-heading">
@@ -605,17 +607,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">opts(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>opts(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the regex options as a string.</p>
 <h2 id="opts/1-examples" class="section-heading">
@@ -640,17 +639,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">re_pattern(<a href="#t:t/0">t</a>) :: term</code></pre>
+          <pre>re_pattern(<a href="#t:t/0">t</a>) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the underlying <code class="inline">re_pattern</code> in the regular expression.</p>
 
@@ -668,17 +664,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">regex?(any) :: boolean</code></pre>
+          <pre>regex?(any) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the given <code class="inline">term</code> is a regex.
 Otherwise returns <code class="inline">false</code>.</p>
@@ -707,17 +700,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | (... -> <a href="String.html#t:t/0">String.t</a>), [term]) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>replace(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | (... -> <a href="String.html#t:t/0">String.t</a>), [term]) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a regex, a binary and a replacement, returns a new
 binary where all matches are replaced by the replacement.</p>
@@ -781,20 +771,17 @@ iex&gt; Regex.replace(~r/a/, &quot;abcadc&quot;, &quot;A&quot;, global: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">run(<a href="#t:t/0">t</a>, binary, [term]) ::
+          <pre>run(<a href="#t:t/0">t</a>, binary, [term]) ::
   nil |
   [binary] |
-  [{integer, integer}]</code></pre>
+  [{integer, integer}]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Runs the regular expression against the given string until the first match.
 It returns a list with all captures or <code class="inline">nil</code> if no match occurred.</p>
@@ -838,17 +825,14 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">scan(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [[<a href="String.html#t:t/0">String.t</a>]]</code></pre>
+          <pre>scan(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [[<a href="String.html#t:t/0">String.t</a>]]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#run/3"><code class="inline">run/3</code></a>, but scans the target several times collecting all
 matches of the regular expression.</p>
@@ -894,17 +878,14 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">source(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>source(<a href="#t:t/0">t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the regex source as a binary.</p>
 <h2 id="source/1-examples" class="section-heading">
@@ -929,17 +910,14 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [<a href="String.html#t:t/0">String.t</a>]</code></pre>
+          <pre>split(<a href="#t:t/0">t</a>, <a href="String.html#t:t/0">String.t</a>, [term]) :: [<a href="String.html#t:t/0">String.t</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Splits the given target based on the given pattern and in the given number of
 parts.</p>

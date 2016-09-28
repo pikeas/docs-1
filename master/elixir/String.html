@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>String – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/String.html" />
     
@@ -796,21 +796,101 @@ has been removed</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:codepoint/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:codepoint/0">codepoint</a> :: <a href="#t:t/0">t</a></code></pre>
-  
+            <div class="detail" id="t:codepoint/0">
+  <div class="detail-header">
+    <a href="#t:codepoint/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">codepoint()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/string.ex#L204" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:codepoint/0">codepoint</a> :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:grapheme/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:grapheme/0">grapheme</a> :: <a href="#t:t/0">t</a></code></pre>
-  
+<div class="detail" id="t:grapheme/0">
+  <div class="detail-header">
+    <a href="#t:grapheme/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">grapheme()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/string.ex#L205" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:grapheme/0">grapheme</a> :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:pattern/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:pattern/0">pattern</a> :: <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>] | :binary.cp</code></pre>
-  
+<div class="detail" id="t:pattern/0">
+  <div class="detail-header">
+    <a href="#t:pattern/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pattern()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/string.ex#L206" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:pattern/0">pattern</a> :: <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>] | :binary.cp</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: binary</code></pre>
-  
+<div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/string.ex#L203" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: binary</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -837,17 +917,14 @@ has been removed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">at(<a href="#t:t/0">t</a>, integer) :: <a href="#t:grapheme/0">grapheme</a> | nil</code></pre>
+          <pre>at(<a href="#t:t/0">t</a>, integer) :: <a href="#t:grapheme/0">grapheme</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the grapheme at the <code class="inline">position</code> of the given utf8 <code class="inline">string</code>.
 If <code class="inline">position</code> is greater than <code class="inline">string</code> length, then it returns <code class="inline">nil</code>.</p>
@@ -885,17 +962,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">capitalize(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>capitalize(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the first character in the given string to
 uppercase and the remainder to lowercase.</p>
@@ -931,17 +1005,14 @@ iex&gt; String.capitalize(&quot;olá&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chunk(<a href="#t:t/0">t</a>, :valid | :printable) :: [<a href="#t:t/0">t</a>]</code></pre>
+          <pre>chunk(<a href="#t:t/0">t</a>, :valid | :printable) :: [<a href="#t:t/0">t</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Splits the string into chunks of characters that share a common trait.</p>
 <p>The trait can be one of two options:</p>
@@ -984,17 +1055,14 @@ iex&gt; String.chunk(&lt;&lt;?a, ?b, ?c, 0, 0x0FFFF::utf8&gt;&gt;, :printable)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">codepoints(<a href="#t:t/0">t</a>) :: [<a href="#t:codepoint/0">codepoint</a>]</code></pre>
+          <pre>codepoints(<a href="#t:t/0">t</a>) :: [<a href="#t:codepoint/0">codepoint</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all codepoints in the string.</p>
 <p>For details about codepoints and graphemes, see the <a href="String.html#content"><code class="inline">String</code></a> module documentation.</p>
@@ -1032,17 +1100,14 @@ iex&gt; String.codepoints(&quot;é&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">contains?(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a>) :: boolean</code></pre>
+          <pre>contains?(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if <code class="inline">string</code> contains any of the given <code class="inline">contents</code>.</p>
 <p><code class="inline">contents</code> can be either a single string or a list of strings.</p>
@@ -1081,17 +1146,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">downcase(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>downcase(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts all characters in the given string to lowercase.</p>
 <h2 id="downcase/1-examples" class="section-heading">
@@ -1122,17 +1184,14 @@ iex&gt; String.downcase(&quot;OLÁ&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">duplicate(<a href="#t:t/0">t</a>, non_neg_integer) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>duplicate(<a href="#t:t/0">t</a>, non_neg_integer) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string <code class="inline">subject</code> duplicated <code class="inline">n</code> times.</p>
 <h2 id="duplicate/2-examples" class="section-heading">
@@ -1163,17 +1222,14 @@ iex&gt; String.duplicate(&quot;abc&quot;, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">ends_with?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: boolean</code></pre>
+          <pre>ends_with?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">string</code> ends with any of the suffixes given.</p>
 <p><code class="inline">suffixes</code> can be either a single suffix or a list of suffixes.</p>
@@ -1208,17 +1264,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">equivalent?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>equivalent?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">string1</code> is canonically equivalent to ‘string2’.</p>
 <p>It performs Normalization Form Canonical Decomposition (NFD) on the
@@ -1258,17 +1311,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">first(<a href="#t:t/0">t</a>) :: <a href="#t:grapheme/0">grapheme</a> | nil</code></pre>
+          <pre>first(<a href="#t:t/0">t</a>) :: <a href="#t:grapheme/0">grapheme</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the first grapheme from a utf8 string,
 <code class="inline">nil</code> if the string is empty.</p>
@@ -1297,17 +1347,14 @@ iex&gt; String.first(&quot;եոգլի&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">graphemes(<a href="#t:t/0">t</a>) :: [<a href="#t:grapheme/0">grapheme</a>]</code></pre>
+          <pre>graphemes(<a href="#t:t/0">t</a>) :: [<a href="#t:grapheme/0">grapheme</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns Unicode graphemes in the string as per Extended Grapheme
 Cluster algorithm.</p>
@@ -1342,17 +1389,14 @@ iex&gt; String.graphemes(&quot;é&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">jaro_distance(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: float</code></pre>
+          <pre>jaro_distance(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a float value between 0 (equates to no similarity) and 1 (is an exact match)
 representing <a href="https://en.wikipedia.org/wiki/Jaro%E2%80%93Winkler_distance">Jaro</a>
@@ -1382,17 +1426,14 @@ iex&gt; String.jaro_distance(&quot;even&quot;, &quot;odd&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">last(<a href="#t:t/0">t</a>) :: <a href="#t:grapheme/0">grapheme</a> | nil</code></pre>
+          <pre>last(<a href="#t:t/0">t</a>) :: <a href="#t:grapheme/0">grapheme</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the last grapheme from a utf8 string,
 <code class="inline">nil</code> if the string is empty.</p>
@@ -1421,17 +1462,14 @@ iex&gt; String.last(&quot;եոգլի&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">length(<a href="#t:t/0">t</a>) :: non_neg_integer</code></pre>
+          <pre>length(<a href="#t:t/0">t</a>) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the number of Unicode graphemes in a utf8 string.</p>
 <h2 id="length/1-examples" class="section-heading">
@@ -1459,17 +1497,14 @@ iex&gt; String.length(&quot;եոգլի&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">match?(<a href="#t:t/0">t</a>, <a href="Regex.html#t:t/0">Regex.t</a>) :: boolean</code></pre>
+          <pre>match?(<a href="#t:t/0">t</a>, <a href="Regex.html#t:t/0">Regex.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if <code class="inline">string</code> matches the given regular expression.</p>
 <h2 id="match?/2-examples" class="section-heading">
@@ -1497,19 +1532,16 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">myers_difference(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) ::
+          <pre>myers_difference(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) ::
   [{:eq | :ins | :del, <a href="#t:t/0">t</a>}] |
-  nil</code></pre>
+  nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a keyword list that represents an edit script.</p>
 <p>The algorithm is outlined in the
@@ -1538,17 +1570,14 @@ iex&gt; String.myers_difference(string1, string2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">next_codepoint(<a href="#t:t/0">t</a>) :: {<a href="#t:codepoint/0">codepoint</a>, <a href="#t:t/0">t</a>} | nil</code></pre>
+          <pre>next_codepoint(<a href="#t:t/0">t</a>) :: {<a href="#t:codepoint/0">codepoint</a>, <a href="#t:t/0">t</a>} | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the next codepoint in a string.</p>
 <p>The result is a tuple with the codepoint and the
@@ -1580,17 +1609,14 @@ be returned by this function.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">next_grapheme(<a href="#t:t/0">t</a>) :: {<a href="#t:grapheme/0">grapheme</a>, <a href="#t:t/0">t</a>} | nil</code></pre>
+          <pre>next_grapheme(<a href="#t:t/0">t</a>) :: {<a href="#t:grapheme/0">grapheme</a>, <a href="#t:t/0">t</a>} | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the next grapheme in a string.</p>
 <p>The result is a tuple with the grapheme and the
@@ -1618,17 +1644,14 @@ the String reached its end.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">next_grapheme_size(<a href="#t:t/0">t</a>) :: {pos_integer, <a href="#t:t/0">t</a>} | nil</code></pre>
+          <pre>next_grapheme_size(<a href="#t:t/0">t</a>) :: {pos_integer, <a href="#t:t/0">t</a>} | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the size of the next grapheme.</p>
 <p>The result is a tuple with the next grapheme size and
@@ -1656,17 +1679,14 @@ reached its end.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">normalize(<a href="#t:t/0">t</a>, atom) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>normalize(<a href="#t:t/0">t</a>, atom) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts all characters in <code class="inline">string</code> to Unicode normalization
 form identified by <code class="inline">form</code>.</p>
@@ -1711,17 +1731,14 @@ iex&gt; String.normalize(&quot;leña&quot;, :nfc)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pad_leading(<a href="#t:t/0">t</a>, non_neg_integer, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>pad_leading(<a href="#t:t/0">t</a>, non_neg_integer, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new string padded with a leading filler
 which is made of elements from the <code class="inline">padding</code>.</p>
@@ -1764,17 +1781,14 @@ iex&gt; String.pad_leading(&quot;abc&quot;, 5, [&quot;1&quot;, &quot;23&quot;])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pad_trailing(<a href="#t:t/0">t</a>, non_neg_integer, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>pad_trailing(<a href="#t:t/0">t</a>, non_neg_integer, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new string padded with a trailing filler
 which is made of elements from the <code class="inline">padding</code>.</p>
@@ -1817,17 +1831,14 @@ iex&gt; String.pad_trailing(&quot;abc&quot;, 5, [&quot;1&quot;, &quot;23&quot;])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">printable?(<a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>printable?(<a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if a string contains only printable characters.</p>
 <h2 id="printable?/1-examples" class="section-heading">
@@ -1852,17 +1863,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a> | <a href="Regex.html#t:t/0">Regex.t</a>, <a href="#t:t/0">t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>replace(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a> | <a href="Regex.html#t:t/0">Regex.t</a>, <a href="#t:t/0">t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new string created by replacing occurrences of <code class="inline">pattern</code> in
 <code class="inline">subject</code> with <code class="inline">replacement</code>.</p>
@@ -1917,17 +1925,14 @@ replacement string, or is negative, an <a href="ArgumentError.html"><code class=
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace_leading(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a> | no_return</code></pre>
+          <pre>replace_leading(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Replaces all leading occurrences of <code class="inline">match</code> by <code class="inline">replacement</code> of <code class="inline">match</code> in <code class="inline">string</code>.</p>
 <p>Returns the string untouched if there are no occurrences.</p>
@@ -1964,17 +1969,14 @@ iex&gt; String.replace_leading(&quot;hello hello world&quot;, &quot;hello &quot;
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace_prefix(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>replace_prefix(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Replaces prefix in <code class="inline">string</code> by <code class="inline">replacement</code> if it matches <code class="inline">match</code>.</p>
 <p>Returns the string untouched if there is no match. If <code class="inline">match</code> is an empty
@@ -2015,17 +2017,14 @@ iex&gt; String.replace_prefix(&quot;world&quot;, &quot;&quot;, &quot;hello &quot
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace_suffix(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>replace_suffix(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Replaces suffix in <code class="inline">string</code> by <code class="inline">replacement</code> if it matches <code class="inline">match</code>.</p>
 <p>Returns the string untouched if there is no match. If <code class="inline">match</code> is an empty
@@ -2066,17 +2065,14 @@ iex&gt; String.replace_suffix(&quot;hello&quot;, &quot;&quot;, &quot; world&quot
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace_trailing(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a> | no_return</code></pre>
+          <pre>replace_trailing(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Replaces all trailing occurrences of <code class="inline">match</code> by <code class="inline">replacement</code> in <code class="inline">string</code>.</p>
 <p>Returns the string untouched if there are no occurrences.</p>
@@ -2113,17 +2109,14 @@ iex&gt; String.replace_trailing(&quot;hello world world&quot;, &quot; world&quot
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">reverse(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>reverse(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reverses the graphemes in given string.</p>
 <h2 id="reverse/1-examples" class="section-heading">
@@ -2167,17 +2160,14 @@ one single grapheme.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">slice(<a href="#t:t/0">t</a>, <a href="Range.html#t:t/0">Range.t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>slice(<a href="#t:t/0">t</a>, <a href="Range.html#t:t/0">Range.t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a substring from the offset given by the start of the
 range to the offset given by the end of the range.</p>
@@ -2238,17 +2228,14 @@ iex&gt; String.slice(&quot;a&quot;, 1..1500)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">slice(<a href="#t:t/0">t</a>, integer, integer) :: <a href="#t:grapheme/0">grapheme</a></code></pre>
+          <pre>slice(<a href="#t:t/0">t</a>, integer, integer) :: <a href="#t:grapheme/0">grapheme</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a substring starting at the offset <code class="inline">start</code>, and of
 length <code class="inline">len</code>.</p>
@@ -2299,17 +2286,14 @@ iex&gt; String.slice(&quot;a&quot;, 2, 1500)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(<a href="#t:t/0">t</a>) :: [<a href="#t:t/0">t</a>]</code></pre>
+          <pre>split(<a href="#t:t/0">t</a>) :: [<a href="#t:t/0">t</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Divides a string into substrings at each Unicode whitespace
 occurrence with leading and trailing whitespace ignored. Groups
@@ -2346,17 +2330,14 @@ iex&gt; String.split(&quot;no\u00a0break&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a> | <a href="Regex.html#t:t/0">Regex.t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: [<a href="#t:t/0">t</a>]</code></pre>
+          <pre>split(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a> | <a href="Regex.html#t:t/0">Regex.t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: [<a href="#t:t/0">t</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Divides a string into substrings based on a pattern.</p>
 <p>Returns a list of these substrings. The pattern can
@@ -2430,17 +2411,14 @@ iex&gt; String.split(&quot;1,2 3,4&quot;, pattern)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split_at(<a href="#t:t/0">t</a>, integer) :: {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>split_at(<a href="#t:t/0">t</a>, integer) :: {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Splits a string into two at the specified offset. When the offset given is
 negative, location is counted from the end of the string.</p>
@@ -2484,17 +2462,14 @@ iex&gt; String.split_at &quot;abc&quot;, -1000
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">splitter(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+          <pre>splitter(<a href="#t:t/0">t</a>, <a href="#t:pattern/0">pattern</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an enumerable that splits a string on demand.</p>
 <p>This is in contrast to <a href="#split/3"><code class="inline">split/3</code></a> which splits all
@@ -2540,17 +2515,14 @@ iex&gt; String.splitter(&quot;abcd&quot;, &quot;&quot;, trim: true) |&gt; Enum.t
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">starts_with?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: boolean</code></pre>
+          <pre>starts_with?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a> | [<a href="#t:t/0">t</a>]) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">string</code> starts with any of the prefixes given.</p>
 <p><code class="inline">prefix</code> can be either a single prefix or a list of prefixes.</p>
@@ -2585,17 +2557,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_atom(<a href="String.html#t:t/0">String.t</a>) :: atom</code></pre>
+          <pre>to_atom(<a href="String.html#t:t/0">String.t</a>) :: atom</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a string to an atom.</p>
 <p>Currently Elixir does not support the conversion of strings
@@ -2623,17 +2592,14 @@ that contain Unicode codepoints greater than 0xFF.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_charlist(<a href="#t:t/0">t</a>) :: charlist</code></pre>
+          <pre>to_charlist(<a href="#t:t/0">t</a>) :: charlist</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a string into a charlist.</p>
 <p>Specifically, this functions takes a UTF-8 encoded binary and returns a list of its integer
@@ -2663,17 +2629,14 @@ strings.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_existing_atom(<a href="String.html#t:t/0">String.t</a>) :: atom</code></pre>
+          <pre>to_existing_atom(<a href="String.html#t:t/0">String.t</a>) :: atom</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a string to an existing atom.</p>
 <p>Currently Elixir does not support the conversion of strings
@@ -2705,17 +2668,14 @@ iex&gt; String.to_existing_atom(&quot;this_atom_will_never_exist&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_float(<a href="String.html#t:t/0">String.t</a>) :: float</code></pre>
+          <pre>to_float(<a href="String.html#t:t/0">String.t</a>) :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a float whose text representation is <code class="inline">string</code>.</p>
 <p><code class="inline">string</code> must be the string representation of a float.
@@ -2748,17 +2708,14 @@ iex&gt; String.to_float(&quot;3.0&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_integer(<a href="String.html#t:t/0">String.t</a>) :: integer</code></pre>
+          <pre>to_integer(<a href="String.html#t:t/0">String.t</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">string</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -2784,17 +2741,14 @@ iex&gt; String.to_float(&quot;3.0&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_integer(<a href="String.html#t:t/0">String.t</a>, 2..36) :: integer</code></pre>
+          <pre>to_integer(<a href="String.html#t:t/0">String.t</a>, 2..36) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">string</code> in base <code class="inline">base</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -2820,17 +2774,14 @@ iex&gt; String.to_float(&quot;3.0&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trim(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>trim(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string where all leading and trailing Unicode whitespaces
 have been removed.</p>
@@ -2856,17 +2807,14 @@ have been removed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trim(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>trim(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string where all leading and trailing <code class="inline">to_trim</code>s have been
 removed.</p>
@@ -2892,17 +2840,14 @@ removed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trim_leading(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>trim_leading(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string where all leading Unicode whitespaces
 have been removed.</p>
@@ -2928,17 +2873,14 @@ have been removed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trim_leading(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>trim_leading(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string where all leading <code class="inline">to_trim</code>s have been removed.</p>
 <h2 id="trim_leading/2-examples" class="section-heading">
@@ -2966,17 +2908,14 @@ iex&gt; String.trim_leading(&quot;1 abc&quot;, &quot;11&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trim_trailing(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>trim_trailing(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string where all trailing Unicode whitespaces
 has been removed.</p>
@@ -3002,17 +2941,14 @@ has been removed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trim_trailing(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>trim_trailing(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string where all trailing <code class="inline">to_trim</code>s have been removed.</p>
 <h2 id="trim_trailing/2-examples" class="section-heading">
@@ -3040,17 +2976,14 @@ iex&gt; String.trim_trailing(&quot;abc 1&quot;, &quot;11&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">upcase(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>upcase(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts all characters in the given string to uppercase.</p>
 <h2 id="upcase/1-examples" class="section-heading">
@@ -3081,17 +3014,14 @@ iex&gt; String.upcase(&quot;olá&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">valid?(<a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>valid?(<a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks whether <code class="inline">string</code> contains only valid characters.</p>
 <h2 id="valid?/1-examples" class="section-heading">

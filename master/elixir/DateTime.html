@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>DateTime – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/DateTime.html" />
     
@@ -252,9 +252,29 @@ similar functionality with time zone backing.</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %DateTime{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, hour: <a href="Calendar.html#t:hour/0">Calendar.hour</a>, microsecond: <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>, minute: <a href="Calendar.html#t:minute/0">Calendar.minute</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, second: <a href="Calendar.html#t:second/0">Calendar.second</a>, std_offset: <a href="Calendar.html#t:std_offset/0">Calendar.std_offset</a>, time_zone: <a href="Calendar.html#t:time_zone/0">Calendar.time_zone</a>, utc_offset: <a href="Calendar.html#t:utc_offset/0">Calendar.utc_offset</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>, zone_abbr: <a href="Calendar.html#t:zone_abbr/0">Calendar.zone_abbr</a>}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1079" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %DateTime{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, hour: <a href="Calendar.html#t:hour/0">Calendar.hour</a>, microsecond: <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>, minute: <a href="Calendar.html#t:minute/0">Calendar.minute</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, second: <a href="Calendar.html#t:second/0">Calendar.second</a>, std_offset: <a href="Calendar.html#t:std_offset/0">Calendar.std_offset</a>, time_zone: <a href="Calendar.html#t:time_zone/0">Calendar.time_zone</a>, utc_offset: <a href="Calendar.html#t:utc_offset/0">Calendar.utc_offset</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>, zone_abbr: <a href="Calendar.html#t:zone_abbr/0">Calendar.zone_abbr</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -281,17 +301,14 @@ similar functionality with time zone backing.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_naive(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>, <a href="Calendar.html#t:time_zone/0">Calendar.time_zone</a>) :: {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>}</code></pre>
+          <pre>from_naive(<a href="NaiveDateTime.html#t:t/0">NaiveDateTime.t</a>, <a href="Calendar.html#t:time_zone/0">Calendar.time_zone</a>) :: {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given NaiveDateTime to DateTime.</p>
 <p>It expects a timezone to put the NaiveDateTime in.
@@ -320,17 +337,14 @@ Currently it only supports “Etc/UTC” as timezone.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_naive!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="DateTime.html#t:t/0">DateTime.t</a></code></pre>
+          <pre>from_naive!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="DateTime.html#t:t/0">DateTime.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given NaiveDateTime to DateTime.</p>
 <p>It expects a timezone to put the NaiveDateTime in.
@@ -359,19 +373,16 @@ Currently it only supports “Etc/UTC” as timezone.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) ::
+          <pre>from_unix(integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) ::
   {:ok, <a href="DateTime.html#t:t/0">DateTime.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given Unix time to DateTime.</p>
 <p>The integer can be given in different unit
@@ -420,17 +431,14 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_unix!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="DateTime.html#t:t/0">DateTime.t</a></code></pre>
+          <pre>from_unix!(non_neg_integer, :native | <a href="System.html#t:time_unit/0">System.time_unit</a>) :: <a href="DateTime.html#t:t/0">DateTime.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given Unix time to DateTime.</p>
 <p>The integer can be given in different unit
@@ -474,8 +482,8 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into a <a href="Date.html"><code class="inline">Date</code></a>.</p>
 <p>Because <a href="Date.html"><code class="inline">Date</code></a> does not hold time nor timezone information,
@@ -505,17 +513,14 @@ iex&gt; DateTime.to_date(dt)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_iso8601(<a href="DateTime.html#t:t/0">DateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_iso8601(<a href="DateTime.html#t:t/0">DateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given date time to ISO8601.</p>
 <p>Only supports converting date times which are in the ISO calendar,
@@ -558,8 +563,8 @@ iex&gt; DateTime.to_iso8601(dt)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into a <a href="NaiveDateTime.html"><code class="inline">NaiveDateTime</code></a>.</p>
 <p>Because <a href="NaiveDateTime.html"><code class="inline">NaiveDateTime</code></a> does not hold timezone information,
@@ -589,17 +594,14 @@ iex&gt; DateTime.to_naive(dt)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(<a href="DateTime.html#t:t/0">DateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(<a href="DateTime.html#t:t/0">DateTime.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given date time to a string according to its calendar.</p>
 <h3>Examples</h3>
@@ -635,8 +637,8 @@ iex&gt; DateTime.to_string(dt)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts a <a href="DateTime.html#content"><code class="inline">DateTime</code></a> into <a href="Time.html"><code class="inline">Time</code></a>.</p>
 <p>Because <a href="Time.html"><code class="inline">Time</code></a> does not hold date nor timezone information,
@@ -666,17 +668,14 @@ iex&gt; DateTime.to_time(dt)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_unix(<a href="DateTime.html#t:t/0">DateTime.t</a>, <a href="System.html#t:time_unit/0">System.time_unit</a>) :: non_neg_integer</code></pre>
+          <pre>to_unix(<a href="DateTime.html#t:t/0">DateTime.t</a>, <a href="System.html#t:time_unit/0">System.time_unit</a>) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given DateTime to Unix time.</p>
 <p>The DateTime is expected to be using the ISO calendar
@@ -717,17 +716,14 @@ iex&gt; DateTime.to_unix(flamel)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">utc_now :: <a href="DateTime.html#t:t/0">DateTime.t</a></code></pre>
+          <pre>utc_now :: <a href="DateTime.html#t:t/0">DateTime.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current datetime in UTC.</p>
 <h2 id="utc_now/0-examples" class="section-heading">

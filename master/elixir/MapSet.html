@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>MapSet – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/MapSet.html" />
     
@@ -285,13 +285,53 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
             Types
           </h1>
           <div class="types-list">
-            <div id="t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a></code></pre>
-  
+            <div class="detail" id="t/0">
+  <div class="detail-header">
+    <a href="#t/0" class="detail-link" title="Link to this opaque">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L35" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:value/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:value/0">value</a> :: term</code></pre>
-  
+<div class="detail" id="t:value/0">
+  <div class="detail-header">
+    <a href="#t:value/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">value()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L36" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:value/0">value</a> :: term</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -318,17 +358,14 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>delete(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes <code class="inline">value</code> from <code class="inline">set</code>.</p>
 <p>Returns a new set which is a copy of <code class="inline">set</code> but without <code class="inline">value</code>.</p>
@@ -357,17 +394,14 @@ iex&gt; MapSet.delete(set, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">difference(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>difference(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a set that is <code class="inline">set1</code> without the members of <code class="inline">set2</code>.</p>
 <h2 id="difference/2-examples" class="section-heading">
@@ -392,17 +426,14 @@ iex&gt; MapSet.delete(set, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">disjoint?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>disjoint?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if <code class="inline">set1</code> and <code class="inline">set2</code> have no members in common.</p>
 <h2 id="disjoint?/2-examples" class="section-heading">
@@ -429,17 +460,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">equal?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>equal?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if two sets are equal.</p>
 <p>The comparison between elements must be done using <code class="inline">===</code>.</p>
@@ -467,17 +495,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">intersection(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>intersection(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a set containing only members that <code class="inline">set1</code> and <code class="inline">set2</code> have in common.</p>
 <h2 id="intersection/2-examples" class="section-heading">
@@ -505,17 +530,14 @@ iex&gt; MapSet.intersection(MapSet.new([1, 2]), MapSet.new([3, 4]))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">member?(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: boolean</code></pre>
+          <pre>member?(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if <code class="inline">set</code> contains <code class="inline">value</code>.</p>
 <h2 id="member?/2-examples" class="section-heading">
@@ -542,17 +564,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new :: <a href="#t:t/0">t</a></code></pre>
+          <pre>new :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new set.</p>
 <h2 id="new/0-examples" class="section-heading">
@@ -577,17 +596,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Enum.html#t:t/0">Enum.t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>new(<a href="Enum.html#t:t/0">Enum.t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a set from an enumerable.</p>
 <h2 id="new/1-examples" class="section-heading">
@@ -614,17 +630,14 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Enum.html#t:t/0">Enum.t</a>, (term -> term)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>new(<a href="Enum.html#t:t/0">Enum.t</a>, (term -> term)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a mapset from an enumerable via the transformation function.</p>
 <h2 id="new/2-examples" class="section-heading">
@@ -649,17 +662,14 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>put(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inserts <code class="inline">value</code> into <code class="inline">set</code> if <code class="inline">set</code> doesn’t already contain it.</p>
 <h2 id="put/2-examples" class="section-heading">
@@ -686,17 +696,14 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">size(<a href="#t:t/0">t</a>) :: non_neg_integer</code></pre>
+          <pre>size(<a href="#t:t/0">t</a>) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the number of elements in <code class="inline">set</code>.</p>
 <h2 id="size/1-examples" class="section-heading">
@@ -721,17 +728,14 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">subset?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>subset?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if <code class="inline">set1</code>’s members are all contained in <code class="inline">set2</code>.</p>
 <p>This function checks if <code class="inline">set1</code> is a subset of <code class="inline">set2</code>.</p>
@@ -759,17 +763,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_list(<a href="#t:t/0">t</a>) :: list</code></pre>
+          <pre>to_list(<a href="#t:t/0">t</a>) :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts <code class="inline">set</code> to a list.</p>
 <h2 id="to_list/1-examples" class="section-heading">
@@ -794,17 +795,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">union(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>union(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a set containing all members of <code class="inline">set1</code> and <code class="inline">set2</code>.</p>
 <h2 id="union/2-examples" class="section-heading">

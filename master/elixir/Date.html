@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Date – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Date.html" />
     
@@ -228,9 +228,29 @@ the ones in 3rd party calendar libraries.</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Date{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L106" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %Date{calendar: <a href="Calendar.html#t:calendar/0">Calendar.calendar</a>, day: <a href="Calendar.html#t:day/0">Calendar.day</a>, month: <a href="Calendar.html#t:month/0">Calendar.month</a>, year: <a href="Calendar.html#t:year/0">Calendar.year</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -257,19 +277,16 @@ the ones in 3rd party calendar libraries.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_erl(:calendar.date) ::
+          <pre>from_erl(:calendar.date) ::
   {:ok, <a href="Date.html#t:t/0">Date.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Erlang date tuple to a <a href="Date.html#content"><code class="inline">Date</code></a> struct.</p>
 <p>Attempting to convert an invalid ISO calendar date will produce an error tuple.</p>
@@ -297,17 +314,14 @@ iex&gt; Date.from_erl({2000, 13, 1})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_erl!(:calendar.date) :: <a href="Date.html#t:t/0">Date.t</a> | no_return</code></pre>
+          <pre>from_erl!(:calendar.date) :: <a href="Date.html#t:t/0">Date.t</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Erlang date tuple but raises for invalid dates.</p>
 <h2 id="from_erl!/1-examples" class="section-heading">
@@ -334,19 +348,16 @@ iex&gt; Date.from_erl!({2000, 13, 1})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_iso8601(<a href="String.html#t:t/0">String.t</a>) ::
+          <pre>from_iso8601(<a href="String.html#t:t/0">String.t</a>) ::
   {:ok, <a href="Date.html#t:t/0">Date.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Timezone offset may be included in the string but they will be
@@ -380,17 +391,14 @@ iex&gt; Date.from_iso8601(&quot;2015-01-32&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_iso8601!(<a href="String.html#t:t/0">String.t</a>) :: <a href="Date.html#t:t/0">Date.t</a> | no_return</code></pre>
+          <pre>from_iso8601!(<a href="String.html#t:t/0">String.t</a>) :: <a href="Date.html#t:t/0">Date.t</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses the extended “Date and time of day” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
@@ -418,19 +426,16 @@ iex&gt; Date.from_iso8601!(&quot;2015:01:23&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Calendar.html#t:year/0">Calendar.year</a>, <a href="Calendar.html#t:month/0">Calendar.month</a>, <a href="Calendar.html#t:day/0">Calendar.day</a>) ::
+          <pre>new(<a href="Calendar.html#t:year/0">Calendar.year</a>, <a href="Calendar.html#t:month/0">Calendar.month</a>, <a href="Calendar.html#t:day/0">Calendar.day</a>) ::
   {:ok, <a href="Date.html#t:t/0">Date.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Builds a new ISO date.</p>
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, date}</code> if each
@@ -466,17 +471,14 @@ iex&gt; Date.new(2001, 2, 29)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_erl(<a href="Date.html#t:t/0">Date.t</a>) :: :calendar.date</code></pre>
+          <pre>to_erl(<a href="Date.html#t:t/0">Date.t</a>) :: :calendar.date</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a <a href="Date.html#content"><code class="inline">Date</code></a> struct to an Erlang date tuple.</p>
 <p>Only supports converting dates which are in the ISO calendar,
@@ -503,17 +505,14 @@ attempting to convert dates from other calendars will raise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_iso8601(<a href="Date.html#t:t/0">Date.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_iso8601(<a href="Date.html#t:t/0">Date.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given date time to ISO8601.</p>
 <p>Only supports converting date times which are in the ISO calendar,
@@ -536,17 +535,14 @@ attempting to convert date times from other calendars will raise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(<a href="Date.html#t:t/0">Date.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(<a href="Date.html#t:t/0">Date.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given date to a string according to its calendar.</p>
 <h3>Examples</h3>
@@ -567,17 +563,14 @@ attempting to convert date times from other calendars will raise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">utc_today :: <a href="Date.html#t:t/0">Date.t</a></code></pre>
+          <pre>utc_today :: <a href="Date.html#t:t/0">Date.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current date in UTC.</p>
 <h2 id="utc_today/0-examples" class="section-heading">

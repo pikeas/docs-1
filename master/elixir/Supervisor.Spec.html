@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Supervisor.Spec – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Supervisor.Spec.html" />
     
@@ -313,58 +313,184 @@ with the given arguments</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:child_id/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:child_id/0">child_id</a> :: term</code></pre>
-  
-    <div class="typespec-doc"><p>Supported id values</p>
+            <div class="detail" id="t:child_id/0">
+  <div class="detail-header">
+    <a href="#t:child_id/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">child_id()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L116" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:child_id/0">child_id</a> :: term</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Supported id values</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:modules/0">
+  <div class="detail-header">
+    <a href="#t:modules/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">modules()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L113" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:modules/0">modules</a> :: :dynamic | [module]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Supported module values</p>
+
+  </section>
 </div>
-<div id="t:modules/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:modules/0">modules</a> :: :dynamic | [module]</code></pre>
-  
-    <div class="typespec-doc"><p>Supported module values</p>
+<div class="detail" id="t:restart/0">
+  <div class="detail-header">
+    <a href="#t:restart/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">restart()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L104" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:restart/0">restart</a> :: :permanent | :transient | :temporary</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Supported restart values</p>
+
+  </section>
 </div>
-  
+<div class="detail" id="t:shutdown/0">
+  <div class="detail-header">
+    <a href="#t:shutdown/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">shutdown()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L107" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:shutdown/0">shutdown</a> :: :brutal_kill | :infinity | non_neg_integer</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Supported shutdown values</p>
+
+  </section>
 </div>
-<div id="t:restart/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:restart/0">restart</a> :: :permanent | :transient | :temporary</code></pre>
-  
-    <div class="typespec-doc"><p>Supported restart values</p>
+<div class="detail" id="t:spec/0">
+  <div class="detail-header">
+    <a href="#t:spec/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">spec()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L119" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:spec/0">spec</a> :: {<a href="#t:child_id/0">child_id</a>, start_fun :: {module, atom, [term]}, <a href="#t:restart/0">restart</a>, <a href="#t:shutdown/0">shutdown</a>, <a href="#t:worker/0">worker</a>, <a href="#t:modules/0">modules</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The supervisor specification</p>
+
+  </section>
 </div>
-  
-</div>
-<div id="t:shutdown/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:shutdown/0">shutdown</a> :: :brutal_kill | :infinity | non_neg_integer</code></pre>
-  
-    <div class="typespec-doc"><p>Supported shutdown values</p>
-</div>
-  
-</div>
-<div id="t:spec/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:spec/0">spec</a> :: {<a href="#t:child_id/0">child_id</a>, start_fun :: {module, atom, [term]}, <a href="#t:restart/0">restart</a>, <a href="#t:shutdown/0">shutdown</a>, <a href="#t:worker/0">worker</a>, <a href="#t:modules/0">modules</a>}</code></pre>
-  
-    <div class="typespec-doc"><p>The supervisor specification</p>
-</div>
-  
-</div>
-<div id="t:strategy/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:strategy/0">strategy</a> ::
+<div class="detail" id="t:strategy/0">
+  <div class="detail-header">
+    <a href="#t:strategy/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">strategy()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L101" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:strategy/0">strategy</a> ::
   :simple_one_for_one |
   :one_for_one |
   :one_for_all |
-  :rest_for_one</code></pre>
-  
-    <div class="typespec-doc"><p>Supported strategies</p>
+  :rest_for_one</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Supported strategies</p>
+
+  </section>
 </div>
-  
-</div>
-<div id="t:worker/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:worker/0">worker</a> :: :worker | :supervisor</code></pre>
-  
-    <div class="typespec-doc"><p>Supported worker values</p>
-</div>
-  
+<div class="detail" id="t:worker/0">
+  <div class="detail-header">
+    <a href="#t:worker/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">worker()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/supervisor/spec.ex#L110" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:worker/0">worker</a> :: :worker | :supervisor</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Supported worker values</p>
+
+  </section>
 </div>
 
           </div>
@@ -391,17 +517,14 @@ with the given arguments</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">supervise([<a href="#t:spec/0">spec</a>], strategy: <a href="#t:strategy/0">strategy</a>, max_restarts: non_neg_integer, max_seconds: non_neg_integer) :: {:ok, tuple}</code></pre>
+          <pre>supervise([<a href="#t:spec/0">spec</a>], strategy: <a href="#t:strategy/0">strategy</a>, max_restarts: non_neg_integer, max_seconds: non_neg_integer) :: {:ok, tuple}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a list of children (workers or supervisors) to
 supervise and a set of options.</p>
@@ -450,17 +573,14 @@ description of the available strategies.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">supervisor(module, [term], restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>) :: <a href="#t:spec/0">spec</a></code></pre>
+          <pre>supervisor(module, [term], restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>) :: <a href="#t:spec/0">spec</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Defines the given <code class="inline">module</code> as a supervisor which will be started
 with the given arguments.</p>
@@ -489,17 +609,14 @@ information on the options.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">worker(module, [term], restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>) :: <a href="#t:spec/0">spec</a></code></pre>
+          <pre>worker(module, [term], restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>) :: <a href="#t:spec/0">spec</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Defines the given <code class="inline">module</code> as a worker which will be started
 with the given arguments.</p>

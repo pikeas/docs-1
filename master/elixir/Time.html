@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Time – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Time.html" />
     
@@ -228,9 +228,29 @@ the ones in 3rd party calendar libraries.</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Time{hour: <a href="Calendar.html#t:hour/0">Calendar.hour</a>, microsecond: <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>, minute: <a href="Calendar.html#t:minute/0">Calendar.minute</a>, second: <a href="Calendar.html#t:second/0">Calendar.second</a>}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L338" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %Time{hour: <a href="Calendar.html#t:hour/0">Calendar.hour</a>, microsecond: <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>, minute: <a href="Calendar.html#t:minute/0">Calendar.minute</a>, second: <a href="Calendar.html#t:second/0">Calendar.second</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -257,19 +277,16 @@ the ones in 3rd party calendar libraries.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_erl(:calendar.time, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
+          <pre>from_erl(:calendar.time, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
   {:ok, <a href="Time.html#t:t/0">Time.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Erlang time tuple to a <a href="Time.html#content"><code class="inline">Time</code></a> struct.</p>
 <h2 id="from_erl/2-examples" class="section-heading">
@@ -296,19 +313,16 @@ iex&gt; Time.from_erl({24, 30, 15})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_erl!(:calendar.time, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
+          <pre>from_erl!(:calendar.time, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
   <a href="Time.html#t:t/0">Time.t</a> |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Erlang time tuple to a <a href="Time.html#content"><code class="inline">Time</code></a> struct.</p>
 <h2 id="from_erl!/2-examples" class="section-heading">
@@ -337,19 +351,16 @@ iex&gt; Time.from_erl!({24, 30, 15})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_iso8601(<a href="String.html#t:t/0">String.t</a>) ::
+          <pre>from_iso8601(<a href="String.html#t:t/0">String.t</a>) ::
   {:ok, <a href="Time.html#t:t/0">Time.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses the extended “Local time” format described by ISO8601:2004.</p>
 <p>Timezone offset may be included in the string but they will be
@@ -397,17 +408,14 @@ iex&gt; Time.from_iso8601(&quot;23:50:61&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_iso8601!(<a href="String.html#t:t/0">String.t</a>) :: <a href="Time.html#t:t/0">Time.t</a> | no_return</code></pre>
+          <pre>from_iso8601!(<a href="String.html#t:t/0">String.t</a>) :: <a href="Time.html#t:t/0">Time.t</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses the extended “Local time” format described by ISO8601:2004.</p>
 <p>Raises if the format is invalid.</p>
@@ -435,19 +443,16 @@ iex&gt; Time.from_iso8601!(&quot;2015:01:23 23-50-07&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Calendar.html#t:hour/0">Calendar.hour</a>, <a href="Calendar.html#t:minute/0">Calendar.minute</a>, <a href="Calendar.html#t:second/0">Calendar.second</a>, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
+          <pre>new(<a href="Calendar.html#t:hour/0">Calendar.hour</a>, <a href="Calendar.html#t:minute/0">Calendar.minute</a>, <a href="Calendar.html#t:second/0">Calendar.second</a>, <a href="Calendar.html#t:microsecond/0">Calendar.microsecond</a>) ::
   {:ok, <a href="Time.html#t:t/0">Time.t</a>} |
-  {:error, atom}</code></pre>
+  {:error, atom}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Builds a new time.</p>
 <p>Expects all values to be integers. Returns <code class="inline">{:ok, time}</code> if each
@@ -492,17 +497,14 @@ iex&gt; Time.new(23, 59, 59, 1_000_000)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_erl(<a href="Time.html#t:t/0">Time.t</a>) :: :calendar.time</code></pre>
+          <pre>to_erl(<a href="Time.html#t:t/0">Time.t</a>) :: :calendar.time</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a <a href="Time.html#content"><code class="inline">Time</code></a> struct to an Erlang time tuple.</p>
 <p>WARNING: Loss of precision may occur, as Erlang time tuples
@@ -529,17 +531,14 @@ only contain hours/minutes/seconds.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_iso8601(<a href="Time.html#t:t/0">Time.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_iso8601(<a href="Time.html#t:t/0">Time.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given time to ISO8601.</p>
 <h3>Examples</h3>
@@ -563,17 +562,14 @@ iex&gt; Time.to_iso8601(~T[23:00:13.001])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(<a href="Time.html#t:t/0">Time.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(<a href="Time.html#t:t/0">Time.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the given time to a string.</p>
 <h3>Examples</h3>
@@ -598,17 +594,14 @@ iex&gt; Time.to_string(~T[23:00:00.123456])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">utc_now :: <a href="Time.html#t:t/0">Time.t</a></code></pre>
+          <pre>utc_now :: <a href="Time.html#t:t/0">Time.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current time in UTC.</p>
 <h2 id="utc_now/0-examples" class="section-heading">

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>OptionParser – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/OptionParser.html" />
     
@@ -222,21 +222,101 @@ exception if any invalid options are given</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:argv/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:argv/0">argv</a> :: [<a href="String.html#t:t/0">String.t</a>]</code></pre>
-  
+            <div class="detail" id="t:argv/0">
+  <div class="detail-header">
+    <a href="#t:argv/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">argv()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/option_parser.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:argv/0">argv</a> :: [<a href="String.html#t:t/0">String.t</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:errors/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:errors/0">errors</a> :: [{<a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | nil}]</code></pre>
-  
+<div class="detail" id="t:errors/0">
+  <div class="detail-header">
+    <a href="#t:errors/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">errors()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/option_parser.ex#L8" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:errors/0">errors</a> :: [{<a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | nil}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:options/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:options/0">options</a> :: [switches: <a href="Keyword.html#t:t/0">Keyword.t</a>, strict: <a href="Keyword.html#t:t/0">Keyword.t</a>, aliases: <a href="Keyword.html#t:t/0">Keyword.t</a>]</code></pre>
-  
+<div class="detail" id="t:options/0">
+  <div class="detail-header">
+    <a href="#t:options/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">options()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/option_parser.ex#L9" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:options/0">options</a> :: [switches: <a href="Keyword.html#t:t/0">Keyword.t</a>, strict: <a href="Keyword.html#t:t/0">Keyword.t</a>, aliases: <a href="Keyword.html#t:t/0">Keyword.t</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:parsed/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:parsed/0">parsed</a> :: <a href="Keyword.html#t:t/0">Keyword.t</a></code></pre>
-  
+<div class="detail" id="t:parsed/0">
+  <div class="detail-header">
+    <a href="#t:parsed/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">parsed()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/option_parser.ex#L7" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:parsed/0">parsed</a> :: <a href="Keyword.html#t:t/0">Keyword.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -263,8 +343,8 @@ exception if any invalid options are given</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     
   </section>
@@ -281,21 +361,18 @@ exception if any invalid options are given</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">next(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) ::
+          <pre>next(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) ::
   {:ok, key :: atom, value :: term, <a href="#t:argv/0">argv</a>} |
   {:invalid, <a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | nil, <a href="#t:argv/0">argv</a>} |
   {:undefined, <a href="String.html#t:t/0">String.t</a>, <a href="String.html#t:t/0">String.t</a> | nil, <a href="#t:argv/0">argv</a>} |
-  {:error, <a href="#t:argv/0">argv</a>}</code></pre>
+  {:error, <a href="#t:argv/0">argv</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Low-level function that parses one option.</p>
 <p>It accepts the same options as <a href="#parse/2"><code class="inline">parse/2</code></a> and <a href="#parse_head/2"><code class="inline">parse_head/2</code></a>
@@ -329,17 +406,14 @@ successfully parsed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) :: {<a href="#t:parsed/0">parsed</a>, <a href="#t:argv/0">argv</a>, <a href="#t:errors/0">errors</a>}</code></pre>
+          <pre>parse(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) :: {<a href="#t:parsed/0">parsed</a>, <a href="#t:argv/0">argv</a>, <a href="#t:errors/0">errors</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses <code class="inline">argv</code> into a keywords list.</p>
 <p>It returns a three-element tuple with the form <code class="inline">{parsed, args, invalid}</code>, where:</p>
@@ -501,19 +575,16 @@ iex&gt; OptionParser.parse([&quot;--unlock&quot;, &quot;path/to/file&quot;, &quo
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse!(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) ::
+          <pre>parse!(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) ::
   {<a href="#t:parsed/0">parsed</a>, <a href="#t:argv/0">argv</a>} |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#parse/2"><code class="inline">parse/2</code></a> but raises an <a href="OptionParser.ParseError.html"><code class="inline">OptionParser.ParseError</code></a>
 exception if any invalid options are given.</p>
@@ -560,17 +631,14 @@ iex&gt; OptionParser.parse!([&quot;-l&quot;, &quot;xyz&quot;, &quot;-f&quot;, &q
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse_head(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) :: {<a href="#t:parsed/0">parsed</a>, <a href="#t:argv/0">argv</a>, <a href="#t:errors/0">errors</a>}</code></pre>
+          <pre>parse_head(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) :: {<a href="#t:parsed/0">parsed</a>, <a href="#t:argv/0">argv</a>, <a href="#t:errors/0">errors</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Similar to <a href="#parse/2"><code class="inline">parse/2</code></a> but only parses the head of <code class="inline">argv</code>;
 as soon as it finds a non-switch, it stops parsing.</p>
@@ -600,19 +668,16 @@ iex&gt; OptionParser.parse_head([&quot;--verbose&quot;, &quot;--source&quot;, &q
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse_head!(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) ::
+          <pre>parse_head!(<a href="#t:argv/0">argv</a>, <a href="#t:options/0">options</a>) ::
   {<a href="#t:parsed/0">parsed</a>, <a href="#t:argv/0">argv</a>} |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#parse_head/2"><code class="inline">parse_head/2</code></a> but raises an <a href="OptionParser.ParseError.html"><code class="inline">OptionParser.ParseError</code></a>
 exception if any invalid options are given.</p>
@@ -655,17 +720,14 @@ iex&gt; OptionParser.parse_head!([&quot;--verbose&quot;, &quot;--source&quot;, &
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(<a href="String.html#t:t/0">String.t</a>) :: <a href="#t:argv/0">argv</a></code></pre>
+          <pre>split(<a href="String.html#t:t/0">String.t</a>) :: <a href="#t:argv/0">argv</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Splits a string into argv chunks.</p>
 <p>This function splits the given <code class="inline">string</code> into a list of strings in a similar
@@ -695,17 +757,14 @@ iex&gt; OptionParser.split(&quot;foo \&quot;bar baz\&quot;&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_argv(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="#t:argv/0">argv</a></code></pre>
+          <pre>to_argv(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: <a href="#t:argv/0">argv</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a key-value enumerable and converts it to argv.</p>
 <p>Keys must be atoms. Keys with <code class="inline">nil</code> value are discarded,

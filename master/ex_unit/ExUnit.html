@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>ExUnit – ExUnit v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/ex_unit/ExUnit.html" />
     
@@ -248,20 +248,58 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
             Types
           </h1>
           <div class="types-list">
-            <div id="t:failed/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:failed/0">failed</a> :: [{<a href="http://elixir-lang.org/docs/stable/elixir/Exception.html#t:kind/0">Exception.kind</a>, reason :: term, stacktrace :: [tuple]}]</code></pre>
-  
+            <div class="detail" id="t:failed/0">
+  <div class="detail-header">
+    <a href="#t:failed/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">failed()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L62" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:failed/0">failed</a> :: [{<a href="http://elixir-lang.org/docs/stable/elixir/Exception.html#t:kind/0">Exception.kind</a>, reason :: term, stacktrace :: [tuple]}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:state/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:state/0">state</a> ::
+<div class="detail" id="t:state/0">
+  <div class="detail-header">
+    <a href="#t:state/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">state()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit.ex#L60" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:state/0">state</a> ::
   nil |
   {:failed, <a href="#t:failed/0">failed</a>} |
   {:skip, binary} |
-  {:invalid, module}</code></pre>
-  
-    <div class="typespec-doc"><p>The error state returned by ExUnit.Test and ExUnit.TestCase</p>
-</div>
-  
+  {:invalid, module}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The error state returned by ExUnit.Test and ExUnit.TestCase</p>
+
+  </section>
 </div>
 
           </div>
@@ -288,8 +326,8 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns ExUnit configuration.</p>
 
@@ -307,8 +345,8 @@ VM terminates. It accepts a set of options to configure <a href="ExUnit.html#con
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Configures ExUnit.</p>
 <h2 id="configure/1-options" class="section-heading">
@@ -376,17 +414,14 @@ on formatting and reporters (defaults to 20)</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">plural_rule(binary) :: binary</code></pre>
+          <pre>plural_rule(binary) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the pluralization for <code class="inline">word</code>.</p>
 <p>If one is not registered, returns the word appended with an “s”.</p>
@@ -405,17 +440,14 @@ on formatting and reporters (defaults to 20)</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">plural_rule(binary, binary) :: :ok</code></pre>
+          <pre>plural_rule(binary, binary) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Registers a <code class="inline">pluralization</code> for <code class="inline">word</code>.</p>
 <p>If one is already registered, it is replaced.</p>
@@ -434,8 +466,8 @@ on formatting and reporters (defaults to 20)</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>API used to run the tests. It is invoked automatically
 if ExUnit is started via <a href="ExUnit.html#start/1"><code class="inline">ExUnit.start/1</code></a>.</p>
@@ -456,8 +488,8 @@ of failures and the number of skipped tests.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Starts ExUnit and automatically runs tests right before the
 VM terminates. It accepts a set of options to configure <a href="ExUnit.html#content"><code class="inline">ExUnit</code></a>

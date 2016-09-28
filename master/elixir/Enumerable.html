@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Enumerable – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Enumerable.html" />
     
@@ -220,13 +220,31 @@ as represented by the <a href="#t:result/0"><code class="inline">result/0</code>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:acc/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:acc/0">acc</a> ::
+            <div class="detail" id="t:acc/0">
+  <div class="detail-header">
+    <a href="#t:acc/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">acc()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/enum.ex#L37" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:acc/0">acc</a> ::
   {:cont, term} |
   {:halt, term} |
-  {:suspend, term}</code></pre>
-  
-    <div class="typespec-doc"><p>The accumulator value for each step.</p>
+  {:suspend, term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The accumulator value for each step.</p>
 <p>It must be a tagged tuple with one of the following “tags”:</p>
 <ul>
 <li><code class="inline">:cont</code>    - the enumeration should continue
@@ -241,13 +259,31 @@ as represented by the <a href="#t:result/0"><code class="inline">result/0</code>
 type documentation for more information.</p>
 <p>In case a <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function returns a <code class="inline">:suspend</code> accumulator,
 it must be explicitly handled by the caller and never leak.</p>
+
+  </section>
 </div>
-  
-</div>
-<div id="t:continuation/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:continuation/0">continuation</a> :: (<a href="#t:acc/0">acc</a> -> <a href="#t:result/0">result</a>)</code></pre>
-  
-    <div class="typespec-doc"><p>A partially applied reduce function.</p>
+<div class="detail" id="t:continuation/0">
+  <div class="detail-header">
+    <a href="#t:continuation/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">continuation()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/enum.ex#L84" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:continuation/0">continuation</a> :: (<a href="#t:acc/0">acc</a> -> <a href="#t:result/0">result</a>)</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>A partially applied reduce function.</p>
 <p>The continuation is the closure returned as a result when
 the enumeration is suspended. When invoked, it expects
 a new accumulator and it returns the result.</p>
@@ -256,26 +292,62 @@ function is defined in a tail recursive fashion. If the function
 is tail recursive, all the state is passed as arguments, so
 the continuation would simply be the reducing function partially
 applied.</p>
+
+  </section>
 </div>
-  
-</div>
-<div id="t:reducer/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:reducer/0">reducer</a> :: (term, term -> <a href="#t:acc/0">acc</a>)</code></pre>
-  
-    <div class="typespec-doc"><p>The reducer function.</p>
+<div class="detail" id="t:reducer/0">
+  <div class="detail-header">
+    <a href="#t:reducer/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">reducer()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/enum.ex#L55" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:reducer/0">reducer</a> :: (term, term -> <a href="#t:acc/0">acc</a>)</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The reducer function.</p>
 <p>Should be called with the enumerable element and the
 accumulator contents.</p>
 <p>Returns the accumulator for the next enumeration step.</p>
+
+  </section>
 </div>
-  
-</div>
-<div id="t:result/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:result/0">result</a> ::
+<div class="detail" id="t:result/0">
+  <div class="detail-header">
+    <a href="#t:result/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">result()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/enum.ex#L65" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:result/0">result</a> ::
   {:done, term} |
   {:halted, term} |
-  {:suspended, term, <a href="#t:continuation/0">continuation</a>}</code></pre>
-  
-    <div class="typespec-doc"><p>The result of the reduce operation.</p>
+  {:suspended, term, <a href="#t:continuation/0">continuation</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The result of the reduce operation.</p>
 <p>It may be <em>done</em> when the enumeration is finished by reaching
 its end, or <em>halted</em>/<em>suspended</em> when the enumeration was halted
 or suspended by the <a href="#t:reducer/0"><code class="inline">reducer/0</code></a> function.</p>
@@ -285,12 +357,32 @@ never leak. In practice, this means regular enumeration functions
 just need to be concerned about <code class="inline">:done</code> and <code class="inline">:halted</code> results.</p>
 <p>Furthermore, a <code class="inline">:suspend</code> call must always be followed by another call,
 eventually halting or continuing until the end.</p>
+
+  </section>
 </div>
-  
-</div>
-<div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: term</code></pre>
-  
+<div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/enum.ex#L1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: term</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -317,17 +409,14 @@ eventually halting or continuing until the end.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">count(<a href="#t:t/0">t</a>) :: {:ok, non_neg_integer} | {:error, module}</code></pre>
+          <pre>count(<a href="#t:t/0">t</a>) :: {:ok, non_neg_integer} | {:error, module}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Retrieves the enumerable’s size.</p>
 <p>It should return <code class="inline">{:ok, size}</code>.</p>
@@ -351,19 +440,16 @@ algorithm that is significantly faster.</em></p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">member?(<a href="#t:t/0">t</a>, term) ::
+          <pre>member?(<a href="#t:t/0">t</a>, term) ::
   {:ok, boolean} |
-  {:error, module}</code></pre>
+  {:error, module}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if an element exists within the enumerable.</p>
 <p>It should return <code class="inline">{:ok, boolean}</code>.</p>
@@ -387,17 +473,14 @@ algorithm that is significantly faster.</em></p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">reduce(<a href="#t:t/0">t</a>, <a href="#t:acc/0">acc</a>, <a href="#t:reducer/0">reducer</a>) :: <a href="#t:result/0">result</a></code></pre>
+          <pre>reduce(<a href="#t:t/0">t</a>, <a href="#t:acc/0">acc</a>, <a href="#t:reducer/0">reducer</a>) :: <a href="#t:result/0">result</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reduces the enumerable into an element.</p>
 <p>Most of the operations in <a href="Enum.html"><code class="inline">Enum</code></a> are implemented in terms of reduce.

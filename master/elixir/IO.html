@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>IO – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/IO.html" />
     
@@ -333,17 +333,77 @@ but adds a newline at the end</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:chardata/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:chardata/0">chardata</a> :: :unicode.chardata</code></pre>
-  
+            <div class="detail" id="t:chardata/0">
+  <div class="detail-header">
+    <a href="#t:chardata/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">chardata()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/io.ex#L39" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:chardata/0">chardata</a> :: :unicode.chardata</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:device/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:device/0">device</a> :: atom | pid</code></pre>
-  
+<div class="detail" id="t:device/0">
+  <div class="detail-header">
+    <a href="#t:device/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">device()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/io.ex#L37" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:device/0">device</a> :: atom | pid</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:nodata/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:nodata/0">nodata</a> :: {:error, term} | :eof</code></pre>
-  
+<div class="detail" id="t:nodata/0">
+  <div class="detail-header">
+    <a href="#t:nodata/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">nodata()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/io.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:nodata/0">nodata</a> :: {:error, term} | :eof</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -370,19 +430,16 @@ but adds a newline at the end</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">binread(<a href="#t:device/0">device</a>, :all | :line | non_neg_integer) ::
+          <pre>binread(<a href="#t:device/0">device</a>, :all | :line | non_neg_integer) ::
   iodata |
-  <a href="#t:nodata/0">nodata</a></code></pre>
+  <a href="#t:nodata/0">nodata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reads from the IO <code class="inline">device</code>. The operation is Unicode unsafe.</p>
 <p>The <code class="inline">device</code> is iterated by the given number of bytes or line by line if
@@ -418,17 +475,14 @@ as it will return the wrong result.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">binstream(<a href="#t:device/0">device</a>, :line | pos_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+          <pre>binstream(<a href="#t:device/0">device</a>, :line | pos_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the IO <code class="inline">device</code> into an <a href="IO.Stream.html"><code class="inline">IO.Stream</code></a>. The operation is Unicode unsafe.</p>
 <p>An <a href="IO.Stream.html"><code class="inline">IO.Stream</code></a> implements both <a href="Enumerable.html"><code class="inline">Enumerable</code></a> and
@@ -456,17 +510,14 @@ mode as it will return the wrong result.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">binwrite(<a href="#t:device/0">device</a>, iodata) :: :ok | {:error, term}</code></pre>
+          <pre>binwrite(<a href="#t:device/0">device</a>, iodata) :: :ok | {:error, term}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes <code class="inline">item</code> as a binary to the given <code class="inline">device</code>.
 No Unicode conversion happens.
@@ -489,17 +540,14 @@ as it will return the wrong result.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chardata_to_string(<a href="#t:chardata/0">chardata</a>) :: <a href="String.html#t:t/0">String.t</a> | no_return</code></pre>
+          <pre>chardata_to_string(<a href="#t:chardata/0">chardata</a>) :: <a href="String.html#t:t/0">String.t</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts chardata (a list of integers representing codepoints,
 lists and strings) into a string.</p>
@@ -533,23 +581,20 @@ iex&gt; IO.chardata_to_string(&quot;string&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">getn(<a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>, pos_integer) ::
+          <pre>getn(<a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>, pos_integer) ::
   <a href="#t:chardata/0">chardata</a> |
-  <a href="#t:nodata/0">nodata</a></code></pre>
+  <a href="#t:nodata/0">nodata</a></pre>
         
-          <pre><code class="elixir">getn(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) ::
+          <pre>getn(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) ::
   <a href="#t:chardata/0">chardata</a> |
-  <a href="#t:nodata/0">nodata</a></code></pre>
+  <a href="#t:nodata/0">nodata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets a number of bytes from IO device <code class="inline">:stdio</code>.</p>
 <p>If <code class="inline">:stdio</code> is a Unicode device, <code class="inline">count</code> implies
@@ -571,19 +616,16 @@ Otherwise, <code class="inline">count</code> is the number of raw bytes to be re
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">getn(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>, pos_integer) ::
+          <pre>getn(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>, pos_integer) ::
   <a href="#t:chardata/0">chardata</a> |
-  <a href="#t:nodata/0">nodata</a></code></pre>
+  <a href="#t:nodata/0">nodata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets a number of bytes from the IO <code class="inline">device</code>.</p>
 <p>If the IO <code class="inline">device</code> is a Unicode device, <code class="inline">count</code> implies
@@ -615,19 +657,16 @@ NFS volume
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">gets(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) ::
+          <pre>gets(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) ::
   <a href="#t:chardata/0">chardata</a> |
-  <a href="#t:nodata/0">nodata</a></code></pre>
+  <a href="#t:nodata/0">nodata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reads a line from the IO <code class="inline">device</code>.</p>
 <p>It returns:</p>
@@ -664,17 +703,14 @@ NFS volume
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">inspect(item, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: item when item: var</code></pre>
+          <pre>inspect(item, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: item when item: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inspects and writes the given <code class="inline">item</code> to the device.</p>
 <p>It’s important to note that it returns the given <code class="inline">item</code> unchanged.
@@ -724,17 +760,14 @@ after: [2, 4, 6]</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">inspect(<a href="#t:device/0">device</a>, item, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: item when item: var</code></pre>
+          <pre>inspect(<a href="#t:device/0">device</a>, item, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: item when item: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inspects <code class="inline">item</code> according to the given options using the IO <code class="inline">device</code>.</p>
 <p>See <a href="#inspect/2"><code class="inline">inspect/2</code></a> for a full list of options.</p>
@@ -753,17 +786,14 @@ after: [2, 4, 6]</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">iodata_length(iodata) :: non_neg_integer</code></pre>
+          <pre>iodata_length(iodata) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the size of an iodata.</p>
 <p>Inlined by the compiler.</p>
@@ -789,17 +819,14 @@ after: [2, 4, 6]</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">iodata_to_binary(iodata) :: binary</code></pre>
+          <pre>iodata_to_binary(iodata) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts iodata (a list of integers representing bytes, lists
 and binaries) into a binary.
@@ -839,17 +866,14 @@ iex&gt; IO.iodata_to_binary(bin)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">puts(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) :: :ok</code></pre>
+          <pre>puts(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes <code class="inline">item</code> to the given <code class="inline">device</code>, similar to <a href="#write/2"><code class="inline">write/2</code></a>,
 but adds a newline at the end.</p>
@@ -868,19 +892,16 @@ but adds a newline at the end.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">read(<a href="#t:device/0">device</a>, :all | :line | non_neg_integer) ::
+          <pre>read(<a href="#t:device/0">device</a>, :all | :line | non_neg_integer) ::
   <a href="#t:chardata/0">chardata</a> |
-  <a href="#t:nodata/0">nodata</a></code></pre>
+  <a href="#t:nodata/0">nodata</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Reads from the IO <code class="inline">device</code>.</p>
 <p>The <code class="inline">device</code> is iterated by the given number of characters or line by line if
@@ -914,17 +935,14 @@ empty string in case the device has reached EOF.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">stream(<a href="#t:device/0">device</a>, :line | pos_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+          <pre>stream(<a href="#t:device/0">device</a>, :line | pos_integer) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts the IO <code class="inline">device</code> into an <a href="IO.Stream.html"><code class="inline">IO.Stream</code></a>.</p>
 <p>An <a href="IO.Stream.html"><code class="inline">IO.Stream</code></a> implements both <a href="Enumerable.html"><code class="inline">Enumerable</code></a> and
@@ -959,17 +977,14 @@ from the command line:</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">warn(<a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) :: :ok</code></pre>
+          <pre>warn(<a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes a <code class="inline">message</code> to stderr, along with the current stacktrace.</p>
 <p>It returns <code class="inline">:ok</code> if it succeeds.</p>
@@ -996,17 +1011,14 @@ from the command line:</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">warn(<a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>, <a href="Exception.html#t:stacktrace/0">Exception.stacktrace</a>) :: :ok</code></pre>
+          <pre>warn(<a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>, <a href="Exception.html#t:stacktrace/0">Exception.stacktrace</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes a <code class="inline">message</code> to stderr, along with the given <code class="inline">stacktrace</code>.</p>
 <p>This function also notifies the compiler a warning was printed
@@ -1037,17 +1049,14 @@ IO.warn &quot;variable bar is unused&quot;, stacktrace
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">write(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) :: :ok</code></pre>
+          <pre>write(<a href="#t:device/0">device</a>, <a href="#t:chardata/0">chardata</a> | <a href="String.Chars.html#t:t/0">String.Chars.t</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes <code class="inline">item</code> to the given <code class="inline">device</code>.</p>
 <p>By default the <code class="inline">device</code> is the standard output.

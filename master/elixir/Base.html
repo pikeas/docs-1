@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Base – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Base.html" />
     
@@ -367,17 +367,14 @@ safe alphabet</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</code></pre>
+          <pre>decode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 16 encoded string into a binary string.</p>
 <h2 id="decode16/2-options" class="section-heading">
@@ -427,17 +424,14 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode16!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>decode16!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 16 encoded string into a binary string.</p>
 <h2 id="decode16!/2-options" class="section-heading">
@@ -489,17 +483,14 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</code></pre>
+          <pre>decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string into a binary string.</p>
 <h2 id="decode32/2-options" class="section-heading">
@@ -561,17 +552,14 @@ iex&gt; Base.decode32(&quot;MZXW6YTBOI&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string into a binary string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
@@ -635,17 +623,14 @@ iex&gt; Base.decode32!(&quot;MZXW6YTBOI&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</code></pre>
+          <pre>decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
@@ -683,17 +668,14 @@ iex&gt; Base.decode64(&quot;Zm9vYg&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
@@ -733,17 +715,14 @@ iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>encode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 16 encoded string.</p>
 <h2 id="encode16/2-options" class="section-heading">
@@ -788,17 +767,14 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 32 encoded string.</p>
 <h2 id="encode32/2-options" class="section-heading">
@@ -855,17 +831,14 @@ iex&gt; Base.encode32(&quot;foobar&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 64 encoded string.</p>
 <p>Accepts <code class="inline">padding: false</code> option which will omit padding from
@@ -898,19 +871,16 @@ iex&gt; Base.encode64(&quot;foob&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hex_decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) ::
+          <pre>hex_decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) ::
   {:ok, binary} |
-  :error</code></pre>
+  :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string with extended hexadecimal alphabet
 into a binary string.</p>
@@ -973,17 +943,14 @@ iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hex_decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>hex_decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string with extended hexadecimal alphabet
 into a binary string.</p>
@@ -1048,17 +1015,14 @@ iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hex_encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>hex_encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 32 encoded string with an
 extended hexadecimal alphabet.</p>
@@ -1116,19 +1080,16 @@ iex&gt; Base.hex_encode32(&quot;foobar&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">url_decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) ::
+          <pre>url_decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) ::
   {:ok, binary} |
-  :error</code></pre>
+  :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string with URL and filename safe alphabet
 into a binary string.</p>
@@ -1164,17 +1125,14 @@ iex&gt; Base.url_decode64(&quot;_3_-_A&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">url_decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>url_decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string with URL and filename safe alphabet
 into a binary string.</p>
@@ -1212,17 +1170,14 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A&quot;, padding: false)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">url_encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>url_encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 64 encoded string with URL and filename
 safe alphabet.</p>

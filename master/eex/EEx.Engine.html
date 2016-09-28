@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>EEx.Engine – EEx v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/eex/EEx.Engine.html" />
     
@@ -230,8 +230,8 @@ default implementations for the functions above.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles assigns in quoted expressions.</p>
 <p>A warning will be printed on missing assigns.
@@ -257,8 +257,8 @@ end</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>The default implementation simply returns the given expression.</p>
 
@@ -276,17 +276,14 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_expr(<a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
+          <pre>handle_expr(<a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Implements expressions according to the markers.</p>
 <pre><code class="elixir">&lt;% Elixir expression - inline with output %&gt;
@@ -307,8 +304,8 @@ end</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>The default implementation simply concatenates text to the buffer.</p>
 
@@ -326,8 +323,8 @@ end</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns an empty string as initial buffer.</p>
 
@@ -359,17 +356,14 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_body(quoted :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
+          <pre>handle_body(quoted :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>
@@ -386,17 +380,14 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_expr(buffer :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, marker :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, expr :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
+          <pre>handle_expr(buffer :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, marker :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, expr :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>
@@ -413,17 +404,14 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_text(buffer :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, text :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
+          <pre>handle_text(buffer :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a>, text :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>
@@ -440,17 +428,14 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">init(opts :: <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></code></pre>
+          <pre>init(opts :: <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/Macro.html#t:t/0">Macro.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>

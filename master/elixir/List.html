@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>List – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/List.html" />
     
@@ -489,17 +489,14 @@ strings into a string</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete(list, any) :: list</code></pre>
+          <pre>delete(list, any) :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes the given <code class="inline">item</code> from the <code class="inline">list</code>. Returns a new list without
 the item.</p>
@@ -530,17 +527,14 @@ iex&gt; List.delete([:a, :b, :b, :c], :b)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete_at(list, integer) :: list</code></pre>
+          <pre>delete_at(list, integer) :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Produces a new list by removing the value at the specified <code class="inline">index</code>.</p>
 <p>Negative indices indicate an offset from the end of the <code class="inline">list</code>.
@@ -573,17 +567,14 @@ iex&gt; List.delete_at([1, 2, 3], -1)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">duplicate(elem, non_neg_integer) :: [elem] when elem: var</code></pre>
+          <pre>duplicate(elem, non_neg_integer) :: [elem] when elem: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Duplicates the given element <code class="inline">n</code> times in a list.</p>
 <h2 id="duplicate/2-examples" class="section-heading">
@@ -611,17 +602,14 @@ iex&gt; List.duplicate([1, 2], 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">first([elem]) :: nil | elem when elem: var</code></pre>
+          <pre>first([elem]) :: nil | elem when elem: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the first element in <code class="inline">list</code> or <code class="inline">nil</code> if <code class="inline">list</code> is empty.</p>
 <h2 id="first/1-examples" class="section-heading">
@@ -652,17 +640,14 @@ iex&gt; List.first([1, 2, 3])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">flatten(deep_list) :: list when deep_list: [any | deep_list]</code></pre>
+          <pre>flatten(deep_list) :: list when deep_list: [any | deep_list]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Flattens the given <code class="inline">list</code> of nested lists.</p>
 <h2 id="flatten/1-examples" class="section-heading">
@@ -687,17 +672,14 @@ iex&gt; List.first([1, 2, 3])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">flatten(deep_list, [elem]) :: [elem] when deep_list: [elem | deep_list], elem: var</code></pre>
+          <pre>flatten(deep_list, [elem]) :: [elem] when deep_list: [elem | deep_list], elem: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Flattens the given <code class="inline">list</code> of nested lists.
 The list <code class="inline">tail</code> will be added at the end of
@@ -724,17 +706,14 @@ the flattened list.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">foldl([elem], acc, (elem, acc -> acc)) :: acc when elem: var, acc: var</code></pre>
+          <pre>foldl([elem], acc, (elem, acc -> acc)) :: acc when elem: var, acc: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Folds (reduces) the given list from the left with
 a function. Requires an accumulator.</p>
@@ -763,17 +742,14 @@ iex&gt; List.foldl([1, 2, 3, 4], 0, fn(x, acc) -&gt; x - acc end)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">foldr([elem], acc, (elem, acc -> acc)) :: acc when elem: var, acc: var</code></pre>
+          <pre>foldr([elem], acc, (elem, acc -> acc)) :: acc when elem: var, acc: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Folds (reduces) the given list from the right with
 a function. Requires an accumulator.</p>
@@ -799,17 +775,14 @@ a function. Requires an accumulator.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">insert_at(list, integer, any) :: list</code></pre>
+          <pre>insert_at(list, integer, any) :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list with <code class="inline">value</code> inserted at the specified <code class="inline">index</code>.</p>
 <p>Note that <code class="inline">index</code> is capped at the list length. Negative indices
@@ -845,17 +818,14 @@ iex&gt; List.insert_at([1, 2, 3], -10, 0)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keydelete([tuple], any, non_neg_integer) :: [tuple]</code></pre>
+          <pre>keydelete([tuple], any, non_neg_integer) :: [tuple]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a <code class="inline">list</code> of tuples and deletes the first tuple
 where the item at <code class="inline">position</code> matches the
@@ -888,17 +858,14 @@ iex&gt; List.keydelete([a: 1, b: 2], :c, 0)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keyfind([tuple], any, non_neg_integer, any) :: any</code></pre>
+          <pre>keyfind([tuple], any, non_neg_integer, any) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a list of tuples and returns the first tuple
 where the item at <code class="inline">position</code> in the tuple matches the
@@ -931,17 +898,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keymember?([tuple], any, non_neg_integer) :: boolean</code></pre>
+          <pre>keymember?([tuple], any, non_neg_integer) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a list of tuples and returns <code class="inline">true</code> if there is
 a tuple where the item at <code class="inline">position</code> in the tuple matches
@@ -974,17 +938,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keyreplace([tuple], any, non_neg_integer, tuple) :: [tuple]</code></pre>
+          <pre>keyreplace([tuple], any, non_neg_integer, tuple) :: [tuple]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a list of tuples and replaces the item
 identified by <code class="inline">key</code> at <code class="inline">position</code> if it exists.</p>
@@ -1010,17 +971,14 @@ identified by <code class="inline">key</code> at <code class="inline">position</
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keysort([tuple], non_neg_integer) :: [tuple]</code></pre>
+          <pre>keysort([tuple], non_neg_integer) :: [tuple]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a list of tuples and sorts the items
 at <code class="inline">position</code> of the tuples. The sort is stable.</p>
@@ -1049,17 +1007,14 @@ iex&gt; List.keysort([a: 5, c: 1, b: 3], 0)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keystore([tuple], any, non_neg_integer, tuple) :: [tuple, ...]</code></pre>
+          <pre>keystore([tuple], any, non_neg_integer, tuple) :: [tuple, ...]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a <code class="inline">list</code> of tuples and replaces the item
 identified by <code class="inline">key</code> at <code class="inline">position</code>.</p>
@@ -1089,19 +1044,16 @@ iex&gt; List.keystore([a: 1, b: 2], :c, 0, {:c, 3})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keytake([tuple], any, non_neg_integer) ::
+          <pre>keytake([tuple], any, non_neg_integer) ::
   {tuple, [tuple]} |
-  nil</code></pre>
+  nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a <code class="inline">list</code> of tuples and returns the first tuple
 where the element at <code class="inline">position</code> in the tuple matches the
@@ -1135,17 +1087,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">last([elem]) :: nil | elem when elem: var</code></pre>
+          <pre>last([elem]) :: nil | elem when elem: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the last element in <code class="inline">list</code> or <code class="inline">nil</code> if <code class="inline">list</code> is empty.</p>
 <h2 id="last/1-examples" class="section-heading">
@@ -1176,17 +1125,14 @@ iex&gt; List.last([1, 2, 3])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop_at(list, integer, any) :: {any, list}</code></pre>
+          <pre>pop_at(list, integer, any) :: {any, list}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns and removes the value at the specified <code class="inline">index</code> in the <code class="inline">list</code>.</p>
 <p>Negative indices indicate an offset from the end of the <code class="inline">list</code>.
@@ -1219,17 +1165,14 @@ iex&gt; List.pop_at([1, 2, 3], -1)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">replace_at(list, integer, any) :: list</code></pre>
+          <pre>replace_at(list, integer, any) :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list with a replaced value at the specified <code class="inline">index</code>.</p>
 <p>Negative indices indicate an offset from the end of the <code class="inline">list</code>.
@@ -1265,17 +1208,14 @@ iex&gt; List.replace_at([1, 2, 3], -10, 0)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_atom(charlist) :: atom</code></pre>
+          <pre>to_atom(charlist) :: atom</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a charlist to an atom.</p>
 <p>Currently Elixir does not support conversions from charlists
@@ -1303,17 +1243,14 @@ which contains Unicode codepoints greater than 0xFF.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_existing_atom(charlist) :: atom</code></pre>
+          <pre>to_existing_atom(charlist) :: atom</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a charlist to an existing atom. Raises an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a>
 if the atom does not exist.</p>
@@ -1346,17 +1283,14 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_float(charlist) :: float</code></pre>
+          <pre>to_float(charlist) :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the float whose text representation is <code class="inline">charlist</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -1382,17 +1316,14 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_integer(charlist) :: integer</code></pre>
+          <pre>to_integer(charlist) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">charlist</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -1418,17 +1349,14 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_integer(charlist, 2..36) :: integer</code></pre>
+          <pre>to_integer(charlist, 2..36) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an integer whose text representation is <code class="inline">charlist</code> in base <code class="inline">base</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -1454,17 +1382,14 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(:unicode.charlist) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(:unicode.charlist) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a list of integers representing codepoints, lists or
 strings into a string.</p>
@@ -1496,17 +1421,14 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_tuple(list) :: tuple</code></pre>
+          <pre>to_tuple(list) :: tuple</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a list to a tuple.</p>
 <p>Inlined by the compiler.</p>
@@ -1532,17 +1454,14 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update_at([elem], integer, (elem -> any)) :: list when elem: var</code></pre>
+          <pre>update_at([elem], integer, (elem -> any)) :: list when elem: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list with an updated value at the specified <code class="inline">index</code>.</p>
 <p>Negative indices indicate an offset from the end of the <code class="inline">list</code>.
@@ -1578,17 +1497,14 @@ iex&gt; List.update_at([1, 2, 3], -10, &amp;(&amp;1 + 10))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">wrap(list | any) :: list</code></pre>
+          <pre>wrap(list | any) :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Wraps the argument in a list.</p>
 <p>If the argument is already a list, returns the list.
@@ -1621,17 +1537,14 @@ iex&gt; List.wrap(nil)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">zip([list]) :: [tuple]</code></pre>
+          <pre>zip([list]) :: [tuple]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Zips corresponding elements from each list in <code class="inline">list_of_lists</code>.</p>
 <p>The zipping finishes as soon as any list terminates.</p>

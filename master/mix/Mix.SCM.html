@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Mix.SCM – Mix v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/mix/Mix.SCM.html" />
     
@@ -277,9 +277,29 @@ called by <code class="inline">deps.get</code> or <code class="inline">deps.upda
             Types
           </h1>
           <div class="types-list">
-            <div id="t:opts/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:opts/0">opts</a> :: <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a></code></pre>
-  
+            <div class="detail" id="t:opts/0">
+  <div class="detail-header">
+    <a href="#t:opts/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">opts()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/mix/lib/mix/scm.ex#L7" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:opts/0">opts</a> :: <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -306,8 +326,8 @@ called by <code class="inline">deps.get</code> or <code class="inline">deps.upda
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Appends the given SCM module to the list of available SCMs.</p>
 
@@ -325,8 +345,8 @@ called by <code class="inline">deps.get</code> or <code class="inline">deps.upda
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns all available SCMs. Each SCM is tried in order
 until a matching one is found.</p>
@@ -345,8 +365,8 @@ until a matching one is found.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Prepends the given SCM module to the list of available SCMs.</p>
 
@@ -378,17 +398,14 @@ until a matching one is found.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">accepts_options(app :: atom, <a href="#t:opts/0">opts</a>) :: <a href="#t:opts/0">opts</a> | nil</code></pre>
+          <pre>accepts_options(app :: atom, <a href="#t:opts/0">opts</a>) :: <a href="#t:opts/0">opts</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>This behaviour function receives a keyword list of <code class="inline">opts</code>
 and should return an updated list in case the SCM consumes
@@ -414,17 +431,14 @@ while other SCMs would simply return <code class="inline">nil</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">checked_out?(<a href="#t:opts/0">opts</a>) :: boolean</code></pre>
+          <pre>checked_out?(<a href="#t:opts/0">opts</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>This behaviour function returns a boolean if the
 dependency is available.</p>
@@ -443,17 +457,14 @@ dependency is available.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">checkout(<a href="#t:opts/0">opts</a>) :: any</code></pre>
+          <pre>checkout(<a href="#t:opts/0">opts</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>This behaviour function checks out dependencies.</p>
 <p>If the dependency is locked, a lock is received in <code class="inline">opts</code>
@@ -476,17 +487,14 @@ to the latest version.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">equal?(opts1 :: <a href="#t:opts/0">opts</a>, opts2 :: <a href="#t:opts/0">opts</a>) :: boolean</code></pre>
+          <pre>equal?(opts1 :: <a href="#t:opts/0">opts</a>, opts2 :: <a href="#t:opts/0">opts</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives two options and must return <code class="inline">true</code> if they refer to the
 same repository. The options are guaranteed to belong to the
@@ -506,17 +514,14 @@ same SCM.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetchable? :: boolean</code></pre>
+          <pre>fetchable? :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a boolean if the dependency can be fetched
 or it is meant to be previously available in the
@@ -538,17 +543,14 @@ recompiled every time the parent project is compiled.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format(<a href="#t:opts/0">opts</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></code></pre>
+          <pre>format(<a href="#t:opts/0">opts</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string representing the SCM. This is used
 when printing the dependency and not for inspection,
@@ -569,17 +571,14 @@ easy to spot.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format_lock(<a href="#t:opts/0">opts</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | nil</code></pre>
+          <pre>format_lock(<a href="#t:opts/0">opts</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a> | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a string representing the SCM. This is used
 when printing the dependency and not for inspection,
@@ -601,21 +600,18 @@ easy to spot.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">lock_status(<a href="#t:opts/0">opts</a>) ::
+          <pre>lock_status(<a href="#t:opts/0">opts</a>) ::
   :mismatch |
   :outdated |
   :nolock |
-  :ok</code></pre>
+  :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>This behaviour function checks the status of the lock. In
 particular, it checks if the revision stored in the lock
@@ -652,17 +648,14 @@ return <code class="inline">:outdated</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">managers(<a href="#t:opts/0">opts</a>) :: [atom]</code></pre>
+          <pre>managers(<a href="#t:opts/0">opts</a>) :: [atom]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the usable managers for the dependency. This can be used
 if the SCM has extra knowledge of the dependency, otherwise it
@@ -682,17 +675,14 @@ should return an empty list.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update(<a href="#t:opts/0">opts</a>) :: any</code></pre>
+          <pre>update(<a href="#t:opts/0">opts</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>This behaviour function updates dependencies. It may be
 called by <code class="inline">deps.get</code> or <code class="inline">deps.update</code>.</p>

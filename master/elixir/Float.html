@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Float – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Float.html" />
     
@@ -189,17 +189,14 @@ of the given float</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">ceil(float, 0..15) :: float</code></pre>
+          <pre>ceil(float, 0..15) :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Rounds a float to the smallest integer greater than or equal to <code class="inline">num</code>.</p>
 <p><a href="#ceil/2"><code class="inline">ceil/2</code></a> also accepts a precision to round a floating point value down
@@ -234,17 +231,14 @@ iex&gt; Float.ceil(34.251, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">floor(float, 0..15) :: float</code></pre>
+          <pre>floor(float, 0..15) :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Rounds a float to the largest integer less than or equal to <code class="inline">num</code>.</p>
 <p><a href="#floor/2"><code class="inline">floor/2</code></a> also accepts a precision to round a floating point value down
@@ -279,17 +273,14 @@ iex&gt; Float.floor(34.259, 2)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse(binary) :: {float, binary} | :error</code></pre>
+          <pre>parse(binary) :: {float, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses a binary into a float.</p>
 <p>If successful, returns a tuple in the form of <code class="inline">{float, remainder_of_binary}</code>;
@@ -330,17 +321,14 @@ iex&gt; Float.parse(&quot;pi&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">round(float, 0..15) :: float</code></pre>
+          <pre>round(float, 0..15) :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Rounds a floating point value to an arbitrary number of fractional digits
 (between 0 and 15).</p>
@@ -381,17 +369,14 @@ iex&gt; Float.round(-5.5675)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_charlist(float) :: charlist</code></pre>
+          <pre>to_charlist(float) :: charlist</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a charlist which corresponds to the text representation
 of the given float.</p>
@@ -421,17 +406,14 @@ Design and Implementation.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(float) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>to_string(float) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a binary which corresponds to the text representation
 of the given float.</p>

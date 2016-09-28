@@ -18,8 +18,8 @@ ExUnit.DocTest.Error.html
 ExUnit.DuplicateTestError.html
 ExUnit.MultiError.html
 ExUnit.TimeoutError.html
-dist/app-4633c43f98.css
 dist/app-9b2d1e432c.js
+dist/app-ccbca54915.css
 fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf

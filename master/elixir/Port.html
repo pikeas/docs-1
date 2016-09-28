@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Port – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Port.html" />
     
@@ -215,13 +215,33 @@ or <code class="inline">nil</code> if the port is closed</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:name/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:name/0">name</a> ::
+            <div class="detail" id="t:name/0">
+  <div class="detail-header">
+    <a href="#t:name/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">name()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/port.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:name/0">name</a> ::
   {:spawn, charlist | binary} |
   {:spawn_driver, charlist | binary} |
   {:spawn_executable, charlist | atom} |
-  {:fd, non_neg_integer, non_neg_integer}</code></pre>
-  
+  {:fd, non_neg_integer, non_neg_integer}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -248,17 +268,14 @@ or <code class="inline">nil</code> if the port is closed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">call(port, integer, term) :: term</code></pre>
+          <pre>call(port, integer, term) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Makes a synchronous call to the <code class="inline">port</code> and returns its reply as a term.</p>
 <p>Not all port drivers support this control feature.</p>
@@ -279,17 +296,14 @@ or <code class="inline">nil</code> if the port is closed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">close(port) :: true</code></pre>
+          <pre>close(port) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Closes the <code class="inline">port</code>.</p>
 <p>For more information, see <a href="http://www.erlang.org/doc/man/erlang.html#port_close-1"><code class="inline">:erlang.port_close/1</code></a>.</p>
@@ -309,17 +323,14 @@ or <code class="inline">nil</code> if the port is closed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">command(port, iodata, [:force | :nosuspend]) :: boolean</code></pre>
+          <pre>command(port, iodata, [:force | :nosuspend]) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends <code class="inline">data</code> to the port driver <code class="inline">port</code>.</p>
 <p>For more information, see <a href="http://www.erlang.org/doc/man/erlang.html#port_command-2"><code class="inline">:erlang.port_command/2</code></a>.</p>
@@ -339,17 +350,14 @@ or <code class="inline">nil</code> if the port is closed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">connect(port, pid) :: true</code></pre>
+          <pre>connect(port, pid) :: true</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Associates the <code class="inline">port</code> identifier with a <code class="inline">pid</code>.</p>
 <p>For more information, see <a href="http://www.erlang.org/doc/man/erlang.html#port_connect-2"><code class="inline">:erlang.port_connect/2</code></a>.</p>
@@ -369,17 +377,14 @@ or <code class="inline">nil</code> if the port is closed</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">control(port, integer, iodata) :: iodata | binary</code></pre>
+          <pre>control(port, integer, iodata) :: iodata | binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends a synchronous control command to the <code class="inline">port</code> and returns its reply as a binary.</p>
 <p>Not all port drivers support this feature.</p>
@@ -400,8 +405,8 @@ or <code class="inline">nil</code> if the port is closed</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns information about the <code class="inline">port</code>
 or <code class="inline">nil</code> if the port is closed.</p>
@@ -421,17 +426,14 @@ or <code class="inline">nil</code> if the port is closed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">info(port, atom) :: {atom, term} | nil</code></pre>
+          <pre>info(port, atom) :: {atom, term} | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns information about the <code class="inline">port</code>
 or <code class="inline">nil</code> if the port is closed.</p>
@@ -451,17 +453,14 @@ or <code class="inline">nil</code> if the port is closed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">list :: [port]</code></pre>
+          <pre>list :: [port]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a list of the ports for the current node.</p>
 <p>For more information, see <a href="http://www.erlang.org/doc/man/erlang.html#ports-0"><code class="inline">:erlang.ports/0</code></a>.</p>
@@ -481,17 +480,14 @@ or <code class="inline">nil</code> if the port is closed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">open(<a href="#t:name/0">name</a>, list) :: port</code></pre>
+          <pre>open(<a href="#t:name/0">name</a>, list) :: port</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Opens an Erlang port given a tuple <code class="inline">name</code> and a list of <code class="inline">settings</code>.</p>
 <h2 id="open/2-name" class="section-heading">

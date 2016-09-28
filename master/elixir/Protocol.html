@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Protocol – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Protocol.html" />
     
@@ -214,17 +214,14 @@ the given paths</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">assert_impl!(module, module) :: :ok | no_return</code></pre>
+          <pre>assert_impl!(module, module) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if the given module is loaded and is an implementation
 of the given protocol.</p>
@@ -244,17 +241,14 @@ of the given protocol.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">assert_protocol!(module) :: :ok | no_return</code></pre>
+          <pre>assert_protocol!(module) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if the given module is loaded and is protocol.</p>
 <p>Returns <code class="inline">:ok</code> if so, otherwise raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a>.</p>
@@ -273,20 +267,17 @@ of the given protocol.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">consolidate(module, [module]) ::
+          <pre>consolidate(module, [module]) ::
   {:ok, binary} |
   {:error, :not_a_protocol} |
-  {:error, :no_beam_info}</code></pre>
+  {:error, :no_beam_info}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Receives a protocol and a list of implementations and
 consolidates the given protocol.</p>
@@ -320,17 +311,14 @@ it will be loaded.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">consolidated?(module) :: boolean</code></pre>
+          <pre>consolidated?(module) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the protocol was consolidated.</p>
 
@@ -348,17 +336,14 @@ it will be loaded.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">extract_impls(module, [charlist | <a href="String.html#t:t/0">String.t</a>]) :: [atom]</code></pre>
+          <pre>extract_impls(module, [charlist | <a href="String.html#t:t/0">String.t</a>]) :: [atom]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Extracts all types implemented for the given protocol from
 the given paths.</p>
@@ -391,17 +376,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">extract_protocols([charlist | <a href="String.html#t:t/0">String.t</a>]) :: [atom]</code></pre>
+          <pre>extract_protocols([charlist | <a href="String.html#t:t/0">String.t</a>]) :: [atom]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Extracts all protocols from the given paths.</p>
 <p>The paths can be either a charlist or a string. Internally
@@ -445,8 +427,8 @@ true</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a new protocol function.</p>
 <p>Protocols do not allow functions to be defined directly, instead, the
@@ -467,8 +449,8 @@ defines the protocol functions with the appropriate callbacks.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Derives the <code class="inline">protocol</code> for <code class="inline">module</code> with the given options.</p>
 

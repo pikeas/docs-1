@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Task.Supervisor – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Task.Supervisor.html" />
     
@@ -227,17 +227,14 @@ strategy).</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, (... -> any)) :: <a href="Task.html#t:t/0">Task.t</a></code></pre>
+          <pre>async(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, (... -> any)) :: <a href="Task.html#t:t/0">Task.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that can be awaited on.</p>
 <p>The <code class="inline">supervisor</code> must be a reference as defined in <a href="Task.Supervisor.html#content"><code class="inline">Task.Supervisor</code></a>.
@@ -258,17 +255,14 @@ more information and <a href="#async_nolink/2"><code class="inline">async_nolink
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, module, atom, [term]) :: <a href="Task.html#t:t/0">Task.t</a></code></pre>
+          <pre>async(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, module, atom, [term]) :: <a href="Task.html#t:t/0">Task.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that can be awaited on.</p>
 <p>The <code class="inline">supervisor</code> must be a reference as defined in <a href="Task.Supervisor.html#content"><code class="inline">Task.Supervisor</code></a>.
@@ -289,17 +283,14 @@ more information and <a href="#async_nolink/2"><code class="inline">async_nolink
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async_nolink(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, (... -> any)) :: <a href="Task.html#t:t/0">Task.t</a></code></pre>
+          <pre>async_nolink(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, (... -> any)) :: <a href="Task.html#t:t/0">Task.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that can be awaited on.</p>
 <p>The <code class="inline">supervisor</code> must be a reference as defined in <a href="Task.Supervisor.html#content"><code class="inline">Task.Supervisor</code></a>.
@@ -335,17 +326,14 @@ terminates normally, the reason in the <code class="inline">:DOWN</code> message
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async_nolink(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, module, atom, [term]) :: <a href="Task.html#t:t/0">Task.t</a></code></pre>
+          <pre>async_nolink(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, module, atom, [term]) :: <a href="Task.html#t:t/0">Task.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that can be awaited on.</p>
 <p>The <code class="inline">supervisor</code> must be a reference as defined in <a href="Task.Supervisor.html#content"><code class="inline">Task.Supervisor</code></a>.
@@ -366,17 +354,14 @@ more information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">children(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>) :: [pid]</code></pre>
+          <pre>children(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>) :: [pid]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all children PIDs.</p>
 
@@ -394,17 +379,14 @@ more information.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_child(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, (... -> any)) :: {:ok, pid}</code></pre>
+          <pre>start_child(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, (... -> any)) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task as a child of the given <code class="inline">supervisor</code>.</p>
 <p>Note that the spawned process is not linked to the caller, but
@@ -426,17 +408,14 @@ to report back to the caller.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_child(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, module, atom, [term]) :: {:ok, pid}</code></pre>
+          <pre>start_child(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, module, atom, [term]) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task as a child of the given <code class="inline">supervisor</code>.</p>
 <p>Similar to <a href="#start_child/2"><code class="inline">start_child/2</code></a> except the task is specified
@@ -456,17 +435,14 @@ by the given <code class="inline">module</code>, <code class="inline">fun</code>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link(<a href="Supervisor.html#t:options/0">Supervisor.options</a>) :: <a href="Supervisor.html#t:on_start/0">Supervisor.on_start</a></code></pre>
+          <pre>start_link(<a href="Supervisor.html#t:options/0">Supervisor.options</a>) :: <a href="Supervisor.html#t:on_start/0">Supervisor.on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a new supervisor.</p>
 <p>The supported options are:</p>
@@ -501,17 +477,14 @@ by the given <code class="inline">module</code>, <code class="inline">fun</code>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">terminate_child(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, pid) :: :ok</code></pre>
+          <pre>terminate_child(<a href="Supervisor.html#t:supervisor/0">Supervisor.supervisor</a>, pid) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Terminates the child with the given <code class="inline">pid</code>.</p>
 

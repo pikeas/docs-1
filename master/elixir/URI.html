@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>URI – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/URI.html" />
     
@@ -277,9 +277,29 @@ given <code class="inline">query</code></p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %URI{authority: nil | binary, fragment: nil | binary, host: nil | binary, path: nil | binary, port: nil | :inet.port_number, query: nil | binary, scheme: nil | binary, userinfo: nil | binary}</code></pre>
-  
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/uri.ex#L14" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %URI{authority: nil | binary, fragment: nil | binary, host: nil | binary, path: nil | binary, port: nil | :inet.port_number, query: nil | binary, scheme: nil | binary, userinfo: nil | binary}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -306,17 +326,14 @@ given <code class="inline">query</code></p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">char_reserved?(char) :: boolean</code></pre>
+          <pre>char_reserved?(char) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if the character is a “reserved” character in a URI.</p>
 <p>Reserved characters are specified in
@@ -343,17 +360,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">char_unescaped?(char) :: boolean</code></pre>
+          <pre>char_unescaped?(char) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if the character is allowed unescaped in a URI.</p>
 <p>This is the default used by <a href="URI.html#encode/2"><code class="inline">URI.encode/2</code></a> where both
@@ -380,17 +394,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">char_unreserved?(char) :: boolean</code></pre>
+          <pre>char_unreserved?(char) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if the character is a “unreserved” character in a URI.</p>
 <p>Unreserved characters are specified in
@@ -417,17 +428,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode(binary) :: binary</code></pre>
+          <pre>decode(binary) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Percent-unescapes a URI.</p>
 <h2 id="decode/1-examples" class="section-heading">
@@ -452,17 +460,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode_query(binary, map) :: map</code></pre>
+          <pre>decode_query(binary, map) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a query string into a map.</p>
 <p>Given a query string of the form of <code class="inline">key1=value1&amp;key2=value2...</code>, this
@@ -495,17 +500,14 @@ iex&gt; URI.decode_query(&quot;percent=oh+yes%21&quot;, %{&quot;starting&quot; =
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode_www_form(binary) :: binary</code></pre>
+          <pre>decode_www_form(binary) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a string as “x-www-form-urlencoded”.</p>
 <h2 id="decode_www_form/1-examples" class="section-heading">
@@ -530,17 +532,14 @@ iex&gt; URI.decode_query(&quot;percent=oh+yes%21&quot;, %{&quot;starting&quot; =
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">default_port(binary) :: nil | non_neg_integer</code></pre>
+          <pre>default_port(binary) :: nil | non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the default port for a given scheme.</p>
 <p>If the scheme is unknown to the <a href="URI.html#content"><code class="inline">URI</code></a> module, this function returns
@@ -571,17 +570,14 @@ nil</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">default_port(binary, non_neg_integer) :: :ok</code></pre>
+          <pre>default_port(binary, non_neg_integer) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Registers the default port <code class="inline">port</code> for the given <code class="inline">scheme</code>.</p>
 <p>After this function is called, <code class="inline">port</code> will be returned by
@@ -606,17 +602,14 @@ new URIs.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode(binary, (byte -> boolean)) :: binary</code></pre>
+          <pre>encode(binary, (byte -> boolean)) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Percent-escapes the given string.</p>
 <p>This function accepts a <code class="inline">predicate</code> function as an optional argument; if
@@ -648,17 +641,14 @@ iex&gt; URI.encode(&quot;a string&quot;, &amp;(&amp;1 != ?i))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode_query(term) :: binary</code></pre>
+          <pre>encode_query(term) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes an enumerable into a query string.</p>
 <p>Takes an enumerable that enumerates as a list of two-element
@@ -697,17 +687,14 @@ iex&gt; URI.encode_query %{key: [:a, :list]}
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode_www_form(binary) :: binary</code></pre>
+          <pre>encode_www_form(binary) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a string as “x-www-form-urlencoded”.</p>
 <h2 id="encode_www_form/1-example" class="section-heading">
@@ -732,17 +719,14 @@ iex&gt; URI.encode_query %{key: [:a, :list]}
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">merge(<a href="#t:t/0">t</a> | binary, <a href="#t:t/0">t</a> | binary) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>merge(<a href="#t:t/0">t</a> | binary, <a href="#t:t/0">t</a> | binary) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Merges two URIs.</p>
 <p>This function merges two URIs as per
@@ -772,17 +756,14 @@ iex&gt; URI.merge(&quot;http://example.com&quot;, &quot;http://google.com&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">parse(<a href="#t:t/0">t</a> | binary) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>parse(<a href="#t:t/0">t</a> | binary) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Parses a well-formed URI reference into its components.</p>
 <p>Note this function expects a well-formed URI and does not perform
@@ -830,8 +811,8 @@ iex&gt; URI.parse(&quot;foo/bar&quot;)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     
   </section>
@@ -848,17 +829,14 @@ iex&gt; URI.parse(&quot;foo/bar&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">query_decoder(binary) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></code></pre>
+          <pre>query_decoder(binary) :: <a href="Enumerable.html#t:t/0">Enumerable.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a stream of two-element tuples representing key-value pairs in the
 given <code class="inline">query</code>.</p>
@@ -885,17 +863,14 @@ given <code class="inline">query</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_string(<a href="#t:t/0">t</a>) :: binary</code></pre>
+          <pre>to_string(<a href="#t:t/0">t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the string representation of the given <a href="URI.html#content"><code class="inline">URI</code></a> struct.</p>
 <pre><code class="iex elixir">iex&gt; URI.to_string(URI.parse(&quot;http://google.com&quot;))

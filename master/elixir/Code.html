@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Code – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Code.html" />
     
@@ -334,8 +334,8 @@ directories the Erlang VM uses for finding module code</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Appends a path to the end of the Erlang VM code path list.</p>
 <p>This is the list of directories the Erlang VM uses for
@@ -365,8 +365,8 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns a list with the available compiler options.</p>
 <p>See <a href="Code.html#compiler_options/1"><code class="inline">Code.compiler_options/1</code></a> for more info.</p>
@@ -392,8 +392,8 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Compiles the quoted expression.</p>
 <p>Returns a list of tuples where the first element is the module name and
@@ -413,8 +413,8 @@ the second one is its byte code (as a binary).</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Compiles the given string.</p>
 <p>Returns a list of tuples where the first element is the module name
@@ -435,8 +435,8 @@ and the second one is its byte code (as a binary).</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Gets the compilation options from the code server.</p>
 <p>Check <a href="#compiler_options/1"><code class="inline">compiler_options/1</code></a> for more information.</p>
@@ -463,8 +463,8 @@ and the second one is its byte code (as a binary).</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Sets compilation options.</p>
 <p>These options are global since they are stored by Elixir’s Code Server.</p>
@@ -512,8 +512,8 @@ generated
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Deletes a path from the Erlang VM code path list. This is the list of
 directories the Erlang VM uses for finding module code.</p>
@@ -543,8 +543,8 @@ Code.delete_path(&quot;/does_not_exist&quot;) #=&gt; false</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Ensures the given module is compiled and loaded.</p>
 <p>If the module is already loaded, it works as no-op. If the module was
@@ -569,8 +569,8 @@ and when to use <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1<
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Ensures the given module is compiled and loaded.</p>
 <p>Similar to <a href="#ensure_compiled/1"><code class="inline">ensure_compiled/1</code></a>, but returns <code class="inline">true</code> if the module
@@ -591,8 +591,8 @@ Returns <code class="inline">false</code> otherwise.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Ensures the given module is loaded.</p>
 <p>If the module is already loaded, this works as no-op. If the module
@@ -652,8 +652,8 @@ iex&gt; Code.ensure_loaded(DoesNotExist)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Ensures the given module is loaded.</p>
 <p>Similar to <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1</code></a>, but returns <code class="inline">true</code> if the module
@@ -681,8 +681,8 @@ true</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Evals the given file.</p>
 <p>Accepts <code class="inline">relative_to</code> as an argument to tell where the file is located.</p>
@@ -704,8 +704,8 @@ evaluation result and its bindings.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Evaluates the quoted contents.</p>
 <p>See <a href="#eval_string/3"><code class="inline">eval_string/3</code></a> for a description of arguments and return values.</p>
@@ -737,8 +737,8 @@ iex&gt; Code.eval_quoted(contents, [a: 1, b: 2], __ENV__)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Evaluates the contents given by <code class="inline">string</code>.</p>
 <p>The <code class="inline">binding</code> argument is a keyword list of variable bindings.
@@ -809,8 +809,8 @@ will be automatically carried over:</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns the docs for the given module.</p>
 <p>When given a module name, it finds its BEAM code and reads the docs from it.</p>
@@ -864,8 +864,8 @@ nil</code></pre>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Loads the given file.</p>
 <p>Accepts <code class="inline">relative_to</code> as an argument to tell where the file is located.
@@ -897,8 +897,8 @@ if you don’t want a file to be loaded concurrently.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Lists all loaded files.</p>
 <h2 id="loaded_files/0-examples" class="section-heading">
@@ -923,8 +923,8 @@ List.first(Code.loaded_files) =~ &quot;eex_test.exs&quot; #=&gt; true</code></pr
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Prepends a path to the beginning of the Erlang VM code path list.</p>
 <p>This is the list of directories the Erlang VM uses for finding
@@ -954,8 +954,8 @@ Code.prepend_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Requires the given <code class="inline">file</code>.</p>
 <p>Accepts <code class="inline">relative_to</code> as an argument to tell where the file is located.
@@ -993,8 +993,8 @@ call <code class="inline">require_file</code> will get the list of loaded module
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts the given string to its quoted form.</p>
 <p>Returns <code class="inline">{:ok, quoted_form}</code>
@@ -1037,8 +1037,8 @@ representation.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts the given string to its quoted form.</p>
 <p>It returns the ast if it succeeds,
@@ -1061,8 +1061,8 @@ in case a token is missing (usually because the expression is incomplete),
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Removes files from the loaded files list.</p>
 <p>The modules defined in the file are not removed;

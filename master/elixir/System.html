@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>System – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/System.html" />
     
@@ -518,8 +518,22 @@ instance</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:time_unit/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:time_unit/0">time_unit</a> ::
+            <div class="detail" id="t:time_unit/0">
+  <div class="detail-header">
+    <a href="#t:time_unit/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">time_unit()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/system.ex#L65" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:time_unit/0">time_unit</a> ::
   :second |
   :millisecond |
   :microsecond |
@@ -528,9 +542,13 @@ instance</p>
   :seconds |
   :milliseconds |
   :microseconds |
-  :nanoseconds</code></pre>
-  
-    <div class="typespec-doc"><p>The time unit to be passed to functions like <a href="#monotonic_time/1"><code class="inline">monotonic_time/1</code></a> and others.</p>
+  :nanoseconds</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The time unit to be passed to functions like <a href="#monotonic_time/1"><code class="inline">monotonic_time/1</code></a> and others.</p>
 <p>The <code class="inline">:second</code>, <code class="inline">:millisecond</code>, <code class="inline">:microsecond</code> and <code class="inline">:nanosecond</code> time
 units controls the return value of the functions that accept a time unit.</p>
 <p>A time unit can also be a strictly positive integer. In this case, it
@@ -541,8 +559,8 @@ in 1/1000 seconds - milliseconds).</p>
 <p>Keep in mind the Erlang API prior to version 19.1 will use <code class="inline">:milli_seconds</code>,
 <code class="inline">:micro_seconds</code> and <code class="inline">:nano_seconds</code> as time units although Elixir normalizes
 their spelling to match the SI convention.</p>
-</div>
-  
+
+  </section>
 </div>
 
           </div>
@@ -569,17 +587,14 @@ their spelling to match the SI convention.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">argv :: [<a href="String.html#t:t/0">String.t</a>]</code></pre>
+          <pre>argv :: [<a href="String.html#t:t/0">String.t</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Lists command line arguments.</p>
 <p>Returns the list of command line arguments passed to the program.</p>
@@ -598,17 +613,14 @@ their spelling to match the SI convention.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">argv([<a href="String.html#t:t/0">String.t</a>]) :: :ok</code></pre>
+          <pre>argv([<a href="String.html#t:t/0">String.t</a>]) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Modifies command line arguments.</p>
 <p>Changes the list of command line arguments. Use it with caution,
@@ -628,8 +640,8 @@ as it destroys any previous argv information.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Registers a program exit handler function.</p>
 <p>Registers a function that will be invoked at the end of program execution.
@@ -654,17 +666,14 @@ function is invoked.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">build_info :: map</code></pre>
+          <pre>build_info :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Elixir build information.</p>
 <p>Returns a keyword list with Elixir version, Git short revision hash and compilation date.</p>
@@ -683,17 +692,14 @@ function is invoked.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cmd(binary, [binary], <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {<a href="Collectable.html#t:t/0">Collectable.t</a>, exit_status :: non_neg_integer}</code></pre>
+          <pre>cmd(binary, [binary], <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {<a href="Collectable.html#t:t/0">Collectable.t</a>, exit_status :: non_neg_integer}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Executes the given <code class="inline">command</code> with <code class="inline">args</code>.</p>
 <p><code class="inline">command</code> is expected to be an executable available in PATH
@@ -800,8 +806,8 @@ redirecting and so on, please check
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns the endianness the system was compiled with.</p>
 
@@ -819,17 +825,14 @@ redirecting and so on, please check
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">convert_time_unit(integer, <a href="#t:time_unit/0">time_unit</a> | :native, <a href="#t:time_unit/0">time_unit</a> | :native) :: integer</code></pre>
+          <pre>convert_time_unit(integer, <a href="#t:time_unit/0">time_unit</a> | :native, <a href="#t:time_unit/0">time_unit</a> | :native) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts <code class="inline">time</code> from time unit <code class="inline">from_unit</code> to time unit <code class="inline">to_unit</code>.</p>
 <p>The result is rounded via the floor function.</p>
@@ -855,8 +858,8 @@ convert 1 second to the <code class="inline">:native</code> time unit (i.e.,
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Current working directory.</p>
 <p>Returns the current working directory or <code class="inline">nil</code> if one
@@ -876,8 +879,8 @@ is not available.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Current working directory, exception on error.</p>
 <p>Returns the current working directory or raises <a href="RuntimeError.html"><code class="inline">RuntimeError</code></a>.</p>
@@ -896,17 +899,14 @@ is not available.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete_env(<a href="String.html#t:t/0">String.t</a>) :: :ok</code></pre>
+          <pre>delete_env(<a href="String.html#t:t/0">String.t</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes an environment variable.</p>
 <p>Removes the variable <code class="inline">varname</code> from the environment.</p>
@@ -925,8 +925,8 @@ is not available.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns the endianness.</p>
 
@@ -944,17 +944,14 @@ is not available.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">find_executable(binary) :: binary | nil</code></pre>
+          <pre>find_executable(binary) :: binary | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Locates an executable on the system.</p>
 <p>This function looks up an executable program given
@@ -977,17 +974,14 @@ lookup files with <code class="inline">.com</code>, <code class="inline">.cmd</c
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_env :: %{optional(<a href="String.html#t:t/0">String.t</a>) => <a href="String.html#t:t/0">String.t</a>}</code></pre>
+          <pre>get_env :: %{optional(<a href="String.html#t:t/0">String.t</a>) => <a href="String.html#t:t/0">String.t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>System environment variables.</p>
 <p>Returns a list of all environment variables. Each variable is given as a
@@ -1007,17 +1001,14 @@ lookup files with <code class="inline">.com</code>, <code class="inline">.cmd</c
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_env(binary) :: binary | nil</code></pre>
+          <pre>get_env(binary) :: binary | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Environment variable value.</p>
 <p>Returns the value of the environment variable
@@ -1038,17 +1029,14 @@ variable is undefined.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_pid :: binary</code></pre>
+          <pre>get_pid :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Erlang VM process identifier.</p>
 <p>Returns the process identifier of the current Erlang emulator
@@ -1069,17 +1057,14 @@ in the format most commonly used by the operating system environment.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">halt(non_neg_integer | binary | :abort) :: no_return</code></pre>
+          <pre>halt(non_neg_integer | binary | :abort) :: no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Halts the Erlang runtime system.</p>
 <p>Halts the Erlang runtime system where the argument <code class="inline">status</code> must be a
@@ -1121,17 +1106,14 @@ System.halt(:abort)</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">monotonic_time :: integer</code></pre>
+          <pre>monotonic_time :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current monotonic time in the <code class="inline">:native</code> time unit.</p>
 <p>This time is monotonically increasing and starts in an unspecified
@@ -1152,17 +1134,14 @@ point in time.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">monotonic_time(<a href="#t:time_unit/0">time_unit</a>) :: integer</code></pre>
+          <pre>monotonic_time(<a href="#t:time_unit/0">time_unit</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current monotonic time in the given time unit.</p>
 <p>This time is monotonically increasing and starts in an unspecified
@@ -1182,17 +1161,14 @@ point in time.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">os_time :: integer</code></pre>
+          <pre>os_time :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current OS time.</p>
 <p>The result is returned in the <code class="inline">:native</code> time unit.</p>
@@ -1214,17 +1190,14 @@ with no limitation and is not monotonic.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">os_time(<a href="#t:time_unit/0">time_unit</a>) :: integer</code></pre>
+          <pre>os_time(<a href="#t:time_unit/0">time_unit</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current OS time in the given time <code class="inline">unit</code>.</p>
 <p>This time may be adjusted forwards or backwards in time
@@ -1244,17 +1217,14 @@ with no limitation and is not monotonic.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">otp_release :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>otp_release :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the OTP release number.</p>
 
@@ -1272,17 +1242,14 @@ with no limitation and is not monotonic.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_env(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: :ok</code></pre>
+          <pre>put_env(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sets multiple environment variables.</p>
 <p>Sets a new value for each environment variable corresponding
@@ -1302,17 +1269,14 @@ to each key in <code class="inline">dict</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_env(binary, binary) :: :ok</code></pre>
+          <pre>put_env(binary, binary) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sets an environment variable value.</p>
 <p>Sets a new <code class="inline">value</code> for the environment variable <code class="inline">varname</code>.</p>
@@ -1331,17 +1295,14 @@ to each key in <code class="inline">dict</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">schedulers :: pos_integer</code></pre>
+          <pre>schedulers :: pos_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the number of schedulers in the VM.</p>
 
@@ -1359,17 +1320,14 @@ to each key in <code class="inline">dict</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">schedulers_online :: pos_integer</code></pre>
+          <pre>schedulers_online :: pos_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the number of schedulers online in the VM.</p>
 
@@ -1387,8 +1345,8 @@ to each key in <code class="inline">dict</code>.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Last exception stacktrace.</p>
 <p>Note that the Erlang VM (and therefore this function) does not
@@ -1410,17 +1368,14 @@ latest exception.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">system_time :: integer</code></pre>
+          <pre>system_time :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current system time in the <code class="inline">:native</code> time unit.</p>
 <p>It is the VM view of the <a href="#os_time/0"><code class="inline">os_time/0</code></a>. They may not match in
@@ -1442,17 +1397,14 @@ them. This time is not monotonic.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">system_time(<a href="#t:time_unit/0">time_unit</a>) :: integer</code></pre>
+          <pre>system_time(<a href="#t:time_unit/0">time_unit</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current system time in the given time unit.</p>
 <p>It is the VM view of the <a href="#os_time/0"><code class="inline">os_time/0</code></a>. They may not match in
@@ -1473,17 +1425,14 @@ them. This time is not monotonic.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">time_offset :: integer</code></pre>
+          <pre>time_offset :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current time offset between the Erlang VM monotonic
 time and the Erlang VM system time.</p>
@@ -1505,17 +1454,14 @@ time and the Erlang VM system time.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">time_offset(<a href="#t:time_unit/0">time_unit</a>) :: integer</code></pre>
+          <pre>time_offset(<a href="#t:time_unit/0">time_unit</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the current time offset between the Erlang VM monotonic
 time and the Erlang VM system time.</p>
@@ -1538,8 +1484,8 @@ to that monotonic time.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Writable temporary directory.</p>
 <p>Returns a writable temporary directory.
@@ -1572,8 +1518,8 @@ Searches for directories in the following order:</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Writable temporary directory, exception on error.</p>
 <p>Same as <a href="#tmp_dir/0"><code class="inline">tmp_dir/0</code></a> but raises <a href="RuntimeError.html"><code class="inline">RuntimeError</code></a>
@@ -1593,17 +1539,14 @@ instead of returning <code class="inline">nil</code> if no temp dir is set.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">unique_integer([:positive | :monotonic]) :: integer</code></pre>
+          <pre>unique_integer([:positive | :monotonic]) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Generates and returns an integer that is unique in the current runtime
 instance.</p>
@@ -1640,8 +1583,8 @@ will be ignored.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>User home directory.</p>
 <p>Returns the user home directory (platform independent).</p>
@@ -1660,8 +1603,8 @@ will be ignored.</p>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>User home directory, exception on error.</p>
 <p>Same as <a href="#user_home/0"><code class="inline">user_home/0</code></a> but raises <a href="RuntimeError.html"><code class="inline">RuntimeError</code></a>
@@ -1681,17 +1624,14 @@ instead of returning <code class="inline">nil</code> if no user home is set.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">version :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>version :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Elixir version information.</p>
 <p>Returns Elixir’s version as binary.</p>

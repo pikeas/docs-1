@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Keyword – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Keyword.html" />
     
@@ -462,21 +462,101 @@ keyword list</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:key/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:key/0">key</a> :: atom</code></pre>
-  
+            <div class="detail" id="t:key/0">
+  <div class="detail-header">
+    <a href="#t:key/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">key()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/keyword.ex#L33" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:key/0">key</a> :: atom</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: [{<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>}]</code></pre>
-  
+<div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/keyword.ex#L36" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: [{<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:t/1" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/1">t(value)</a> :: [{<a href="#t:key/0">key</a>, value}]</code></pre>
-  
+<div class="detail" id="t:t/1">
+  <div class="detail-header">
+    <a href="#t:t/1" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t(value)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/keyword.ex#L37" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/1">t(value)</a> :: [{<a href="#t:key/0">key</a>, value}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:value/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:value/0">value</a> :: any</code></pre>
-  
+<div class="detail" id="t:value/0">
+  <div class="detail-header">
+    <a href="#t:value/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">value()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/keyword.ex#L34" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:value/0">value</a> :: any</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -503,17 +583,14 @@ keyword list</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>delete(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes the entries in the keyword list for a specific <code class="inline">key</code>.</p>
 <p>If the <code class="inline">key</code> does not exist, returns the keyword list unchanged.
@@ -545,17 +622,14 @@ iex&gt; Keyword.delete([b: 2], :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>delete(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes the entries in the keyword list for a <code class="inline">key</code> with <code class="inline">value</code>.</p>
 <p>If no <code class="inline">key</code> with <code class="inline">value</code> exists, returns the keyword list unchanged.</p>
@@ -587,17 +661,14 @@ iex&gt; Keyword.delete([a: 1], :b, 5)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete_first(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>delete_first(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes the first entry in the keyword list for a specific <code class="inline">key</code>.</p>
 <p>If the <code class="inline">key</code> does not exist, returns the keyword list unchanged.</p>
@@ -625,17 +696,14 @@ iex&gt; Keyword.delete_first([b: 2], :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">drop(<a href="#t:t/0">t</a>, [<a href="#t:key/0">key</a>]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>drop(<a href="#t:t/0">t</a>, [<a href="#t:key/0">key</a>]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Drops the given keys from the keyword list.</p>
 <p>Duplicated keys are preserved in the new keyword list.</p>
@@ -663,17 +731,14 @@ iex&gt; Keyword.drop([a: 1, b: 2, b: 3, c: 3, a: 5], [:b, :d])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">equal?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</code></pre>
+          <pre>equal?(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if two keywords are equal.</p>
 <p>Two keywords are considered to be equal if they contain
@@ -704,17 +769,14 @@ true</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetch(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</code></pre>
+          <pre>fetch(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Fetches the value for a specific <code class="inline">key</code> and returns it in a tuple.</p>
 <p>If the <code class="inline">key</code> does not exist, returns <code class="inline">:error</code>.</p>
@@ -742,17 +804,14 @@ iex&gt; Keyword.fetch([a: 1], :b)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetch!(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: <a href="#t:value/0">value</a> | no_return</code></pre>
+          <pre>fetch!(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: <a href="#t:value/0">value</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Fetches the value for specific <code class="inline">key</code>.</p>
 <p>If <code class="inline">key</code> does not exist, a <a href="KeyError.html"><code class="inline">KeyError</code></a> is raised.</p>
@@ -780,17 +839,14 @@ iex&gt; Keyword.fetch!([a: 1], :b)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
+          <pre>get(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value for a specific <code class="inline">key</code>.</p>
 <p>If <code class="inline">key</code> does not exist, return the default value
@@ -830,17 +886,14 @@ iex&gt; Keyword.get([a: 1, a: 2], :b, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>} | :pop)) :: {get, <a href="#t:t/0">t</a>} when get: term</code></pre>
+          <pre>get_and_update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>} | :pop)) :: {get, <a href="#t:t/0">t</a>} when get: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value from <code class="inline">key</code> and updates it, all in one pass.</p>
 <p>This <code class="inline">fun</code> argument receives the value of <code class="inline">key</code> (or <code class="inline">nil</code> if <code class="inline">key</code>
@@ -886,19 +939,16 @@ iex&gt; Keyword.get_and_update([a: 1], :b, fn _ -&gt; :pop end)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update!(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) ::
+          <pre>get_and_update!(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) ::
   {get, <a href="#t:t/0">t</a>} |
-  no_return when get: term</code></pre>
+  no_return when get: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value from <code class="inline">key</code> and updates it. Raises if there is no <code class="inline">key</code>.</p>
 <p>This <code class="inline">fun</code> argument receives the value of <code class="inline">key</code> and must return a
@@ -941,17 +991,14 @@ iex&gt; Keyword.get_and_update!([a: 1], :a, fn _ -&gt;
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_lazy(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: <a href="#t:value/0">value</a></code></pre>
+          <pre>get_lazy(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: <a href="#t:value/0">value</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value for a specific <code class="inline">key</code>.</p>
 <p>If <code class="inline">key</code> does not exist, lazily evaluates <code class="inline">fun</code> and returns its result.</p>
@@ -988,17 +1035,14 @@ iex&gt; Keyword.get_lazy(keyword, :b, fun)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_values(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: [<a href="#t:value/0">value</a>]</code></pre>
+          <pre>get_values(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: [<a href="#t:value/0">value</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets all values for a specific <code class="inline">key</code>.</p>
 <h2 id="get_values/2-examples" class="section-heading">
@@ -1027,17 +1071,14 @@ iex&gt; Keyword.get_values([a: 1, a: 2], :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">has_key?(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: boolean</code></pre>
+          <pre>has_key?(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns whether a given <code class="inline">key</code> exists in the given <code class="inline">keywords</code>.</p>
 <h2 id="has_key?/2-examples" class="section-heading">
@@ -1064,17 +1105,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keys(<a href="#t:t/0">t</a>) :: [<a href="#t:key/0">key</a>]</code></pre>
+          <pre>keys(<a href="#t:t/0">t</a>) :: [<a href="#t:key/0">key</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all keys from the keyword list.</p>
 <p>Duplicated keys appear duplicated in the final list of keys.</p>
@@ -1102,17 +1140,14 @@ iex&gt; Keyword.keys([a: 1, b: 2, a: 3])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keyword?(term) :: boolean</code></pre>
+          <pre>keyword?(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a keyword list; otherwise returns <code class="inline">false</code>.</p>
 <h2 id="keyword?/1-examples" class="section-heading">
@@ -1147,17 +1182,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">merge(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>merge(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Merges two keyword lists into one.</p>
 <p>All keys, including duplicated keys, given in <code class="inline">keywords2</code> will be added
@@ -1188,17 +1220,14 @@ iex&gt; Keyword.merge([a: 1, b: 2], [a: 3, d: 4, a: 5])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">merge(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, (<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, <a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>merge(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>, (<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, <a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Merges two keyword lists into one.</p>
 <p>All keys, including duplicated keys, given in <code class="inline">keywords2</code> will be added
@@ -1240,17 +1269,14 @@ iex&gt; Keyword.merge([a: 1, b: 2, a: 3], [a: 3, d: 4, a: 5], fn :a, v1, v2 -&gt
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new :: []</code></pre>
+          <pre>new :: []</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an empty keyword list, i.e. an empty list.</p>
 <h2 id="new/0-examples" class="section-heading">
@@ -1275,17 +1301,14 @@ iex&gt; Keyword.merge([a: 1, b: 2, a: 3], [a: 3, d: 4, a: 5], fn :a, v1, v2 -&gt
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Enum.html#t:t/0">Enum.t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>new(<a href="Enum.html#t:t/0">Enum.t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a keyword from an enumerable.</p>
 <p>Duplicated entries are removed, the latest one prevails.
@@ -1316,17 +1339,14 @@ iex&gt; Keyword.new([{:a, 1}, {:a, 2}, {:a, 3}])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Enum.html#t:t/0">Enum.t</a>, (term -> {<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>})) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>new(<a href="Enum.html#t:t/0">Enum.t</a>, (term -> {<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>})) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a keyword from an enumerable via the transformation function.</p>
 <p>Duplicated entries are removed, the latest one prevails.
@@ -1354,17 +1374,14 @@ Unlike <code class="inline">Enum.into(enumerable, [], fun)</code>,
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>pop(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns and removes all values associated with <code class="inline">key</code> in the keyword list.</p>
 <p>All duplicated keys are removed. See <a href="#pop_first/3"><code class="inline">pop_first/3</code></a> for
@@ -1397,17 +1414,14 @@ iex&gt; Keyword.pop([a: 1, a: 2], :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop_first(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>pop_first(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns and removes the first value associated with <code class="inline">key</code> in the keyword list.</p>
 <p>Duplicated keys are not removed.</p>
@@ -1439,17 +1453,14 @@ iex&gt; Keyword.pop_first([a: 1, a: 2], :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop_lazy(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>pop_lazy(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: {<a href="#t:value/0">value</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Lazily returns and removes all values associated with <code class="inline">key</code> in the keyword list.</p>
 <p>This is useful if the default value is very expensive to calculate or
@@ -1485,17 +1496,14 @@ iex&gt; Keyword.pop_lazy(keyword, :b, fun)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>put(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Puts the given <code class="inline">value</code> under <code class="inline">key</code>.</p>
 <p>If a previous value is already stored, all entries are
@@ -1526,17 +1534,14 @@ iex&gt; Keyword.put([a: 1, b: 2, a: 4], :a, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_new(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>put_new(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Puts the given <code class="inline">value</code> under <code class="inline">key</code> unless the entry <code class="inline">key</code>
 already exists.</p>
@@ -1564,17 +1569,14 @@ iex&gt; Keyword.put_new([a: 1, b: 2], :a, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_new_lazy(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>put_new_lazy(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Evaluates <code class="inline">fun</code> and puts the result under <code class="inline">key</code>
 in keyword list unless <code class="inline">key</code> is already present.</p>
@@ -1609,17 +1611,14 @@ iex&gt; Keyword.put_new_lazy(keyword, :b, fun)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(<a href="#t:t/0">t</a>, [<a href="#t:key/0">key</a>]) :: {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>}</code></pre>
+          <pre>split(<a href="#t:t/0">t</a>, [<a href="#t:key/0">key</a>]) :: {<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Takes all entries corresponding to the given keys and extracts them into a
 separate keyword list.</p>
@@ -1650,17 +1649,14 @@ iex&gt; Keyword.split([a: 1, b: 2, c: 3, a: 4], [:a, :c, :e])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">take(<a href="#t:t/0">t</a>, [<a href="#t:key/0">key</a>]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>take(<a href="#t:t/0">t</a>, [<a href="#t:key/0">key</a>]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Takes all entries corresponding to the given keys and returns them in a new
 keyword list.</p>
@@ -1689,17 +1685,14 @@ iex&gt; Keyword.take([a: 1, b: 2, c: 3, a: 5], [:a, :c, :e])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_list(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>to_list(<a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the keyword list itself.</p>
 <h2 id="to_list/1-examples" class="section-heading">
@@ -1724,17 +1717,14 @@ iex&gt; Keyword.take([a: 1, b: 2, c: 3, a: 5], [:a, :c, :e])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>update(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates the <code class="inline">key</code> in <code class="inline">keywords</code> with the given function.</p>
 <p>If the <code class="inline">key</code> does not exist, inserts the given <code class="inline">initial</code> value.</p>
@@ -1766,19 +1756,16 @@ iex&gt; Keyword.update([a: 1], :b, 11, &amp;(&amp;1 * 2))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update!(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
+          <pre>update!(<a href="#t:t/0">t</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
   <a href="#t:t/0">t</a> |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates the <code class="inline">key</code> with the given function.</p>
 <p>If the <code class="inline">key</code> does not exist, raises <a href="KeyError.html"><code class="inline">KeyError</code></a>.</p>
@@ -1811,17 +1798,14 @@ iex&gt; Keyword.update!([a: 1], :b, &amp;(&amp;1 * 2))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">values(<a href="#t:t/0">t</a>) :: [<a href="#t:value/0">value</a>]</code></pre>
+          <pre>values(<a href="#t:t/0">t</a>) :: [<a href="#t:value/0">value</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all values from the keyword list.</p>
 <p>Values from duplicated keys will be kept in the final list of values.</p>

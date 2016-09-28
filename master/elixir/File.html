@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>File – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/File.html" />
     
@@ -718,12 +718,46 @@ Returns <code class="inline">:ok</code> otherwise</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:io_device/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:io_device/0">io_device</a> :: :file.io_device</code></pre>
-  
+            <div class="detail" id="t:io_device/0">
+  <div class="detail-header">
+    <a href="#t:io_device/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">io_device()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/file.ex#L76" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:io_device/0">io_device</a> :: :file.io_device</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:mode/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:mode/0">mode</a> ::
+<div class="detail" id="t:mode/0">
+  <div class="detail-header">
+    <a href="#t:mode/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">mode()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/file.ex#L78" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:mode/0">mode</a> ::
   :append |
   :binary |
   :charlist |
@@ -738,16 +772,62 @@ Returns <code class="inline">:ok</code> otherwise</p>
   :write |
   {:encoding, :latin1 | :unicode | :utf8 | :utf16 | :utf32 | {:utf16, :big | :little} | {:utf32, :big | :little}} |
   {:read_ahead, pos_integer} |
-  {:delayed_write, non_neg_integer, non_neg_integer}</code></pre>
-  
+  {:delayed_write, non_neg_integer, non_neg_integer}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:posix/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:posix/0">posix</a> :: :file.posix</code></pre>
-  
+<div class="detail" id="t:posix/0">
+  <div class="detail-header">
+    <a href="#t:posix/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">posix()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/file.ex#L75" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:posix/0">posix</a> :: :file.posix</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:stat_options/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:stat_options/0">stat_options</a> :: [{:time, :local | :universal | :posix}]</code></pre>
-  
+<div class="detail" id="t:stat_options/0">
+  <div class="detail-header">
+    <a href="#t:stat_options/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stat_options()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/file.ex#L77" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:stat_options/0">stat_options</a> :: [{:time, :local | :universal | :posix}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -774,17 +854,14 @@ Returns <code class="inline">:ok</code> otherwise</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cd(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>cd(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sets the current working directory.</p>
 <p>Returns <code class="inline">:ok</code> if successful, <code class="inline">{:error, reason}</code> otherwise.</p>
@@ -803,17 +880,14 @@ Returns <code class="inline">:ok</code> otherwise</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cd!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</code></pre>
+          <pre>cd!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#cd/1"><code class="inline">cd/1</code></a>, but raises an exception if it fails.</p>
 
@@ -831,19 +905,16 @@ Returns <code class="inline">:ok</code> otherwise</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cd!(<a href="Path.html#t:t/0">Path.t</a>, (() -> res)) ::
+          <pre>cd!(<a href="Path.html#t:t/0">Path.t</a>, (() -> res)) ::
   res |
-  no_return when res: var</code></pre>
+  no_return when res: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Changes the current directory to the given <code class="inline">path</code>,
 executes the given function and then reverts back
@@ -865,19 +936,16 @@ directory fails.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chgrp(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
+          <pre>chgrp(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Changes the group given by the group id <code class="inline">gid</code>
 for a given <code class="inline">file</code>. Returns <code class="inline">:ok</code> on success, or
@@ -897,17 +965,14 @@ for a given <code class="inline">file</code>. Returns <code class="inline">:ok</
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chgrp!(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | no_return</code></pre>
+          <pre>chgrp!(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#chgrp/2"><code class="inline">chgrp/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -925,19 +990,16 @@ for a given <code class="inline">file</code>. Returns <code class="inline">:ok</
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chmod(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
+          <pre>chmod(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Changes the <code class="inline">mode</code> for a given <code class="inline">file</code>.</p>
 <p>Returns <code class="inline">:ok</code> on success, or <code class="inline">{:error, reason}</code> on failure.</p>
@@ -985,17 +1047,14 @@ and others.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chmod!(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | no_return</code></pre>
+          <pre>chmod!(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#chmod/2"><code class="inline">chmod/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -1013,19 +1072,16 @@ and others.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chown(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
+          <pre>chown(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Changes the owner given by the user id <code class="inline">uid</code>
 for a given <code class="inline">file</code>. Returns <code class="inline">:ok</code> on success,
@@ -1045,17 +1101,14 @@ or <code class="inline">{:error, reason}</code> on failure.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">chown!(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | no_return</code></pre>
+          <pre>chown!(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#chown/2"><code class="inline">chown/2</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -1073,19 +1126,16 @@ or <code class="inline">{:error, reason}</code> on failure.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">close(<a href="#t:io_device/0">io_device</a>) ::
+          <pre>close(<a href="#t:io_device/0">io_device</a>) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a> | :badarg | :terminated}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a> | :badarg | :terminated}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Closes the file referenced by <code class="inline">io_device</code>. It mostly returns <code class="inline">:ok</code>, except
 for some severe errors such as out of memory.</p>
@@ -1107,19 +1157,16 @@ See <a href="#open/2"><code class="inline">open/2</code></a>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">copy(<a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, <a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, pos_integer | :infinity) ::
+          <pre>copy(<a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, <a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, pos_integer | :infinity) ::
   {:ok, non_neg_integer} |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Copies the contents of <code class="inline">source</code> to <code class="inline">destination</code>.</p>
 <p>Both parameters can be a filename or an IO device opened
@@ -1151,19 +1198,16 @@ the file mode after copy.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">copy!(<a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, <a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, pos_integer | :infinity) ::
+          <pre>copy!(<a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, <a href="Path.html#t:t/0">Path.t</a> | <a href="#t:io_device/0">io_device</a>, pos_integer | :infinity) ::
   non_neg_integer |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#copy/3"><code class="inline">copy/3</code></a> but raises an <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
 Returns the <code class="inline">bytes_copied</code> otherwise.</p>
@@ -1182,19 +1226,16 @@ Returns the <code class="inline">bytes_copied</code> otherwise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cp(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
+          <pre>cp(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Copies the contents in <code class="inline">source</code> to <code class="inline">destination</code> preserving its mode.</p>
 <p>If a file already exists in the destination, it invokes a
@@ -1224,19 +1265,16 @@ error will be returned.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cp!(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
+          <pre>cp!(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
   :ok |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#cp/3"><code class="inline">cp/3</code></a>, but raises <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
 Returns <code class="inline">:ok</code> otherwise.</p>
@@ -1255,19 +1293,16 @@ Returns <code class="inline">:ok</code> otherwise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cp_r(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
+          <pre>cp_r(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
   {:ok, [binary]} |
-  {:error, <a href="#t:posix/0">posix</a>, binary}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>, binary}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Copies the contents in source to destination.</p>
 <p>If the source is a file, it copies <code class="inline">source</code> to
@@ -1320,19 +1355,16 @@ end</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cp_r!(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
+          <pre>cp_r!(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>, (<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a> -> boolean)) ::
   [binary] |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#cp_r/3"><code class="inline">cp_r/3</code></a>, but raises <a href="File.CopyError.html"><code class="inline">File.CopyError</code></a> if it fails.
 Returns the list of copied files otherwise.</p>
@@ -1351,17 +1383,14 @@ Returns the list of copied files otherwise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cwd :: {:ok, binary} | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>cwd :: {:ok, binary} | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the current working directory.</p>
 <p>In rare circumstances, this function can fail on Unix. It may happen
@@ -1383,17 +1412,14 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cwd! :: binary | no_return</code></pre>
+          <pre>cwd! :: binary | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#cwd/0"><code class="inline">cwd/0</code></a>, but raises an exception if it fails.</p>
 
@@ -1411,17 +1437,14 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">dir?(<a href="Path.html#t:t/0">Path.t</a>) :: boolean</code></pre>
+          <pre>dir?(<a href="Path.html#t:t/0">Path.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the path is a directory.</p>
 
@@ -1439,17 +1462,14 @@ of success, <code class="inline">{:error, reason}</code> otherwise.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">exists?(<a href="Path.html#t:t/0">Path.t</a>) :: boolean</code></pre>
+          <pre>exists?(<a href="Path.html#t:t/0">Path.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the given path exists.
 It can be regular file, directory, socket,
@@ -1482,8 +1502,8 @@ File.exists?(&quot;/dev/null&quot;)
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Creates a symbolic link <code class="inline">new</code> to the file or directory <code class="inline">existing</code>.</p>
 <p>Returns <code class="inline">:ok</code> if successful, <code class="inline">{:error, reason}</code> otherwise.
@@ -1504,17 +1524,14 @@ If the operating system does not support symlinks, returns
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">ls(<a href="Path.html#t:t/0">Path.t</a>) :: {:ok, [binary]} | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>ls(<a href="Path.html#t:t/0">Path.t</a>) :: {:ok, [binary]} | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the list of files in the given directory.</p>
 <p>It returns <code class="inline">{:ok, [files]}</code> in case of success,
@@ -1534,17 +1551,14 @@ If the operating system does not support symlinks, returns
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">ls!(<a href="Path.html#t:t/0">Path.t</a>) :: [binary] | no_return</code></pre>
+          <pre>ls!(<a href="Path.html#t:t/0">Path.t</a>) :: [binary] | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The same as <a href="#ls/1"><code class="inline">ls/1</code></a> but raises <a href="File.Error.html"><code class="inline">File.Error</code></a>
 in case of an error.</p>
@@ -1563,19 +1577,16 @@ in case of an error.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">lstat(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
+          <pre>lstat(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
   {:ok, <a href="File.Stat.html#t:t/0">File.Stat.t</a>} |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns information about the <code class="inline">path</code>. If the file is a symlink, sets
 the <code class="inline">type</code> to <code class="inline">:symlink</code> and returns a <a href="File.Stat.html"><code class="inline">File.Stat</code></a> struct for the link. For any
@@ -1615,19 +1626,16 @@ other file, returns exactly the same values as <a href="#stat/2"><code class="in
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">lstat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
+          <pre>lstat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
   <a href="File.Stat.html#t:t/0">File.Stat.t</a> |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#lstat/2"><code class="inline">lstat/2</code></a> but returns the <a href="File.Stat.html"><code class="inline">File.Stat</code></a> struct directly and
 throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if an error is returned.</p>
@@ -1646,17 +1654,14 @@ throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if a
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">mkdir(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>mkdir(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Tries to create the directory <code class="inline">path</code>. Missing parent directories are not created.
 Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs.</p>
@@ -1690,17 +1695,14 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">mkdir!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</code></pre>
+          <pre>mkdir!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#mkdir/1"><code class="inline">mkdir/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -1718,17 +1720,14 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">mkdir_p(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>mkdir_p(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Tries to create the directory <code class="inline">path</code>. Missing parent directories are created.
 Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs.</p>
@@ -1757,17 +1756,14 @@ directories of <code class="inline">path</code>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">mkdir_p!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</code></pre>
+          <pre>mkdir_p!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#mkdir_p/1"><code class="inline">mkdir_p/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -1785,23 +1781,20 @@ directories of <code class="inline">path</code>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">open(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram]) ::
+          <pre>open(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram]) ::
   {:ok, <a href="#t:io_device/0">io_device</a>} |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
-          <pre><code class="elixir">open(<a href="Path.html#t:t/0">Path.t</a>, (<a href="#t:io_device/0">io_device</a> -> res)) ::
+          <pre>open(<a href="Path.html#t:t/0">Path.t</a>, (<a href="#t:io_device/0">io_device</a> -> res)) ::
   {:ok, res} |
-  {:error, <a href="#t:posix/0">posix</a>} when res: var</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>} when res: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Opens the given <code class="inline">path</code> according to the given list of <code class="inline">modes</code>.</p>
 <p>In order to write and read files, one must use the functions
@@ -1886,19 +1879,16 @@ File.close(file)</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">open(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram], (<a href="#t:io_device/0">io_device</a> -> res)) ::
+          <pre>open(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram], (<a href="#t:io_device/0">io_device</a> -> res)) ::
   {:ok, res} |
-  {:error, <a href="#t:posix/0">posix</a>} when res: var</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>} when res: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Similar to <a href="#open/2"><code class="inline">open/2</code></a> but expects a function as its last argument.</p>
 <p>The file is opened, given to the function as an argument and
@@ -1933,17 +1923,14 @@ end)</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">open!(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a>]) :: <a href="#t:io_device/0">io_device</a> | no_return</code></pre>
+          <pre>open!(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a>]) :: <a href="#t:io_device/0">io_device</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#open/2"><code class="inline">open/2</code></a> but raises an error if file could not be opened.</p>
 <p>Returns the <code class="inline">io_device</code> otherwise.</p>
@@ -1962,19 +1949,16 @@ end)</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">open!(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram], (<a href="#t:io_device/0">io_device</a> -> res)) ::
+          <pre>open!(<a href="Path.html#t:t/0">Path.t</a>, [<a href="#t:mode/0">mode</a> | :ram], (<a href="#t:io_device/0">io_device</a> -> res)) ::
   res |
-  no_return when res: var</code></pre>
+  no_return when res: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#open/3"><code class="inline">open/3</code></a> but raises an error if file could not be opened.</p>
 <p>Returns the function result otherwise.</p>
@@ -1993,17 +1977,14 @@ end)</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">read(<a href="Path.html#t:t/0">Path.t</a>) :: {:ok, binary} | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>read(<a href="Path.html#t:t/0">Path.t</a>) :: {:ok, binary} | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">{:ok, binary}</code>, where <code class="inline">binary</code> is a binary data object that contains the contents
 of <code class="inline">path</code>, or <code class="inline">{:error, reason}</code> if an error occurs.</p>
@@ -2038,17 +2019,14 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">read!(<a href="Path.html#t:t/0">Path.t</a>) :: binary | no_return</code></pre>
+          <pre>read!(<a href="Path.html#t:t/0">Path.t</a>) :: binary | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a binary with the contents of the given filename or raises
 <a href="File.Error.html"><code class="inline">File.Error</code></a> if an error occurs.</p>
@@ -2067,17 +2045,14 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">regular?(<a href="Path.html#t:t/0">Path.t</a>) :: boolean</code></pre>
+          <pre>regular?(<a href="Path.html#t:t/0">Path.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the path is a regular file.</p>
 <h2 id="regular?/1-examples" class="section-heading">
@@ -2101,17 +2076,14 @@ on some platforms, <code class="inline">:enoent</code> is returned instead
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rename(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>rename(<a href="Path.html#t:t/0">Path.t</a>, <a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Renames the <code class="inline">source</code> file to <code class="inline">destination</code> file.  It can be used to move files
 (and directories) between directories.  If moving a file, you must fully
@@ -2146,17 +2118,14 @@ File.rename &quot;samples&quot;, &quot;tmp&quot;</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rm(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>rm(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Tries to delete the file <code class="inline">path</code>.</p>
 <p>Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs.</p>
@@ -2200,17 +2169,14 @@ File.rm(&quot;tmp_dir/&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rm!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</code></pre>
+          <pre>rm!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#rm/1"><code class="inline">rm/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -2228,19 +2194,16 @@ File.rm(&quot;tmp_dir/&quot;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rm_rf(<a href="Path.html#t:t/0">Path.t</a>) ::
+          <pre>rm_rf(<a href="Path.html#t:t/0">Path.t</a>) ::
   {:ok, [binary]} |
-  {:error, <a href="#t:posix/0">posix</a>, binary}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>, binary}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Removes files and directories recursively at the given <code class="inline">path</code>.
 Symlinks are not followed but simply removed, non-existing
@@ -2273,17 +2236,14 @@ File.rm_rf &quot;unknown&quot;
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rm_rf!(<a href="Path.html#t:t/0">Path.t</a>) :: [binary] | no_return</code></pre>
+          <pre>rm_rf!(<a href="Path.html#t:t/0">Path.t</a>) :: [binary] | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#rm_rf/1"><code class="inline">rm_rf/1</code></a> but raises <a href="File.Error.html"><code class="inline">File.Error</code></a> in case of failures,
 otherwise the list of files or directories removed.</p>
@@ -2302,17 +2262,14 @@ otherwise the list of files or directories removed.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rmdir(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>rmdir(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Tries to delete the dir at <code class="inline">path</code>.
 Returns <code class="inline">:ok</code> if successful, or <code class="inline">{:error, reason}</code> if an error occurs.</p>
@@ -2341,17 +2298,14 @@ File.rmdir(&#39;file.txt&#39;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rmdir!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+          <pre>rmdir!(<a href="Path.html#t:t/0">Path.t</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#rmdir/1"><code class="inline">rmdir/1</code></a>, but raises an exception in case of failure. Otherwise <code class="inline">:ok</code>.</p>
 
@@ -2369,19 +2323,16 @@ File.rmdir(&#39;file.txt&#39;)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">stat(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
+          <pre>stat(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
   {:ok, <a href="File.Stat.html#t:t/0">File.Stat.t</a>} |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns information about the <code class="inline">path</code>. If it exists, it
 returns a <code class="inline">{:ok, info}</code> tuple, where info is a
@@ -2422,19 +2373,16 @@ machine
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">stat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
+          <pre>stat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
   <a href="File.Stat.html#t:t/0">File.Stat.t</a> |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#stat/2"><code class="inline">stat/2</code></a> but returns the <a href="File.Stat.html"><code class="inline">File.Stat</code></a> directly and
 throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if an error is returned.</p>
@@ -2453,8 +2401,8 @@ throws <a href="File.Error.html"><code class="inline">File.Error</code></a> if a
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns a <a href="File.Stream.html"><code class="inline">File.Stream</code></a> for the given <code class="inline">path</code> with the given <code class="inline">modes</code>.</p>
 <p>The stream implements both <a href="Enumerable.html"><code class="inline">Enumerable</code></a> and <a href="Collectable.html"><code class="inline">Collectable</code></a> protocols,
@@ -2505,19 +2453,16 @@ File.stream!(&quot;./test/test.data&quot;, [], 2048)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">touch(<a href="Path.html#t:t/0">Path.t</a>, :calendar.datetime) ::
+          <pre>touch(<a href="Path.html#t:t/0">Path.t</a>, :calendar.datetime) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates modification time (mtime) and access time (atime) of
 the given file.</p>
@@ -2537,17 +2482,14 @@ the given file.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">touch!(<a href="Path.html#t:t/0">Path.t</a>, :calendar.datetime) :: :ok | no_return</code></pre>
+          <pre>touch!(<a href="Path.html#t:t/0">Path.t</a>, :calendar.datetime) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#touch/2"><code class="inline">touch/2</code></a> but raises an exception if it fails.</p>
 <p>Returns <code class="inline">:ok</code> otherwise. Requires datetime in UTC.</p>
@@ -2566,19 +2508,16 @@ the given file.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">write(<a href="Path.html#t:t/0">Path.t</a>, iodata, [<a href="#t:mode/0">mode</a>]) ::
+          <pre>write(<a href="Path.html#t:t/0">Path.t</a>, iodata, [<a href="#t:mode/0">mode</a>]) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes <code class="inline">content</code> to the file <code class="inline">path</code>.</p>
 <p>The file is created if it does not exist. If it exists, the previous
@@ -2620,17 +2559,14 @@ the parent directories
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">write!(<a href="Path.html#t:t/0">Path.t</a>, iodata, [<a href="#t:mode/0">mode</a>]) :: :ok | no_return</code></pre>
+          <pre>write!(<a href="Path.html#t:t/0">Path.t</a>, iodata, [<a href="#t:mode/0">mode</a>]) :: :ok | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#write/3"><code class="inline">write/3</code></a> but raises an exception if it fails, returns <code class="inline">:ok</code> otherwise.</p>
 
@@ -2648,19 +2584,16 @@ the parent directories
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">write_stat(<a href="Path.html#t:t/0">Path.t</a>, <a href="File.Stat.html#t:t/0">File.Stat.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
+          <pre>write_stat(<a href="Path.html#t:t/0">Path.t</a>, <a href="File.Stat.html#t:t/0">File.Stat.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
   :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</code></pre>
+  {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Writes the given <a href="File.Stat.html"><code class="inline">File.Stat</code></a> back to the filesystem at the given
 path. Returns <code class="inline">:ok</code> or <code class="inline">{:error, reason}</code>.</p>
@@ -2679,19 +2612,16 @@ path. Returns <code class="inline">:ok</code> or <code class="inline">{:error, r
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">write_stat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="File.Stat.html#t:t/0">File.Stat.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
+          <pre>write_stat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="File.Stat.html#t:t/0">File.Stat.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
   :ok |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Same as <a href="#write_stat/3"><code class="inline">write_stat/3</code></a> but raises an exception if it fails.
 Returns <code class="inline">:ok</code> otherwise.</p>

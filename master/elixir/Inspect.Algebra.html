@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Inspect.Algebra – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Inspect.Algebra.html" />
     
@@ -328,16 +328,36 @@ according to the inspect protocol</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> ::
+            <div class="detail" id="t:t/0">
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/inspect/algebra.ex#L156" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> ::
   :doc_nil |
   :doc_line |
   doc_cons |
   doc_nest |
   doc_break |
   doc_group |
-  binary</code></pre>
-  
+  binary</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -364,17 +384,14 @@ according to the inspect protocol</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">break :: doc_break</code></pre>
+          <pre>break :: doc_break</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     
   </section>
@@ -391,17 +408,14 @@ according to the inspect protocol</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">break(binary) :: doc_break</code></pre>
+          <pre>break(binary) :: doc_break</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Document entity representing a break.</p>
 <p>This break can be rendered as a linebreak or as spaces,
@@ -436,17 +450,14 @@ iex&gt; Inspect.Algebra.format(doc, 10)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">concat([<a href="#t:t/0">t</a>]) :: doc_cons</code></pre>
+          <pre>concat([<a href="#t:t/0">t</a>]) :: doc_cons</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates a list of documents.</p>
 
@@ -464,17 +475,14 @@ iex&gt; Inspect.Algebra.format(doc, 10)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">concat(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</code></pre>
+          <pre>concat(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates two document entities.</p>
 <h2 id="concat/2-examples" class="section-heading">
@@ -500,17 +508,14 @@ iex&gt; Inspect.Algebra.format(doc, 80)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">empty :: :doc_nil</code></pre>
+          <pre>empty :: :doc_nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a document entity used to represent nothingness.</p>
 <h2 id="empty/0-examples" class="section-heading">
@@ -535,17 +540,14 @@ iex&gt; Inspect.Algebra.format(doc, 80)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fold_doc([<a href="#t:t/0">t</a>], (<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a> -> <a href="#t:t/0">t</a>)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>fold_doc([<a href="#t:t/0">t</a>], (<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a> -> <a href="#t:t/0">t</a>)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Folds a list of document entities into a document entity
 using a function that is passed as the first argument.</p>
@@ -575,17 +577,14 @@ iex&gt; Inspect.Algebra.format(doc, 80)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format(<a href="#t:t/0">t</a>, non_neg_integer | :infinity) :: iodata</code></pre>
+          <pre>format(<a href="#t:t/0">t</a>, non_neg_integer | :infinity) :: iodata</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>The formatting function.</p>
 <p>Takes the maximum width and a document to print as its arguments
@@ -606,17 +605,14 @@ document to fit in the given width.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">glue(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</code></pre>
+          <pre>glue(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inserts a break between two docs. See <a href="#break/1"><code class="inline">break/1</code></a> for more info.</p>
 
@@ -634,17 +630,14 @@ document to fit in the given width.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">glue(<a href="#t:t/0">t</a>, binary, <a href="#t:t/0">t</a>) :: doc_cons</code></pre>
+          <pre>glue(<a href="#t:t/0">t</a>, binary, <a href="#t:t/0">t</a>) :: doc_cons</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inserts a break, passed as the second argument, between two docs,
 the first and the third arguments.</p>
@@ -663,17 +656,14 @@ the first and the third arguments.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">group(<a href="#t:t/0">t</a>) :: doc_group</code></pre>
+          <pre>group(<a href="#t:t/0">t</a>) :: doc_group</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a group containing the specified document.</p>
 <h2 id="group/1-examples" class="section-heading">
@@ -716,17 +706,14 @@ iex&gt; Inspect.Algebra.format(doc, 6)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">line(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</code></pre>
+          <pre>line(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inserts a mandatory linebreak between two document entities.</p>
 <h2 id="line/2-examples" class="section-heading">
@@ -752,17 +739,14 @@ iex&gt; Inspect.Algebra.format(doc, 80)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">nest(<a href="#t:t/0">t</a>, non_neg_integer) :: doc_nest</code></pre>
+          <pre>nest(<a href="#t:t/0">t</a>, non_neg_integer) :: doc_nest</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Nests document entity <code class="inline">x</code> positions deep.</p>
 <p>Nesting will be appended to the line breaks.</p>
@@ -789,17 +773,14 @@ iex&gt; Inspect.Algebra.format(doc, 5)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">space(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</code></pre>
+          <pre>space(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: doc_cons</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inserts a mandatory single space between two document entities.</p>
 <h2 id="space/2-examples" class="section-heading">
@@ -825,17 +806,14 @@ iex&gt; Inspect.Algebra.format(doc, 80)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">surround(binary, <a href="#t:t/0">t</a>, binary) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>surround(binary, <a href="#t:t/0">t</a>, binary) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Surrounds a document with characters.</p>
 <p>Puts the document between left and right enclosing and nesting it.
@@ -864,17 +842,14 @@ iex&gt; Inspect.Algebra.format(doc, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">surround_many(binary, [any], binary, <a href="Inspect.Opts.html#t:t/0">Inspect.Opts.t</a>, (term, <a href="Inspect.Opts.html#t:t/0">Inspect.Opts.t</a> -> <a href="#t:t/0">t</a>), binary) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>surround_many(binary, [any], binary, <a href="Inspect.Opts.html#t:t/0">Inspect.Opts.t</a>, (term, <a href="Inspect.Opts.html#t:t/0">Inspect.Opts.t</a> -> <a href="#t:t/0">t</a>), binary) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Maps and glues a collection of items.</p>
 <p>It uses the given left and right as surrounding and a separator for
@@ -914,17 +889,14 @@ iex&gt; Inspect.Algebra.format(doc, 20) |&gt; IO.iodata_to_binary
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_doc(any, <a href="Inspect.Opts.html#t:t/0">Inspect.Opts.t</a>) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>to_doc(any, <a href="Inspect.Opts.html#t:t/0">Inspect.Opts.t</a>) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts an Elixir structure to an algebra document
 according to the inspect protocol.</p>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
     <title>Map – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-4633c43f98.css" />
+    <link rel="stylesheet" href="dist/app-ccbca54915.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/Map.html" />
     
@@ -469,13 +469,53 @@ is in <code class="inline">keys</code></p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:key/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:key/0">key</a> :: any</code></pre>
-  
+            <div class="detail" id="t:key/0">
+  <div class="detail-header">
+    <a href="#t:key/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">key()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map.ex#L95" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:key/0">key</a> :: any</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
-<div id="t:value/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:value/0">value</a> :: any</code></pre>
-  
+<div class="detail" id="t:value/0">
+  <div class="detail-header">
+    <a href="#t:value/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">value()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map.ex#L96" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:value/0">value</a> :: any</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -502,17 +542,14 @@ is in <code class="inline">keys</code></p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete(map, <a href="#t:key/0">key</a>) :: map</code></pre>
+          <pre>delete(map, <a href="#t:key/0">key</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes the entry in <code class="inline">map</code> for a specific <code class="inline">key</code>.</p>
 <p>If the <code class="inline">key</code> does not exist, returns <code class="inline">map</code> unchanged.</p>
@@ -540,17 +577,14 @@ iex&gt; Map.delete(%{b: 2}, :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">drop(map, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: map</code></pre>
+          <pre>drop(map, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Drops the given <code class="inline">keys</code> from <code class="inline">map</code>.</p>
 <p>If <code class="inline">keys</code> contains keys that are not in <code class="inline">map</code>, they’re simply ignored.</p>
@@ -576,17 +610,14 @@ iex&gt; Map.delete(%{b: 2}, :a)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">equal?(map, map) :: boolean</code></pre>
+          <pre>equal?(map, map) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Checks if two maps are equal.</p>
 <p>Two maps are considered to be equal if they contain
@@ -615,17 +646,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetch(map, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</code></pre>
+          <pre>fetch(map, <a href="#t:key/0">key</a>) :: {:ok, <a href="#t:value/0">value</a>} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Fetches the value for a specific <code class="inline">key</code> in the given <code class="inline">map</code>.</p>
 <p>If <code class="inline">map</code> contains the given <code class="inline">key</code> with value <code class="inline">value</code>, then <code class="inline">{:ok, value}</code> is
@@ -654,17 +682,14 @@ iex&gt; Map.fetch(%{a: 1}, :b)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">fetch!(map, <a href="#t:key/0">key</a>) :: <a href="#t:value/0">value</a> | no_return</code></pre>
+          <pre>fetch!(map, <a href="#t:key/0">key</a>) :: <a href="#t:value/0">value</a> | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Fetches the value for a specific <code class="inline">key</code> in the given <code class="inline">map</code>, erroring out if
 <code class="inline">map</code> doesn’t contain <code class="inline">key</code>.</p>
@@ -694,17 +719,14 @@ iex&gt; Map.fetch!(%{a: 1}, :b)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">from_struct(atom | struct) :: map</code></pre>
+          <pre>from_struct(atom | struct) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts a <code class="inline">struct</code> to map.</p>
 <p>It accepts the struct module or a struct itself and
@@ -739,17 +761,14 @@ Map.from_struct(%User{name: &quot;john&quot;})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></code></pre>
+          <pre>get(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: <a href="#t:value/0">value</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value for a specific <code class="inline">key</code> in <code class="inline">map</code>.</p>
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, then <code class="inline">value</code> is
@@ -783,17 +802,14 @@ iex&gt; Map.get(%{a: 1}, :b, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update(map, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>} | :pop)) :: {get, map} when get: term</code></pre>
+          <pre>get_and_update(map, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>} | :pop)) :: {get, map} when get: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value from <code class="inline">key</code> and updates it, all in one pass.</p>
 <p><code class="inline">fun</code> is called with the current value under <code class="inline">key</code> in <code class="inline">map</code> (or <code class="inline">nil</code> if <code class="inline">key</code>
@@ -839,19 +855,16 @@ iex&gt; Map.get_and_update(%{a: 1}, :b, fn _ -&gt; :pop end)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update!(map, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) ::
+          <pre>get_and_update!(map, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> {get, <a href="#t:value/0">value</a>})) ::
   {get, map} |
-  no_return when get: term</code></pre>
+  no_return when get: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value from <code class="inline">key</code> and updates it. Raises if there is no <code class="inline">key</code>.</p>
 <p>Behaves exactly like <a href="#get_and_update/3"><code class="inline">get_and_update/3</code></a>, but raises a <a href="KeyError.html"><code class="inline">KeyError</code></a> exception if
@@ -890,17 +903,14 @@ iex&gt; Map.get_and_update!(%{a: 1}, :a, fn _ -&gt;
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_lazy(map, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: <a href="#t:value/0">value</a></code></pre>
+          <pre>get_lazy(map, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: <a href="#t:value/0">value</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the value for a specific <code class="inline">key</code> in <code class="inline">map</code>.</p>
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, then <code class="inline">value</code> is
@@ -936,17 +946,14 @@ iex&gt; Map.get_lazy(map, :b, fun)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">has_key?(map, <a href="#t:key/0">key</a>) :: boolean</code></pre>
+          <pre>has_key?(map, <a href="#t:key/0">key</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns whether the given <code class="inline">key</code> exists in the given <code class="inline">map</code>.</p>
 <h2 id="has_key?/2-examples" class="section-heading">
@@ -973,17 +980,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">keys(map) :: [<a href="#t:key/0">key</a>]</code></pre>
+          <pre>keys(map) :: [<a href="#t:key/0">key</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all keys from <code class="inline">map</code>.</p>
 <h2 id="keys/1-examples" class="section-heading">
@@ -1008,17 +1012,14 @@ false</code></pre>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">merge(map, map) :: map</code></pre>
+          <pre>merge(map, map) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Merges two maps into one.</p>
 <p>All keys in <code class="inline">map2</code> will be added to <code class="inline">map1</code>, overriding any existing one
@@ -1049,17 +1050,14 @@ use <a href="Kernel.html#struct/2"><code class="inline">Kernel.struct/2</code></
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">merge(map, map, (<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, <a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: map</code></pre>
+          <pre>merge(map, map, (<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, <a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Merges two maps into one, resolving conflicts through the given <code class="inline">callback</code>.</p>
 <p>All keys in <code class="inline">map2</code> will be added to <code class="inline">map1</code>. The given function will be invoked
@@ -1091,17 +1089,14 @@ the resulting map.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new :: map</code></pre>
+          <pre>new :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new empty map.</p>
 <h2 id="new/0-examples" class="section-heading">
@@ -1126,17 +1121,14 @@ the resulting map.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: map</code></pre>
+          <pre>new(<a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a map from an <code class="inline">enumerable</code>.</p>
 <p>Duplicated keys are removed; the latest one prevails.</p>
@@ -1164,17 +1156,14 @@ iex&gt; Map.new([a: 1, a: 2, a: 3])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">new(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (term -> {<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>})) :: map</code></pre>
+          <pre>new(<a href="Enumerable.html#t:t/0">Enumerable.t</a>, (term -> {<a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>})) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates a map from an <code class="inline">enumerable</code> via the given transformation function.</p>
 <p>Duplicated keys are removed; the latest one prevails.</p>
@@ -1200,17 +1189,14 @@ iex&gt; Map.new([a: 1, a: 2, a: 3])
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: {<a href="#t:value/0">value</a>, map}</code></pre>
+          <pre>pop(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: {<a href="#t:value/0">value</a>, map}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns and removes the value associated with <code class="inline">key</code> in <code class="inline">map</code>.</p>
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">{value, new_map}</code> is
@@ -1242,17 +1228,14 @@ iex&gt; Map.pop(%{a: 1}, :b, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop_lazy(map, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: {<a href="#t:value/0">value</a>, map}</code></pre>
+          <pre>pop_lazy(map, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: {<a href="#t:value/0">value</a>, map}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Lazily returns and removes the value associated with <code class="inline">key</code> in <code class="inline">map</code>.</p>
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">{value, new_map}</code> is
@@ -1290,17 +1273,14 @@ iex&gt; Map.pop_lazy(map, :b, fun)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: map</code></pre>
+          <pre>put(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Puts the given <code class="inline">value</code> under <code class="inline">key</code> in <code class="inline">map</code>.</p>
 <h2 id="put/3-examples" class="section-heading">
@@ -1327,17 +1307,14 @@ iex&gt; Map.put(%{a: 1, b: 2}, :a, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_new(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: map</code></pre>
+          <pre>put_new(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Puts the given <code class="inline">value</code> under <code class="inline">key</code> unless the entry <code class="inline">key</code>
 already exists in <code class="inline">map</code>.</p>
@@ -1365,17 +1342,14 @@ iex&gt; Map.put_new(%{a: 1, b: 2}, :a, 3)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_new_lazy(map, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: map</code></pre>
+          <pre>put_new_lazy(map, <a href="#t:key/0">key</a>, (() -> <a href="#t:value/0">value</a>)) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Evaluates <code class="inline">fun</code> and puts the result under <code class="inline">key</code>
 in <code class="inline">map</code> unless <code class="inline">key</code> is already present.</p>
@@ -1411,17 +1385,14 @@ iex&gt; Map.put_new_lazy(map, :b, fun)
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">split(map, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: {map, map}</code></pre>
+          <pre>split(map, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: {map, map}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Takes all entries corresponding to the given <code class="inline">keys</code> in <code class="inline">maps</code> and extracts
 them into a separate map.</p>
@@ -1449,17 +1420,14 @@ them into a separate map.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">take(map, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: map</code></pre>
+          <pre>take(map, <a href="Enumerable.html#t:t/0">Enumerable.t</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns a new map with all the key-value pairs in <code class="inline">map</code> where the key
 is in <code class="inline">keys</code>.</p>
@@ -1486,17 +1454,14 @@ is in <code class="inline">keys</code>.</p>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">to_list(map) :: [{term, term}]</code></pre>
+          <pre>to_list(map) :: [{term, term}]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Converts <code class="inline">map</code> to a list.</p>
 <p>Each key-value pair in the map is converted to a two-element tuple <code class="inline">{key,
@@ -1525,17 +1490,14 @@ iex&gt; Map.to_list(%{1 =&gt; 2})
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: map</code></pre>
+          <pre>update(map, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates the <code class="inline">key</code> in <code class="inline">map</code> with the given function.</p>
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">fun</code> is invoked with
@@ -1565,19 +1527,16 @@ iex&gt; Map.update(%{a: 1}, :b, 11, &amp;(&amp;1 * 2))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update!(map, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
+          <pre>update!(map, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
   map |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates <code class="inline">key</code> with the given function.</p>
 <p>If <code class="inline">key</code> is present in <code class="inline">map</code> with value <code class="inline">value</code>, <code class="inline">fun</code> is invoked with
@@ -1608,17 +1567,14 @@ iex&gt; Map.update!(%{a: 1}, :b, &amp;(&amp;1 * 2))
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">values(map) :: [<a href="#t:value/0">value</a>]</code></pre>
+          <pre>values(map) :: [<a href="#t:value/0">value</a>]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns all values from <code class="inline">map</code>.</p>
 <h2 id="values/1-examples" class="section-heading">
