@@ -908,9 +908,7 @@ Returns <code class="inline">:ok</code> otherwise</p>
     
       <div class="specs">
         
-          <pre>cd!(<a href="Path.html#t:t/0">Path.t</a>, (() -> res)) ::
-  res |
-  no_return when res: var</pre>
+          <pre>cd!(<a href="Path.html#t:t/0">Path.t</a>, (() -> res)) :: res | no_return when res: var</pre>
         
       </div>
     
@@ -939,9 +937,7 @@ directory fails.</p>
     
       <div class="specs">
         
-          <pre>chgrp(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
-  :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</pre>
+          <pre>chgrp(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
     
@@ -993,9 +989,7 @@ for a given <code class="inline">file</code>. Returns <code class="inline">:ok</
     
       <div class="specs">
         
-          <pre>chmod(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
-  :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</pre>
+          <pre>chmod(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
     
@@ -1075,9 +1069,7 @@ and others.</p>
     
       <div class="specs">
         
-          <pre>chown(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) ::
-  :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</pre>
+          <pre>chown(<a href="Path.html#t:t/0">Path.t</a>, non_neg_integer) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
     
@@ -1129,9 +1121,7 @@ or <code class="inline">{:error, reason}</code> on failure.</p>
     
       <div class="specs">
         
-          <pre>close(<a href="#t:io_device/0">io_device</a>) ::
-  :ok |
-  {:error, <a href="#t:posix/0">posix</a> | :badarg | :terminated}</pre>
+          <pre>close(<a href="#t:io_device/0">io_device</a>) :: :ok | {:error, <a href="#t:posix/0">posix</a> | :badarg | :terminated}</pre>
         
       </div>
     
@@ -1629,9 +1619,7 @@ other file, returns exactly the same values as <a href="#stat/2"><code class="in
     
       <div class="specs">
         
-          <pre>lstat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
-  <a href="File.Stat.html#t:t/0">File.Stat.t</a> |
-  no_return</pre>
+          <pre>lstat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) :: <a href="File.Stat.html#t:t/0">File.Stat.t</a> | no_return</pre>
         
       </div>
     
@@ -2197,9 +2185,7 @@ File.rm(&quot;tmp_dir/&quot;)
     
       <div class="specs">
         
-          <pre>rm_rf(<a href="Path.html#t:t/0">Path.t</a>) ::
-  {:ok, [binary]} |
-  {:error, <a href="#t:posix/0">posix</a>, binary}</pre>
+          <pre>rm_rf(<a href="Path.html#t:t/0">Path.t</a>) :: {:ok, [binary]} | {:error, <a href="#t:posix/0">posix</a>, binary}</pre>
         
       </div>
     
@@ -2376,9 +2362,7 @@ machine
     
       <div class="specs">
         
-          <pre>stat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) ::
-  <a href="File.Stat.html#t:t/0">File.Stat.t</a> |
-  no_return</pre>
+          <pre>stat!(<a href="Path.html#t:t/0">Path.t</a>, <a href="#t:stat_options/0">stat_options</a>) :: <a href="File.Stat.html#t:t/0">File.Stat.t</a> | no_return</pre>
         
       </div>
     
@@ -2456,9 +2440,7 @@ File.stream!(&quot;./test/test.data&quot;, [], 2048)
     
       <div class="specs">
         
-          <pre>touch(<a href="Path.html#t:t/0">Path.t</a>, :calendar.datetime) ::
-  :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</pre>
+          <pre>touch(<a href="Path.html#t:t/0">Path.t</a>, :calendar.datetime) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
     
@@ -2511,9 +2493,7 @@ the given file.</p>
     
       <div class="specs">
         
-          <pre>write(<a href="Path.html#t:t/0">Path.t</a>, iodata, [<a href="#t:mode/0">mode</a>]) ::
-  :ok |
-  {:error, <a href="#t:posix/0">posix</a>}</pre>
+          <pre>write(<a href="Path.html#t:t/0">Path.t</a>, iodata, [<a href="#t:mode/0">mode</a>]) :: :ok | {:error, <a href="#t:posix/0">posix</a>}</pre>
         
       </div>
     
