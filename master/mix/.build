@@ -61,8 +61,8 @@ Mix.Error.html
 Mix.InvalidTaskError.html
 Mix.NoProjectError.html
 Mix.NoTaskError.html
-dist/app-6a82395107.js
-dist/app-d01c909b3d.css
+dist/app-1d03670b17.js
+dist/app-493698e705.css
 fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
