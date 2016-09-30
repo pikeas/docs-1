@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.2">
+    <meta name="generator" content="ExDoc v0.14.0">
     <title>Module – Elixir v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-f8c39b9230.css" />
     
@@ -92,21 +92,18 @@ via the <code class="inline">__info__(attr)</code> function attached to each com
 
 <p>Each module can be decorated with one or more attributes. The following ones
 are currently defined by Elixir:</p>
-<ul>
-<li><p><code class="inline">@after_compile</code></p>
+<h3>@after_compile</h3>
 <p>A hook that will be invoked right after the current module is compiled.
 Accepts a module or a tuple <code class="inline">{&lt;module&gt;, &lt;function atom&gt;}</code>.
 See the “Compile callbacks” section below.</p>
-</li>
-<li><p><code class="inline">@before_compile</code></p>
+<h3>@before_compile</h3>
 <p>A hook that will be invoked before the module is compiled.
 Accepts a module or a tuple <code class="inline">{&lt;module&gt;, &lt;function/macro atom&gt;}</code>.
 See the “Compile callbacks” section below.</p>
-</li>
-<li><p><code class="inline">@behaviour</code> (notice the British spelling)</p>
+<h3>@behaviour (notice the British spelling)</h3>
 <p>Behaviours can be referenced by modules to ensure they implement
 required specific function signatures defined by <code class="inline">@callback</code>.</p>
-<p>For example, you can specify the URI.Parser behaviour as follows:</p>
+<p>For example, you can specify the <code class="inline">URI.Parser</code> behaviour as follows:</p>
 <pre><code class="elixir">defmodule URI.Parser do
   @doc &quot;Parses the given URL&quot;
   @callback parse(uri_info :: URI.t) :: URI.t
@@ -120,30 +117,12 @@ end</code></pre>
   def default_port(), do: 80
   def parse(info), do: info
 end</code></pre>
-<p>If the behaviour changes or URI.HTTP does not implement one of the
-callbacks, a warning will be raised.</p>
-<p>Specifies an OTP or user-defined behaviour.</p>
-<h3>Example</h3>
-<pre><code class="elixir">defmodule M do
-  @behaviour :gen_event
-
-  # ...
-end</code></pre>
-</li>
-<li><p><code class="inline">@callback</code>, <code class="inline">@macrocallback</code>, and <code class="inline">@optional_callbacks</code></p>
-<p>These attributes are used to define a behaviour (as shown in the
-documentation for <code class="inline">@behaviour</code> above). <code class="inline">@callback</code> defines a function
-callback, <code class="inline">@macrocallback</code> defines a macro callback, and
-<code class="inline">@optional_callbacks</code> specifies which callbacks and macrocallbacks are
-optional.</p>
-</li>
-<li><p><code class="inline">@compile</code></p>
+<p>If the behaviour changes or <code class="inline">URI.HTTP</code> does not implement
+one of the callbacks, a warning will be raised.</p>
+<h3>@compile</h3>
 <p>Defines options for module compilation. This is used to configure
 both Elixir and Erlang compilers, as any other compilation pass
-added by external tools.</p>
-<p>Multiple uses of <code class="inline">@compile</code> will accumulate instead of overriding
-previous ones. See the “Compile options” section below.</p>
-<h3>Example</h3>
+added by external tools. For example:</p>
 <pre><code class="elixir">defmodule M do
   @compile {:inline, myfun: 1}
 
@@ -151,15 +130,14 @@ previous ones. See the “Compile options” section below.</p>
     to_string(arg)
   end
 end</code></pre>
-</li>
-<li><p><code class="inline">@doc</code></p>
+<p>Multiple uses of <code class="inline">@compile</code> will accumulate instead of overriding
+previous ones. See the “Compile options” section below.</p>
+<h3>@doc</h3>
 <p>Provides documentation for the function or macro that follows the
 attribute.</p>
 <p>Accepts a string (often a heredoc) or <code class="inline">false</code> where <code class="inline">@doc false</code> will
 make the function/macro invisible to the documentation extraction tools
-like ExDoc.</p>
-<p>Can be invoked more than once.</p>
-<h3>Example</h3>
+like ExDoc. For example:</p>
 <pre><code class="elixir">defmodule M do
   @doc &quot;Hello world&quot;
   def hello do
@@ -173,16 +151,10 @@ like ExDoc.</p>
     a + b
   end
 end</code></pre>
-</li>
-<li><p><code class="inline">@dialyzer</code></p>
+<h3>@dialyzer</h3>
 <p>Defines warnings to request or suppress when using a version of
 <code class="inline">:dialyzer</code> that supports module attributes.</p>
-<p>Accepts an atom, a tuple, or a list of atoms and tuples.</p>
-<p>For the list of supported warnings, see
-<a href="http://www.erlang.org/doc/man/dialyzer.html"><code class="inline">:dialyzer</code> module</a>.</p>
-<p>Multiple uses of <code class="inline">@dialyzer</code> will accumulate instead of overriding
-previous ones.</p>
-<h3>Example</h3>
+<p>Accepts an atom, a tuple, or a list of atoms and tuples. For example:</p>
 <pre><code class="elixir">defmodule M do
   @dialyzer {:nowarn_function, myfun: 1}
 
@@ -190,20 +162,20 @@ previous ones.</p>
     M.not_a_function(arg)
   end
 end</code></pre>
-</li>
-<li><p><code class="inline">@external_resource</code></p>
+<p>For the list of supported warnings, see
+<a href="http://www.erlang.org/doc/man/dialyzer.html"><code class="inline">:dialyzer</code> module</a>.</p>
+<p>Multiple uses of <code class="inline">@dialyzer</code> will accumulate instead of overriding
+previous ones.</p>
+<h3>@external_resource</h3>
 <p>Specifies an external resource to the current module.</p>
 <p>Many times a module embeds information from an external file. This
 attribute allows the module to annotate which external resources
 have been used.</p>
 <p>Tools like Mix may use this information to ensure the module is
 recompiled in case any of the external resources change.</p>
-</li>
-<li><p><code class="inline">@file</code></p>
+<h3>@file</h3>
 <p>Changes the filename used in stacktraces for the function or macro that
-follows the attribute.</p>
-<p>Accepts a string. Can be used more than once.</p>
-<h3>Example</h3>
+follows the attribute, such as:</p>
 <pre><code class="elixir">defmodule M do
   @doc &quot;Hello world&quot;
   @file &quot;hello.ex&quot;
@@ -211,31 +183,26 @@ follows the attribute.</p>
     &quot;world&quot;
   end
 end</code></pre>
-</li>
-<li><p><code class="inline">@moduledoc</code></p>
-<p>Provides documentation for the current module.</p>
-<p>Accepts a string (which is often a heredoc) or <code class="inline">false</code> where
-<code class="inline">@moduledoc false</code> will make the module invisible to the
-documentation extraction tools like ExDoc.</p>
-<h3>Example</h3>
+<h3>@moduledoc</h3>
+<p>Provides documentation for the current module, such as:</p>
 <pre><code class="elixir">defmodule M do
   @moduledoc &quot;&quot;&quot;
   A very useful module
   &quot;&quot;&quot;
 end</code></pre>
-</li>
-<li><p><code class="inline">@on_definition</code></p>
+<p>Accepts a string (which is often a heredoc) or <code class="inline">false</code> where
+<code class="inline">@moduledoc false</code> will make the module invisible to the
+documentation extraction tools like ExDoc.</p>
+<h3>@on_definition</h3>
 <p>A hook that will be invoked when each function or macro in the current
 module is defined. Useful when annotating functions.</p>
 <p>Accepts a module or a tuple <code class="inline">{&lt;module&gt;, &lt;function atom&gt;}</code>. See the
 “Compile callbacks” section below.</p>
-</li>
-<li><p><code class="inline">@on_load</code></p>
+<h3>@on_load</h3>
 <p>A hook that will be invoked whenever the module is loaded.</p>
 <p>Accepts a function atom of a function in the current module. The function
 must have arity 0 (no arguments) and has to return <code class="inline">:ok</code>, otherwise the
-loading of the module will be aborted.</p>
-<h3>Example</h3>
+loading of the module will be aborted. For example:</p>
 <pre><code class="elixir">defmodule M do
   @on_load :load_check
 
@@ -243,7 +210,7 @@ loading of the module will be aborted.</p>
     if some_condition() do
       :ok
     else
-      nil
+      :abort
     end
   end
 
@@ -251,15 +218,12 @@ loading of the module will be aborted.</p>
     false
   end
 end</code></pre>
-</li>
-<li><p><code class="inline">@vsn</code></p>
-<p>Specify the module version. Accepts any valid Elixir value.</p>
-<h3>Example</h3>
+<h3>@vsn</h3>
+<p>Specify the module version. Accepts any valid Elixir value, for example:</p>
 <pre><code class="elixir">defmodule M do
   @vsn &quot;1.0&quot;
 end</code></pre>
-</li>
-</ul>
+<h3>Typespec attributes</h3>
 <p>The following attributes are part of typespecs and are also reserved by
 Elixir:</p>
 <ul>
@@ -279,6 +243,7 @@ Elixir:</p>
 behaviour callbacks are optional
 </li>
 </ul>
+<h3>Custom attributes</h3>
 <p>In addition to the built-in attributes outlined above, custom attributes may
 also be added. A custom attribute is any valid identifier prefixed with an
 <code class="inline">@</code> and followed by a valid Elixir value:</p>
@@ -294,7 +259,7 @@ end</code></pre>
 
 <p>There are three callbacks that are invoked when functions are defined,
 as well as before and immediately after the module bytecode is generated.</p>
-<h3><code class="inline">@after_compile</code></h3>
+<h3>@after_compile</h3>
 <p>A hook that will be invoked right after the current module is compiled.</p>
 <p>Accepts a module or a tuple <code class="inline">{&lt;module&gt;, &lt;function atom&gt;}</code>. The function
 must take two arguments: the module environment and its bytecode.
@@ -308,7 +273,7 @@ When just a module is provided, the function is assumed to be
     IO.inspect env
   end
 end</code></pre>
-<h3><code class="inline">@before_compile</code></h3>
+<h3>@before_compile</h3>
 <p>A hook that will be invoked before the module is compiled.</p>
 <p>Accepts a module or a tuple <code class="inline">{&lt;module&gt;, &lt;function/macro atom&gt;}</code>. The
 function/macro must take one argument: the module environment. If it’s a
@@ -331,7 +296,7 @@ end
 defmodule B do
   @before_compile A
 end</code></pre>
-<h3><code class="inline">@on_definition</code></h3>
+<h3>@on_definition</h3>
 <p>A hook that will be invoked when each function or macro in the current
 module is defined. Useful when annotating functions.</p>
 <p>Accepts a module or a tuple <code class="inline">{&lt;module&gt;, &lt;function atom&gt;}</code>. The function
@@ -687,7 +652,7 @@ by <a href="http://www.erlang.org/doc/man/erlang.html#module_info-0"><code class
     </a>
     <span class="signature">add_doc(module, line, kind, tuple, signature \\ [], doc)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L601" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L569" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -720,7 +685,7 @@ end</code></pre>
     </a>
     <span class="signature">concat(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L521" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L489" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -755,7 +720,7 @@ Foo.Bar</code></pre>
     </a>
     <span class="signature">concat(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L538" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L506" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -790,7 +755,7 @@ Foo.Bar</code></pre>
     </a>
     <span class="signature">create(module, quoted, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L491" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L459" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -839,7 +804,7 @@ shares the same environment.</p>
     </a>
     <span class="signature">defines?(module, tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L752" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L720" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -869,7 +834,7 @@ end</code></pre>
     </a>
     <span class="signature">defines?(module, tuple, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L773" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L741" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -900,7 +865,7 @@ end</code></pre>
     </a>
     <span class="signature">definitions_in(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L793" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L761" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -928,7 +893,7 @@ end</code></pre>
     </a>
     <span class="signature">definitions_in(module, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L812" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L780" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -958,7 +923,7 @@ end</code></pre>
     </a>
     <span class="signature">delete_attribute(module, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L956" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L924" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -992,7 +957,7 @@ end</code></pre>
     </a>
     <span class="signature">eval_quoted(module, quoted, binding \\ [], opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L442" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L410" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1033,7 +998,7 @@ Foo.sum(1, 2) #=&gt; 3</code></pre>
     </a>
     <span class="signature">get_attribute(module, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L940" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L908" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1080,7 +1045,7 @@ end</code></pre>
     </a>
     <span class="signature">make_overridable(module, tuples)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L825" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L793" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1102,7 +1067,7 @@ more information and documentation.</p>
     </a>
     <span class="signature">open?(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L410" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L378" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1122,7 +1087,7 @@ and its attributes and functions can be modified.</p>
     </a>
     <span class="signature">overridable?(module, tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L866" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L834" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1141,7 +1106,7 @@ and its attributes and functions can be modified.</p>
     </a>
     <span class="signature">put_attribute(module, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L884" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L852" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1171,7 +1136,7 @@ end</code></pre>
     </a>
     <span class="signature">register_attribute(module, new, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L994" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L962" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1222,7 +1187,7 @@ end</code></pre>
     </a>
     <span class="signature">safe_concat(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L527" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1260,7 +1225,7 @@ List.Chars</code></pre>
     </a>
     <span class="signature">safe_concat(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L580" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L548" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1300,7 +1265,7 @@ List.Chars</code></pre>
     </a>
     <span class="signature">split(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L1018" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/module.ex#L986" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1330,7 +1295,7 @@ List.Chars</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.0),
           </span>
           <span class="line">
             designed by
