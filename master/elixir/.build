@@ -22,7 +22,6 @@ File.Stat.html
 File.Stream.html
 Float.html
 GenEvent.html
-GenEvent.Stream.html
 GenServer.html
 HashDict.html
 HashSet.html
@@ -104,8 +103,8 @@ Enumerable.html
 Inspect.html
 List.Chars.html
 String.Chars.html
-dist/app-61b5aaceee.js
-dist/app-f8c39b9230.css
+dist/app-23e810f3fe.css
+dist/app-5d1225399a.js
 fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
