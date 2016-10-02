@@ -160,7 +160,7 @@ end</code></pre>
     </a>
     <span class="signature">capture_log(opts \\ [], fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/capture_log.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/ex_unit/lib/ex_unit/capture_log.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -176,10 +176,19 @@ end</code></pre>
   <section class="docstring">
     <p>Captures Logger messages generated when evaluating <code class="inline">fun</code>.</p>
 <p>Returns the binary which is the captured output.</p>
-<p>This function mutes the <code class="inline">:console</code> backend
-and captures any log messages sent to Logger.</p>
-<p>Note that when the <code class="inline">async</code> is set to <code class="inline">true</code>,
-the messages from another test might be captured.</p>
+<p>This function mutes the <code class="inline">:console</code> backend and captures any log
+messages sent to Logger from the calling processes. It is possible
+to ensure explicit log messages from other processes are captured
+by waiting for their exit or monitor signal.</p>
+<p>However, <code class="inline">capture_log</code> does not guarantee to capture log messages
+originated from processes spawned using a low level <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html"><code class="inline">Kernel</code></a> spawn
+function (e.g. <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#spawn/1)"><code class="inline">Kernel.spawn/1</code></a> and such processes exit with an
+exception or a throw. Therefore, prefer using a <a href="http://elixir-lang.org/docs/stable/elixir/Task.html"><code class="inline">Task</code></a>, or other OTP
+process, will send explicit logs before its exit or monitor signals
+and will not cause VM generated log messages.</p>
+<p>Note that when the <code class="inline">async</code> is set to <code class="inline">true</code>, the messages from another
+test might be captured. This is OK as long you consider such cases in
+your assertions.</p>
 <p>It is possible to configure the level to capture with <code class="inline">:level</code>,
 which will set the capturing level for the duration of the
 capture, for instance, if the log level is set to :error
