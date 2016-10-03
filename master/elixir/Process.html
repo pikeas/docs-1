@@ -339,10 +339,10 @@ It returns the monitor reference</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#register/2">register(pid, name)</a>
+    <a href="#register/2">register(pid_or_port, name)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Associates the atom <code class="inline">name</code> with a <code class="inline">pid</code> or a port identifier</p>
+    <div class="summary-synopsis"><p>Registers the given <code class="inline">pid_or_port</code> under the given <code class="inline">name</code></p>
 </div>
   
 </div>
@@ -417,7 +417,8 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
     <a href="#unregister/1">unregister(name)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Removes the registered <code class="inline">name</code>, associated with a PID or a port identifier</p>
+    <div class="summary-synopsis"><p>Removes the registered <code class="inline">name</code>, associated with a PID
+or a port identifier</p>
 </div>
   
 </div>
@@ -690,7 +691,7 @@ with reason <code class="inline">:killed</code>.</p>
     </a>
     <span class="signature">flag(flag, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L490" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L501" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -717,7 +718,7 @@ Returns the old value of the <code class="inline">flag</code>.</p>
     </a>
     <span class="signature">flag(pid, flag, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L502" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L513" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -848,7 +849,7 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
     </a>
     <span class="signature">group_leader()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L459" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L470" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -873,7 +874,7 @@ only a subset of those allowed in <a href="#flag/2"><code class="inline">flag/2<
     </a>
     <span class="signature">group_leader(pid, leader)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L479" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -899,7 +900,7 @@ started from a certain shell should have a group leader other than <code class="
     </a>
     <span class="signature">hibernate(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L550" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L561" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -929,7 +930,7 @@ in the near future.</p>
     </a>
     <span class="signature">info(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L514" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L525" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -957,7 +958,7 @@ Use this only for debugging information.</p>
     </a>
     <span class="signature">info(pid, spec)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L525" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1133,9 +1134,9 @@ not tell you whether or not it has arrived at its destination yet.</p>
     <a href="#register/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">register(pid, name)</span>
+    <span class="signature">register(pid_or_port, name)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L422" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L427" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1149,11 +1150,14 @@ not tell you whether or not it has arrived at its destination yet.</p>
     
   </div>
   <section class="docstring">
-    <p>Associates the atom <code class="inline">name</code> with a <code class="inline">pid</code> or a port identifier.</p>
-<p><code class="inline">name</code>, can then be used instead of the <code class="inline">pid</code> / port identifier with the <a href="Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a>
-function. <a href="Process.html#register/2"><code class="inline">Process.register/2</code></a> will fail with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the PID supplied
-is no longer alive, (check with <a href="#alive?/1)"><code class="inline">alive?/1</code></a> or if the name is already registered
-(check with <a href="#whereis/1)"><code class="inline">whereis/1</code></a> or if the <code class="inline">pid</code> is already registered to a different <code class="inline">name</code>.</p>
+    <p>Registers the given <code class="inline">pid_or_port</code> under the given <code class="inline">name</code>.</p>
+<p><code class="inline">name</code> must be an atom and can then be used instead of the
+PID/port identifier when sending messages with <a href="Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a>.</p>
+<p><a href="#register/2"><code class="inline">register/2</code></a> will fail with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the PID/Port is
+not existing locally and alive, if the name is already registered
+or if the <code class="inline">pid_or_port</code> is already registered to a different <code class="inline">name</code>.</p>
+<p>The following names are reserved and cannot be assigned to
+processes nor ports: <code class="inline">nil</code>, <code class="inline">false</code>, <code class="inline">true</code> or <code class="inline">:undefined</code>.</p>
 
   </section>
 </div>
@@ -1164,7 +1168,7 @@ is no longer alive, (check with <a href="#alive?/1)"><code class="inline">alive?
     </a>
     <span class="signature">registered()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L476" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L487" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1445,7 +1449,7 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
     </a>
     <span class="signature">unregister(name)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L440" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L451" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1459,9 +1463,10 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
     
   </div>
   <section class="docstring">
-    <p>Removes the registered <code class="inline">name</code>, associated with a PID or a port identifier.</p>
-<p>Fails with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the name is not registered to any PID or port.</p>
-<p>See <a href="http://www.erlang.org/doc/man/erlang.html#unregister-1"><code class="inline">:erlang.unregister/1</code></a> for more info.</p>
+    <p>Removes the registered <code class="inline">name</code>, associated with a PID
+or a port identifier.</p>
+<p>Fails with <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the name is not registered
+to any PID or port.</p>
 
   </section>
 </div>
@@ -1472,7 +1477,7 @@ fail, even if there is no link or <code class="inline">id</code> does not exist<
     </a>
     <span class="signature">whereis(name)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L451" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/process.ex#L462" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

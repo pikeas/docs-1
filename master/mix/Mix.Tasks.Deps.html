@@ -100,7 +100,7 @@ suitable to your project.</p>
 <pre><code class="elixir">{:foobar, git: &quot;https://github.com/elixir-lang/foobar.git&quot;, tag: &quot;0.1&quot;}
 {:foobar, path: &quot;path/to/foobar&quot;}</code></pre>
 <p>And also in umbrella dependencies:</p>
-<pre><code class="elixir">{:myapp, in_umbrella: true}</code></pre>
+<pre><code class="elixir">{:my_app, in_umbrella: true}</code></pre>
 <p>Path and in umbrella dependencies are automatically recompiled by
 the parent project whenever they change. While fetchable dependencies
 like the ones using <code class="inline">:git</code> are recompiled only when fetched/updated.</p>
