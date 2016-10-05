@@ -830,6 +830,16 @@ alongside its index</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#zip/1">zip(enumerables)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Zips corresponding elements from a collection of enumerables
+into one list of tuples</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#zip/2">zip(enumerable1, enumerable2)</a>
   </div>
   
@@ -3788,6 +3798,43 @@ alongside its index.</p>
 
 iex&gt; Enum.with_index([:a, :b, :c], 3)
 [a: 3, b: 4, c: 5]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="zip/1">
+  <div class="detail-header">
+    <a href="#zip/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">zip(enumerables)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/enum.ex#L2648" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>zip([<a href="#t:t/0">t</a>]) :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Zips corresponding elements from a collection of enumerables
+into one list of tuples.</p>
+<p>The zipping finishes as soon as any enumerable completes.</p>
+<h2 id="zip/1-examples" class="section-heading">
+  <a href="#zip/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Enum.zip([[1, 2, 3], [:a, :b, :c], [&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]])
+[{1, :a, &quot;foo&quot;}, {2, :b, &quot;bar&quot;}, {3, :c, &quot;baz&quot;}]
+
+iex&gt; Enum.zip([[1, 2, 3, 4, 5], [:a, :b, :c]])
+[{1, :a}, {2, :b}, {3, :c}]</code></pre>
 
   </section>
 </div>

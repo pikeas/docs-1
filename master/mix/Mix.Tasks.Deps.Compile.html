@@ -88,7 +88,7 @@ the following files and act accordingly:</p>
 </li>
 <li><code class="inline">Makefile.win</code> - invokes <code class="inline">nmake /F Makefile.win</code> (only on Windows)
 </li>
-<li><code class="inline">Makefile</code>     - invokes <code class="inline">make</code> (except on Windows)
+<li><code class="inline">Makefile</code>     - invokes <code class="inline">gmake</code> on FreeBSD and OpenBSD, invokes <code class="inline">make</code> on any other OS (except on Windows)
 </li>
 </ul>
 <p>The compilation can be customized by passing a <code class="inline">compile</code> option

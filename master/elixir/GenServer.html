@@ -596,7 +596,7 @@ reply is received (unless the call times out or nodes are disconnected)</p>
     <a href="#c:init/1">init(args)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> (or <a href="#start/3)"><code class="inline">start/3</code></a> will
+    <div class="summary-synopsis"><p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> or <a href="#start/3"><code class="inline">start/3</code></a> will
 block until it returns</p>
 </div>
   
@@ -1460,7 +1460,7 @@ a timeout occurs the message is <code class="inline">:timeout</code>.</p>
     
   </div>
   <section class="docstring">
-    <p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> (or <a href="#start/3)"><code class="inline">start/3</code></a> will
+    <p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> or <a href="#start/3"><code class="inline">start/3</code></a> will
 block until it returns.</p>
 <p><code class="inline">args</code> is the argument term (second argument) passed to <a href="#start_link/3"><code class="inline">start_link/3</code></a>.</p>
 <p>Returning <code class="inline">{:ok, state}</code> will cause <a href="#start_link/3"><code class="inline">start_link/3</code></a> to return
