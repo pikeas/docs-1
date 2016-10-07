@@ -457,7 +457,7 @@ Fails with <a href="Regex.CompileError.html"><code class="inline">Regex.CompileE
     </a>
     <span class="signature">escape(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L645" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L648" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -692,7 +692,7 @@ false</code></pre>
     </a>
     <span class="signature">replace(regex, string, replacement, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L499" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L502" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -817,7 +817,7 @@ iex&gt; Regex.run(~r/c(d)/, &quot;abcd&quot;, return: :index)
     </a>
     <span class="signature">scan(regex, string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L319" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L322" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -859,7 +859,10 @@ iex&gt; Regex.scan(~r/c(?:d|e)/, &quot;abcd abce&quot;)
 [[&quot;cd&quot;], [&quot;ce&quot;]]
 
 iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
-[]</code></pre>
+[]
+
+iex&gt; Regex.scan(~r/\p{Sc}/u, &quot;$, £, and €&quot;)
+[[&quot;$&quot;], [&quot;£&quot;], [&quot;€&quot;]]</code></pre>
 
   </section>
 </div>
@@ -902,7 +905,7 @@ iex&gt; Regex.scan(~r/e/, &quot;abcd&quot;)
     </a>
     <span class="signature">split(regex, string, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/regex.ex#L384" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
