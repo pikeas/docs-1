@@ -588,7 +588,7 @@ iex&gt; Task.await(task)
     </a>
     <span class="signature">shutdown(task, shutdown \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L544" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L558" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -738,7 +738,7 @@ be linked to the current process.</p>
     </a>
     <span class="signature">yield(task, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L400" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L414" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -775,6 +775,17 @@ called multiple times on the same task.</p>
 monitor’s <code class="inline">:DOWN</code> message is in the message queue. If it has been
 demonitored or the message already received, this function will wait
 for the duration of the timeout awaiting the message.</p>
+<p>If you intend to shut the task down if it has not responded within <code class="inline">timeout</code>
+milliseconds, you should chain this together with <code class="inline">shutdown/1</code>, like so:</p>
+<pre><code class="elixir">case Task.yield(task, timeout) || Task.shutdown(task) do
+  {:ok, result} -&gt; result
+  nil -&gt;
+    Logger.warn &quot;Failed to get a result in #{timeout} ms
+    nil
+end</code></pre>
+<p>That ensures that if the task completes after the <code class="inline">timeout</code> but before <code class="inline">shutdown/1</code>
+has been called, you will still get the result, since <code class="inline">shutdown/1</code> is designed to
+handle this case and return the result.</p>
 
   </section>
 </div>
@@ -785,7 +796,7 @@ for the duration of the timeout awaiting the message.</p>
     </a>
     <span class="signature">yield_many(tasks, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L476" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/task.ex#L490" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

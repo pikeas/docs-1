@@ -127,11 +127,21 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#round/2">round(number, precision \\ 0)</a>
+    <a href="#ratio/1">ratio(float)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Rounds a floating point value to an arbitrary number of fractional digits
-(between 0 and 15)</p>
+    <div class="summary-synopsis"><p>Returns a pair of integers whose ratio is exactly equal
+to the original float and with a positive denominator</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#round/2">round(float, precision \\ 0)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Rounds a floating point value to an arbitrary number of fractional
+digits (between 0 and 15)</p>
 </div>
   
 </div>
@@ -183,7 +193,7 @@ of the given float</p>
     </a>
     <span class="signature">ceil(number, precision \\ 0)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -200,6 +210,15 @@ of the given float</p>
     <p>Rounds a float to the smallest integer greater than or equal to <code class="inline">num</code>.</p>
 <p><a href="#ceil/2"><code class="inline">ceil/2</code></a> also accepts a precision to round a floating point value down
 to an arbitrary number of fractional digits (between 0 and 15).</p>
+<p>The operation is performed on the binary floating point, without a
+conversion to decimal.</p>
+<p>The behaviour of <a href="#ceil/2"><code class="inline">ceil/2</code></a> for floats can be surprising. For example:</p>
+<pre><code class="iex elixir">iex&gt; Float.ceil(-12.52, 2)
+-12.51</code></pre>
+<p>One may have expected it to ceil to -12.52. This is not a bug.
+Most decimal fractions cannot be represented as a binary floating point
+and therefore the number above is internally represented as -12.51999999,
+which explains the behaviour above.</p>
 <p>This function always returns floats. <a href="Kernel.html#trunc/1"><code class="inline">Kernel.trunc/1</code></a> may be used instead to
 truncate the result to an integer afterwards.</p>
 <h2 id="ceil/2-examples" class="section-heading">
@@ -209,10 +228,8 @@ truncate the result to an integer afterwards.</p>
 
 <pre><code class="iex elixir">iex&gt; Float.ceil(34.25)
 35.0
-
 iex&gt; Float.ceil(-56.5)
 -56.0
-
 iex&gt; Float.ceil(34.251, 2)
 34.26</code></pre>
 
@@ -225,7 +242,7 @@ iex&gt; Float.ceil(34.251, 2)
     </a>
     <span class="signature">floor(number, precision \\ 0)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -241,7 +258,16 @@ iex&gt; Float.ceil(34.251, 2)
   <section class="docstring">
     <p>Rounds a float to the largest integer less than or equal to <code class="inline">num</code>.</p>
 <p><a href="#floor/2"><code class="inline">floor/2</code></a> also accepts a precision to round a floating point value down
-to an arbitrary number of fractional digits (between 0 and 15).</p>
+to an arbitrary number of fractional digits (between 0 and 15).
+The operation is performed on the binary floating point, without a
+conversion to decimal.</p>
+<p>The behaviour of <a href="#floor/2"><code class="inline">floor/2</code></a> for floats can be surprising. For example:</p>
+<pre><code class="iex elixir">iex&gt; Float.floor(12.52, 2)
+12.51</code></pre>
+<p>One may have expected it to floor to 12.52. This is not a bug.
+Most decimal fractions cannot be represented as a binary floating point
+and therefore the number above is internally represented as 12.51999999,
+which explains the behaviour above.</p>
 <p>This function always returns a float. <a href="Kernel.html#trunc/1"><code class="inline">Kernel.trunc/1</code></a> may be used instead to
 truncate the result to an integer afterwards.</p>
 <h2 id="floor/2-examples" class="section-heading">
@@ -251,10 +277,8 @@ truncate the result to an integer afterwards.</p>
 
 <pre><code class="iex elixir">iex&gt; Float.floor(34.25)
 34.0
-
 iex&gt; Float.floor(-56.5)
 -57.0
-
 iex&gt; Float.floor(34.259, 2)
 34.25</code></pre>
 
@@ -267,7 +291,7 @@ iex&gt; Float.floor(34.259, 2)
     </a>
     <span class="signature">parse(binary)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L39" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -296,10 +320,8 @@ the <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> e
 
 <pre><code class="iex elixir">iex&gt; Float.parse(&quot;34&quot;)
 {34.0, &quot;&quot;}
-
 iex&gt; Float.parse(&quot;34.25&quot;)
 {34.25, &quot;&quot;}
-
 iex&gt; Float.parse(&quot;56.5xyz&quot;)
 {56.5, &quot;xyz&quot;}
 
@@ -308,14 +330,45 @@ iex&gt; Float.parse(&quot;pi&quot;)
 
   </section>
 </div>
+<div class="detail" id="ratio/1">
+  <div class="detail-header">
+    <a href="#ratio/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ratio(float)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L304" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a pair of integers whose ratio is exactly equal
+to the original float and with a positive denominator.</p>
+<h2 id="ratio/1-examples" class="section-heading">
+  <a href="#ratio/1-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Float.ratio(3.14)
+{7070651414971679, 2251799813685248}
+iex&gt; Float.ratio(1.5)
+{3, 2}
+iex&gt; Float.ratio(-1.5)
+{-3, 2}</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="round/2">
   <div class="detail-header">
     <a href="#round/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">round(number, precision \\ 0)</span>
+    <span class="signature">round(float, precision \\ 0)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L163" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L196" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -329,30 +382,40 @@ iex&gt; Float.parse(&quot;pi&quot;)
     
   </div>
   <section class="docstring">
-    <p>Rounds a floating point value to an arbitrary number of fractional digits
-(between 0 and 15).</p>
+    <p>Rounds a floating point value to an arbitrary number of fractional
+digits (between 0 and 15).</p>
+<p>The rounding direction always ties to half up. The operation is
+performed on the binary floating point, without a conversion to decimal.</p>
 <p>This function only accepts floats and always returns a float. Use
-<a href="Kernel.html#round/1"><code class="inline">Kernel.round/1</code></a> if you want a function that accepts both floats and integers
-and always returns an integer.</p>
+<a href="Kernel.html#round/1"><code class="inline">Kernel.round/1</code></a> if you want a function that accepts both floats
+and integers and always returns an integer.</p>
+<p>The behaviour of <a href="#round/2"><code class="inline">round/2</code></a> for floats can be surprising. For example:</p>
+<pre><code class="iex elixir">iex&gt; Float.round(5.5675, 3)
+5.567</code></pre>
+<p>One may have expected it to round to the half up 5.568. This is not a bug.
+Most decimal fractions cannot be represented as a binary floating point
+and therefore the number above is internally represented as 5.567499999,
+which explains the behaviour above. If you want exact rounding for decimals,
+you must use a decimal library. The behaviour above is also in accordance
+to reference implementations, such as “Correctly Rounded Binary-Decimal and
+Decimal-Binary Conversions” by David M. Gay.</p>
 <h2 id="round/2-examples" class="section-heading">
   <a href="#round/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Float.round(5.5674, 3)
+<pre><code class="iex elixir">iex&gt; Float.round(12.5)
+13.0
+iex&gt; Float.round(5.5674, 3)
 5.567
-
 iex&gt; Float.round(5.5675, 3)
-5.568
-
+5.567
 iex&gt; Float.round(-5.5674, 3)
 -5.567
-
-iex&gt; Float.round(-5.5675, 3)
--5.568
-
 iex&gt; Float.round(-5.5675)
--6.0</code></pre>
+-6.0
+iex&gt; Float.round(12.341444444444441, 15)
+12.341444444444441</code></pre>
 
   </section>
 </div>
@@ -363,7 +426,7 @@ iex&gt; Float.round(-5.5675)
     </a>
     <span class="signature">to_charlist(float)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L189" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L358" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -400,7 +463,7 @@ Design and Implementation.</p>
     </a>
     <span class="signature">to_string(float)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/float.ex#L378" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
