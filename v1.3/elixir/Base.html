@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>Base – Elixir v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>Base – Elixir v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Base.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -56,9 +56,8 @@
       <li><a id="protocols-list" href="#full-list">Protocols</a></li>
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -67,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.3</small>
+        <small class="visible-xs">Elixir v1.3.4</small>
         Base
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -356,28 +355,28 @@ safe alphabet</p>
             Functions
           </h1>
           <div class="detail" id="decode16/2">
+  
+    <span id="decode16/1" />
+  
   <div class="detail-header">
     <a href="#decode16/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">decode16(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</code></pre>
+          <pre>decode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 16 encoded string into a binary string.</p>
 <h2 id="decode16/2-options" class="section-heading">
@@ -416,28 +415,28 @@ iex&gt; Base.decode16(&quot;666f6F626172&quot;, case: :mixed)
   </section>
 </div>
 <div class="detail" id="decode16!/2">
+  
+    <span id="decode16!/1" />
+  
   <div class="detail-header">
     <a href="#decode16!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">decode16!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L247" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L247" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode16!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>decode16!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 16 encoded string into a binary string.</p>
 <h2 id="decode16!/2-options" class="section-heading">
@@ -478,28 +477,28 @@ iex&gt; Base.decode16!(&quot;666f6F626172&quot;, case: :mixed)
   </section>
 </div>
 <div class="detail" id="decode32/2">
+  
+    <span id="decode32/1" />
+  
   <div class="detail-header">
     <a href="#decode32/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">decode32(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L512" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L512" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</code></pre>
+          <pre>decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string into a binary string.</p>
 <h2 id="decode32/2-options" class="section-heading">
@@ -550,28 +549,28 @@ iex&gt; Base.decode32(&quot;MZXW6YTBOI&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="decode32!/2">
+  
+    <span id="decode32!/1" />
+  
   <div class="detail-header">
     <a href="#decode32!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">decode32!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string into a binary string.</p>
 <p>An <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised if the padding is incorrect or
@@ -624,28 +623,28 @@ iex&gt; Base.decode32!(&quot;MZXW6YTBOI&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="decode64/2">
+  
+    <span id="decode64/1" />
+  
   <div class="detail-header">
     <a href="#decode64/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">decode64(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</code></pre>
+          <pre>decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
@@ -672,28 +671,28 @@ iex&gt; Base.decode64(&quot;Zm9vYg&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="decode64!/2">
+  
+    <span id="decode64!/1" />
+  
   <div class="detail-header">
     <a href="#decode64!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">decode64!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L344" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L344" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string into a binary string.</p>
 <p>Accepts <code class="inline">ignore: :whitespace</code> option which will ignore all the
@@ -722,28 +721,28 @@ iex&gt; Base.decode64!(&quot;Zm9vYg&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="encode16/2">
+  
+    <span id="encode16/1" />
+  
   <div class="detail-header">
     <a href="#encode16/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">encode16(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>encode16(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 16 encoded string.</p>
 <h2 id="encode16/2-options" class="section-heading">
@@ -777,28 +776,28 @@ iex&gt; Base.encode16(&quot;foobar&quot;, case: :lower)
   </section>
 </div>
 <div class="detail" id="encode32/2">
+  
+    <span id="encode32/1" />
+  
   <div class="detail-header">
     <a href="#encode32/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">encode32(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L468" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 32 encoded string.</p>
 <h2 id="encode32/2-options" class="section-heading">
@@ -844,28 +843,28 @@ iex&gt; Base.encode32(&quot;foobar&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="encode64/2">
+  
+    <span id="encode64/1" />
+  
   <div class="detail-header">
     <a href="#encode64/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">encode64(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 64 encoded string.</p>
 <p>Accepts <code class="inline">padding: false</code> option which will omit padding from
@@ -887,30 +886,28 @@ iex&gt; Base.encode64(&quot;foob&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="hex_decode32/2">
+  
+    <span id="hex_decode32/1" />
+  
   <div class="detail-header">
     <a href="#hex_decode32/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">hex_decode32(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L645" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L645" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hex_decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) ::
-  {:ok, binary} |
-  :error</code></pre>
+          <pre>hex_decode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string with extended hexadecimal alphabet
 into a binary string.</p>
@@ -962,28 +959,28 @@ iex&gt; Base.hex_decode32(&quot;CPNMUOJ1E8&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="hex_decode32!/2">
+  
+    <span id="hex_decode32!/1" />
+  
   <div class="detail-header">
     <a href="#hex_decode32!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">hex_decode32!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L693" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L693" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hex_decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>hex_decode32!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 32 encoded string with extended hexadecimal alphabet
 into a binary string.</p>
@@ -1037,28 +1034,28 @@ iex&gt; Base.hex_decode32!(&quot;CPNMUOJ1E8&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="hex_encode32/2">
+  
+    <span id="hex_encode32/1" />
+  
   <div class="detail-header">
     <a href="#hex_encode32/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">hex_encode32(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L600" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L600" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hex_encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>hex_encode32(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 32 encoded string with an
 extended hexadecimal alphabet.</p>
@@ -1105,30 +1102,28 @@ iex&gt; Base.hex_encode32(&quot;foobar&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="url_decode64/2">
+  
+    <span id="url_decode64/1" />
+  
   <div class="detail-header">
     <a href="#url_decode64/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">url_decode64(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">url_decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) ::
-  {:ok, binary} |
-  :error</code></pre>
+          <pre>url_decode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: {:ok, binary} | :error</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string with URL and filename safe alphabet
 into a binary string.</p>
@@ -1153,28 +1148,28 @@ iex&gt; Base.url_decode64(&quot;_3_-_A&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="url_decode64!/2">
+  
+    <span id="url_decode64!/1" />
+  
   <div class="detail-header">
     <a href="#url_decode64!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">url_decode64!(string, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L429" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">url_decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>url_decode64!(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Decodes a base 64 encoded string with URL and filename safe alphabet
 into a binary string.</p>
@@ -1201,28 +1196,28 @@ iex&gt; Base.url_decode64!(&quot;_3_-_A&quot;, padding: false)
   </section>
 </div>
 <div class="detail" id="url_encode64/2">
+  
+    <span id="url_encode64/1" />
+  
   <div class="detail-header">
     <a href="#url_encode64/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">url_encode64(data, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/base.ex#L367" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/base.ex#L367" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">url_encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</code></pre>
+          <pre>url_encode64(binary, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Encodes a binary string into a base 64 encoded string with URL and filename
 safe alphabet.</p>
@@ -1252,7 +1247,7 @@ iex&gt; Base.url_encode64(&lt;&lt;255, 127, 254, 252&gt;&gt;, padding: false)
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -1265,7 +1260,7 @@ iex&gt; Base.url_encode64(&lt;&lt;255, 127, 254, 252&gt;&gt;, padding: false)
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

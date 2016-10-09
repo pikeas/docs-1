@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>Mix.Shell – Mix v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>Mix.Shell – Mix v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/mix/Mix.Shell.html" />
     
@@ -28,7 +28,7 @@
         Mix
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -54,9 +54,8 @@
 
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -65,13 +64,13 @@
 
 
       <h1>
-        <small class="visible-xs">Mix v1.3.3</small>
+        <small class="visible-xs">Mix v1.3.4</small>
         Mix.Shell
         
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -211,19 +210,22 @@ it was not printed yet</p>
             Functions
           </h1>
           <div class="detail" id="cmd/3">
+  
+    <span id="cmd/2" />
+  
   <div class="detail-header">
     <a href="#cmd/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">cmd(command, options \\ [], callback)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>An implementation of the command callback that
 is shared across different shells.</p>
@@ -231,19 +233,20 @@ is shared across different shells.</p>
   </section>
 </div>
 <div class="detail" id="printable_app_name/0">
+  
   <div class="detail-header">
     <a href="#printable_app_name/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">printable_app_name()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns the printable app name.</p>
 <p>This function returns the current application name
@@ -270,56 +273,52 @@ multiple times.</p>
             Callbacks
           </h1>
           <div class="detail" id="c:cmd/1">
+  
   <div class="detail-header">
     <a href="#c:cmd/1" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">cmd(command)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cmd(command :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: integer</code></pre>
+          <pre>cmd(command :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Executes the given command and returns its exit status.</p>
 
   </section>
 </div>
 <div class="detail" id="c:cmd/2">
+  
   <div class="detail-header">
     <a href="#c:cmd/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">cmd(command, options)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L47" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cmd(command :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, options :: <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: integer</code></pre>
+          <pre>cmd(command :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>, options :: <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Executes the given command and returns its exit status.</p>
 <h2 id="c:cmd/2-options" class="section-heading">
@@ -343,84 +342,78 @@ stderr to stdout</p>
   </section>
 </div>
 <div class="detail" id="c:error/1">
+  
   <div class="detail-header">
     <a href="#c:error/1" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">error(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L14" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">error(message :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html#t:ansidata/0">IO.ANSI.ansidata</a>) :: any</code></pre>
+          <pre>error(message :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html#t:ansidata/0">IO.ANSI.ansidata</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Warns about the given error message.</p>
 
   </section>
 </div>
 <div class="detail" id="c:info/1">
+  
   <div class="detail-header">
     <a href="#c:info/1" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">info(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L9" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">info(message :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html#t:ansidata/0">IO.ANSI.ansidata</a>) :: any</code></pre>
+          <pre>info(message :: <a href="http://elixir-lang.org/docs/stable/elixir/IO.ANSI.html#t:ansidata/0">IO.ANSI.ansidata</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Informs the given message.</p>
 
   </section>
 </div>
 <div class="detail" id="c:print_app/0">
+  
   <div class="detail-header">
     <a href="#c:print_app/0" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">print_app()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">print_app :: any</code></pre>
+          <pre>print_app :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Prints the current application to shell if
 it was not printed yet.</p>
@@ -428,56 +421,52 @@ it was not printed yet.</p>
   </section>
 </div>
 <div class="detail" id="c:prompt/1">
+  
   <div class="detail-header">
     <a href="#c:prompt/1" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">prompt(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">prompt(message :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></code></pre>
+          <pre>prompt(message :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Prompts the user for input.</p>
 
   </section>
 </div>
 <div class="detail" id="c:yes?/1">
+  
   <div class="detail-header">
     <a href="#c:yes?/1" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">yes?(message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/mix/lib/mix/shell.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/mix/lib/mix/shell.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">yes?(message :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: boolean</code></pre>
+          <pre>yes?(message :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Asks the user for confirmation.</p>
 
@@ -490,7 +479,7 @@ it was not printed yet.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -503,7 +492,7 @@ it was not printed yet.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

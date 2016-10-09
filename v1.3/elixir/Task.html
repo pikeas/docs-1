@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>Task – Elixir v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>Task – Elixir v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Task.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -56,9 +56,8 @@
       <li><a id="protocols-list" href="#full-list">Protocols</a></li>
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -67,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.3</small>
+        <small class="visible-xs">Elixir v1.3.4</small>
         Task
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -341,7 +340,7 @@ described there apply to the whole ecosystem.</p>
       
 
       
-        <section id="types" class="types details-list">
+        <section id="types" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#types">
               <i class="icon-link"></i>
@@ -349,9 +348,30 @@ described there apply to the whole ecosystem.</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:t/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:t/0">t</a> :: %Task{owner: term, pid: term, ref: term}</code></pre>
+            <div class="detail" id="t:t/0">
   
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L153" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/0">t</a> :: %Task{owner: term, pid: term, ref: term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
 </div>
 
           </div>
@@ -367,19 +387,20 @@ described there apply to the whole ecosystem.</p>
             Functions
           </h1>
           <div class="detail" id="__struct__/0">
+  
   <div class="detail-header">
     <a href="#__struct__/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">__struct__()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L151" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L151" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>The Task struct.</p>
 <p>It contains these fields:</p>
@@ -396,28 +417,26 @@ not use a task process</p>
   </section>
 </div>
 <div class="detail" id="async/1">
+  
   <div class="detail-header">
     <a href="#async/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">async(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L208" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L208" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async((... -> any)) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>async((... -> any)) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that must be awaited on.</p>
 <p>This function spawns a process that is linked to and monitored
@@ -430,28 +449,26 @@ usage of <a href="#async/1"><code class="inline">async/1</code></a> and <a href=
   </section>
 </div>
 <div class="detail" id="async/3">
+  
   <div class="detail-header">
     <a href="#async/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">async(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L276" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L276" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">async(module, atom, [term]) :: <a href="#t:t/0">t</a></code></pre>
+          <pre>async(module, atom, [term]) :: <a href="#t:t/0">t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task that must be awaited on.</p>
 <p>A <a href="Task.html#content"><code class="inline">Task</code></a> struct is returned containing the relevant information.
@@ -515,28 +532,28 @@ and <code class="inline">result</code> is the return value of the task function.
   </section>
 </div>
 <div class="detail" id="await/2">
+  
+    <span id="await/1" />
+  
   <div class="detail-header">
     <a href="#await/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">await(task, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L320" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L320" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">await(<a href="#t:t/0">t</a>, timeout) :: term | no_return</code></pre>
+          <pre>await(<a href="#t:t/0">t</a>, timeout) :: term | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Awaits a task reply.</p>
 <p>A timeout, in milliseconds, can be given with default value
@@ -564,31 +581,31 @@ coming from a task inside your <code class="inline">handle_info</code> callback.
   </section>
 </div>
 <div class="detail" id="shutdown/2">
+  
+    <span id="shutdown/1" />
+  
   <div class="detail-header">
     <a href="#shutdown/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">shutdown(task, shutdown \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L537" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L537" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">shutdown(<a href="#t:t/0">t</a>, timeout | :brutal_kill) ::
+          <pre>shutdown(<a href="#t:t/0">t</a>, timeout | :brutal_kill) ::
   {:ok, term} |
   {:exit, term} |
-  nil</code></pre>
+  nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Unlinks and shuts down the task, and then checks for a reply.</p>
 <p>Returns <code class="inline">{:ok, reply}</code> if the reply is received while shutting down the task,
@@ -611,28 +628,26 @@ message already received, this function will block forever awaiting the message.
   </section>
 </div>
 <div class="detail" id="start/1">
+  
   <div class="detail-header">
     <a href="#start/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L179" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L179" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start((... -> any)) :: {:ok, pid}</code></pre>
+          <pre>start((... -> any)) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task.</p>
 <p>This is only used when the task is used for side-effects
@@ -642,28 +657,26 @@ be linked to the current process.</p>
   </section>
 </div>
 <div class="detail" id="start/3">
+  
   <div class="detail-header">
     <a href="#start/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L191" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L191" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start(module, atom, [term]) :: {:ok, pid}</code></pre>
+          <pre>start(module, atom, [term]) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task.</p>
 <p>This is only used when the task is used for side-effects
@@ -673,87 +686,80 @@ be linked to the current process.</p>
   </section>
 </div>
 <div class="detail" id="start_link/1">
+  
   <div class="detail-header">
     <a href="#start_link/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L159" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L159" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link((... -> any)) :: {:ok, pid}</code></pre>
+          <pre>start_link((... -> any)) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task as part of a supervision tree.</p>
 
   </section>
 </div>
 <div class="detail" id="start_link/3">
+  
   <div class="detail-header">
     <a href="#start_link/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(mod, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link(module, atom, [term]) :: {:ok, pid}</code></pre>
+          <pre>start_link(module, atom, [term]) :: {:ok, pid}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a task as part of a supervision tree.</p>
 
   </section>
 </div>
 <div class="detail" id="yield/2">
+  
+    <span id="yield/1" />
+  
   <div class="detail-header">
     <a href="#yield/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">yield(task, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L393" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">yield(<a href="#t:t/0">t</a>, timeout) ::
-  {:ok, term} |
-  {:exit, term} |
-  nil</code></pre>
+          <pre>yield(<a href="#t:t/0">t</a>, timeout) :: {:ok, term} | {:exit, term} | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Temporarily blocks the current process waiting for a task reply.</p>
 <p>Returns <code class="inline">{:ok, reply}</code> if the reply is received, <code class="inline">nil</code> if
@@ -782,28 +788,28 @@ for the duration of the timeout awaiting the message.</p>
   </section>
 </div>
 <div class="detail" id="yield_many/2">
+  
+    <span id="yield_many/1" />
+  
   <div class="detail-header">
     <a href="#yield_many/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">yield_many(tasks, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/task.ex#L469" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/task.ex#L469" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">yield_many([<a href="#t:t/0">t</a>], timeout) :: [{<a href="#t:t/0">t</a>, {:ok, term} | {:exit, term} | nil}]</code></pre>
+          <pre>yield_many([<a href="#t:t/0">t</a>], timeout) :: [{<a href="#t:t/0">t</a>, {:ok, term} | {:exit, term} | nil}]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Yields to multiple tasks in the given time interval.</p>
 <p>This function receives a list of tasks and waits for their
@@ -871,7 +877,7 @@ the <a href="Task.html#shutdown/2"><code class="inline">Task.shutdown/2</code></
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -884,7 +890,7 @@ the <a href="Task.html#shutdown/2"><code class="inline">Task.shutdown/2</code></
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

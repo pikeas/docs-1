@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>GenServer – Elixir v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>GenServer – Elixir v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/GenServer.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -56,9 +56,8 @@
       <li><a id="protocols-list" href="#full-list">Protocols</a></li>
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -67,13 +66,13 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.3</small>
+        <small class="visible-xs">Elixir v1.3.4</small>
         GenServer
         
           <small>behaviour</small>
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -521,7 +520,7 @@ block until it returns</p>
       
 
       
-        <section id="types" class="types details-list">
+        <section id="types" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#types">
               <i class="icon-link"></i>
@@ -529,66 +528,196 @@ block until it returns</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:debug/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:debug/0">debug</a> :: [:trace | :log | :statistics | {:log_to_file, <a href="Path.html#t:t/0">Path.t</a>}]</code></pre>
+            <div class="detail" id="t:debug/0">
   
-    <div class="typespec-doc"><p>Debug options supported by the <code class="inline">start*</code> functions</p>
+  <div class="detail-header">
+    <a href="#t:debug/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">debug()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L422" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:debug/0">debug</a> :: [:trace | :log | :statistics | {:log_to_file, <a href="Path.html#t:t/0">Path.t</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Debug options supported by the <code class="inline">start*</code> functions</p>
+
+  </section>
 </div>
+<div class="detail" id="t:from/0">
   
-</div>
-<div id="t:from/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:from/0">from</a> :: {pid, tag :: term}</code></pre>
-  
-    <div class="typespec-doc"><p>Tuple describing the client of a call request.</p>
+  <div class="detail-header">
+    <a href="#t:from/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">from()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L428" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:from/0">from</a> :: {pid, tag :: term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Tuple describing the client of a call request.</p>
 <p><code class="inline">pid</code> is the pid of the caller and <code class="inline">tag</code> is a unique term used to identify the
 call.</p>
+
+  </section>
 </div>
+<div class="detail" id="t:name/0">
   
+  <div class="detail-header">
+    <a href="#t:name/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">name()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L410" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:name/0">name</a> :: atom | {:global, term} | {:via, module, term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The GenServer name</p>
+
+  </section>
 </div>
-<div id="t:name/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:name/0">name</a> ::
-  atom |
-  {:global, term} |
-  {:via, module, term}</code></pre>
+<div class="detail" id="t:on_start/0">
   
-    <div class="typespec-doc"><p>The GenServer name</p>
-</div>
-  
-</div>
-<div id="t:on_start/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:on_start/0">on_start</a> ::
+  <div class="detail-header">
+    <a href="#t:on_start/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">on_start()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L407" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:on_start/0">on_start</a> ::
   {:ok, pid} |
   :ignore |
-  {:error, {:already_started, pid} | term}</code></pre>
-  
-    <div class="typespec-doc"><p>Return values of <code class="inline">start*</code> functions</p>
+  {:error, {:already_started, pid} | term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Return values of <code class="inline">start*</code> functions</p>
+
+  </section>
 </div>
+<div class="detail" id="t:option/0">
   
-</div>
-<div id="t:option/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:option/0">option</a> ::
+  <div class="detail-header">
+    <a href="#t:option/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">option()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L416" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:option/0">option</a> ::
   {:debug, <a href="#t:debug/0">debug</a>} |
   {:name, <a href="#t:name/0">name</a>} |
   {:timeout, timeout} |
-  {:spawn_opt, <a href="Process.html#t:spawn_opt/0">Process.spawn_opt</a>}</code></pre>
-  
-    <div class="typespec-doc"><p>Option values used by the <code class="inline">start*</code> functions</p>
+  {:spawn_opt, <a href="Process.html#t:spawn_opt/0">Process.spawn_opt</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Option values used by the <code class="inline">start*</code> functions</p>
+
+  </section>
 </div>
+<div class="detail" id="t:options/0">
   
+  <div class="detail-header">
+    <a href="#t:options/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">options()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L413" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:options/0">options</a> :: [<a href="#t:option/0">option</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Options used by the <code class="inline">start*</code> functions</p>
+
+  </section>
 </div>
-<div id="t:options/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:options/0">options</a> :: [<a href="#t:option/0">option</a>]</code></pre>
+<div class="detail" id="t:server/0">
   
-    <div class="typespec-doc"><p>Options used by the <code class="inline">start*</code> functions</p>
-</div>
-  
-</div>
-<div id="t:server/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:server/0">server</a> :: pid | <a href="#t:name/0">name</a> | {atom, node}</code></pre>
-  
-    <div class="typespec-doc"><p>The server reference</p>
-</div>
-  
+  <div class="detail-header">
+    <a href="#t:server/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">server()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L425" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:server/0">server</a> :: pid | <a href="#t:name/0">name</a> | {atom, node}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The server reference</p>
+
+  </section>
 </div>
 
           </div>
@@ -604,28 +733,28 @@ call.</p>
             Functions
           </h1>
           <div class="detail" id="abcast/3">
+  
+    <span id="abcast/2" />
+  
   <div class="detail-header">
     <a href="#abcast/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">abcast(nodes \\ nodes(), name, request)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L663" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L663" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">abcast([node], name :: atom, term) :: :abcast</code></pre>
+          <pre>abcast([node], name :: atom, term) :: :abcast</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Casts all servers locally registered as <code class="inline">name</code> at the specified nodes.</p>
 <p>This function returns immediately and ignores nodes that do not exist, or where the
@@ -635,28 +764,28 @@ server name does not exist.</p>
   </section>
 </div>
 <div class="detail" id="call/3">
+  
+    <span id="call/2" />
+  
   <div class="detail-header">
     <a href="#call/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">call(server, request, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L593" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L593" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">call(<a href="#t:server/0">server</a>, term, timeout) :: term</code></pre>
+          <pre>call(<a href="#t:server/0">server</a>, term, timeout) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Makes a synchronous call to the <code class="inline">server</code> and waits for its reply.</p>
 <p>The client sends the given <code class="inline">request</code> to the server and waits until a reply
@@ -682,28 +811,26 @@ element.</p>
   </section>
 </div>
 <div class="detail" id="cast/2">
+  
   <div class="detail-header">
     <a href="#cast/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">cast(server, request)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L628" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L628" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cast(<a href="#t:server/0">server</a>, term) :: :ok</code></pre>
+          <pre>cast(<a href="#t:server/0">server</a>, term) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends an asynchronous request to the <code class="inline">server</code>.</p>
 <p>This function always returns <code class="inline">:ok</code> regardless of whether
@@ -721,28 +848,30 @@ messages to other nodes to arrive out of order.</p>
   </section>
 </div>
 <div class="detail" id="multi_call/4">
+  
+    <span id="multi_call/2" />
+  
+    <span id="multi_call/3" />
+  
   <div class="detail-header">
     <a href="#multi_call/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">multi_call(nodes \\ nodes(), name, request, timeout \\ :infinity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L713" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L713" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">multi_call([node], name :: atom, term, timeout) :: {replies :: [{node, term}], bad_nodes :: [node]}</code></pre>
+          <pre>multi_call([node], name :: atom, term, timeout) :: {replies :: [{node, term}], bad_nodes :: [node]}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Calls all servers locally registered as <code class="inline">name</code> at the specified <code class="inline">nodes</code>.</p>
 <p>First, the <code class="inline">request</code> is sent to every node in <code class="inline">nodes</code>; then, the caller waits
@@ -775,28 +904,26 @@ module is registered as <code class="inline">Stack</code> in the <code class="in
   </section>
 </div>
 <div class="detail" id="reply/2">
+  
   <div class="detail-header">
     <a href="#reply/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">reply(client, reply)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L747" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L747" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">reply(<a href="#t:from/0">from</a>, term) :: :ok</code></pre>
+          <pre>reply(<a href="#t:from/0">from</a>, term) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Replies to a client.</p>
 <p>This function can be used to explicitely send a reply to a client that called
@@ -826,28 +953,28 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="start/3">
+  
+    <span id="start/2" />
+  
   <div class="detail-header">
     <a href="#start/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(module, args, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L539" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L539" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start(module, any, <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+          <pre>start(module, any, <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a <a href="GenServer.html#content"><code class="inline">GenServer</code></a> process without links (outside of a supervision tree).</p>
 <p>See <a href="#start_link/3"><code class="inline">start_link/3</code></a> for more information.</p>
@@ -855,28 +982,28 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="start_link/3">
+  
+    <span id="start_link/2" />
+  
   <div class="detail-header">
     <a href="#start_link/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(module, args, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L529" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L529" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link(module, any, <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+          <pre>start_link(module, any, <a href="#t:options/0">options</a>) :: <a href="#t:on_start/0">on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts a <a href="GenServer.html#content"><code class="inline">GenServer</code></a> process linked to the current process.</p>
 <p>This is often used to start the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> as part of a supervision tree.</p>
@@ -925,28 +1052,30 @@ or <code class="inline">:ignore</code>, the process is terminated and this funct
   </section>
 </div>
 <div class="detail" id="stop/3">
+  
+    <span id="stop/1" />
+  
+    <span id="stop/2" />
+  
   <div class="detail-header">
     <a href="#stop/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(server, reason \\ :normal, timeout \\ :infinity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L566" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L566" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">stop(<a href="#t:server/0">server</a>, reason :: term, timeout) :: :ok</code></pre>
+          <pre>stop(<a href="#t:server/0">server</a>, reason :: term, timeout) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Stops the server with the given <code class="inline">reason</code>.</p>
 <p>The <code class="inline">terminate/2</code> callback of the given <code class="inline">server</code> will be invoked before
@@ -959,28 +1088,26 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
   </section>
 </div>
 <div class="detail" id="whereis/1">
+  
   <div class="detail-header">
     <a href="#whereis/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">whereis(pid)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L772" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L772" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">whereis(<a href="#t:server/0">server</a>) :: pid | {atom, node} | nil</code></pre>
+          <pre>whereis(<a href="#t:server/0">server</a>) :: pid | {atom, node} | nil</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the <code class="inline">pid</code> or <code class="inline">{name, node}</code> of a GenServer process, or <code class="inline">nil</code> if
 no process is associated with the given name.</p>
@@ -1011,30 +1138,28 @@ GenServer.cast(process, :hello)</code></pre>
             Callbacks
           </h1>
           <div class="detail" id="c:code_change/3">
+  
   <div class="detail-header">
     <a href="#c:code_change/3" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">code_change(old_vsn, state, extra)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L381" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L381" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">code_change(old_vsn, state :: term, extra :: term) ::
+          <pre>code_change(old_vsn, state :: term, extra :: term) ::
   {:ok, new_state :: term} |
-  {:error, reason :: term} when old_vsn: term | {:down, term}</code></pre>
+  {:error, reason :: term} when old_vsn: term | {:down, term}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked to change the state of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> when a different version of a
 module is loaded (hot code swapping) and the state’s term structure should be
@@ -1053,37 +1178,35 @@ with its previous state. Therefore this callback does not usually contain side e
   </section>
 </div>
 <div class="detail" id="c:format_status/2">
+  
   <div class="detail-header">
     <a href="#c:format_status/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">format_status(reason, pdict_and_state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L402" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L402" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
       <span class="note">(optional)</span>
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">format_status(reason, pdict_and_state :: list) :: term when reason: :normal | :terminate</code></pre>
+          <pre>format_status(reason, pdict_and_state :: list) :: term when reason: :normal | :terminate</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked in some cases to retrieve a formatted version of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> status.</p>
 <p>This callback can be useful to control the <em>appearance</em> of the status of the
 <a href="GenServer.html#content"><code class="inline">GenServer</code></a>. For example, it can be used to return a compact representation of
 the <code class="inline">GenServers</code>’s state to avoid having large state terms printed.</p>
 <ul>
-<li><p>one of <a href="http://www.erlang.org/doc/man/sys.html#get_status-1"><code class="inline">:sys.get_status/1</code></a> or <a href="http://www.erlang.org/doc/man/sys.html#get_status-2"><code class="inline">:sys.get_status/2</code></a> is invoked to get the
+<li><p>one of <code class="inline">:sys.get_status/1</code> or <code class="inline">:sys.get_status/2</code> is invoked to get the
 status of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>; in such cases, <code class="inline">reason</code> is <code class="inline">:normal</code></p>
 </li>
 <li>the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> terminates abnormally and logs an error; in such cases,
@@ -1097,34 +1220,32 @@ the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> a
   </section>
 </div>
 <div class="detail" id="c:handle_call/3">
+  
   <div class="detail-header">
     <a href="#c:handle_call/3" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">handle_call(request, from, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_call(request :: term, <a href="#t:from/0">from</a>, state :: term) ::
+          <pre>handle_call(request :: term, <a href="#t:from/0">from</a>, state :: term) ::
   {:reply, reply, new_state} |
   {:reply, reply, new_state, timeout | :hibernate} |
   {:noreply, new_state} |
   {:noreply, new_state, timeout | :hibernate} |
   {:stop, reason, reply, new_state} |
-  {:stop, reason, new_state} when reply: term, new_state: term, reason: term</code></pre>
+  {:stop, reason, new_state} when reply: term, new_state: term, reason: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked to handle synchronous <a href="#call/3"><code class="inline">call/3</code></a> messages. <a href="#call/3"><code class="inline">call/3</code></a> will block until a
 reply is received (unless the call times out or nodes are disconnected).</p>
@@ -1177,31 +1298,29 @@ as the response to call and the process exits with reason <code class="inline">r
   </section>
 </div>
 <div class="detail" id="c:handle_cast/2">
+  
   <div class="detail-header">
     <a href="#c:handle_cast/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">handle_cast(request, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L303" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_cast(request :: term, state :: term) ::
+          <pre>handle_cast(request :: term, state :: term) ::
   {:noreply, new_state} |
   {:noreply, new_state, timeout | :hibernate} |
-  {:stop, reason :: term, new_state} when new_state: term</code></pre>
+  {:stop, reason :: term, new_state} when new_state: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked to handle asynchronous <a href="#cast/2"><code class="inline">cast/2</code></a> messages.</p>
 <p><code class="inline">request</code> is the request message sent by a <a href="#cast/2"><code class="inline">cast/2</code></a> and <code class="inline">state</code> is the current
@@ -1222,31 +1341,29 @@ reason <code class="inline">reason</code>.</p>
   </section>
 </div>
 <div class="detail" id="c:handle_info/2">
+  
   <div class="detail-header">
     <a href="#c:handle_info/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">handle_info(msg, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L319" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L319" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">handle_info(msg :: :timeout | term, state :: term) ::
+          <pre>handle_info(msg :: :timeout | term, state :: term) ::
   {:noreply, new_state} |
   {:noreply, new_state, timeout | :hibernate} |
-  {:stop, reason :: term, new_state} when new_state: term</code></pre>
+  {:stop, reason :: term, new_state} when new_state: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked to handle all other messages.</p>
 <p><code class="inline">msg</code> is the message and <code class="inline">state</code> is the current state of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>. When
@@ -1258,32 +1375,30 @@ a timeout occurs the message is <code class="inline">:timeout</code>.</p>
   </section>
 </div>
 <div class="detail" id="c:init/1">
+  
   <div class="detail-header">
     <a href="#c:init/1" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">init(args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">init(args :: term) ::
+          <pre>init(args :: term) ::
   {:ok, state} |
   {:ok, state, timeout | :hibernate} |
   :ignore |
-  {:stop, reason :: any} when state: any</code></pre>
+  {:stop, reason :: any} when state: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked when the server is started. <a href="#start_link/3"><code class="inline">start_link/3</code></a> (or <a href="#start/3)"><code class="inline">start/3</code></a> will
 block until it returns.</p>
@@ -1319,28 +1434,26 @@ entering the loop or calling <code class="inline">terminate/2</code>.</p>
   </section>
 </div>
 <div class="detail" id="c:terminate/2">
+  
   <div class="detail-header">
     <a href="#c:terminate/2" class="detail-link" title="Link to this callback">
       <i class="icon-link"></i>
     </a>
     <span class="signature">terminate(reason, state)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/gen_server.ex#L359" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/gen_server.ex#L359" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">terminate(reason, state :: term) :: term when reason: :normal | :shutdown | {:shutdown, term} | term</code></pre>
+          <pre>terminate(reason, state :: term) :: term when reason: :normal | :shutdown | {:shutdown, term} | term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invoked when the server is about to exit. It should do any cleanup required.</p>
 <p><code class="inline">reason</code> is exit reason and <code class="inline">state</code> is the current state of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>.
@@ -1379,7 +1492,7 @@ logged.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -1392,7 +1505,7 @@ logged.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

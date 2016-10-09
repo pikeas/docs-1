@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>Agent – Elixir v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>Agent – Elixir v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Agent.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -56,9 +56,8 @@
       <li><a id="protocols-list" href="#full-list">Protocols</a></li>
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -67,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.3</small>
+        <small class="visible-xs">Elixir v1.3.4</small>
         Agent
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -370,7 +369,7 @@ function and arguments</p>
       
 
       
-        <section id="types" class="types details-list">
+        <section id="types" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#types">
               <i class="icon-link"></i>
@@ -378,38 +377,111 @@ function and arguments</p>
             Types
           </h1>
           <div class="types-list">
-            <div id="t:agent/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:agent/0">agent</a> :: pid | {atom, node} | <a href="#t:name/0">name</a></code></pre>
+            <div class="detail" id="t:agent/0">
   
-    <div class="typespec-doc"><p>The agent reference</p>
+  <div class="detail-header">
+    <a href="#t:agent/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">agent()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L114" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:agent/0">agent</a> :: pid | {atom, node} | <a href="#t:name/0">name</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The agent reference</p>
+
+  </section>
 </div>
+<div class="detail" id="t:name/0">
   
+  <div class="detail-header">
+    <a href="#t:name/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">name()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L111" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:name/0">name</a> :: atom | {:global, term} | {:via, module, term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The agent name</p>
+
+  </section>
 </div>
-<div id="t:name/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:name/0">name</a> ::
-  atom |
-  {:global, term} |
-  {:via, module, term}</code></pre>
+<div class="detail" id="t:on_start/0">
   
-    <div class="typespec-doc"><p>The agent name</p>
-</div>
-  
-</div>
-<div id="t:on_start/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:on_start/0">on_start</a> ::
+  <div class="detail-header">
+    <a href="#t:on_start/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">on_start()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L108" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:on_start/0">on_start</a> ::
   {:ok, pid} |
-  {:error, {:already_started, pid} | term}</code></pre>
-  
-    <div class="typespec-doc"><p>Return values of <code class="inline">start*</code> functions</p>
+  {:error, {:already_started, pid} | term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Return values of <code class="inline">start*</code> functions</p>
+
+  </section>
 </div>
+<div class="detail" id="t:state/0">
   
-</div>
-<div id="t:state/0" class="type-detail">
-  <pre><code class="elixir"><a href="#t:state/0">state</a> :: term</code></pre>
-  
-    <div class="typespec-doc"><p>The agent state</p>
-</div>
-  
+  <div class="detail-header">
+    <a href="#t:state/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">state()</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L117" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:state/0">state</a> :: term</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The agent state</p>
+
+  </section>
 </div>
 
           </div>
@@ -425,28 +497,26 @@ function and arguments</p>
             Functions
           </h1>
           <div class="detail" id="cast/2">
+  
   <div class="detail-header">
     <a href="#cast/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">cast(agent, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L281" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L281" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cast(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> <a href="#t:state/0">state</a>)) :: :ok</code></pre>
+          <pre>cast(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> <a href="#t:state/0">state</a>)) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Performs a cast (fire and forget) operation on the agent state.</p>
 <p>The function <code class="inline">fun</code> is sent to the <code class="inline">agent</code> which invokes the function
@@ -457,28 +527,26 @@ destination node or agent exists.</p>
   </section>
 </div>
 <div class="detail" id="cast/4">
+  
   <div class="detail-header">
     <a href="#cast/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">cast(agent, module, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L293" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L293" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">cast(<a href="#t:agent/0">agent</a>, module, atom, [term]) :: :ok</code></pre>
+          <pre>cast(<a href="#t:agent/0">agent</a>, module, atom, [term]) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Performs a cast (fire and forget) operation on the agent state.</p>
 <p>Same as <a href="#cast/2"><code class="inline">cast/2</code></a> but a module, function and args are expected
@@ -488,28 +556,28 @@ argument to the given list of args.</p>
   </section>
 </div>
 <div class="detail" id="get/3">
+  
+    <span id="get/2" />
+  
   <div class="detail-header">
     <a href="#get/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get(agent, fun, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L202" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> a), timeout) :: a when a: var</code></pre>
+          <pre>get(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> a), timeout) :: a when a: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets an agent value via the given function.</p>
 <p>The function <code class="inline">fun</code> is sent to the <code class="inline">agent</code> which invokes the function
@@ -520,28 +588,28 @@ returned.</p>
   </section>
 </div>
 <div class="detail" id="get/5">
+  
+    <span id="get/4" />
+  
   <div class="detail-header">
     <a href="#get/5" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get(agent, module, fun, args, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L214" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L214" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get(<a href="#t:agent/0">agent</a>, module, atom, [term], timeout) :: any</code></pre>
+          <pre>get(<a href="#t:agent/0">agent</a>, module, atom, [term], timeout) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets an agent value via the given function.</p>
 <p>Same as <a href="#get/3"><code class="inline">get/3</code></a> but a module, function and args are expected
@@ -551,28 +619,28 @@ argument to the given list of args.</p>
   </section>
 </div>
 <div class="detail" id="get_and_update/3">
+  
+    <span id="get_and_update/2" />
+  
   <div class="detail-header">
     <a href="#get_and_update/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update(agent, fun, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L229" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L229" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> {a, <a href="#t:state/0">state</a>}), timeout) :: a when a: var</code></pre>
+          <pre>get_and_update(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> {a, <a href="#t:state/0">state</a>}), timeout) :: a when a: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets and updates the agent state in one operation.</p>
 <p>The function <code class="inline">fun</code> is sent to the <code class="inline">agent</code> which invokes the function
@@ -584,28 +652,28 @@ and the second one is the new state.</p>
   </section>
 </div>
 <div class="detail" id="get_and_update/5">
+  
+    <span id="get_and_update/4" />
+  
   <div class="detail-header">
     <a href="#get_and_update/5" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update(agent, module, fun, args, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L241" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update(<a href="#t:agent/0">agent</a>, module, atom, [term], timeout) :: any</code></pre>
+          <pre>get_and_update(<a href="#t:agent/0">agent</a>, module, atom, [term], timeout) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets and updates the agent state in one operation.</p>
 <p>Same as <a href="#get_and_update/3"><code class="inline">get_and_update/3</code></a> but a module, function and args are expected
@@ -615,28 +683,28 @@ argument to the given list of args.</p>
   </section>
 </div>
 <div class="detail" id="start/2">
+  
+    <span id="start/1" />
+  
   <div class="detail-header">
     <a href="#start/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(fun, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L177" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L177" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start((() -> term), <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+          <pre>start((() -> term), <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts an agent process without links (outside of a supervision tree).</p>
 <p>See <a href="#start_link/2"><code class="inline">start_link/2</code></a> for more information.</p>
@@ -644,28 +712,28 @@ argument to the given list of args.</p>
   </section>
 </div>
 <div class="detail" id="start/4">
+  
+    <span id="start/3" />
+  
   <div class="detail-header">
     <a href="#start/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start(module, fun, args, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L188" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start(module, atom, [any], <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+          <pre>start(module, atom, [any], <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts an agent with the given module function and arguments.</p>
 <p>Similar to <a href="#start/2"><code class="inline">start/2</code></a> but a module, function and args are expected
@@ -674,28 +742,28 @@ instead of an anonymous function.</p>
   </section>
 </div>
 <div class="detail" id="start_link/2">
+  
+    <span id="start_link/1" />
+  
   <div class="detail-header">
     <a href="#start_link/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(fun, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L155" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L155" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link((() -> term), <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+          <pre>start_link((() -> term), <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts an agent linked to the current process with the given function.</p>
 <p>This is often used to start the agent as part of a supervision tree.</p>
@@ -731,28 +799,28 @@ specified name already exists, the function returns
   </section>
 </div>
 <div class="detail" id="start_link/4">
+  
+    <span id="start_link/3" />
+  
   <div class="detail-header">
     <a href="#start_link/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">start_link(module, fun, args, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L167" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">start_link(module, atom, [any], <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></code></pre>
+          <pre>start_link(module, atom, [any], <a href="GenServer.html#t:options/0">GenServer.options</a>) :: <a href="#t:on_start/0">on_start</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Starts an agent linked to the current process with the given module
 function and arguments.</p>
@@ -762,28 +830,30 @@ instead of an anonymous function.</p>
   </section>
 </div>
 <div class="detail" id="stop/3">
+  
+    <span id="stop/1" />
+  
+    <span id="stop/2" />
+  
   <div class="detail-header">
     <a href="#stop/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">stop(agent, reason \\ :normal, timeout \\ :infinity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">stop(<a href="#t:agent/0">agent</a>, reason :: term, timeout) :: :ok</code></pre>
+          <pre>stop(<a href="#t:agent/0">agent</a>, reason :: term, timeout) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Stops the agent with the given <code class="inline">reason</code>.</p>
 <p>It returns <code class="inline">:ok</code> if the server terminates with the given
@@ -796,28 +866,28 @@ If the reason is any other than <code class="inline">:normal</code>, <code class
   </section>
 </div>
 <div class="detail" id="update/3">
+  
+    <span id="update/2" />
+  
   <div class="detail-header">
     <a href="#update/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">update(agent, fun, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L255" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L255" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> <a href="#t:state/0">state</a>), timeout) :: :ok</code></pre>
+          <pre>update(<a href="#t:agent/0">agent</a>, (<a href="#t:state/0">state</a> -> <a href="#t:state/0">state</a>), timeout) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates the agent state.</p>
 <p>The function <code class="inline">fun</code> is sent to the <code class="inline">agent</code> which invokes the function
@@ -828,28 +898,28 @@ This function always returns <code class="inline">:ok</code>.</p>
   </section>
 </div>
 <div class="detail" id="update/5">
+  
+    <span id="update/4" />
+  
   <div class="detail-header">
     <a href="#update/5" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">update(agent, module, fun, args, timeout \\ 5000)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/agent.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/agent.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update(<a href="#t:agent/0">agent</a>, module, atom, [term], timeout) :: :ok</code></pre>
+          <pre>update(<a href="#t:agent/0">agent</a>, module, atom, [term], timeout) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates the agent state.</p>
 <p>Same as <a href="#update/3"><code class="inline">update/3</code></a> but a module, function and args are expected
@@ -869,7 +939,7 @@ argument to the given list of args.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -882,7 +952,7 @@ argument to the given list of args.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

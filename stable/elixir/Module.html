@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>Module – Elixir v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>Module – Elixir v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Module.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -56,9 +56,8 @@
       <li><a id="protocols-list" href="#full-list">Protocols</a></li>
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -67,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.3</small>
+        <small class="visible-xs">Elixir v1.3.4</small>
         Module
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -643,30 +642,28 @@ already referenced</p>
             Functions
           </h1>
           <div class="detail" id="__info__/1">
+  
   <div class="detail-header">
     <a href="#__info__/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">__info__(kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L0" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L0" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">__info__(:attributes | :compile | :exports | :functions | :macros | :md5 | :module | :native_addresses) ::
+          <pre>__info__(:attributes | :compile | :exports | :functions | :macros | :md5 | :module | :native_addresses) ::
   atom |
-  [{atom, any} | {atom, byte, integer}]</code></pre>
+  [{atom, any} | {atom, byte, integer}]</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Provides runtime information about functions and macros defined by the
 module, enables docstring extraction, etc.</p>
@@ -681,25 +678,28 @@ takes one of the following atoms:</p>
 </li>
 </ul>
 <p>In addition to the above, you may also pass to <a href="#__info__/1"><code class="inline">__info__/1</code></a> any atom supported
-by <a href="http://www.erlang.org/doc/man/erlang.html#module_info-0"><code class="inline">:erlang.module_info/0</code></a> which also gets defined for each compiled module.</p>
+by <code class="inline">:erlang.module_info/0</code> which also gets defined for each compiled module.</p>
 <p>For a list of supported attributes and more information, see <a href="http://www.erlang.org/doc/reference_manual/modules.html#id77056">Modules – Erlang Reference Manual</a>.</p>
 
   </section>
 </div>
 <div class="detail" id="add_doc/6">
+  
+    <span id="add_doc/5" />
+  
   <div class="detail-header">
     <a href="#add_doc/6" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">add_doc(module, line, kind, tuple, signature \\ [], doc)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L601" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L601" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Attaches documentation to a given function or type.</p>
 <p>It expects the module the function/type belongs to, the line (a non
@@ -720,28 +720,26 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="concat/1">
+  
   <div class="detail-header">
     <a href="#concat/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">concat(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L521" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L521" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">concat([binary | atom]) :: atom</code></pre>
+          <pre>concat([binary | atom]) :: atom</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates a list of aliases and returns a new alias.</p>
 <h2 id="concat/1-examples" class="section-heading">
@@ -758,28 +756,26 @@ Foo.Bar</code></pre>
   </section>
 </div>
 <div class="detail" id="concat/2">
+  
   <div class="detail-header">
     <a href="#concat/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">concat(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L538" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L538" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">concat(binary | atom, binary | atom) :: atom</code></pre>
+          <pre>concat(binary | atom, binary | atom) :: atom</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates two aliases and returns a new alias.</p>
 <h2 id="concat/2-examples" class="section-heading">
@@ -796,19 +792,20 @@ Foo.Bar</code></pre>
   </section>
 </div>
 <div class="detail" id="create/3">
+  
   <div class="detail-header">
     <a href="#create/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">create(module, quoted, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L491" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L491" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Creates a module with the given name and defined by
 the given quoted expressions.</p>
@@ -845,19 +842,20 @@ shares the same environment.</p>
   </section>
 </div>
 <div class="detail" id="defines?/2">
+  
   <div class="detail-header">
     <a href="#defines?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defines?(module, tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L752" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L752" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Checks if the module defines the given function or macro.</p>
 <p>Use <a href="#defines?/3"><code class="inline">defines?/3</code></a> to assert for a specific type.</p>
@@ -875,19 +873,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="defines?/3">
+  
   <div class="detail-header">
     <a href="#defines?/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defines?(module, tuple, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L773" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L773" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Checks if the module defines a function or macro of the
 given <code class="inline">kind</code>.</p>
@@ -906,19 +905,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="definitions_in/1">
+  
   <div class="detail-header">
     <a href="#definitions_in/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">definitions_in(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L793" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L793" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns all functions defined in <code class="inline">module</code>.</p>
 <h2 id="definitions_in/1-examples" class="section-heading">
@@ -934,19 +934,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="definitions_in/2">
+  
   <div class="detail-header">
     <a href="#definitions_in/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">definitions_in(module, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L812" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L812" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns all functions defined in <code class="inline">module</code>, according
 to its kind.</p>
@@ -964,28 +965,26 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="delete_attribute/2">
+  
   <div class="detail-header">
     <a href="#delete_attribute/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">delete_attribute(module, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L944" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L944" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">delete_attribute(atom, atom) :: :ok</code></pre>
+          <pre>delete_attribute(atom, atom) :: :ok</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Deletes all attributes that match the given key.</p>
 <h2 id="delete_attribute/2-examples" class="section-heading">
@@ -1001,19 +1000,24 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="eval_quoted/4">
+  
+    <span id="eval_quoted/2" />
+  
+    <span id="eval_quoted/3" />
+  
   <div class="detail-header">
     <a href="#eval_quoted/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">eval_quoted(module, quoted, binding \\ [], opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L442" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L442" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Evaluates the quoted contents in the given module’s context.</p>
 <p>A list of environment options can also be given as argument.
@@ -1042,28 +1046,26 @@ Foo.sum(1, 2) #=&gt; 3</code></pre>
   </section>
 </div>
 <div class="detail" id="get_attribute/2">
+  
   <div class="detail-header">
     <a href="#get_attribute/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_attribute(module, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L928" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L928" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_attribute(atom, atom) :: term</code></pre>
+          <pre>get_attribute(atom, atom) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the given attribute from a module.</p>
 <p>If the attribute was marked with <code class="inline">accumulate</code> with
@@ -1092,19 +1094,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="make_overridable/2">
+  
   <div class="detail-header">
     <a href="#make_overridable/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">make_overridable(module, tuples)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L825" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L825" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Makes the given functions in <code class="inline">module</code> overridable.</p>
 <p>An overridable function is lazily defined, allowing a
@@ -1114,19 +1117,20 @@ more information and documentation.</p>
   </section>
 </div>
 <div class="detail" id="open?/1">
+  
   <div class="detail-header">
     <a href="#open?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">open?(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L410" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L410" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Checks if a module is open, i.e. it is currently being defined
 and its attributes and functions can be modified.</p>
@@ -1134,38 +1138,40 @@ and its attributes and functions can be modified.</p>
   </section>
 </div>
 <div class="detail" id="overridable?/2">
+  
   <div class="detail-header">
     <a href="#overridable?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">overridable?(module, tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L855" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L855" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">tuple</code> in <code class="inline">module</code> is marked as overridable.</p>
 
   </section>
 </div>
 <div class="detail" id="put_attribute/3">
+  
   <div class="detail-header">
     <a href="#put_attribute/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_attribute(module, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L873" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L873" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Puts an Erlang attribute to the given module with the given
 key and value.</p>
@@ -1183,19 +1189,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="register_attribute/3">
+  
   <div class="detail-header">
     <a href="#register_attribute/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">register_attribute(module, new, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L982" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L982" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Registers an attribute. By registering an attribute, a developer
 is able to customize how Elixir will store and accumulate the
@@ -1234,28 +1241,26 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="safe_concat/1">
+  
   <div class="detail-header">
     <a href="#safe_concat/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">safe_concat(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">safe_concat([binary | atom]) :: atom | no_return</code></pre>
+          <pre>safe_concat([binary | atom]) :: atom | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates a list of aliases and returns a new alias only if the alias
 was already referenced.</p>
@@ -1275,30 +1280,28 @@ List.Chars</code></pre>
   </section>
 </div>
 <div class="detail" id="safe_concat/2">
+  
   <div class="detail-header">
     <a href="#safe_concat/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">safe_concat(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L580" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L580" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">safe_concat(binary | atom, binary | atom) ::
+          <pre>safe_concat(binary | atom, binary | atom) ::
   atom |
-  no_return</code></pre>
+  no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates two aliases and returns a new alias only if the alias was
 already referenced.</p>
@@ -1318,19 +1321,20 @@ List.Chars</code></pre>
   </section>
 </div>
 <div class="detail" id="split/1">
+  
   <div class="detail-header">
     <a href="#split/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">split(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/module.ex#L1006" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/module.ex#L1006" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Splits the given module name into binary parts.</p>
 <h2 id="split/1-examples" class="section-heading">
@@ -1354,7 +1358,7 @@ List.Chars</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -1367,7 +1371,7 @@ List.Chars</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

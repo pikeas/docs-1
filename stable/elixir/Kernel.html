@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>Kernel – Elixir v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>Kernel – Elixir v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/elixir/Kernel.html" />
     
@@ -28,7 +28,7 @@
         Elixir
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -56,9 +56,8 @@
       <li><a id="protocols-list" href="#full-list">Protocols</a></li>
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -67,11 +66,11 @@
 
 
       <h1>
-        <small class="visible-xs">Elixir v1.3.3</small>
+        <small class="visible-xs">Elixir v1.3.4</small>
         Kernel
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L8" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L8" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -1315,28 +1314,26 @@ is either <code class="inline">nil</code> or <code class="inline">false</code>).
             Functions
           </h1>
           <div class="detail" id="!=/2">
+  
   <div class="detail-header">
     <a href="#!=/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left != right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1095" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1095" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term != term :: boolean</code></pre>
+          <pre>term != term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the two items are not equal.</p>
 <p>This operator considers 1 and 1.0 to be equal. For match
@@ -1357,28 +1354,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="!==/2">
+  
   <div class="detail-header">
     <a href="#!==/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left !== right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1141" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1141" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term !== term :: boolean</code></pre>
+          <pre>term !== term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the two items do not match.</p>
 <p>All terms in Elixir can be compared with each other.</p>
@@ -1397,28 +1392,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="*/2">
+  
   <div class="detail-header">
     <a href="#*/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left * right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L886" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L886" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">number * number :: number</code></pre>
+          <pre>number * number :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Arithmetic multiplication.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -1433,28 +1426,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="+/1">
+  
   <div class="detail-header">
     <a href="#+/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">+value</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L854" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L854" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">+number :: number</code></pre>
+          <pre>+number :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Arithmetic unary plus.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -1469,28 +1460,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="+/2">
+  
   <div class="detail-header">
     <a href="#+/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left + right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L822" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L822" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">number + number :: number</code></pre>
+          <pre>number + number :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Arithmetic addition.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -1505,28 +1494,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="++/2">
+  
   <div class="detail-header">
     <a href="#++/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left ++ right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L932" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L932" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">list ++ term :: maybe_improper_list</code></pre>
+          <pre>list ++ term :: maybe_improper_list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Concatenates two lists.</p>
 <p>The complexity of <code class="inline">a ++ b</code> is proportional to <code class="inline">length(a)</code>, so avoid repeatedly
@@ -1547,28 +1534,26 @@ iex&gt; &#39;foo&#39; ++ &#39;bar&#39;
   </section>
 </div>
 <div class="detail" id="-/1">
+  
   <div class="detail-header">
     <a href="#-/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">-value</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L870" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L870" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">-number :: number</code></pre>
+          <pre>-number :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Arithmetic unary minus.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -1583,28 +1568,26 @@ iex&gt; &#39;foo&#39; ++ &#39;bar&#39;
   </section>
 </div>
 <div class="detail" id="-/2">
+  
   <div class="detail-header">
     <a href="#-/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left - right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L838" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L838" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">number - number :: number</code></pre>
+          <pre>number - number :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Arithmetic subtraction.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -1619,28 +1602,26 @@ iex&gt; &#39;foo&#39; ++ &#39;bar&#39;
   </section>
 </div>
 <div class="detail" id="--/2">
+  
   <div class="detail-header">
     <a href="#--/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left -- right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L957" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L957" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">list -- list :: list</code></pre>
+          <pre>list -- list :: list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Removes the first occurrence of an item on the left list
 for each item on the right.</p>
@@ -1663,28 +1644,26 @@ iex&gt; [1, 2, 3, 2, 1] -- [1, 2, 2]
   </section>
 </div>
 <div class="detail" id="//2">
+  
   <div class="detail-header">
     <a href="#//2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left / right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L908" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L908" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">number / number :: float</code></pre>
+          <pre>number / number :: float</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Arithmetic division.</p>
 <p>The result is always a float. Use <a href="#div/2"><code class="inline">div/2</code></a> and <a href="#rem/2"><code class="inline">rem/2</code></a> if you want
@@ -1704,28 +1683,26 @@ iex&gt; 2 / 1
   </section>
 </div>
 <div class="detail" id="%3C/2">
+  
   <div class="detail-header">
     <a href="#%3C/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left &lt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L993" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L993" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term < term :: boolean</code></pre>
+          <pre>term < term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if left is less than right.</p>
 <p>All terms in Elixir can be compared with each other.</p>
@@ -1741,28 +1718,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="%3C=/2">
+  
   <div class="detail-header">
     <a href="#%3C=/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left &lt;= right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1029" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1029" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term <= term :: boolean</code></pre>
+          <pre>term <= term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if left is less than or equal to right.</p>
 <p>All terms in Elixir can be compared with each other.</p>
@@ -1778,28 +1753,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="==/2">
+  
   <div class="detail-header">
     <a href="#==/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left == right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1071" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1071" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term == term :: boolean</code></pre>
+          <pre>term == term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the two items are equal.</p>
 <p>This operator considers 1 and 1.0 to be equal. For match
@@ -1820,28 +1793,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="===/2">
+  
   <div class="detail-header">
     <a href="#===/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left === right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1120" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1120" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term === term :: boolean</code></pre>
+          <pre>term === term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if the two items are match.</p>
 <p>This operator gives the same semantics as the one existing in
@@ -1863,28 +1834,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="=~/2">
+  
   <div class="detail-header">
     <a href="#=~/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left =~ right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1510" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1488" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir"><a href="String.html#t:t/0">String.t</a> =~ (<a href="String.html#t:t/0">String.t</a> | <a href="Regex.html#t:t/0">Regex.t</a>) :: boolean</code></pre>
+          <pre><a href="String.html#t:t/0">String.t</a> =~ (<a href="String.html#t:t/0">String.t</a> | <a href="Regex.html#t:t/0">Regex.t</a>) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Matches the term on the left against the regular expression or string on the
 right. Returns <code class="inline">true</code> if <code class="inline">left</code> matches <code class="inline">right</code> (if it’s a regular expression)
@@ -1912,28 +1881,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="%3E/2">
+  
   <div class="detail-header">
     <a href="#%3E/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left &gt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1011" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1011" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term > term :: boolean</code></pre>
+          <pre>term > term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if left is more than right.</p>
 <p>All terms in Elixir can be compared with each other.</p>
@@ -1949,28 +1916,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="%3E=/2">
+  
   <div class="detail-header">
     <a href="#%3E=/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left &gt;= right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1047" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1047" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">term >= term :: boolean</code></pre>
+          <pre>term >= term :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if left is more than or equal to right.</p>
 <p>All terms in Elixir can be compared with each other.</p>
@@ -1986,28 +1951,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="abs/1">
+  
   <div class="detail-header">
     <a href="#abs/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">abs(number)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L56" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">abs(number) :: number</code></pre>
+          <pre>abs(number) :: number</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an integer or float which is the arithmetical absolute value of <code class="inline">number</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2025,28 +1988,26 @@ iex&gt; abs(-3)
   </section>
 </div>
 <div class="detail" id="apply/2">
+  
   <div class="detail-header">
     <a href="#apply/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">apply(fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L72" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L72" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">apply((... -> any), [any]) :: any</code></pre>
+          <pre>apply((... -> any), [any]) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invokes the given <code class="inline">fun</code> with the list of arguments <code class="inline">args</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -2061,28 +2022,26 @@ iex&gt; abs(-3)
   </section>
 </div>
 <div class="detail" id="apply/3">
+  
   <div class="detail-header">
     <a href="#apply/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">apply(module, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L88" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">apply(module, atom, [any]) :: any</code></pre>
+          <pre>apply(module, atom, [any]) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Invokes the given <code class="inline">fun</code> from <code class="inline">module</code> with the list of arguments <code class="inline">args</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -2097,28 +2056,26 @@ iex&gt; abs(-3)
   </section>
 </div>
 <div class="detail" id="binary_part/3">
+  
   <div class="detail-header">
     <a href="#binary_part/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">binary_part(binary, start, length)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L114" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L114" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">binary_part(binary, pos_integer, integer) :: binary</code></pre>
+          <pre>binary_part(binary, pos_integer, integer) :: binary</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Extracts the part of the binary starting at <code class="inline">start</code> with length <code class="inline">length</code>.
 Binaries are zero-indexed.</p>
@@ -2140,28 +2097,26 @@ at <code class="inline">start</code>:</p>
   </section>
 </div>
 <div class="detail" id="bit_size/1">
+  
   <div class="detail-header">
     <a href="#bit_size/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">bit_size(bitstring)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L133" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L133" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">bit_size(bitstring) :: non_neg_integer</code></pre>
+          <pre>bit_size(bitstring) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an integer which is the size in bits of <code class="inline">bitstring</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2179,28 +2134,26 @@ iex&gt; bit_size(&lt;&lt;1, 2, 3&gt;&gt;)
   </section>
 </div>
 <div class="detail" id="byte_size/1">
+  
   <div class="detail-header">
     <a href="#byte_size/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">byte_size(bitstring)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L156" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">byte_size(bitstring) :: non_neg_integer</code></pre>
+          <pre>byte_size(bitstring) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the number of bytes needed to contain <code class="inline">bitstring</code>.</p>
 <p>That is, if the number of bits in <code class="inline">bitstring</code> is not divisible by 8, the
@@ -2221,28 +2174,26 @@ iex&gt; byte_size(&lt;&lt;1, 2, 3&gt;&gt;)
   </section>
 </div>
 <div class="detail" id="div/2">
+  
   <div class="detail-header">
     <a href="#div/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">div(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L175" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">div(integer, integer) :: integer</code></pre>
+          <pre>div(integer, integer) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Performs an integer division.</p>
 <p>Raises an <a href="ArithmeticError.html"><code class="inline">ArithmeticError</code></a> exception if one of the arguments is not an
@@ -2259,28 +2210,26 @@ integer.</p>
   </section>
 </div>
 <div class="detail" id="elem/2">
+  
   <div class="detail-header">
     <a href="#elem/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">elem(tuple, index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1158" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1158" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">elem(tuple, non_neg_integer) :: term</code></pre>
+          <pre>elem(tuple, non_neg_integer) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets the element at the zero-based <code class="inline">index</code> in <code class="inline">tuple</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2296,28 +2245,26 @@ iex&gt; elem(tuple, 1)
   </section>
 </div>
 <div class="detail" id="exit/1">
+  
   <div class="detail-header">
     <a href="#exit/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">exit(reason)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L241" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L241" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">exit(term) :: no_return</code></pre>
+          <pre>exit(term) :: no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Stops the execution of the calling process with the given reason.</p>
 <p>Since evaluating this function causes the process to terminate,
@@ -2380,28 +2327,26 @@ status <code class="inline">1</code> and linked OTP processes to crash.</p>
   </section>
 </div>
 <div class="detail" id="function_exported?/3">
+  
   <div class="detail-header">
     <a href="#function_exported?/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">function_exported?(module, function, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2797" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2775" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">function_exported?(atom | tuple, atom, arity) :: boolean</code></pre>
+          <pre>function_exported?(atom | tuple, atom, arity) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">module</code> is loaded and contains a
 public <code class="inline">function</code> with the given <code class="inline">arity</code>, otherwise <code class="inline">false</code>.</p>
@@ -2419,28 +2364,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="get_and_update_in/3">
+  
   <div class="detail-header">
     <a href="#get_and_update_in/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update_in(data, keys, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1836" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1814" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_and_update_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...], (term -> {get, term})) :: {get, <a href="Access.html#t:t/0">Access.t</a>} when get: var</code></pre>
+          <pre>get_and_update_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...], (term -> {get, term})) :: {get, <a href="Access.html#t:t/0">Access.t</a>} when get: var</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets a value and updates a nested structure.</p>
 <p>It expects a tuple to be returned, containing the value
@@ -2485,28 +2428,26 @@ like the <code class="inline">all</code> function defined above. See <a href="Ac
   </section>
 </div>
 <div class="detail" id="get_in/2">
+  
   <div class="detail-header">
     <a href="#get_in/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_in(data, keys)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1725" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1703" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...]) :: term</code></pre>
+          <pre>get_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...]) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Gets a value from a nested structure.</p>
 <p>Uses the <a href="Access.html"><code class="inline">Access</code></a> module to traverse the structures
@@ -2545,28 +2486,26 @@ accordingly.</p>
   </section>
 </div>
 <div class="detail" id="hd/1">
+  
   <div class="detail-header">
     <a href="#hd/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">hd(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L257" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L257" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">hd(maybe_improper_list) :: term</code></pre>
+          <pre>hd(maybe_improper_list) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the head of a list; raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the list is empty.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2581,28 +2520,28 @@ accordingly.</p>
   </section>
 </div>
 <div class="detail" id="inspect/2">
+  
+    <span id="inspect/1" />
+  
   <div class="detail-header">
     <a href="#inspect/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">inspect(arg, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1572" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1550" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">inspect(<a href="Inspect.html#t:t/0">Inspect.t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="String.html#t:t/0">String.t</a></code></pre>
+          <pre>inspect(<a href="Inspect.html#t:t/0">Inspect.t</a>, <a href="Keyword.html#t:t/0">Keyword.t</a>) :: <a href="String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inspects the given argument according to the <a href="Inspect.html"><code class="inline">Inspect</code></a> protocol.
 The second argument is a keyword list with options to control
@@ -2658,28 +2597,26 @@ must start with <code class="inline">#</code>. For example, inspecting a functio
   </section>
 </div>
 <div class="detail" id="is_atom/1">
+  
   <div class="detail-header">
     <a href="#is_atom/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_atom(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L267" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_atom(term) :: boolean</code></pre>
+          <pre>is_atom(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is an atom; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2687,28 +2624,26 @@ must start with <code class="inline">#</code>. For example, inspecting a functio
   </section>
 </div>
 <div class="detail" id="is_binary/1">
+  
   <div class="detail-header">
     <a href="#is_binary/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_binary(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L287" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L287" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_binary(term) :: boolean</code></pre>
+          <pre>is_binary(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a binary; otherwise returns <code class="inline">false</code>.</p>
 <p>A binary always contains a complete number of bytes.</p>
@@ -2726,28 +2661,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="is_bitstring/1">
+  
   <div class="detail-header">
     <a href="#is_bitstring/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_bitstring(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L305" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L305" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_bitstring(term) :: boolean</code></pre>
+          <pre>is_bitstring(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a bitstring (including a binary); otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2764,28 +2697,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="is_boolean/1">
+  
   <div class="detail-header">
     <a href="#is_boolean/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_boolean(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_boolean(term) :: boolean</code></pre>
+          <pre>is_boolean(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is either the atom <code class="inline">true</code> or the atom <code class="inline">false</code> (i.e.,
 a boolean); otherwise returns <code class="inline">false</code>.</p>
@@ -2794,28 +2725,26 @@ a boolean); otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_float/1">
+  
   <div class="detail-header">
     <a href="#is_float/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_float(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L326" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L326" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_float(term) :: boolean</code></pre>
+          <pre>is_float(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a floating point number; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2823,28 +2752,26 @@ a boolean); otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_function/1">
+  
   <div class="detail-header">
     <a href="#is_function/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_function(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L336" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L336" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_function(term) :: boolean</code></pre>
+          <pre>is_function(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a function; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2852,28 +2779,26 @@ a boolean); otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_function/2">
+  
   <div class="detail-header">
     <a href="#is_function/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_function(term, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L355" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L355" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_function(term, non_neg_integer) :: boolean</code></pre>
+          <pre>is_function(term, non_neg_integer) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a function that can be applied with <code class="inline">arity</code> number of arguments;
 otherwise returns <code class="inline">false</code>.</p>
@@ -2891,28 +2816,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="is_integer/1">
+  
   <div class="detail-header">
     <a href="#is_integer/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_integer(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L365" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L365" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_integer(term) :: boolean</code></pre>
+          <pre>is_integer(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is an integer; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2920,28 +2843,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="is_list/1">
+  
   <div class="detail-header">
     <a href="#is_list/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_list(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L375" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L375" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_list(term) :: boolean</code></pre>
+          <pre>is_list(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a list with zero or more elements; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2949,28 +2870,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="is_map/1">
+  
   <div class="detail-header">
     <a href="#is_map/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_map(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L436" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L436" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_map(term) :: boolean</code></pre>
+          <pre>is_map(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a map; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -2978,28 +2897,26 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="is_number/1">
+  
   <div class="detail-header">
     <a href="#is_number/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_number(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L386" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L386" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_number(term) :: boolean</code></pre>
+          <pre>is_number(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is either an integer or a floating point number;
 otherwise returns <code class="inline">false</code>.</p>
@@ -3008,28 +2925,26 @@ otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_pid/1">
+  
   <div class="detail-header">
     <a href="#is_pid/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_pid(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L396" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L396" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_pid(term) :: boolean</code></pre>
+          <pre>is_pid(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a pid (process identifier); otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -3037,28 +2952,26 @@ otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_port/1">
+  
   <div class="detail-header">
     <a href="#is_port/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_port(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L406" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L406" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_port(term) :: boolean</code></pre>
+          <pre>is_port(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a port identifier; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -3066,28 +2979,26 @@ otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_reference/1">
+  
   <div class="detail-header">
     <a href="#is_reference/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_reference(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L416" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L416" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_reference(term) :: boolean</code></pre>
+          <pre>is_reference(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a reference; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -3095,28 +3006,26 @@ otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="is_tuple/1">
+  
   <div class="detail-header">
     <a href="#is_tuple/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_tuple(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L426" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L426" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">is_tuple(term) :: boolean</code></pre>
+          <pre>is_tuple(term) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is a tuple; otherwise returns <code class="inline">false</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -3124,28 +3033,26 @@ otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="length/1">
+  
   <div class="detail-header">
     <a href="#length/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">length(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L452" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L452" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">length(list) :: non_neg_integer</code></pre>
+          <pre>length(list) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the length of <code class="inline">list</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -3160,28 +3067,26 @@ otherwise returns <code class="inline">false</code>.</p>
   </section>
 </div>
 <div class="detail" id="macro_exported?/3">
+  
   <div class="detail-header">
     <a href="#macro_exported?/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">macro_exported?(module, macro, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2816" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2794" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">macro_exported?(atom, atom, integer) :: boolean</code></pre>
+          <pre>macro_exported?(atom, atom, integer) :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">module</code> is loaded and contains a
 public <code class="inline">macro</code> with the given <code class="inline">arity</code>, otherwise <code class="inline">false</code>.</p>
@@ -3199,28 +3104,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="make_ref/0">
+  
   <div class="detail-header">
     <a href="#make_ref/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">make_ref()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L470" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L470" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">make_ref :: reference</code></pre>
+          <pre>make_ref :: reference</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an almost unique reference.</p>
 <p>The returned reference will re-occur after approximately 2^82 calls;
@@ -3236,28 +3139,26 @@ therefore it is unique enough for practical purposes.</p>
   </section>
 </div>
 <div class="detail" id="map_size/1">
+  
   <div class="detail-header">
     <a href="#map_size/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">map_size(map)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L490" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L490" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">map_size(map) :: non_neg_integer</code></pre>
+          <pre>map_size(map) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the size of a map.</p>
 <p>The size of a map is the number of key-value pairs that the map contains.</p>
@@ -3274,28 +3175,26 @@ therefore it is unique enough for practical purposes.</p>
   </section>
 </div>
 <div class="detail" id="max/2">
+  
   <div class="detail-header">
     <a href="#max/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">max(first, second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L510" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L510" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">max(term, term) :: term</code></pre>
+          <pre>max(term, term) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the biggest of the two given terms according to
 Erlang’s term ordering. If the terms compare equal, the
@@ -3314,28 +3213,26 @@ iex&gt; max(:a, :b)
   </section>
 </div>
 <div class="detail" id="min/2">
+  
   <div class="detail-header">
     <a href="#min/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">min(first, second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L530" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L530" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">min(term, term) :: term</code></pre>
+          <pre>min(term, term) :: term</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the smallest of the two given terms according to
 Erlang’s term ordering. If the terms compare equal, the
@@ -3354,28 +3251,26 @@ iex&gt; min(&quot;foo&quot;, &quot;bar&quot;)
   </section>
 </div>
 <div class="detail" id="node/0">
+  
   <div class="detail-header">
     <a href="#node/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">node()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L541" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L541" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">node :: node</code></pre>
+          <pre>node :: node</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns an atom representing the name of the local node.
 If the node is not alive, <code class="inline">:nonode@nohost</code> is returned instead.</p>
@@ -3384,28 +3279,26 @@ If the node is not alive, <code class="inline">:nonode@nohost</code> is returned
   </section>
 </div>
 <div class="detail" id="node/1">
+  
   <div class="detail-header">
     <a href="#node/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">node(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L553" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">node(pid | reference | port) :: node</code></pre>
+          <pre>node(pid | reference | port) :: node</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the node where the given argument is located.
 The argument can be a pid, a reference, or a port.
@@ -3415,28 +3308,26 @@ If the local node is not alive, <code class="inline">:nonode@nohost</code> is re
   </section>
 </div>
 <div class="detail" id="not/1">
+  
   <div class="detail-header">
     <a href="#not/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">not arg</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L975" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L975" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">not boolean :: boolean</code></pre>
+          <pre>not boolean :: boolean</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Boolean not.</p>
 <p><code class="inline">arg</code> must be a boolean; if it’s not, an <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> exception is raised.</p>
@@ -3452,28 +3343,26 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="pop_in/2">
+  
   <div class="detail-header">
     <a href="#pop_in/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">pop_in(data, keys)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1866" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1844" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">pop_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...]) :: {term, <a href="Access.html#t:t/0">Access.t</a>}</code></pre>
+          <pre>pop_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...]) :: {term, <a href="Access.html#t:t/0">Access.t</a>}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Pops a key from the given nested structure.</p>
 <p>Uses the <a href="Access.html"><code class="inline">Access</code></a> protocol to traverse the structures
@@ -3494,28 +3383,26 @@ and the deletion will be considered a success.</p>
   </section>
 </div>
 <div class="detail" id="put_elem/3">
+  
   <div class="detail-header">
     <a href="#put_elem/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_elem(tuple, index, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1175" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_elem(tuple, non_neg_integer, term) :: tuple</code></pre>
+          <pre>put_elem(tuple, non_neg_integer, term) :: tuple</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Inserts <code class="inline">value</code> at the given zero-based <code class="inline">index</code> in <code class="inline">tuple</code>.</p>
 <p>Inlined by the compiler.</p>
@@ -3531,28 +3418,26 @@ iex&gt; put_elem(tuple, 0, :baz)
   </section>
 </div>
 <div class="detail" id="put_in/3">
+  
   <div class="detail-header">
     <a href="#put_in/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_in(data, keys, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1760" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1738" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">put_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...], term) :: <a href="Access.html#t:t/0">Access.t</a></code></pre>
+          <pre>put_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...], term) :: <a href="Access.html#t:t/0">Access.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Puts a value in a nested structure.</p>
 <p>Uses the <a href="Access.html"><code class="inline">Access</code></a> module to traverse the structures
@@ -3573,28 +3458,26 @@ an error will be raised when trying to access it next.</p>
   </section>
 </div>
 <div class="detail" id="rem/2">
+  
   <div class="detail-header">
     <a href="#rem/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">rem(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L572" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L572" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">rem(integer, integer) :: integer</code></pre>
+          <pre>rem(integer, integer) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Computes the remainder of an integer division.</p>
 <p>Raises an <a href="ArithmeticError.html"><code class="inline">ArithmeticError</code></a> exception if one of the arguments is not an
@@ -3611,28 +3494,26 @@ integer.</p>
   </section>
 </div>
 <div class="detail" id="round/1">
+  
   <div class="detail-header">
     <a href="#round/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">round(number)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L592" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L592" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">round(number) :: integer</code></pre>
+          <pre>round(number) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Rounds a number to the nearest integer.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -3651,28 +3532,26 @@ iex&gt; round(-9.9)
   </section>
 </div>
 <div class="detail" id="self/0">
+  
   <div class="detail-header">
     <a href="#self/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">self()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L622" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L622" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">self :: pid</code></pre>
+          <pre>self :: pid</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the pid (process identifier) of the calling process.</p>
 <p>Allowed in guard clauses. Inlined by the compiler.</p>
@@ -3680,28 +3559,26 @@ iex&gt; round(-9.9)
   </section>
 </div>
 <div class="detail" id="send/2">
+  
   <div class="detail-header">
     <a href="#send/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">send(dest, msg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L612" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L612" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">send(dest :: pid | port | atom | {atom, node}, msg) :: msg when msg: any</code></pre>
+          <pre>send(dest :: pid | port | atom | {atom, node}, msg) :: msg when msg: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Sends a message to the given <code class="inline">dest</code> and returns the message.</p>
 <p><code class="inline">dest</code> may be a remote or local pid, a (local) port, a locally
@@ -3719,28 +3596,26 @@ name at another node.</p>
   </section>
 </div>
 <div class="detail" id="spawn/1">
+  
   <div class="detail-header">
     <a href="#spawn/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">spawn(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L645" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L645" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn((() -> any)) :: pid</code></pre>
+          <pre>spawn((() -> any)) :: pid</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given function and returns its pid.</p>
 <p>Check the <a href="Process.html"><code class="inline">Process</code></a> and <a href="Node.html"><code class="inline">Node</code></a> modules for other functions
@@ -3761,28 +3636,26 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="spawn/3">
+  
   <div class="detail-header">
     <a href="#spawn/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">spawn(module, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L664" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L664" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn(module, atom, list) :: pid</code></pre>
+          <pre>spawn(module, atom, list) :: pid</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given module and function passing the given args
 and returns its pid.</p>
@@ -3799,28 +3672,26 @@ to handle processes, including spawning functions in nodes.</p>
   </section>
 </div>
 <div class="detail" id="spawn_link/1">
+  
   <div class="detail-header">
     <a href="#spawn_link/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">spawn_link(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L687" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L687" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn_link((() -> any)) :: pid</code></pre>
+          <pre>spawn_link((() -> any)) :: pid</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given function, links it to the current process and returns its pid.</p>
 <p>Check the <a href="Process.html"><code class="inline">Process</code></a> and <a href="Node.html"><code class="inline">Node</code></a> modules for other functions
@@ -3841,28 +3712,26 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="spawn_link/3">
+  
   <div class="detail-header">
     <a href="#spawn_link/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">spawn_link(module, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L706" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L706" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn_link(module, atom, list) :: pid</code></pre>
+          <pre>spawn_link(module, atom, list) :: pid</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given module and function passing the given args,
 links it to the current process and returns its pid.</p>
@@ -3879,28 +3748,26 @@ to handle processes, including spawning functions in nodes.</p>
   </section>
 </div>
 <div class="detail" id="spawn_monitor/1">
+  
   <div class="detail-header">
     <a href="#spawn_monitor/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">spawn_monitor(fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L726" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L726" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn_monitor((() -> any)) :: {pid, reference}</code></pre>
+          <pre>spawn_monitor((() -> any)) :: {pid, reference}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given function, monitors it and returns its pid
 and monitoring reference.</p>
@@ -3918,28 +3785,26 @@ spawn_monitor(fn -&gt; send current, {self(), 1 + 2} end)</code></pre>
   </section>
 </div>
 <div class="detail" id="spawn_monitor/3">
+  
   <div class="detail-header">
     <a href="#spawn_monitor/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">spawn_monitor(module, fun, args)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L745" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L745" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">spawn_monitor(module, atom, list) :: {pid, reference}</code></pre>
+          <pre>spawn_monitor(module, atom, list) :: {pid, reference}</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Spawns the given module and function passing the given args,
 monitors it and returns its pid and monitoring reference.</p>
@@ -3956,28 +3821,28 @@ to handle processes, including spawning functions in nodes.</p>
   </section>
 </div>
 <div class="detail" id="struct/2">
+  
+    <span id="struct/1" />
+  
   <div class="detail-header">
     <a href="#struct/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">struct(struct, kv \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1624" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1602" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">struct(module | map, <a href="Enum.html#t:t/0">Enum.t</a>) :: map</code></pre>
+          <pre>struct(module | map, <a href="Enum.html#t:t/0">Enum.t</a>) :: map</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Creates and updates structs.</p>
 <p>The <code class="inline">struct</code> argument may be an atom (which defines <code class="inline">defstruct</code>)
@@ -4019,28 +3884,28 @@ struct(User, %{&quot;name&quot; =&gt; &quot;meg&quot;})
   </section>
 </div>
 <div class="detail" id="struct!/2">
+  
+    <span id="struct!/1" />
+  
   <div class="detail-header">
     <a href="#struct!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">struct!(struct, kv \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1653" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1631" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">struct!(module | map, <a href="Enum.html#t:t/0">Enum.t</a>) :: map | no_return</code></pre>
+          <pre>struct!(module | map, <a href="Enum.html#t:t/0">Enum.t</a>) :: map | no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Similar to <a href="#struct/2"><code class="inline">struct/2</code></a> but checks for key validity.</p>
 <p>The function <a href="#struct!/2"><code class="inline">struct!/2</code></a> emulates the compile time behaviour
@@ -4063,28 +3928,26 @@ only when building;
   </section>
 </div>
 <div class="detail" id="throw/1">
+  
   <div class="detail-header">
     <a href="#throw/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">throw(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L755" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L755" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">throw(term) :: no_return</code></pre>
+          <pre>throw(term) :: no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>A non-local return from a function. Check <a href="Kernel.SpecialForms.html#try/1"><code class="inline">Kernel.SpecialForms.try/1</code></a> for more information.</p>
 <p>Inlined by the compiler.</p>
@@ -4092,28 +3955,26 @@ only when building;
   </section>
 </div>
 <div class="detail" id="tl/1">
+  
   <div class="detail-header">
     <a href="#tl/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">tl(list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L770" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L770" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">tl(maybe_improper_list) :: maybe_improper_list</code></pre>
+          <pre>tl(maybe_improper_list) :: maybe_improper_list</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the tail of a list. Raises <a href="ArgumentError.html"><code class="inline">ArgumentError</code></a> if the list is empty.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -4128,28 +3989,26 @@ only when building;
   </section>
 </div>
 <div class="detail" id="trunc/1">
+  
   <div class="detail-header">
     <a href="#trunc/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">trunc(number)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L788" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L788" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">trunc(number) :: integer</code></pre>
+          <pre>trunc(number) :: integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the integer part of <code class="inline">number</code>.</p>
 <p>Allowed in guard tests. Inlined by the compiler.</p>
@@ -4166,28 +4025,26 @@ iex&gt; trunc(5.99)
   </section>
 </div>
 <div class="detail" id="tuple_size/1">
+  
   <div class="detail-header">
     <a href="#tuple_size/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">tuple_size(tuple)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L806" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L806" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">tuple_size(tuple) :: non_neg_integer</code></pre>
+          <pre>tuple_size(tuple) :: non_neg_integer</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Returns the size of a tuple.</p>
 <p>This operation happens in constant time.</p>
@@ -4203,28 +4060,26 @@ iex&gt; trunc(5.99)
   </section>
 </div>
 <div class="detail" id="update_in/3">
+  
   <div class="detail-header">
     <a href="#update_in/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">update_in(data, keys, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1782" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1760" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">update_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...], (term -> term)) :: <a href="Access.html#t:t/0">Access.t</a></code></pre>
+          <pre>update_in(<a href="Access.html#t:t/0">Access.t</a>, [term, ...], (term -> term)) :: <a href="Access.html#t:t/0">Access.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Updates a key in a nested structure.</p>
 <p>Uses the <a href="Access.html"><code class="inline">Access</code></a> module to traverse the structures
@@ -4257,19 +4112,20 @@ an error will be raised when trying to access it next.</p>
             Macros
           </h1>
           <div class="detail" id="!/1">
+  
   <div class="detail-header">
     <a href="#!/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">!arg</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1245" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1245" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Boolean not.</p>
 <p>Receives any argument (not just booleans) and returns <code class="inline">true</code> if the argument
@@ -4289,19 +4145,20 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="&amp;&amp;/2">
+  
   <div class="detail-header">
     <a href="#&amp;&amp;/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left &amp;&amp; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2646" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2624" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Provides a short-circuit operator that evaluates and returns
 the second expression only if the first one evaluates to <code class="inline">true</code>
@@ -4330,19 +4187,20 @@ as the first argument, not only booleans.</p>
   </section>
 </div>
 <div class="detail" id="../2">
+  
   <div class="detail-header">
     <a href="#../2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">first..last</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2597" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2575" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns a range with the specified start and end.</p>
 <p>Both ends are included.</p>
@@ -4366,19 +4224,20 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="%3C%3E/2">
+  
   <div class="detail-header">
     <a href="#%3C%3E/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left &lt;&gt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1283" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1283" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Concatenates two binaries.</p>
 <h2 id="%3C%3E/2-examples" class="section-heading">
@@ -4398,19 +4257,20 @@ iex&gt; x
   </section>
 </div>
 <div class="detail" id="@/1">
+  
   <div class="detail-header">
     <a href="#@/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">@expr</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2303" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2281" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Reads and writes attributes of the current module.</p>
 <p>The canonical example for attributes is annotating that a module
@@ -4447,19 +4307,20 @@ to manipulate module attributes.</p>
   </section>
 </div>
 <div class="detail" id="alias!/1">
+  
   <div class="detail-header">
     <a href="#alias!/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">alias!(alias)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2983" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2961" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>When used inside quoting, marks that the given alias should not
 be hygienized. This means the alias will be expanded when
@@ -4469,19 +4330,20 @@ the macro is expanded.</p>
   </section>
 </div>
 <div class="detail" id="and/2">
+  
   <div class="detail-header">
     <a href="#and/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left and right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1224" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Boolean and.</p>
 <p>If the first argument is <code class="inline">false</code>, <code class="inline">false</code> is returned; otherwise, the second
@@ -4502,19 +4364,22 @@ iex&gt; true and &quot;yay!&quot;
   </section>
 </div>
 <div class="detail" id="binding/1">
+  
+    <span id="binding/0" />
+  
   <div class="detail-header">
     <a href="#binding/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">binding(context \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2419" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2397" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns the binding for the given context as a keyword list.</p>
 <p>In the returned result, keys are variable names and values are the
@@ -4543,19 +4408,22 @@ iex&gt; binding(:foo)
   </section>
 </div>
 <div class="detail" id="def/2">
+  
+    <span id="def/1" />
+  
   <div class="detail-header">
     <a href="#def/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">def(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3231" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a function with the given name and body.</p>
 <h2 id="def/2-examples" class="section-heading">
@@ -4605,19 +4473,20 @@ end
   </section>
 </div>
 <div class="detail" id="defdelegate/2">
+  
   <div class="detail-header">
     <a href="#defdelegate/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defdelegate(funs, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3960" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3938" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a function that delegates to another module.</p>
 <p>Functions defined with <a href="#defdelegate/2"><code class="inline">defdelegate/2</code></a> are public and can be invoked from
@@ -4670,19 +4539,20 @@ MyList.map([1, 2, 3], &amp;(&amp;1 * 2))
   </section>
 </div>
 <div class="detail" id="defexception/1">
+  
   <div class="detail-header">
     <a href="#defexception/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defexception(fields)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3532" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3510" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines an exception.</p>
 <p>Exceptions are structs backed by a module that implements
@@ -4735,19 +4605,22 @@ exception messages.</p>
   </section>
 </div>
 <div class="detail" id="defimpl/3">
+  
+    <span id="defimpl/2" />
+  
   <div class="detail-header">
     <a href="#defimpl/3" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defimpl(name, opts, do_block \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3759" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3737" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines an implementation for the given protocol.</p>
 <p>See <a href="#defprotocol/2"><code class="inline">defprotocol/2</code></a> for more information and examples on protocols.</p>
@@ -4757,19 +4630,22 @@ via <code class="inline">@protocol</code> and the current target as <code class=
   </section>
 </div>
 <div class="detail" id="defmacro/2">
+  
+    <span id="defmacro/1" />
+  
   <div class="detail-header">
     <a href="#defmacro/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defmacro(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3281" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3259" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a macro with the given name and body.</p>
 <h2 id="defmacro/2-examples" class="section-heading">
@@ -4793,19 +4669,22 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="defmacrop/2">
+  
+    <span id="defmacrop/1" />
+  
   <div class="detail-header">
     <a href="#defmacrop/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defmacrop(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3294" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a private macro with the given name and body.</p>
 <p>Private macros are only accessible from the same module in which they are
@@ -4815,19 +4694,20 @@ defined.</p>
   </section>
 </div>
 <div class="detail" id="defmodule/2">
+  
   <div class="detail-header">
     <a href="#defmodule/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defmodule(alias, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3068" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3046" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a module given by name with the given contents.</p>
 <p>This macro defines a module with the given <code class="inline">alias</code> as its name and with the
@@ -4907,19 +4787,20 @@ current module nor automatically set up an alias.</p>
   </section>
 </div>
 <div class="detail" id="defoverridable/1">
+  
   <div class="detail-header">
     <a href="#defoverridable/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defoverridable(keywords)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3797" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3775" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Makes the given functions in the current module overridable.</p>
 <p>An overridable function is lazily defined, allowing a developer to override
@@ -4954,19 +4835,22 @@ implementation.</p>
   </section>
 </div>
 <div class="detail" id="defp/2">
+  
+    <span id="defp/1" />
+  
   <div class="detail-header">
     <a href="#defp/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defp(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3236" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a private function with the given name and body.</p>
 <p>Private functions are only accessible from within the module in which they are
@@ -4992,19 +4876,20 @@ Foo.sum(1, 2) #=&gt; ** (UndefinedFunctionError) undefined function Foo.sum/2</c
   </section>
 </div>
 <div class="detail" id="defprotocol/2">
+  
   <div class="detail-header">
     <a href="#defprotocol/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defprotocol(name, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3747" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3725" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a protocol.</p>
 <p>A protocol specifies an API that should be defined by its
@@ -5186,19 +5071,20 @@ module or the <code class="inline">mix compile.protocols</code> task.</p>
   </section>
 </div>
 <div class="detail" id="defstruct/1">
+  
   <div class="detail-header">
     <a href="#defstruct/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">defstruct(fields)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3429" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3407" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Defines a struct.</p>
 <p>A struct is a tagged map that allows developers to provide
@@ -5207,7 +5093,7 @@ dispatches and compile time assertions.</p>
 <p>To define a struct, a developer must define both <code class="inline">__struct__/0</code> and
 <code class="inline">__struct__/1</code> functions. <a href="#defstruct/1"><code class="inline">defstruct/1</code></a> is a convenience macro which
 defines such functions with some conveniences.</p>
-<p>For more information about structs, please check <code class="inline">Kernel.SpecialForms.%/2</code>.</p>
+<p>For more information about structs, please check <a href="Kernel.SpecialForms.html#%2525/2"><code class="inline">Kernel.SpecialForms.%/2</code></a>.</p>
 <h2 id="defstruct/1-examples" class="section-heading">
   <a href="#defstruct/1-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
@@ -5302,19 +5188,20 @@ use <code class="inline">@type</code>.</p>
   </section>
 </div>
 <div class="detail" id="destructure/2">
+  
   <div class="detail-header">
     <a href="#destructure/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">destructure(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2570" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2548" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Destructures two lists, assigning each term in the
 right one to the matching term in the left one.</p>
@@ -5346,19 +5233,20 @@ do).</p>
   </section>
 </div>
 <div class="detail" id="get_and_update_in/2">
+  
   <div class="detail-header">
     <a href="#get_and_update_in/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">get_and_update_in(path, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2037" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2015" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Gets a value and updates a nested data structure via the given <code class="inline">path</code>.</p>
 <p>This is similar to <a href="#get_and_update_in/3"><code class="inline">get_and_update_in/3</code></a>, except the path is extracted
@@ -5406,19 +5294,20 @@ users</code></pre>
   </section>
 </div>
 <div class="detail" id="if/2">
+  
   <div class="detail-header">
     <a href="#if/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">if(condition, clauses)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2472" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2450" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Provides an <a href="#if/2"><code class="inline">if/2</code></a> macro.</p>
 <p>This macro expects the first argument to be a condition and the second
@@ -5456,19 +5345,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="in/2">
+  
   <div class="detail-header">
     <a href="#in/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left in right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2859" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2837" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Checks if the element on the left-hand side is a member of the
 collection on the right-hand side.</p>
@@ -5502,19 +5392,20 @@ operator to a valid guard expression. For example:</p>
   </section>
 </div>
 <div class="detail" id="is_nil/1">
+  
   <div class="detail-header">
     <a href="#is_nil/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">is_nil(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2194" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2172" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Returns <code class="inline">true</code> if <code class="inline">term</code> is <code class="inline">nil</code>, <code class="inline">false</code> otherwise.</p>
 <p>Allowed in guard clauses.</p>
@@ -5532,19 +5423,20 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="match?/2">
+  
   <div class="detail-header">
     <a href="#match?/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">match?(pattern, expr)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2243" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2221" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>A convenience macro that checks if the right side (an expression) matches the
 left side (a pattern).</p>
@@ -5588,19 +5480,20 @@ iex&gt; binding()
   </section>
 </div>
 <div class="detail" id="or/2">
+  
   <div class="detail-header">
     <a href="#or/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left or right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1201" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Boolean or.</p>
 <p>If the first argument is <code class="inline">true</code>, <code class="inline">true</code> is returned; otherwise, the second
@@ -5622,19 +5515,20 @@ iex&gt; false or 42
   </section>
 </div>
 <div class="detail" id="pop_in/1">
+  
   <div class="detail-header">
     <a href="#pop_in/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">pop_in(path)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1947" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1925" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Pops a key from the nested structure via the given <code class="inline">path</code>.</p>
 <p>This is similar to <a href="#pop_in/2"><code class="inline">pop_in/2</code></a>, except the path is extracted via
@@ -5663,19 +5557,20 @@ and the deletion will be considered a success.</p>
   </section>
 </div>
 <div class="detail" id="put_in/2">
+  
   <div class="detail-header">
     <a href="#put_in/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">put_in(path, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1908" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1886" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Puts a value in a nested structure via the given <code class="inline">path</code>.</p>
 <p>This is similar to <a href="#put_in/3"><code class="inline">put_in/3</code></a>, except the path is extracted via
@@ -5702,19 +5597,20 @@ iex&gt; put_in(users[&quot;john&quot;].age, 28)
   </section>
 </div>
 <div class="detail" id="raise/1">
+  
   <div class="detail-header">
     <a href="#raise/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">raise(msg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1331" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1331" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Raises an exception.</p>
 <p>If the argument <code class="inline">msg</code> is a binary, it raises a <a href="RuntimeError.html"><code class="inline">RuntimeError</code></a> exception
@@ -5741,19 +5637,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="raise/2">
+  
   <div class="detail-header">
     <a href="#raise/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">raise(exception, attrs)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1398" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1376" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Raises an exception.</p>
 <p>Calls the <code class="inline">exception/1</code> function on the given argument (which has to be a
@@ -5773,19 +5670,20 @@ implements the <code class="inline">exception/1</code> callback expected by <a h
   </section>
 </div>
 <div class="detail" id="reraise/2">
+  
   <div class="detail-header">
     <a href="#reraise/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">reraise(msg, stacktrace)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1428" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1406" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Raises an exception preserving a previous stacktrace.</p>
 <p>Works like <a href="#raise/1"><code class="inline">raise/1</code></a> but does not generate a new stacktrace.</p>
@@ -5813,19 +5711,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="reraise/3">
+  
   <div class="detail-header">
     <a href="#reraise/3" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">reraise(exception, attrs, stacktrace)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1479" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1457" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Raises an exception preserving a previous stacktrace.</p>
 <p><a href="#reraise/3"><code class="inline">reraise/3</code></a> works like <a href="#reraise/2"><code class="inline">reraise/2</code></a>, except it passes arguments to the
@@ -5846,19 +5745,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="sigil_C/2">
+  
   <div class="detail-header">
     <a href="#sigil_C/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_C(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4053" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4031" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~C</code>.</p>
 <p>It simply returns a charlist without escaping characters and without
@@ -5877,19 +5777,20 @@ iex&gt; ~C(f#{o}o)
   </section>
 </div>
 <div class="detail" id="sigil_D/2">
+  
   <div class="detail-header">
     <a href="#sigil_D/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_D(date, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4149" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4127" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~D</code> for dates.</p>
 <p>The lower case <code class="inline">~d</code> variant does not exist as interpolation
@@ -5905,19 +5806,20 @@ and escape characters are not useful for date sigils.</p>
   </section>
 </div>
 <div class="detail" id="sigil_N/2">
+  
   <div class="detail-header">
     <a href="#sigil_N/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_N(date, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4187" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4165" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~N</code> for naive date times.</p>
 <p>The lower case <code class="inline">~n</code> variant does not exist as interpolation
@@ -5935,19 +5837,20 @@ iex&gt; ~N[2015-01-13T13:00:07.001]
   </section>
 </div>
 <div class="detail" id="sigil_R/2">
+  
   <div class="detail-header">
     <a href="#sigil_R/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_R(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~R</code>.</p>
 <p>It returns a regular expression pattern without escaping
@@ -5964,19 +5867,20 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="sigil_S/2">
+  
   <div class="detail-header">
     <a href="#sigil_S/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_S(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4009" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3987" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~S</code>.</p>
 <p>It simply returns a string without escaping characters and without
@@ -5995,19 +5899,20 @@ iex&gt; ~S(f#{o}o)
   </section>
 </div>
 <div class="detail" id="sigil_T/2">
+  
   <div class="detail-header">
     <a href="#sigil_T/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_T(date, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4168" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4146" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~T</code> for times.</p>
 <p>The lower case <code class="inline">~t</code> variant does not exist as interpolation
@@ -6025,19 +5930,20 @@ iex&gt; ~T[13:00:07.001]
   </section>
 </div>
 <div class="detail" id="sigil_W/2">
+  
   <div class="detail-header">
     <a href="#sigil_W/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_W(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4247" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4225" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~W</code>.</p>
 <p>It returns a list of “words” split by whitespace without escaping nor
@@ -6066,19 +5972,20 @@ interpreting interpolations.</p>
   </section>
 </div>
 <div class="detail" id="sigil_c/2">
+  
   <div class="detail-header">
     <a href="#sigil_c/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_c(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4076" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4054" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~c</code>.</p>
 <p>It returns a charlist as if it were a single quoted string, unescaping
@@ -6100,19 +6007,20 @@ iex&gt; ~c(f\#{:o}o)
   </section>
 </div>
 <div class="detail" id="sigil_r/2">
+  
   <div class="detail-header">
     <a href="#sigil_r/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_r(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4106" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4084" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~r</code>.</p>
 <p>It returns a regular expression pattern, unescaping characters and replacing
@@ -6132,19 +6040,20 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="sigil_s/2">
+  
   <div class="detail-header">
     <a href="#sigil_s/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_s(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4030" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4008" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~s</code>.</p>
 <p>It returns a string as if it was a double quoted string, unescaping characters
@@ -6166,19 +6075,20 @@ iex&gt; ~s(f\#{:o}o)
   </section>
 </div>
 <div class="detail" id="sigil_w/2">
+  
   <div class="detail-header">
     <a href="#sigil_w/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">sigil_w(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L4219" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L4197" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Handles the sigil <code class="inline">~w</code>.</p>
 <p>It returns a list of “words” split by whitespace. Character unescaping and
@@ -6216,19 +6126,20 @@ iex&gt; ~w(foo bar baz)a
   </section>
 </div>
 <div class="detail" id="to_charlist/1">
+  
   <div class="detail-header">
     <a href="#to_charlist/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">to_charlist(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2176" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2154" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts the argument to a charlist according to the <a href="List.Chars.html"><code class="inline">List.Chars</code></a> protocol.</p>
 <h2 id="to_charlist/1-examples" class="section-heading">
@@ -6242,19 +6153,20 @@ iex&gt; ~w(foo bar baz)a
   </section>
 </div>
 <div class="detail" id="to_string/1">
+  
   <div class="detail-header">
     <a href="#to_string/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">to_string(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2163" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2141" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Converts the argument to a string according to the
 <a href="String.Chars.html"><code class="inline">String.Chars</code></a> protocol.</p>
@@ -6270,19 +6182,20 @@ iex&gt; ~w(foo bar baz)a
   </section>
 </div>
 <div class="detail" id="unless/2">
+  
   <div class="detail-header">
     <a href="#unless/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">unless(condition, clauses)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2519" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2497" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Provides an <code class="inline">unless</code> macro.</p>
 <p>This macro evaluates and returns the <code class="inline">do</code> block passed in as the second
@@ -6310,19 +6223,20 @@ iex&gt; unless Enum.sum([2, 2]) == 5 do
   </section>
 </div>
 <div class="detail" id="update_in/2">
+  
   <div class="detail-header">
     <a href="#update_in/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">update_in(path, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L1979" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L1957" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Updates a nested structure via the given <code class="inline">path</code>.</p>
 <p>This is similar to <a href="#update_in/3"><code class="inline">update_in/3</code></a>, except the path is extracted via
@@ -6349,19 +6263,22 @@ iex&gt; update_in(users[&quot;john&quot;].age, &amp;(&amp;1 + 1))
   </section>
 </div>
 <div class="detail" id="use/2">
+  
+    <span id="use/1" />
+  
   <div class="detail-header">
     <a href="#use/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">use(module, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L3886" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L3864" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Uses the given module in the current context.</p>
 <h2 id="use/2-examples" class="section-heading">
@@ -6440,19 +6357,22 @@ please define it in a module which will be imported accordingly.</p>
   </section>
 </div>
 <div class="detail" id="var!/2">
+  
+    <span id="var!/1" />
+  
   <div class="detail-header">
     <a href="#var!/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">var!(var, context \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2953" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2931" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>When used inside quoting, marks that the given variable should
 not be hygienized.</p>
@@ -6463,19 +6383,20 @@ not be hygienized.</p>
   </section>
 </div>
 <div class="detail" id="%7C%3E/2">
+  
   <div class="detail-header">
     <a href="#%7C%3E/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left |&gt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2769" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2747" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Pipe operator.</p>
 <p>This operator introduces the expression on the left-hand side as
@@ -6535,19 +6456,20 @@ notation.</p>
   </section>
 </div>
 <div class="detail" id="%7C%7C/2">
+  
   <div class="detail-header">
     <a href="#%7C%7C/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">left || right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/elixir/lib/kernel.ex#L2681" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/elixir/lib/kernel.ex#L2659" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Provides a short-circuit operator that evaluates and returns the second
 expression only if the first one does not evaluate to <code class="inline">true</code> (i.e., it
@@ -6583,7 +6505,7 @@ as the first argument, not only booleans.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -6596,7 +6518,7 @@ as the first argument, not only booleans.</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

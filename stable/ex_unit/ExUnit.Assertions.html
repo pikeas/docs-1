@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.0">
-    <title>ExUnit.Assertions – ExUnit v1.3.3</title>
-    <link rel="stylesheet" href="dist/app-7e84850c37.css" />
+    <meta name="generator" content="ExDoc v0.14.2">
+    <title>ExUnit.Assertions – ExUnit v1.3.4</title>
+    <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/stable/ex_unit/ExUnit.Assertions.html" />
     
@@ -28,7 +28,7 @@
         ExUnit
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.3.3
+        v1.3.4
       </h2>
     </div>
     
@@ -54,9 +54,8 @@
 
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -65,11 +64,11 @@
 
 
       <h1>
-        <small class="visible-xs">ExUnit v1.3.3</small>
+        <small class="visible-xs">ExUnit v1.3.4</small>
         ExUnit.Assertions
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L43" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L43" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -293,19 +292,20 @@ current process’ mailbox)</p>
             Functions
           </h1>
           <div class="detail" id="assert/2">
+  
   <div class="detail-header">
     <a href="#assert/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert(value, message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L282" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts <code class="inline">value</code> is <code class="inline">true</code>, displaying the given <code class="inline">message</code> otherwise.</p>
 <h2 id="assert/2-examples" class="section-heading">
@@ -318,19 +318,22 @@ current process’ mailbox)</p>
   </section>
 </div>
 <div class="detail" id="assert_in_delta/4">
+  
+    <span id="assert_in_delta/3" />
+  
   <div class="detail-header">
     <a href="#assert_in_delta/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_in_delta(value1, value2, delta, message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L536" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L536" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts that <code class="inline">value1</code> and <code class="inline">value2</code> differ by no more than <code class="inline">delta</code>.</p>
 <h2 id="assert_in_delta/4-examples" class="section-heading">
@@ -344,19 +347,20 @@ assert_in_delta 10, 15, 4</code></pre>
   </section>
 </div>
 <div class="detail" id="assert_raise/2">
+  
   <div class="detail-header">
     <a href="#assert_raise/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_raise(exception, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L505" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L505" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution.
 Returns the rescued exception, fails otherwise.</p>
@@ -372,19 +376,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="assert_raise/3">
+  
   <div class="detail-header">
     <a href="#assert_raise/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_raise(exception, message, function)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L476" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L476" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts the <code class="inline">exception</code> is raised during <code class="inline">function</code> execution with
 the expected <code class="inline">message</code>, which can be a <a href="http://elixir-lang.org/docs/stable/elixir/Regex.html"><code class="inline">Regex</code></a> or an exact <a href="http://elixir-lang.org/docs/stable/elixir/String.html"><code class="inline">String</code></a>.
@@ -399,34 +404,34 @@ Returns the rescued exception, fails otherwise.</p>
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.0022493756490379706!&quot;
+  raise &quot;today&#39;s lucky number is 0.36389887740446414!&quot;
 end</code></pre>
 
   </section>
 </div>
 <div class="detail" id="flunk/1">
+  
+    <span id="flunk/0" />
+  
   <div class="detail-header">
     <a href="#flunk/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">flunk(message \\ &quot;Flunked!&quot;)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L716" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L716" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">flunk(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: no_return</code></pre>
+          <pre>flunk(<a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a>) :: no_return</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Fails with a message.</p>
 <h2 id="flunk/1-examples" class="section-heading">
@@ -439,19 +444,20 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="refute/2">
+  
   <div class="detail-header">
     <a href="#refute/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute(value, message)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L605" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L605" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts <code class="inline">value</code> is <code class="inline">nil</code> or <code class="inline">false</code> (that is, <code class="inline">value</code> is not truthy).</p>
 <h2 id="refute/2-examples" class="section-heading">
@@ -464,19 +470,22 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="refute_in_delta/4">
+  
+    <span id="refute_in_delta/3" />
+  
   <div class="detail-header">
     <a href="#refute_in_delta/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute_in_delta(value1, value2, delta, message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L694" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L694" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts <code class="inline">value1</code> and <code class="inline">value2</code> are not within <code class="inline">delta</code>.</p>
 <p>If you supply <code class="inline">message</code>, information about the values will
@@ -504,19 +513,20 @@ refute_in_delta 10, 11, 2</code></pre>
             Macros
           </h1>
           <div class="detail" id="assert/1">
+  
   <div class="detail-header">
     <a href="#assert/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert(assertion)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts its argument is a truthy value.</p>
 <p><code class="inline">assert</code> instrospects the underlying expression and provide
@@ -548,19 +558,24 @@ value. In such cases, simply use <a href="http://elixir-lang.org/docs/stable/eli
   </section>
 </div>
 <div class="detail" id="assert_receive/3">
+  
+    <span id="assert_receive/1" />
+  
+    <span id="assert_receive/2" />
+  
   <div class="detail-header">
     <a href="#assert_receive/3" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :assert_receive_timeout), failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L316" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L316" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts that a message matching <code class="inline">pattern</code> was or is going to be received.</p>
 <p>Unlike <code class="inline">assert_received</code>, it has a default timeout
@@ -584,19 +599,22 @@ assert_receive {:count, ^x}</code></pre>
   </section>
 </div>
 <div class="detail" id="assert_received/2">
+  
+    <span id="assert_received/1" />
+  
   <div class="detail-header">
     <a href="#assert_received/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">assert_received(pattern, failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L348" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L348" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts that a message matching <code class="inline">pattern</code> was received and is in the
 current process’ mailbox.</p>
@@ -623,19 +641,20 @@ assert_received {:hello, _}</code></pre>
   </section>
 </div>
 <div class="detail" id="catch_error/1">
+  
   <div class="detail-header">
     <a href="#catch_error/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">catch_error(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L579" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L579" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts <code class="inline">expression</code> will cause an error.
 Returns the error or fails otherwise.</p>
@@ -649,19 +668,20 @@ Returns the error or fails otherwise.</p>
   </section>
 </div>
 <div class="detail" id="catch_exit/1">
+  
   <div class="detail-header">
     <a href="#catch_exit/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">catch_exit(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L566" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L566" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts <code class="inline">expression</code> will exit.
 Returns the exit status/message or fails otherwise.</p>
@@ -675,19 +695,20 @@ Returns the exit status/message or fails otherwise.</p>
   </section>
 </div>
 <div class="detail" id="catch_throw/1">
+  
   <div class="detail-header">
     <a href="#catch_throw/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">catch_throw(expression)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L553" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts <code class="inline">expression</code> will throw a value.
 Returns the thrown value or fails otherwise.</p>
@@ -701,19 +722,20 @@ Returns the thrown value or fails otherwise.</p>
   </section>
 </div>
 <div class="detail" id="refute/1">
+  
   <div class="detail-header">
     <a href="#refute/1" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute(assertion)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L201" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>A negative assertion, expects the expression to be <code class="inline">false</code> or <code class="inline">nil</code>.</p>
 <p>Keep in mind that <code class="inline">refute</code> does not change the semantics of
@@ -734,19 +756,24 @@ when the sides do not match and <a href="#refute/2"><code class="inline">refute/
   </section>
 </div>
 <div class="detail" id="refute_receive/3">
+  
+    <span id="refute_receive/1" />
+  
+    <span id="refute_receive/2" />
+  
   <div class="detail-header">
     <a href="#refute_receive/3" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute_receive(pattern, timeout \\ Application.fetch_env!(:ex_unit, :refute_receive_timeout), failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L625" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L625" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts that a message matching <code class="inline">pattern</code> was not received (and won’t be received)
 within the <code class="inline">timeout</code> period.</p>
@@ -764,19 +791,22 @@ if a message matching <code class="inline">pattern</code> is received.</p>
   </section>
 </div>
 <div class="detail" id="refute_received/2">
+  
+    <span id="refute_received/1" />
+  
   <div class="detail-header">
     <a href="#refute_received/2" class="detail-link" title="Link to this macro">
       <i class="icon-link"></i>
     </a>
     <span class="signature">refute_received(pattern, failure_message \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.3/lib/ex_unit/lib/ex_unit/assertions.ex#L652" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/v1.3.4/lib/ex_unit/lib/ex_unit/assertions.ex#L652" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Asserts a message matching <code class="inline">pattern</code> was not received (i.e. it is not in the
 current process’ mailbox).</p>
@@ -808,7 +838,7 @@ Process mailbox:
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -821,7 +851,7 @@ Process mailbox:
   </div>
 </section>
 </div>
-  <script src="dist/app-95540a96e6.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 
