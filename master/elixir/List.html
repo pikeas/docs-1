@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.1">
+    <meta name="generator" content="ExDoc v0.14.2">
     <title>List – Elixir v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
@@ -477,6 +477,7 @@ strings into a string</p>
             Functions
           </h1>
           <div class="detail" id="delete/2">
+  
   <div class="detail-header">
     <a href="#delete/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -515,6 +516,7 @@ iex&gt; List.delete([:a, :b, :b, :c], :b)
   </section>
 </div>
 <div class="detail" id="delete_at/2">
+  
   <div class="detail-header">
     <a href="#delete_at/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -555,6 +557,7 @@ iex&gt; List.delete_at([1, 2, 3], -1)
   </section>
 </div>
 <div class="detail" id="duplicate/2">
+  
   <div class="detail-header">
     <a href="#duplicate/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -590,6 +593,7 @@ iex&gt; List.duplicate([1, 2], 2)
   </section>
 </div>
 <div class="detail" id="first/1">
+  
   <div class="detail-header">
     <a href="#first/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -628,6 +632,7 @@ iex&gt; List.first([1, 2, 3])
   </section>
 </div>
 <div class="detail" id="flatten/1">
+  
   <div class="detail-header">
     <a href="#flatten/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -660,6 +665,7 @@ iex&gt; List.first([1, 2, 3])
   </section>
 </div>
 <div class="detail" id="flatten/2">
+  
   <div class="detail-header">
     <a href="#flatten/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -694,6 +700,7 @@ the flattened list.</p>
   </section>
 </div>
 <div class="detail" id="foldl/3">
+  
   <div class="detail-header">
     <a href="#foldl/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -730,6 +737,7 @@ iex&gt; List.foldl([1, 2, 3, 4], 0, fn(x, acc) -&gt; x - acc end)
   </section>
 </div>
 <div class="detail" id="foldr/3">
+  
   <div class="detail-header">
     <a href="#foldr/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -763,6 +771,7 @@ a function. Requires an accumulator.</p>
   </section>
 </div>
 <div class="detail" id="insert_at/3">
+  
   <div class="detail-header">
     <a href="#insert_at/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -806,6 +815,7 @@ iex&gt; List.insert_at([1, 2, 3], -10, 0)
   </section>
 </div>
 <div class="detail" id="keydelete/3">
+  
   <div class="detail-header">
     <a href="#keydelete/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -846,6 +856,9 @@ iex&gt; List.keydelete([a: 1, b: 2], :c, 0)
   </section>
 </div>
 <div class="detail" id="keyfind/4">
+  
+    <span id="keyfind/3" />
+  
   <div class="detail-header">
     <a href="#keyfind/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -886,6 +899,7 @@ nil</code></pre>
   </section>
 </div>
 <div class="detail" id="keymember?/3">
+  
   <div class="detail-header">
     <a href="#keymember?/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -926,6 +940,7 @@ false</code></pre>
   </section>
 </div>
 <div class="detail" id="keyreplace/4">
+  
   <div class="detail-header">
     <a href="#keyreplace/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -959,6 +974,7 @@ identified by <code class="inline">key</code> at <code class="inline">position</
   </section>
 </div>
 <div class="detail" id="keysort/2">
+  
   <div class="detail-header">
     <a href="#keysort/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -995,6 +1011,7 @@ iex&gt; List.keysort([a: 5, c: 1, b: 3], 0)
   </section>
 </div>
 <div class="detail" id="keystore/4">
+  
   <div class="detail-header">
     <a href="#keystore/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1032,6 +1049,7 @@ iex&gt; List.keystore([a: 1, b: 2], :c, 0, {:c, 3})
   </section>
 </div>
 <div class="detail" id="keytake/3">
+  
   <div class="detail-header">
     <a href="#keytake/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1075,6 +1093,7 @@ nil</code></pre>
   </section>
 </div>
 <div class="detail" id="last/1">
+  
   <div class="detail-header">
     <a href="#last/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1113,6 +1132,9 @@ iex&gt; List.last([1, 2, 3])
   </section>
 </div>
 <div class="detail" id="pop_at/3">
+  
+    <span id="pop_at/2" />
+  
   <div class="detail-header">
     <a href="#pop_at/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1153,6 +1175,7 @@ iex&gt; List.pop_at([1, 2, 3], -1)
   </section>
 </div>
 <div class="detail" id="replace_at/3">
+  
   <div class="detail-header">
     <a href="#replace_at/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1196,6 +1219,7 @@ iex&gt; List.replace_at([1, 2, 3], -10, 0)
   </section>
 </div>
 <div class="detail" id="to_atom/1">
+  
   <div class="detail-header">
     <a href="#to_atom/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1231,6 +1255,7 @@ which contains Unicode codepoints greater than 0xFF.</p>
   </section>
 </div>
 <div class="detail" id="to_existing_atom/1">
+  
   <div class="detail-header">
     <a href="#to_existing_atom/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1271,6 +1296,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   </section>
 </div>
 <div class="detail" id="to_float/1">
+  
   <div class="detail-header">
     <a href="#to_float/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1304,6 +1330,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   </section>
 </div>
 <div class="detail" id="to_integer/1">
+  
   <div class="detail-header">
     <a href="#to_integer/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1337,6 +1364,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   </section>
 </div>
 <div class="detail" id="to_integer/2">
+  
   <div class="detail-header">
     <a href="#to_integer/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1370,6 +1398,7 @@ iex&gt; List.to_existing_atom(&#39;this_atom_will_never_exist&#39;)
   </section>
 </div>
 <div class="detail" id="to_string/1">
+  
   <div class="detail-header">
     <a href="#to_string/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1409,6 +1438,7 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
   </section>
 </div>
 <div class="detail" id="to_tuple/1">
+  
   <div class="detail-header">
     <a href="#to_tuple/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1442,6 +1472,7 @@ iex&gt; List.to_string([0x0061, &quot;bc&quot;])
   </section>
 </div>
 <div class="detail" id="update_at/3">
+  
   <div class="detail-header">
     <a href="#update_at/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1485,6 +1516,7 @@ iex&gt; List.update_at([1, 2, 3], -10, &amp;(&amp;1 + 10))
   </section>
 </div>
 <div class="detail" id="wrap/1">
+  
   <div class="detail-header">
     <a href="#wrap/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1525,6 +1557,7 @@ iex&gt; List.wrap(nil)
   </section>
 </div>
 <div class="detail" id="zip/1">
+  
   <div class="detail-header">
     <a href="#zip/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1571,7 +1604,7 @@ iex&gt; List.zip([[1, 2], [3], [5, 6]])
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -1584,7 +1617,7 @@ iex&gt; List.zip([[1, 2], [3], [5, 6]])
   </div>
 </section>
 </div>
-  <script src="dist/app-5d1225399a.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

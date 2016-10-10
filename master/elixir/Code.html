@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.1">
+    <meta name="generator" content="ExDoc v0.14.2">
     <title>Code – Elixir v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
@@ -322,6 +322,7 @@ directories the Erlang VM uses for finding module code</p>
             Functions
           </h1>
           <div class="detail" id="append_path/1">
+  
   <div class="detail-header">
     <a href="#append_path/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -353,6 +354,7 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
   </section>
 </div>
 <div class="detail" id="available_compiler_options/0">
+  
   <div class="detail-header">
     <a href="#available_compiler_options/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -380,6 +382,9 @@ Code.append_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</c
   </section>
 </div>
 <div class="detail" id="compile_quoted/2">
+  
+    <span id="compile_quoted/1" />
+  
   <div class="detail-header">
     <a href="#compile_quoted/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -401,6 +406,9 @@ the second one is its byte code (as a binary).</p>
   </section>
 </div>
 <div class="detail" id="compile_string/2">
+  
+    <span id="compile_string/1" />
+  
   <div class="detail-header">
     <a href="#compile_string/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -423,6 +431,7 @@ and the second one is its byte code (as a binary).</p>
   </section>
 </div>
 <div class="detail" id="compiler_options/0">
+  
   <div class="detail-header">
     <a href="#compiler_options/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -451,6 +460,7 @@ and the second one is its byte code (as a binary).</p>
   </section>
 </div>
 <div class="detail" id="compiler_options/1">
+  
   <div class="detail-header">
     <a href="#compiler_options/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -500,6 +510,7 @@ generated
   </section>
 </div>
 <div class="detail" id="delete_path/1">
+  
   <div class="detail-header">
     <a href="#delete_path/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -531,6 +542,7 @@ Code.delete_path(&quot;/does_not_exist&quot;) #=&gt; false</code></pre>
   </section>
 </div>
 <div class="detail" id="ensure_compiled/1">
+  
   <div class="detail-header">
     <a href="#ensure_compiled/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -557,6 +569,7 @@ and when to use <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1<
   </section>
 </div>
 <div class="detail" id="ensure_compiled?/1">
+  
   <div class="detail-header">
     <a href="#ensure_compiled?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -579,6 +592,7 @@ Returns <code class="inline">false</code> otherwise.</p>
   </section>
 </div>
 <div class="detail" id="ensure_loaded/1">
+  
   <div class="detail-header">
     <a href="#ensure_loaded/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -640,6 +654,7 @@ iex&gt; Code.ensure_loaded(DoesNotExist)
   </section>
 </div>
 <div class="detail" id="ensure_loaded?/1">
+  
   <div class="detail-header">
     <a href="#ensure_loaded?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -669,6 +684,9 @@ true</code></pre>
   </section>
 </div>
 <div class="detail" id="eval_file/2">
+  
+    <span id="eval_file/1" />
+  
   <div class="detail-header">
     <a href="#eval_file/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -692,6 +710,11 @@ evaluation result and its bindings.</p>
   </section>
 </div>
 <div class="detail" id="eval_quoted/3">
+  
+    <span id="eval_quoted/1" />
+  
+    <span id="eval_quoted/2" />
+  
   <div class="detail-header">
     <a href="#eval_quoted/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -725,6 +748,11 @@ iex&gt; Code.eval_quoted(contents, [a: 1, b: 2], __ENV__)
   </section>
 </div>
 <div class="detail" id="eval_string/3">
+  
+    <span id="eval_string/1" />
+  
+    <span id="eval_string/2" />
+  
   <div class="detail-header">
     <a href="#eval_string/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -797,6 +825,7 @@ will be automatically carried over:</p>
   </section>
 </div>
 <div class="detail" id="get_docs/2">
+  
   <div class="detail-header">
     <a href="#get_docs/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -852,6 +881,9 @@ nil</code></pre>
   </section>
 </div>
 <div class="detail" id="load_file/2">
+  
+    <span id="load_file/1" />
+  
   <div class="detail-header">
     <a href="#load_file/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -885,6 +917,7 @@ if you don’t want a file to be loaded concurrently.</p>
   </section>
 </div>
 <div class="detail" id="loaded_files/0">
+  
   <div class="detail-header">
     <a href="#loaded_files/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -911,6 +944,7 @@ List.first(Code.loaded_files) =~ &quot;eex_test.exs&quot; #=&gt; true</code></pr
   </section>
 </div>
 <div class="detail" id="prepend_path/1">
+  
   <div class="detail-header">
     <a href="#prepend_path/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -942,6 +976,9 @@ Code.prepend_path(&quot;/does_not_exist&quot;) #=&gt; {:error, :bad_directory}</
   </section>
 </div>
 <div class="detail" id="require_file/2">
+  
+    <span id="require_file/1" />
+  
   <div class="detail-header">
     <a href="#require_file/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -981,6 +1018,9 @@ call <code class="inline">require_file</code> will get the list of loaded module
   </section>
 </div>
 <div class="detail" id="string_to_quoted/2">
+  
+    <span id="string_to_quoted/1" />
+  
   <div class="detail-header">
     <a href="#string_to_quoted/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1025,6 +1065,9 @@ representation.</p>
   </section>
 </div>
 <div class="detail" id="string_to_quoted!/2">
+  
+    <span id="string_to_quoted!/1" />
+  
   <div class="detail-header">
     <a href="#string_to_quoted!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1049,6 +1092,7 @@ in case a token is missing (usually because the expression is incomplete),
   </section>
 </div>
 <div class="detail" id="unload_files/1">
+  
   <div class="detail-header">
     <a href="#unload_files/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1090,7 +1134,7 @@ function_exported?(EExTest.Compiled, :before_compile, 0) #=&gt; true</code></pre
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -1103,7 +1147,7 @@ function_exported?(EExTest.Compiled, :before_compile, 0) #=&gt; true</code></pre
   </div>
 </section>
 </div>
-  <script src="dist/app-5d1225399a.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

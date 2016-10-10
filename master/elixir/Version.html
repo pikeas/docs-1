@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.1">
+    <meta name="generator" content="ExDoc v0.14.2">
     <title>Version – Elixir v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
@@ -296,7 +296,7 @@ is returned</p>
   </div>
   
     <div class="summary-synopsis"><p>Compiles a requirement to its internal representation with
-<a href="http://www.erlang.org/doc/man/ets.html#match_spec_compile-1"><code class="inline">:ets.match_spec_compile/1</code></a> for faster matching</p>
+<code class="inline">:ets.match_spec_compile/1</code> for faster matching</p>
 </div>
   
 </div>
@@ -357,6 +357,7 @@ is returned</p>
           </h1>
           <div class="types-list">
             <div class="detail" id="t:build/0">
+  
   <div class="detail-header">
     <a href="#t:build/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -381,6 +382,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:major/0">
+  
   <div class="detail-header">
     <a href="#t:major/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -405,6 +407,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:matchable/0">
+  
   <div class="detail-header">
     <a href="#t:matchable/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -429,6 +432,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:minor/0">
+  
   <div class="detail-header">
     <a href="#t:minor/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -453,6 +457,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:patch/0">
+  
   <div class="detail-header">
     <a href="#t:patch/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -477,6 +482,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:pre/0">
+  
   <div class="detail-header">
     <a href="#t:pre/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -501,6 +507,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:requirement/0">
+  
   <div class="detail-header">
     <a href="#t:requirement/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -525,6 +532,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:t/0">
+  
   <div class="detail-header">
     <a href="#t:t/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -549,6 +557,7 @@ is returned</p>
   </section>
 </div>
 <div class="detail" id="t:version/0">
+  
   <div class="detail-header">
     <a href="#t:version/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -586,6 +595,7 @@ is returned</p>
             Functions
           </h1>
           <div class="detail" id="compare/2">
+  
   <div class="detail-header">
     <a href="#compare/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -628,6 +638,7 @@ iex&gt; Version.compare(&quot;invalid&quot;, &quot;2.0.1&quot;)
   </section>
 </div>
 <div class="detail" id="compile_requirement/1">
+  
   <div class="detail-header">
     <a href="#compile_requirement/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -649,7 +660,7 @@ iex&gt; Version.compare(&quot;invalid&quot;, &quot;2.0.1&quot;)
   </div>
   <section class="docstring">
     <p>Compiles a requirement to its internal representation with
-<a href="http://www.erlang.org/doc/man/ets.html#match_spec_compile-1"><code class="inline">:ets.match_spec_compile/1</code></a> for faster matching.</p>
+<code class="inline">:ets.match_spec_compile/1</code> for faster matching.</p>
 <p>The internal representation is opaque and can not be converted to external
 term format and then back again without losing its properties (meaning it
 can not be sent to a process on another node and still remain a valid
@@ -658,6 +669,9 @@ compiled match_spec, nor can it be stored on disk).</p>
   </section>
 </div>
 <div class="detail" id="match?/3">
+  
+    <span id="match?/2" />
+  
   <div class="detail-header">
     <a href="#match?/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -715,6 +729,7 @@ iex&gt; Version.match?(&quot;2.0.0&quot;, &quot;== ==1.0.0&quot;)
   </section>
 </div>
 <div class="detail" id="parse/1">
+  
   <div class="detail-header">
     <a href="#parse/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -751,6 +766,7 @@ iex&gt; Version.parse(&quot;2.0-alpha1&quot;)
   </section>
 </div>
 <div class="detail" id="parse!/1">
+  
   <div class="detail-header">
     <a href="#parse!/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -787,6 +803,7 @@ iex&gt; Version.parse!(&quot;2.0-alpha1&quot;)
   </section>
 </div>
 <div class="detail" id="parse_requirement/1">
+  
   <div class="detail-header">
     <a href="#parse_requirement/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -835,7 +852,7 @@ iex&gt; Version.parse_requirement(&quot;== == 2.0.1&quot;)
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -848,7 +865,7 @@ iex&gt; Version.parse_requirement(&quot;== == 2.0.1&quot;)
   </div>
 </section>
 </div>
-  <script src="dist/app-5d1225399a.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 

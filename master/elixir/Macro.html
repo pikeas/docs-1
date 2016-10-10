@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.1">
+    <meta name="generator" content="ExDoc v0.14.2">
     <title>Macro – Elixir v1.4.0-dev</title>
     <link rel="stylesheet" href="dist/app-23e810f3fe.css" />
     
@@ -385,6 +385,7 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
           </h1>
           <div class="types-list">
             <div class="detail" id="t:expr/0">
+  
   <div class="detail-header">
     <a href="#t:expr/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
@@ -409,13 +410,14 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
   </section>
 </div>
 <div class="detail" id="t:t/0">
+  
   <div class="detail-header">
     <a href="#t:t/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/macro.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/macro.ex#L59" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -455,6 +457,7 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
             Functions
           </h1>
           <div class="detail" id="camelize/1">
+  
   <div class="detail-header">
     <a href="#camelize/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -491,6 +494,7 @@ characters that are not valid in Elixir identifiers.</p>
   </section>
 </div>
 <div class="detail" id="decompose_call/1">
+  
   <div class="detail-header">
     <a href="#decompose_call/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -540,6 +544,9 @@ iex&gt; Macro.decompose_call(quote(do: 42))
   </section>
 </div>
 <div class="detail" id="escape/2">
+  
+    <span id="escape/1" />
+  
   <div class="detail-header">
     <a href="#escape/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -582,6 +589,7 @@ iex&gt; Macro.escape({:unquote, [], [1]}, unquote: true)
   </section>
 </div>
 <div class="detail" id="expand/2">
+  
   <div class="detail-header">
     <a href="#expand/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -604,6 +612,7 @@ it out for more information and examples.</p>
   </section>
 </div>
 <div class="detail" id="expand_once/2">
+  
   <div class="detail-header">
     <a href="#expand_once/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -690,6 +699,7 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="pipe/3">
+  
   <div class="detail-header">
     <a href="#pipe/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -715,6 +725,7 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="postwalk/2">
+  
   <div class="detail-header">
     <a href="#postwalk/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -740,6 +751,7 @@ end</code></pre>
   </section>
 </div>
 <div class="detail" id="postwalk/3">
+  
   <div class="detail-header">
     <a href="#postwalk/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -766,6 +778,7 @@ using an accumulator.</p>
   </section>
 </div>
 <div class="detail" id="prewalk/2">
+  
   <div class="detail-header">
     <a href="#prewalk/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -791,6 +804,7 @@ using an accumulator.</p>
   </section>
 </div>
 <div class="detail" id="prewalk/3">
+  
   <div class="detail-header">
     <a href="#prewalk/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -817,6 +831,9 @@ using an accumulator.</p>
   </section>
 </div>
 <div class="detail" id="to_string/2">
+  
+    <span id="to_string/1" />
+  
   <div class="detail-header">
     <a href="#to_string/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -860,6 +877,7 @@ iex&gt; Macro.to_string(quote(do: 1 + 2), fn
   </section>
 </div>
 <div class="detail" id="traverse/4">
+  
   <div class="detail-header">
     <a href="#traverse/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -886,6 +904,7 @@ using an accumulator.</p>
   </section>
 </div>
 <div class="detail" id="underscore/1">
+  
   <div class="detail-header">
     <a href="#underscore/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -934,6 +953,7 @@ iex&gt; Macro.camelize &quot;hello_10&quot;
   </section>
 </div>
 <div class="detail" id="unescape_string/1">
+  
   <div class="detail-header">
     <a href="#unescape_string/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -978,6 +998,7 @@ and return a version with it unescaped.</p>
   </section>
 </div>
 <div class="detail" id="unescape_string/2">
+  
   <div class="detail-header">
     <a href="#unescape_string/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1024,21 +1045,22 @@ def unescape_map(?x), do: true
 def unescape_map(?u), do: true
 def unescape_map(e),  do: e</code></pre>
 <p>If the <code class="inline">unescape_map</code> function returns <code class="inline">false</code>. The char is
-not escaped and <code class="inline">\</code> is kept in the charlist.
-
-Hexadecimals and Unicode codepoints will be escaped if the map
+not escaped and the backslash is kept in the string.</p>
+<p>Hexadecimals and Unicode codepoints will be escaped if the map
 function returns <code class="inline">true</code> for <code class="inline">?x</code>. Unicode codepoints if the map
-function returns <code class="inline">true</code> for <code class="inline">?u</code>.
+function returns <code class="inline">true</code> for <code class="inline">?u</code>.</p>
+<h2 id="unescape_string/2-examples" class="section-heading">
+  <a href="#unescape_string/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
 
-## Examples
-
-Using the <code class="inline">unescape_map</code> function defined above is easy:
-
-    Macro.unescape_string “example\n”, &amp;unescape_map(&amp;1)</p>
+<p>Using the <code class="inline">unescape_map</code> function defined above is easy:</p>
+<pre><code class="elixir">Macro.unescape_string &quot;example\\n&quot;, &amp;unescape_map(&amp;1)</code></pre>
 
   </section>
 </div>
 <div class="detail" id="unescape_tokens/1">
+  
   <div class="detail-header">
     <a href="#unescape_tokens/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1070,6 +1092,7 @@ for examples.</p>
   </section>
 </div>
 <div class="detail" id="unescape_tokens/2">
+  
   <div class="detail-header">
     <a href="#unescape_tokens/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1096,6 +1119,7 @@ for examples.</p>
   </section>
 </div>
 <div class="detail" id="unpipe/1">
+  
   <div class="detail-header">
     <a href="#unpipe/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1140,6 +1164,7 @@ previous element (<code class="inline">100</code>) will be inserted as the 0th (
   </section>
 </div>
 <div class="detail" id="update_meta/2">
+  
   <div class="detail-header">
     <a href="#update_meta/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1177,6 +1202,7 @@ iex&gt; Macro.update_meta(quoted, &amp;Keyword.delete(&amp;1, :line))
   </section>
 </div>
 <div class="detail" id="validate/1">
+  
   <div class="detail-header">
     <a href="#validate/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1220,6 +1246,7 @@ iex&gt; Macro.validate([1, 2, 3, {4}])
   </section>
 </div>
 <div class="detail" id="var/2">
+  
   <div class="detail-header">
     <a href="#var/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -1270,7 +1297,7 @@ nil can be given:</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.1),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
           </span>
           <span class="line">
             designed by
@@ -1283,7 +1310,7 @@ nil can be given:</p>
   </div>
 </section>
 </div>
-  <script src="dist/app-5d1225399a.js"></script>
+  <script src="dist/app-f0381555b5.js"></script>
   </body>
 </html>
 
