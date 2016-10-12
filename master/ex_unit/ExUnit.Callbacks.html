@@ -95,7 +95,7 @@ all remaining setup callbacks from executing.</p>
 <code class="inline">setup</code> callbacks run in the same process as the test itself. <code class="inline">on_exit</code>
 callbacks always run in a separate process than the test case or the
 test itself. Since the test process exits with reason <code class="inline">:shutdown</code>, most
-of times <code class="inline">on_exit/1</code> can be avoided as processes are going to clean
+of times <a href="#on_exit/1"><code class="inline">on_exit/1</code></a> can be avoided as processes are going to clean
 up on their own.</p>
 <h2 id="module-context" class="section-heading">
   <a href="#module-context" class="hover-link"><i class="icon-link"></i></a>

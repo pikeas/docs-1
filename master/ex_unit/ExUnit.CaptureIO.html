@@ -220,7 +220,7 @@ true</code></pre>
 <p>As seen in the examples above, <code class="inline">capture_io</code> returns the captured output.
 If you want to also capture the result of the function executed inside
 the <code class="inline">capture_io</code>, you can use <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a> to send yourself a message
-and use <code class="inline">ExUnit.Assertions.assert_received/1</code> to match on the results:</p>
+and use <a href="ExUnit.Assertions.html#assert_received/1"><code class="inline">ExUnit.Assertions.assert_received/1</code></a> to match on the results:</p>
 <pre><code class="elixir">capture_io([input: &quot;this is input&quot;, capture_prompt: false], fn -&gt;
   send self(), {:block_result, 42}
   # ...

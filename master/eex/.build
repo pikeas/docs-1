@@ -1,3 +1,10 @@
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/eex/dist/app-091c05798a.css
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/eex/dist/app-574613960f.js
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/eex/fonts/icomoon.eot
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/eex/fonts/icomoon.svg
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/eex/fonts/icomoon.ttf
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/eex/fonts/icomoon.woff
+doc/eex/assets/logo.png
 index.html
 EEx.html
 404.html
@@ -5,10 +12,4 @@ dist/sidebar_items.js
 EEx.Engine.html
 EEx.SmartEngine.html
 EEx.SyntaxError.html
-dist/app-091c05798a.css
-dist/app-574613960f.js
-fonts/icomoon.eot
-fonts/icomoon.svg
-fonts/icomoon.ttf
-fonts/icomoon.woff
 api-reference.html

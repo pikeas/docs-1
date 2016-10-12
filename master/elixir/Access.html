@@ -184,7 +184,7 @@ iex&gt; update_in user, [:languages, Access.all(), :name], &amp;String.upcase/1
 %{name: &quot;john&quot;,
   languages: [%{name: &quot;ELIXIR&quot;, type: :functional},
               %{name: &quot;C&quot;, type: :procedural}]}</code></pre>
-<p>See the functions <code class="inline">key/1</code>, <a href="#key!/1"><code class="inline">key!/1</code></a>, <a href="#elem/1"><code class="inline">elem/1</code></a>, and <a href="#all/0"><code class="inline">all/0</code></a> for some of the
+<p>See the functions <a href="#key/1"><code class="inline">key/1</code></a>, <a href="#key!/1"><code class="inline">key!/1</code></a>, <a href="#elem/1"><code class="inline">elem/1</code></a>, and <a href="#all/0"><code class="inline">all/0</code></a> for some of the
 available accessors.</p>
 <h2 id="module-implementing-the-access-behaviour-for-custom-data-structures" class="section-heading">
   <a href="#module-implementing-the-access-behaviour-for-custom-data-structures" class="hover-link"><i class="icon-link"></i></a>
@@ -984,7 +984,7 @@ for more examples.</p>
 <p>The implementation should remove <code class="inline">key</code> from the given <code class="inline">term</code> and return a
 <code class="inline">{value, new_term}</code> tuple where <code class="inline">value</code> is the value that was under <code class="inline">key</code> and
 <code class="inline">new_term</code> is <code class="inline">term</code> without <code class="inline">key</code>.</p>
-<p>See the implementations for <a href="http://elixir-lang.org/docs/stable/elixir/Map.html#pop/2"><code class="inline">Map.pop/2</code></a> or <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#pop/2"><code class="inline">Keyword.pop/2</code></a> for more examples.</p>
+<p>See the implementations for <a href="Map.html#pop/2"><code class="inline">Map.pop/2</code></a> or <a href="Keyword.html#pop/2"><code class="inline">Keyword.pop/2</code></a> for more examples.</p>
 
   </section>
 </div>

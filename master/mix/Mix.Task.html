@@ -82,7 +82,7 @@
 loading and manipulating tasks.</p>
 <p>A Mix task can be defined by simply using <a href="Mix.Task.html#content"><code class="inline">Mix.Task</code></a>
 in a module starting with <code class="inline">Mix.Tasks.</code> and defining
-the <code class="inline">run/1</code> function:</p>
+the <a href="#run/1"><code class="inline">run/1</code></a> function:</p>
 <pre><code class="elixir">defmodule Mix.Tasks.Hello do
   use Mix.Task
 
@@ -90,7 +90,7 @@ the <code class="inline">run/1</code> function:</p>
     Mix.shell.info &quot;hello&quot;
   end
 end</code></pre>
-<p>The <code class="inline">run/1</code> function will receive a list of all arguments passed
+<p>The <a href="#run/1"><code class="inline">run/1</code></a> function will receive a list of all arguments passed
 to the command line.</p>
 <h2 id="module-attributes" class="section-heading">
   <a href="#module-attributes" class="hover-link"><i class="icon-link"></i></a>

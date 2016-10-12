@@ -1,3 +1,10 @@
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/mix/dist/app-091c05798a.css
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/mix/dist/app-574613960f.js
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/mix/fonts/icomoon.eot
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/mix/fonts/icomoon.svg
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/mix/fonts/icomoon.ttf
+/home/ubuntu/bob/tmp/2e9ade6a29ecb5d39ef4ad4509b9f9fc/elixir/doc/mix/fonts/icomoon.woff
+doc/mix/assets/logo.png
 index.html
 Mix.html
 404.html
@@ -61,10 +68,4 @@ Mix.Error.html
 Mix.InvalidTaskError.html
 Mix.NoProjectError.html
 Mix.NoTaskError.html
-dist/app-091c05798a.css
-dist/app-574613960f.js
-fonts/icomoon.eot
-fonts/icomoon.svg
-fonts/icomoon.ttf
-fonts/icomoon.woff
 api-reference.html

@@ -152,7 +152,7 @@ similar functionality with time zone backing.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_unix/2">from_unix(integer, unit \\ :seconds)</a>
+    <a href="#from_unix/2">from_unix(integer, unit \\ :second)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts the given Unix time to DateTime</p>
@@ -161,7 +161,7 @@ similar functionality with time zone backing.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_unix!/2">from_unix!(integer, unit \\ :seconds)</a>
+    <a href="#from_unix!/2">from_unix!(integer, unit \\ :second)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts the given Unix time to DateTime</p>
@@ -215,7 +215,7 @@ similar functionality with time zone backing.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_unix/2">to_unix(datetime, unit \\ :seconds)</a>
+    <a href="#to_unix/2">to_unix(datetime, unit \\ :second)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts the given DateTime to Unix time</p>
@@ -371,7 +371,7 @@ Currently it only supports “Etc/UTC” as timezone.</p>
     <a href="#from_unix/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">from_unix(integer, unit \\ :seconds)</span>
+    <span class="signature">from_unix(integer, unit \\ :second)</span>
     
       <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1142" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -405,7 +405,7 @@ will be returned in UTC.</p>
                 month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
                 year: 2016, zone_abbr: &quot;UTC&quot;}}
 
-iex&gt; DateTime.from_unix(1432560368868569, :microseconds)
+iex&gt; DateTime.from_unix(1432560368868569, :microsecond)
 {:ok, %DateTime{calendar: Calendar.ISO, day: 25, hour: 13, microsecond: {868569, 6}, minute: 26,
                 month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
                 year: 2015, zone_abbr: &quot;UTC&quot;}}</code></pre>
@@ -432,7 +432,7 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     <a href="#from_unix!/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">from_unix!(integer, unit \\ :seconds)</span>
+    <span class="signature">from_unix!(integer, unit \\ :second)</span>
     
       <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1186" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -464,7 +464,7 @@ will be returned in UTC.</p>
           month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
           year: 2016, zone_abbr: &quot;UTC&quot;}
 
-iex&gt; DateTime.from_unix!(1432560368868569, :microseconds)
+iex&gt; DateTime.from_unix!(1432560368868569, :microsecond)
 %DateTime{calendar: Calendar.ISO, day: 25, hour: 13, microsecond: {868569, 6}, minute: 26,
           month: 5, second: 8, std_offset: 0, time_zone: &quot;Etc/UTC&quot;, utc_offset: 0,
           year: 2015, zone_abbr: &quot;UTC&quot;}</code></pre>
@@ -677,7 +677,7 @@ iex&gt; DateTime.to_time(dt)
     <a href="#to_unix/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">to_unix(datetime, unit \\ :seconds)</span>
+    <span class="signature">to_unix(datetime, unit \\ :second)</span>
     
       <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1271" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>

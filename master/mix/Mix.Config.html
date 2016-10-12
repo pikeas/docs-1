@@ -87,7 +87,7 @@ config :plug,
 import_config &quot;#{Mix.env}.exs&quot;</code></pre>
 <p>All <code class="inline">config/*</code> macros, including <a href="#import_config/1"><code class="inline">import_config/1</code></a>, are used
 to help define such configuration files.</p>
-<p>Furthermore, this module provides functions like <code class="inline">read!/1</code>,
+<p>Furthermore, this module provides functions like <a href="#read!/1"><code class="inline">read!/1</code></a>,
 <a href="#merge/2"><code class="inline">merge/2</code></a> and friends which help manipulate configurations
 in general.</p>
 <p>Configuration set using <a href="Mix.Config.html#content"><code class="inline">Mix.Config</code></a> will set the application env, so
@@ -473,7 +473,7 @@ matching that wildcard will be imported; if no file matches
 the wildcard, no errors are raised. If <code class="inline">path_or_wildcard</code> is
 not a wildcard but a path to a single file, then that file is
 imported; in case the file doesn’t exist, an error is raised.
-This behaviour is analogous to the one for <code class="inline">read_wildcard!/1</code>.</p>
+This behaviour is analogous to the one for <a href="#read_wildcard!/1"><code class="inline">read_wildcard!/1</code></a>.</p>
 <p>If path/wildcard is a relative path/wildcard, it will be expanded relatively
 to the directory the current configuration file is in.</p>
 <h2 id="import_config/1-examples" class="section-heading">
