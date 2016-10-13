@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.2">
+    <meta name="generator" content="ExDoc v0.14.3">
     <title>GenServer – Elixir v1.4.0-dev</title>
-    <link rel="stylesheet" href="dist/app-091c05798a.css" />
+    <link rel="stylesheet" href="dist/app-47f7481dce.css" />
     
       <link rel="canonical" href="http://elixir-lang.org/docs/master/elixir/GenServer.html" />
     
@@ -164,7 +164,7 @@ for keeping the list of names of processes and their  associated PIDs
 that are available globally for a network of Erlang nodes.
 </li>
 </ul>
-<p>For example, we could start and register our Stack server locally as follows:</p>
+<p>For example, we could start and register our <code class="inline">Stack</code> server locally as follows:</p>
 <pre><code class="elixir"># Start the server and register it locally with name MyStack
 {:ok, _} = GenServer.start_link(Stack, [:hello], name: MyStack)
 
@@ -246,11 +246,11 @@ calls and more. Therefore, you should never call your own “receive” inside
 the GenServer callbacks as doing so will cause the GenServer to misbehave.</p>
 <p>Besides the synchronous and asynchronous communication provided by <a href="#call/3"><code class="inline">call/3</code></a>
 and <a href="#cast/2"><code class="inline">cast/2</code></a>, “regular” messages sent by functions such <a href="Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a>,
-<a href="Process.html#send_after/3"><code class="inline">Process.send_after/3</code></a> and similar, can be handled inside the <code class="inline">handle_info/2</code>
+<a href="Process.html#send_after/4"><code class="inline">Process.send_after/4</code></a> and similar, can be handled inside the <code class="inline">handle_info/2</code>
 callback.</p>
 <p><code class="inline">handle_info/2</code> can be used in many situations, such as handling monitor
-DOWN messages sent by <a href="http://elixir-lang.org/docs/stable/elixir/Process.html#monitor/2"><code class="inline">Process.monitor/2</code></a>. Another use case for <code class="inline">handle_info/2</code>
-is to perform periodic work, with the help of <a href="Process.html#send_after/3"><code class="inline">Process.send_after/3</code></a>:</p>
+DOWN messages sent by <a href="Process.html#monitor/1"><code class="inline">Process.monitor/1</code></a>. Another use case for <code class="inline">handle_info/2</code>
+is to perform periodic work, with the help of <a href="Process.html#send_after/4"><code class="inline">Process.send_after/4</code></a>:</p>
 <pre><code class="elixir">defmodule MyApp.Periodically do
   use GenServer
 
@@ -1302,7 +1302,7 @@ with its previous state. Therefore this callback does not usually contain side e
     <p>Invoked in some cases to retrieve a formatted version of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> status.</p>
 <p>This callback can be useful to control the <em>appearance</em> of the status of the
 <a href="GenServer.html#content"><code class="inline">GenServer</code></a>. For example, it can be used to return a compact representation of
-the <code class="inline">GenServers</code>’s state to avoid having large state terms printed.</p>
+the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>’s state to avoid having large state terms printed.</p>
 <ul>
 <li><p>one of <code class="inline">:sys.get_status/1</code> or <code class="inline">:sys.get_status/2</code> is invoked to get the
 status of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>; in such cases, <code class="inline">reason</code> is <code class="inline">:normal</code></p>
@@ -1576,7 +1576,7 @@ node is disconnected.</p>
 exits. For such reasons, we usually recommend important clean-up rules to
 happen in separated processes either by use of monitoring or by links
 themselves. For example if the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> controls a <code class="inline">port</code> (e.g.
-<code class="inline">:gen_tcp.socket</code>) or <code class="inline">File.io_device</code>, they will be closed on receiving a
+<code class="inline">:gen_tcp.socket</code>) or <a href="File.html#t:io_device/0"><code class="inline">File.io_device/0</code></a>, they will be closed on receiving a
 <a href="GenServer.html#content"><code class="inline">GenServer</code></a>’s exit signal and do not need to be closed in <code class="inline">terminate/2</code>.</p>
 <p>If <code class="inline">reason</code> is not <code class="inline">:normal</code>, <code class="inline">:shutdown</code> nor <code class="inline">{:shutdown, term}</code> an error is
 logged.</p>
@@ -1590,7 +1590,7 @@ logged.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.3),
           </span>
           <span class="line">
             designed by
