@@ -114,7 +114,7 @@ end</code></pre>
 <p>Notice in this case we don’t have to explicitly import
 <a href="Supervisor.Spec.html#content"><code class="inline">Supervisor.Spec</code></a> as <code class="inline">use Supervisor</code> automatically does so.
 Defining a module-based supervisor can be useful, for example,
-to perform initialization tasks in the <code class="inline">init/1</code> callback.</p>
+to perform initialization tasks in the <code class="inline">c:init/1</code> callback.</p>
 <h2 id="module-supervisor-and-worker-options" class="section-heading">
   <a href="#module-supervisor-and-worker-options" class="hover-link"><i class="icon-link"></i></a>
   Supervisor and worker options
@@ -536,7 +536,7 @@ with the given arguments</p>
     <p>Receives a list of children (workers or supervisors) to
 supervise and a set of options.</p>
 <p>Returns a tuple containing the supervisor specification. This tuple can be
-used as the return value of the <code class="inline">init/1</code> callback when implementing a
+used as the return value of the <code class="inline">c:init/1</code> callback when implementing a
 module-based supervisor.</p>
 <h2 id="supervise/2-examples" class="section-heading">
   <a href="#supervise/2-examples" class="hover-link"><i class="icon-link"></i></a>

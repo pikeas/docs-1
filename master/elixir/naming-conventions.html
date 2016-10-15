@@ -96,10 +96,10 @@ is_map(some_map)</code></pre>
 iex&gt; import Example
 iex&gt; _wont_be_imported()
 ** (CompileError) iex:1: undefined function _wont_be_imported/0</code></pre>
-<p>Due to this property, Elixir relies on functions starting with underscore to attach compile-time metadata to modules. Such functions are most often in the <code class="inline">__foo__</code> format. For example, every module in Elixir has an <code class="inline">__info__</code> function:</p>
+<p>Due to this property, Elixir relies on functions starting with underscore to attach compile-time metadata to modules. Such functions are most often in the <code class="inline">__foo__</code> format. For example, every module in Elixir has an <code class="inline">__info__/1</code> function:</p>
 <pre><code class="iex elixir">iex&gt; String.__info__(:functions)
 [at: 2, capitalize: 1, chunk: 2, ...]</code></pre>
-<p>Elixir also includes 4 special variables that follow the double underscore format. These forms retrieve compile-time information about the current environment: <code class="inline">__MODULE__</code>, <code class="inline">__DIR__</code>, <code class="inline">__ENV__</code> and <code class="inline">__CALLER__</code>.</p>
+<p>Elixir also includes 4 special variables that follow the double underscore format. These forms retrieve compile-time information about the current environment: <code class="inline">__MODULE__/0</code>, <code class="inline">__DIR__/0</code>, <code class="inline">__ENV__/0</code> and <code class="inline">__CALLER__/0</code>.</p>
 <h2 id="trailing-bang-foo" class="section-heading">
   <a href="#trailing-bang-foo" class="hover-link"><i class="icon-link"></i></a>
   Trailing bang (foo!)

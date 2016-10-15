@@ -137,7 +137,7 @@ GenEvent.call(pid, LoggerHandler, :messages)
 #=&gt; []</code></pre>
 <p>We start a new event manager by calling <a href="GenEvent.html#start_link/1"><code class="inline">GenEvent.start_link/1</code></a>.
 Notifications can be sent to the event manager which will then
-invoke <code class="inline">handle_event/2</code> for each registered handler.</p>
+invoke <a href="#c:handle_event/2"><code class="inline">handle_event/2</code></a> for each registered handler.</p>
 <p>We can add new handlers with <a href="#add_handler/3"><code class="inline">add_handler/3</code></a> and <a href="#add_mon_handler/3"><code class="inline">add_mon_handler/3</code></a>.
 Calls can also be made to specific handlers by using <a href="#call/3"><code class="inline">call/3</code></a>.</p>
 <h2 id="module-callbacks" class="section-heading">
@@ -692,9 +692,9 @@ to Elixir’s GenEvent and does not work with Erlang ones.</p>
   </div>
   <section class="docstring">
     <p>Adds a new event handler to the event <code class="inline">manager</code>.</p>
-<p>The event manager will call the <code class="inline">init/1</code> callback with <code class="inline">args</code> to
+<p>The event manager will call the <a href="#c:init/1"><code class="inline">init/1</code></a> callback with <code class="inline">args</code> to
 initiate the event handler and its internal state.</p>
-<p>If <code class="inline">init/1</code> returns a correct value indicating successful completion,
+<p>If <a href="#c:init/1"><code class="inline">init/1</code></a> returns a correct value indicating successful completion,
 the event manager adds the event handler and this function returns
 <code class="inline">:ok</code>. If the callback fails with <code class="inline">reason</code> or returns <code class="inline">{:error, reason}</code>,
 the event handler is ignored and this function returns <code class="inline">{:error, reason}</code>.</p>
@@ -740,7 +740,7 @@ of <a href="Module.html"><code class="inline">Module</code></a> must be used. Th
 <p>A monitored handler implies the calling process will now be monitored
 by the GenEvent manager.</p>
 <p>If the calling process later terminates with <code class="inline">reason</code>, the event manager
-will delete the event handler by calling the <code class="inline">terminate/2</code> callback with
+will delete the event handler by calling the <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> callback with
 <code class="inline">{:stop, reason}</code> as argument. If the event handler later is deleted,
 the event manager sends a message <code class="inline">{:gen_event_EXIT, handler, reason}</code>
 to the calling process. Reason is one of the following:</p>
@@ -802,9 +802,9 @@ module (it is not backwards compatible with Erlang’s <code class="inline">:gen
   <section class="docstring">
     <p>Makes a synchronous call to the event <code class="inline">handler</code> installed in <code class="inline">manager</code>.</p>
 <p>The given <code class="inline">request</code> is sent and the caller waits until a reply arrives or
-a timeout occurs. The event manager will call <code class="inline">handle_call/2</code> to handle
+a timeout occurs. The event manager will call <a href="#c:handle_call/2"><code class="inline">handle_call/2</code></a> to handle
 the request.</p>
-<p>The return value <code class="inline">reply</code> is defined in the return value of <code class="inline">handle_call/2</code>.
+<p>The return value <code class="inline">reply</code> is defined in the return value of <a href="#c:handle_call/2"><code class="inline">handle_call/2</code></a>.
 If the specified event handler is not installed, the function returns
 <code class="inline">{:error, :not_found}</code>.</p>
 
@@ -833,7 +833,7 @@ If the specified event handler is not installed, the function returns
   </div>
   <section class="docstring">
     <p>Sends an event notification to the event <code class="inline">manager</code>.</p>
-<p>The event manager will call <code class="inline">handle_event/2</code> for each
+<p>The event manager will call <a href="#c:handle_event/2"><code class="inline">handle_event/2</code></a> for each
 installed event handler.</p>
 <p><code class="inline">notify</code> is asynchronous and will return immediately after the
 notification is sent. <code class="inline">notify</code> will not fail even if the specified
@@ -866,7 +866,7 @@ event manager does not exist, unless it is specified as an atom.</p>
   </div>
   <section class="docstring">
     <p>Removes an event handler from the event <code class="inline">manager</code>.</p>
-<p>The event manager will call <code class="inline">terminate/2</code> to terminate the event handler
+<p>The event manager will call <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> to terminate the event handler
 and return the callback value. If the specified event handler is not
 installed, the function returns <code class="inline">{:error, :not_found}</code>.</p>
 
@@ -1044,15 +1044,15 @@ with Erlang ones.</p>
   </div>
   <section class="docstring">
     <p>Replaces an old event handler with a new one in the event <code class="inline">manager</code>.</p>
-<p>First, the old event handler is deleted by calling <code class="inline">terminate/2</code> with
+<p>First, the old event handler is deleted by calling <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> with
 the given <code class="inline">args1</code> and collects the return value. Then the new event handler
 is added and initiated by calling <code class="inline">init({args2, term})</code>, where <code class="inline">term</code> is the
-return value of calling <code class="inline">terminate/2</code> in the old handler. This makes it
+return value of calling <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> in the old handler. This makes it
 possible to transfer information from one handler to another.</p>
 <p>The new handler will be added even if the specified old event handler
 is not installed or if the handler fails to terminate with a given reason
 in which case <code class="inline">state = {:error, term}</code>.</p>
-<p>If <code class="inline">init/1</code> in the second handler returns a correct value, this
+<p>If <a href="#c:init/1"><code class="inline">init/1</code></a> in the second handler returns a correct value, this
 function returns <code class="inline">:ok</code>.</p>
 
   </section>
@@ -1110,7 +1110,7 @@ function returns <code class="inline">:ok</code>.</p>
   <section class="docstring">
     <p>Sends a sync event notification to the event <code class="inline">manager</code>.</p>
 <p>In other words, this function only returns <code class="inline">:ok</code> after the event manager
-invokes the <code class="inline">handle_event/2</code> callback on each installed event handler.</p>
+invokes the <a href="#c:handle_event/2"><code class="inline">handle_event/2</code></a> callback on each installed event handler.</p>
 <p>See <a href="#notify/2"><code class="inline">notify/2</code></a> for more info.</p>
 
   </section>
@@ -1186,7 +1186,7 @@ a 2-tuple with first element <code class="inline">:down</code>. <code class="inl
 handler and <code class="inline">extra</code> is any extra data required to change the state.</p>
 <p>Returning <code class="inline">{:ok, new_state}</code> changes the state to <code class="inline">new_state</code> and the code
 change is successful.</p>
-<p>If <code class="inline">code_change/3</code> raises, the code change fails and the handler will continue
+<p>If <a href="#c:code_change/3"><code class="inline">code_change/3</code></a> raises, the code change fails and the handler will continue
 with its previous state. Therefore this callback does not usually contain side
 effects.</p>
 
@@ -1224,9 +1224,9 @@ state of the handler.</p>
 and sets the handler’s state to <code class="inline">new_state</code>.</p>
 <p>Returning <code class="inline">{:ok, reply, new_state, :hibernate}</code> is similar to
 <code class="inline">{:ok, reply, new_state}</code> except the process is hibernated. See
-<code class="inline">handle_event/2</code> for more information on hibernation.</p>
+<a href="#c:handle_event/2"><code class="inline">handle_event/2</code></a> for more information on hibernation.</p>
 <p>Returning <code class="inline">{:remove_handler, reply}</code> sends <code class="inline">reply</code> as a response to the call,
-removes the handler from the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> loop and calls <code class="inline">terminate/2</code> with
+removes the handler from the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> loop and calls <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> with
 reason <code class="inline">:remove_handler</code> and state <code class="inline">state</code>.</p>
 
   </section>
@@ -1271,7 +1271,7 @@ garbage collecting. Normally it should only be used when a message is not
 expected soon and minimising the memory of the process is shown to be
 beneficial.</p>
 <p>Returning <code class="inline">:remove_handler</code> removes the handler from the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> loop and
-calls <code class="inline">terminate/2</code> with reason <code class="inline">:remove_handler</code> and state <code class="inline">state</code>.</p>
+calls <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> with reason <code class="inline">:remove_handler</code> and state <code class="inline">state</code>.</p>
 
   </section>
 </div>
@@ -1304,7 +1304,7 @@ calls <code class="inline">terminate/2</code> with reason <code class="inline">:
 process so messages intended for other handlers should be ignored with a catch
 all clause.</p>
 <p><code class="inline">msg</code> is the message and <code class="inline">state</code> is the current state of the handler.</p>
-<p>Return values are the same as <code class="inline">handle_event/2</code>.</p>
+<p>Return values are the same as <a href="#c:handle_event/2"><code class="inline">handle_event/2</code></a>.</p>
 
   </section>
 </div>
@@ -1340,7 +1340,7 @@ all clause.</p>
 handler to become part of the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> loop with state <code class="inline">state</code>.</p>
 <p>Returning <code class="inline">{:ok, state, :hibernate}</code> is similar to
 <code class="inline">{:ok, state}</code> except the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> process is hibernated before continuing
-its loop. See <code class="inline">handle_event/2</code> for more information on hibernation.</p>
+its loop. See <a href="#c:handle_event/2"><code class="inline">handle_event/2</code></a> for more information on hibernation.</p>
 <p>Returning <code class="inline">{:error, reason}</code> will cause <a href="#add_handler/3"><code class="inline">add_handler/3</code></a> to return
 <code class="inline">{:error, reason}</code> and the handler is not added to <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> loop.</p>
 
@@ -1389,21 +1389,21 @@ logged
 <p>If part of a supervision tree, a <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a>’s <a href="Supervisor.html"><code class="inline">Supervisor</code></a> will send an exit
 signal when shutting it down. The exit signal is based on the shutdown
 strategy in the child’s specification. If it is <code class="inline">:brutal_kill</code> the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a>
-is killed and so <code class="inline">terminate/2</code> is not called for its handlers. However if it is
+is killed and so <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> is not called for its handlers. However if it is
 a timeout the <a href="Supervisor.html"><code class="inline">Supervisor</code></a> will send the exit signal <code class="inline">:shutdown</code> and the
-<a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> will have the duration of the timeout to call <code class="inline">terminate/2</code> on all
+<a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> will have the duration of the timeout to call <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> on all
 of its handlers - if the process is still alive after the timeout it is
 killed.</p>
 <p>If the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> receives an exit signal (that is not <code class="inline">:normal</code>) from any
 process when it is not trapping exits it will exit abruptly with the same
-reason and so not call the handlers’ <code class="inline">terminate/2</code>. Note that a process does
+reason and so not call the handlers’ <a href="#c:terminate/2"><code class="inline">terminate/2</code></a>. Note that a process does
 <em>NOT</em> trap exits by default and an exit signal is sent when a linked process
 exits or its node is disconnected. Therefore it is not guaranteed that
-<code class="inline">terminate/2</code> is called when a <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> exits.</p>
+<a href="#c:terminate/2"><code class="inline">terminate/2</code></a> is called when a <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> exits.</p>
 <p>Care should be taken to cleanup because the <a href="GenEvent.html#content"><code class="inline">GenEvent</code></a> can continue to loop
 after removing the handler. This is different to most other OTP behaviours.
 For example if the handler controls a <code class="inline">port</code> (e.g. <code class="inline">:gen_tcp.socket</code>) or
-<a href="File.html#t:io_device/0"><code class="inline">File.io_device/0</code></a>, it will be need to be closed in <code class="inline">terminate/2</code> as the
+<a href="File.html#t:io_device/0"><code class="inline">File.io_device/0</code></a>, it will be need to be closed in <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> as the
 process is not exiting so will not be automatically cleaned up.</p>
 
   </section>

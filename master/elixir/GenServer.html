@@ -130,8 +130,8 @@ interact with the server by sending two types of messages. <strong>call</strong>
 messages expect a reply from the server (and are therefore synchronous)
 while <strong>cast</strong> messages do not.</p>
 <p>Every time you do a <a href="GenServer.html#call/3"><code class="inline">GenServer.call/3</code></a>, the client will send a message
-that must be handled by the <code class="inline">handle_call/3</code> callback in the GenServer.
-A <a href="#cast/2"><code class="inline">cast/2</code></a> message must be handled by <code class="inline">handle_cast/2</code>.</p>
+that must be handled by the <a href="#c:handle_call/3"><code class="inline">handle_call/3</code></a> callback in the GenServer.
+A <a href="#cast/2"><code class="inline">cast/2</code></a> message must be handled by <a href="#c:handle_cast/2"><code class="inline">handle_cast/2</code></a>.</p>
 <h2 id="module-callbacks" class="section-heading">
   <a href="#module-callbacks" class="hover-link"><i class="icon-link"></i></a>
   Callbacks
@@ -246,10 +246,10 @@ calls and more. Therefore, you should never call your own “receive” inside
 the GenServer callbacks as doing so will cause the GenServer to misbehave.</p>
 <p>Besides the synchronous and asynchronous communication provided by <a href="#call/3"><code class="inline">call/3</code></a>
 and <a href="#cast/2"><code class="inline">cast/2</code></a>, “regular” messages sent by functions such <a href="Kernel.html#send/2"><code class="inline">Kernel.send/2</code></a>,
-<a href="Process.html#send_after/4"><code class="inline">Process.send_after/4</code></a> and similar, can be handled inside the <code class="inline">handle_info/2</code>
+<a href="Process.html#send_after/4"><code class="inline">Process.send_after/4</code></a> and similar, can be handled inside the <a href="#c:handle_info/2"><code class="inline">handle_info/2</code></a>
 callback.</p>
-<p><code class="inline">handle_info/2</code> can be used in many situations, such as handling monitor
-DOWN messages sent by <a href="Process.html#monitor/1"><code class="inline">Process.monitor/1</code></a>. Another use case for <code class="inline">handle_info/2</code>
+<p><a href="#c:handle_info/2"><code class="inline">handle_info/2</code></a> can be used in many situations, such as handling monitor
+DOWN messages sent by <a href="Process.html#monitor/1"><code class="inline">Process.monitor/1</code></a>. Another use case for <a href="#c:handle_info/2"><code class="inline">handle_info/2</code></a>
 is to perform periodic work, with the help of <a href="Process.html#send_after/4"><code class="inline">Process.send_after/4</code></a>:</p>
 <pre><code class="elixir">defmodule MyApp.Periodically do
   use GenServer
@@ -887,7 +887,7 @@ server name does not exist.</p>
   <section class="docstring">
     <p>Makes a synchronous call to the <code class="inline">server</code> and waits for its reply.</p>
 <p>The client sends the given <code class="inline">request</code> to the server and waits until a reply
-arrives or a timeout occurs. <code class="inline">handle_call/3</code> will be called on the server
+arrives or a timeout occurs. <a href="#c:handle_call/3"><code class="inline">handle_call/3</code></a> will be called on the server
 to handle the request.</p>
 <p><code class="inline">server</code> can be any of the values described in the “Name registration”
 section of the documentation for this module.</p>
@@ -935,7 +935,7 @@ element.</p>
 the destination <code class="inline">server</code> (or node) exists. Therefore it
 is unknown whether the destination <code class="inline">server</code> successfully
 handled the message.</p>
-<p><code class="inline">handle_cast/2</code> will be called on the server to handle
+<p><a href="#c:handle_cast/2"><code class="inline">handle_cast/2</code></a> will be called on the server to handle
 the request. In case the <code class="inline">server</code> is on a node which is
 not yet connected to the caller one, the call is going to
 block until a connection happens. This is different than
@@ -1026,9 +1026,9 @@ module is registered as <code class="inline">Stack</code> in the <code class="in
     <p>Replies to a client.</p>
 <p>This function can be used to explicitly send a reply to a client that called
 <a href="#call/3"><code class="inline">call/3</code></a> or <a href="#multi_call/4"><code class="inline">multi_call/4</code></a> when the reply cannot be specified in the return
-value of <code class="inline">handle_call/3</code>.</p>
+value of <a href="#c:handle_call/3"><code class="inline">handle_call/3</code></a>.</p>
 <p><code class="inline">client</code> must be the <code class="inline">from</code> argument (the second argument) accepted by
-<code class="inline">handle_call/3</code> callbacks. <code class="inline">reply</code> is an arbitrary term which will be given
+<a href="#c:handle_call/3"><code class="inline">handle_call/3</code></a> callbacks. <code class="inline">reply</code> is an arbitrary term which will be given
 back to the client as the return value of the call.</p>
 <p>Note that <a href="#reply/2"><code class="inline">reply/2</code></a> can be called from any process, not just the GenServer
 that originally received the call (as long as that GenServer communicated the
@@ -1105,14 +1105,14 @@ end</code></pre>
   <section class="docstring">
     <p>Starts a <a href="GenServer.html#content"><code class="inline">GenServer</code></a> process linked to the current process.</p>
 <p>This is often used to start the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> as part of a supervision tree.</p>
-<p>Once the server is started, the <code class="inline">init/1</code> function of the given <code class="inline">module</code> is
+<p>Once the server is started, the <a href="#c:init/1"><code class="inline">init/1</code></a> function of the given <code class="inline">module</code> is
 called with <code class="inline">args</code> as its arguments to initialize the server. To ensure a
-synchronized start-up procedure, this function does not return until <code class="inline">init/1</code>
+synchronized start-up procedure, this function does not return until <a href="#c:init/1"><code class="inline">init/1</code></a>
 has returned.</p>
 <p>Note that a <a href="GenServer.html#content"><code class="inline">GenServer</code></a> started with <a href="#start_link/3"><code class="inline">start_link/3</code></a> is linked to the
 parent process and will exit in case of crashes from the parent. The GenServer
 will also exit due to the <code class="inline">:normal</code> reasons in case it is configured to trap
-exits in the <code class="inline">init/1</code> callback.</p>
+exits in the <a href="#c:init/1"><code class="inline">init/1</code></a> callback.</p>
 <h2 id="start_link/3-options" class="section-heading">
   <a href="#start_link/3-options" class="hover-link"><i class="icon-link"></i></a>
   Options
@@ -1142,7 +1142,7 @@ underlying process as in <a href="Process.html#spawn/4"><code class="inline">Pro
 <code class="inline">{:ok, pid}</code>, where <code class="inline">pid</code> is the PID of the server. If a process with the
 specified server name already exists, this function returns
 <code class="inline">{:error, {:already_started, pid}}</code> with the PID of that process.</p>
-<p>If the <code class="inline">init/1</code> callback fails with <code class="inline">reason</code>, this function returns
+<p>If the <a href="#c:init/1"><code class="inline">init/1</code></a> callback fails with <code class="inline">reason</code>, this function returns
 <code class="inline">{:error, reason}</code>. Otherwise, if it returns <code class="inline">{:stop, reason}</code>
 or <code class="inline">:ignore</code>, the process is terminated and this function returns
 <code class="inline">{:error, reason}</code> or <code class="inline">:ignore</code>, respectively.</p>
@@ -1176,7 +1176,7 @@ or <code class="inline">:ignore</code>, the process is terminated and this funct
   </div>
   <section class="docstring">
     <p>Stops the server with the given <code class="inline">reason</code>.</p>
-<p>The <code class="inline">terminate/2</code> callback of the given <code class="inline">server</code> will be invoked before
+<p>The <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> callback of the given <code class="inline">server</code> will be invoked before
 exiting. This function returns <code class="inline">:ok</code> if the server terminates with the
 given reason; if it terminates with another reason, the call exits.</p>
 <p>This function keeps OTP semantics regarding error reporting.
@@ -1270,7 +1270,7 @@ a 2-tuple with first element <code class="inline">:down</code>. <code class="inl
 change is successful.</p>
 <p>Returning <code class="inline">{:error, reason}</code> fails the code change with reason <code class="inline">reason</code> and
 the state remains as the previous state.</p>
-<p>If <code class="inline">code_change/3</code> raises the code change fails and the loop will continue
+<p>If <a href="#c:code_change/3"><code class="inline">code_change/3</code></a> raises the code change fails and the loop will continue
 with its previous state. Therefore this callback does not usually contain side effects.</p>
 
   </section>
@@ -1385,7 +1385,7 @@ reply.</p>
 <p>Returning <code class="inline">{:noreply, new_state, timeout | :hibernate}</code> is similar to
 <code class="inline">{:noreply, new_state}</code> except a timeout or hibernation occurs as with a
 <code class="inline">:reply</code> tuple.</p>
-<p>Returning <code class="inline">{:stop, reason, reply, new_state}</code> stops the loop and <code class="inline">terminate/2</code>
+<p>Returning <code class="inline">{:stop, reason, reply, new_state}</code> stops the loop and <a href="#c:terminate/2"><code class="inline">terminate/2</code></a>
 is called with reason <code class="inline">reason</code> and state <code class="inline">new_state</code>. Then the <code class="inline">reply</code> is sent
 as the response to call and the process exits with reason <code class="inline">reason</code>.</p>
 <p>Returning <code class="inline">{:stop, reason, new_state}</code> is similar to
@@ -1429,8 +1429,8 @@ state of the <a href="GenServer.html#content"><code class="inline">GenServer</co
 called after <code class="inline">timeout</code> milliseconds if no messages are received.</p>
 <p>Returning <code class="inline">{:noreply, new_state, :hibernate}</code> is similar to
 <code class="inline">{:noreply, new_state}</code> except the process is hibernated before continuing the
-loop. See <code class="inline">handle_call/3</code> for more information.</p>
-<p>Returning <code class="inline">{:stop, reason, new_state}</code> stops the loop and <code class="inline">terminate/2</code> is
+loop. See <a href="#c:handle_call/3"><code class="inline">handle_call/3</code></a> for more information.</p>
+<p>Returning <code class="inline">{:stop, reason, new_state}</code> stops the loop and <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> is
 called with the reason <code class="inline">reason</code> and state <code class="inline">new_state</code>. The process exits with
 reason <code class="inline">reason</code>.</p>
 <p>If this callback is not implemented, the default implementation by
@@ -1466,7 +1466,7 @@ reason <code class="inline">reason</code>.</p>
     <p>Invoked to handle all other messages.</p>
 <p><code class="inline">msg</code> is the message and <code class="inline">state</code> is the current state of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>. When
 a timeout occurs the message is <code class="inline">:timeout</code>.</p>
-<p>Return values are the same as <code class="inline">handle_cast/2</code>.</p>
+<p>Return values are the same as <a href="#c:handle_cast/2"><code class="inline">handle_cast/2</code></a>.</p>
 <p>If this callback is not implemented, the default implementation by
 <code class="inline">use GenServer</code> will return <code class="inline">{:noreply, state}</code>.</p>
 
@@ -1508,9 +1508,9 @@ except <code class="inline">handle_info(:timeout, state)</code> will be called a
 milliseconds if no messages are received within the timeout.</p>
 <p>Returning <code class="inline">{:ok, state, :hibernate}</code> is similar to
 <code class="inline">{:ok, state}</code> except the process is hibernated before entering the loop. See
-<code class="inline">handle_call/3</code> for more information on hibernation.</p>
+<a href="#c:handle_call/3"><code class="inline">handle_call/3</code></a> for more information on hibernation.</p>
 <p>Returning <code class="inline">:ignore</code> will cause <a href="#start_link/3"><code class="inline">start_link/3</code></a> to return <code class="inline">:ignore</code> and the
-process will exit normally without entering the loop or calling <code class="inline">terminate/2</code>.
+process will exit normally without entering the loop or calling <a href="#c:terminate/2"><code class="inline">terminate/2</code></a>.
 If used when part of a supervision tree the parent supervisor will not fail
 to start nor immediately try to restart the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>. The remainder of the
 supervision tree will be (re)started and so the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> should not be
@@ -1527,7 +1527,7 @@ after a delay to attempt a restart.
 </ul>
 <p>Returning <code class="inline">{:stop, reason}</code> will cause <a href="#start_link/3"><code class="inline">start_link/3</code></a> to return
 <code class="inline">{:error, reason}</code> and the process to exit with reason <code class="inline">reason</code> without
-entering the loop or calling <code class="inline">terminate/2</code>.</p>
+entering the loop or calling <a href="#c:terminate/2"><code class="inline">terminate/2</code></a>.</p>
 
   </section>
 </div>
@@ -1556,28 +1556,28 @@ entering the loop or calling <code class="inline">terminate/2</code>.</p>
     <p>Invoked when the server is about to exit. It should do any cleanup required.</p>
 <p><code class="inline">reason</code> is exit reason and <code class="inline">state</code> is the current state of the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>.
 The return value is ignored.</p>
-<p><code class="inline">terminate/2</code> is called if a callback (except <code class="inline">init/1</code>) returns a <code class="inline">:stop</code>
+<p><a href="#c:terminate/2"><code class="inline">terminate/2</code></a> is called if a callback (except <a href="#c:init/1)"><code class="inline">init/1</code></a> returns a <code class="inline">:stop</code>
 tuple, raises, calls <a href="Kernel.html#exit/1"><code class="inline">Kernel.exit/1</code></a> or returns an invalid value. It may also
 be called if the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> traps exits using <a href="Process.html#flag/2"><code class="inline">Process.flag/2</code></a> <em>and</em> the
 parent process sends an exit signal.</p>
 <p>If part of a supervision tree a <a href="GenServer.html#content"><code class="inline">GenServer</code></a>’s <a href="Supervisor.html"><code class="inline">Supervisor</code></a> will send an exit
 signal when shutting it down. The exit signal is based on the shutdown
 strategy in the child’s specification. If it is <code class="inline">:brutal_kill</code> the <a href="GenServer.html#content"><code class="inline">GenServer</code></a>
-is killed and so <code class="inline">terminate/2</code> is not called. However if it is a timeout the
+is killed and so <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> is not called. However if it is a timeout the
 <a href="Supervisor.html"><code class="inline">Supervisor</code></a> will send the exit signal <code class="inline">:shutdown</code> and the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> will
-have the duration of the timeout to call <code class="inline">terminate/2</code> - if the process is
+have the duration of the timeout to call <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> - if the process is
 still alive after the timeout it is killed.</p>
 <p>If the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> receives an exit signal (that is not <code class="inline">:normal</code>) from any
 process when it is not trapping exits it will exit abruptly with the same
-reason and so not call <code class="inline">terminate/2</code>. Note that a process does <em>NOT</em> trap
+reason and so not call <a href="#c:terminate/2"><code class="inline">terminate/2</code></a>. Note that a process does <em>NOT</em> trap
 exits by default and an exit signal is sent when a linked process exits or its
 node is disconnected.</p>
-<p>Therefore it is not guaranteed that <code class="inline">terminate/2</code> is called when a <a href="GenServer.html#content"><code class="inline">GenServer</code></a>
+<p>Therefore it is not guaranteed that <a href="#c:terminate/2"><code class="inline">terminate/2</code></a> is called when a <a href="GenServer.html#content"><code class="inline">GenServer</code></a>
 exits. For such reasons, we usually recommend important clean-up rules to
 happen in separated processes either by use of monitoring or by links
 themselves. For example if the <a href="GenServer.html#content"><code class="inline">GenServer</code></a> controls a <code class="inline">port</code> (e.g.
 <code class="inline">:gen_tcp.socket</code>) or <a href="File.html#t:io_device/0"><code class="inline">File.io_device/0</code></a>, they will be closed on receiving a
-<a href="GenServer.html#content"><code class="inline">GenServer</code></a>’s exit signal and do not need to be closed in <code class="inline">terminate/2</code>.</p>
+<a href="GenServer.html#content"><code class="inline">GenServer</code></a>’s exit signal and do not need to be closed in <a href="#c:terminate/2"><code class="inline">terminate/2</code></a>.</p>
 <p>If <code class="inline">reason</code> is not <code class="inline">:normal</code>, <code class="inline">:shutdown</code> nor <code class="inline">{:shutdown, term}</code> an error is
 logged.</p>
 

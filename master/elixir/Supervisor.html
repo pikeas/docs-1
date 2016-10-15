@@ -903,11 +903,11 @@ with <code class="inline">:normal</code> reason.</p>
   </div>
   <section class="docstring">
     <p>Starts a supervisor module with the given <code class="inline">arg</code>.</p>
-<p>To start the supervisor, the <code class="inline">init/1</code> callback will be invoked in the given
-<code class="inline">module</code>, with <code class="inline">arg</code> as its argument. The <code class="inline">init/1</code> callback must return a
+<p>To start the supervisor, the <a href="#c:init/1"><code class="inline">init/1</code></a> callback will be invoked in the given
+<code class="inline">module</code>, with <code class="inline">arg</code> as its argument. The <a href="#c:init/1"><code class="inline">init/1</code></a> callback must return a
 supervisor specification which can be created with the help of the functions
 in the <a href="Supervisor.Spec.html"><code class="inline">Supervisor.Spec</code></a> module (especially <a href="Supervisor.Spec.html#supervise/2)"><code class="inline">Supervisor.Spec.supervise/2</code></a>.</p>
-<p>If the <code class="inline">init/1</code> callback returns <code class="inline">:ignore</code>, this function returns
+<p>If the <a href="#c:init/1"><code class="inline">init/1</code></a> callback returns <code class="inline">:ignore</code>, this function returns
 <code class="inline">:ignore</code> as well and the supervisor terminates with reason <code class="inline">:normal</code>.
 If it fails or returns an incorrect value, this function returns
 <code class="inline">{:error, term}</code> where <code class="inline">term</code> is a term with information about the

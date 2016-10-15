@@ -201,9 +201,9 @@ mechanism.
 but it can be overridden as follows:</p>
 <pre><code class="elixir">test_coverage: [tool: CoverModule]</code></pre>
 <p><code class="inline">CoverModule</code> can be any module that exports <code class="inline">start/2</code>, receiving the
-compilation path and the <code class="inline">test_coverage</code> options as arguments. It must
-return an anonymous function of zero arity that will be run after the
-test suite is done or <code class="inline">nil</code>.</p>
+compilation path and the <code class="inline">test_coverage</code> options as arguments.
+It must return either <code class="inline">nil</code> or an anonymous function of zero arity that will
+be run after the test suite is done.</p>
 <h2 id="module-stale" class="section-heading">
   <a href="#module-stale" class="hover-link"><i class="icon-link"></i></a>
   “Stale”

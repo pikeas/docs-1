@@ -1869,15 +1869,15 @@ following code:</p>
 end
 
 Hygiene.return_length #=&gt; 3</code></pre>
-<p>Notice how <code class="inline">return_length</code> returns 3 even though the <code class="inline">length/1</code>
-function is not imported. In fact, even if <code class="inline">return_length</code>
+<p>Notice how <code class="inline">Hygiene.return_length/0</code> returns <code class="inline">3</code> even though the <a href="Kernel.html#length/1"><code class="inline">Kernel.length/1</code></a>
+function is not imported. In fact, even if <code class="inline">return_length/0</code>
 imported a function with the same name and arity from another
 module, it wouldn’t affect the function result:</p>
 <pre><code class="elixir">def return_length do
   import String, only: [length: 1]
   get_length
 end</code></pre>
-<p>Calling this new <code class="inline">return_length</code> will still return 3 as result.</p>
+<p>Calling this new <code class="inline">return_length/0</code> will still return <code class="inline">3</code> as result.</p>
 <p>Elixir is smart enough to delay the resolution to the latest
 possible moment. So, if you call <code class="inline">length([1, 2, 3])</code> inside quote,
 but no <code class="inline">length/1</code> function is available, it is then expanded in

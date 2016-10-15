@@ -170,8 +170,8 @@ iex&gt; take_prefix.(&quot;Mr. John&quot;, &quot;Mr. &quot;)
 &quot;John&quot;</code></pre>
 <p>While this is much better (we don’t traverse <code class="inline">full</code> twice),
 it could still be improved. In this case, since we want to
-extract a substring from a string, we can use <code class="inline">byte_size/1</code>
-and <code class="inline">binary_part/3</code> as there is no chance we will slice in
+extract a substring from a string, we can use <a href="Kernel.html#byte_size/1"><code class="inline">Kernel.byte_size/1</code></a>
+and <a href="Kernel.html#binary_part/3"><code class="inline">Kernel.binary_part/3</code></a> as there is no chance we will slice in
 the middle of a codepoint made of more than one byte:</p>
 <pre><code class="iex elixir">iex&gt; take_prefix = fn full, prefix -&gt;
 ...&gt;   base = byte_size(prefix)

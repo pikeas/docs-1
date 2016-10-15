@@ -188,7 +188,7 @@ exception if any invalid options are given</p>
     <a href="#split/1">split(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Splits a string into argv chunks</p>
+    <div class="summary-synopsis"><p>Splits a string into <a href="#t:argv/0"><code class="inline">argv/0</code></a> chunks</p>
 </div>
   
 </div>
@@ -197,7 +197,7 @@ exception if any invalid options are given</p>
     <a href="#to_argv/1">to_argv(enum)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Receives a key-value enumerable and converts it to argv</p>
+    <div class="summary-synopsis"><p>Receives a key-value enumerable and converts it to <a href="#t:argv/0"><code class="inline">argv/0</code></a></p>
 </div>
   
 </div>
@@ -745,7 +745,7 @@ iex&gt; OptionParser.parse_head!([&quot;--verbose&quot;, &quot;--source&quot;, &
     
   </div>
   <section class="docstring">
-    <p>Splits a string into argv chunks.</p>
+    <p>Splits a string into <a href="#t:argv/0"><code class="inline">argv/0</code></a> chunks.</p>
 <p>This function splits the given <code class="inline">string</code> into a list of strings in a similar
 way to many shells.</p>
 <h2 id="split/1-examples" class="section-heading">
@@ -783,11 +783,11 @@ iex&gt; OptionParser.split(&quot;foo \&quot;bar baz\&quot;&quot;)
     
   </div>
   <section class="docstring">
-    <p>Receives a key-value enumerable and converts it to argv.</p>
+    <p>Receives a key-value enumerable and converts it to <a href="#t:argv/0"><code class="inline">argv/0</code></a>.</p>
 <p>Keys must be atoms. Keys with <code class="inline">nil</code> value are discarded,
 boolean values are converted to <code class="inline">--key</code> or <code class="inline">--no-key</code>
 (if the value is <code class="inline">true</code> or <code class="inline">false</code>, respectively),
-and all other values are converted using <code class="inline">to_string/1</code>.</p>
+and all other values are converted using <a href="Kernel.html#to_string/1"><code class="inline">Kernel.to_string/1</code></a>.</p>
 <h2 id="to_argv/1-examples" class="section-heading">
   <a href="#to_argv/1-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples

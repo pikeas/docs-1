@@ -997,7 +997,7 @@ See <a href="Code.html#eval_string/3"><code class="inline">Code.eval_string/3</c
 end
 
 Foo.sum(1, 2) #=&gt; 3</code></pre>
-<p>For convenience, you can pass <code class="inline">__ENV__</code> as an argument and
+<p>For convenience, you can pass <code class="inline">__ENV__/0</code> as an argument and
 all options will be automatically extracted from the environment:</p>
 <pre><code class="elixir">defmodule Foo do
   contents = quote do: (def sum(a, b), do: a + b)

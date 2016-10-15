@@ -739,7 +739,7 @@ evaluation result and its bindings.</p>
 <pre><code class="iex elixir">iex&gt; contents = quote(do: var!(a) + var!(b))
 iex&gt; Code.eval_quoted(contents, [a: 1, b: 2], file: __ENV__.file, line: __ENV__.line)
 {3, [a: 1, b: 2]}</code></pre>
-<p>For convenience, you can pass <code class="inline">__ENV__</code> as the <code class="inline">opts</code> argument and
+<p>For convenience, you can pass <code class="inline">__ENV__/0</code> as the <code class="inline">opts</code> argument and
 all options will be automatically extracted from the current environment:</p>
 <pre><code class="iex elixir">iex&gt; contents = quote(do: var!(a) + var!(b))
 iex&gt; Code.eval_quoted(contents, [a: 1, b: 2], __ENV__)
@@ -816,7 +816,7 @@ iex&gt; Code.eval_string(&quot;c = a + b&quot;, [a: 1, b: 2], __ENV__)
 
 iex&gt; Code.eval_string(&quot;a = a + b&quot;, [a: 1, b: 2])
 {3, [a: 3, b: 2]}</code></pre>
-<p>For convenience, you can pass <code class="inline">__ENV__</code> as the <code class="inline">opts</code> argument and
+<p>For convenience, you can pass <code class="inline">__ENV__/0</code> as the <code class="inline">opts</code> argument and
 all imports, requires and aliases defined in the current environment
 will be automatically carried over:</p>
 <pre><code class="iex elixir">iex&gt; Code.eval_string(&quot;a + b&quot;, [a: 1, b: 2], __ENV__)
@@ -1045,9 +1045,9 @@ if it succeeds, <code class="inline">{:error, {line, error, token}}</code> other
 
 <ul>
 <li><p><code class="inline">:file</code> - the filename to be used in stacktraces
-and the file reported in the <code class="inline">__ENV__</code> variable</p>
+and the file reported in the <code class="inline">__ENV__/0</code> macro</p>
 </li>
-<li><p><code class="inline">:line</code> - the line reported in the <code class="inline">__ENV__</code> variable</p>
+<li><p><code class="inline">:line</code> - the line reported in the <code class="inline">__ENV__/0</code> macro</p>
 </li>
 <li><code class="inline">:existing_atoms_only</code> - when <code class="inline">true</code>, raises an error
 when non-existing atoms are found by the tokenizer

@@ -70,7 +70,7 @@
         Time
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L310" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L313" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -149,7 +149,8 @@ the ones in 3rd party calendar libraries.</p>
     <a href="#from_iso8601/1">from_iso8601(arg)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Parses the extended “Local time” format described by ISO8601:2004</p>
+    <div class="summary-synopsis"><p>Parses the extended “Local time” format described by
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a></p>
 </div>
   
 </div>
@@ -158,7 +159,8 @@ the ones in 3rd party calendar libraries.</p>
     <a href="#from_iso8601!/1">from_iso8601!(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Parses the extended “Local time” format described by ISO8601:2004</p>
+    <div class="summary-synopsis"><p>Parses the extended “Local time” format described by
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a></p>
 </div>
   
 </div>
@@ -185,7 +187,8 @@ the ones in 3rd party calendar libraries.</p>
     <a href="#to_iso8601/1">to_iso8601(time)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts the given time to ISO8601</p>
+    <div class="summary-synopsis"><p>Converts the given time to
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a></p>
 </div>
   
 </div>
@@ -235,7 +238,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L338" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L341" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -275,7 +278,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">from_erl(arg, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L547" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L553" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -314,7 +317,7 @@ iex&gt; Time.from_erl({24, 30, 15})
     </a>
     <span class="signature">from_erl!(tuple, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L564" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L570" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -353,7 +356,7 @@ iex&gt; Time.from_erl!({24, 30, 15})
     </a>
     <span class="signature">from_iso8601(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L461" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L465" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -367,7 +370,8 @@ iex&gt; Time.from_erl!({24, 30, 15})
     
   </div>
   <section class="docstring">
-    <p>Parses the extended “Local time” format described by ISO8601:2004.</p>
+    <p>Parses the extended “Local time” format described by
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a>.</p>
 <p>Timezone offset may be included in the string but they will be
 simply discarded as such information is not included in times.</p>
 <p>As specified in the standard, the separator “T” may be omitted if
@@ -409,7 +413,7 @@ iex&gt; Time.from_iso8601(&quot;23:50:61&quot;)
     </a>
     <span class="signature">from_iso8601!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L493" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L498" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -423,7 +427,8 @@ iex&gt; Time.from_iso8601(&quot;23:50:61&quot;)
     
   </div>
   <section class="docstring">
-    <p>Parses the extended “Local time” format described by ISO8601:2004.</p>
+    <p>Parses the extended “Local time” format described by
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a>.</p>
 <p>Raises if the format is invalid.</p>
 <h2 id="from_iso8601!/1-examples" class="section-heading">
   <a href="#from_iso8601!/1-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -447,7 +452,7 @@ iex&gt; Time.from_iso8601!(&quot;2015:01:23 23-50-07&quot;)
     </a>
     <span class="signature">new(hour, minute, second, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L390" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L393" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -502,7 +507,7 @@ iex&gt; Time.new(23, 59, 59, 1_000_000)
     </a>
     <span class="signature">to_erl(time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L532" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L538" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -537,7 +542,7 @@ only contain hours/minutes/seconds.</p>
     </a>
     <span class="signature">to_iso8601(time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L515" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L521" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -551,7 +556,8 @@ only contain hours/minutes/seconds.</p>
     
   </div>
   <section class="docstring">
-    <p>Converts the given time to ISO8601.</p>
+    <p>Converts the given time to
+<a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a>.</p>
 <h3>Examples</h3>
 <pre><code class="iex elixir">iex&gt; Time.to_iso8601(~T[23:00:13])
 &quot;23:00:13&quot;
@@ -569,7 +575,7 @@ iex&gt; Time.to_iso8601(~T[23:00:13.001])
     </a>
     <span class="signature">to_string(time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L421" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L424" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -602,7 +608,7 @@ iex&gt; Time.to_string(~T[23:00:00.123456])
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L352" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L355" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

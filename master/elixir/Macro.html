@@ -634,7 +634,7 @@ it out for more information and examples.</p>
 </li>
 <li>Aliases are expanded (if possible) and return atoms
 </li>
-<li>Compilation environment macros (<code class="inline">__ENV__</code>, <code class="inline">__MODULE__</code> and <code class="inline">__DIR__</code>)
+<li>Compilation environment macros (<code class="inline">__ENV__/0</code>, <code class="inline">__MODULE__/0</code> and <code class="inline">__DIR__/0</code>)
 </li>
 <li>Module attributes reader (<code class="inline">@foo</code>)
 </li>
@@ -1276,7 +1276,7 @@ by the atoms <code class="inline">var</code> and <code class="inline">context</c
 
 <p>In order to build a variable, a context is expected.
 Most of the times, in order to preserve hygiene, the
-context must be <code class="inline">__MODULE__</code>:</p>
+context must be <code class="inline">__MODULE__/0</code>:</p>
 <pre><code class="iex elixir">iex&gt; Macro.var(:foo, __MODULE__)
 {:foo, [], __MODULE__}</code></pre>
 <p>However, if there is a need to access the user variable,

@@ -148,7 +148,7 @@ the result expected by supervision trees).</p>
 <p>By default, most supervision strategies will try to restart
 a worker after it exits regardless of the reason. If you design the
 task to terminate normally (as in the example with <a href="IO.html#puts/2"><code class="inline">IO.puts/2</code></a> above),
-consider passing <code class="inline">restart: :transient</code> in the options to <code class="inline">worker/3</code>.</p>
+consider passing <code class="inline">restart: :transient</code> in the options to <a href="Supervisor.Spec.html#worker/3"><code class="inline">Supervisor.Spec.worker/3</code></a>.</p>
 <h2 id="module-dynamically-supervised-tasks" class="section-heading">
   <a href="#module-dynamically-supervised-tasks" class="hover-link"><i class="icon-link"></i></a>
   Dynamically supervised tasks
@@ -191,8 +191,8 @@ Task.Supervisor.start_link(name: MyApp.DistSupervisor)
 # On the client
 Task.Supervisor.async({MyApp.DistSupervisor, :remote@local},
                       MyMod, :my_fun, [arg1, arg2, arg3])</code></pre>
-<p>Note that, when working with distributed tasks, one should use the <code class="inline">async/4</code> function
-that expects explicit module, function and arguments, instead of <code class="inline">async/2</code> that
+<p>Note that, when working with distributed tasks, one should use the <a href="Task.Supervisor.html#async/4"><code class="inline">Task.Supervisor.async/4</code></a> function
+that expects explicit module, function and arguments, instead of <a href="Task.Supervisor.html#async/2"><code class="inline">Task.Supervisor.async/2</code></a> that
 works with anonymous functions. That’s because anonymous functions expect
 the same module version to exist on all involved nodes. Check the <a href="Agent.html"><code class="inline">Agent</code></a> module
 documentation for more information on distributed processes as the limitations
