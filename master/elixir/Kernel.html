@@ -1320,7 +1320,7 @@ is either <code class="inline">nil</code> or <code class="inline">false</code>).
     </a>
     <span class="signature">left != right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1128" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1124" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1360,7 +1360,7 @@ false</code></pre>
     </a>
     <span class="signature">left !== right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1175" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1171" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1500,7 +1500,7 @@ true</code></pre>
     </a>
     <span class="signature">left ++ right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L965" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L961" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1539,10 +1539,6 @@ iex&gt; [1] ++ 2
 # returns a proper list
 iex&gt; [1] ++ [2]
 [1, 2]
-
-# not a proper list on the left will raises an error
-iex&gt; [1 | 2] ++ 3
-** (ArgumentError) argument error
 
 # improper list on the right will return an improper list
 iex&gt; [1] ++ [2 | 3]
@@ -1626,7 +1622,7 @@ iex&gt; [1] ++ [2 | 3]
     </a>
     <span class="signature">left -- right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L990" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L986" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1707,7 +1703,7 @@ iex&gt; 2 / 1
     </a>
     <span class="signature">left &lt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1026" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1022" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1742,7 +1738,7 @@ true</code></pre>
     </a>
     <span class="signature">left &lt;= right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1062" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1058" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1777,7 +1773,7 @@ true</code></pre>
     </a>
     <span class="signature">left == right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1104" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1100" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1817,7 +1813,7 @@ true</code></pre>
     </a>
     <span class="signature">left === right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1154" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1859,7 +1855,7 @@ false</code></pre>
     </a>
     <span class="signature">left =~ right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1524" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1520" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1907,7 +1903,7 @@ true</code></pre>
     </a>
     <span class="signature">left &gt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1044" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1040" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1942,7 +1938,7 @@ false</code></pre>
     </a>
     <span class="signature">left &gt;= right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1080" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1076" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2244,7 +2240,7 @@ iex&gt; div(-99, 2)
     </a>
     <span class="signature">elem(tuple, index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1192" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2361,7 +2357,7 @@ status <code class="inline">1</code> and linked OTP processes to crash.</p>
     </a>
     <span class="signature">function_exported?(module, function, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2813" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2809" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2398,7 +2394,7 @@ true</code></pre>
     </a>
     <span class="signature">get_and_update_in(data, keys, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1852" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1848" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2464,7 +2460,7 @@ like the <code class="inline">all</code> function defined above. See <a href="Ac
     </a>
     <span class="signature">get_in(data, keys)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1739" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1735" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -2558,7 +2554,7 @@ accordingly.</p>
     </a>
     <span class="signature">inspect(arg, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1586" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1582" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3103,7 +3099,7 @@ otherwise returns <code class="inline">false</code>.</p>
     </a>
     <span class="signature">macro_exported?(module, macro, arity)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2838" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2834" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3349,7 +3345,7 @@ If the local node is not alive, <code class="inline">:nonode@nohost</code> is re
     </a>
     <span class="signature">not arg</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1008" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1004" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3384,7 +3380,7 @@ true</code></pre>
     </a>
     <span class="signature">pop_in(data, keys)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1882" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1878" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3424,7 +3420,7 @@ and the deletion will be considered a success.</p>
     </a>
     <span class="signature">put_elem(tuple, index, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1209" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1205" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3459,7 +3455,7 @@ iex&gt; put_elem(tuple, 0, :baz)
     </a>
     <span class="signature">put_in(data, keys, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1774" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1770" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3868,7 +3864,7 @@ to handle processes, including spawning functions in nodes.</p>
     </a>
     <span class="signature">struct(struct, kv \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1638" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1634" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -3931,7 +3927,7 @@ struct(User, %{&quot;name&quot; =&gt; &quot;meg&quot;})
     </a>
     <span class="signature">struct!(struct, kv \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1667" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1663" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4105,7 +4101,7 @@ iex&gt; trunc(5.99)
     </a>
     <span class="signature">update_in(data, keys, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1796" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1792" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4157,7 +4153,7 @@ an error will be raised when trying to access it next.</p>
     </a>
     <span class="signature">!arg</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1279" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1275" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4190,7 +4186,7 @@ true</code></pre>
     </a>
     <span class="signature">left &amp;&amp; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2662" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2658" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4232,7 +4228,7 @@ as the first argument, not only booleans.</p>
     </a>
     <span class="signature">first..last</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2613" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2609" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4269,7 +4265,7 @@ true</code></pre>
     </a>
     <span class="signature">left &lt;&gt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1317" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1313" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4302,7 +4298,7 @@ iex&gt; x
     </a>
     <span class="signature">@expr</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2319" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2315" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4352,7 +4348,7 @@ to manipulate module attributes.</p>
     </a>
     <span class="signature">alias!(alias)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3022" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3018" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4375,7 +4371,7 @@ the macro is expanded.</p>
     </a>
     <span class="signature">left and right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1258" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1254" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4411,7 +4407,7 @@ iex&gt; true and &quot;yay!&quot;
     </a>
     <span class="signature">binding(context \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2435" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2431" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4455,7 +4451,7 @@ iex&gt; binding(:foo)
     </a>
     <span class="signature">def(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3278" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4518,7 +4514,7 @@ end
     </a>
     <span class="signature">defdelegate(funs, opts)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4026" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4022" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4584,7 +4580,7 @@ MyList.map([1, 2, 3], &amp;(&amp;1 * 2))
     </a>
     <span class="signature">defexception(fields)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3583" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3579" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4652,7 +4648,7 @@ exception messages.</p>
     </a>
     <span class="signature">defimpl(name, opts, do_block \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3812" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3808" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4677,7 +4673,7 @@ via <code class="inline">@protocol</code> and the current target as <code class=
     </a>
     <span class="signature">defmacro(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3332" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3328" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4716,7 +4712,7 @@ end</code></pre>
     </a>
     <span class="signature">defmacrop(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3345" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3341" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4739,7 +4735,7 @@ defined.</p>
     </a>
     <span class="signature">defmodule(alias, do_block)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3103" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4832,7 +4828,7 @@ current module nor automatically set up an alias.</p>
     </a>
     <span class="signature">defoverridable(keywords)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3850" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3846" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4882,7 +4878,7 @@ implementation.</p>
     </a>
     <span class="signature">defp(call, expr \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3309" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3305" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -4921,7 +4917,7 @@ Foo.sum(1, 2) #=&gt; ** (UndefinedFunctionError) undefined function Foo.sum/2</c
     </a>
     <span class="signature">defprotocol(name, do_block)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3798" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3794" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5116,7 +5112,7 @@ module or the <code class="inline">mix compile.protocols</code> task.</p>
     </a>
     <span class="signature">defstruct(fields)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3480" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3476" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5233,7 +5229,7 @@ use <code class="inline">@type</code>.</p>
     </a>
     <span class="signature">destructure(left, right)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2586" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2582" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5278,7 +5274,7 @@ do).</p>
     </a>
     <span class="signature">get_and_update_in(path, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2053" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2049" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5339,7 +5335,7 @@ users</code></pre>
     </a>
     <span class="signature">if(condition, clauses)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2488" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2484" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5390,7 +5386,7 @@ end</code></pre>
     </a>
     <span class="signature">left in right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2878" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2874" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5437,7 +5433,7 @@ operator to a valid guard expression. For example:</p>
     </a>
     <span class="signature">is_nil(term)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2210" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2206" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5468,7 +5464,7 @@ true</code></pre>
     </a>
     <span class="signature">match?(pattern, expr)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2259" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2255" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5525,7 +5521,7 @@ iex&gt; binding()
     </a>
     <span class="signature">left or right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1235" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1231" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5560,7 +5556,7 @@ iex&gt; false or 42
     </a>
     <span class="signature">pop_in(path)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1963" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1959" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5602,7 +5598,7 @@ and the deletion will be considered a success.</p>
     </a>
     <span class="signature">put_in(path, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1924" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1920" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5642,7 +5638,7 @@ iex&gt; put_in(users[&quot;john&quot;].age, 28)
     </a>
     <span class="signature">raise(msg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1365" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1361" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5682,7 +5678,7 @@ end</code></pre>
     </a>
     <span class="signature">raise(exception, attrs)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1410" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1406" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5715,7 +5711,7 @@ For more information, see <a href="#defexception/1"><code class="inline">defexce
     </a>
     <span class="signature">reraise(msg, stacktrace)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1440" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1436" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5756,7 +5752,7 @@ end</code></pre>
     </a>
     <span class="signature">reraise(exception, attrs, stacktrace)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1491" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1487" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5790,7 +5786,7 @@ end</code></pre>
     </a>
     <span class="signature">sigil_C(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4119" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4115" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5822,7 +5818,7 @@ iex&gt; ~C(f#{o}o)
     </a>
     <span class="signature">sigil_D(date, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4215" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4211" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5851,7 +5847,7 @@ and escape characters are not useful for date sigils.</p>
     </a>
     <span class="signature">sigil_N(date, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4253" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4249" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5882,7 +5878,7 @@ iex&gt; ~N[2015-01-13T13:00:07.001]
     </a>
     <span class="signature">sigil_R(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4198" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4194" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5912,7 +5908,7 @@ true</code></pre>
     </a>
     <span class="signature">sigil_S(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4075" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4071" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5944,7 +5940,7 @@ iex&gt; ~S(f#{o}o)
     </a>
     <span class="signature">sigil_T(date, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4234" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4230" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -5975,7 +5971,7 @@ iex&gt; ~T[13:00:07.001]
     </a>
     <span class="signature">sigil_W(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4313" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4309" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6017,7 +6013,7 @@ interpreting interpolations.</p>
     </a>
     <span class="signature">sigil_c(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4142" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4138" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6052,7 +6048,7 @@ iex&gt; ~c(f\#{:o}o)
     </a>
     <span class="signature">sigil_r(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4172" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4168" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6085,7 +6081,7 @@ true</code></pre>
     </a>
     <span class="signature">sigil_s(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4096" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4092" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6120,7 +6116,7 @@ iex&gt; ~s(f\#{:o}o)
     </a>
     <span class="signature">sigil_w(term, modifiers)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4285" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L4281" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6171,7 +6167,7 @@ iex&gt; ~w(foo bar baz)a
     </a>
     <span class="signature">to_charlist(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2192" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2188" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6198,7 +6194,7 @@ iex&gt; ~w(foo bar baz)a
     </a>
     <span class="signature">to_string(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2179" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2175" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6227,7 +6223,7 @@ iex&gt; ~w(foo bar baz)a
     </a>
     <span class="signature">unless(condition, clauses)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2535" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2531" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6268,7 +6264,7 @@ iex&gt; unless Enum.sum([2, 2]) == 5 do
     </a>
     <span class="signature">update_in(path, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1995" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L1991" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6310,7 +6306,7 @@ iex&gt; update_in(users[&quot;john&quot;].age, &amp;(&amp;1 + 1))
     </a>
     <span class="signature">use(module, opts \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3952" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L3948" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6414,7 +6410,7 @@ into the caller when used.</p>
     </a>
     <span class="signature">var!(var, context \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2996" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2992" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6438,7 +6434,7 @@ not be hygienized.</p>
     </a>
     <span class="signature">left |&gt; right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2785" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2781" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -6511,7 +6507,7 @@ notation.</p>
     </a>
     <span class="signature">left || right</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2697" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/kernel.ex#L2693" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
