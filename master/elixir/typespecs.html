@@ -98,31 +98,31 @@
 <h3>Basic types</h3>
 <pre><code class="elixir">type :: any()                   # the top type, the set of all terms
       | none()                  # the bottom type, contains no terms
-      | pid()
-      | port()
-      | reference()
-      | tuple()
       | atom()
+      | float()
       | integer()
+      | neg_integer()           # ..., -3, -2, -1
       | non_neg_integer()       # 0, 1, 2, 3, ...
       | pos_integer()           # 1, 2, 3, ...
-      | neg_integer()           # ..., -3, -2, -1
-      | float()
-      | map()                   # any map
-      | struct()                # any struct
       | list(type)
       | nonempty_list(type)
       | improper_list(type1, type2)
       | maybe_improper_list(type1, type2)
+      | map()                   # any map
+      | pid()
+      | port()
+      | reference()
+      | struct()                # any struct
+      | tuple()
       | Literals                # Described in section &quot;Literals&quot;
       | Builtin                 # Described in section &quot;Built-in types&quot;
       | Remotes                 # Described in section &quot;Remote types&quot;</code></pre>
 <h3>Literals</h3>
 <p>The following literals are also supported in typespecs:</p>
 <pre><code class="elixir">type :: :atom                         ## Atoms
+      | 1.0                           ## Floats
       | 1                             ## Integers
       | 1..10                         ## Integers from 1 to 10
-      | 1.0                           ## Floats
 
                                       ## Bitstrings
       | &lt;&lt;&gt;&gt;                          # empty bitstring
@@ -130,17 +130,17 @@
       | &lt;&lt;_::_ * unit&gt;&gt;               # unit is an integer from 1 to 256
       | &lt;&lt;_::size, _::_*unit&gt;&gt;
 
+                                      ## Functions
+      | (... -&gt; type)                 # any arity, returns type
+      | (() -&gt; type)                  # 0-arity, returns type
+      | (type1, type2 -&gt; type)        # 2-arity, returns type
+
                                       ## Lists
       | [type]                        # list with any number of type elements
       | []                            # empty list
       | [...]                         # shorthand for nonempty_list(any())
       | [type, ...]                   # shorthand for nonempty_list(type)
       | [key: type]                   # keyword lists
-
-                                      ## Functions
-      | (... -&gt; type)                 # any arity, returns type
-      | (() -&gt; type)                  # 0-arity, returns type
-      | (type1, type2 -&gt; type)        # 2-arity, returns type
 
                                       ## Maps
       | %{}                           # empty map
@@ -170,6 +170,12 @@
 <td style="text-align: left"><code class="inline">term()</code></td><td style="text-align: left"><code class="inline">any()</code></td>
 </tr>
 <tr>
+<td style="text-align: left"><code class="inline">arity()</code></td><td style="text-align: left"><code class="inline">0..255</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">as_boolean(t)</code></td><td style="text-align: left"><code class="inline">t</code></td>
+</tr>
+<tr>
 <td style="text-align: left"><code class="inline">binary()</code></td><td style="text-align: left"><code class="inline">&lt;&lt;_::_ * 8&gt;&gt;</code></td>
 </tr>
 <tr>
@@ -185,55 +191,19 @@
 <td style="text-align: left"><code class="inline">char()</code></td><td style="text-align: left"><code class="inline">0..0x10FFFF</code></td>
 </tr>
 <tr>
-<td style="text-align: left"><code class="inline">number()</code></td><td style="text-align: left"><code class="inline">integer()</code> | <code class="inline">float()</code></td>
-</tr>
-<tr>
 <td style="text-align: left"><code class="inline">charlist()</code></td><td style="text-align: left"><code class="inline">[char()]</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">list()</code></td><td style="text-align: left"><code class="inline">[any()]</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">maybe_improper_list()</code></td><td style="text-align: left"><code class="inline">maybe_improper_list(any(), any())</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">nonempty_list()</code></td><td style="text-align: left"><code class="inline">nonempty_list(any())</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">iolist()</code></td><td style="text-align: left"><code class="inline">maybe_improper_list(byte() | binary() | iolist(), binary() | [])</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">iodata()</code></td><td style="text-align: left"><code class="inline">iolist()</code> | <code class="inline">binary()</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">module()</code></td><td style="text-align: left"><code class="inline">atom()</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">arity()</code></td><td style="text-align: left"><code class="inline">0..255</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">mfa()</code></td><td style="text-align: left"><code class="inline">{module(), atom(), arity()}</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">identifier()</code></td><td style="text-align: left"><code class="inline">pid()</code> | <code class="inline">port()</code> | <code class="inline">reference()</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">node()</code></td><td style="text-align: left"><code class="inline">atom()</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">timeout()</code></td><td style="text-align: left"><code class="inline">:infinity</code> | <code class="inline">non_neg_integer()</code></td>
-</tr>
-<tr>
-<td style="text-align: left"><code class="inline">no_return()</code></td><td style="text-align: left"><code class="inline">none()</code></td>
 </tr>
 <tr>
 <td style="text-align: left"><code class="inline">fun()</code></td><td style="text-align: left"><code class="inline">(... -&gt; any)</code></td>
 </tr>
 <tr>
-<td style="text-align: left"><code class="inline">struct()</code></td><td style="text-align: left"><code class="inline">%{:__struct__ =&gt; atom(), optional(atom()) =&gt; any()}</code></td>
+<td style="text-align: left"><code class="inline">identifier()</code></td><td style="text-align: left"><code class="inline">pid()</code> | <code class="inline">port()</code> | <code class="inline">reference()</code></td>
 </tr>
 <tr>
-<td style="text-align: left"><code class="inline">as_boolean(t)</code></td><td style="text-align: left"><code class="inline">t</code></td>
+<td style="text-align: left"><code class="inline">iodata()</code></td><td style="text-align: left"><code class="inline">iolist()</code> | <code class="inline">binary()</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">iolist()</code></td><td style="text-align: left"><code class="inline">maybe_improper_list(byte() | binary() | iolist(), binary() | [])</code></td>
 </tr>
 <tr>
 <td style="text-align: left"><code class="inline">keyword()</code></td><td style="text-align: left"><code class="inline">[{atom(), any()}]</code></td>
@@ -241,9 +211,39 @@
 <tr>
 <td style="text-align: left"><code class="inline">keyword(t)</code></td><td style="text-align: left"><code class="inline">[{atom(), t}]</code></td>
 </tr>
+<tr>
+<td style="text-align: left"><code class="inline">list()</code></td><td style="text-align: left"><code class="inline">[any()]</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">nonempty_list()</code></td><td style="text-align: left"><code class="inline">nonempty_list(any())</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">maybe_improper_list()</code></td><td style="text-align: left"><code class="inline">maybe_improper_list(any(), any())</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">mfa()</code></td><td style="text-align: left"><code class="inline">{module(), atom(), arity()}</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">module()</code></td><td style="text-align: left"><code class="inline">atom()</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">no_return()</code></td><td style="text-align: left"><code class="inline">none()</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">node()</code></td><td style="text-align: left"><code class="inline">atom()</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">number()</code></td><td style="text-align: left"><code class="inline">integer()</code> | <code class="inline">float()</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">struct()</code></td><td style="text-align: left"><code class="inline">%{:__struct__ =&gt; atom(), optional(atom()) =&gt; any()}</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code class="inline">timeout()</code></td><td style="text-align: left"><code class="inline">:infinity</code> | <code class="inline">non_neg_integer()</code></td>
+</tr>
 </table>
 <h3>Remote types</h3>
-<p>Any module is also able to define its own types and the modules in Elixir are no exception. For example, the <a href="Range.html"><code class="inline">Range</code></a> module defines a <code class="inline">t</code> type that represents a range: this type can be referred to as <code class="inline">Range.t</code>. In a similar fashion, a string is <code class="inline">String.t</code>, any enumerable can be <code class="inline">Enum.t</code>, and so on.</p>
+<p>Any module is also able to define its own types and the modules in Elixir are no exception. For example, the <a href="Range.html"><code class="inline">Range</code></a> module defines a <code class="inline">t/0</code> type that represents a range: this type can be referred to as <a href="Range.html#t:t/0"><code class="inline">Range.t/0</code></a>. In a similar fashion, a string is <a href="String.html#t:t/0"><code class="inline">String.t/0</code></a>, any enumerable can be <a href="Enum.html#t:t/0"><code class="inline">Enum.t/0</code></a>, and so on.</p>
 <h3>Maps</h3>
 <p>The key types in maps are allowed to overlap, and if they do, the leftmost key takes precedence. A map value does not belong to this type if it contains a key that is not in the maps allowed keys.</p>
 <p>Because it is common to end a map type with <code class="inline">optional(any) =&gt; any</code> to denote that keys that do not belong to any other key in the map type are allowed, and may map to any value, the shorthand notation <code class="inline">...</code> is allowed as the last element of a map type.</p>
@@ -284,8 +284,8 @@
   Notes
 </h2>
 
-<p>Elixir discourages the use of type <code class="inline">string</code> as it might be confused with binaries which are referred to as “strings” in Elixir (as opposed to character lists). In order to use the type that is called <code class="inline">string</code> in Erlang, one has to use the <code class="inline">charlist</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>, you’ll get a warning from the compiler.</p>
-<p>If you want to refer to the “string” type (the one operated on by functions in the <a href="String.html"><code class="inline">String</code></a> module), use <code class="inline">String.t</code> type instead.</p>
+<p>Elixir discourages the use of type <code class="inline">t:string/0</code> as it might be confused with binaries which are referred to as “strings” in Elixir (as opposed to character lists). In order to use the type that is called <code class="inline">t:string/0</code> in Erlang, one has to use the <code class="inline">t:charlist/0</code> type which is a synonym for <code class="inline">string</code>. If you use <code class="inline">string</code>, you’ll get a warning from the compiler.</p>
+<p>If you want to refer to the “string” type (the one operated on by functions in the <a href="String.html"><code class="inline">String</code></a> module), use <a href="String.html#t:t/0"><code class="inline">String.t/0</code></a> type instead.</p>
 
       <footer class="footer">
         <p>

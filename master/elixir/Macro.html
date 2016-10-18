@@ -1044,7 +1044,7 @@ def unescape_map(?v), do: ?\v
 def unescape_map(?x), do: true
 def unescape_map(?u), do: true
 def unescape_map(e),  do: e</code></pre>
-<p>If the <code class="inline">unescape_map</code> function returns <code class="inline">false</code>. The char is
+<p>If the <code class="inline">unescape_map/1</code> function returns <code class="inline">false</code>. The char is
 not escaped and the backslash is kept in the string.</p>
 <p>Hexadecimals and Unicode codepoints will be escaped if the map
 function returns <code class="inline">true</code> for <code class="inline">?x</code>. Unicode codepoints if the map
@@ -1054,7 +1054,7 @@ function returns <code class="inline">true</code> for <code class="inline">?u</c
   Examples
 </h2>
 
-<p>Using the <code class="inline">unescape_map</code> function defined above is easy:</p>
+<p>Using the <code class="inline">unescape_map/1</code> function defined above is easy:</p>
 <pre><code class="elixir">Macro.unescape_string &quot;example\\n&quot;, &amp;unescape_map(&amp;1)</code></pre>
 
   </section>

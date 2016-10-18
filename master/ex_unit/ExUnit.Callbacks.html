@@ -78,24 +78,24 @@
         <section id="moduledoc">
           <p>Defines ExUnit Callbacks.</p>
 <p>This module defines both <code class="inline">setup_all</code> and <code class="inline">setup</code> callbacks, as well as
-the <code class="inline">on_exit</code> facility.</p>
+the <a href="#on_exit/2"><code class="inline">on_exit/2</code></a> facility.</p>
 <p>The setup callbacks are defined via macros and each one can optionally
 receive a map with metadata, usually referred to as <code class="inline">context</code>. The
 callback may optionally put extra data into <code class="inline">context</code> to be used in
 the tests.</p>
 <p>The <code class="inline">setup_all</code> callbacks are invoked once to setup the test case before any
 test is run and all <code class="inline">setup</code> callbacks are run before each test. No callback
-runs if the test case has no tests or all tests were filtered out.</p>
-<p><code class="inline">on_exit</code> callbacks are registered on demand, usually to undo an action
-performed by a setup callback. <code class="inline">on_exit</code> may also take a reference,
-allowing callback to be overridden in the future. A registered <code class="inline">on_exit</code>
+runs if the test case has no tests or all tests have been filtered out.</p>
+<p><a href="#on_exit/2"><code class="inline">on_exit/2</code></a> callbacks are registered on demand, usually to undo an action
+performed by a setup callback. <a href="#on_exit/2"><code class="inline">on_exit/2</code></a> may also take a reference,
+allowing callback to be overridden in the future. A registered <a href="#on_exit/2"><code class="inline">on_exit/2</code></a>
 callback always runs, while failures in <code class="inline">setup</code> and <code class="inline">setup_all</code> will stop
 all remaining setup callbacks from executing.</p>
 <p>Finally, <code class="inline">setup_all</code> callbacks run in the test case process, while all
-<code class="inline">setup</code> callbacks run in the same process as the test itself. <code class="inline">on_exit</code>
+<code class="inline">setup</code> callbacks run in the same process as the test itself. <a href="#on_exit/2"><code class="inline">on_exit/2</code></a>
 callbacks always run in a separate process than the test case or the
 test itself. Since the test process exits with reason <code class="inline">:shutdown</code>, most
-of times <a href="#on_exit/1"><code class="inline">on_exit/1</code></a> can be avoided as processes are going to clean
+of times <a href="#on_exit/2"><code class="inline">on_exit/2</code></a> can be avoided as processes are going to clean
 up on their own.</p>
 <h2 id="module-context" class="section-heading">
   <a href="#module-context" class="hover-link"><i class="icon-link"></i></a>
@@ -271,17 +271,17 @@ end</code></pre>
     
       <div class="specs">
         
-          <pre>on_exit(term, (() -> term)) :: :ok</pre>
+          <pre>on_exit(term, (() -> term)) :: :ok | no_return</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Defines a callback that runs on the test (or test case) exit.</p>
-<p>An <code class="inline">on_exit</code> callback is a function that receives no arguments and
+<p><code class="inline">callback</code> is a function that receives no arguments and
 runs in a separate process than the caller.</p>
 <p><a href="#on_exit/2"><code class="inline">on_exit/2</code></a> is usually called from <code class="inline">setup</code> and <code class="inline">setup_all</code> callbacks,
-often to undo the action performed during <code class="inline">setup</code>. However, <code class="inline">on_exit</code>
+often to undo the action performed during <code class="inline">setup</code>. However, <a href="#on_exit/2"><code class="inline">on_exit/2</code></a>
 may also be called dynamically, where a reference can be used to
 guarantee the callback will be invoked only once.</p>
 

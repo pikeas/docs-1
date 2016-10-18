@@ -2488,7 +2488,7 @@ device cannot be shared and as such it is convenient to open the file
 in raw mode for performance reasons. Therefore, Elixir <strong>will</strong> open
 streams in <code class="inline">:raw</code> mode with the <code class="inline">:read_ahead</code> option unless an encoding
 is specified. This means any data streamed into the file must be
-converted to <code class="inline">iodata</code> type. If you pass <code class="inline">[:utf8]</code> in the modes parameter,
+converted to <code class="inline">t:iodata/0</code> type. If you pass <code class="inline">[:utf8]</code> in the modes parameter,
 the underlying stream will use <a href="IO.html#write/2"><code class="inline">IO.write/2</code></a> and the <a href="String.Chars.html"><code class="inline">String.Chars</code></a> protocol
 to convert the data. See <a href="IO.html#binwrite/2"><code class="inline">IO.binwrite/2</code></a> and <a href="IO.html#write/2"><code class="inline">IO.write/2</code></a> .</p>
 <p>One may also consider passing the <code class="inline">:delayed_write</code> option if the stream

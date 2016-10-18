@@ -576,7 +576,7 @@ its computation, use <a href="#yield/2"><code class="inline">yield/2</code></a> 
 
 <p>It is not recommended to <code class="inline">await</code> a long-running task inside an OTP
 behaviour such as <a href="GenServer.html"><code class="inline">GenServer</code></a>. Instead, you should match on the message
-coming from a task inside your <code class="inline">handle_info</code> callback.</p>
+coming from a task inside your <a href="http://elixir-lang.org/docs/stable/elixir/GenServer.html#handle_info/2"><code class="inline">GenServer.handle_info/2</code></a> callback.</p>
 <h2 id="await/2-examples" class="section-heading">
   <a href="#await/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples

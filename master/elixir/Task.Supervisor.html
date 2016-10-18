@@ -305,7 +305,7 @@ more information.</p>
 
 <p>If you create a task using <code class="inline">async_nolink</code> inside an OTP behaviour
 like <a href="GenServer.html"><code class="inline">GenServer</code></a>, you should match on the message coming from the
-task inside your <code class="inline">handle_info</code> callback.</p>
+task inside your <a href="http://elixir-lang.org/docs/stable/elixir/GenServer.html#handle_info/2"><code class="inline">GenServer.handle_info/2</code></a> callback.</p>
 <p>The reply sent by the task will be in the format <code class="inline">{ref, result}</code>,
 where <code class="inline">ref</code> is the monitor reference held by the task struct
 and <code class="inline">result</code> is the return value of the task function.</p>

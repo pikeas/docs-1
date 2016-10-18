@@ -149,7 +149,7 @@ both to the current shell and the shell we want to connect to.</p>
 <pre><code class="elixir">$ iex --sname foo
 iex(foo@HOST)1&gt;</code></pre>
 <p>The string between the parentheses in the prompt is the name
-of your node. We can retrieve it by calling the <code class="inline">node()</code>
+of your node. We can retrieve it by calling the <code class="inline">node/0</code>
 function:</p>
 <pre><code class="elixir">iex(foo@HOST)1&gt; node()
 :&quot;foo@HOST&quot;

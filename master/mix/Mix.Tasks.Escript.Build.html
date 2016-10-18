@@ -124,7 +124,7 @@ be started.</p>
 </li>
 <li><p><code class="inline">:embed_elixir</code> - if <code class="inline">true</code> embed elixir and its children apps
 (<code class="inline">ex_unit</code>, <code class="inline">mix</code>, etc.) mentioned in the <code class="inline">:applications</code> list inside the
-<code class="inline">application</code> function in <code class="inline">mix.exs</code>.</p>
+<code class="inline">application/0</code> function in <code class="inline">mix.exs</code>.</p>
 <p>Defaults to <code class="inline">true</code> for Elixir projects, <code class="inline">false</code> for Erlang projects.</p>
 <p>Note: if you set this to <code class="inline">false</code> for an Elixir project, you will have to add paths to Elixir’s
 <code class="inline">ebin</code> directories to <code class="inline">ERL_LIBS</code> environment variable when running the resulting escript, in

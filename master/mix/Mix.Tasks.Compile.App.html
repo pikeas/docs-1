@@ -84,7 +84,7 @@ applications by seeing the documentation for the <a href="http://elixir-lang.org
 module.</p>
 <p>In order to generate the <code class="inline">.app</code> file, Mix expects your application
 to have both <code class="inline">:app</code> and <code class="inline">:version</code> keys. Furthermore, you can
-configure the generated application by defining an <code class="inline">application</code>
+configure the generated application by defining an <code class="inline">application/0</code>
 function in your <code class="inline">mix.exs</code> with the following options:</p>
 <ul>
 <li><p><code class="inline">:applications</code> - all applications your application depends
@@ -112,7 +112,7 @@ The application environment is one of the most common ways
 to configure applications.
 </li>
 </ul>
-<p>Let’s see an example <code class="inline">application</code> function:</p>
+<p>Let’s see an example <code class="inline">application/0</code> function:</p>
 <pre><code class="elixir">def application do
   [mod: {MyApp, []},
    env: [default: :value],
