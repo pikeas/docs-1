@@ -549,11 +549,19 @@ Code.delete_path(&quot;/does_not_exist&quot;) #=&gt; false</code></pre>
     </a>
     <span class="signature">ensure_compiled(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L546" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L550" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>ensure_compiled(module) ::
+  {:module, module} |
+  {:error, :embedded | :badfile | :nofile | :on_load_failure}</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -576,11 +584,17 @@ and when to use <a href="#ensure_loaded/1"><code class="inline">ensure_loaded/1<
     </a>
     <span class="signature">ensure_compiled?(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L566" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L571" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>ensure_compiled?(module) :: boolean</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -599,11 +613,19 @@ Returns <code class="inline">false</code> otherwise.</p>
     </a>
     <span class="signature">ensure_loaded(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L512" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L514" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>ensure_loaded(module) ::
+  {:module, module} |
+  {:error, :embedded | :badfile | :nofile | :on_load_failure}</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -661,7 +683,7 @@ iex&gt; Code.ensure_loaded(DoesNotExist)
     </a>
     <span class="signature">ensure_loaded?(module)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L529" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L531" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -832,7 +854,7 @@ will be automatically carried over:</p>
     </a>
     <span class="signature">get_docs(module, kind)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L612" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/code.ex#L617" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
