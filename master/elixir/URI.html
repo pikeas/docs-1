@@ -625,13 +625,13 @@ new URIs.</p>
   </div>
   <section class="docstring">
     <p>Percent-escapes the given string.</p>
-<p>This function accepts a predicate function as an optional argument; if
-passed, this function will be called with each character (byte) in <code class="inline">str</code> as
+<p>This function accepts a <code class="inline">predicate</code> function as an optional argument; if
+passed, this function will be called with each character (byte) in <code class="inline">string</code> as
 its argument and should return <code class="inline">true</code> if that character should not be escaped
 and left as is.</p>
-<h2 id="encode/2-example" class="section-heading">
-  <a href="#encode/2-example" class="hover-link"><i class="icon-link"></i></a>
-  Example
+<h2 id="encode/2-examples" class="section-heading">
+  <a href="#encode/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
 </h2>
 
 <pre><code class="iex elixir">iex&gt; URI.encode(&quot;ftp://s-ite.tld/?value=put it+й&quot;)
