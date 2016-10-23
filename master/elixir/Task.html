@@ -107,7 +107,7 @@ to the caller with the result.</p>
 <p><a href="Task.html#await/2"><code class="inline">Task.await/2</code></a> is used to read the message sent by the task.</p>
 <p>There are two important things to consider when using <code class="inline">async</code>:</p>
 <ol>
-<li><p>If you are using async tasks, you must await a reply
+<li><p>If you are using async tasks, you <strong>must await</strong> a reply
  as they are <em>always</em> sent. If you are not expecting a reply,
  consider using <a href="Task.html#start_link/1"><code class="inline">Task.start_link/1</code></a> detailed below.</p>
 </li>
