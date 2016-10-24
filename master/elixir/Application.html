@@ -458,7 +458,7 @@ returns a string</p>
     
       <div class="specs">
         
-          <pre><a href="#t:app/0">app</a> :: atom</pre>
+          <pre>app() :: atom</pre>
         
       </div>
     
@@ -483,7 +483,7 @@ returns a string</p>
     
       <div class="specs">
         
-          <pre><a href="#t:key/0">key</a> :: atom</pre>
+          <pre>key() :: atom</pre>
         
       </div>
     
@@ -508,7 +508,7 @@ returns a string</p>
     
       <div class="specs">
         
-          <pre><a href="#t:start_type/0">start_type</a> :: :permanent | :transient | :temporary</pre>
+          <pre>start_type() :: :permanent | :transient | :temporary</pre>
         
       </div>
     
@@ -533,7 +533,7 @@ returns a string</p>
     
       <div class="specs">
         
-          <pre><a href="#t:state/0">state</a> :: term</pre>
+          <pre>state() :: term</pre>
         
       </div>
     
@@ -558,7 +558,7 @@ returns a string</p>
     
       <div class="specs">
         
-          <pre><a href="#t:value/0">value</a> :: term</pre>
+          <pre>value() :: term</pre>
         
       </div>
     
@@ -666,7 +666,7 @@ Elixir and also Erlang’s <code class="inline">:code</code> module.</p>
     
       <div class="specs">
         
-          <pre>delete_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, timeout: timeout, persistent: boolean) :: :ok</pre>
+          <pre>delete_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, [timeout: timeout, persistent: boolean]) :: :ok</pre>
         
       </div>
     
@@ -955,7 +955,7 @@ it does load its environment.</p>
     
       <div class="specs">
         
-          <pre>loaded_applications :: [tuple]</pre>
+          <pre>loaded_applications() :: [tuple]</pre>
         
       </div>
     
@@ -983,7 +983,7 @@ it does load its environment.</p>
     
       <div class="specs">
         
-          <pre>put_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, timeout: timeout, persistent: boolean) :: :ok</pre>
+          <pre>put_env(<a href="#t:app/0">app</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>, [timeout: timeout, persistent: boolean]) :: :ok</pre>
         
       </div>
     

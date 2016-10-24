@@ -235,7 +235,7 @@ as represented by the <a href="#t:result/0"><code class="inline">result/0</code>
     
       <div class="specs">
         
-          <pre><a href="#t:acc/0">acc</a> :: {:cont, term} | {:halt, term} | {:suspend, term}</pre>
+          <pre>acc() :: {:cont, term} | {:halt, term} | {:suspend, term}</pre>
         
       </div>
     
@@ -275,7 +275,7 @@ it must be explicitly handled by the caller and never leak.</p>
     
       <div class="specs">
         
-          <pre><a href="#t:continuation/0">continuation</a> :: (<a href="#t:acc/0">acc</a> -> <a href="#t:result/0">result</a>)</pre>
+          <pre>continuation() :: (<a href="#t:acc/0">acc</a> -> <a href="#t:result/0">result</a>)</pre>
         
       </div>
     
@@ -309,7 +309,7 @@ applied.</p>
     
       <div class="specs">
         
-          <pre><a href="#t:reducer/0">reducer</a> :: (term, term -> <a href="#t:acc/0">acc</a>)</pre>
+          <pre>reducer() :: (term, term -> <a href="#t:acc/0">acc</a>)</pre>
         
       </div>
     
@@ -376,7 +376,7 @@ eventually halting or continuing until the end.</p>
     
       <div class="specs">
         
-          <pre><a href="#t:t/0">t</a> :: term</pre>
+          <pre>t() :: term</pre>
         
       </div>
     

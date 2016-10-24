@@ -328,7 +328,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre><a href="#t:child_id/0">child_id</a> :: term</pre>
+          <pre>child_id() :: term</pre>
         
       </div>
     
@@ -354,7 +354,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre><a href="#t:modules/0">modules</a> :: :dynamic | [module]</pre>
+          <pre>modules() :: :dynamic | [module]</pre>
         
       </div>
     
@@ -380,7 +380,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre><a href="#t:restart/0">restart</a> :: :permanent | :transient | :temporary</pre>
+          <pre>restart() :: :permanent | :transient | :temporary</pre>
         
       </div>
     
@@ -406,7 +406,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre><a href="#t:shutdown/0">shutdown</a> :: :brutal_kill | :infinity | non_neg_integer</pre>
+          <pre>shutdown() :: :brutal_kill | :infinity | non_neg_integer</pre>
         
       </div>
     
@@ -432,7 +432,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre><a href="#t:spec/0">spec</a> :: {<a href="#t:child_id/0">child_id</a>, start_fun :: {module, atom, [term]}, <a href="#t:restart/0">restart</a>, <a href="#t:shutdown/0">shutdown</a>, <a href="#t:worker/0">worker</a>, <a href="#t:modules/0">modules</a>}</pre>
+          <pre>spec() :: {<a href="#t:child_id/0">child_id</a>, start_fun :: {module, atom, [term]}, <a href="#t:restart/0">restart</a>, <a href="#t:shutdown/0">shutdown</a>, <a href="#t:worker/0">worker</a>, <a href="#t:modules/0">modules</a>}</pre>
         
       </div>
     
@@ -488,7 +488,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre><a href="#t:worker/0">worker</a> :: :worker | :supervisor</pre>
+          <pre>worker() :: :worker | :supervisor</pre>
         
       </div>
     
@@ -527,7 +527,7 @@ with the given arguments</p>
     
       <div class="specs">
         
-          <pre>supervise([<a href="#t:spec/0">spec</a>], strategy: <a href="#t:strategy/0">strategy</a>, max_restarts: non_neg_integer, max_seconds: non_neg_integer) :: {:ok, tuple}</pre>
+          <pre>supervise([<a href="#t:spec/0">spec</a>], [strategy: <a href="#t:strategy/0">strategy</a>, max_restarts: non_neg_integer, max_seconds: non_neg_integer]) :: {:ok, tuple}</pre>
         
       </div>
     
@@ -586,7 +586,7 @@ description of the available strategies.</p>
     
       <div class="specs">
         
-          <pre>supervisor(module, [term], restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>) :: <a href="#t:spec/0">spec</a></pre>
+          <pre>supervisor(module, [term], [restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>]) :: <a href="#t:spec/0">spec</a></pre>
         
       </div>
     
@@ -625,7 +625,7 @@ information on the options.</p>
     
       <div class="specs">
         
-          <pre>worker(module, [term], restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>) :: <a href="#t:spec/0">spec</a></pre>
+          <pre>worker(module, [term], [restart: <a href="#t:restart/0">restart</a>, shutdown: <a href="#t:shutdown/0">shutdown</a>, id: term, function: atom, modules: <a href="#t:modules/0">modules</a>]) :: <a href="#t:spec/0">spec</a></pre>
         
       </div>
     
