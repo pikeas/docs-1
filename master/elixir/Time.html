@@ -70,7 +70,7 @@
         Time
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L313" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L336" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -127,6 +127,15 @@ the ones in 3rd party calendar libraries.</p>
       <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compare/2">compare(time1, time2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Compares two <a href="Time.html#content"><code class="inline">Time</code></a> structs</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#from_erl/2">from_erl(arg, microsecond \\ {0, 0})</a>
   </div>
@@ -238,7 +247,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L341" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L364" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -268,7 +277,43 @@ the ones in 3rd party calendar libraries.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_erl/2">
+          <div class="detail" id="compare/2">
+  
+  <div class="detail-header">
+    <a href="#compare/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compare(time1, time2)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L615" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>compare(<a href="Time.html#t:t/0">Time.t</a>, <a href="Time.html#t:t/0">Time.t</a>) :: :lt | :eq | :gt</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Compares two <a href="Time.html#content"><code class="inline">Time</code></a> structs.</p>
+<p>Returns :gt if first time is later than the second
+and :lt for vice versa. If the two times are equal
+:eq is returned</p>
+<h2 id="compare/2-examples" class="section-heading">
+  <a href="#compare/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Time.compare(~T[16:04:16], ~T[16:04:28])
+:lt</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="from_erl/2">
   
     <span id="from_erl/1" />
   
@@ -278,7 +323,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">from_erl(arg, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L553" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L576" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -317,7 +362,7 @@ iex&gt; Time.from_erl({24, 30, 15})
     </a>
     <span class="signature">from_erl!(tuple, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L570" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L593" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -356,7 +401,7 @@ iex&gt; Time.from_erl!({24, 30, 15})
     </a>
     <span class="signature">from_iso8601(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L465" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L488" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -413,7 +458,7 @@ iex&gt; Time.from_iso8601(&quot;23:50:61&quot;)
     </a>
     <span class="signature">from_iso8601!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L498" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L521" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,7 +497,7 @@ iex&gt; Time.from_iso8601!(&quot;2015:01:23 23-50-07&quot;)
     </a>
     <span class="signature">new(hour, minute, second, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L393" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L416" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -507,7 +552,7 @@ iex&gt; Time.new(23, 59, 59, 1_000_000)
     </a>
     <span class="signature">to_erl(time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L538" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L561" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -542,7 +587,7 @@ only contain hours/minutes/seconds.</p>
     </a>
     <span class="signature">to_iso8601(time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L521" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L544" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -575,7 +620,7 @@ iex&gt; Time.to_iso8601(~T[23:00:13.001])
     </a>
     <span class="signature">to_string(time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L424" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L447" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -608,7 +653,7 @@ iex&gt; Time.to_string(~T[23:00:00.123456])
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L355" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L378" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

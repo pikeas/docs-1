@@ -70,7 +70,7 @@
         DateTime
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1057" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1135" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -133,6 +133,15 @@ similar functionality with time zone backing.</p>
       <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#compare/2">compare(datetime1, datetime2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Compares two <a href="DateTime.html#content"><code class="inline">DateTime</code></a> structs</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#from_naive/2">from_naive(naive_datetime, time_zone)</a>
   </div>
@@ -260,7 +269,7 @@ similar functionality with time zone backing.</p>
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1089" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1167" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -290,7 +299,51 @@ similar functionality with time zone backing.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_naive/2">
+          <div class="detail" id="compare/2">
+  
+  <div class="detail-header">
+    <a href="#compare/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compare(datetime1, datetime2)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1524" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>compare(<a href="DateTime.html#t:t/0">DateTime.t</a>, <a href="DateTime.html#t:t/0">DateTime.t</a>) :: :lt | :eq | :gt</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Compares two <a href="DateTime.html#content"><code class="inline">DateTime</code></a> structs.</p>
+<p>Returns :gt if first datetime is later than the second
+and :lt for vice versa. If the two datetimes are equal
+:eq is returned.</p>
+<p>Note that both utc and stc offsets will be taken into
+account when comparison is done.</p>
+<h2 id="compare/2-examples" class="section-heading">
+  <a href="#compare/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; dt1 = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;AMT&quot;,
+...&gt;                 hour: 23, minute: 0, second: 7, microsecond: {0, 0},
+...&gt;                 utc_offset: -14400, std_offset: 0, time_zone: &quot;America/Manaus&quot;}
+iex&gt; dt2 = %DateTime{year: 2000, month: 2, day: 29, zone_abbr: &quot;CET&quot;,
+...&gt;                 hour: 23, minute: 0, second: 7, microsecond: {0, 0},
+...&gt;                 utc_offset: 3600, std_offset: 0, time_zone: &quot;Europe/Warsaw&quot;}
+iex&gt; DateTime.compare(dt1, dt2)
+:gt</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="from_naive/2">
   
   <div class="detail-header">
     <a href="#from_naive/2" class="detail-link" title="Link to this function">
@@ -298,7 +351,7 @@ similar functionality with time zone backing.</p>
     </a>
     <span class="signature">from_naive(naive_datetime, time_zone)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1220" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1298" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -335,7 +388,7 @@ Currently it only supports “Etc/UTC” as timezone.</p>
     </a>
     <span class="signature">from_naive!(naive_datetime, time_zone)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1244" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1322" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -374,7 +427,7 @@ Currently it only supports “Etc/UTC” as timezone.</p>
     </a>
     <span class="signature">from_unix(integer, unit \\ :second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1152" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1230" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -435,7 +488,7 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     </a>
     <span class="signature">from_unix!(integer, unit \\ :second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1196" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1274" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -487,7 +540,7 @@ which is equivalent to “0000-01-01T00:00:00Z” or 0 gregorian seconds.</p>
     </a>
     <span class="signature">to_date(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1329" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1407" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -519,7 +572,7 @@ iex&gt; DateTime.to_date(dt)
     </a>
     <span class="signature">to_iso8601(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1386" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1464" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -571,7 +624,7 @@ iex&gt; DateTime.to_iso8601(dt)
     </a>
     <span class="signature">to_naive(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1308" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1386" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -603,7 +656,7 @@ iex&gt; DateTime.to_naive(dt)
     </a>
     <span class="signature">to_string(dt)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1414" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1492" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -647,7 +700,7 @@ iex&gt; DateTime.to_string(dt)
     </a>
     <span class="signature">to_time(date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1348" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1426" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -681,7 +734,7 @@ iex&gt; DateTime.to_time(dt)
     </a>
     <span class="signature">to_unix(datetime, unit \\ :second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1281" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1359" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -730,7 +783,7 @@ iex&gt; DateTime.to_unix(flamel)
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1186" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

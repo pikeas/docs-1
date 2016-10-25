@@ -128,6 +128,15 @@ the ones in 3rd party calendar libraries.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#compare/2">compare(date1, date2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Compares two <a href="Date.html#content"><code class="inline">Date</code></a> structs</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#from_erl/1">from_erl(arg)</a>
   </div>
   
@@ -268,7 +277,43 @@ the ones in 3rd party calendar libraries.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_erl/1">
+          <div class="detail" id="compare/2">
+  
+  <div class="detail-header">
+    <a href="#compare/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">compare(date1, date2)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L309" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>compare(<a href="Date.html#t:t/0">Date.t</a>, <a href="Date.html#t:t/0">Date.t</a>) :: :lt | :eq | :gt</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Compares two <a href="Date.html#content"><code class="inline">Date</code></a> structs.</p>
+<p>Returns :gt if first date is later than the second
+and :lt for vice versa. If the two dates are equal
+:eq is returned</p>
+<h2 id="compare/2-examples" class="section-heading">
+  <a href="#compare/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Date.compare(~D[2016-04-16], ~D[2016-04-28])
+:lt</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="from_erl/1">
   
   <div class="detail-header">
     <a href="#from_erl/1" class="detail-link" title="Link to this function">
