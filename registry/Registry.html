@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>Registry – Registry v0.1.0</title>
+    <title>Registry – Registry v0.2.0</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -26,7 +26,7 @@
         Registry
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.1.0
+        v0.2.0
       </h2>
     </div>
     
@@ -58,7 +58,7 @@
 
 
       <h1>
-        <small class="visible-xs">Registry v0.1.0</small>
+        <small class="visible-xs">Registry v0.2.0</small>
         Registry
         
         
@@ -70,7 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>A local, descentralized and scalable key-value process storage.</p>
+          <p>A local, decentralized and scalable key-value process storage.</p>
 <p>It allows developers to lookup one or more process with a given key.
 If the registry has <code class="inline">:unique</code> keys, a key points to 0 or 1 processes.
 If the registry allows <code class="inline">:duplicate</code> keys, a single key may point to 0,
@@ -235,7 +235,7 @@ for the given <code class="inline">registry</code></p>
     <a href="#info/2">info(registry, key)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Reads registry options given on <a href="#start_link/3"><code class="inline">start_link/3</code></a></p>
+    <div class="summary-synopsis"><p>Reads registry metadata given on <a href="#start_link/3"><code class="inline">start_link/3</code></a></p>
 </div>
   
 </div>
@@ -245,6 +245,24 @@ for the given <code class="inline">registry</code></p>
   </div>
   
     <div class="summary-synopsis"><p>Returns the known keys for the given <code class="inline">pid</code> in <code class="inline">registry</code> in no particular order</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#lookup/2">lookup(registry, key)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finds the <code class="inline">{pid, value}</code> pair for the given <code class="inline">key</code> in <code class="inline">registry</code> in no particular order</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#put_info/3">put_info(registry, key, value)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Stores registry metadata</p>
 </div>
   
 </div>
@@ -278,10 +296,10 @@ process in <code class="inline">registry</code></p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#whereis/2">whereis(registry, key)</a>
+    <a href="#update/3">update(registry, key, callback)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds the process for the given <code class="inline">key</code> in the unique <code class="inline">registry</code></p>
+    <div class="summary-synopsis"><p>Updates the value for <code class="inline">key</code> for the current process in the unique <code class="inline">registry</code></p>
 </div>
   
 </div>
@@ -426,7 +444,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">dispatch(registry, key, mfa_or_fun)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L224" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L272" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -444,18 +462,15 @@ process in <code class="inline">registry</code></p>
 for the given <code class="inline">registry</code>.</p>
 <p>The list of <code class="inline">entries</code> is a non-empty list of two-element tuples where
 the first element is the pid and the second element is the value
-associated to the pid.</p>
-<p>If the registry has unique keys, the callback function will be
-invoked only if it has a matching entry for key. The entries list
-will then contain a single element.</p>
-<p>If the registry has duplicate keys, the callback will be invoked
-per partition <strong>concurrently</strong>. The callback, however, won’t be
-invoked if there are no entries for that particular partition.</p>
+associated to the pid. If there are no entries for the given key,
+the callback is never invoked.</p>
+<p>If the registry is partitioned, the callback will be invoked for
+every partition that has matching entries <strong>concurrently</strong>.</p>
 <p>Keep in mind the <a href="#dispatch/3"><code class="inline">dispatch/3</code></a> function may return entries that have died
 but have not yet been removed from the table. If this can be an issue,
 consider explicitly checking if the process is alive in the entries
-table. Remember there are no guarantees though, after all, the
-process may also crash right after the <a href="http://elixir-lang.org/docs/stable/elixir/Process.html#alive?/1"><code class="inline">Process.alive?/1</code></a> check.</p>
+list. Remember there are no guarantees the process will remain alive, after
+all the process may also crash right after the <a href="http://elixir-lang.org/docs/stable/elixir/Process.html#alive?/1"><code class="inline">Process.alive?/1</code></a> check.</p>
 <p>See the module documentation for examples of using the <a href="#dispatch/3"><code class="inline">dispatch/3</code></a>
 function for building custom dispatching or a pubsub system.</p>
 
@@ -469,7 +484,7 @@ function for building custom dispatching or a pubsub system.</p>
     </a>
     <span class="signature">info(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L517" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L588" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -478,14 +493,14 @@ function for building custom dispatching or a pubsub system.</p>
       <div class="specs">
         
           <pre>info(<a href="#t:registry/0">registry</a>, info_key :: atom) ::
-  {info_key :: atom, info_value :: term} |
+  {:ok, info_value :: term} |
   :error</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Reads registry options given on <a href="#start_link/3"><code class="inline">start_link/3</code></a>.</p>
+    <p>Reads registry metadata given on <a href="#start_link/3"><code class="inline">start_link/3</code></a>.</p>
 <h2 id="info/2-examples" class="section-heading">
   <a href="#info/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
@@ -493,7 +508,7 @@ function for building custom dispatching or a pubsub system.</p>
 
 <pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.InfoDocTest, custom_key: &quot;custom_value&quot;)
 iex&gt; Registry.info(Registry.InfoDocTest, :custom_key)
-{:custom_key, &quot;custom_value&quot;}
+{:ok, &quot;custom_value&quot;}
 iex&gt; Registry.info(Registry.InfoDocTest, :unknown_key)
 :error</code></pre>
 
@@ -507,7 +522,7 @@ iex&gt; Registry.info(Registry.InfoDocTest, :unknown_key)
     </a>
     <span class="signature">keys(registry, pid)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L351" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L422" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -551,6 +566,99 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
 
   </section>
 </div>
+<div class="detail" id="lookup/2">
+  
+  <div class="detail-header">
+    <a href="#lookup/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">lookup(registry, key)</span>
+    
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L362" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>lookup(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>) :: [{pid, <a href="#t:value/0">value</a>}]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Finds the <code class="inline">{pid, value}</code> pair for the given <code class="inline">key</code> in <code class="inline">registry</code> in no particular order.</p>
+<p>The pid-value pair is only returned if the pid is alive. An empty list
+will be returned if there is no alive pid registered under this key.</p>
+<p>For unique registries, a single partition lookup is necessary. For
+duplicate registries, all partitions must be looked up.</p>
+<h2 id="lookup/2-examples" class="section-heading">
+  <a href="#lookup/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<p>In the example below we register the current process and look it up
+both from itself and other processes:</p>
+<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.UniqueLookupTest)
+iex&gt; Registry.lookup(Registry.UniqueLookupTest, &quot;hello&quot;)
+[]
+iex&gt; {:ok, _} = Registry.register(Registry.UniqueLookupTest, &quot;hello&quot;, :world)
+iex&gt; Registry.lookup(Registry.UniqueLookupTest, &quot;hello&quot;)
+[{self(), :world}]
+iex&gt; Task.async(fn -&gt; Registry.lookup(Registry.UniqueLookupTest, &quot;hello&quot;) end) |&gt; Task.await
+[{self(), :world}]</code></pre>
+<p>The same applies to duplicate registries:</p>
+<pre><code class="iex elixir">iex&gt; Registry.start_link(:duplicate, Registry.DuplicateLookupTest)
+iex&gt; Registry.lookup(Registry.DuplicateLookupTest, &quot;hello&quot;)
+[]
+iex&gt; {:ok, _} = Registry.register(Registry.DuplicateLookupTest, &quot;hello&quot;, :world)
+iex&gt; Registry.lookup(Registry.DuplicateLookupTest, &quot;hello&quot;)
+[{self(), :world}]
+iex&gt; {:ok, _} = Registry.register(Registry.DuplicateLookupTest, &quot;hello&quot;, :another)
+iex&gt; Enum.sort(Registry.lookup(Registry.DuplicateLookupTest, &quot;hello&quot;))
+[{self(), :another}, {self(), :world}]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="put_info/3">
+  
+  <div class="detail-header">
+    <a href="#put_info/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">put_info(registry, key, value)</span>
+    
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L615" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>put_info(<a href="#t:registry/0">registry</a>, info_key :: atom, info_value :: term) :: :ok</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Stores registry metadata.</p>
+<h2 id="put_info/3-examples" class="section-heading">
+  <a href="#put_info/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.InfoDocTest, custom_key: &quot;custom_value&quot;)
+iex&gt; Registry.info(Registry.InfoDocTest, :custom_key)
+{:ok, &quot;custom_value&quot;}
+iex&gt; Registry.put_info(Registry.InfoDocTest, :custom_key, &quot;new_value&quot;)
+:ok
+iex&gt; Registry.info(Registry.InfoDocTest, :custom_key)
+{:ok, &quot;new_value&quot;}</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="register/3">
   
   <div class="detail-header">
@@ -559,7 +667,7 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
     </a>
     <span class="signature">register(registry, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L464" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L535" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -618,7 +726,7 @@ iex&gt; Registry.keys(Registry.DuplicateRegisterTest, self())
     </a>
     <span class="signature">start_link(kind, registry, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L190" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L199" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -671,7 +779,7 @@ the following keys have meaning for the registry:</p>
     </a>
     <span class="signature">unregister(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L404" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L475" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -716,15 +824,15 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
 
   </section>
 </div>
-<div class="detail" id="whereis/2">
+<div class="detail" id="update/3">
   
   <div class="detail-header">
-    <a href="#whereis/2" class="detail-link" title="Link to this function">
+    <a href="#update/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">whereis(registry, key)</span>
+    <span class="signature">update(registry, key, callback)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L302" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L228" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -732,32 +840,31 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
     
       <div class="specs">
         
-          <pre>whereis(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>) :: {pid, <a href="#t:value/0">value</a>} | :error</pre>
+          <pre>update(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
+  {new_value :: term, old_value :: term} |
+  :error</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds the process for the given <code class="inline">key</code> in the unique <code class="inline">registry</code>.</p>
-<p>Returns <code class="inline">{pid, value}</code> if the registered <code class="inline">pid</code> is alive where
-<code class="inline">value</code> is the term associated to the pid on registration. Otherwise
-it returns <code class="inline">nil</code>.</p>
-<p><a href="http://elixir-lang.org/docs/stable/elixir/ArgumentError.html"><code class="inline">ArgumentError</code></a> will be raised if a non-unique registry is given.</p>
-<h2 id="whereis/2-examples" class="section-heading">
-  <a href="#whereis/2-examples" class="hover-link"><i class="icon-link"></i></a>
+    <p>Updates the value for <code class="inline">key</code> for the current process in the unique <code class="inline">registry</code>.</p>
+<p>Returns the <code class="inline">{old_value, new_value}</code> or <code class="inline">:error</code> if there
+is no such key assigned to the current process.</p>
+<p>If a non-unique registry is given, an error is raised.</p>
+<h2 id="update/3-examples" class="section-heading">
+  <a href="#update/3-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<p>In the example below we register the current process and look it up
-both from itself and other processes.</p>
-<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.WhereIsTest)
-iex&gt; Registry.whereis(Registry.WhereIsTest, &quot;hello&quot;)
-:error
-iex&gt; {:ok, _} = Registry.register(Registry.WhereIsTest, &quot;hello&quot;, :world)
-iex&gt; Registry.whereis(Registry.WhereIsTest, &quot;hello&quot;)
-{self(), :world}
-iex&gt; Task.async(fn -&gt; Registry.whereis(Registry.WhereIsTest, &quot;hello&quot;) end) |&gt; Task.await
-{self(), :world}</code></pre>
+<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.UpdateTest)
+iex&gt; {:ok, _} = Registry.register(Registry.UpdateTest, &quot;hello&quot;, 1)
+iex&gt; Registry.lookup(Registry.UpdateTest, &quot;hello&quot;)
+[{self(), 1}]
+iex&gt; Registry.update(Registry.UpdateTest, &quot;hello&quot;, &amp; &amp;1 + 1)
+{2, 1}
+iex&gt; Registry.lookup(Registry.UpdateTest, &quot;hello&quot;)
+[{self(), 2}]</code></pre>
 
   </section>
 </div>
