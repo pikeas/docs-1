@@ -70,7 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>A local and scalable key-value process storage.</p>
+          <p>A local, descentralized and scalable key-value process storage.</p>
 <p>It allows developers to lookup one or more process with a given key.
 If the registry has <code class="inline">:unique</code> keys, a key points to 0 or 1 processes.
 If the registry allows <code class="inline">:duplicate</code> keys, a single key may point to 0,
@@ -90,8 +90,8 @@ environments with thousands or millions of entries.</p>
 </h2>
 
 <p>Once the registry is started with a given name, it can be used to
-register and access named processes using the <code class="inline">{:via, Registry, {name, key}}</code>
-tuple:</p>
+register and access named processes using the
+<code class="inline">{:via, Registry, {registry, key}}</code> tuple:</p>
 <pre><code class="iex elixir">iex&gt; {:ok, _} = Registry.start_link(:unique, Registry.ViaTest)
 iex&gt; name = {:via, Registry, {Registry.ViaTest, &quot;agent&quot;}}
 iex&gt; {:ok, _} = Agent.start_link(fn -&gt; 0 end, name: name)
@@ -139,7 +139,7 @@ process, instead of invoking a given module-function.</p>
 <p>In this example, we will also set the number of partitions to the
 number of schedulers online, which will make the registry more performant
 on highly concurrent environments and allowing dispatching to happen
-in parellel:</p>
+in parallel:</p>
 <pre><code class="iex elixir">iex&gt; {:ok, _} = Registry.start_link(:duplicate, Registry.PubSubTest,
 ...&gt;                                partitions: System.schedulers_online)
 iex&gt; {:ok, _} = Registry.register(Registry.PubSubTest, &quot;hello&quot;, [])
@@ -201,7 +201,7 @@ and <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:name/0">name()</a>
+    <a href="#t:registry/0">registry()</a>
   </div>
   
 </div>
@@ -222,17 +222,17 @@ and <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#dispatch/3">dispatch(name, key, mfa_or_fun)</a>
+    <a href="#dispatch/3">dispatch(registry, key, mfa_or_fun)</a>
   </div>
   
     <div class="summary-synopsis"><p>Invokes the callback with all entries under <code class="inline">key</code> in each partition
-for the <code class="inline">name</code> registry</p>
+for the given <code class="inline">registry</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#info/2">info(name, key)</a>
+    <a href="#info/2">info(registry, key)</a>
   </div>
   
     <div class="summary-synopsis"><p>Reads registry options given on <a href="#start_link/3"><code class="inline">start_link/3</code></a></p>
@@ -241,25 +241,25 @@ for the <code class="inline">name</code> registry</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#keys/2">keys(name, pid)</a>
+    <a href="#keys/2">keys(registry, pid)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the known keys for the given <code class="inline">pid</code> in <code class="inline">name</code> in no particular order</p>
+    <div class="summary-synopsis"><p>Returns the known keys for the given <code class="inline">pid</code> in <code class="inline">registry</code> in no particular order</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#register/3">register(name, key, value)</a>
+    <a href="#register/3">register(registry, key, value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Registers the current process under the given <code class="inline">key</code> in <code class="inline">name</code> registry</p>
+    <div class="summary-synopsis"><p>Registers the current process under the given <code class="inline">key</code> in <code class="inline">registry</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#start_link/3">start_link(kind, name, options \\ [])</a>
+    <a href="#start_link/3">start_link(kind, registry, options \\ [])</a>
   </div>
   
     <div class="summary-synopsis"><p>Starts the registry as a supervisor process</p>
@@ -268,19 +268,20 @@ for the <code class="inline">name</code> registry</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#unregister/2">unregister(name, key)</a>
+    <a href="#unregister/2">unregister(registry, key)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Unregisters the current process from the given <code class="inline">key</code> in <code class="inline">name</code> registry</p>
+    <div class="summary-synopsis"><p>Unregisters all entries for the given <code class="inline">key</code> associated to the current
+process in <code class="inline">registry</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#whereis/2">whereis(name, key)</a>
+    <a href="#whereis/2">whereis(registry, key)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds the process for the given <code class="inline">key</code> in the unique <code class="inline">name</code> registry</p>
+    <div class="summary-synopsis"><p>Finds the process for the given <code class="inline">key</code> in the unique <code class="inline">registry</code></p>
 </div>
   
 </div>
@@ -354,13 +355,13 @@ for the <code class="inline">name</code> registry</p>
     
   </section>
 </div>
-<div class="detail" id="t:name/0">
+<div class="detail" id="t:registry/0">
   
   <div class="detail-header">
-    <a href="#t:name/0" class="detail-link" title="Link to this type">
+    <a href="#t:registry/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">name()</span>
+    <span class="signature">registry()</span>
     
       <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L117" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -370,7 +371,7 @@ for the <code class="inline">name</code> registry</p>
     
       <div class="specs">
         
-          <pre><a href="#t:name/0">name</a> :: atom</pre>
+          <pre><a href="#t:registry/0">registry</a> :: atom</pre>
         
       </div>
     
@@ -423,7 +424,7 @@ for the <code class="inline">name</code> registry</p>
     <a href="#dispatch/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">dispatch(name, key, mfa_or_fun)</span>
+    <span class="signature">dispatch(registry, key, mfa_or_fun)</span>
     
       <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L224" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -433,14 +434,14 @@ for the <code class="inline">name</code> registry</p>
     
       <div class="specs">
         
-          <pre>dispatch(<a href="#t:name/0">name</a>, <a href="#t:key/0">key</a>, (entries :: [{pid, <a href="#t:value/0">value</a>}] -> term)) :: :ok</pre>
+          <pre>dispatch(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>, (entries :: [{pid, <a href="#t:value/0">value</a>}] -> term)) :: :ok</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Invokes the callback with all entries under <code class="inline">key</code> in each partition
-for the <code class="inline">name</code> registry.</p>
+for the given <code class="inline">registry</code>.</p>
 <p>The list of <code class="inline">entries</code> is a non-empty list of two-element tuples where
 the first element is the pid and the second element is the value
 associated to the pid.</p>
@@ -450,8 +451,8 @@ will then contain a single element.</p>
 <p>If the registry has duplicate keys, the callback will be invoked
 per partition <strong>concurrently</strong>. The callback, however, won’t be
 invoked if there are no entries for that particular partition.</p>
-<p>Keep in mind the <a href="#dispatch/3"><code class="inline">dispatch/3</code></a> function may return that have died
-but not yet removed from the table. If this can be of an issue,
+<p>Keep in mind the <a href="#dispatch/3"><code class="inline">dispatch/3</code></a> function may return entries that have died
+but have not yet been removed from the table. If this can be an issue,
 consider explicitly checking if the process is alive in the entries
 table. Remember there are no guarantees though, after all, the
 process may also crash right after the <a href="http://elixir-lang.org/docs/stable/elixir/Process.html#alive?/1"><code class="inline">Process.alive?/1</code></a> check.</p>
@@ -466,9 +467,9 @@ function for building custom dispatching or a pubsub system.</p>
     <a href="#info/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">info(name, key)</span>
+    <span class="signature">info(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L519" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L517" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -476,7 +477,7 @@ function for building custom dispatching or a pubsub system.</p>
     
       <div class="specs">
         
-          <pre>info(<a href="#t:name/0">name</a>, info_key :: atom) ::
+          <pre>info(<a href="#t:registry/0">registry</a>, info_key :: atom) ::
   {info_key :: atom, info_value :: term} |
   :error</pre>
         
@@ -504,7 +505,7 @@ iex&gt; Registry.info(Registry.InfoDocTest, :unknown_key)
     <a href="#keys/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">keys(name, pid)</span>
+    <span class="signature">keys(registry, pid)</span>
     
       <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L351" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -514,13 +515,13 @@ iex&gt; Registry.info(Registry.InfoDocTest, :unknown_key)
     
       <div class="specs">
         
-          <pre>keys(<a href="#t:name/0">name</a>, pid) :: [<a href="#t:key/0">key</a>]</pre>
+          <pre>keys(<a href="#t:registry/0">registry</a>, pid) :: [<a href="#t:key/0">key</a>]</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Returns the known keys for the given <code class="inline">pid</code> in <code class="inline">name</code> in no particular order.</p>
+    <p>Returns the known keys for the given <code class="inline">pid</code> in <code class="inline">registry</code> in no particular order.</p>
 <p>If the registry is unique, the keys are unique. Otherwise
 they may contain duplicates if the process was registered
 under the same key multiple times. The list will be empty
@@ -556,9 +557,9 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
     <a href="#register/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">register(name, key, value)</span>
+    <span class="signature">register(registry, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L466" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L464" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -566,7 +567,7 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
     
       <div class="specs">
         
-          <pre>register(<a href="#t:name/0">name</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) ::
+          <pre>register(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>, <a href="#t:value/0">value</a>) ::
   {:ok, pid} |
   {:error, {:already_registered, pid}}</pre>
         
@@ -574,7 +575,7 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
     
   </div>
   <section class="docstring">
-    <p>Registers the current process under the given <code class="inline">key</code> in <code class="inline">name</code> registry.</p>
+    <p>Registers the current process under the given <code class="inline">key</code> in <code class="inline">registry</code>.</p>
 <p>A value to be associated with this registration must also be given.
 This value will be retrieved whenever dispatching or doing a key
 lookup.</p>
@@ -615,7 +616,7 @@ iex&gt; Registry.keys(Registry.DuplicateRegisterTest, self())
     <a href="#start_link/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">start_link(kind, name, options \\ [])</span>
+    <span class="signature">start_link(kind, registry, options \\ [])</span>
     
       <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L190" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -625,7 +626,7 @@ iex&gt; Registry.keys(Registry.DuplicateRegisterTest, self())
     
       <div class="specs">
         
-          <pre>start_link(<a href="#t:kind/0">kind</a>, <a href="#t:name/0">name</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) ::
+          <pre>start_link(<a href="#t:kind/0">kind</a>, <a href="#t:registry/0">registry</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) ::
   {:ok, pid} |
   {:error, term}</pre>
         
@@ -668,9 +669,9 @@ the following keys have meaning for the registry:</p>
     <a href="#unregister/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">unregister(name, key)</span>
+    <span class="signature">unregister(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L406" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L404" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -678,23 +679,22 @@ the following keys have meaning for the registry:</p>
     
       <div class="specs">
         
-          <pre>unregister(<a href="#t:name/0">name</a>, <a href="#t:key/0">key</a>) :: :ok</pre>
+          <pre>unregister(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>) :: :ok</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Unregisters the current process from the given <code class="inline">key</code> in <code class="inline">name</code> registry.</p>
+    <p>Unregisters all entries for the given <code class="inline">key</code> associated to the current
+process in <code class="inline">registry</code>.</p>
 <p>Always returns <code class="inline">:ok</code> and automatically unlinks the current process from
 the owner if there are no more keys associated to the current process.</p>
-<p>If the registry allows duplicated keys, all <code class="inline">key</code> entries will be removed
-on unregister.</p>
 <h2 id="unregister/2-examples" class="section-heading">
   <a href="#unregister/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<p>For unique registries:</p>
+<p>It unregister all entries for <code class="inline">key</code> for unique registries:</p>
 <pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.UniqueUnregisterTest)
 iex&gt; Registry.register(Registry.UniqueUnregisterTest, &quot;hello&quot;, :world)
 iex&gt; Registry.keys(Registry.UniqueUnregisterTest, self())
@@ -703,7 +703,7 @@ iex&gt; Registry.unregister(Registry.UniqueUnregisterTest, &quot;hello&quot;)
 :ok
 iex&gt; Registry.keys(Registry.UniqueUnregisterTest, self())
 []</code></pre>
-<p>For duplicate registries:</p>
+<p>As well as duplicate registries:</p>
 <pre><code class="iex elixir">iex&gt; Registry.start_link(:duplicate, Registry.DuplicateUnregisterTest)
 iex&gt; Registry.register(Registry.DuplicateUnregisterTest, &quot;hello&quot;, :world)
 iex&gt; Registry.register(Registry.DuplicateUnregisterTest, &quot;hello&quot;, :world)
@@ -722,7 +722,7 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
     <a href="#whereis/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">whereis(name, key)</span>
+    <span class="signature">whereis(registry, key)</span>
     
       <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L302" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -732,17 +732,17 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
     
       <div class="specs">
         
-          <pre>whereis(<a href="#t:name/0">name</a>, <a href="#t:key/0">key</a>) :: {pid, <a href="#t:value/0">value</a>} | :error</pre>
+          <pre>whereis(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>) :: {pid, <a href="#t:value/0">value</a>} | :error</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds the process for the given <code class="inline">key</code> in the unique <code class="inline">name</code> registry.</p>
+    <p>Finds the process for the given <code class="inline">key</code> in the unique <code class="inline">registry</code>.</p>
 <p>Returns <code class="inline">{pid, value}</code> if the registered <code class="inline">pid</code> is alive where
 <code class="inline">value</code> is the term associated to the pid on registration. Otherwise
 it returns <code class="inline">nil</code>.</p>
-<p><a href="http://elixir-lang.org/docs/stable/elixir/ArgumentError.html"><code class="inline">ArgumentError</code></a> will be raised if a non-unique registry name is given.</p>
+<p><a href="http://elixir-lang.org/docs/stable/elixir/ArgumentError.html"><code class="inline">ArgumentError</code></a> will be raised if a non-unique registry is given.</p>
 <h2 id="whereis/2-examples" class="section-heading">
   <a href="#whereis/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
