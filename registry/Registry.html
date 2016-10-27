@@ -128,9 +128,29 @@ requested key, as well as the pid of the process that registered that value,
 in the form of a tuple matching <code class="inline">{pid, value}</code>.  In the example above the
 value registered is a <code class="inline">{module, function}</code> tuple, allowing each entry to be
 invoked by the calling process.</p>
-<p>Keep in mind dispatching happens in the process that calls <a href="#dispatch/3"><code class="inline">dispatch/3</code></a>,
-registered processes are not involved in dispatching unless they are
-explicitly sent messages to. That’s the example we will see next.</p>
+<p>Keep in mind dispatching happens in the process that calls <a href="#dispatch/3"><code class="inline">dispatch/3</code></a>.
+The registered processes are not involved in dispatching unless such is
+done explicitly. In the example, if there is a failure when dispatching,
+due to a bad registration, dispatching will always fail. Let’s fix that
+by wrapping and reporting errors:</p>
+<pre><code class="iex elixir">iex&gt; require Logger
+iex&gt; {:ok, _} = Registry.start_link(:duplicate, Registry.DispatcherTest)
+iex&gt; {:ok, _} = Registry.register(Registry.DispatcherTest, &quot;hello&quot;, {IO, :inspect})
+iex&gt; Registry.dispatch(Registry.DispatcherTest, &quot;hello&quot;, fn entries -&gt;
+...&gt;   for {pid, {module, function}} &lt;- entries do
+...&gt;     try do
+...&gt;       apply(module, function, [pid])
+...&gt;     catch
+...&gt;       kind, reason -&gt;
+...&gt;         formatted = Exception.format(kind, reason, System.stacktrace)
+...&gt;         Logger.error &quot;Registry.dispatch/3 failed with #{formatted}&quot;
+...&gt;     end
+...&gt;   end
+...&gt; end)
+# Prints #PID&lt;...&gt;
+:ok</code></pre>
+<p>You could also replace the whole <code class="inline">apply</code> system by  explicitly sending
+messages. That’s the example we will see next.</p>
 <h2 id="module-using-as-a-pubsub" class="section-heading">
   <a href="#module-using-as-a-pubsub" class="hover-link"><i class="icon-link"></i></a>
   Using as a PubSub
@@ -335,7 +355,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">key()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -360,7 +380,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">kind()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L146" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -385,7 +405,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">registry()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L123" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L145" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -410,7 +430,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">value()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L126" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L148" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -448,7 +468,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">dispatch(registry, key, mfa_or_fun)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L290" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L312" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -488,7 +508,7 @@ function for building custom dispatching or a pubsub system.</p>
     </a>
     <span class="signature">keys(registry, pid)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L440" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L452" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -540,7 +560,7 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
     </a>
     <span class="signature">lookup(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L380" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L395" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -595,7 +615,7 @@ iex&gt; Enum.sort(Registry.lookup(Registry.DuplicateLookupTest, &quot;hello&quot
     </a>
     <span class="signature">meta(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L620" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L623" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -633,7 +653,7 @@ iex&gt; Registry.meta(Registry.InfoDocTest, :unknown_key)
     </a>
     <span class="signature">put_meta(registry, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L648" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L651" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -671,7 +691,7 @@ iex&gt; Registry.meta(Registry.InfoDocTest, :custom_key)
     </a>
     <span class="signature">register(registry, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L555" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L559" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -730,7 +750,7 @@ iex&gt; Registry.keys(Registry.DuplicateRegisterTest, self())
     </a>
     <span class="signature">start_link(kind, registry, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L227" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -769,7 +789,8 @@ per partition.</p>
 <li><code class="inline">:partitions</code> - the number of partitions in the registry. Defaults to 1.
 </li>
 <li><code class="inline">:listeners</code> - a list of named processes which are notified of <code class="inline">:register</code>
-and <code class="inline">:unregister</code> events
+and <code class="inline">:unregister</code> events. The registered process must be monitored by the
+listener if it wants to be notified of crashes.
 </li>
 <li><code class="inline">:meta</code> - a keyword list of metadata to be attached to the registry.
 </li>
@@ -785,7 +806,7 @@ and <code class="inline">:unregister</code> events
     </a>
     <span class="signature">unregister(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L493" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L498" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -838,7 +859,7 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
     </a>
     <span class="signature">update(registry, key, callback)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L246" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L269" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
