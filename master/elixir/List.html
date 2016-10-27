@@ -347,6 +347,15 @@ given <code class="inline">key</code>, as well as the <code class="inline">list<
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#myers_difference/2">myers_difference(list1, list2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a keyword list that represents an <em>edit script</em></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#pop_at/3">pop_at(list, index, default \\ nil)</a>
   </div>
   
@@ -1128,6 +1137,49 @@ iex&gt; List.last([1])
 
 iex&gt; List.last([1, 2, 3])
 3</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="myers_difference/2">
+  
+  <div class="detail-header">
+    <a href="#myers_difference/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">myers_difference(list1, list2)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/list.ex#L755" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>myers_difference(list, list) ::
+  [{:eq | :ins | :del, list}] |
+  nil</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a keyword list that represents an <em>edit script</em>.</p>
+<p>The algorithm is outlined in the
+“An O(ND) Difference Algorithm and Its Variations” paper by E. Myers.</p>
+<p>An <em>edit script</em> is a keyword list. Each key describes the “editing action” to
+take in order to bring <code class="inline">list1</code> closer to being equal to <code class="inline">list2</code>; a key can be
+<code class="inline">:eq</code>, <code class="inline">:ins</code>, or <code class="inline">:del</code>. Each value is a sublist of either <code class="inline">list1</code> or <code class="inline">list2</code>
+that should be inserted (if the corresponding key <code class="inline">:ins</code>), deleted (if the
+corresponding key is <code class="inline">:del</code>), or left alone (if the corresponding key is
+<code class="inline">:eq</code>) in <code class="inline">list1</code> in order to be closer to <code class="inline">list2</code>.</p>
+<h2 id="myers_difference/2-examples" class="section-heading">
+  <a href="#myers_difference/2-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="iex elixir">iex&gt; List.myers_difference([1, 4, 2, 3], [1, 2, 3, 4])
+[eq: [1], del: [4], eq: [2, 3], ins: [4]]</code></pre>
 
   </section>
 </div>
