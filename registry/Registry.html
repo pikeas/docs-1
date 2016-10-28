@@ -77,7 +77,8 @@ If the registry allows <code class="inline">:duplicate</code> keys, a single key
 1 or many processes. In both cases, a process may have multiple keys.</p>
 <p>Each entry in the registry is associated to the process that has
 registered the key. If the process crashes, the keys associated to that
-process are automatically removed.</p>
+process are automatically removed. All key operations on the registry
+are done using the match operation (<code class="inline">===</code>).</p>
 <p>The registry can be used for name lookups, using the <code class="inline">:via</code> option,
 for storing properties, for custom dispatching rules as well as a
 pubsub implementation. We explore those scenarios below.</p>
@@ -216,11 +217,35 @@ and <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code
     <a href="#t:key/0">key()</a>
   </div>
   
+    <div class="summary-synopsis"><p>The type of keys allowed on registration</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#t:kind/0">kind()</a>
   </div>
+  
+    <div class="summary-synopsis"><p>The type of the registry</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:meta_key/0">meta_key()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The type of registry metadata keys</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:meta_value/0">meta_value()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>The type of registry metadata values</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -228,11 +253,17 @@ and <a href="http://elixir-lang.org/docs/stable/elixir/Kernel.html#send/2"><code
     <a href="#t:registry/0">registry()</a>
   </div>
   
+    <div class="summary-synopsis"><p>The registry identifier</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#t:value/0">value()</a>
   </div>
+  
+    <div class="summary-synopsis"><p>The type of values allowed on registration</p>
+</div>
   
 </div>
 
@@ -320,7 +351,7 @@ process in <code class="inline">registry</code></p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update/3">update(registry, key, callback)</a>
+    <a href="#update_value/3">update_value(registry, key, callback)</a>
   </div>
   
     <div class="summary-synopsis"><p>Updates the value for <code class="inline">key</code> for the current process in the unique <code class="inline">registry</code></p>
@@ -355,7 +386,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">key()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L147" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L153" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -369,7 +400,8 @@ process in <code class="inline">registry</code></p>
     
   </div>
   <section class="docstring">
-    
+    <p>The type of keys allowed on registration</p>
+
   </section>
 </div>
 <div class="detail" id="t:kind/0">
@@ -380,7 +412,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">kind()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L150" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -394,7 +426,60 @@ process in <code class="inline">registry</code></p>
     
   </div>
   <section class="docstring">
+    <p>The type of the registry</p>
+
+  </section>
+</div>
+<div class="detail" id="t:meta_key/0">
+  
+  <div class="detail-header">
+    <a href="#t:meta_key/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">meta_key()</span>
     
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L159" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:meta_key/0">meta_key</a> :: atom | tuple</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The type of registry metadata keys</p>
+
+  </section>
+</div>
+<div class="detail" id="t:meta_value/0">
+  
+  <div class="detail-header">
+    <a href="#t:meta_value/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">meta_value()</span>
+    
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L162" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:meta_value/0">meta_value</a> :: term</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>The type of registry metadata values</p>
+
   </section>
 </div>
 <div class="detail" id="t:registry/0">
@@ -405,7 +490,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">registry()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L145" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L147" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -419,7 +504,8 @@ process in <code class="inline">registry</code></p>
     
   </div>
   <section class="docstring">
-    
+    <p>The registry identifier</p>
+
   </section>
 </div>
 <div class="detail" id="t:value/0">
@@ -430,7 +516,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">value()</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L156" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -444,7 +530,8 @@ process in <code class="inline">registry</code></p>
     
   </div>
   <section class="docstring">
-    
+    <p>The type of values allowed on registration</p>
+
   </section>
 </div>
 
@@ -468,7 +555,7 @@ process in <code class="inline">registry</code></p>
     </a>
     <span class="signature">dispatch(registry, key, mfa_or_fun)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L312" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L327" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -508,7 +595,7 @@ function for building custom dispatching or a pubsub system.</p>
     </a>
     <span class="signature">keys(registry, pid)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L452" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L467" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -560,7 +647,7 @@ iex&gt; Registry.keys(Registry.DuplicateKeysTest, self())
     </a>
     <span class="signature">lookup(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L395" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L410" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -615,7 +702,7 @@ iex&gt; Enum.sort(Registry.lookup(Registry.DuplicateLookupTest, &quot;hello&quot
     </a>
     <span class="signature">meta(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L623" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L640" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -623,24 +710,23 @@ iex&gt; Enum.sort(Registry.lookup(Registry.DuplicateLookupTest, &quot;hello&quot
     
       <div class="specs">
         
-          <pre>meta(<a href="#t:registry/0">registry</a>, meta_key :: atom) ::
-  {:ok, meta_value :: term} |
-  :error</pre>
+          <pre>meta(<a href="#t:registry/0">registry</a>, <a href="#t:meta_key/0">meta_key</a>) :: {:ok, <a href="#t:meta_value/0">meta_value</a>} | :error</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Reads registry metadata given on <a href="#start_link/3"><code class="inline">start_link/3</code></a>.</p>
+<p>Atoms and tuples are allowed as keys.</p>
 <h2 id="meta/2-examples" class="section-heading">
   <a href="#meta/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.InfoDocTest, meta: [custom_key: &quot;custom_value&quot;])
-iex&gt; Registry.meta(Registry.InfoDocTest, :custom_key)
+<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.MetaTest, meta: [custom_key: &quot;custom_value&quot;])
+iex&gt; Registry.meta(Registry.MetaTest, :custom_key)
 {:ok, &quot;custom_value&quot;}
-iex&gt; Registry.meta(Registry.InfoDocTest, :unknown_key)
+iex&gt; Registry.meta(Registry.MetaTest, :unknown_key)
 :error</code></pre>
 
   </section>
@@ -653,7 +739,7 @@ iex&gt; Registry.meta(Registry.InfoDocTest, :unknown_key)
     </a>
     <span class="signature">put_meta(registry, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L651" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L671" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -661,25 +747,28 @@ iex&gt; Registry.meta(Registry.InfoDocTest, :unknown_key)
     
       <div class="specs">
         
-          <pre>put_meta(<a href="#t:registry/0">registry</a>, meta_key :: atom, meta_value :: term) :: :ok</pre>
+          <pre>put_meta(<a href="#t:registry/0">registry</a>, <a href="#t:meta_key/0">meta_key</a>, <a href="#t:meta_value/0">meta_value</a>) :: :ok</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Stores registry metadata.</p>
-<p>It is not possible to update the values for registry own’s metadata,
-such as <code class="inline">:partitions</code> and <code class="inline">:listeners</code>.</p>
+<p>Atoms and tuples are allowed as keys.</p>
 <h2 id="put_meta/3-examples" class="section-heading">
   <a href="#put_meta/3-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.InfoDocTest)
-iex&gt; Registry.put_meta(Registry.InfoDocTest, :custom_key, &quot;custom_value&quot;)
+<pre><code class="iex elixir">iex&gt; Registry.start_link(:unique, Registry.PutMetaTest)
+iex&gt; Registry.put_meta(Registry.PutMetaTest, :custom_key, &quot;custom_value&quot;)
 :ok
-iex&gt; Registry.meta(Registry.InfoDocTest, :custom_key)
-{:ok, &quot;custom_value&quot;}</code></pre>
+iex&gt; Registry.meta(Registry.PutMetaTest, :custom_key)
+{:ok, &quot;custom_value&quot;}
+iex&gt; Registry.put_meta(Registry.PutMetaTest, {:tuple, :key}, &quot;tuple_value&quot;)
+:ok
+iex&gt; Registry.meta(Registry.PutMetaTest, {:tuple, :key})
+{:ok, &quot;tuple_value&quot;}</code></pre>
 
   </section>
 </div>
@@ -691,7 +780,7 @@ iex&gt; Registry.meta(Registry.InfoDocTest, :custom_key)
     </a>
     <span class="signature">register(registry, key, value)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L559" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L574" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -750,7 +839,7 @@ iex&gt; Registry.keys(Registry.DuplicateRegisterTest, self())
     </a>
     <span class="signature">start_link(kind, registry, options \\ [])</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L227" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L242" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -758,9 +847,9 @@ iex&gt; Registry.keys(Registry.DuplicateRegisterTest, self())
     
       <div class="specs">
         
-          <pre>start_link(<a href="#t:kind/0">kind</a>, <a href="#t:registry/0">registry</a>, <a href="http://elixir-lang.org/docs/stable/elixir/Keyword.html#t:t/0">Keyword.t</a>) ::
+          <pre>start_link(<a href="#t:kind/0">kind</a>, <a href="#t:registry/0">registry</a>, options) ::
   {:ok, pid} |
-  {:error, term}</pre>
+  {:error, term} when options: [partitions: pos_integer, listeners: [atom], meta: [{<a href="#t:meta_key/0">meta_key</a>, <a href="#t:meta_value/0">meta_value</a>}]]</pre>
         
       </div>
     
@@ -806,7 +895,7 @@ listener if it wants to be notified of crashes.
     </a>
     <span class="signature">unregister(registry, key)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L498" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L513" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -851,15 +940,15 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
 
   </section>
 </div>
-<div class="detail" id="update/3">
+<div class="detail" id="update_value/3">
   
   <div class="detail-header">
-    <a href="#update/3" class="detail-link" title="Link to this function">
+    <a href="#update_value/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">update(registry, key, callback)</span>
+    <span class="signature">update_value(registry, key, callback)</span>
     
-      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L269" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/registry/blob/master/lib/registry.ex#L284" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -867,7 +956,7 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
     
       <div class="specs">
         
-          <pre>update(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
+          <pre>update_value(<a href="#t:registry/0">registry</a>, <a href="#t:key/0">key</a>, (<a href="#t:value/0">value</a> -> <a href="#t:value/0">value</a>)) ::
   {new_value :: term, old_value :: term} |
   :error</pre>
         
@@ -879,8 +968,8 @@ iex&gt; Registry.keys(Registry.DuplicateUnregisterTest, self())
 <p>Returns the <code class="inline">{old_value, new_value}</code> or <code class="inline">:error</code> if there
 is no such key assigned to the current process.</p>
 <p>If a non-unique registry is given, an error is raised.</p>
-<h2 id="update/3-examples" class="section-heading">
-  <a href="#update/3-examples" class="hover-link"><i class="icon-link"></i></a>
+<h2 id="update_value/3-examples" class="section-heading">
+  <a href="#update_value/3-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
@@ -888,7 +977,7 @@ is no such key assigned to the current process.</p>
 iex&gt; {:ok, _} = Registry.register(Registry.UpdateTest, &quot;hello&quot;, 1)
 iex&gt; Registry.lookup(Registry.UpdateTest, &quot;hello&quot;)
 [{self(), 1}]
-iex&gt; Registry.update(Registry.UpdateTest, &quot;hello&quot;, &amp; &amp;1 + 1)
+iex&gt; Registry.update_value(Registry.UpdateTest, &quot;hello&quot;, &amp; &amp;1 + 1)
 {2, 1}
 iex&gt; Registry.lookup(Registry.UpdateTest, &quot;hello&quot;)
 [{self(), 2}]</code></pre>
