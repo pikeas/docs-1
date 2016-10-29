@@ -309,7 +309,7 @@ is generated at runtime and does not survive compile term.</p>
     <a href="#at/2">at(string, position)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the grapheme at the <code class="inline">position</code> of the given utf8 <code class="inline">string</code>.
+    <div class="summary-synopsis"><p>Returns the grapheme at the <code class="inline">position</code> of the given UTF-8 <code class="inline">string</code>.
 If <code class="inline">position</code> is greater than <code class="inline">string</code> length, then it returns <code class="inline">nil</code></p>
 </div>
   
@@ -392,7 +392,7 @@ uppercase and the remainder to lowercase</p>
     <a href="#first/1">first(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the first grapheme from a utf8 string,
+    <div class="summary-synopsis"><p>Returns the first grapheme from a UTF-8 string,
 <code class="inline">nil</code> if the string is empty</p>
 </div>
   
@@ -423,7 +423,7 @@ distance between <code class="inline">string1</code> and <code class="inline">st
     <a href="#last/1">last(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the last grapheme from a utf8 string,
+    <div class="summary-synopsis"><p>Returns the last grapheme from a UTF-8 string,
 <code class="inline">nil</code> if the string is empty</p>
 </div>
   
@@ -433,7 +433,7 @@ distance between <code class="inline">string1</code> and <code class="inline">st
     <a href="#length/1">length(string)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns the number of Unicode graphemes in a utf8 string</p>
+    <div class="summary-synopsis"><p>Returns the number of Unicode graphemes in a UTF-8 string</p>
 </div>
   
 </div>
@@ -930,7 +930,7 @@ has been removed</p>
     
   </div>
   <section class="docstring">
-    <p>Returns the grapheme at the <code class="inline">position</code> of the given utf8 <code class="inline">string</code>.
+    <p>Returns the grapheme at the <code class="inline">position</code> of the given UTF-8 <code class="inline">string</code>.
 If <code class="inline">position</code> is greater than <code class="inline">string</code> length, then it returns <code class="inline">nil</code>.</p>
 <h2 id="at/2-examples" class="section-heading">
   <a href="#at/2-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -1333,7 +1333,7 @@ false</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Returns the first grapheme from a utf8 string,
+    <p>Returns the first grapheme from a UTF-8 string,
 <code class="inline">nil</code> if the string is empty.</p>
 <h2 id="first/1-examples" class="section-heading">
   <a href="#first/1-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -1451,7 +1451,7 @@ iex&gt; String.jaro_distance(&quot;even&quot;, &quot;odd&quot;)
     
   </div>
   <section class="docstring">
-    <p>Returns the last grapheme from a utf8 string,
+    <p>Returns the last grapheme from a UTF-8 string,
 <code class="inline">nil</code> if the string is empty.</p>
 <h2 id="last/1-examples" class="section-heading">
   <a href="#last/1-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -1488,7 +1488,7 @@ iex&gt; String.last(&quot;եոգլի&quot;)
     
   </div>
   <section class="docstring">
-    <p>Returns the number of Unicode graphemes in a utf8 string.</p>
+    <p>Returns the number of Unicode graphemes in a UTF-8 string.</p>
 <h2 id="length/1-examples" class="section-heading">
   <a href="#length/1-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples

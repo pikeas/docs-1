@@ -99,35 +99,38 @@
 <pre><code class="elixir">type :: any()                   # the top type, the set of all terms
       | none()                  # the bottom type, contains no terms
       | atom()
-      | float()
-      | integer()
-      | neg_integer()           # ..., -3, -2, -1
-      | non_neg_integer()       # 0, 1, 2, 3, ...
-      | pos_integer()           # 1, 2, 3, ...
-      | list(type)
-      | nonempty_list(type)
-      | improper_list(type1, type2)
-      | maybe_improper_list(type1, type2)
       | map()                   # any map
       | pid()
       | port()
       | reference()
       | struct()                # any struct
-      | tuple()
+      | tuple()                 # tuple of any size
+
+                                ## Numbers
+      | float()                 # float
+      | integer()               # integer
+      | neg_integer()           # ..., -3, -2, -1
+      | non_neg_integer()       # 0, 1, 2, 3, ...
+      | pos_integer()           # 1, 2, 3, ...
+
+                                                    ## Lists
+      | list(type)                                  # proper list ([]-terminated)
+      | nonempty_list(type)                         # non-empty proper list
+      | maybe_improper_list(type1, type2)           # proper or improper list
+      | nonempty_improper_list(type1, type2)        # improper list
+      | nonempty_maybe_improper_list(type1, type2)  # non-empty proper or improper list
+
       | Literals                # Described in section &quot;Literals&quot;
       | Builtin                 # Described in section &quot;Built-in types&quot;
       | Remotes                 # Described in section &quot;Remote types&quot;</code></pre>
 <h3>Literals</h3>
 <p>The following literals are also supported in typespecs:</p>
 <pre><code class="elixir">type :: :atom                         ## Atoms
-      | 1.0                           ## Floats
-      | 1                             ## Integers
-      | 1..10                         ## Integers from 1 to 10
 
                                       ## Bitstrings
       | &lt;&lt;&gt;&gt;                          # empty bitstring
       | &lt;&lt;_::size&gt;&gt;                   # size is 0 or a positive integer
-      | &lt;&lt;_::_ * unit&gt;&gt;               # unit is an integer from 1 to 256
+      | &lt;&lt;_::_*unit&gt;&gt;                 # unit is an integer from 1 to 256
       | &lt;&lt;_::size, _::_*unit&gt;&gt;
 
                                       ## Functions
@@ -135,21 +138,24 @@
       | (() -&gt; type)                  # 0-arity, returns type
       | (type1, type2 -&gt; type)        # 2-arity, returns type
 
+                                      ## Integers
+      | 1                             # integer
+      | 1..10                         # integer from 1 to 10
+
                                       ## Lists
       | [type]                        # list with any number of type elements
       | []                            # empty list
       | [...]                         # shorthand for nonempty_list(any())
       | [type, ...]                   # shorthand for nonempty_list(type)
-      | [key: type]                   # keyword lists
+      | [key: value_type]             # keyword list with key :key of value_type
 
-                                      ## Maps
-      | %{}                           # empty map
-      | %{...}                        # any map
-      | %{key: type}                  # map with required key :key with value of type
-      | %{required(type1) =&gt; type2}   # map with required keys of type1 with values of type2
-      | %{optional(type1) =&gt; type2}   # map with optional keys of type1 with values of type2
-      | %SomeStruct{}                 # struct with all fields of any type
-      | %SomeStruct{key: type}        # struct with :key field of type
+                                              ## Maps
+      | %{}                                   # empty map
+      | %{key: value_type}                    # map with required key :key of value_type
+      | %{required(key_type) =&gt; value_type}   # map with required pairs of key_type and value_type
+      | %{optional(key_type) =&gt; value_type}   # map with optional pairs of key_type and value_type
+      | %SomeStruct{}                         # struct with all fields of any type
+      | %SomeStruct{key: value_type}          # struct with required key :key and type
 
                                       ## Tuples
       | {}                            # empty tuple
@@ -176,10 +182,10 @@
 <td style="text-align: left"><code class="inline">as_boolean(t)</code></td><td style="text-align: left"><code class="inline">t</code></td>
 </tr>
 <tr>
-<td style="text-align: left"><code class="inline">binary()</code></td><td style="text-align: left"><code class="inline">&lt;&lt;_::_ * 8&gt;&gt;</code></td>
+<td style="text-align: left"><code class="inline">binary()</code></td><td style="text-align: left"><code class="inline">&lt;&lt;_::_*8&gt;&gt;</code></td>
 </tr>
 <tr>
-<td style="text-align: left"><code class="inline">bitstring()</code></td><td style="text-align: left"><code class="inline">&lt;&lt;_::_ * 1&gt;&gt;</code></td>
+<td style="text-align: left"><code class="inline">bitstring()</code></td><td style="text-align: left"><code class="inline">&lt;&lt;_::_*1&gt;&gt;</code></td>
 </tr>
 <tr>
 <td style="text-align: left"><code class="inline">boolean()</code></td><td style="text-align: left"><code class="inline">false</code> | <code class="inline">true</code></td>
@@ -221,6 +227,9 @@
 <td style="text-align: left"><code class="inline">maybe_improper_list()</code></td><td style="text-align: left"><code class="inline">maybe_improper_list(any(), any())</code></td>
 </tr>
 <tr>
+<td style="text-align: left"><code class="inline">nonempty_maybe_improper_list()</code></td><td style="text-align: left"><code class="inline">nonempty_maybe_improper_list(any(), any())</code></td>
+</tr>
+<tr>
 <td style="text-align: left"><code class="inline">mfa()</code></td><td style="text-align: left"><code class="inline">{module(), atom(), arity()}</code></td>
 </tr>
 <tr>
@@ -245,9 +254,11 @@
 <h3>Remote types</h3>
 <p>Any module is also able to define its own types and the modules in Elixir are no exception. For example, the <a href="Range.html"><code class="inline">Range</code></a> module defines a <code class="inline">t/0</code> type that represents a range: this type can be referred to as <a href="Range.html#t:t/0"><code class="inline">Range.t/0</code></a>. In a similar fashion, a string is <a href="String.html#t:t/0"><code class="inline">String.t/0</code></a>, any enumerable can be <a href="Enum.html#t:t/0"><code class="inline">Enum.t/0</code></a>, and so on.</p>
 <h3>Maps</h3>
-<p>The key types in maps are allowed to overlap, and if they do, the leftmost key takes precedence. A map value does not belong to this type if it contains a key that is not in the maps allowed keys.</p>
-<p>Because it is common to end a map type with <code class="inline">optional(any) =&gt; any</code> to denote that keys that do not belong to any other key in the map type are allowed, and may map to any value, the shorthand notation <code class="inline">...</code> is allowed as the last element of a map type.</p>
-<p>Notice that the syntactic representation of <code class="inline">map()</code> is <code class="inline">%{...}</code> (or <code class="inline">%{optional(any) =&gt; any}</code>), not <code class="inline">%{}</code>. The notation <code class="inline">%{}</code> specifies the singleton type for the empty map.</p>
+<p>The key types in maps are allowed to overlap, and if they do, the leftmost key takes precedence.
+A map value does not belong to this type if it contains a key that is not in the allowed map keys.</p>
+<p>If you want to denote that keys that were not previously defined in the map are allowed,
+it is common to end a map type with <code class="inline">optional(any) =&gt; any</code>.</p>
+<p>Notice that the syntactic representation of <code class="inline">map()</code> is <code class="inline">%{optional(any) =&gt; any}</code>, not <code class="inline">%{}</code>. The notation <code class="inline">%{}</code> specifies the singleton type for the empty map.</p>
 <h2 id="defining-a-type" class="section-heading">
   <a href="#defining-a-type" class="hover-link"><i class="icon-link"></i></a>
   Defining a type

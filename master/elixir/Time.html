@@ -285,7 +285,7 @@ the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">compare(time1, time2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L615" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L618" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -309,7 +309,9 @@ and :lt for vice versa. If the two times are equal
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Time.compare(~T[16:04:16], ~T[16:04:28])
-:lt</code></pre>
+:lt
+iex&gt; Time.compare(~T[16:04:16.01], ~T[16:04:16.001])
+:gt</code></pre>
 
   </section>
 </div>

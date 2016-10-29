@@ -70,7 +70,7 @@
         NaiveDateTime
         
         
-          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L642" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L645" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -301,7 +301,7 @@ as the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L681" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L684" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -341,7 +341,7 @@ as the ones in 3rd party calendar libraries.</p>
     </a>
     <span class="signature">add(naive_datetime, integer, unit \\ :second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L801" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L804" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -393,7 +393,7 @@ iex&gt; NaiveDateTime.add(~N[0000-01-01 00:00:00], 63579428950)
     </a>
     <span class="signature">compare(naive_datetime1, naive_datetime2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1091" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1096" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -417,7 +417,9 @@ are equal :eq is returned</p>
 </h2>
 
 <pre><code class="iex elixir">iex&gt; NaiveDateTime.compare(~N[2016-04-16 13:30:15], ~N[2016-04-28 16:19:25])
-:lt</code></pre>
+:lt
+iex&gt; NaiveDateTime.compare(~N[2016-04-16 13:30:15.1], ~N[2016-04-16 13:30:15.01])
+:gt</code></pre>
 
   </section>
 </div>
@@ -431,7 +433,7 @@ are equal :eq is returned</p>
     </a>
     <span class="signature">diff(naive_datetime1, naive_datetime2, unit \\ :second)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L834" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L837" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -474,7 +476,7 @@ iex&gt; NaiveDateTime.diff(~N[2014-10-02 00:29:10], ~N[0000-01-01 00:00:00])
     </a>
     <span class="signature">from_erl(arg, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1049" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1052" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -518,7 +520,7 @@ iex&gt; NaiveDateTime.from_erl({{2000, 13, 1},{13, 30, 15}})
     </a>
     <span class="signature">from_erl!(tuple, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1069" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1072" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -559,7 +561,7 @@ iex&gt; NaiveDateTime.from_erl!({{2000, 13, 1}, {13, 30, 15}})
     </a>
     <span class="signature">from_iso8601(arg)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L947" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L950" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -636,7 +638,7 @@ iex&gt; NaiveDateTime.from_iso8601(&quot;2015-01-23T23:50:07.123-24:00&quot;)
     </a>
     <span class="signature">from_iso8601!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L982" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L985" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -673,7 +675,7 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
     </a>
     <span class="signature">new(date, time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L764" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L767" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -708,7 +710,7 @@ iex&gt; NaiveDateTime.from_iso8601!(&quot;2015-01-23P23:50:07&quot;)
     </a>
     <span class="signature">new(year, month, day, hour, minute, second, microsecond \\ {0, 0})</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L748" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L751" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -769,7 +771,7 @@ iex&gt; NaiveDateTime.new(2000, 1, 1, 23, 59, 59, 1_000_000)
     </a>
     <span class="signature">to_date(naive_date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L855" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L858" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -798,7 +800,7 @@ data will be lost during the conversion.</p>
     </a>
     <span class="signature">to_erl(naive_date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1027" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1030" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -835,7 +837,7 @@ hour/minute/second.</p>
     </a>
     <span class="signature">to_iso8601(naive)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1008" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1011" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -870,7 +872,7 @@ iex&gt; NaiveDateTime.to_iso8601(~N[2000-02-28 23:00:13.001])
     </a>
     <span class="signature">to_string(naive)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L888" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L891" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -902,7 +904,7 @@ iex&gt; NaiveDateTime.to_string(~N[2000-02-28 23:00:13.001])
     </a>
     <span class="signature">to_time(naive_date_time)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L871" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L874" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -931,7 +933,7 @@ data will be lost during the conversion.</p>
     </a>
     <span class="signature">utc_now()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L701" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L704" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

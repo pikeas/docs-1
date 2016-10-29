@@ -249,7 +249,7 @@ end</code></pre>
     <a href="#all/0">all()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Accesses all the elements in a list</p>
+    <div class="summary-synopsis"><p>Returns a function that accesses all the elements in a list</p>
 </div>
   
 </div>
@@ -258,7 +258,7 @@ end</code></pre>
     <a href="#at/1">at(index)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Accesses the element at <code class="inline">index</code> (zero based) of a list</p>
+    <div class="summary-synopsis"><p>Returns a function that accesses the element at <code class="inline">index</code> (zero based) of a list</p>
 </div>
   
 </div>
@@ -267,7 +267,7 @@ end</code></pre>
     <a href="#elem/1">elem(index)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Accesses the element at the given index in a tuple</p>
+    <div class="summary-synopsis"><p>Returns a function that accesses the element at the given index in a tuple</p>
 </div>
   
 </div>
@@ -277,7 +277,7 @@ end</code></pre>
   </div>
   
     <div class="summary-synopsis"><p>Fetches the value for the given key in a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
 </div>
   
 </div>
@@ -287,7 +287,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
   </div>
   
     <div class="summary-synopsis"><p>Gets the value for the given key in a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
 </div>
   
 </div>
@@ -297,7 +297,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
   </div>
   
     <div class="summary-synopsis"><p>Gets and updates the given key in a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
 </div>
   
 </div>
@@ -306,7 +306,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
     <a href="#key/2">key(key, default \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Accesses the given key in a map/struct</p>
+    <div class="summary-synopsis"><p>Returns a function that accesses the given key in a map/struct</p>
 </div>
   
 </div>
@@ -315,7 +315,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
     <a href="#key!/1">key!(key)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Accesses the given key in a map/struct</p>
+    <div class="summary-synopsis"><p>Returns a function that accesses the given key in a map/struct</p>
 </div>
   
 </div>
@@ -325,7 +325,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
   </div>
   
     <div class="summary-synopsis"><p>Removes the entry with a given key from a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour)</p>
 </div>
   
 </div>
@@ -364,7 +364,7 @@ defaulting to <code class="inline">default</code> if not present</p>
     <a href="#c:get_and_update/3">get_and_update(term, key, list)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Invoked in order to access the value under <code class="inline">key</code> and updated it at the same time</p>
+    <div class="summary-synopsis"><p>Invoked in order to access the value under <code class="inline">key</code> and update it at the same time</p>
 </div>
   
 </div>
@@ -489,7 +489,7 @@ defaulting to <code class="inline">default</code> if not present</p>
     </a>
     <span class="signature">all()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L515" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L531" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -497,7 +497,9 @@ defaulting to <code class="inline">default</code> if not present</p>
     
   </div>
   <section class="docstring">
-    <p>Accesses all the elements in a list.</p>
+    <p>Returns a function that accesses all the elements in a list.</p>
+<p>The returned function is typically passed as an accessor to <a href="Kernel.html#get_in/2"><code class="inline">Kernel.get_in/2</code></a>,
+<a href="Kernel.html#get_and_update_in/3"><code class="inline">Kernel.get_and_update_in/3</code></a>, and friends.</p>
 <h2 id="all/0-examples" class="section-heading">
   <a href="#all/0-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
@@ -533,7 +535,7 @@ iex&gt; get_and_update_in([1, 2, 3, 4, 5], [Access.all], fn
     </a>
     <span class="signature">at(index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L584" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L603" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -541,7 +543,9 @@ iex&gt; get_and_update_in([1, 2, 3, 4, 5], [Access.all], fn
     
   </div>
   <section class="docstring">
-    <p>Accesses the element at <code class="inline">index</code> (zero based) of a list.</p>
+    <p>Returns a function that accesses the element at <code class="inline">index</code> (zero based) of a list.</p>
+<p>The returned function is typically passed as an accessor to <a href="Kernel.html#get_in/2"><code class="inline">Kernel.get_in/2</code></a>,
+<a href="Kernel.html#get_and_update_in/3"><code class="inline">Kernel.get_and_update_in/3</code></a>, and friends.</p>
 <h2 id="at/1-examples" class="section-heading">
   <a href="#at/1-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
@@ -586,7 +590,7 @@ iex&gt; get_and_update_in(list, [Access.at(10), :name], fn
     </a>
     <span class="signature">elem(index)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L468" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L481" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -594,7 +598,9 @@ iex&gt; get_and_update_in(list, [Access.at(10), :name], fn
     
   </div>
   <section class="docstring">
-    <p>Accesses the element at the given index in a tuple.</p>
+    <p>Returns a function that accesses the element at the given index in a tuple.</p>
+<p>The returned function is typically passed as an accessor to <a href="Kernel.html#get_in/2"><code class="inline">Kernel.get_in/2</code></a>,
+<a href="Kernel.html#get_and_update_in/3"><code class="inline">Kernel.get_and_update_in/3</code></a>, and friends.</p>
 <p>Raises if the index is out of bounds.</p>
 <h2 id="elem/1-examples" class="section-heading">
   <a href="#elem/1-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -624,7 +630,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
     </a>
     <span class="signature">fetch(container, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L233" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L237" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -639,7 +645,7 @@ iex&gt; pop_in(map, [:user, Access.elem(0)])
   </div>
   <section class="docstring">
     <p>Fetches the value for the given key in a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
 
   </section>
 </div>
@@ -653,7 +659,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
     </a>
     <span class="signature">get(container, key, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L267" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L268" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -668,7 +674,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
   </div>
   <section class="docstring">
     <p>Gets the value for the given key in a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
 
   </section>
 </div>
@@ -680,7 +686,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
     </a>
     <span class="signature">get_and_update(container, key, fun)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L289" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L290" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -695,7 +701,7 @@ list, or anything that implements the <a href="Access.html#content"><code class=
   </div>
   <section class="docstring">
     <p>Gets and updates the given key in a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
 <p>This <code class="inline">fun</code> argument receives the value of <code class="inline">key</code> (or <code class="inline">nil</code> if <code class="inline">key</code>
 is not present) and must return a two-element tuple: the “get” value
 (the retrieved value, which can be operated on before being returned)
@@ -717,7 +723,7 @@ from the map and returned.</p>
     </a>
     <span class="signature">key(key, default \\ nil)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L388" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L399" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -725,23 +731,24 @@ from the map and returned.</p>
     
   </div>
   <section class="docstring">
-    <p>Accesses the given key in a map/struct.</p>
-<p>Uses the default value if the key does not exist
-or if the value being accessed is <code class="inline">nil</code>.</p>
+    <p>Returns a function that accesses the given key in a map/struct.</p>
+<p>The returned function is typically passed as an accessor to <a href="Kernel.html#get_in/2"><code class="inline">Kernel.get_in/2</code></a>,
+<a href="Kernel.html#get_and_update_in/3"><code class="inline">Kernel.get_and_update_in/3</code></a>, and friends.</p>
+<p>The returned function uses the default value if the key does not exist.
+This can be used to specify defaults and safely traverse missing keys:</p>
+<pre><code class="iex elixir">iex&gt; get_in(%{}, [Access.key(:user, %{}), Access.key(:name)])
+nil</code></pre>
+<p>Such is also useful when using update functions, allowing us to introduce
+values as we traverse the data-structure for updates:</p>
+<pre><code class="iex elixir">iex&gt; put_in(%{}, [Access.key(:user, %{}), Access.key(:name)], &quot;Mary&quot;)
+%{user: %{name: &quot;Mary&quot;}}</code></pre>
 <h2 id="key/2-examples" class="section-heading">
   <a href="#key/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
-<pre><code class="iex elixir">iex&gt; get_in(%{}, [Access.key(:unknown), Access.key(:name)])
-nil
-iex&gt; get_in(%{}, [Access.key(:unknown, %{name: &quot;john&quot;}), Access.key(:name)])
-&quot;john&quot;
-iex&gt; get_in(%{}, [Access.key(:unknown), Access.key(:name, &quot;john&quot;)])
-&quot;john&quot;
-
-iex&gt; map = %{user: %{name: &quot;john&quot;}}
-iex&gt; get_in(map, [Access.key(:unknown), Access.key(:name, &quot;john&quot;)])
+<pre><code class="iex elixir">iex&gt; map = %{user: %{name: &quot;john&quot;}}
+iex&gt; get_in(map, [Access.key(:unknown, %{}), Access.key(:name, &quot;john&quot;)])
 &quot;john&quot;
 iex&gt; get_and_update_in(map, [Access.key(:user), Access.key(:name)], fn
 ...&gt;   prev -&gt; {prev, String.upcase(prev)}
@@ -749,9 +756,12 @@ iex&gt; get_and_update_in(map, [Access.key(:user), Access.key(:name)], fn
 {&quot;john&quot;, %{user: %{name: &quot;JOHN&quot;}}}
 iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
 {&quot;john&quot;, %{user: %{}}}</code></pre>
-<p>An error is raised if the accessed structure is not a map/struct/nil:</p>
-<pre><code class="iex elixir">iex&gt; get_in([], [Access.key(:foo)])
-** (RuntimeError) Access.key/1 expected a map/struct or nil, got: []</code></pre>
+<p>An error is raised if the accessed structure is not a map or a struct:</p>
+<pre><code class="iex elixir">iex&gt; get_in(nil, [Access.key(:foo)])
+** (BadMapError) expected a map, got: nil
+
+iex&gt; get_in([], [Access.key(:foo)])
+** (BadMapError) expected a map, got: []</code></pre>
 
   </section>
 </div>
@@ -763,7 +773,7 @@ iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
     </a>
     <span class="signature">key!(key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L430" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L440" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -771,7 +781,9 @@ iex&gt; pop_in(map, [Access.key(:user), Access.key(:name)])
     
   </div>
   <section class="docstring">
-    <p>Accesses the given key in a map/struct.</p>
+    <p>Returns a function that accesses the given key in a map/struct.</p>
+<p>The returned function is typically passed as an accessor to <a href="Kernel.html#get_in/2"><code class="inline">Kernel.get_in/2</code></a>,
+<a href="Kernel.html#get_and_update_in/3"><code class="inline">Kernel.get_and_update_in/3</code></a>, and friends.</p>
 <p>Raises if the key does not exist.</p>
 <h2 id="key!/1-examples" class="section-heading">
   <a href="#key!/1-examples" class="hover-link"><i class="icon-link"></i></a>
@@ -803,7 +815,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
     </a>
     <span class="signature">pop(container, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L337" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L338" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -812,7 +824,7 @@ iex&gt; get_in(map, [Access.key!(:user), Access.key!(:unknown)])
   </div>
   <section class="docstring">
     <p>Removes the entry with a given key from a container (a map, keyword
-list, or anything that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
+list, or struct that implements the <a href="Access.html#content"><code class="inline">Access</code></a> behaviour).</p>
 <p>Returns a tuple containing the value associated with the key and the
 updated container. <code class="inline">nil</code> is returned for the value if the key isn’t
 in the container.</p>
@@ -929,7 +941,7 @@ end</code></pre>
     </a>
     <span class="signature">get_and_update(term, key, list)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L201" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L202" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -943,16 +955,17 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Invoked in order to access the value under <code class="inline">key</code> and updated it at the same time.</p>
-<p>The implementation of this callback should invoke the passed function on the
-value under key <code class="inline">key</code> in the passed structure; this function should return
-either <code class="inline">{value_to_return, new_value}</code> or <code class="inline">:pop</code>.</p>
+    <p>Invoked in order to access the value under <code class="inline">key</code> and update it at the same time.</p>
+<p>The implementation of this callback should invoke the passed function with the
+value under key <code class="inline">key</code> in the passed structure, or <code class="inline">nil</code> if the key is not
+present. This function should return either <code class="inline">{value_to_return, new_value}</code> or
+<code class="inline">:pop</code>.</p>
 <p>If it returns <code class="inline">{value_to_return, new_value}</code>, the return value of this
 callback should be <code class="inline">{value_to_return, new_term}</code> where <code class="inline">new_term</code> is <code class="inline">term</code>
 after updating the value of <code class="inline">key</code> with <code class="inline">new_value</code>.</p>
 <p>If it returns <code class="inline">:pop</code>, the return value of this callback should be <code class="inline">{value,
-new_term}</code> where <code class="inline">value</code> is the value under <code class="inline">key</code> and <code class="inline">new_term</code> is <code class="inline">term</code>
-after removing the key <code class="inline">key</code>.</p>
+new_term}</code> where <code class="inline">value</code> is the value under <code class="inline">key</code> or <code class="inline">nil</code> if not present, and
+<code class="inline">new_term</code> is <code class="inline">term</code> without the key <code class="inline">key</code>.</p>
 <p>See the implementations of <a href="Map.html#get_and_update/3"><code class="inline">Map.get_and_update/3</code></a> or <a href="Keyword.html#get_and_update/3"><code class="inline">Keyword.get_and_update/3</code></a>
 for more examples.</p>
 
@@ -966,7 +979,7 @@ for more examples.</p>
     </a>
     <span class="signature">pop(term, key)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L212" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/access.ex#L216" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -981,9 +994,11 @@ for more examples.</p>
   </div>
   <section class="docstring">
     <p>Invoked to “pop” the value under <code class="inline">key</code> out of the given term.</p>
-<p>The implementation should remove <code class="inline">key</code> from the given <code class="inline">term</code> and return a
-<code class="inline">{value, new_term}</code> tuple where <code class="inline">value</code> is the value that was under <code class="inline">key</code> and
-<code class="inline">new_term</code> is <code class="inline">term</code> without <code class="inline">key</code>.</p>
+<p>When the key <code class="inline">key</code> exists in the given <code class="inline">term</code>, the implementation should
+return a <code class="inline">{value, new_term}</code> tuple where <code class="inline">value</code> is the value that was under
+<code class="inline">key</code> and <code class="inline">new_term</code> is <code class="inline">term</code> without <code class="inline">key</code>.</p>
+<p>When the key <code class="inline">key</code> is not present in the given <code class="inline">term</code>, a tuple <code class="inline">{value, term}</code>
+should be returned, where <code class="inline">value</code> is implementation-defined.</p>
 <p>See the implementations for <a href="Map.html#pop/3"><code class="inline">Map.pop/3</code></a> or <a href="Keyword.html#pop/3"><code class="inline">Keyword.pop/3</code></a> for more examples.</p>
 
   </section>
