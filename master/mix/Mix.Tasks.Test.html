@@ -89,49 +89,49 @@ the files to compile:</p>
 </h2>
 
 <ul>
-<li><code class="inline">--trace</code>      - run tests with detailed reporting; automatically sets <code class="inline">--max-cases</code> to 1
+<li><code class="inline">--color</code> - enables color in the output
 </li>
-<li><code class="inline">--max-cases</code>  - set the maximum number of cases running async
+<li><code class="inline">--cover</code> - the directory to include coverage results
 </li>
-<li><code class="inline">--cover</code>      - the directory to include coverage results
+<li><code class="inline">--exclude</code> - excludes tests that match the filter
 </li>
-<li><code class="inline">--raise</code>      - raise if the test suit failed
+<li><code class="inline">--force</code> - forces compilation regardless of modification times
 </li>
-<li><code class="inline">--force</code>      - forces compilation regardless of modification times
+<li><code class="inline">--formatter</code> - formatter module
 </li>
-<li><code class="inline">--no-compile</code> - do not compile, even if files require compilation
-</li>
-<li><code class="inline">--no-start</code>   - do not start applications after compilation
-</li>
-<li><code class="inline">--no-color</code>   - disable color in the output
-</li>
-<li><code class="inline">--color</code>      - enable color in the output
-</li>
-<li><code class="inline">--include</code>    - include tests that match the filter
-</li>
-<li><code class="inline">--exclude</code>    - exclude tests that match the filter
-</li>
-<li><code class="inline">--only</code>       - run only tests that match the filter
-</li>
-<li><code class="inline">--seed</code>       - seeds the random number generator used to randomize tests order;
-<code class="inline">--seed 0</code> disables randomization
-</li>
-<li><code class="inline">--timeout</code>    - set the timeout for the tests
-</li>
-<li><code class="inline">--no-deps-check</code> - do not check dependencies
-</li>
-<li><code class="inline">--no-archives-check</code> - do not check archives
-</li>
-<li><code class="inline">--no-elixir-version-check</code> - do not check the Elixir version from mix.exs
-</li>
-<li><code class="inline">--stale</code> - run only tests which reference modules that changed since the
-last <code class="inline">test --stale</code>. You can read more about this option in the “Stale” section below.
+<li><code class="inline">--include</code> - includes tests that match the filter
 </li>
 <li><code class="inline">--listen-on-stdin</code> - run tests, and then listen on stdin. Receiving a newline will
 result in the tests being run again. Very useful when combined with <code class="inline">--stale</code> and
 external commands which produce output on stdout upon file system modification.
 </li>
-<li><code class="inline">--formatter</code>  - formatter module
+<li><code class="inline">--max-cases</code> - sets the maximum number of cases running async
+</li>
+<li><code class="inline">--no-archives-check</code> - do not check archives
+</li>
+<li><code class="inline">--no-color</code> - disables color in the output
+</li>
+<li><code class="inline">--no-compile</code> - do not compile, even if files require compilation
+</li>
+<li><code class="inline">--no-deps-check</code> - do not check dependencies
+</li>
+<li><code class="inline">--no-elixir-version-check</code> - do not check the Elixir version from mix.exs
+</li>
+<li><code class="inline">--no-start</code> - do not start applications after compilation
+</li>
+<li><code class="inline">--only</code> - runs only tests that match the filter
+</li>
+<li><code class="inline">--raise</code> - raises if the test suit failed
+</li>
+<li><code class="inline">--seed</code> - seeds the random number generator used to randomize tests order;
+<code class="inline">--seed 0</code> disables randomization
+</li>
+<li><code class="inline">--stale</code> - runs only tests which reference modules that changed since the
+last <code class="inline">test --stale</code>. You can read more about this option in the “Stale” section below.
+</li>
+<li><code class="inline">--timeout</code> - sets the timeout for the tests
+</li>
+<li><code class="inline">--trace</code> - runs tests with detailed reporting; automatically sets <code class="inline">--max-cases</code> to 1
 </li>
 </ul>
 <h2 id="module-filters" class="section-heading">

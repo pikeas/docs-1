@@ -188,10 +188,10 @@ similar functionality with time zone backing.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_iso8601/1">to_iso8601(dt)</a>
+    <a href="#to_iso8601/1">to_iso8601(date_time)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts the given date time to
+    <div class="summary-synopsis"><p>Converts the given date time format to
 <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a></p>
 </div>
   
@@ -207,7 +207,7 @@ similar functionality with time zone backing.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_string/1">to_string(dt)</a>
+    <a href="#to_string/1">to_string(date_time)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts the given date time to a string according to its calendar</p>
@@ -570,7 +570,7 @@ iex&gt; DateTime.to_date(dt)
     <a href="#to_iso8601/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">to_iso8601(dt)</span>
+    <span class="signature">to_iso8601(date_time)</span>
     
       <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1469" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -586,11 +586,11 @@ iex&gt; DateTime.to_date(dt)
     
   </div>
   <section class="docstring">
-    <p>Converts the given date time to
+    <p>Converts the given date time format to
 <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601:2004</a>.</p>
-<p>Only supports converting date times which are in the ISO calendar,
+<p>Only supports converting date time formats which are in the ISO calendar,
 attempting to convert date times from other calendars will raise.</p>
-<p>WARNING: the ISO 8601 does not contain the time zone nor its abbreviation,
+<p>WARNING: the ISO 8601 date time format does not contain the time zone nor its abbreviation,
 which means information is lost when converting to such format. This
 is also why this module does not provide a <code class="inline">from_iso8601/1</code> function,
 as it is impossible to build a proper <a href="DateTime.html#content"><code class="inline">DateTime</code></a> from only the
@@ -654,7 +654,7 @@ iex&gt; DateTime.to_naive(dt)
     <a href="#to_string/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">to_string(dt)</span>
+    <span class="signature">to_string(date_time)</span>
     
       <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/calendar.ex#L1497" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>

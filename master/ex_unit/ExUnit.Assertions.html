@@ -82,7 +82,7 @@ imported by default into your test cases.</p>
 <code class="inline">assert</code> macro in tests. This macro introspects your code
 and provides good reporting whenever there is a failure.
 For example, <code class="inline">assert some_fun() == 10</code> will fail (assuming
-<code class="inline">some_fun()</code> returns 13):</p>
+<code class="inline">some_fun()</code> returns <code class="inline">13</code>):</p>
 <pre><code class="elixir">Comparison (using ==) failed in:
 code: some_fun() == 10
 lhs:  13
@@ -405,7 +405,7 @@ Returns the rescued exception, fails otherwise.</p>
 end
 
 assert_raise RuntimeError, ~r/^today&#39;s lucky number is 0.+!$/, fn -&gt;
-  raise &quot;today&#39;s lucky number is 0.45995507146246273!&quot;
+  raise &quot;today&#39;s lucky number is 0.7409078621748426!&quot;
 end</code></pre>
 
   </section>

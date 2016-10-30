@@ -284,8 +284,8 @@ Hex <code class="inline">:allow_pre</code> is set to <code class="inline">false.
     <a href="#compare/2">compare(version1, version2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Compares two versions. Returns <code class="inline">:gt</code> if first version is greater than
-the second and <code class="inline">:lt</code> for vice versa. If the two versions are equal <code class="inline">:eq</code>
+    <div class="summary-synopsis"><p>Compares two versions. Returns <code class="inline">:gt</code> if the first version is greater than
+the second one, and <code class="inline">:lt</code> for vice versa. If the two versions are equal <code class="inline">:eq</code>
 is returned</p>
 </div>
   
@@ -602,7 +602,7 @@ is returned</p>
     </a>
     <span class="signature">compare(version1, version2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L195" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L209" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -616,17 +616,28 @@ is returned</p>
     
   </div>
   <section class="docstring">
-    <p>Compares two versions. Returns <code class="inline">:gt</code> if first version is greater than
-the second and <code class="inline">:lt</code> for vice versa. If the two versions are equal <code class="inline">:eq</code>
-is returned</p>
-<p>Raises a <a href="Version.InvalidVersionError.html"><code class="inline">Version.InvalidVersionError</code></a> exception if <code class="inline">version</code> is not parsable.
-If given an already parsed version this function won’t raise.</p>
+    <p>Compares two versions. Returns <code class="inline">:gt</code> if the first version is greater than
+the second one, and <code class="inline">:lt</code> for vice versa. If the two versions are equal <code class="inline">:eq</code>
+is returned.</p>
+<p>Pre-releases are strictly less than their corresponding release versions.</p>
+<p>Patch segments are compared lexicographically if they are alphanumeric, and
+numerically otherwise.</p>
+<p>Build segments are ignored, if two versions differ only in their build segment
+they are considered to be equal.</p>
+<p>Raises a <a href="Version.InvalidVersionError.html"><code class="inline">Version.InvalidVersionError</code></a> exception if any of the two are not
+parsable. If given an already parsed version this function won’t raise.</p>
 <h2 id="compare/2-examples" class="section-heading">
   <a href="#compare/2-examples" class="hover-link"><i class="icon-link"></i></a>
   Examples
 </h2>
 
 <pre><code class="iex elixir">iex&gt; Version.compare(&quot;2.0.1-alpha1&quot;, &quot;2.0.0&quot;)
+:gt
+
+iex&gt; Version.compare(&quot;1.0.0-beta&quot;, &quot;1.0.0-rc1&quot;)
+:lt
+
+iex&gt; Version.compare(&quot;1.0.0-10&quot;, &quot;1.0.0-2&quot;)
 :gt
 
 iex&gt; Version.compare(&quot;2.0.1+build0&quot;, &quot;2.0.1&quot;)
@@ -645,7 +656,7 @@ iex&gt; Version.compare(&quot;invalid&quot;, &quot;2.0.1&quot;)
     </a>
     <span class="signature">compile_requirement(req)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L291" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L305" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -736,7 +747,7 @@ iex&gt; Version.match?(&quot;2.0.0&quot;, &quot;== ==1.0.0&quot;)
     </a>
     <span class="signature">parse(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L225" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L239" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -773,7 +784,7 @@ iex&gt; Version.parse(&quot;2.0-alpha1&quot;)
     </a>
     <span class="signature">parse!(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L251" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L265" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -810,7 +821,7 @@ iex&gt; Version.parse!(&quot;2.0-alpha1&quot;)
     </a>
     <span class="signature">parse_requirement(string)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L272" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/version.ex#L286" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
