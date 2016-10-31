@@ -731,13 +731,13 @@ type. There are 9 types used in bitstrings:</p>
 </li>
 <li><code class="inline">float</code>
 </li>
-<li><code class="inline">bits</code> (alias for bitstring)
+<li><code class="inline">bits</code> (alias for <code class="inline">bitstring</code>)
 </li>
 <li><code class="inline">bitstring</code>
 </li>
 <li><code class="inline">binary</code>
 </li>
-<li><code class="inline">bytes</code> (alias for binary)
+<li><code class="inline">bytes</code> (alias for <code class="inline">binary</code>)
 </li>
 <li><code class="inline">utf8</code>
 </li>
@@ -757,11 +757,11 @@ string or a literal charlist, which are by default expanded to integers:</p>
 <pre><code class="iex elixir">iex&gt; rest = &quot;oo&quot;
 iex&gt; &lt;&lt;102, rest&gt;&gt;
 ** (ArgumentError) argument error</code></pre>
-<p>We can solve this by explicitly tagging it as a binary:</p>
+<p>We can solve this by explicitly tagging it as <code class="inline">binary</code>:</p>
 <pre><code class="iex elixir">iex&gt; rest = &quot;oo&quot;
 iex&gt; &lt;&lt;102, rest::binary&gt;&gt;
 &quot;foo&quot;</code></pre>
-<p>The utf8, utf16, and utf32 types are for Unicode codepoints. They
+<p>The <code class="inline">utf8</code>, <code class="inline">utf16</code>, and <code class="inline">utf32</code> types are for Unicode codepoints. They
 can also be applied to literal strings and charlists:</p>
 <pre><code class="iex elixir">iex&gt; &lt;&lt;&quot;foo&quot;::utf16&gt;&gt;
 &lt;&lt;0, 102, 0, 111, 0, 111&gt;&gt;

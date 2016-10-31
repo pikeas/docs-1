@@ -125,6 +125,12 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#t:t/1">t(value)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#t:value/0">value()</a>
   </div>
   
@@ -149,7 +155,7 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#difference/2">difference(map_set1, map_set2)</a>
+    <a href="#difference/2">difference(mapset1, mapset2)</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns a set that is <code class="inline">set1</code> without the members of <code class="inline">set2</code></p>
@@ -287,12 +293,12 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
             <div class="detail" id="t:t/0">
   
   <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this opaque">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
       <i class="icon-link"></i>
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L38" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -300,7 +306,32 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
     
       <div class="specs">
         
-          <pre><a href="#t:t/0">t</a></pre>
+          <pre>t() :: <a href="#t:t/1">t(term)</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:t/1">
+  
+  <div class="detail-header">
+    <a href="#t:t/1" class="detail-link" title="Link to this opaque">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t(value)</span>
+    
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L37" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:t/1">t(value)</a></pre>
         
       </div>
     
@@ -317,7 +348,7 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
     </a>
     <span class="signature">value()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L35" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -355,7 +386,7 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
     </a>
     <span class="signature">delete(set, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L128" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -363,7 +394,7 @@ structures: for example, see <a href="MapSet.html#new/1"><code class="inline">Ma
     
       <div class="specs">
         
-          <pre>delete(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
+          <pre>delete(<a href="#t:t/1">t(val1)</a>, val2) :: <a href="#t:t/1">t(val1)</a> when val1: <a href="#t:value/0">value</a>, val2: <a href="#t:value/0">value</a></pre>
         
       </div>
     
@@ -390,7 +421,7 @@ iex&gt; MapSet.delete(set, 2)
     <a href="#difference/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">difference(map_set1, map_set2)</span>
+    <span class="signature">difference(mapset1, mapset2)</span>
     
       <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L142" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -400,7 +431,7 @@ iex&gt; MapSet.delete(set, 2)
     
       <div class="specs">
         
-          <pre>difference(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
+          <pre>difference(<a href="#t:t/1">t(val1)</a>, <a href="#t:t/1">t(val2)</a>) :: <a href="#t:t/1">t(val1)</a> when val1: <a href="#t:value/0">value</a>, val2: <a href="#t:value/0">value</a></pre>
         
       </div>
     
@@ -425,7 +456,7 @@ iex&gt; MapSet.delete(set, 2)
     </a>
     <span class="signature">disjoint?(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L181" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L186" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -460,7 +491,7 @@ false</code></pre>
     </a>
     <span class="signature">equal?(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L213" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L218" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -496,7 +527,7 @@ false</code></pre>
     </a>
     <span class="signature">intersection(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L230" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L235" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -504,7 +535,7 @@ false</code></pre>
     
       <div class="specs">
         
-          <pre>intersection(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
+          <pre>intersection(<a href="#t:t/1">t(val)</a>, <a href="#t:t/1">t(val)</a>) :: <a href="#t:t/1">t(val)</a> when val: <a href="#t:value/0">value</a></pre>
         
       </div>
     
@@ -532,7 +563,7 @@ iex&gt; MapSet.intersection(MapSet.new([1, 2]), MapSet.new([3, 4]))
     </a>
     <span class="signature">member?(map_set, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L248" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L253" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -567,7 +598,7 @@ false</code></pre>
     </a>
     <span class="signature">new()</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L49" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L52" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -600,7 +631,7 @@ false</code></pre>
     </a>
     <span class="signature">new(mapset)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L66" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -635,7 +666,7 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
     </a>
     <span class="signature">new(enumerable, transform)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L83" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -643,7 +674,7 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
     
       <div class="specs">
         
-          <pre>new(<a href="Enum.html#t:t/0">Enum.t</a>, (term -> term)) :: <a href="#t:t/0">t</a></pre>
+          <pre>new(<a href="Enum.html#t:t/0">Enum.t</a>, (term -> val)) :: <a href="#t:t/1">t(val)</a> when val: <a href="#t:value/0">value</a></pre>
         
       </div>
     
@@ -668,7 +699,7 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
     </a>
     <span class="signature">put(set, value)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L264" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L269" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -676,7 +707,7 @@ iex&gt; MapSet.new([3, 3, 3, 2, 2, 1])
     
       <div class="specs">
         
-          <pre>put(<a href="#t:t/0">t</a>, <a href="#t:value/0">value</a>) :: <a href="#t:t/0">t</a></pre>
+          <pre>put(<a href="#t:t/1">t(val)</a>, new_val) :: <a href="#t:t/1">t(val | new_val)</a> when val: <a href="#t:value/0">value</a>, new_val: <a href="#t:value/0">value</a></pre>
         
       </div>
     
@@ -703,7 +734,7 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
     </a>
     <span class="signature">size(map_set)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L278" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L283" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -736,7 +767,7 @@ iex&gt; MapSet.put(MapSet.new([1, 2, 3]), 4)
     </a>
     <span class="signature">subset?(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L301" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -772,7 +803,7 @@ false</code></pre>
     </a>
     <span class="signature">to_list(map_set)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L325" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L330" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -780,7 +811,7 @@ false</code></pre>
     
       <div class="specs">
         
-          <pre>to_list(<a href="#t:t/0">t</a>) :: list</pre>
+          <pre>to_list(<a href="#t:t/1">t(val)</a>) :: [val] when val: <a href="#t:value/0">value</a></pre>
         
       </div>
     
@@ -805,7 +836,7 @@ false</code></pre>
     </a>
     <span class="signature">union(map_set1, map_set2)</span>
     
-      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L339" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/elixir-lang/elixir/blob/master/lib/elixir/lib/map_set.ex#L344" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -813,7 +844,7 @@ false</code></pre>
     
       <div class="specs">
         
-          <pre>union(<a href="#t:t/0">t</a>, <a href="#t:t/0">t</a>) :: <a href="#t:t/0">t</a></pre>
+          <pre>union(<a href="#t:t/1">t(val1)</a>, <a href="#t:t/1">t(val2)</a>) :: <a href="#t:t/1">t(val1 | val2)</a> when val1: <a href="#t:value/0">value</a>, val2: <a href="#t:value/0">value</a></pre>
         
       </div>
     
